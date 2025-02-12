@@ -1,10 +1,9 @@
 # Ignore everything by default
 *
 
-# Allow Python scripts in the code folder (but not in the other-code subfolder)
-!/code/
-!/code/*.py
-/code/other-code/
+# Allow Python scripts in the code folder (but not in the other-code subfolder
+!code/
+code/*/
 
 # Allow the README.md
 !/README.md
