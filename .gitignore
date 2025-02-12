@@ -1,0 +1,22 @@
+# Ignore everything by default
+*
+
+# Allow Python scripts in the code folder (but not in the other-code subfolder)
+!/code/
+!/code/*.py
+/code/other-code/
+
+# Allow the README.md
+!/README.md
+
+# Ignore specific common files and directories
+.DS_Store
+myenv/
+*.xlsx
+*.docx
+*.json
+*.txt
+*.log
+
+!/requirements.txt
+!/LICENSE
