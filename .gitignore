@@ -16,6 +16,7 @@ myenv/
 *.json
 *.txt
 *.log
+~$*.xlsx
 
 !/requirements.txt
 !/LICENSE
