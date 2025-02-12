@@ -1,0 +1,5 @@
+lxml
+spacy
+openpyxl 
+anthropic
+tiktoken
