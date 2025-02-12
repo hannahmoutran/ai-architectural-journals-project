@@ -3,7 +3,7 @@
 ### Project Overview
 This project focuses on cataloging the University of Texas at Austin's collection of Southern Architect and Building News journals using Large Language Models (LLMs) to assist in the first-pass metadata creation process. This code is a part of a larger research project to explore and evaluate the effectiveness of AI in enhancing cataloging workflows. In the larger project, we are considering both API and web-based interaction with Large Language Models for metadata creation.  
 
-Southern Architect and Building News was an illustrated monthly journal devoted to the interests of architects, builders, and the hardware trade. It was published from 1882-1932.  The collection is currently housed in the Architecture and Planning Library Special Collections at the University of Texas Libraries, The University of Texas at Austin. 
+[Southern Architect and Building News](https://collections.lib.utexas.edu/?f%5Bmods_relatedItem_titleInfo_title_source_t%5D%5B%5D=Southern+Architect+and+Building+News) was an illustrated monthly journal devoted to the interests of architects, builders, and the hardware trade. It was published from 1882-1932.  The collection is currently housed in the Architecture and Planning Library Special Collections at the University of Texas Libraries, The University of Texas at Austin. 
 
 ### Project Goals
 We are testing efficacy in the following tasks:
