@@ -55,8 +55,8 @@ def get_combined_prompt():
         - Organizations"
     ],
     
-    "subjectHeadings": [
-        "Two to three Library of Congress Subject Headings, focusing on:
+    "subjects": [
+        "Two to three subjects that will later be used to search for verified headings in FAST, focusing on:
         - Architectural styles and movements
         - Building types and purposes
         - Historical significance
@@ -102,7 +102,7 @@ def process_image(image_path):
         parsed_json = json.loads(cleaned_response)
         
         required_fields = ['textTranscription', 'visualDescription', 'tocEntry', 
-                          'namedEntities', 'subjectHeadings', 'contentWarning']
+                          'namedEntities', 'subjects', 'contentWarning']
         if not all(key in parsed_json for key in required_fields):
             raise KeyError("Missing required fields in JSON response")
             
@@ -135,7 +135,7 @@ def process_folder(input_folder, output_dir):
     analysis_headers = [
         'Folder', 'Page Number', 'Image Path', 
         'Text Transcription', 'Visual Description',
-        'TOC Entry', 'Named Entities', 'Subject Headings', 'Content Warning'
+        'TOC Entry', 'Named Entities', 'Subjects', 'Content Warning'
     ]
     analysis_sheet.append(analysis_headers)
     analysis_sheet.freeze_panes = 'A2'
@@ -180,7 +180,7 @@ def process_folder(input_folder, output_dir):
                             "visualDescription": raw_response,
                             "tocEntry": raw_response,
                             "namedEntities": [],
-                            "subjectHeadings": [],
+                            "subjects": [],
                             "contentWarning": raw_response
                         }
                     
@@ -192,7 +192,7 @@ def process_folder(input_folder, output_dir):
                         response_data.get('visualDescription', raw_response),
                         response_data.get('tocEntry', raw_response),
                         ', '.join(response_data.get('namedEntities', [])),
-                        ', '.join(response_data.get('subjectHeadings', [])),
+                        ', '.join(response_data.get('subjects', [])),
                         response_data.get('contentWarning', raw_response)
                     ]
                     analysis_sheet.append(analysis_row)
@@ -231,7 +231,7 @@ def process_folder(input_folder, output_dir):
                             'visual_description': response_data.get('visualDescription', raw_response),
                             'toc_entry': response_data.get('tocEntry', raw_response),
                             'named_entities': response_data.get('namedEntities', []),
-                            'subject_headings': response_data.get('subjectHeadings', []),
+                            'subject_headings': response_data.get('subjects', []),
                             'content_warning': response_data.get('contentWarning', raw_response),
                             'raw_response': raw_response
                         }

@@ -264,7 +264,7 @@ def process_folder(input_folder, output_dir):
     # Configure Gemini with safety settings
     genai.configure(api_key=os.environ.get("GEMINI_API_KEY"))
     
-    # Create model with relaxed safety settings if needed
+    # Create model with relaxed safety settings
     generation_config = {
         "temperature": 0.4,  # Lower temperature for more consistent outputs
         "top_p": 0.8,
