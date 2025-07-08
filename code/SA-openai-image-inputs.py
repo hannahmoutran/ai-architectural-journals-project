@@ -26,25 +26,26 @@ class APIStats:
 api_stats = APIStats()
 
 def get_combined_prompt():
-    return """This image is from 'Southern Architect and Building News', a periodical published from 1892 to 1931 that covered topics of interest to persons in the architecture, building, and hardware trades in the American South. We are creating metadata for the entire collection for the Architecture and Planning Library Special Collections, University of Texas Libraries, The University of Texas at Austin. Please analyze this image and return ONLY a JSON response in this exact format:
+    return """This image is from 'Southern Architect and Building News', a periodical published from 1892 to 1931 that covered topics of interest to persons in the architecture, building, and hardware trades in the American South. You are creating metadata for this collection for the Architecture and Planning Library Special Collections at University of Texas Libraries in Austin. Please analyze this image and return ONLY a JSON response in this exact format:
 
 {
     "textTranscription": "Full, exact transcription of all text visible in the image. 
-        - Maintain all original spelling, punctuation, and terminology exactly as shown
+        - Maintain original spelling, punctuation, and terminology
         - Preserve line breaks and paragraph structure
         - Include ALL text visible including headers, footers, and italicized text
-        - Do not correct, modernize, or sanitize any language
+        - Do not correct, modernize, or sanitize language
         - Use [illegible] for text that cannot be read
         - Use [...] for partially visible or cut-off text",
     
-    "visualDescription": "Detailed description of any images. Include:
-        - Layout and design of the page
-        - Detailed descriptions of illustrations and photographs
-        - Placement and appearance of elements on the page, but keep it concise",
+    "visualDescription": "Detailed but concise visual description of page. Include:
+        - Layout: including design, fonts, special characters,etc.
+        - Description of all illustrations and/or photographs
+        - Placement and appearance of various elements on the page",
     
     "tocEntry": "A descriptive entry appropriate for a table of contents. Include:
-        - Short description of the content
-        - Page type (cover, table of contents, advertisement, editorial, article, or other)",
+        - Page type (cover, table of contents, advertisement, editorial, article, or other)
+        - Short description of the content of the page
+        - Key topics or themes covered",
     
     "namedEntities": [
         "List key entities including:
@@ -52,21 +53,31 @@ def get_combined_prompt():
         - Geographic locations 
         - Building names
         - Significant people mentioned
-        - Organizations"
+        - Organizations
+        - Historical events or periods
+        - Architectural styles or movements
+        - Use the FAST (Faceted Application of Subject Terminology) headings for these entities
+        - Use the format: 'Entity Name (FAST heading)' for each entity"
     ],
     
     "subjects": [
-        "Two to three subjects that will later be used to search for verified headings in FAST, focusing on:
-        - Architectural styles and movements
-        - Building types and purposes
-        - Historical significance
+        "Two to three subjects that will later be used to search for verified headings in FAST, focusing on the main topics of the page. Do not include subjects that would apply to the entire collection, such as: 'architectural periodicals' or 'architectural criticism'.  
+        You may include:
+        - Architectural styles or movements
+        - Building types or purposes
+        - Key themes or topics discussed
+        - Notable figures or entities mentioned
+        - Innovations or technologies referenced
+        - Specific architectural features or elements
+        - Anything of historical significance
         - Geographic locations"
     ],
     
-    "contentWarning": "Note potentially sensitive content, or 'None' if none exists. Consider:
-        - Historical language or terminology
+    "contentWarning": "Note potentially sensitive content, or 'None' if none exists. Another archivist will assess if any measures are appropriate, your job is just to note if there is anything that may be concerning. 
+    Consider:
+        - Biased language or terminology
         - Culturally sensitive material
-        - Potentially offensive or harmful imagery or language"
+        - Offensive or harmful imagery or language"
 }"""
 
 @tenacity.retry(
@@ -80,7 +91,7 @@ def process_image(image_path):
 
     api_stats.total_requests += 1
     response = client.chat.completions.create(
-        model="gpt-4o-mini-2024-07-18",
+        model="gpt-4o-2024-08-06",
         messages=[{
             "role": "user",
             "content": [
@@ -286,8 +297,8 @@ def process_folder(input_folder, output_dir):
         stats_sheet.append([key, value])
     
     current_date = datetime.now().strftime("%Y-%m-%d")
-    excel_path = os.path.join(output_dir, f"SA-image-gpt-4o-mini-{current_date}.xlsx")
-    json_path = os.path.join(output_dir, f"SA-image-gpt-4o-mini-{current_date}.json")
+    excel_path = os.path.join(output_dir, f"image-workflow-{current_date}.xlsx")
+    json_path = os.path.join(output_dir, f"image-workflow-{current_date}.json")
     
     all_results.append({"api_stats": api_summary})
     
@@ -300,8 +311,8 @@ def process_folder(input_folder, output_dir):
 def main():
     start_time = time.time()  
     
-    input_folder = "/Users/hannahmoutran/Desktop/ai-projects-ut-austin-fall-2024/southern_architect/sa-test-10-pages"
-    output_dir = "/Users/hannahmoutran/Desktop/ai-projects-ut-austin-fall-2024/southern_architect/sa-test-outputs-image-workflow"
+    input_folder = "CODE/image-folders/3-pages"
+    output_dir = "/Users/hannahmoutran/Desktop/southern-architect/CODE/output-folders/gpt-4o"
     os.makedirs(output_dir, exist_ok=True)
     
     results, api_summary = process_folder(input_folder, output_dir)

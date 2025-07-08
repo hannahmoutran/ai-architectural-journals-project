@@ -3,3 +3,7 @@ spacy
 openpyxl 
 anthropic
 tiktoken
+openai
+tenacity
+pandas
+requests

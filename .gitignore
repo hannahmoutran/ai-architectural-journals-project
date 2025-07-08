@@ -16,7 +16,13 @@ myenv/
 *.json
 *.txt
 *.log
+*.pdf
 ~$*.xlsx
 
 !/requirements.txt
 !/LICENSE
+
+# Ignore specific directories
+/CODE/other-code
+/CODE/output-folders
+/CODE/image-folders
