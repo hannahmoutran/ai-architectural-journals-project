@@ -3,10 +3,12 @@
 
 # Allow Python scripts in the code folder (but not in the other-code subfolder
 !code/
-code/*/
+!code/**
 
-# Allow the README.md
-!/README.md
+# Ignore specific directories
+/CODE/other-code
+/CODE/output-folders
+/CODE/image-folders
 
 # Ignore specific common files and directories
 .DS_Store
@@ -19,10 +21,9 @@ myenv/
 *.pdf
 ~$*.xlsx
 
+# Allow specific files
+!/README.md
 !/requirements.txt
 !/LICENSE
 
-# Ignore specific directories
-/CODE/other-code
-/CODE/output-folders
-/CODE/image-folders
+
