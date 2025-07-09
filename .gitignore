@@ -1,7 +1,7 @@
 # Ignore everything by default
 *
 
-# Allow Python scripts in the code folder (but not in the other-code subfolder
+# Allow files in the code folder, but not its subdirectories
 !code/
 !code/**
 
