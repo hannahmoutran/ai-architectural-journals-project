@@ -1,14 +1,48 @@
-# Ignore everything by default
-*
+# Python essentials
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+get-pip.py
 
-# Allow files in the code folder, but not its subdirectories
-!code/
-!code/**
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+myenv/
+
+# Type checking
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+
+# macOS specific
+.DS_Store
+**/.DS_Store
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
 
 # Ignore specific directories
-/CODE/other-code
-/CODE/output-folders
-/CODE/image-folders
+/CODE/other_code
+/CODE/output_folders
+/CODE/image_folders/1924-10-50
+/CODE/image_folders/1931-12-57
 
 # Ignore specific common files and directories
 .DS_Store
@@ -16,14 +50,8 @@ myenv/
 *.xlsx
 *.docx
 *.json
-*.txt
 *.log
 *.pdf
 ~$*.xlsx
-
-# Allow specific files
-!/README.md
-!/requirements.txt
-!/LICENSE
 
 

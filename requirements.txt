@@ -7,3 +7,5 @@ openai
 tenacity
 pandas
 requests
+aiohttp
+pillow
