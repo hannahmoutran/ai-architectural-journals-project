@@ -41,8 +41,8 @@ Temporary Items
 # Ignore specific directories
 /CODE/other_code
 /CODE/output_folders
-/CODE/image_folders/1924-10-50
-/CODE/image_folders/1931-12-57
+/CODE/image_folders/10_pages
+/CODE/image_folders/full_issues
 
 # Ignore specific common files and directories
 .DS_Store
