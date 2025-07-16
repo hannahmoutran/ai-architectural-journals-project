@@ -53,6 +53,7 @@ If no sensitive content is present, simply return 'None'.
     "tocEntry": "A descriptive entry appropriate for a table of contents. Include:
         - Page type (cover, table of contents, advertisement, editorial, article, or other)
         - Short description of the content of the page
+        - Specific persons or organizations mentioned (give a brief description of their importance and relevance to the content - for example, "Zaha Hadid (Parametric architecture pioneer)", or "Frank Lloyd Wright (Prairie School architect)")
         - Key topics or themes covered",
     
     "namedEntities": [
@@ -194,6 +195,7 @@ Return ONLY the JSON response in the exact format specified above."""
     
     "tocEntry": "A descriptive entry appropriate for a table of contents. Include:
         - Page type (cover, table of contents, advertisement, editorial, article, or other)
+        - Specific persons or organizations mentioned (give a brief description of their importance and relevance to the content - for example, "Zaha Hadid (Parametric architecture pioneer)", or "Frank Lloyd Wright (Prairie School architect)")
         - Short description of the content of the page
         - Key topics or themes covered",
     

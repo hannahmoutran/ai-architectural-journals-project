@@ -54,4 +54,6 @@ myenv/
 *.pdf
 ~$*.xlsx
 
-
+# Ignore working files 
+/CODE/southern_architect_step5.py
+/CODE/southern_architect_run.py
