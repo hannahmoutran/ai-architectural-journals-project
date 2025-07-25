@@ -5,10 +5,10 @@ Southern Architect Master Workflow Runner
 
 This script runs the complete Southern Architect workflow pipeline:
 1. Step 1: OCR Text/Image Metadata Extraction
-2. Step 2: LCSH Enhancement 
-3. Step 3: LCSH Selection
-4. Step 4: Page Metadata Generation
-5. Step 5: Issue Synthesis
+2. Step 2: Multi-Vocabulary Enhancement (LCSH, FAST, Getty)
+3. Step 3: AI-Powered Vocabulary Selection & Clean Output Generation
+4. Step 4: Issue-Level Synthesis & Final Metadata
+5. Step 5: Entity Authority File Creation
 
 Author: Southern Architect Processing Team
 """
@@ -141,10 +141,10 @@ class SouthernArchitectWorkflowRunner:
         
         return os.path.join(base_output_dir, folders[0])
     
-    def run_step1(self, resume: bool = False) -> bool:
+    def run_step1(self, resume: bool = False, model: str = None) -> bool:
         """Run Step 1: Initial metadata extraction."""
         step_name = f"STEP 1: {self.workflow_type.upper()} METADATA EXTRACTION"
-        step_description = f"Extract metadata from {self.workflow_type} files using AI"
+        step_description = f"Extract metadata from {self.workflow_type} files using AI with enhanced parsing and checkpoint support"
         
         self.announce_step(step_name, step_description)
         
@@ -154,6 +154,8 @@ class SouthernArchitectWorkflowRunner:
         args = []
         if resume:
             args.append("--resume")
+        if model:
+            args.extend(["--model", model])
         
         success = self.run_script(script_path, args)
         
@@ -168,9 +170,9 @@ class SouthernArchitectWorkflowRunner:
         return success
     
     def run_step2(self) -> bool:
-        """Run Step 2: LCSH Enhancement."""
-        step_name = "STEP 2: LCSH ENHANCEMENT"
-        step_description = "Add Library of Congress Subject Headings to metadata"
+        """Run Step 2: Multi-Vocabulary Enhancement."""
+        step_name = "STEP 2: MULTI-VOCABULARY ENHANCEMENT"
+        step_description = "Add LCSH, FAST, Getty AAT/TGN controlled vocabulary terms with comprehensive API logging"
         
         self.announce_step(step_name, step_description)
         
@@ -183,9 +185,9 @@ class SouthernArchitectWorkflowRunner:
         return self.run_script(self.scripts['step2'], args)
     
     def run_step3(self, model: str = "gpt-4o-mini-2024-07-18") -> bool:
-        """Run Step 3: LCSH Selection."""
-        step_name = "STEP 3: LCSH SELECTION"
-        step_description = "Use AI to select the most relevant LCSH terms for each page"
+        """Run Step 3: AI-Powered Vocabulary Selection."""
+        step_name = "STEP 3: AI-POWERED VOCABULARY SELECTION"
+        step_description = "Use AI to select optimal vocabulary terms and generate clean metadata outputs"
         
         self.announce_step(step_name, step_description)
         
@@ -197,14 +199,14 @@ class SouthernArchitectWorkflowRunner:
         
         return self.run_script(self.scripts['step3'], args)
     
-    def run_step4(self) -> bool:
-        """Run Step 4: Page Metadata Generation."""
-        step_name = "STEP 4: PAGE METADATA GENERATION"
-        step_description = "Generate individual metadata files for each page"
+    def run_step4(self, model: str = "gpt-4o-2024-08-06") -> bool:
+        """Run Step 4: Issue-Level Synthesis."""
+        step_name = "STEP 4: ISSUE-LEVEL SYNTHESIS"
+        step_description = "Create scholarly issue description and select top 10 subject headings with geographic terms"
         
         self.announce_step(step_name, step_description)
         
-        args = []
+        args = ["--model", model]
         if self.output_folder:
             args.extend(["--folder", self.output_folder])
         else:
@@ -212,14 +214,14 @@ class SouthernArchitectWorkflowRunner:
         
         return self.run_script(self.scripts['step4'], args)
     
-    def run_step5(self, model: str = "gpt-4o-2024-08-06") -> bool:
-        """Run Step 5: Issue Synthesis."""
-        step_name = "STEP 5: ISSUE SYNTHESIS"
-        step_description = "Create issue-level description and select top 10 subject headings"
+    def run_step5(self) -> bool:
+        """Run Step 5: Entity Authority File Creation."""
+        step_name = "STEP 5: ENTITY AUTHORITY FILE CREATION"
+        step_description = "Build comprehensive authority file for named entities with type classification"
         
         self.announce_step(step_name, step_description)
         
-        args = ["--model", model]
+        args = []
         if self.output_folder:
             args.extend(["--folder", self.output_folder])
         else:
@@ -245,8 +247,9 @@ class SouthernArchitectWorkflowRunner:
         return True
     
     def run_complete_workflow(self, resume: bool = False, 
+                            step1_model: str = None,
                             step3_model: str = "gpt-4o-mini-2024-07-18",
-                            step5_model: str = "gpt-4o-2024-08-06") -> bool:
+                            step4_model: str = "gpt-4o-2024-08-06") -> bool:
         """Run the complete workflow pipeline."""
         
         self.print_banner()
@@ -256,15 +259,15 @@ class SouthernArchitectWorkflowRunner:
             return False
         
         print("🔍 WORKFLOW OVERVIEW:")
-        print("Step 1: Extract metadata from source files")
-        print("Step 2: Enhance with Library of Congress Subject Headings")
-        print("Step 3: AI-powered selection of relevant LCSH terms")
-        print("Step 4: Generate individual page metadata files")
-        print("Step 5: Create issue-level summary and top subjects")
+        print("Step 1: Extract metadata from source files (with checkpoints & batch processing)")
+        print("Step 2: Enhance with controlled vocabulary terms (LCSH, FAST, Getty)")
+        print("Step 3: AI-powered selection of optimal vocabulary terms")
+        print("Step 4: Create issue-level description and top subject headings")
+        print("Step 5: Build entity authority file with type classification")
         print()
         print("🤖 All steps will run automatically - you can step away!")
-        print("⏱️  Estimated total time: 15-45 minutes depending on data size")
-        print("💡 You can interrupt with Ctrl+C if needed")
+        print("💡 Step 1 supports resume functionality with Ctrl+C")
+        print("📊 Comprehensive logging and cost tracking throughout")
         print()
         
         # Track overall success
@@ -276,29 +279,29 @@ class SouthernArchitectWorkflowRunner:
         print("="*70)
         
         # Run Step 1
-        if not self.run_step1(resume):
+        if not self.run_step1(resume, step1_model):
             print("❌ Step 1 failed - stopping workflow")
             return False
         
         # Run Step 2
         if not self.run_step2():
             overall_success = False
-            failed_steps.append("Step 2: LCSH Enhancement")
+            failed_steps.append("Step 2: Multi-Vocabulary Enhancement")
         
         # Run Step 3
         if not self.run_step3(step3_model):
             overall_success = False
-            failed_steps.append("Step 3: LCSH Selection")
+            failed_steps.append("Step 3: AI-Powered Vocabulary Selection")
         
         # Run Step 4
-        if not self.run_step4():
+        if not self.run_step4(step4_model):
             overall_success = False
-            failed_steps.append("Step 4: Page Metadata Generation")
+            failed_steps.append("Step 4: Issue-Level Synthesis")
         
         # Run Step 5
-        if not self.run_step5(step5_model):
+        if not self.run_step5():
             overall_success = False
-            failed_steps.append("Step 5: Issue Synthesis")
+            failed_steps.append("Step 5: Entity Authority File Creation")
         
         # Final summary
         end_time = datetime.now()
@@ -324,11 +327,14 @@ class SouthernArchitectWorkflowRunner:
         if self.output_folder:
             print(f"\n📁 Final output folder: {self.output_folder}")
             print("📄 Generated files include:")
-            print("   ✅ Excel and JSON workflow files")
-            print("   ✅ Page-level metadata files")
-            print("   ✅ Issue summary and table of contents")
-            print("   ✅ Processing reports and logs")
-            print("   ✅ LCSH mapping and selection reports")
+            print("   ✅ Excel and JSON workflow files with selected vocabulary terms")
+            print("   ✅ Page-level metadata files with geographic entities")
+            print("   ✅ Issue summary with scholarly description")
+            print("   ✅ Table of contents with comprehensive metadata")
+            print("   ✅ Vocabulary mapping reports with checkmarks")
+            print("   ✅ Entity authority file with type classification")
+            print("   ✅ Processing reports and comprehensive API logs")
+            print("   ✅ Cost tracking and token usage logs")
         
         print("\n" + "="*70)
         
@@ -336,15 +342,24 @@ class SouthernArchitectWorkflowRunner:
 
 def main():
     parser = argparse.ArgumentParser(
-        description='Run the complete Southern Architect workflow pipeline',
+        description='Run the complete Southern Architect workflow pipeline with enhanced features',
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  python southern_architect_run.py                    # Interactive mode
-  python southern_architect_run.py --workflow text    # Text workflow
-  python southern_architect_run.py --workflow image   # Image workflow
-  python southern_architect_run.py --resume           # Resume text workflow
-  python southern_architect_run.py --workflow text --step3-model gpt-4o-2024-08-06
+  python southern_architect_run.py                              # Interactive mode
+  python southern_architect_run.py --workflow text              # Text workflow
+  python southern_architect_run.py --workflow image             # Image workflow
+  python southern_architect_run.py --resume                     # Resume text workflow from checkpoint
+  python southern_architect_run.py --workflow text --step1-model gpt-4o-2024-08-06
+  python southern_architect_run.py --step3-model gpt-4o-2024-08-06 --step4-model gpt-4o-mini-2024-07-18
+
+New Features:
+  - Step 1: Checkpoint/resume support, batch processing, enhanced JSON parsing
+  - Step 2: Multi-vocabulary enhancement (LCSH, FAST, Getty) with comprehensive API logging
+  - Step 3: AI-powered vocabulary selection with clean output generation
+  - Step 4: Issue-level synthesis with geographic terms
+  - Step 5: Entity authority file creation with type classification
+  - Comprehensive cost tracking and token logging throughout
         """
     )
     
@@ -352,10 +367,12 @@ Examples:
                        help='Workflow type (text or image)')
     parser.add_argument('--resume', action='store_true',
                        help='Resume from last checkpoint (Step 1 only)')
+    parser.add_argument('--step1-model', 
+                       help='Model for Step 1 (default: gpt-4o-2024-08-06 for images, gpt-4o-2024-08-06 for text)')
     parser.add_argument('--step3-model', default="gpt-4o-mini-2024-07-18",
-                       help='Model for Step 3 (LCSH selection)')
-    parser.add_argument('--step5-model', default="gpt-4o-2024-08-06",
-                       help='Model for Step 5 (issue synthesis)')
+                       help='Model for Step 3 (vocabulary selection)')
+    parser.add_argument('--step4-model', default="gpt-4o-2024-08-06",
+                       help='Model for Step 4 (issue synthesis)')
     
     args = parser.parse_args()
     
@@ -367,11 +384,17 @@ Examples:
         if not runner.get_workflow_type(args.workflow):
             return 1
         
+        # Set default step1 model if not specified
+        step1_model = args.step1_model
+        if not step1_model:
+            step1_model = "gpt-4o-2024-08-06"  # Same default for both text and image
+        
         # Run complete workflow
         success = runner.run_complete_workflow(
             resume=args.resume,
+            step1_model=step1_model,
             step3_model=args.step3_model,
-            step5_model=args.step5_model
+            step4_model=args.step4_model
         )
         
         return 0 if success else 1

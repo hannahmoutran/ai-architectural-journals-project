@@ -1,38 +1,963 @@
-# This code enhances Southern Architect metadata with verified LCSH headings.
+# Controlled Vocabulary API querying - LCSH, FAST, Getty AAT/TGN Subject Headings
+
 import os
 import json
 import logging
 import time
 import requests
 import argparse
+import xml.etree.ElementTree as ET
 from datetime import datetime
 from typing import List, Dict, Any, Optional, Tuple
 from openpyxl import load_workbook
 from openpyxl.styles import Alignment
 from collections import defaultdict
+from urllib.parse import quote_plus
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-class LOCAuthorizedTermFinder:
-    """Enhanced LOC term finder with rate limiting and error handling."""
+def create_vocab_api_usage_log(logs_folder_path: str, script_name: str, total_topics: int, 
+                              api_stats: Dict[str, Any]) -> bool:
+    """Create comprehensive vocabulary API usage log."""
+    try:
+        pass  # Add your code here
+    except Exception as e:
+        logging.error(f"An error occurred: {e}")
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        log_filename = f"{script_name}_vocab_api_usage_log.txt"
+        log_path = os.path.join(logs_folder_path, log_filename)
+        
+        with open(log_path, 'w', encoding='utf-8') as f:
+            f.write("SOUTHERN ARCHITECT VOCABULARY API USAGE LOG\n")
+            f.write("=" * 50 + "\n\n")
+            f.write(f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+            f.write(f"Script: {script_name}\n\n")
+            
+            # Summary statistics
+            f.write("SUMMARY STATISTICS:\n")
+            f.write("-" * 20 + "\n")
+            f.write(f"Total topics processed: {total_topics}\n")
+            f.write(f"Total API requests made: {api_stats.get('total_requests', 0)}\n")
+            f.write(f"Total processing time: {api_stats.get('total_time', 0):.2f} seconds\n")
+            f.write(f"Average time per topic: {api_stats.get('avg_time_per_topic', 0):.2f} seconds\n\n")
+            
+            # API-specific statistics
+            for api_name, stats in api_stats.get('api_breakdown', {}).items():
+                f.write(f"{api_name.upper()} API STATISTICS:\n")
+                f.write("-" * (len(api_name) + 16) + "\n")
+                f.write(f"Requests made: {stats.get('requests', 0)}\n")
+                f.write(f"Successful responses: {stats.get('successful', 0)}\n")
+                f.write(f"Failed responses: {stats.get('failed', 0)}\n")
+                f.write(f"Success rate: {stats.get('success_rate', 0):.1f}%\n")
+                f.write(f"Total processing time: {stats.get('total_time', 0):.2f} seconds\n")
+                f.write(f"Average time per request: {stats.get('avg_time', 0):.2f} seconds\n")
+                f.write(f"Terms found: {stats.get('terms_found', 0)}\n")
+                f.write(f"Cache hits: {stats.get('cache_hits', 0)}\n\n")
+            
+            # Topic-level results summary
+            f.write("TOPIC PROCESSING RESULTS:\n")
+            f.write("-" * 25 + "\n")
+            topic_results = api_stats.get('topic_results', {})
+            for topic, result in topic_results.items():
+                f.write(f"Topic: {topic}\n")
+                f.write(f"  Total terms found: {result.get('total_terms', 0)}\n")
+                for api_name, count in result.get('terms_by_api', {}).items():
+                    f.write(f"  {api_name}: {count} terms\n")
+                f.write(f"  Processing time: {result.get('processing_time', 0):.2f}s\n\n")
+        
+        print(f"📊 Vocabulary API usage log created: {log_path}")
+        return True
+        
+    except Exception as e:
+        logging.error(f"Error creating vocabulary API usage log: {e}")
+        return False
+
+def log_individual_vocab_response(logs_folder_path: str, script_name: str, topic: str, 
+                                 api_name: str, query: str, response_data: List[Dict], 
+                                 processing_time: float, error: str = None) -> bool:
+    """Log individual vocabulary API response."""
+    try:
+        log_filename = f"{script_name}_vocab_full_responses_log.txt"
+        log_path = os.path.join(logs_folder_path, log_filename)
+        
+        # Create file with header if it doesn't exist
+        if not os.path.exists(log_path):
+            with open(log_path, 'w', encoding='utf-8') as f:
+                f.write("SOUTHERN ARCHITECT VOCABULARY API DETAILED RESPONSES LOG\n")
+                f.write("=" * 60 + "\n\n")
+        
+        with open(log_path, 'a', encoding='utf-8') as f:
+            f.write(f"TIMESTAMP: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+            f.write(f"TOPIC: {topic}\n")
+            f.write(f"API: {api_name}\n")
+            f.write(f"QUERY: {query}\n")
+            f.write(f"PROCESSING TIME: {processing_time:.3f}s\n")
+            
+            if error:
+                f.write(f"ERROR: {error}\n")
+                f.write("RESPONSE: Failed\n")
+            else:
+                f.write(f"TERMS FOUND: {len(response_data)}\n")
+                f.write("RESPONSE:\n")
+                for i, term in enumerate(response_data, 1):
+                    label = term.get('label', 'N/A')
+                    uri = term.get('uri', 'N/A')
+                    source = term.get('source', 'N/A')
+                    f.write(f"  {i}. {label}\n")
+                    f.write(f"     URI: {uri}\n")
+                    f.write(f"     Source: {source}\n")
+            
+            f.write("-" * 60 + "\n\n")
+        
+        return True
+        
+    except Exception as e:
+        logging.error(f"Error logging individual vocabulary response: {e}")
+        return False
+
+class APIStatsTracker:
+    """Track API statistics across all vocabulary services."""
     
     def __init__(self):
+        self.start_time = time.time()
+        self.api_breakdown = {
+            'LCSH': {'requests': 0, 'successful': 0, 'failed': 0, 'total_time': 0, 'terms_found': 0, 'cache_hits': 0},
+            'FAST': {'requests': 0, 'successful': 0, 'failed': 0, 'total_time': 0, 'terms_found': 0, 'cache_hits': 0},
+            'FAST Geographic': {'requests': 0, 'successful': 0, 'failed': 0, 'total_time': 0, 'terms_found': 0, 'cache_hits': 0},
+            'Getty AAT': {'requests': 0, 'successful': 0, 'failed': 0, 'total_time': 0, 'terms_found': 0, 'cache_hits': 0},
+            'Getty TGN': {'requests': 0, 'successful': 0, 'failed': 0, 'total_time': 0, 'terms_found': 0, 'cache_hits': 0}
+        }
+        self.topic_results = {}
+        self.geographic_results = {}  # New tracking for geographic entities
+        self.total_requests = 0
+    
+    def record_api_call(self, api_name: str, topic: str, query: str, success: bool, 
+                       processing_time: float, terms_found: int, from_cache: bool = False):
+        """Record an API call."""
+        if api_name in self.api_breakdown:
+            stats = self.api_breakdown[api_name]
+            stats['requests'] += 1
+            stats['total_time'] += processing_time
+            
+            if from_cache:
+                stats['cache_hits'] += 1
+            
+            if success:
+                stats['successful'] += 1
+                stats['terms_found'] += terms_found
+            else:
+                stats['failed'] += 1
+        
+        # Track topic-level results
+        if topic not in self.topic_results:
+            self.topic_results[topic] = {
+                'total_terms': 0,
+                'terms_by_api': defaultdict(int),
+                'processing_time': 0
+            }
+        
+        self.topic_results[topic]['terms_by_api'][api_name] += terms_found
+        self.topic_results[topic]['total_terms'] += terms_found
+        self.topic_results[topic]['processing_time'] += processing_time
+        
+        self.total_requests += 1
+    
+    def get_summary_stats(self, total_topics: int) -> Dict[str, Any]:
+        """Get summary statistics."""
+        total_time = time.time() - self.start_time
+        
+        # Calculate success rates for each API
+        for api_name in self.api_breakdown:
+            stats = self.api_breakdown[api_name]
+            total_api_requests = stats['requests']
+            if total_api_requests > 0:
+                stats['success_rate'] = (stats['successful'] / total_api_requests) * 100
+                stats['avg_time'] = stats['total_time'] / total_api_requests
+            else:
+                stats['success_rate'] = 0
+                stats['avg_time'] = 0
+        
+        return {
+            'total_requests': self.total_requests,
+            'total_time': total_time,
+            'avg_time_per_topic': total_time / total_topics if total_topics > 0 else 0,
+            'api_breakdown': self.api_breakdown,
+            'topic_results': self.topic_results
+        }
+
+class FASTTermFinder:
+    """FAST term finder"""
+    
+    def __init__(self, wskey=None, stats_tracker=None, logs_folder_path=None):
+        # Updated API endpoints
+        self.suggest_url = "https://fast.oclc.org/searchfast/fastsuggest"
+        self.search_url = "http://fast.oclc.org/search"
+        
+        self.headers = {
+            'User-Agent': 'Python-FAST-Term-Finder/1.0 (Educational/Research Use)'
+        }
+        self.max_results = 3  # Strict limit to 3 terms
+        self.max_geo_results = 1  # Strict limit to 1 geographic term
+        self.request_delay = 0.5
+        self.cache = {}
+        self.wskey = wskey  # OCLC WSKey for authentication (optional)
+        self.stats_tracker = stats_tracker
+        self.logs_folder_path = logs_folder_path
+        
+    def search(self, query: str, topic: str = None) -> List[Dict[str, str]]:
+        """Search FAST using the updated API format with logging."""
+        cache_key = f"fast_new_{query}"
+        from_cache = cache_key in self.cache
+        
+        start_time = time.time()
+        
+        if from_cache:
+            results = self.cache[cache_key]
+            processing_time = time.time() - start_time
+            
+            # Log cache hit
+            if self.stats_tracker:
+                self.stats_tracker.record_api_call(
+                    'FAST', topic or query, query, True, processing_time, len(results), from_cache=True
+                )
+            
+            if self.logs_folder_path:
+                log_individual_vocab_response(
+                    self.logs_folder_path, "southern_architect_step2", topic or query, 
+                    "FAST", f"{query} (CACHED)", results, processing_time
+                )
+            
+            return results
+        
+        results = []
+        error_msg = None
+        
+        try:
+            # Try method 1: New suggest API without WSKey (usually works)
+            results = self._try_suggest_api(query)
+            
+            # Try method 2: If no results and multi-word, try key terms
+            if not results and ' ' in query:
+                words = query.split()
+                for word in words:
+                    if len(word) > 3:  # Skip short words
+                        word_results = self._try_suggest_api(word)
+                        # Filter word results for relevance to original query
+                        for result in word_results:
+                            if self._is_relevant_to_query(result, query):
+                                results.append(result)
+                        if len(results) >= self.max_results:  # Stop if we have enough
+                            break
+            
+            # Remove duplicates based on URI and STRICT LIMIT TO 3
+            seen_uris = set()
+            unique_results = []
+            for result in results:
+                if result['uri'] not in seen_uris and len(unique_results) < self.max_results:
+                    unique_results.append(result)
+                    seen_uris.add(result['uri'])
+            
+            results = unique_results
+            success = True
+            
+        except Exception as e:
+            error_msg = str(e)
+            success = False
+            results = []
+        
+        processing_time = time.time() - start_time
+        
+        # Cache results
+        self.cache[cache_key] = results
+        
+        # Log the API call
+        if self.stats_tracker:
+            self.stats_tracker.record_api_call(
+                'FAST', topic or query, query, success, processing_time, len(results)
+            )
+        
+        if self.logs_folder_path:
+            log_individual_vocab_response(
+                self.logs_folder_path, "southern_architect_step2", topic or query, 
+                "FAST", query, results, processing_time, error_msg
+            )
+        
+        time.sleep(self.request_delay)
+        return results
+    def search_geographic(self, query: str, topic: str = None) -> List[Dict[str, str]]:
+        """Search FAST for geographic entities with additional metadata."""
+        cache_key = f"fast_geo_{query}"
+        from_cache = cache_key in self.cache
+        
+        start_time = time.time()
+        
+        if from_cache:
+            results = self.cache[cache_key]
+            processing_time = time.time() - start_time
+            
+            if self.stats_tracker:
+                self.stats_tracker.record_api_call(
+                    'FAST Geographic', topic or query, query, True, processing_time, len(results), from_cache=True
+                )
+            
+            if self.logs_folder_path:
+                log_individual_vocab_response(
+                    self.logs_folder_path, "southern_architect_step2", topic or query, 
+                    "FAST Geographic", f"{query} (CACHED)", results, processing_time
+                )
+            
+            return results
+        
+        results = []
+        error_msg = None
+        
+        try:
+            # Try method 1: New suggest API focusing on geographic facets
+            params = {
+                'query': query,
+                'queryReturn': 'suggestall,idroot,auth,type,tag',
+                'suggest': 'autoSubject',
+                'rows': self.max_geo_results * 2,  # CHANGED: Use max_geo_results instead of max_results
+                'sort': 'usage desc',
+                'facet': 'type',
+                'facet.field': 'type',
+                'fq': 'type:Geographic'  # Filter for geographic entities
+            }
+            
+            if self.wskey:
+                params['wskey'] = self.wskey
+            
+            resp = requests.get(self.suggest_url, params=params, headers=self.headers, timeout=10)
+            resp.raise_for_status()
+            
+            data = resp.json()
+            results = self._parse_geographic_response(data)
+            
+            # If no results with geographic filter, try broader search
+            if not results:
+                params.pop('fq', None)  # Remove geographic filter
+                resp = requests.get(self.suggest_url, params=params, headers=self.headers, timeout=10)
+                resp.raise_for_status()
+                data = resp.json()
+                
+                # Parse and filter for geographic relevance
+                all_results = self._parse_geographic_response(data)
+                results = [r for r in all_results if self._is_geographic_relevant(r, query)][:self.max_geo_results]  # CHANGED: Use max_geo_results
+            
+            success = True
+            
+        except Exception as e:
+            error_msg = str(e)
+            success = False
+            results = []
+        
+        processing_time = time.time() - start_time
+        
+        # Cache results
+        self.cache[cache_key] = results
+        
+        # Log the API call
+        if self.stats_tracker:
+            self.stats_tracker.record_api_call(
+                'FAST Geographic', topic or query, query, success, processing_time, len(results)
+            )
+        
+        if self.logs_folder_path:
+            log_individual_vocab_response(
+                self.logs_folder_path, "southern_architect_step2", topic or query, 
+                "FAST Geographic", query, results, processing_time, error_msg
+            )
+        
+        time.sleep(self.request_delay)
+        return results
+    
+    def _try_suggest_api(self, query: str) -> List[Dict[str, str]]:
+        """Try the suggest API with the working parameters."""
+        params = {
+            'query': query,
+            'queryReturn': 'suggestall,idroot,auth,type',
+            'suggest': 'autoSubject',
+            'rows': self.max_results * 2,  # Get a few more to filter
+            'sort': 'usage desc'
+        }
+        
+        # Add WSKey if available
+        if self.wskey:
+            params['wskey'] = self.wskey
+        
+        resp = requests.get(self.suggest_url, params=params, headers=self.headers, timeout=10)
+        resp.raise_for_status()
+        
+        data = resp.json()
+        return self._parse_suggest_response(data)
+    
+    def _parse_suggest_response(self, data: dict) -> List[Dict[str, str]]:
+        """Parse the suggest API response format."""
+        results = []
+        
+        if 'response' in data and 'docs' in data['response']:
+            docs = data['response']['docs']
+            
+            for doc in docs:
+                if len(results) >= self.max_results:
+                    break
+                
+                # Extract fields from response
+                suggest_all = doc.get('suggestall', '')
+                id_root = doc.get('idroot', '')
+                auth = doc.get('auth', '')
+                doc_type = doc.get('type', '')
+                
+                # Handle fields that might be lists or strings
+                if isinstance(id_root, list) and id_root:
+                    id_root = id_root[0]
+                elif not isinstance(id_root, str):
+                    id_root = str(id_root) if id_root else ''
+                
+                if isinstance(suggest_all, list) and suggest_all:
+                    suggest_all = suggest_all[0]
+                elif not isinstance(suggest_all, str):
+                    suggest_all = str(suggest_all) if suggest_all else ''
+                
+                if isinstance(auth, list) and auth:
+                    auth = auth[0]
+                elif not isinstance(auth, str):
+                    auth = str(auth) if auth else ''
+                
+                if isinstance(doc_type, list) and doc_type:
+                    doc_type = doc_type[0]
+                elif not isinstance(doc_type, str):
+                    doc_type = str(doc_type) if doc_type else ''
+                
+                # Only include if we have the essential fields
+                if suggest_all and id_root:
+                    results.append({
+                        'label': auth if auth else suggest_all,
+                        'uri': f"http://id.worldcat.org/fast/{id_root}",
+                        'type': doc_type,
+                        'source': 'FAST',
+                        'idroot': id_root
+                    })
+        
+        return results
+    
+    def _parse_geographic_response(self, data: dict) -> List[Dict[str, str]]:
+        """Parse the geographic API response format with additional metadata."""
+        results = []
+        
+        if 'response' in data and 'docs' in data['response']:
+            docs = data['response']['docs']
+            
+            for doc in docs:
+                if len(results) >= self.max_geo_results:  # CHANGED: Use max_geo_results
+                    break
+                
+                # Extract fields from response
+                suggest_all = doc.get('suggestall', '')
+                id_root = doc.get('idroot', '')
+                auth = doc.get('auth', '')
+                doc_type = doc.get('type', '')
+                tag = doc.get('tag', '')
+                
+                # Handle fields that might be lists or strings
+                if isinstance(id_root, list) and id_root:
+                    id_root = id_root[0]
+                elif not isinstance(id_root, str):
+                    id_root = str(id_root) if id_root else ''
+                
+                if isinstance(suggest_all, list) and suggest_all:
+                    suggest_all = suggest_all[0]
+                elif not isinstance(suggest_all, str):
+                    suggest_all = str(suggest_all) if suggest_all else ''
+                
+                if isinstance(auth, list) and auth:
+                    auth = auth[0]
+                elif not isinstance(auth, str):
+                    auth = str(auth) if auth else ''
+                
+                if isinstance(doc_type, list) and doc_type:
+                    doc_type = doc_type[0]
+                elif not isinstance(doc_type, str):
+                    doc_type = str(doc_type) if doc_type else ''
+                
+                if isinstance(tag, list):
+                    tag = ', '.join(str(t) for t in tag if t)
+                elif not isinstance(tag, str):
+                    tag = str(tag) if tag else ''
+                
+                # Only include if we have the essential fields
+                if suggest_all and id_root:
+                    result = {
+                        'label': auth if auth else suggest_all,
+                        'uri': f"http://id.worldcat.org/fast/{id_root}",
+                        'type': doc_type,
+                        'source': 'FAST Geographic',
+                        'idroot': id_root
+                    }
+                    
+                    # Add additional metadata for geographic entities
+                    if tag:
+                        result['tag'] = tag
+                        result['sources_and_links'] = tag  # For vocabulary mapping report
+                    
+                    results.append(result)
+        
+        return results
+    
+    def _is_relevant_to_query(self, result: Dict[str, str], original_query: str) -> bool:
+        """Check if a result from word search is relevant to original query."""
+        query_words = set(w.lower() for w in original_query.split())
+        result_words = set(w.lower() for w in result['label'].split())
+        
+        # Check for word overlap - any shared words indicate relevance
+        label_overlap = len(query_words.intersection(result_words))
+        
+        # Include if there's any word overlap
+        return label_overlap > 0
+    
+    def _is_geographic_relevant(self, result: Dict[str, str], original_query: str) -> bool:
+        """Check if a result is geographically relevant."""
+        query_words = set(w.lower() for w in original_query.split())
+        result_words = set(w.lower() for w in result['label'].split())
+        
+        # Check for word overlap - any shared words indicate relevance
+        label_overlap = len(query_words.intersection(result_words))
+        
+        # Also check if the type field indicates it's geographic
+        type_field = result.get('type', '').lower()
+        is_geographic_type = 'geographic' in type_field
+        
+        # Include if there's word overlap OR if it's explicitly marked as geographic
+        return label_overlap > 0 or is_geographic_type
+    
+    def find_terms(self, topics: List[str]) -> Dict[str, List[Dict[str, str]]]:
+        """Find FAST terms for multiple topics with the updated API."""
+        if not topics:
+            return {}
+            
+        results = {}
+        
+        for topic in topics:
+            if not topic or topic.strip() == "":
+                continue
+                
+            topic = topic.strip()
+            
+            # Skip if already processed
+            if topic in results:
+                continue
+                
+            # Search for terms using the updated method - STRICT LIMIT TO 3
+            fast_results = self.search(topic, topic)[:self.max_results]
+            results[topic] = fast_results
+            
+            if fast_results:
+                print(f"   📚 Found {len(fast_results)} FAST terms for '{topic}'")
+            else:
+                print(f"   ⚠️  No FAST terms found for '{topic}'")
+        
+        return results
+
+    def find_geographic_terms(self, geographic_entities: List[str]) -> Dict[str, List[Dict[str, str]]]:
+        """Find FAST geographic terms for multiple entities."""
+        if not geographic_entities:
+            return {}
+            
+        results = {}
+        
+        for entity in geographic_entities:
+            if not entity or entity.strip() == "":
+                continue
+                
+            entity = entity.strip()
+            
+            # Skip if already processed
+            if entity in results:
+                continue
+            
+            # Extract the searchable part by removing the type in parentheses
+            # e.g., "Baltimore--Maryland (City)" becomes "Baltimore--Maryland"
+            search_term = entity
+            if '(' in entity and entity.endswith(')'):
+                # Find the last opening parenthesis and remove everything from there
+                paren_index = entity.rfind('(')
+                if paren_index > 0:
+                    search_term = entity[:paren_index].strip()
+            
+            print(f"   🔍 Searching for '{entity}' using query: '{search_term}'")
+            
+            # Search for geographic terms using the cleaned search term - LIMITED TO 1 TERM
+            fast_results = self.search_geographic(search_term, entity)[:self.max_geo_results]  # CHANGED: Use max_geo_results
+            results[entity] = fast_results  # Store under the original entity name
+            
+            if fast_results:
+                print(f"   🌍 Found {len(fast_results)} FAST geographic term for '{entity}'")  # CHANGED: "term" instead of "terms"
+            else:
+                print(f"   ⚠️  No FAST geographic terms found for '{entity}'")
+        
+        return results
+
+class GettyTermFinder:
+    """Getty Vocabularies term finder (AAT, ULAN, TGN) with broader search strategy and logging."""
+    
+    def __init__(self, stats_tracker=None, logs_folder_path=None):
+        self.base_urls = {
+            'AAT': 'http://vocabsservices.getty.edu/AATService.asmx/AATGetTermMatch',
+            'ULAN': 'http://vocabsservices.getty.edu/ULANService.asmx/ULANGetTermMatch',
+            'TGN': 'http://vocabsservices.getty.edu/TGNService.asmx/TGNGetTermMatch'
+        }
+        self.headers = {
+            'User-Agent': 'Python-Getty-Term-Finder/1.0 (Educational/Research Use)'
+        }
+        self.max_results = 3  # Strict limit to 3 terms
+        self.request_delay = 0.5
+        self.cache = {}
+        self.stats_tracker = stats_tracker
+        self.logs_folder_path = logs_folder_path
+    
+    def search_aat(self, query: str, topic: str = None) -> List[Dict[str, str]]:
+        """Search AAT (Art & Architecture Thesaurus) for terms with broader matching and logging."""
+        cache_key = f"AAT_{query}"
+        from_cache = cache_key in self.cache
+        
+        start_time = time.time()
+        
+        if from_cache:
+            results = self.cache[cache_key]
+            processing_time = time.time() - start_time
+            
+            if self.stats_tracker:
+                self.stats_tracker.record_api_call(
+                    'Getty AAT', topic or query, query, True, processing_time, len(results), from_cache=True
+                )
+            
+            if self.logs_folder_path:
+                log_individual_vocab_response(
+                    self.logs_folder_path, "southern_architect_step2", topic or query, 
+                    "Getty AAT", f"{query} (CACHED)", results, processing_time
+                )
+            
+            return results
+        
+        all_results = []
+        error_msg = None
+        
+        try:
+            # Strategy 1: Exact term search
+            params = {
+                'term': query,
+                'logop': 'and',
+                'notes': ''
+            }
+            
+            resp = requests.get(self.base_urls['AAT'], params=params, headers=self.headers, timeout=10)
+            resp.raise_for_status()
+            
+            root = ET.fromstring(resp.content)
+            
+            # Parse XML response
+            for subject in root.findall('.//Subject'):
+                if len(all_results) >= self.max_results:
+                    break
+                    
+                subject_id = subject.find('Subject_ID')
+                preferred_term = subject.find('Preferred_Term')
+                
+                if subject_id is not None and preferred_term is not None:
+                    all_results.append({
+                        'label': preferred_term.text,
+                        'uri': f"http://vocab.getty.edu/aat/{subject_id.text}",
+                        'source': 'Getty AAT',
+                        'subject_id': subject_id.text
+                    })
+            
+            # Strategy 2: If no results and multi-word query, try key terms
+            if not all_results and ' ' in query:
+                words = query.split()
+                for word in words:
+                    if len(word) > 3 and len(all_results) < self.max_results:  # Skip short words
+                        params_word = {
+                            'term': word,
+                            'logop': 'and', 
+                            'notes': ''
+                        }
+                        
+                        try:
+                            resp_word = requests.get(self.base_urls['AAT'], params=params_word, headers=self.headers, timeout=10)
+                            resp_word.raise_for_status()
+                            root_word = ET.fromstring(resp_word.content)
+                            
+                            for subject in root_word.findall('.//Subject'):
+                                if len(all_results) >= self.max_results:
+                                    break
+                                    
+                                subject_id = subject.find('Subject_ID')
+                                preferred_term = subject.find('Preferred_Term')
+                                
+                                if subject_id is not None and preferred_term is not None:
+                                    # Check if this result is relevant to original query
+                                    term_lower = preferred_term.text.lower()
+                                    query_words = set(w.lower() for w in query.split())
+                                    term_words = set(w.lower() for w in preferred_term.text.split())
+                                    
+                                    # Include if there's word overlap or architectural relevance
+                                    if (query_words.intersection(term_words) or 
+                                        any(arch_word in term_lower for arch_word in ['architecture', 'architectural', 'building', 'style'])):
+                                        all_results.append({
+                                            'label': preferred_term.text,
+                                            'uri': f"http://vocab.getty.edu/aat/{subject_id.text}",
+                                            'source': 'Getty AAT',
+                                            'subject_id': subject_id.text
+                                        })
+                        except:
+                            continue  # Skip word if it fails
+            
+            success = True
+            
+        except Exception as e:
+            error_msg = str(e)
+            success = False
+        
+        processing_time = time.time() - start_time
+        
+        # Remove duplicates and STRICT LIMIT TO 3
+        seen_uris = set()
+        unique_results = []
+        for result in all_results:
+            if result['uri'] not in seen_uris and len(unique_results) < self.max_results:
+                unique_results.append(result)
+                seen_uris.add(result['uri'])
+        
+        results = unique_results
+        self.cache[cache_key] = results
+        
+        # Log the API call
+        if self.stats_tracker:
+            self.stats_tracker.record_api_call(
+                'Getty AAT', topic or query, query, success, processing_time, len(results)
+            )
+        
+        if self.logs_folder_path:
+            log_individual_vocab_response(
+                self.logs_folder_path, "southern_architect_step2", topic or query, 
+                "Getty AAT", query, results, processing_time, error_msg
+            )
+        
+        time.sleep(self.request_delay)
+        return results
+    
+    def search_tgn(self, query: str, topic: str = None) -> List[Dict[str, str]]:
+        """Search TGN (Thesaurus of Geographic Names) for terms with broader matching and logging."""
+        cache_key = f"TGN_{query}"
+        from_cache = cache_key in self.cache
+        
+        start_time = time.time()
+        
+        if from_cache:
+            results = self.cache[cache_key]
+            processing_time = time.time() - start_time
+            
+            if self.stats_tracker:
+                self.stats_tracker.record_api_call(
+                    'Getty TGN', topic or query, query, True, processing_time, len(results), from_cache=True
+                )
+            
+            if self.logs_folder_path:
+                log_individual_vocab_response(
+                    self.logs_folder_path, "southern_architect_step2", topic or query, 
+                    "Getty TGN", f"{query} (CACHED)", results, processing_time
+                )
+            
+            return results
+        
+        all_results = []
+        error_msg = None
+        
+        try:
+            # Strategy 1: Exact search
+            params = {
+                'name': query,
+                'placetypeid': '',
+                'nationid': ''
+            }
+            
+            resp = requests.get(self.base_urls['TGN'], params=params, headers=self.headers, timeout=10)
+            resp.raise_for_status()
+            
+            root = ET.fromstring(resp.content)
+            
+            # Parse XML response
+            for subject in root.findall('.//Subject'):
+                if len(all_results) >= self.max_results:
+                    break
+                    
+                subject_id = subject.find('Subject_ID')
+                preferred_term = subject.find('Preferred_Term')
+                
+                if subject_id is not None and preferred_term is not None:
+                    all_results.append({
+                        'label': preferred_term.text,
+                        'uri': f"http://vocab.getty.edu/tgn/{subject_id.text}",
+                        'source': 'Getty TGN',
+                        'subject_id': subject_id.text
+                    })
+            
+            # Strategy 2: If no results and contains geographic terms, try broader search
+            if not all_results:
+                geographic_words = ['american', 'southern', 'northern', 'eastern', 'western', 'city', 'state', 'county']
+                query_words = query.lower().split()
+                
+                for word in query_words:
+                    if len(all_results) >= self.max_results:
+                        break
+                        
+                    if word in geographic_words or len(word) > 4:
+                        params_word = {
+                            'name': word,
+                            'placetypeid': '',
+                            'nationid': ''
+                        }
+                        
+                        try:
+                            resp_word = requests.get(self.base_urls['TGN'], params=params_word, headers=self.headers, timeout=10)
+                            resp_word.raise_for_status()
+                            root_word = ET.fromstring(resp_word.content)
+                            
+                            for subject in root_word.findall('.//Subject'):
+                                if len(all_results) >= self.max_results:
+                                    break
+                                    
+                                subject_id = subject.find('Subject_ID')
+                                preferred_term = subject.find('Preferred_Term')
+                                
+                                if subject_id is not None and preferred_term is not None:
+                                    all_results.append({
+                                        'label': preferred_term.text,
+                                        'uri': f"http://vocab.getty.edu/tgn/{subject_id.text}",
+                                        'source': 'Getty TGN',
+                                        'subject_id': subject_id.text
+                                    })
+                        except:
+                            continue
+                        
+                        if all_results:  # Stop after first successful word search
+                            break
+            
+            success = True
+            
+        except Exception as e:
+            error_msg = str(e)
+            success = False
+        
+        processing_time = time.time() - start_time
+        
+        # Remove duplicates and STRICT LIMIT TO 3
+        seen_uris = set()
+        unique_results = []
+        for result in all_results:
+            if result['uri'] not in seen_uris and len(unique_results) < self.max_results:
+                unique_results.append(result)
+                seen_uris.add(result['uri'])
+        
+        results = unique_results
+        self.cache[cache_key] = results
+        
+        # Log the API call
+        if self.stats_tracker:
+            self.stats_tracker.record_api_call(
+                'Getty TGN', topic or query, query, success, processing_time, len(results)
+            )
+        
+        if self.logs_folder_path:
+            log_individual_vocab_response(
+                self.logs_folder_path, "southern_architect_step2", topic or query, 
+                "Getty TGN", query, results, processing_time, error_msg
+            )
+        
+        time.sleep(self.request_delay)
+        return results
+    
+    def find_terms(self, topics: List[str]) -> Dict[str, List[Dict[str, str]]]:
+        """Find Getty terms for multiple topics with improved search strategies."""
+        if not topics:
+            return {}
+            
+        results = {}
+        
+        for topic in topics:
+            if not topic or topic.strip() == "":
+                continue
+                
+            topic = topic.strip()
+            
+            # Skip if already processed
+            if topic in results:
+                continue
+                
+            # Search AAT and TGN (skip ULAN for now as it's for people)
+            all_results = []
+            
+            # Search AAT (Art & Architecture Thesaurus)
+            aat_results = self.search_aat(topic, topic)
+            all_results.extend(aat_results)
+            
+            # Search TGN (Thesaurus of Geographic Names) - only if we have room
+            if len(all_results) < self.max_results:
+                tgn_results = self.search_tgn(topic, topic)
+                # Add TGN results up to the limit
+                remaining_slots = self.max_results - len(all_results)
+                all_results.extend(tgn_results[:remaining_slots])
+            
+            # STRICT LIMIT TO 3 TOTAL
+            results[topic] = all_results[:self.max_results]
+            
+            if all_results:
+                print(f"   🏛️  Found {len(all_results)} Getty terms for '{topic}'")
+            else:
+                print(f"   ⚠️  No Getty terms found for '{topic}'")
+        
+        return results
+
+class LOCAuthorizedTermFinder:
+    """Enhanced LOC term finder with rate limiting, error handling, and logging."""
+    
+    def __init__(self, stats_tracker=None, logs_folder_path=None):
         self.base_url = "https://id.loc.gov/authorities/subjects/suggest2"
         self.headers = {
             'User-Agent': 'Python-LOC-Term-Finder/1.0 (Educational/Research Use)'
         }
         self.lcsh_authorized_headings = "http://id.loc.gov/authorities/subjects/collection_LCSHAuthorizedHeadings"
-        self.max_results = 3  # Keep it concise for spreadsheet
-        self.request_delay = 0.5  # Respectful rate limiting
-        self.cache = {}  # Cache results to avoid duplicate requests
+        self.max_results = 3  # Strict limit to 3 terms
+        self.request_delay = 0.5
+        self.cache = {}
+        self.stats_tracker = stats_tracker
+        self.logs_folder_path = logs_folder_path
         
-    def search(self, query: str, search_type: str) -> List[Dict[str, str]]:
-        """Search LOC for authorized terms."""
+    def search(self, query: str, search_type: str, topic: str = None) -> List[Dict[str, str]]:
+        """Search LOC for authorized terms with logging."""
         cache_key = f"{query}_{search_type}"
-        if cache_key in self.cache:
-            return self.cache[cache_key]
+        from_cache = cache_key in self.cache
+        
+        start_time = time.time()
+        
+        if from_cache:
+            results = self.cache[cache_key]
+            processing_time = time.time() - start_time
             
+            if self.stats_tracker:
+                self.stats_tracker.record_api_call(
+                    'LCSH', topic or query, f"{query} ({search_type})", True, processing_time, len(results), from_cache=True
+                )
+            
+            if self.logs_folder_path:
+                log_individual_vocab_response(
+                    self.logs_folder_path, "southern_architect_step2", topic or query, 
+                    "LCSH", f"{query} ({search_type}) (CACHED)", results, processing_time
+                )
+            
+            return results
+        
         params = {
             'q': query,
             'searchtype': search_type,
@@ -40,27 +965,52 @@ class LOCAuthorizedTermFinder:
             'memberOf': self.lcsh_authorized_headings
         }
         
+        results = []
+        error_msg = None
+        success = False
+        
         try:
             resp = requests.get(self.base_url, params=params, headers=self.headers, timeout=10)
             resp.raise_for_status()
             hits = resp.json().get('hits', [])
             
-            results = [
-                {'label': h['aLabel'], 'uri': h['uri']}
-                for h in hits
-                if h.get('aLabel') and h.get('uri')
-            ]
+            for h in hits:
+                if len(results) >= self.max_results:
+                    break
+                if h.get('aLabel') and h.get('uri'):
+                    results.append({
+                        'label': h['aLabel'], 
+                        'uri': h['uri'],
+                        'source': 'LCSH'
+                    })
             
-            self.cache[cache_key] = results
-            time.sleep(self.request_delay)
-            return results
+            success = True
             
         except requests.exceptions.RequestException as e:
-            logging.warning(f"Error searching for '{query}': {e}")
-            return []
+            error_msg = str(e)
+            success = False
+        
+        processing_time = time.time() - start_time
+        
+        self.cache[cache_key] = results
+        
+        # Log the API call
+        if self.stats_tracker:
+            self.stats_tracker.record_api_call(
+                'LCSH', topic or query, f"{query} ({search_type})", success, processing_time, len(results)
+            )
+        
+        if self.logs_folder_path:
+            log_individual_vocab_response(
+                self.logs_folder_path, "southern_architect_step2", topic or query, 
+                "LCSH", f"{query} ({search_type})", results, processing_time, error_msg
+            )
+        
+        time.sleep(self.request_delay)
+        return results
     
     def find_terms(self, topics: List[str]) -> Dict[str, List[Dict[str, str]]]:
-        """Find LCSH terms for multiple topics."""
+        """Find LCSH terms for multiple topics with logging."""
         if not topics:
             return {}
             
@@ -77,11 +1027,11 @@ class LOCAuthorizedTermFinder:
                 continue
                 
             # Try keyword search first
-            keyword_results = self.search(topic, "keyword")
+            keyword_results = self.search(topic, "keyword", topic)
             
             # If we need more results, try left-anchored search
             if len(keyword_results) < self.max_results:
-                leftanchored_results = self.search(topic, "leftanchored")
+                leftanchored_results = self.search(topic, "leftanchored", topic)
                 
                 # Merge results, avoiding duplicates
                 existing_uris = {r['uri'] for r in keyword_results}
@@ -91,6 +1041,7 @@ class LOCAuthorizedTermFinder:
                     if result['uri'] not in existing_uris:
                         keyword_results.append(result)
             
+            # STRICT LIMIT TO 3
             results[topic] = keyword_results[:self.max_results]
             
             if keyword_results:
@@ -99,99 +1050,33 @@ class LOCAuthorizedTermFinder:
                 print(f"   ⚠️  No LCSH terms found for '{topic}'")
         
         return results
-    
-    def format_results_for_excel(self, results: Dict[str, List[Dict[str, str]]]) -> str:
-        """Format results for spreadsheet display with labels and URIs."""
-        if not results:
-            return ""
-            
-        formatted_terms = []
-        for topic, terms in results.items():
-            if terms:
-                # Format as "Label (URI)"
-                term_strings = [f"{term['label']} ({term['uri']})" for term in terms]
-                formatted_terms.extend(term_strings)
-        
-        # Remove duplicates while preserving order
-        unique_terms = []
-        seen = set()
-        for term in formatted_terms:
-            if term not in seen:
-                unique_terms.append(term)
-                seen.add(term)
-        
-        return "; ".join(unique_terms)
-    
-    def format_results_for_json(self, results: Dict[str, List[Dict[str, str]]]) -> List[Dict[str, str]]:
-        """Format results for JSON storage with full label/URI structure."""
-        if not results:
-            return []
-            
-        all_terms = []
-        seen_uris = set()
-        
-        for topic, terms in results.items():
-            for term in terms:
-                if term['uri'] not in seen_uris:
-                    all_terms.append({
-                        'label': term['label'],
-                        'uri': term['uri']
-                    })
-                    seen_uris.add(term['uri'])
-        
-        return all_terms
 
 class SouthernArchitectEnhancer:
-    """Main class for enhancing Southern Architect results with LCSH headings."""
+    """Main class for enhancing Southern Architect results with multi-vocabulary terms including LCSH."""
     
     def __init__(self, folder_path: str):
         self.folder_path = folder_path
-        self.loc_finder = LOCAuthorizedTermFinder()
-        self.workflow_type = None  # 'text' or 'image'
+        
+        # Create logs folder
+        self.logs_folder_path = os.path.join(folder_path, "logs")
+        if not os.path.exists(self.logs_folder_path):
+            os.makedirs(self.logs_folder_path)
+        
+        # Initialize stats tracker
+        self.stats_tracker = APIStatsTracker()
+        
+        # Initialize finders with stats tracking and logging
+        self.lcsh_finder = LOCAuthorizedTermFinder(self.stats_tracker, self.logs_folder_path)
+        self.fast_finder = FASTTermFinder(stats_tracker=self.stats_tracker, logs_folder_path=self.logs_folder_path)
+        self.getty_finder = GettyTermFinder(self.stats_tracker, self.logs_folder_path)
+        
+        self.workflow_type = None
         self.json_data = None
         self.excel_path = None
+        self.max_terms_per_vocabulary = 3  # For topics
+        self.max_geo_terms_per_vocabulary = 1  # NEW: For geographic entities
+        self.max_total_terms = 12  # 3 terms × 4 vocabularies = 12 max total for topics
     
-    def format_results_for_excel(self, results: Dict[str, List[Dict[str, str]]]) -> str:
-        """Format results for spreadsheet display with labels and URIs."""
-        if not results:
-            return ""
-            
-        formatted_terms = []
-        for topic, terms in results.items():
-            if terms:
-                # Format as "Label (URI)"
-                term_strings = [f"{term['label']} ({term['uri']})" for term in terms]
-                formatted_terms.extend(term_strings)
-        
-        # Remove duplicates while preserving order
-        unique_terms = []
-        seen = set()
-        for term in formatted_terms:
-            if term not in seen:
-                unique_terms.append(term)
-                seen.add(term)
-        
-        return "; ".join(unique_terms)
-    
-    def format_results_for_json(self, results: Dict[str, List[Dict[str, str]]]) -> List[Dict[str, str]]:
-        """Format results for JSON storage with full label/URI structure."""
-        if not results:
-            return []
-            
-        all_terms = []
-        seen_uris = set()
-        
-        for topic, terms in results.items():
-            for term in terms:
-                if term['uri'] not in seen_uris:
-                    all_terms.append({
-                        'label': term['label'],
-                        'uri': term['uri']
-                    })
-                    seen_uris.add(term['uri'])
-        
-        return all_terms
-        
     def detect_workflow_type(self) -> bool:
         """Detect whether this is a text or image workflow folder."""
         # Check for expected files
@@ -230,71 +1115,167 @@ class SouthernArchitectEnhancer:
             logging.error(f"Error loading JSON data: {e}")
             return False
     
-    def extract_subject_headings(self) -> List[str]:
-        """Extract all unique subject headings from the JSON data."""
+    def extract_subject_headings(self) -> tuple[List[str], List[str]]:
+        """Extract all unique topics and geographic entities from the JSON data."""
         all_subjects = set()
+        all_geographic_entities = set()
         
         # Skip the last item if it's API stats
         data_items = self.json_data[:-1] if self.json_data and 'api_stats' in self.json_data[-1] else self.json_data
         
         for item in data_items:
-            if 'analysis' in item and 'subject_headings' in item['analysis']:
-                subjects = item['analysis']['subject_headings']
-                if isinstance(subjects, list):
-                    for subject in subjects:
-                        if subject and subject.strip():
-                            all_subjects.add(subject.strip())
-                elif isinstance(subjects, str) and subjects.strip():
-                    # Handle comma-separated string format
-                    for subject in subjects.split(','):
-                        if subject.strip():
-                            all_subjects.add(subject.strip())
+            if 'analysis' in item:
+                # Extract topics (subjects)
+                if 'topics' in item['analysis']:
+                    subjects = item['analysis']['topics']
+                    if isinstance(subjects, list):
+                        for subject in subjects:
+                            if subject and subject.strip():
+                                all_subjects.add(subject.strip())
+                    elif isinstance(subjects, str) and subjects.strip():
+                        # Handle comma-separated string format
+                        for subject in subjects.split(','):
+                            if subject.strip():
+                                all_subjects.add(subject.strip())
+                
+                # Extract geographic entities
+                if 'geographic_entities' in item['analysis']:
+                    geo_entities = item['analysis']['geographic_entities']
+                    if isinstance(geo_entities, list):
+                        for entity in geo_entities:
+                            if entity and entity.strip():
+                                all_geographic_entities.add(entity.strip())
+                    elif isinstance(geo_entities, str) and geo_entities.strip():
+                        # Handle comma-separated string format
+                        for entity in geo_entities.split(','):
+                            if entity.strip():
+                                all_geographic_entities.add(entity.strip())
         
-        return sorted(list(all_subjects))
+        return sorted(list(all_subjects)), sorted(list(all_geographic_entities))
     
-    def process_lcsh_lookup(self, subjects: List[str]) -> Tuple[Dict[str, str], Dict[str, List[Dict[str, str]]]]:
-        """Process LCSH lookup for all subjects and return mapping for both Excel and JSON."""
-        if not subjects:
-            return {}, {}
+    def process_multi_vocabulary_lookup(self, subjects: List[str], geographic_entities: List[str]) -> Tuple[Dict[str, str], Dict[str, List[Dict[str, str]]], Dict[str, str], Dict[str, List[Dict[str, str]]]]:
+        """Process multi-vocabulary lookup for subjects and geographic entities."""
         
-        print(f"\n🔍 Processing LCSH lookup for {len(subjects)} unique subjects...")
+        print(f"\n🔍 Processing multi-vocabulary lookup...")
+        print(f"📚 Topics: {len(subjects)} unique subjects")
+        print(f"🌍 Geographic entities: {len(geographic_entities)} unique entities")
+        print(f"⚠️  LIMITING TO {self.max_terms_per_vocabulary} TERMS PER VOCABULARY PER TOPIC")
+        print(f"⚠️  LIMITING TO {self.max_geo_terms_per_vocabulary} TERM PER GEOGRAPHIC ENTITY")  # NEW
+        print(f"📊 API calls will be logged to: {self.logs_folder_path}")
         
-        # Group similar subjects to reduce API calls
-        subject_groups = self.group_similar_subjects(subjects)
+        # Process subjects (existing logic)
+        subject_to_terms_excel = {}
+        subject_to_terms_json = {}
         
-        # Process each group
-        subject_to_lcsh_excel = {}
-        subject_to_lcsh_json = {}
-        total_groups = len(subject_groups)
-        
-        for i, (representative, group_subjects) in enumerate(subject_groups.items(), 1):
-            print(f"\n📋 Processing group {i}/{total_groups}: '{representative}'")
+        for i, subject in enumerate(subjects, 1):
+            print(f"\n📋 Processing subject {i}/{len(subjects)}: '{subject}'")
             
-            # Find LCSH terms for the representative subject
-            lcsh_results = self.loc_finder.find_terms([representative])
-            formatted_lcsh_excel = self.format_results_for_excel(lcsh_results)
-            formatted_lcsh_json = self.format_results_for_json(lcsh_results)
+            # Search all vocabularies for THIS SPECIFIC subject
+            all_terms = []
             
-            # Apply the same LCSH terms to all subjects in the group
-            for subject in group_subjects:
-                subject_to_lcsh_excel[subject] = formatted_lcsh_excel
-                subject_to_lcsh_json[subject] = formatted_lcsh_json
+            # Search LCSH FIRST (most important) - LIMITED TO 3 TERMS
+            lcsh_results = self.lcsh_finder.find_terms([subject])
+            if subject in lcsh_results:
+                lcsh_terms = lcsh_results[subject][:self.max_terms_per_vocabulary]
+                all_terms.extend(lcsh_terms)
+                print(f"     📚 LCSH: {len(lcsh_terms)} terms")
+            
+            # Search FAST - LIMITED TO 3 TERMS
+            fast_results = self.fast_finder.find_terms([subject])
+            if subject in fast_results:
+                fast_terms = fast_results[subject][:self.max_terms_per_vocabulary]
+                all_terms.extend(fast_terms)
+                print(f"     🚀 FAST: {len(fast_terms)} terms")
+            
+            # Search Getty - LIMITED TO 3 TERMS
+            getty_results = self.getty_finder.find_terms([subject])
+            if subject in getty_results:
+                getty_terms = getty_results[subject][:self.max_terms_per_vocabulary]
+                all_terms.extend(getty_terms)
+                print(f"     🏛️ Getty: {len(getty_terms)} terms")
+            
+            # Show summary for this subject
+            print(f"     ✅ Total: {len(all_terms)} terms for '{subject}'")
+            
+            # Format results for this subject
+            formatted_terms_excel = self.format_results_for_excel(all_terms)
+            formatted_terms_json = self.format_results_for_json(all_terms)
+            
+            # Store results for this specific subject
+            subject_to_terms_excel[subject] = formatted_terms_excel
+            subject_to_terms_json[subject] = formatted_terms_json
         
-        return subject_to_lcsh_excel, subject_to_lcsh_json
+        # Process geographic entities (NEW)
+        geographic_to_terms_excel = {}
+        geographic_to_terms_json = {}
+        
+        for i, entity in enumerate(geographic_entities, 1):
+            print(f"\n🌍 Processing geographic entity {i}/{len(geographic_entities)}: '{entity}'")
+            
+            # Search FAST Geographic only - LIMITED TO 3 TERMS
+            fast_geo_results = self.fast_finder.find_geographic_terms([entity])
+            if entity in fast_geo_results:
+                geo_terms = fast_geo_results[entity][:self.max_terms_per_vocabulary]
+                print(f"     🌍 FAST Geographic: {len(geo_terms)} terms")
+            else:
+                geo_terms = []
+                print(f"     ⚠️  No FAST Geographic terms found")
+            
+            # Format results for this geographic entity
+            formatted_terms_excel = self.format_results_for_excel(geo_terms)
+            formatted_terms_json = self.format_results_for_json(geo_terms)
+            
+            # Store results for this specific geographic entity
+            geographic_to_terms_excel[entity] = formatted_terms_excel
+            geographic_to_terms_json[entity] = formatted_terms_json
+        
+        return subject_to_terms_excel, subject_to_terms_json, geographic_to_terms_excel, geographic_to_terms_json
     
-    def group_similar_subjects(self, subjects: List[str]) -> Dict[str, List[str]]:
-        """Group similar subjects to reduce API calls."""
-        groups = defaultdict(list)
+    def format_results_for_excel(self, terms: List[Dict[str, str]]) -> str:
+        """Format results for spreadsheet display with labels, URIs, and sources."""
+        if not terms:
+            return ""
         
-        for subject in subjects:
-            # Use the subject itself as the key (representative)
-            # In a more sophisticated version, you could implement fuzzy matching
-            groups[subject].append(subject)
+        formatted_terms = []
+        for term in terms:
+            source = term.get('source', 'Unknown')
+            label = term.get('label', '')
+            uri = term.get('uri', '')
+            
+            if label and uri:
+                formatted_terms.append(f"{label} ({uri}) [{source}]")
+            elif label:
+                formatted_terms.append(f"{label} [{source}]")
         
-        return dict(groups)
+        return "; ".join(formatted_terms)
     
-    def enhance_excel_file(self, subject_to_lcsh: Dict[str, str]) -> bool:
-        """Add LCSH headings column to the Excel file."""
+    def format_results_for_json(self, terms: List[Dict[str, str]]) -> List[Dict[str, str]]:
+        """Format results for JSON storage with full structure."""
+        if not terms:
+            return []
+        
+        formatted_terms = []
+        seen_uris = set()
+        
+        for term in terms:
+            uri = term.get('uri', '')
+            if uri and uri not in seen_uris:
+                formatted_terms.append({
+                    'label': term.get('label', ''),
+                    'uri': uri,
+                    'source': term.get('source', 'Unknown'),
+                    'description': term.get('description', ''),
+                    'qid': term.get('qid', ''),
+                    'subject_id': term.get('subject_id', ''),
+                    'type': term.get('type', ''),
+                    'tag': term.get('tag', '')
+                })
+                seen_uris.add(uri)
+        
+        return formatted_terms
+    
+    def enhance_excel_file(self, subject_to_terms: Dict[str, str], geographic_to_terms: Dict[str, str]) -> bool:
+        """Add vocabulary terms columns to the Excel file for both topics and geographic entities."""
         try:
             # Load the existing workbook
             wb = load_workbook(self.excel_path)
@@ -302,79 +1283,112 @@ class SouthernArchitectEnhancer:
             
             # Determine the column structure based on workflow type
             if self.workflow_type == 'text':
-                # Text workflow: ['Folder', 'Page Number', 'Page Title', 'Cleaned OCR Text', 
-                #                'TOC Entry', 'Named Entities', 'Subject Headings', 'Content Warning']
-                subject_col = 7  # Subject Headings column
-                insert_col = 8  # Insert LCSH after Subject Headings
+                subject_col = 8   # Topics column
+                geo_col = 7       # Geographic Entities column  
+                insert_col = 9    # Insert vocabulary terms after Content Warning (column 9)
             else:  # image workflow
-                # Image workflow: ['Folder', 'Page Number', 'Image Path', 'Text Transcription', 
-                #                 'Visual Description', 'TOC Entry', 'Named Entities', 'Subject Headings', 'Content Warning']
-                subject_col = 8  # Subject Headings column
-                insert_col = 9  # Insert LCSH after Subject Headings
+                subject_col = 9   # Topics column
+                geo_col = 8       # Geographic Entities column
+                insert_col = 10   # Insert vocabulary terms after Content Warning (column 10)
             
-            # Insert new column
-            analysis_sheet.insert_cols(insert_col)
+            # Insert two new columns (one for topic vocab terms, one for geographic vocab terms)
+            analysis_sheet.insert_cols(insert_col, 2)
             
-            # Add header
-            header_cell = analysis_sheet.cell(row=1, column=insert_col)
-            header_cell.value = "LCSH Headings"
-            header_cell.alignment = Alignment(vertical='top', wrap_text=True)
+            # Add headers
+            topic_vocab_header = analysis_sheet.cell(row=1, column=insert_col)
+            topic_vocab_header.value = "Topic Vocabulary Terms (Max 3 per vocab per topic)"
+            topic_vocab_header.alignment = Alignment(vertical='top', wrap_text=True)
             
-            # Set column width
-            col_letter = header_cell.column_letter
-            analysis_sheet.column_dimensions[col_letter].width = 60  # Wider to accommodate URIs
+            geo_vocab_header = analysis_sheet.cell(row=1, column=insert_col + 1)
+            geo_vocab_header.value = "Geographic Vocabulary Terms (FAST only)"
+            geo_vocab_header.alignment = Alignment(vertical='top', wrap_text=True)
+            
+            # Set column widths
+            topic_col_letter = topic_vocab_header.column_letter
+            geo_col_letter = geo_vocab_header.column_letter
+            analysis_sheet.column_dimensions[topic_col_letter].width = 50
+            analysis_sheet.column_dimensions[geo_col_letter].width = 50
             
             # Process each data row
             processed_rows = 0
             for row_num in range(2, analysis_sheet.max_row + 1):
-                # Get the subject headings from the current row
+                # Get the topics and geographic entities from the current row
                 subject_cell = analysis_sheet.cell(row=row_num, column=subject_col)
-                subject_headings = subject_cell.value or ""
+                geo_cell = analysis_sheet.cell(row=row_num, column=geo_col)
                 
-                # Process subject headings
-                if subject_headings and subject_headings.strip():
-                    # Split by comma and lookup each subject
-                    subjects = [s.strip() for s in subject_headings.split(',') if s.strip()]
-                    lcsh_terms = []
+                topics = subject_cell.value or ""
+                geo_entities = geo_cell.value or ""
+                
+                # Process topics vocabulary terms
+                topic_vocab_terms = []
+                if topics and topics.strip():
+                    subjects = [s.strip() for s in topics.split(',') if s.strip()]
+                    print(f"Row {row_num-1}: Processing {len(subjects)} topics: {subjects}")
                     
                     for subject in subjects:
-                        if subject in subject_to_lcsh and subject_to_lcsh[subject]:
-                            # Split the LCSH result and add individual terms
-                            terms = [t.strip() for t in subject_to_lcsh[subject].split(';') if t.strip()]
-                            lcsh_terms.extend(terms)
+                        if subject in subject_to_terms and subject_to_terms[subject]:
+                            terms = [t.strip() for t in subject_to_terms[subject].split(';') if t.strip()]
+                            topic_vocab_terms.extend(terms)
+                            print(f"  - '{subject}': {len(terms)} terms")
+                        else:
+                            print(f"  - '{subject}': No terms found")
+                
+                # Process geographic entities vocabulary terms
+                geo_vocab_terms = []
+                if geo_entities and geo_entities.strip():
+                    entities = [e.strip() for e in geo_entities.split(',') if e.strip()]
+                    print(f"Row {row_num-1}: Processing {len(entities)} geographic entities: {entities}")
                     
-                    # Remove duplicates while preserving order
-                    unique_lcsh_terms = []
-                    seen = set()
-                    for term in lcsh_terms:
-                        if term not in seen:
-                            unique_lcsh_terms.append(term)
-                            seen.add(term)
-                    
-                    # Set the LCSH cell value
-                    lcsh_cell = analysis_sheet.cell(row=row_num, column=insert_col)
-                    lcsh_cell.value = "; ".join(unique_lcsh_terms) if unique_lcsh_terms else ""
-                    lcsh_cell.alignment = Alignment(vertical='top', wrap_text=True)
-                    
-                    if unique_lcsh_terms:
-                        processed_rows += 1
-                else:
-                    # Empty subject headings
-                    lcsh_cell = analysis_sheet.cell(row=row_num, column=insert_col)
-                    lcsh_cell.value = ""
-                    lcsh_cell.alignment = Alignment(vertical='top', wrap_text=True)
+                    for entity in entities:
+                        if entity in geographic_to_terms and geographic_to_terms[entity]:
+                            terms = [t.strip() for t in geographic_to_terms[entity].split(';') if t.strip()]
+                            geo_vocab_terms.extend(terms)
+                            print(f"  - '{entity}': {len(terms)} geographic terms")
+                        else:
+                            print(f"  - '{entity}': No geographic terms found")
+                
+                # Remove duplicates while preserving order for both
+                unique_topic_terms = []
+                seen_topic = set()
+                for term in topic_vocab_terms:
+                    if term not in seen_topic:
+                        unique_topic_terms.append(term)
+                        seen_topic.add(term)
+                
+                unique_geo_terms = []
+                seen_geo = set()
+                for term in geo_vocab_terms:
+                    if term not in seen_geo:
+                        unique_geo_terms.append(term)
+                        seen_geo.add(term)
+                
+                print(f"  → Total unique topic terms: {len(unique_topic_terms)}")
+                print(f"  → Total unique geographic terms: {len(unique_geo_terms)}")
+                
+                # Set the vocabulary terms cell values
+                topic_vocab_cell = analysis_sheet.cell(row=row_num, column=insert_col)
+                topic_vocab_cell.value = "; ".join(unique_topic_terms) if unique_topic_terms else ""
+                topic_vocab_cell.alignment = Alignment(vertical='top', wrap_text=True)
+                
+                geo_vocab_cell = analysis_sheet.cell(row=row_num, column=insert_col + 1)
+                geo_vocab_cell.value = "; ".join(unique_geo_terms) if unique_geo_terms else ""
+                geo_vocab_cell.alignment = Alignment(vertical='top', wrap_text=True)
+                
+                if unique_topic_terms or unique_geo_terms:
+                    processed_rows += 1
             
             # Save the enhanced workbook
             wb.save(self.excel_path)
-            print(f"✅ Enhanced Excel file saved with LCSH headings in {processed_rows} rows")
+            print(f"✅ Enhanced Excel file saved with vocabulary terms in {processed_rows} rows")
             return True
             
         except Exception as e:
             logging.error(f"Error enhancing Excel file: {e}")
             return False
     
-    def enhance_json_file(self, subject_to_lcsh_json: Dict[str, List[Dict[str, str]]]) -> bool:
-        """Add LCSH headings data to the JSON file."""
+    def enhance_json_file(self, subject_to_terms_json: Dict[str, List[Dict[str, str]]], 
+                      geographic_to_terms_json: Dict[str, List[Dict[str, str]]]) -> bool:
+        """Add vocabulary search results to JSON file with topic-to-terms and geographic-to-terms mapping."""
         try:
             # Skip the last item if it's API stats
             data_items = self.json_data[:-1] if self.json_data and 'api_stats' in self.json_data[-1] else self.json_data
@@ -385,30 +1399,39 @@ class SouthernArchitectEnhancer:
             
             for item in data_items:
                 if 'analysis' in item:
-                    # Get subject headings for this item
-                    subject_headings = item['analysis'].get('subject_headings', [])
+                    # Get topics for this item
+                    topics = item['analysis'].get('topics', [])
+                    geographic_entities = item['analysis'].get('geographic_entities', [])
                     
-                    # Normalize subject headings to list format
-                    if isinstance(subject_headings, str):
-                        subjects = [s.strip() for s in subject_headings.split(',') if s.strip()]
+                    # Normalize topics to list format
+                    if isinstance(topics, str):
+                        subjects = [s.strip() for s in topics.split(',') if s.strip()]
                     else:
-                        subjects = subject_headings if isinstance(subject_headings, list) else []
+                        subjects = topics if isinstance(topics, list) else []
                     
-                    # Collect LCSH terms for these subjects
-                    lcsh_terms = []
-                    seen_uris = set()
+                    # Normalize geographic entities to list format
+                    if isinstance(geographic_entities, str):
+                        geo_entities = [e.strip() for e in geographic_entities.split(',') if e.strip()]
+                    else:
+                        geo_entities = geographic_entities if isinstance(geographic_entities, list) else []
                     
+                    # Create topic-to-terms mapping for this page
+                    topic_to_terms = {}
                     for subject in subjects:
-                        if subject in subject_to_lcsh_json and subject_to_lcsh_json[subject]:
-                            for term in subject_to_lcsh_json[subject]:
-                                if term['uri'] not in seen_uris:
-                                    lcsh_terms.append(term)
-                                    seen_uris.add(term['uri'])
+                        if subject in subject_to_terms_json and subject_to_terms_json[subject]:
+                            topic_to_terms[subject] = subject_to_terms_json[subject].copy()
                     
-                    # Add LCSH headings to the analysis
-                    item['analysis']['lcsh_headings'] = lcsh_terms
+                    # Create geographic-entity-to-terms mapping for this page
+                    geographic_to_terms = {}
+                    for entity in geo_entities:
+                        if entity in geographic_to_terms_json and geographic_to_terms_json[entity]:
+                            geographic_to_terms[entity] = geographic_to_terms_json[entity].copy()
                     
-                    if lcsh_terms:
+                    # Add both mappings to the analysis
+                    item['analysis']['vocabulary_search_results'] = topic_to_terms
+                    item['analysis']['geographic_vocabulary_search_results'] = geographic_to_terms
+                    
+                    if topic_to_terms or geographic_to_terms:
                         processed_items += 1
                 
                 enhanced_items.append(item)
@@ -424,95 +1447,310 @@ class SouthernArchitectEnhancer:
             with open(json_path, 'w', encoding='utf-8') as f:
                 json.dump(enhanced_items, f, indent=2, ensure_ascii=False)
             
-            print(f"✅ Enhanced JSON file saved with LCSH headings in {processed_items} items")
+            print(f"✅ Enhanced JSON file saved with vocabulary search results in {processed_items} items")
             return True
             
         except Exception as e:
             logging.error(f"Error enhancing JSON file: {e}")
             return False
     
-    def create_lcsh_report(self, subject_to_lcsh: Dict[str, str]) -> bool:
-        """Create a detailed LCSH mapping report."""
+    def create_vocabulary_report(self, subject_to_terms: Dict[str, str], 
+                             geographic_to_terms: Dict[str, str]) -> bool:
+        """Create a detailed vocabulary mapping report organized by page for both topics and geographic entities."""
         try:
-            report_path = os.path.join(self.folder_path, "lcsh_mapping_report.txt")
+            report_path = os.path.join(self.folder_path, "vocabulary_mapping_report.txt")
+            
+            # Create mappings of page number to topics/geographic entities
+            page_to_topics = defaultdict(list)
+            page_to_geographic = defaultdict(list)
+            
+            # Load the existing workbook to get page information
+            wb = load_workbook(self.excel_path)
+            analysis_sheet = wb['Analysis']
+            
+            # Determine the column structure based on workflow type
+            if self.workflow_type == 'text':
+                page_col = 2     # Page Number column (1-indexed: Folder=1, Page Number=2)
+                subject_col = 8  # Topics column (1-indexed: ..., Topics=8)
+                geo_col = 7      # Geographic Entities column (1-indexed: ..., Geographic Entities=7)
+            else:  # image workflow
+                page_col = 2     # Page Number column (1-indexed: Folder=1, Page Number=2)
+                subject_col = 9  # Topics column (1-indexed: ..., Topics=9)
+                geo_col = 8      # Geographic Entities column (1-indexed: ..., Geographic Entities=8)
+            
+            # Build mapping of page to topics and geographic entities
+            for row_num in range(2, analysis_sheet.max_row + 1):
+                page_cell = analysis_sheet.cell(row=row_num, column=page_col)
+                subject_cell = analysis_sheet.cell(row=row_num, column=subject_col)
+                geo_cell = analysis_sheet.cell(row=row_num, column=geo_col)
+                
+                page_number = page_cell.value or "Unknown"
+                topics = subject_cell.value or ""
+                geo_entities = geo_cell.value or ""
+                
+                # Process topics
+                if topics and topics.strip():
+                    subjects = [s.strip() for s in topics.split(',') if s.strip()]
+                    for subject in subjects:
+                        if subject:
+                            page_to_topics[page_number].append(subject)
+                
+                # Process geographic entities
+                if geo_entities and geo_entities.strip():
+                    entities = [e.strip() for e in geo_entities.split(',') if e.strip()]
+                    for entity in entities:
+                        if entity:
+                            page_to_geographic[page_number].append(entity)
+            
+            wb.close()
             
             with open(report_path, 'w', encoding='utf-8') as f:
-                f.write("SOUTHERN ARCHITECT LCSH MAPPING REPORT\n")
+                f.write("SOUTHERN ARCHITECT VOCABULARY MAPPING REPORT\n")
                 f.write("=" * 50 + "\n\n")
                 f.write(f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
                 f.write(f"Workflow Type: {self.workflow_type.upper()}\n")
-                f.write(f"Total Subjects Processed: {len(subject_to_lcsh)}\n\n")
+                f.write(f"Total Topics Processed: {len(subject_to_terms)}\n")
+                f.write(f"Total Geographic Entities Processed: {len(geographic_to_terms)}\n")
+                f.write(f"Terms Per Vocabulary Limit: {self.max_terms_per_vocabulary}\n")
+                f.write(f"Max Total Terms Per Topic: {self.max_total_terms}\n\n")
+                
+                f.write("VOCABULARIES SEARCHED:\n")
+                f.write("FOR TOPICS:\n")
+                f.write("- LCSH (Library of Congress Subject Headings)\n")
+                f.write("- FAST (Faceted Application of Subject Terminology)\n")
+                f.write("- Getty AAT (Art & Architecture Thesaurus)\n")
+                f.write("- Getty TGN (Thesaurus of Geographic Names)\n")
+                f.write("FOR GEOGRAPHIC ENTITIES:\n")
+                f.write("- FAST Geographic (Faceted Application of Subject Terminology - Geographic)\n\n")
                 
                 # Statistics
-                subjects_with_lcsh = sum(1 for lcsh in subject_to_lcsh.values() if lcsh)
-                subjects_without_lcsh = len(subject_to_lcsh) - subjects_with_lcsh
+                topics_with_terms = sum(1 for terms in subject_to_terms.values() if terms)
+                topics_without_terms = len(subject_to_terms) - topics_with_terms
+                geo_with_terms = sum(1 for terms in geographic_to_terms.values() if terms)
+                geo_without_terms = len(geographic_to_terms) - geo_with_terms
+                
+                # Get all pages that have either topics or geographic entities
+                all_pages = set(list(page_to_topics.keys()) + list(page_to_geographic.keys()))
+                total_pages = len(all_pages)
                 
                 f.write("STATISTICS:\n")
-                f.write(f"- Subjects with LCSH terms: {subjects_with_lcsh}\n")
-                f.write(f"- Subjects without LCSH terms: {subjects_without_lcsh}\n")
-                f.write(f"- Success rate: {(subjects_with_lcsh/len(subject_to_lcsh)*100):.1f}%\n\n")
+                f.write(f"- Total pages processed: {total_pages}\n")
+                f.write(f"- Topics with vocabulary terms: {topics_with_terms}\n")
+                f.write(f"- Topics without vocabulary terms: {topics_without_terms}\n")
+                if len(subject_to_terms) > 0:
+                    f.write(f"- Topic success rate: {(topics_with_terms/len(subject_to_terms)*100):.1f}%\n")
+                else:
+                    f.write("- Topic success rate: 0%\n")
+                f.write(f"- Geographic entities with vocabulary terms: {geo_with_terms}\n")
+                f.write(f"- Geographic entities without vocabulary terms: {geo_without_terms}\n")
+                if len(geographic_to_terms) > 0:
+                    f.write(f"- Geographic success rate: {(geo_with_terms/len(geographic_to_terms)*100):.1f}%\n\n")
+                else:
+                    f.write("- Geographic success rate: 0%\n\n")
                 
-                # Detailed mappings
-                f.write("DETAILED MAPPINGS:\n")
-                f.write("-" * 30 + "\n\n")
+                # Count terms by source for topics
+                topic_source_counts = {'LCSH': 0, 'FAST': 0, 'Getty AAT': 0, 'Getty TGN': 0}
+                for terms_str in subject_to_terms.values():
+                    if terms_str:
+                        for term in terms_str.split(';'):
+                            if '[LCSH]' in term:
+                                topic_source_counts['LCSH'] += 1
+                            elif '[FAST]' in term:
+                                topic_source_counts['FAST'] += 1
+                            elif '[Getty AAT]' in term:
+                                topic_source_counts['Getty AAT'] += 1
+                            elif '[Getty TGN]' in term:
+                                topic_source_counts['Getty TGN'] += 1
                 
-                for subject, lcsh_terms in sorted(subject_to_lcsh.items()):
-                    f.write(f"Subject: {subject}\n")
-                    if lcsh_terms:
-                        f.write(f"LCSH: {lcsh_terms}\n")
+                # Count terms by source for geographic entities
+                geo_source_counts = {'FAST Geographic': 0}
+                for terms_str in geographic_to_terms.values():
+                    if terms_str:
+                        for term in terms_str.split(';'):
+                            if '[FAST Geographic]' in term:
+                                geo_source_counts['FAST Geographic'] += 1
+                
+                f.write("TOPIC TERMS BY SOURCE:\n")
+                for source, count in topic_source_counts.items():
+                    f.write(f"- {source}: {count} terms\n")
+                f.write("\nGEOGRAPHIC TERMS BY SOURCE:\n")
+                for source, count in geo_source_counts.items():
+                    f.write(f"- {source}: {count} terms\n")
+                f.write("\n")
+                
+                # Page statistics
+                f.write("PAGE STATISTICS:\n")
+                pages_with_topic_terms = 0
+                pages_with_geo_terms = 0
+                pages_with_any_terms = 0
+                
+                for page_num in all_pages:
+                    topics_on_page = page_to_topics.get(page_num, [])
+                    geo_entities_on_page = page_to_geographic.get(page_num, [])
+                    
+                    page_has_topic_terms = any(subject_to_terms.get(topic, '') for topic in topics_on_page)
+                    page_has_geo_terms = any(geographic_to_terms.get(entity, '') for entity in geo_entities_on_page)
+                    
+                    if page_has_topic_terms:
+                        pages_with_topic_terms += 1
+                    if page_has_geo_terms:
+                        pages_with_geo_terms += 1
+                    if page_has_topic_terms or page_has_geo_terms:
+                        pages_with_any_terms += 1
+                
+                f.write(f"- Pages with topic vocabulary terms: {pages_with_topic_terms}/{total_pages}\n")
+                f.write(f"- Pages with geographic vocabulary terms: {pages_with_geo_terms}/{total_pages}\n")
+                f.write(f"- Pages with any vocabulary terms: {pages_with_any_terms}/{total_pages}\n")
+                if total_pages > 0:
+                    f.write(f"- Overall page success rate: {(pages_with_any_terms/total_pages*100):.1f}%\n")
+                f.write("\n")
+                
+                # Detailed mappings organized by page
+                f.write("DETAILED MAPPINGS BY PAGE:\n")
+                f.write("-" * 40 + "\n\n")
+                
+                # Sort pages numerically if possible
+                try:
+                    sorted_pages = sorted(all_pages, key=lambda x: int(x) if str(x).isdigit() else float('inf'))
+                except:
+                    sorted_pages = sorted(all_pages, key=str)
+                
+                for page_num in sorted_pages:
+                    topics_on_page = page_to_topics.get(page_num, [])
+                    geo_entities_on_page = page_to_geographic.get(page_num, [])
+                    
+                    f.write(f"PAGE {page_num}:\n")
+                    f.write("=" * 20 + "\n")
+                    
+                    if not topics_on_page and not geo_entities_on_page:
+                        f.write("No topics or geographic entities found for this page\n\n")
+                        continue
+                    
+                    # Show topics for this page
+                    if topics_on_page:
+                        unique_topics = list(set(topics_on_page))
+                        f.write(f"Topics on this page ({len(unique_topics)}): {', '.join(sorted(unique_topics))}\n")
+                    
+                    # Show geographic entities for this page
+                    if geo_entities_on_page:
+                        unique_geo = list(set(geo_entities_on_page))
+                        f.write(f"Geographic entities on this page ({len(unique_geo)}): {', '.join(sorted(unique_geo))}\n")
+                    
+                    f.write("\n")
+                    
+                    # Show vocabulary terms for each unique topic on this page
+                    if topics_on_page:
+                        f.write("TOPIC VOCABULARY TERMS:\n")
+                        unique_topics_on_page = sorted(list(set(topics_on_page)))
+                        
+                        for topic in unique_topics_on_page:
+                            vocab_terms = subject_to_terms.get(topic, '')
+                            f.write(f"  Topic: {topic}\n")
+                            if vocab_terms:
+                                f.write(f"  Terms: {vocab_terms}\n")
+                            else:
+                                f.write(f"  Terms: No terms found\n")
+                            f.write("\n")
+                    
+                    # Show vocabulary terms for each unique geographic entity on this page
+                    if geo_entities_on_page:
+                        f.write("GEOGRAPHIC VOCABULARY TERMS:\n")
+                        unique_geo_entities_on_page = sorted(list(set(geo_entities_on_page)))
+                        
+                        for entity in unique_geo_entities_on_page:
+                            vocab_terms = geographic_to_terms.get(entity, '')
+                            f.write(f"  Geographic Entity: {entity}\n")
+                            if vocab_terms:
+                                f.write(f"  Terms: {vocab_terms}\n")
+                            else:
+                                f.write(f"  Terms: No terms found\n")
+                            f.write("\n")
+                    
+                    # Page summary
+                    unique_topics_on_page = list(set(topics_on_page)) if topics_on_page else []
+                    unique_geo_entities_on_page = list(set(geo_entities_on_page)) if geo_entities_on_page else []
+                    
+                    topics_with_terms_on_page = sum(1 for topic in unique_topics_on_page if subject_to_terms.get(topic, ''))
+                    geo_with_terms_on_page = sum(1 for entity in unique_geo_entities_on_page if geographic_to_terms.get(entity, ''))
+                    
+                    f.write(f"Page Summary:\n")
+                    if len(unique_topics_on_page) > 0:
+                        f.write(f"  - Topics with vocabulary terms: {topics_with_terms_on_page}/{len(unique_topics_on_page)}\n")
+                    if len(unique_geo_entities_on_page) > 0:
+                        f.write(f"  - Geographic entities with vocabulary terms: {geo_with_terms_on_page}/{len(unique_geo_entities_on_page)}\n")
+                    
+                    total_items_on_page = len(unique_topics_on_page) + len(unique_geo_entities_on_page)
+                    total_with_terms_on_page = topics_with_terms_on_page + geo_with_terms_on_page
+                    if total_items_on_page > 0:
+                        f.write(f"  - Overall page success: {total_with_terms_on_page}/{total_items_on_page} ({(total_with_terms_on_page/total_items_on_page*100):.1f}%)\n")
+                    
+                    f.write("\n" + "-" * 40 + "\n\n")
+                
+                # Summary by topic (alphabetical) at the end for reference
+                f.write("ALPHABETICAL TOPIC REFERENCE:\n")
+                f.write("-" * 40 + "\n\n")
+                
+                for subject, vocab_terms in sorted(subject_to_terms.items()):
+                    # Find which pages this topic appears on
+                    pages_with_topic = []
+                    for page_num, topics_on_page in page_to_topics.items():
+                        if subject in topics_on_page:
+                            pages_with_topic.append(str(page_num))
+                    
+                    f.write(f"Topic: {subject}\n")
+                    if pages_with_topic:
+                        sorted_pages = sorted(pages_with_topic, key=lambda x: int(x) if x.isdigit() else float('inf'))
+                        f.write(f"Appears on pages: {', '.join(sorted_pages)}\n")
                     else:
-                        f.write("LCSH: No terms found\n")
+                        f.write("Appears on pages: None\n")
+                    
+                    if vocab_terms:
+                        f.write(f"Terms: {vocab_terms}\n")
+                    else:
+                        f.write("Terms: No terms found\n")
+                    f.write("\n")
+                
+                # Summary by geographic entity (alphabetical) at the end for reference
+                f.write("ALPHABETICAL GEOGRAPHIC ENTITY REFERENCE:\n")
+                f.write("-" * 45 + "\n\n")
+                
+                for entity, vocab_terms in sorted(geographic_to_terms.items()):
+                    # Find which pages this geographic entity appears on
+                    pages_with_entity = []
+                    for page_num, entities_on_page in page_to_geographic.items():
+                        if entity in entities_on_page:
+                            pages_with_entity.append(str(page_num))
+                    
+                    f.write(f"Geographic Entity: {entity}\n")
+                    if pages_with_entity:
+                        sorted_pages = sorted(pages_with_entity, key=lambda x: int(x) if x.isdigit() else float('inf'))
+                        f.write(f"Appears on pages: {', '.join(sorted_pages)}\n")
+                    else:
+                        f.write("Appears on pages: None\n")
+                    
+                    if vocab_terms:
+                        f.write(f"Terms: {vocab_terms}\n")
+                        # Add note about additional metadata for FAST Geographic terms
+                        if '[FAST Geographic]' in vocab_terms:
+                            f.write(f"Note: FAST Geographic terms include sources and links metadata in detailed API logs\n")
+                    else:
+                        f.write("Terms: No terms found\n")
                     f.write("\n")
             
-            print(f"📋 LCSH mapping report saved to: {report_path}")
+            print(f"📋 Vocabulary mapping report (organized by page) saved to: {report_path}")
             return True
             
         except Exception as e:
-            logging.error(f"Error creating LCSH report: {e}")
-            return False
-        """Create a detailed LCSH mapping report."""
-        try:
-            report_path = os.path.join(self.folder_path, "lcsh_mapping_report.txt")
-            
-            with open(report_path, 'w', encoding='utf-8') as f:
-                f.write("SOUTHERN ARCHITECT LCSH MAPPING REPORT\n")
-                f.write("=" * 50 + "\n\n")
-                f.write(f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
-                f.write(f"Workflow Type: {self.workflow_type.upper()}\n")
-                f.write(f"Total Subjects Processed: {len(subject_to_lcsh)}\n\n")
-                
-                # Statistics
-                subjects_with_lcsh = sum(1 for lcsh in subject_to_lcsh.values() if lcsh)
-                subjects_without_lcsh = len(subject_to_lcsh) - subjects_with_lcsh
-                
-                f.write("STATISTICS:\n")
-                f.write(f"- Subjects with LCSH terms: {subjects_with_lcsh}\n")
-                f.write(f"- Subjects without LCSH terms: {subjects_without_lcsh}\n")
-                f.write(f"- Success rate: {(subjects_with_lcsh/len(subject_to_lcsh)*100):.1f}%\n\n")
-                
-                # Detailed mappings
-                f.write("DETAILED MAPPINGS:\n")
-                f.write("-" * 30 + "\n\n")
-                
-                for subject, lcsh_terms in sorted(subject_to_lcsh.items()):
-                    f.write(f"Subject: {subject}\n")
-                    if lcsh_terms:
-                        f.write(f"LCSH: {lcsh_terms}\n")
-                    else:
-                        f.write("LCSH: No terms found\n")
-                    f.write("\n")
-            
-            print(f"📋 LCSH mapping report saved to: {report_path}")
-            return True
-            
-        except Exception as e:
-            logging.error(f"Error creating LCSH report: {e}")
+            logging.error(f"Error creating vocabulary report: {e}")
             return False
     
     def run(self) -> bool:
-        """Main execution method."""
-        print(f"\n🎯 SOUTHERN ARCHITECT STEP 2 - LCSH ENHANCEMENT")
+        """Main execution method with comprehensive API logging for topics and geographic entities."""
+        print(f"\n🎯 SOUTHERN ARCHITECT STEP 2 - MULTI-VOCABULARY ENHANCEMENT")
         print(f"📁 Processing folder: {self.folder_path}")
+        print(f"⚠️  LIMITING TO {self.max_terms_per_vocabulary} TERMS PER VOCABULARY")
+        print(f"⚠️  MAXIMUM {self.max_total_terms} TERMS TOTAL PER SUBJECT")
+        print(f"📊 API logging enabled in: {self.logs_folder_path}")
         print("-" * 50)
         
         # Detect workflow type
@@ -525,36 +1763,71 @@ class SouthernArchitectEnhancer:
         if not self.load_json_data():
             return False
         
-        # Extract subject headings
-        subjects = self.extract_subject_headings()
-        if not subjects:
-            print("⚠️  No subject headings found in the data")
+        # Extract topics and geographic entities
+        subjects, geographic_entities = self.extract_subject_headings()
+        if not subjects and not geographic_entities:
+            print("⚠️  No topics or geographic entities found in the data")
             return False
         
-        print(f"📚 Found {len(subjects)} unique subject headings")
+        print(f"📚 Found {len(subjects)} unique topics")
+        print(f"🌍 Found {len(geographic_entities)} unique geographic entities")
         
-        # Process LCSH lookup
-        subject_to_lcsh_excel, subject_to_lcsh_json = self.process_lcsh_lookup(subjects)
+        # Process multi-vocabulary lookup with comprehensive logging
+        (subject_to_terms_excel, subject_to_terms_json, 
+        geographic_to_terms_excel, geographic_to_terms_json) = self.process_multi_vocabulary_lookup(
+            subjects, geographic_entities
+        )
         
         # Enhance Excel file
-        if not self.enhance_excel_file(subject_to_lcsh_excel):
+        if not self.enhance_excel_file(subject_to_terms_excel, geographic_to_terms_excel):
             return False
         
         # Enhance JSON file
-        if not self.enhance_json_file(subject_to_lcsh_json):
+        if not self.enhance_json_file(subject_to_terms_json, geographic_to_terms_json):
             return False
         
-        # Create LCSH report
-        self.create_lcsh_report(subject_to_lcsh_excel)
+        # Create vocabulary report
+        self.create_vocabulary_report(subject_to_terms_excel, geographic_to_terms_excel)
+        
+        # Generate comprehensive API usage logs
+        total_items = len(subjects) + len(geographic_entities)
+        api_summary_stats = self.stats_tracker.get_summary_stats(total_items)
+        create_vocab_api_usage_log(
+            logs_folder_path=self.logs_folder_path,
+            script_name="southern_architect_step2",
+            total_topics=total_items,
+            api_stats=api_summary_stats
+        )
         
         # Final summary
-        subjects_with_lcsh = sum(1 for lcsh in subject_to_lcsh_excel.values() if lcsh)
-        print(f"\n🎉 LCSH ENHANCEMENT COMPLETED!")
-        print(f"✅ Subjects with LCSH terms: {subjects_with_lcsh}/{len(subjects)}")
-        print(f"📊 Success rate: {(subjects_with_lcsh/len(subjects)*100):.1f}%")
+        subjects_with_terms = sum(1 for terms in subject_to_terms_excel.values() if terms)
+        geo_with_terms = sum(1 for terms in geographic_to_terms_excel.values() if terms)
+        
+        print(f"\n🎉 MULTI-VOCABULARY ENHANCEMENT COMPLETED!")
+        print(f"✅ Topics with vocabulary terms: {subjects_with_terms}/{len(subjects)}")
+        print(f"✅ Geographic entities with vocabulary terms: {geo_with_terms}/{len(geographic_entities)}")
+        if subjects:
+            print(f"📊 Topic success rate: {(subjects_with_terms/len(subjects)*100):.1f}%")
+        if geographic_entities:
+            print(f"📊 Geographic success rate: {(geo_with_terms/len(geographic_entities)*100):.1f}%")
+        print(f"⚠️  LIMITED TO {self.max_terms_per_vocabulary} TERMS PER VOCABULARY")
+        print(f"⚠️  MAXIMUM {self.max_total_terms} TERMS TOTAL PER SUBJECT")
+        print(f"🔗 Total API requests made: {api_summary_stats['total_requests']}")
+        print(f"⏱️  Total processing time: {api_summary_stats['total_time']:.1f}s")
         print(f"📄 Enhanced Excel file: {self.excel_path}")
         print(f"📄 Enhanced JSON file: {os.path.join(self.folder_path, f'{self.workflow_type}_workflow.json')}")
-        print(f"📋 Mapping report: {os.path.join(self.folder_path, 'lcsh_mapping_report.txt')}")
+        print(f"📋 Mapping report: {os.path.join(self.folder_path, 'vocabulary_mapping_report.txt')}")
+        print(f"📊 API usage log: {os.path.join(self.logs_folder_path, 'southern_architect_step2_vocab_api_usage_log.txt')}")
+        print(f"📋 Detailed API responses: {os.path.join(self.logs_folder_path, 'southern_architect_step2_vocab_full_responses_log.txt')}")
+        
+        # Show API breakdown
+        print(f"\n📊 API BREAKDOWN:")
+        for api_name, stats in api_summary_stats['api_breakdown'].items():
+            requests = stats['requests']
+            success_rate = stats['success_rate']
+            terms_found = stats['terms_found']
+            cache_hits = stats['cache_hits']
+            print(f"   {api_name}: {requests} requests, {success_rate:.1f}% success, {terms_found} terms, {cache_hits} cache hits")
         
         return True
 
@@ -575,7 +1848,7 @@ def find_newest_folder(base_directory: str) -> Optional[str]:
     return os.path.join(base_directory, folders[0])
 
 def main():
-    parser = argparse.ArgumentParser(description='Enhance Southern Architect results with LCSH headings')
+    parser = argparse.ArgumentParser(description='Enhance Southern Architect results with multi-vocabulary terms (3 max per vocabulary) - WITH COMPREHENSIVE API LOGGING')
     parser.add_argument('--folder', help='Specific folder path to process')
     parser.add_argument('--newest', action='store_true', help='Process the newest folder in the output directory (default: True if no folder specified)')
     args = parser.parse_args()
@@ -596,12 +1869,12 @@ def main():
             return
         print(f"🔄 Auto-selected newest folder: {os.path.basename(folder_path)}")
     
-    # Create and run the enhancer
+    # Create and run the enhancer with comprehensive API logging
     enhancer = SouthernArchitectEnhancer(folder_path)
     success = enhancer.run()
     
     if not success:
-        print("❌ LCSH enhancement failed")
+        print("❌ Multi-vocabulary enhancement failed")
         return 1
     
     return 0

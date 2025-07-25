@@ -130,12 +130,27 @@ def collect_all_files(input_folder):
 
 def postprocess_api_response(response_data):
     """Post-process the API response for consistency."""
+    # Handle named entities
     if 'namedEntities' in response_data:
         # Remove duplicates while preserving order
         response_data['namedEntities'] = list(dict.fromkeys(response_data['namedEntities']))
         
         # Remove any entities that are just single letters or numbers
         response_data['namedEntities'] = [entity for entity in response_data['namedEntities'] if len(entity) > 1 or not entity.isalnum()]
+    
+    # Handle geographic entities (NEW)
+    if 'geographicEntities' in response_data:
+        # Remove duplicates while preserving order
+        response_data['geographicEntities'] = list(dict.fromkeys(response_data['geographicEntities']))
+        
+        # Remove any entities that are just single letters or numbers
+        response_data['geographicEntities'] = [entity for entity in response_data['geographicEntities'] if len(entity) > 1 or not entity.isalnum()]
+    
+    # Handle subjects field variations - convert all to 'topics'
+    if 'subjects' in response_data and 'topics' not in response_data:
+        response_data['topics'] = response_data.pop('subjects')
+    elif 'subjectHeadings' in response_data and 'topics' not in response_data:
+        response_data['topics'] = response_data.pop('subjectHeadings')
     
     # Ensure 'contentWarning' field exists and is properly formatted
     if 'contentWarning' not in response_data:
@@ -201,7 +216,8 @@ def process_single_file(file_path, folder_name, page_number, content, model_name
             "cleanedText": "",
             "tocEntry": "No readable text on this page",
             "namedEntities": [],
-            "subjectHeadings": [],
+            "geographicEntities": [],  # NEW
+            "topics": [],
             "contentWarning": "None"
         }, "", None, 0
     
@@ -235,13 +251,25 @@ def process_single_file(file_path, folder_name, page_number, content, model_name
     parsed_json, error = parse_json_response(raw_response)
     
     if parsed_json:
-        # Handle field name variations
-        if 'subjects' in parsed_json and 'subjectHeadings' not in parsed_json:
-            parsed_json['subjectHeadings'] = parsed_json.pop('subjects')
+        # Handle field name variations - convert to 'topics'
+        if 'subjects' in parsed_json and 'topics' not in parsed_json:
+            parsed_json['topics'] = parsed_json.pop('subjects')
+        elif 'subjectHeadings' in parsed_json and 'topics' not in parsed_json:
+            parsed_json['topics'] = parsed_json.pop('subjectHeadings')
         
-        required_fields = ['cleanedText', 'tocEntry', 'namedEntities', 'subjectHeadings', 'contentWarning']
+        # UPDATED: Add geographicEntities to required fields
+        required_fields = ['cleanedText', 'tocEntry', 'namedEntities', 'geographicEntities', 'topics', 'contentWarning']
         if not all(key in parsed_json for key in required_fields):
-            raise KeyError("Missing required fields in JSON response")
+            # Handle missing fields gracefully
+            for field in required_fields:
+                if field not in parsed_json:
+                    if field == 'topics':
+                        # Try alternative field names
+                        parsed_json[field] = parsed_json.get('subjects', parsed_json.get('subjectHeadings', []))
+                    elif field in ['namedEntities', 'geographicEntities', 'topics']:
+                        parsed_json[field] = []
+                    else:
+                        parsed_json[field] = ""
         
         # Post-process the response
         parsed_json = postprocess_api_response(parsed_json)
@@ -254,7 +282,8 @@ def process_single_file(file_path, folder_name, page_number, content, model_name
             "cleanedText": raw_response,
             "tocEntry": f"Error: {error}",
             "namedEntities": [],
-            "subjectHeadings": [],
+            "geographicEntities": [],  # NEW
+            "topics": [],
             "contentWarning": "None"
         }
         return error_response, raw_response, response.usage, processing_time
@@ -317,7 +346,8 @@ def process_folder_individual(all_files, wb, analysis_sheet, raw_sheet, issues_s
                 "cleanedText": raw_response,
                 "tocEntry": f"Error: {str(e)}",
                 "namedEntities": [],
-                "subjectHeadings": [],
+                "geographicEntities": [],  # NEW
+                "topics": [],
                 "contentWarning": "None"
             }
             usage = None
@@ -340,7 +370,7 @@ def process_folder_individual(all_files, wb, analysis_sheet, raw_sheet, issues_s
             
             print(f"   ❌ Processing failed: {str(e)}")
         
-        # Add to analysis sheet (removed token columns)
+        # UPDATED: Add Geographic Entities column to analysis sheet
         analysis_row = [
             folder_name,
             page_number,
@@ -348,7 +378,8 @@ def process_folder_individual(all_files, wb, analysis_sheet, raw_sheet, issues_s
             response_data.get('cleanedText', raw_response),
             response_data.get('tocEntry', raw_response),
             ', '.join(response_data.get('namedEntities', [])),
-            ', '.join(response_data.get('subjectHeadings', [])),
+            ', '.join(response_data.get('geographicEntities', [])),  # NEW
+            ', '.join(response_data.get('topics', [])),
             response_data.get('contentWarning', 'None')
         ]
         analysis_sheet.append(analysis_row)
@@ -365,7 +396,7 @@ def process_folder_individual(all_files, wb, analysis_sheet, raw_sheet, issues_s
         for cell in raw_sheet[raw_sheet.max_row]:
             cell.alignment = Alignment(vertical='top', wrap_text=True)
         
-        # Add to results
+        # UPDATED: Add geographic_entities to results
         entry_result = {
             'folder': folder_name,
             'page_number': page_number,
@@ -374,7 +405,8 @@ def process_folder_individual(all_files, wb, analysis_sheet, raw_sheet, issues_s
                 'cleaned_text': response_data.get('cleanedText', raw_response),
                 'toc_entry': response_data.get('tocEntry', raw_response),
                 'named_entities': response_data.get('namedEntities', []),
-                'subject_headings': response_data.get('subjectHeadings', []),
+                'geographic_entities': response_data.get('geographicEntities', []),  # NEW
+                'topics': response_data.get('topics', []),
                 'content_warning': response_data.get('contentWarning', 'None'),
                 'raw_response': raw_response
             }
@@ -464,16 +496,16 @@ def process_folder_with_batch(input_folder, output_dir, model_name="gpt-4o-2024-
         analysis_sheet = wb.active
         analysis_sheet.title = "Analysis"
         
-        # Set up headers (removed token columns)
+        # UPDATED: Add Geographic Entities column to headers
         analysis_headers = [
             'Folder', 'Page Number', 'Page Title', 'Cleaned OCR Text', 
-            'TOC Entry', 'Named Entities', 'Subject Headings', 'Content Warning'
+            'TOC Entry', 'Named Entities', 'Geographic Entities', 'Topics', 'Content Warning'
         ]
         analysis_sheet.append(analysis_headers)
         analysis_sheet.freeze_panes = 'E2'
         
-        # Set column widths (removed token column widths)
-        column_widths = [15, 10, 30, 50, 30, 30, 30, 30]
+        # UPDATED: Add column width for Geographic Entities
+        column_widths = [15, 10, 30, 50, 30, 30, 30, 30, 30]
         for i, width in enumerate(column_widths):
             analysis_sheet.column_dimensions[analysis_sheet.cell(row=1, column=i+1).column_letter].width = width
         
@@ -559,9 +591,11 @@ def process_folder_with_batch(input_folder, output_dir, model_name="gpt-4o-2024-
                                     parsed_json, error = parse_json_response(raw_response)
 
                                     if parsed_json:
-                                        # Handle field name variations
-                                        if 'subjects' in parsed_json and 'subjectHeadings' not in parsed_json:
-                                            parsed_json['subjectHeadings'] = parsed_json.pop('subjects')
+                                        # Handle field name variations - convert to 'topics'
+                                        if 'subjects' in parsed_json and 'topics' not in parsed_json:
+                                            parsed_json['topics'] = parsed_json.pop('subjects')
+                                        elif 'subjectHeadings' in parsed_json and 'topics' not in parsed_json:
+                                            parsed_json['topics'] = parsed_json.pop('subjectHeadings')
                                         
                                         response_data = postprocess_api_response(parsed_json)
                                     else:
@@ -569,7 +603,8 @@ def process_folder_with_batch(input_folder, output_dir, model_name="gpt-4o-2024-
                                             "cleanedText": raw_response,
                                             "tocEntry": f"Error: {error}",
                                             "namedEntities": [],
-                                            "subjectHeadings": [],
+                                            "geographicEntities": [],  # NEW
+                                            "topics": [],
                                             "contentWarning": "None"
                                         }
                                     
@@ -594,7 +629,8 @@ def process_folder_with_batch(input_folder, output_dir, model_name="gpt-4o-2024-
                                         "cleanedText": raw_response,
                                         "tocEntry": f"Error: {result_data['error']}",
                                         "namedEntities": [],
-                                        "subjectHeadings": [],
+                                        "geographicEntities": [],  # NEW
+                                        "topics": [],
                                         "contentWarning": "None"
                                     }
                                     
@@ -614,7 +650,7 @@ def process_folder_with_batch(input_folder, output_dir, model_name="gpt-4o-2024-
                                         processing_time=0
                                     )
                                 
-                                # Add to analysis sheet (removed token columns)
+                                # UPDATED: Add Geographic Entities column to batch processing
                                 analysis_row = [
                                     folder_name,
                                     page_number,
@@ -622,7 +658,8 @@ def process_folder_with_batch(input_folder, output_dir, model_name="gpt-4o-2024-
                                     response_data.get('cleanedText', raw_response),
                                     response_data.get('tocEntry', raw_response),
                                     ', '.join(response_data.get('namedEntities', [])),
-                                    ', '.join(response_data.get('subjectHeadings', [])),
+                                    ', '.join(response_data.get('geographicEntities', [])),  # NEW
+                                    ', '.join(response_data.get('topics', [])),
                                     response_data.get('contentWarning', 'None')
                                 ]
                                 analysis_sheet.append(analysis_row)
@@ -639,7 +676,7 @@ def process_folder_with_batch(input_folder, output_dir, model_name="gpt-4o-2024-
                                 for cell in raw_sheet[raw_sheet.max_row]:
                                     cell.alignment = Alignment(vertical='top', wrap_text=True)
                                 
-                                # Add to results
+                                # UPDATED: Add geographic_entities to batch results
                                 entry_result = {
                                     'folder': folder_name,
                                     'page_number': page_number,
@@ -648,7 +685,8 @@ def process_folder_with_batch(input_folder, output_dir, model_name="gpt-4o-2024-
                                         'cleaned_text': response_data.get('cleanedText', raw_response),
                                         'toc_entry': response_data.get('tocEntry', raw_response),
                                         'named_entities': response_data.get('namedEntities', []),
-                                        'subject_headings': response_data.get('subjectHeadings', []),
+                                        'geographic_entities': response_data.get('geographicEntities', []),  # NEW
+                                        'topics': response_data.get('topics', []),
                                         'content_warning': response_data.get('contentWarning', 'None'),
                                         'raw_response': raw_response
                                     }
@@ -683,7 +721,7 @@ def main():
     # Start timing the entire script execution
     script_start_time = time.time()
     
-    input_folder = "/Users/hannahmoutran/Desktop/southern_architect/CODE/image_folders/3_pages"
+    input_folder = "/Users/hannahmoutran/Desktop/southern_architect/CODE/image_folders/10_pages"
     
     # Create dynamic output folder name
     current_date = datetime.now().strftime("%Y-%m-%d")

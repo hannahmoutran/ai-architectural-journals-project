@@ -2,17 +2,20 @@
 Southern Architect Prompts Module
 
 This module contains all prompt components for the Southern Architect archival project.
-Centralizes prompt management and eliminates duplication.
+All components are defined once and assembled into the original method names.
 """
 
 class SouthernArchitectPrompts:
     """Container for all Southern Architect text analysis prompts."""
     
-    # Core prompt components
+    # ==================== SHARED COMPONENTS ====================
+    
+    # Base description used in all prompts
     COLLECTION_DESCRIPTION = """
 You are an archivist at the University of Texas at Austin, cataloging a collection of issues of The Southern Architect (1892-1931). You are working from OCR text that may contain errors, so use your judgment to decipher meaning. This metadata is for architectural historians and architectural history students. Architectural styles, movements, trends, and other historically important information should be prioritized.
 """
     
+    # OCR cleaning instructions (text prompts only)
     OCR_CLEANING_INSTRUCTIONS = """
 Before analyzing the content, please clean the OCR text according to these guidelines:
 1. Correct misspellings that are clearly due to OCR errors.
@@ -26,6 +29,7 @@ Before analyzing the content, please clean the OCR text according to these guide
 Provide the cleaned text followed by '---' before proceeding with the metadata extraction.
 """
     
+    # Advertisement identification help
     ADVERTISEMENT_INSTRUCTIONS = """
 How to identify advertisements:
 1. Look for company names prominently displayed
@@ -35,6 +39,7 @@ How to identify advertisements:
 5. Note any pricing information or special offers
 """
     
+    # Content warning assessment instructions
     CONTENT_WARNING_INSTRUCTIONS = """
 After analyzing the content, assess whether it contains any language or themes that might warrant a content warning. Consider the following categories:
 1. Racist/ethnically insensitive language
@@ -46,86 +51,107 @@ If you identify any such content, briefly describe it using the categorization d
 If no sensitive content is present, simply return 'None'.
 """
     
-    # JSON response formats
-    GENERIC_JSON_FORMAT = """{
-    "cleanedText": "The cleaned OCR text with corrections applied",
+    # ==================== JSON FIELD COMPONENTS ====================
     
-    "tocEntry": "A descriptive entry appropriate for a table of contents. Include:
-        - Page type (cover, table of contents, advertisement, editorial, article, or other)
+    # Cleaned text field (text prompts only)
+    CLEANED_TEXT_FIELD = '"cleanedText": "The cleaned OCR text with corrections applied"'
+    
+    # Text transcription field (image prompts only)  
+    TEXT_TRANSCRIPTION_FIELD = '''    "textTranscription": "Full, exact transcription of all text visible in the image. 
+        - Maintain original spelling, punctuation, and terminology
+        - Preserve line breaks and paragraph structure
+        - Include ALL text visible including headers, footers, and italicized text
+        - Do not correct, modernize, or sanitize language
+        - Use [illegible] for text that cannot be read
+        - Use [...] for partially visible or cut-off text"'''
+    
+    # Visual description field (image prompts only)
+    VISUAL_DESCRIPTION_FIELD = '''    "visualDescription": "Detailed but concise visual description of page. Include:
+        - Layout: including design, fonts, special characters,etc.
+        - Description of all illustrations and/or photographs
+        - Placement and appearance of various elements on the page"'''
+    
+    # TOC entry variations
+    TOC_ENTRY_COVER = '"tocEntry": "Start with \'Cover:\' followed by a brief description of the cover content, based on the text"'
+    
+    TOC_ENTRY_SHORT = '"tocEntry": "If photography is mentioned in the text, start with \'Photograph:\'; if there is no mention of a photo, start with \'Image:\' followed by a brief description of what the image likely shows, based on the text"'
+    
+    TOC_ENTRY_NORMAL = '''    "tocEntry": "A descriptive entry appropriate for a table of contents. Include:
+        - Page type (cover, table of contents, advertisement, editorial, article, photo, image, or other)
         - Short description of the content of the page
-        - Specific persons or organizations mentioned (give a brief description of their importance and relevance to the content - for example, "Zaha Hadid (Parametric architecture pioneer)", or "Frank Lloyd Wright (Prairie School architect)")
-        - Key topics or themes covered",
+        - Specific persons or organizations mentioned (give a brief description of their importance and relevance to the content - for example, 'Zaha Hadid (Parametric architecture pioneer)', or 'Frank Lloyd Wright (Prairie School architect)')
+        - Key topics or themes covered"'''
     
-    "namedEntities": [
-        "List key entities including:
-        - Architects and architectural firms
-        - Geographic locations 
-        - Building names
-        - Significant people mentioned
-        - Organizations
-        - Historical events or periods
-        - Architectural styles or movements
-        - Innovations or technologies referenced
-        - Any other notable entities relevant to the content of the page",
-        - Write each entity as a separate string in the list
-        - Simplify where possible.  No need to include titles.  
-    ],
+    # Named entities field (all prompts)
+    NAMED_ENTITIES_FIELD = '''    "namedEntities": [
+        "List non-geographic entities with type in parentheses: 'Frank Lloyd Wright (Architect)', 'Empire State Building (Building)', 'Mary Johnson (Person)', 'Smith & Associates (Firm)', 'American Red Cross (Organization)', etc.",
+        "Types: (Architect), (Firm), (Person), (Building), (Organization), (Style), (Material), (Event), (Publication), (School), (Award), (Competition), (Project)",
+        "Do NOT include geographic locations here - use geographicEntities field instead",
+        "Limit to entities that are central to the content of the page and/or historically significant"
+    ]'''
     
-    "subjects": [
-        "Topics that will be used as search terms in the FAST and LCSH APIs.  
-        - Focus on the main topics of that page specifically, but use broad terms, so that they can be used for search.  
+    # Geographic entities field (text prompts)
+    GEOGRAPHIC_ENTITIES_FIELD_TEXT = '''    "geographicEntities": [
+        "No matter how small or large the geographical entity, always use format: 
+        - 'City--State (City)' for U.S. Cities e.g. 'New York--New York (City)'
+        - 'City--Province' for Canadian cities e.g. 'Toronto--Ontario (City)'
+        - 'City--Country' for all other Non-U.S. cities e.g. 'London--England (City)'
+        - 'State (State)' for U.S. States e.g. 'Tennessee (State)'
+        - 'Province/State--Country (Province/State)' for non-U.S. Provinces or States e.g. 'Quebec--Canada (Province)'
+        - 'Country (Country)' for Countries e.g. 'France (Country)'",
+        "Include all geographic references mentioned in the text", 
+        "Always include full names: 'Georgia' not 'Ga', 'Maryland' not 'Md', 'United States' not 'US'"
+    ]'''
+    
+    # Geographic entities field (image prompts - includes "or images")
+    GEOGRAPHIC_ENTITIES_FIELD_IMAGE = '''    "geographicEntities": [
+        "No matter how small or large the geographical entity, always use format: 
+        - 'City--State (City)' for U.S. Cities e.g. 'New York--New York (City)'
+        - 'City--Province' for Canadian cities e.g. 'Toronto--Ontario (City)'
+        - 'City--Country' for all other Non-U.S. cities e.g. 'London--England (City)'
+        - 'State (State)' for U.S. States e.g. 'Tennessee (State)'
+        - 'Province/State--Country (Province/State)' for non-U.S. Provinces or States e.g. 'Quebec--Canada (Province)'
+        - 'Country (Country)' for Countries e.g. 'France (Country)'",
+        "Include all geographic references mentioned in the text or images", 
+        "Always include full names: 'Georgia' not 'Ga', 'Maryland' not 'Md', 'United States' not 'US'"
+    ]'''
+    
+    # Subjects field (all prompts)
+    SUBJECTS_FIELD = '''    "subjects": [
+        "Topics that will be used as search terms in controlled vocabulary APIs.   
+        - Focus on specific but searchable words or phrases as topics.  
+        - Cover the breadth of what is discussed on the page.  
         - Write each search term as a separate string in the list. 
-        - Up to 20 terms may be included. 
-        - You may include: architectural styles or movements, building types or purposes, key themes or topics discussed, innovations or technologies, architectural features or elements, anything of historical significance, or geographic locations. 
-        - Do not include proper names, as these will be captured in the namedEntities field.  
-        - For example, you might include terms like 'neoclassical architecture', 'residential buildings', 'urban planning', 'sustainable design', or 'historic preservation' as well as broader terms and some variations to make sure that we return results, like “building design”, "urban design", “construction”, “planning”, “sustainable development”, or “urban infrastructure.”
-    ],
+        - Up to 8 terms may be included. 
+        - Please prioritize: architectural styles or movements, distinctive architectural features or elements, building types or purposes, key themes or topics discussed, innovations or technologies, anything of historical significance
+        - For architectural content, identify specific style names, construction techniques, and prominent design elements visible in images or discussed in text
+        - Do not include proper names or geographic locations, as these will be captured in the namedEntities and geographicEntities fields.  
+    ]'''
     
-    "contentWarning": "Assess for content that merits review by another archivist or 'None' if none exists"
-}"""
+    # Content warning field (text prompts)
+    CONTENT_WARNING_FIELD_TEXT = '"contentWarning": "Assess for content that merits review by another archivist or \'None\' if none exists"'
     
-    COVER_JSON_FORMAT = """{
-    "cleanedText": "The cleaned OCR text with corrections applied",
-    "tocEntry": "Start with 'Cover:' followed by a brief description of the cover content, based on the text",
-    "namedEntities": ["A list of key entities mentioned in the text, including any significant names, titles, or locations"],
-    "subjects": [
-        "Topics that will be used as search terms in the FAST and LCSH APIs.  
-        - Focus on the main topics of that page specifically, but use broad terms, so that they can be used for search.  
-        - Write each search term as a separate string in the list. 
-        - Up to 20 terms may be included. 
-        - You may include: architectural styles or movements, building types or purposes, key themes or topics discussed, innovations or technologies, architectural features or elements, anything of historical significance, or geographic locations. 
-        - Do not include proper names, as these will be captured in the namedEntities field.  
-        - For example, you might include terms like 'neoclassical architecture', 'residential buildings', 'urban planning', 'sustainable design', or 'historic preservation' as well as broader terms and some variations to make sure that we return results, like “building design”, "urban design", “construction”, “planning”, “sustainable development”, or “urban infrastructure.”
-    ],
-    "contentWarning": "Assess for content that merits review by another archivist or 'None' if none exists"
-}"""
+    # Content warning field (image prompts - more detailed)
+    CONTENT_WARNING_FIELD_IMAGE = '''    "contentWarning": "Note potentially sensitive content, or 'None' if none exists. Another archivist will assess if any measures are appropriate, your job is just to note if there is anything that may be concerning. 
+    Consider:
+        - Biased language or terminology
+        - Culturally sensitive material
+        - Offensive or harmful imagery or language"'''
     
-    SHORT_CONTENT_JSON_FORMAT = """{
-    "cleanedText": "The cleaned OCR text with corrections applied",
-    "tocEntry": "If photography is mentioned in the text, start with 'Photograph:'; if there is no mention of a photo, start with 'Image:' followed by a brief description of what the image likely shows, based on the text",
-    "namedEntities": ["A list of key entities mentioned in the text, including architects, locations, and any other significant names"],
-    "subjects": [
-        "Topics that will be used as search terms in the FAST and LCSH APIs.  
-        - Focus on the main topics of that page specifically, but use broad terms, so that they can be used for search.  
-        - Write each search term as a separate string in the list. 
-        - Up to 20 terms may be included. 
-        - You may include: architectural styles or movements, building types or purposes, key themes or topics discussed, innovations or technologies, architectural features or elements, anything of historical significance, or geographic locations. 
-        - Do not include proper names, as these will be captured in the namedEntities field.  
-        - For example, you might include terms like 'neoclassical architecture', 'residential buildings', 'urban planning', 'sustainable design', or 'historic preservation' as well as broader terms and some variations to make sure that we return results, like “building design”, "urban design", “construction”, “planning”, “sustainable development”, or “urban infrastructure.”
-    ],
-    "contentWarning": "Assess for content that merits review by another archivist or 'None' if none exists"
-}"""
+    # ==================== ORIGINAL METHOD IMPLEMENTATIONS ====================
     
     @classmethod
     def get_combined_prompt(cls):
         """Get the comprehensive prompt for normal text analysis."""
+        json_format = f'''{{\n    {cls.CLEANED_TEXT_FIELD},\n    \n{cls.TOC_ENTRY_NORMAL},\n    \n{cls.NAMED_ENTITIES_FIELD},\n    \n{cls.GEOGRAPHIC_ENTITIES_FIELD_TEXT},\n    \n{cls.SUBJECTS_FIELD},\n    \n    {cls.CONTENT_WARNING_FIELD_TEXT}\n}}'''
+        
         return f"""{cls.COLLECTION_DESCRIPTION}
 
 {cls.OCR_CLEANING_INSTRUCTIONS}
 
 After cleaning the OCR text, return ONLY a JSON response in this exact format:
 
-{cls.GENERIC_JSON_FORMAT}
+{json_format}
 
 Focus on capturing the essence of the page's content rather than exhaustive detail.
 
@@ -138,6 +164,8 @@ Return ONLY the JSON response in the exact format specified above."""
     @classmethod
     def get_cover_prompt(cls):
         """Get the prompt specifically for cover pages."""
+        json_format = f'''{{\n    {cls.CLEANED_TEXT_FIELD},\n    {cls.TOC_ENTRY_COVER},\n    \n{cls.NAMED_ENTITIES_FIELD},\n    \n{cls.GEOGRAPHIC_ENTITIES_FIELD_TEXT},\n    \n{cls.SUBJECTS_FIELD},\n    \n    {cls.CONTENT_WARNING_FIELD_TEXT}\n}}'''
+        
         return f"""{cls.COLLECTION_DESCRIPTION}
 This page is the cover of an issue.
 
@@ -145,13 +173,15 @@ This page is the cover of an issue.
 
 After cleaning the OCR text, please create the following metadata fields in JSON format:
 
-{cls.COVER_JSON_FORMAT}
+{json_format}
 
 Return ONLY the JSON response in the exact format specified above."""
     
     @classmethod
     def get_short_content_prompt(cls):
         """Get the prompt for short content (likely images)."""
+        json_format = f'''{{\n    {cls.CLEANED_TEXT_FIELD},\n    {cls.TOC_ENTRY_SHORT},\n    \n{cls.NAMED_ENTITIES_FIELD},\n    \n{cls.GEOGRAPHIC_ENTITIES_FIELD_TEXT},\n    \n{cls.SUBJECTS_FIELD},\n    \n    {cls.CONTENT_WARNING_FIELD_TEXT}\n}}'''
+        
         return f"""{cls.COLLECTION_DESCRIPTION}
 This page likely contains an image. Consequently, the OCR text for this image is short.
 
@@ -159,9 +189,18 @@ This page likely contains an image. Consequently, the OCR text for this image is
 
 After cleaning the OCR text, please create the following metadata fields in JSON format:
 
-{cls.SHORT_CONTENT_JSON_FORMAT}
+{json_format}
 
 Return ONLY the JSON response in the exact format specified above."""
+    
+    @classmethod
+    def get_image_analysis_prompt(cls):
+        """Get the prompt for image analysis."""
+        json_format = f'''{{\n{cls.TEXT_TRANSCRIPTION_FIELD},\n    \n{cls.VISUAL_DESCRIPTION_FIELD},\n    \n{cls.TOC_ENTRY_NORMAL},\n    \n{cls.NAMED_ENTITIES_FIELD},\n    \n{cls.GEOGRAPHIC_ENTITIES_FIELD_IMAGE},\n    \n{cls.SUBJECTS_FIELD},\n    \n{cls.CONTENT_WARNING_FIELD_IMAGE}\n}}'''
+        
+        return f"""This image is from 'Southern Architect and Building News', a periodical published from 1892 to 1931 that covered topics of interest to persons in the architecture, building, and hardware trades in the American South. You are creating metadata for this collection for the Architecture and Planning Library Special Collections at University of Texas Libraries in Austin. You are creating this metadata for architectural historians and architectural history students. Architectural styles, movements, trends, and other historically important information should be prioritized. Please analyze this image and return ONLY a JSON response in this exact format:
+
+{json_format}"""
     
     @classmethod
     def determine_prompt_type(cls, content, page_number):
@@ -175,63 +214,3 @@ Return ONLY the JSON response in the exact format specified above."""
             return cls.get_short_content_prompt(), "short"
         else:
             return cls.get_combined_prompt(), "normal"
-    
-    # Image analysis prompts
-    IMAGE_ANALYSIS_PROMPT = """This image is from 'Southern Architect and Building News', a periodical published from 1892 to 1931 that covered topics of interest to persons in the architecture, building, and hardware trades in the American South. You are creating metadata for this collection for the Architecture and Planning Library Special Collections at University of Texas Libraries in Austin. You are creating this metadata for architectural historians and architectural history students. Architectural styles, movements, trends, and other historically important information should be prioritized. Please analyze this image and return ONLY a JSON response in this exact format:
-
-{
-    "textTranscription": "Full, exact transcription of all text visible in the image. 
-        - Maintain original spelling, punctuation, and terminology
-        - Preserve line breaks and paragraph structure
-        - Include ALL text visible including headers, footers, and italicized text
-        - Do not correct, modernize, or sanitize language
-        - Use [illegible] for text that cannot be read
-        - Use [...] for partially visible or cut-off text",
-    
-    "visualDescription": "Detailed but concise visual description of page. Include:
-        - Layout: including design, fonts, special characters,etc.
-        - Description of all illustrations and/or photographs
-        - Placement and appearance of various elements on the page",
-    
-    "tocEntry": "A descriptive entry appropriate for a table of contents. Include:
-        - Page type (cover, table of contents, advertisement, editorial, article, or other)
-        - Specific persons or organizations mentioned (give a brief description of their importance and relevance to the content - for example, "Zaha Hadid (Parametric architecture pioneer)", or "Frank Lloyd Wright (Prairie School architect)")
-        - Short description of the content of the page
-        - Key topics or themes covered",
-    
-    "namedEntities": [
-        "List key entities including:
-        - Architects and architectural firms
-        - Geographic locations 
-        - Building names
-        - Significant people mentioned
-        - Organizations
-        - Historical events or periods
-        - Architectural styles or movements
-        - Innovations or technologies referenced
-        - Any other notable entities relevant to the content of the page",
-        - Write each entity as a separate string in the list
-        - Simplify where possible.  No need to include titles.  
-    ],
-    
-    "subjects": [
-        "Topics that will be used as search terms in the FAST and LCSH APIs.  
-        - Focus on the main topics of that page specifically, but use broad terms, so that they can be used for search.  
-        - Write each search term as a separate string in the list. 
-        - Up to 20 terms may be included. 
-        - You may include: architectural styles or movements, building types or purposes, key themes or topics discussed, innovations or technologies, architectural features or elements, anything of historical significance, or geographic locations. 
-        - Do not include proper names, as these will be captured in the namedEntities field.  
-        - For example, you might include terms like 'neoclassical architecture', 'residential buildings', 'urban planning', 'sustainable design', or 'historic preservation' as well as broader terms and some variations to make sure that we return results, like “building design”, "urban design", “construction”, “planning”, “sustainable development”, or “urban infrastructure.”
-    ],
-    
-    "contentWarning": "Note potentially sensitive content, or 'None' if none exists. Another archivist will assess if any measures are appropriate, your job is just to note if there is anything that may be concerning. 
-    Consider:
-        - Biased language or terminology
-        - Culturally sensitive material
-        - Offensive or harmful imagery or language"
-}"""
-    
-    @classmethod
-    def get_image_analysis_prompt(cls):
-        """Get the prompt for image analysis."""
-        return cls.IMAGE_ANALYSIS_PROMPT

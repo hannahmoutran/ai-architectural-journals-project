@@ -42,6 +42,7 @@ Temporary Items
 /CODE/other_code
 /CODE/output_folders
 /CODE/image_folders/10_pages
+/CODE/image_folders/10_more_pages
 /CODE/image_folders/full_issues
 
 # Ignore specific common files and directories
@@ -53,7 +54,3 @@ myenv/
 *.log
 *.pdf
 ~$*.xlsx
-
-# Ignore working files 
-/CODE/southern_architect_step5.py
-/CODE/southern_architect_run.py

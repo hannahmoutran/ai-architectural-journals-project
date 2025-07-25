@@ -1,22 +1,197 @@
+# issue-level metadata - using OpenAI's GPT-4o-mini model
 import os
 import json
 import logging
+import time
 import argparse
 from datetime import datetime
-from typing import List, Dict, Any, Optional
-from pathlib import Path
+from typing import List, Dict, Any, Optional, Tuple
+from openai import OpenAI
+import tenacity
+from collections import defaultdict
+import re
+
+# Import our custom modules
+from model_pricing import calculate_cost, get_model_info
+from token_logging import create_token_usage_log, log_individual_response
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-class PageMetadataGenerator:
-    """Class to generate individual page-level metadata files."""
+# Suppress verbose HTTP logging
+logging.getLogger("openai").setLevel(logging.WARNING)
+logging.getLogger("urllib3").setLevel(logging.WARNING)
+logging.getLogger("httpx").setLevel(logging.WARNING)
+
+client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
+
+class APIStats:
+    def __init__(self):
+        self.total_requests = 0
+        self.total_input_tokens = 0
+        self.total_output_tokens = 0
+        self.processing_times = []
+
+api_stats = APIStats()
+
+class IssueSynthesizer:
+    """Class to synthesize issue-level descriptions and select top subject headings from chosen vocabulary terms."""
     
-    def __init__(self, folder_path: str):
+    def __init__(self, model_name: str = "gpt-4o-mini"):
+        self.model_name = model_name
+        self.system_prompt = self.create_system_prompt()
+    
+    def create_system_prompt(self) -> str:
+        """Create the system prompt for issue synthesis."""
+        return """You are an archivist at UT Austin cataloging The Southern Architect (1892-1931) for architectural historians and students. Create metadata for this complete issue that emphasizes its unique architectural and historical content.
+
+TASK: Synthesize an issue-level description and select up to 10 subject headings from the provided chosen vocabulary terms.
+
+ISSUE DESCRIPTION GUIDELINES:
+- Write 150-250 words from a modern historian's perspective
+- Focus on SPECIFIC details: architect names, firms, buildings, cities, projects, competitions, events
+- Emphasize architectural styles, building types, construction technologies, materials
+- Highlight historically significant innovations or trends
+- Contextualize within American South architectural history (1892-1931)
+- Use scholarly tone; avoid generic statements that could apply to any issue
+- Write as "This issue features..." not "The issue includes..."
+
+SUBJECT HEADING SELECTION:
+- Select exactly 10 terms from provided chosen vocabulary
+- Prioritize architectural styles, building types, construction technologies
+- Focus on terms most valuable for architectural history research
+- Balance across vocabulary sources when possible
+
+Return JSON format:
+{
+  "issue_description": "Specific description emphasizing unique architectural content and historical significance",
+  "selected_subject_headings": [
+    {
+      "label": "Term label",
+      "uri": "Term URI", 
+      "source": "LCSH/FAST/Getty AAT/Getty TGN",
+      "reasoning": "Why this term represents the issue"
+    }
+  ]
+}"""
+
+    def create_user_prompt(self, toc_content: str, selected_terms: List[Dict[str, str]]) -> str:
+        formatted_terms = []
+        for term in selected_terms:
+            formatted_terms.append(f"- {term['label']} ({term['uri']}) [{term['source']}]")
+        
+        terms_section = "\n".join(formatted_terms)
+        
+        user_prompt = f"""Analyze this issue content index and create issue metadata:
+
+        ISSUE CONTENT INDEX:
+        {toc_content}
+
+        SELECTED SUBJECT HEADINGS:
+        {terms_section}
+
+        Create a scholarly description emphasizing this issue's unique architectural content and historical significance. Use the provided subject headings as-is."""
+        
+        return user_prompt
+
+    @tenacity.retry(
+        wait=tenacity.wait_exponential(multiplier=1, min=4, max=10),
+        stop=tenacity.stop_after_attempt(5),
+        retry=tenacity.retry_if_exception_type(Exception)
+    )
+    def synthesize_issue(self, toc_content: str, all_chosen_terms: List[Dict[str, str]]) -> Tuple[Dict[str, Any], str, Any, float]:
+        """Synthesize issue-level description and select subject headings from chosen vocabulary terms."""
+        user_prompt = self.create_user_prompt(toc_content, all_chosen_terms)
+        
+        api_stats.total_requests += 1
+        start_time = time.time()
+        
+        response = client.chat.completions.create(
+            model=self.model_name,
+            messages=[
+                {"role": "system", "content": self.system_prompt},
+                {"role": "user", "content": user_prompt}
+            ],
+            max_tokens=2500,
+            temperature=0.3  # Slightly higher temperature for more creative synthesis
+        )
+        
+        processing_time = time.time() - start_time
+        api_stats.processing_times.append(processing_time)
+        
+        api_stats.total_input_tokens += response.usage.prompt_tokens
+        api_stats.total_output_tokens += response.usage.completion_tokens
+        
+        raw_response = response.choices[0].message.content.strip()
+        
+        # Parse JSON response
+        try:
+            parsed_response = self.parse_json_response(raw_response)
+            
+            # Validate response structure
+            if not isinstance(parsed_response, dict):
+                raise ValueError("Response is not a JSON object")
+            
+            if "issue_description" not in parsed_response:
+                raise ValueError("Missing 'issue_description' field")
+            
+            if "selected_subject_headings" not in parsed_response:
+                raise ValueError("Missing 'selected_subject_headings' field")
+            
+            # Validate that we have exactly 10 subject headings
+            headings = parsed_response["selected_subject_headings"]
+            if not isinstance(headings, list):
+                raise ValueError("'selected_subject_headings' must be a list")
+            
+            if len(headings) != 10:
+                logging.warning(f"Expected 10 subject headings, got {len(headings)}")
+                # Adjust to exactly 10 - truncate or keep what we have
+                if len(headings) > 10:
+                    parsed_response["selected_subject_headings"] = headings[:10]
+            
+            return parsed_response, raw_response, response.usage, processing_time
+            
+        except Exception as e:
+            logging.error(f"Error parsing issue synthesis response: {e}")
+            # Return error response
+            return {
+                "issue_description": f"Error synthesizing issue description: {str(e)}",
+                "selected_subject_headings": []
+            }, raw_response, response.usage, processing_time
+
+    def parse_json_response(self, raw_response: str) -> Dict[str, Any]:
+        """Parse JSON response from the API."""
+        # Remove markdown formatting
+        cleaned_response = re.sub(r'```json\s*|\s*```', '', raw_response)
+        cleaned_response = re.sub(r'^[^{]*({.*})[^}]*$', r'\1', cleaned_response, flags=re.DOTALL)
+        
+        # Remove trailing commas
+        cleaned_response = re.sub(r',(\s*[}\]])', r'\1', cleaned_response)
+        
+        try:
+            parsed_json = json.loads(cleaned_response)
+            return parsed_json
+            
+        except json.JSONDecodeError as e:
+            # Try to extract JSON object
+            match = re.search(r'{.*}', raw_response, re.DOTALL)
+            if match:
+                json_str = match.group(0)
+                json_str = re.sub(r',(\s*[}\]])', r'\1', json_str)
+                return json.loads(json_str)
+            else:
+                raise ValueError(f"Could not parse JSON response: {e}")
+
+class SouthernArchitectIssueSynthesizer:
+    """Main class for synthesizing issue-level descriptions and selecting from chosen vocabulary terms."""
+    
+    def __init__(self, folder_path: str, model_name: str = "gpt-4o-2024-08-06"):
         self.folder_path = folder_path
+        self.model_name = model_name
         self.workflow_type = None
         self.json_data = None
-        self.output_folder = None
+        self.toc_file_path = None
+        self.synthesizer = IssueSynthesizer(model_name)
     
     def detect_workflow_type(self) -> bool:
         """Detect workflow type and check for required files."""
@@ -29,16 +204,38 @@ class PageMetadataGenerator:
         
         if has_text_files and not has_image_files:
             self.workflow_type = 'text'
-            return True
         elif has_image_files and not has_text_files:
             self.workflow_type = 'image'
-            return True
         else:
             logging.error("Could not determine workflow type or multiple workflow files found.")
             return False
+        
+        # Check if step 3 has been run (page metadata generation)
+        page_metadata_folder = os.path.join(self.folder_path, 'page_level_metadata')
+        if not os.path.exists(page_metadata_folder):
+            logging.error("Page metadata generation (step 3) must be run before step 4.")
+            return False
+        
+        return True
+
+    def find_issue_content_index_file(self) -> bool:
+        """Find the issue content index file created in step 3."""
+        # Look for files ending with "_Issue_Content_Index.txt"
+        issue_content_index_files = [f for f in os.listdir(self.folder_path) if f.endswith('_Issue_Content_Index.txt')]
+
+        if not issue_content_index_files:
+            logging.error("No issue content index file found. Please run step 3 first.")
+            return False
+
+        if len(issue_content_index_files) > 1:
+            logging.warning(f"Multiple issue content index files found: {issue_content_index_files}. Using the first one.")
+
+        self.issue_content_index_file_path = os.path.join(self.folder_path, issue_content_index_files[0])
+        print(f"📋 Found issue content index: {issue_content_index_files[0]}")
+        return True
     
     def load_json_data(self) -> bool:
-        """Load JSON data from the appropriate workflow file."""
+        """Load JSON data to extract chosen vocabulary terms."""
         json_filename = f"{self.workflow_type}_workflow.json"
         json_path = os.path.join(self.folder_path, json_filename)
         
@@ -51,356 +248,201 @@ class PageMetadataGenerator:
             logging.error(f"Error loading JSON data: {e}")
             return False
     
-    def create_output_folder(self) -> bool:
-        """Create the page_level_metadata output folder."""
-        self.output_folder = os.path.join(self.folder_path, "page_level_metadata")
+    def extract_all_chosen_terms(self) -> List[Dict[str, str]]:
+        """Extract all unique chosen vocabulary terms from the JSON data."""
+        all_terms = []
+        seen_uris = set()
         
-        try:
-            os.makedirs(self.output_folder, exist_ok=True)
-            print(f"📁 Created output folder: {self.output_folder}")
-            return True
-        except Exception as e:
-            logging.error(f"Error creating output folder: {e}")
-            return False
-    
-    def format_list_items(self, items: List[str], label: str) -> str:
-        """Format a list of items with proper formatting."""
-        if not items:
-            return f"{label}: None\n"
+        # Skip the last item if it's API stats
+        data_items = self.json_data[:-1] if self.json_data and 'api_stats' in self.json_data[-1] else self.json_data
         
-        if len(items) == 1:
-            return f"{label}: {items[0]}\n"
-        else:
-            formatted_items = '\n'.join([f"  - {item}" for item in items])
-            return f"{label}:\n{formatted_items}\n"
-    
-    def format_lcsh_headings(self, lcsh_headings: List[Dict[str, str]]) -> str:
-        """Format LCSH headings with labels and URIs."""
-        if not lcsh_headings:
-            return "Selected LCSH Headings: None\n"
-        
-        if len(lcsh_headings) == 1:
-            heading = lcsh_headings[0]
-            return f"Selected LCSH Headings: {heading['label']} ({heading['uri']})\n"
-        else:
-            formatted_headings = []
-            for heading in lcsh_headings:
-                formatted_headings.append(f"  - {heading['label']} ({heading['uri']})")
-            return f"Selected LCSH Headings:\n" + '\n'.join(formatted_headings) + "\n"
-    
-    def generate_page_metadata(self, entry: Dict[str, Any]) -> str:
-        """Generate formatted metadata text for a single page."""
-        analysis = entry.get('analysis', {})
-        
-        # Basic page information
-        metadata_lines = []
-        metadata_lines.append("=" * 60)
-        metadata_lines.append("SOUTHERN ARCHITECT - PAGE METADATA")
-        metadata_lines.append("=" * 60)
-        metadata_lines.append("")
-        
-        # Page identification
-        metadata_lines.append("PAGE IDENTIFICATION:")
-        metadata_lines.append(f"Folder: {entry.get('folder', 'Unknown')}")
-        metadata_lines.append(f"Page Number: {entry.get('page_number', 'Unknown')}")
-        
-        # Original file path
-        if self.workflow_type == 'text':
-            original_path = entry.get('file_path', 'Unknown')
-        else:  # image workflow
-            original_path = entry.get('image_path', 'Unknown')
-        metadata_lines.append(f"Original File: {original_path}")
-        metadata_lines.append("")
-        
-        # Content sections
-        metadata_lines.append("CONTENT:")
-        metadata_lines.append("-" * 30)
-        
-        # Text content (different field names for text vs image workflows)
-        if self.workflow_type == 'text':
-            text_content = analysis.get('cleaned_text', '').strip()
-            if text_content:
-                metadata_lines.append("Cleaned OCR Text:")
-                metadata_lines.append(text_content)
-            else:
-                metadata_lines.append("Cleaned OCR Text: [No text content]")
-        else:  # image workflow
-            # Text transcription
-            text_transcription = analysis.get('text_transcription', '').strip()
-            if text_transcription:
-                metadata_lines.append("Text Transcription:")
-                metadata_lines.append(text_transcription)
-            else:
-                metadata_lines.append("Text Transcription: [No text found in image]")
-            
-            metadata_lines.append("")
-            
-            # Visual description
-            visual_description = analysis.get('visual_description', '').strip()
-            if visual_description:
-                metadata_lines.append("Visual Description:")
-                metadata_lines.append(visual_description)
-            else:
-                metadata_lines.append("Visual Description: [No visual description available]")
-        
-        metadata_lines.append("")
-        
-        # Table of Contents entry
-        toc_entry = analysis.get('toc_entry', '').strip()
-        if toc_entry:
-            metadata_lines.append("Table of Contents Entry:")
-            metadata_lines.append(toc_entry)
-        else:
-            metadata_lines.append("Table of Contents Entry: [No TOC entry]")
-        
-        metadata_lines.append("")
-        
-        # Metadata sections
-        metadata_lines.append("METADATA:")
-        metadata_lines.append("-" * 30)
-        
-        # Named entities
-        named_entities = analysis.get('named_entities', [])
-        if isinstance(named_entities, str):
-            # Handle case where it might be stored as comma-separated string
-            named_entities = [e.strip() for e in named_entities.split(',') if e.strip()]
-        metadata_lines.append(self.format_list_items(named_entities, "Named Entities").rstrip())
-        metadata_lines.append("")
-        
-        # Subject headings (renamed to Topics)
-        subject_headings = analysis.get('subject_headings', [])
-        if isinstance(subject_headings, str):
-            # Handle case where it might be stored as comma-separated string
-            subject_headings = [s.strip() for s in subject_headings.split(',') if s.strip()]
-        metadata_lines.append(self.format_list_items(subject_headings, "Topics").rstrip())
-        metadata_lines.append("")
-        
-        # Content warning (only if not 'None')
-        content_warning = analysis.get('content_warning', '').strip()
-        if content_warning and content_warning.lower() != 'none':
-            metadata_lines.append(f"Content Warning: {content_warning}")
-            metadata_lines.append("")
-        
-        # Selected LCSH headings (if available)
-        selected_lcsh = analysis.get('selected_lcsh_headings', [])
-        if selected_lcsh:
-            metadata_lines.append(self.format_lcsh_headings(selected_lcsh).rstrip())
-            metadata_lines.append("")
-        
-        # Generation timestamp
-        metadata_lines.append("PROCESSING INFORMATION:")
-        metadata_lines.append("-" * 30)
-        metadata_lines.append(f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-        metadata_lines.append(f"Workflow Type: {self.workflow_type.upper()}")
-        metadata_lines.append("")
-        metadata_lines.append("=" * 60)
-        
-        return '\n'.join(metadata_lines)
-    
-    def generate_filename(self, entry: Dict[str, Any]) -> str:
-        """Generate a clean filename for the metadata file."""
-        folder = entry.get('folder', 'unknown')
-        page_number = entry.get('page_number', 0)
-        
-        # Clean folder name for filename
-        clean_folder = "".join(c for c in folder if c.isalnum() or c in ('-', '_')).strip()
-        if not clean_folder:
-            clean_folder = "unknown"
-        
-        return f"{clean_folder}_page{page_number:03d}_metadata.txt"
-    
-    def generate_all_metadata_files(self) -> bool:
-        """Generate metadata files for all pages."""
-        try:
-            # Skip the last item if it's API stats
-            data_items = self.json_data[:-1] if self.json_data and 'api_stats' in self.json_data[-1] else self.json_data
-            
-            if not data_items:
-                print("⚠️  No data items found to process")
-                return False
-            
-            generated_files = 0
-            
-            for i, entry in enumerate(data_items):
-                try:
-                    # Generate metadata content
-                    metadata_content = self.generate_page_metadata(entry)
-                    
-                    # Generate filename
-                    filename = self.generate_filename(entry)
-                    file_path = os.path.join(self.output_folder, filename)
-                    
-                    # Write metadata file
-                    with open(file_path, 'w', encoding='utf-8') as f:
-                        f.write(metadata_content)
-                    
-                    generated_files += 1
-                    
-                    if (i + 1) % 10 == 0:
-                        print(f"   📝 Generated {i + 1}/{len(data_items)} metadata files...")
+        for item in data_items:
+            if 'analysis' in item:
+                analysis = item['analysis']
                 
-                except Exception as e:
-                    logging.error(f"Error generating metadata for entry {i}: {e}")
-                    continue
-            
-            print(f"✅ Successfully generated {generated_files} metadata files")
-            return True
-            
-        except Exception as e:
-            logging.error(f"Error generating metadata files: {e}")
-            return False
+                # Get chosen vocabulary terms from step 3
+                vocabulary_terms = analysis.get('final_selected_terms', [])
+                for term in vocabulary_terms:
+                    if isinstance(term, dict) and 'uri' in term and term['uri'] not in seen_uris:
+                        all_terms.append({
+                            'label': term.get('label', ''),
+                            'uri': term.get('uri', ''),
+                            'source': term.get('source', 'Unknown')
+                        })
+                        seen_uris.add(term['uri'])
+        
+        return all_terms
     
-    def create_index_file(self) -> bool:
-        """Create an index file listing all generated metadata files."""
-        try:
-            index_path = os.path.join(self.output_folder, "00_INDEX.txt")
-            
-            # Get list of metadata files
-            metadata_files = [f for f in os.listdir(self.output_folder) 
-                            if f.endswith('_metadata.txt')]
-            metadata_files.sort()
-            
-            with open(index_path, 'w', encoding='utf-8') as f:
-                f.write("SOUTHERN ARCHITECT - PAGE METADATA INDEX\n")
-                f.write("=" * 50 + "\n\n")
-                f.write(f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
-                f.write(f"Workflow Type: {self.workflow_type.upper()}\n")
-                f.write(f"Total Files: {len(metadata_files)}\n\n")
+    def extract_geographic_terms(self) -> List[Dict[str, Any]]:
+        """Extract all unique geographic terms from the JSON data with counts."""
+        geographic_terms_count = {}
+        
+        # Skip the last item if it's API stats
+        data_items = self.json_data[:-1] if self.json_data and 'api_stats' in self.json_data[-1] else self.json_data
+        
+        for item in data_items:
+            if 'analysis' in item:
+                analysis = item['analysis']
                 
-                f.write("METADATA FILES:\n")
-                f.write("-" * 20 + "\n")
+                # Get geographic vocabulary search results
+                geo_results = analysis.get('geographic_vocabulary_search_results', {})
                 
-                for filename in metadata_files:
-                    # Extract page info from filename
-                    parts = filename.replace('_metadata.txt', '').split('_page')
-                    if len(parts) == 2:
-                        folder_name = parts[0]
-                        page_num = parts[1].lstrip('0') or '0'
-                        f.write(f"{filename:<40} (Folder: {folder_name}, Page: {page_num})\n")
-                    else:
-                        f.write(f"{filename}\n")
-                
-                f.write(f"\n" + "=" * 50 + "\n")
-            
-            print(f"📋 Created index file: {index_path}")
-            return True
-            
-        except Exception as e:
-            logging.error(f"Error creating index file: {e}")
-            return False
-    
-    def create_issue_toc(self) -> bool:
-        """Create an issue-level table of contents with TOC entries and verified subject headings."""
-        try:
-            # Skip API stats for processing
-            data_items = self.json_data[:-1] if self.json_data and 'api_stats' in self.json_data[-1] else self.json_data
-            
-            if not data_items:
-                print("⚠️  No data items found for table of contents")
-                return False
-            
-            # Get folder name from first entry to create filename
-            first_entry = data_items[0]
-            folder_name = first_entry.get('folder', 'Unknown')
-            
-            # Create filename and path
-            toc_filename = f"{folder_name}_Table_of_Contents.txt"
-            toc_path = os.path.join(self.folder_path, toc_filename)
-            
-            with open(toc_path, 'w', encoding='utf-8') as f:
-                f.write(f"{folder_name} Table of Contents\n")
-                f.write("=" * (len(folder_name) + 18) + "\n\n")
-                
-                for entry in data_items:
-                    analysis = entry.get('analysis', {})
-                    page_number = entry.get('page_number', 'Unknown')
-                    
-                    # TOC entry
-                    toc_entry = analysis.get('toc_entry', '').strip()
-                    if not toc_entry or toc_entry.lower() == '[no toc entry]':
-                        toc_entry = ""
-                    
-                    # Write page entry
-                    f.write(f"Page {page_number}: {toc_entry}\n")
-                    
-                    # Only include verified subject headings (selected LCSH headings)
-                    selected_lcsh = analysis.get('selected_lcsh_headings', [])
-                    if selected_lcsh:
-                        for heading in selected_lcsh:
-                            f.write(f"  - {heading['label']}\n")
-                    
-                    f.write("\n")
-            
-            print(f"📋 Created issue-level table of contents: {toc_path}")
-            return True
-            
-        except Exception as e:
-            logging.error(f"Error creating issue-level table of contents: {e}")
-            return False
+                for location_key, terms_list in geo_results.items():
+                    if isinstance(terms_list, list):
+                        for term in terms_list:
+                            if isinstance(term, dict) and 'uri' in term:
+                                uri = term.get('uri', '')
+                                if uri:
+                                    if uri not in geographic_terms_count:
+                                        geographic_terms_count[uri] = {
+                                            'label': term.get('label', ''),
+                                            'uri': uri,
+                                            'source': term.get('source', 'Unknown'),
+                                            'count': 0
+                                        }
+                                    geographic_terms_count[uri]['count'] += 1
+        
+        # Convert to list and sort by count (descending) then by label
+        geographic_terms = list(geographic_terms_count.values())
+        geographic_terms.sort(key=lambda x: (-x['count'], x['label']))
+        
+        return geographic_terms
 
-    def create_summary_report(self) -> bool:
-        """Create a summary report of the metadata generation process."""
+    def read_issue_content_index(self) -> str:
+        """Read the issue content index."""
         try:
-            report_path = os.path.join(self.folder_path, "page_metadata_generation_report.txt")
+            with open(self.issue_content_index_file_path, 'r', encoding='utf-8') as f:
+                content = f.read()
+            return content
+        except Exception as e:
+            logging.error(f"Error reading issue content index file: {e}")
+            return ""
+    
+    def get_issue_name(self) -> str:
+        """Extract issue name from the issue content index file name."""
+        issue_content_index_filename = os.path.basename(self.issue_content_index_file_path)
+        # Remove "_Issue_Content_Index.txt" suffix
+        issue_name = issue_content_index_filename.replace('_Issue_Content_Index.txt', '')
+        return issue_name
+    
+    def create_issue_metadata_file(self, synthesis_result: Dict[str, Any]) -> bool:
+        """Create clean issue metadata file without processing information."""
+        try:
+            issue_name = self.get_issue_name()
+            metadata_filename = f"{issue_name}_Issue_Metadata.txt"
+            metadata_path = os.path.join(self.folder_path, metadata_filename)
             
-            # Count generated files
-            metadata_files = [f for f in os.listdir(self.output_folder) 
-                            if f.endswith('_metadata.txt')]
+            with open(metadata_path, 'w', encoding='utf-8') as f:
+                f.write(f"{issue_name} - Issue Metadata\n")
+                f.write("=" * (len(issue_name) + 17) + "\n\n")
+                
+                # Issue description
+                f.write("ISSUE DESCRIPTION:\n")
+                f.write("-" * 20 + "\n")
+                f.write(f"{synthesis_result['issue_description']}\n\n")
+                
+                # Selected subject headings
+                selected_headings = synthesis_result.get('selected_subject_headings', [])
+                f.write(f"SELECTED SUBJECT HEADINGS ({len(selected_headings)} terms):\n")
+                f.write("-" * 35 + "\n")
+                
+                for i, heading in enumerate(selected_headings, 1):
+                    if isinstance(heading, dict):
+                        label = heading.get('label', 'Unknown')
+                        source = heading.get('source', 'Unknown')
+                        f.write(f"{i:2d}. {label} [{source}]\n")
+                    else:
+                        # Handle string format as fallback
+                        f.write(f"{i:2d}. {heading}\n")
+                
+                f.write("\n" + "=" * (len(issue_name) + 17) + "\n")
             
-            # Skip API stats for counting
-            data_items = self.json_data[:-1] if self.json_data and 'api_stats' in self.json_data[-1] else self.json_data
-            total_entries = len(data_items)
-            
-            with open(report_path, 'w', encoding='utf-8') as f:
-                f.write("SOUTHERN ARCHITECT - PAGE METADATA GENERATION REPORT\n")
-                f.write("=" * 60 + "\n\n")
-                f.write(f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
-                f.write(f"Workflow Type: {self.workflow_type.upper()}\n")
-                f.write(f"Source Folder: {self.folder_path}\n")
-                f.write(f"Output Folder: {self.output_folder}\n\n")
-                
-                f.write("GENERATION STATISTICS:\n")
-                f.write("-" * 30 + "\n")
-                f.write(f"Total entries in JSON: {total_entries}\n")
-                f.write(f"Metadata files generated: {len(metadata_files)}\n")
-                f.write(f"Success rate: {(len(metadata_files)/total_entries*100):.1f}%\n\n")
-                
-                f.write("METADATA STRUCTURE:\n")
-                f.write("-" * 30 + "\n")
-                f.write("Each metadata file contains:\n")
-                f.write("- Page identification (folder, page number, original file path)\n")
-                if self.workflow_type == 'text':
-                    f.write("- Cleaned OCR text\n")
-                else:
-                    f.write("- Text transcription\n")
-                    f.write("- Visual description\n")
-                f.write("- Table of Contents entry\n")
-                f.write("- Named entities\n")
-                f.write("- Topics (subject headings)\n")
-                f.write("- Content warning (if applicable)\n")
-                f.write("- Selected LCSH headings (if available)\n")
-                f.write("- Processing information\n\n")
-                
-                f.write("FILES GENERATED:\n")
-                f.write("-" * 30 + "\n")
-                f.write(f"- {len(metadata_files)} individual page metadata files\n")
-                f.write("- 1 index file (00_INDEX.txt)\n")
-                f.write("- 1 issue-level table of contents (using folder name)\n")
-                f.write("- 1 generation report (this file)\n\n")
-                
-                f.write("=" * 60 + "\n")
-            
-            print(f"📋 Created generation report: {report_path}")
+            print(f"📄 Created issue metadata: {metadata_filename}")
             return True
             
         except Exception as e:
-            logging.error(f"Error creating summary report: {e}")
+            logging.error(f"Error creating issue metadata file: {e}")
+            return False
+    
+    def append_geographic_terms_to_file(self, geographic_terms: List[Dict[str, Any]]) -> bool:
+        """Append geographic terms to the existing issue metadata file."""
+        try:
+            issue_name = self.get_issue_name()
+            metadata_filename = f"{issue_name}_Issue_Metadata.txt"
+            metadata_path = os.path.join(self.folder_path, metadata_filename)
+            
+            # Check if file exists
+            if not os.path.exists(metadata_path):
+                logging.error(f"Issue metadata file not found: {metadata_filename}")
+                return False
+            
+            # Calculate total mentions
+            total_mentions = sum(term.get('count', 1) for term in geographic_terms)
+            
+            # Append geographic terms to the existing file
+            with open(metadata_path, 'a', encoding='utf-8') as f:
+                f.write(f"\nGEOGRAPHIC TERMS ({len(geographic_terms)} unique terms, {total_mentions} total mentions):\n")
+                f.write("-" * 60 + "\n")
+                
+                for i, term in enumerate(geographic_terms, 1):
+                    label = term.get('label', 'Unknown')
+                    uri = term.get('uri', '')
+                    source = term.get('source', 'Unknown')
+                    count = term.get('count', 1)
+                    
+                    # Format with count
+                    if count > 1:
+                        f.write(f"{i:2d}. {label} [{source}] ({count} mentions)\n")
+                    else:
+                        f.write(f"{i:2d}. {label} [{source}]\n")
+                    
+                    if uri:  # Only show URI if it exists
+                        f.write(f"    URI: {uri}\n")
+                
+                f.write("\n" + "=" * (len(issue_name) + 17) + "\n")
+            
+            print(f"📍 Appended {len(geographic_terms)} unique geographic terms ({total_mentions} total mentions) to issue metadata")
+            return True
+            
+        except Exception as e:
+            logging.error(f"Error appending geographic terms to file: {e}")
+            return False
+    
+    def update_json_with_synthesis(self, synthesis_result: Dict[str, Any]) -> bool:
+        """Update the JSON file with issue-level synthesis."""
+        try:
+            # Add issue-level synthesis to the JSON data
+            issue_synthesis = {
+                "issue_synthesis": {
+                    "issue_description": synthesis_result['issue_description'],
+                    "selected_subject_headings": synthesis_result['selected_subject_headings'],
+                    "generated_date": datetime.now().isoformat(),
+                    "model_used": self.model_name
+                }
+            }
+            
+            # Add synthesis to the JSON data
+            self.json_data.append(issue_synthesis)
+            
+            # Save updated JSON
+            json_filename = f"{self.workflow_type}_workflow.json"
+            json_path = os.path.join(self.folder_path, json_filename)
+            
+            with open(json_path, 'w', encoding='utf-8') as f:
+                json.dump(self.json_data, f, indent=2, ensure_ascii=False)
+            
+            print(f"✅ Updated JSON file with issue synthesis")
+            return True
+            
+        except Exception as e:
+            logging.error(f"Error updating JSON with synthesis: {e}")
             return False
     
     def run(self) -> bool:
         """Main execution method."""
-        print(f"\n🎯 SOUTHERN ARCHITECT STEP 4 - PAGE METADATA GENERATION")
+        print(f"\n🎯 SOUTHERN ARCHITECT STEP 4 - ISSUE SYNTHESIS")
         print(f"📁 Processing folder: {self.folder_path}")
+        print(f"🤖 Model: {self.model_name}")
         print("-" * 50)
         
         # Detect workflow type
@@ -409,49 +451,151 @@ class PageMetadataGenerator:
         
         print(f"🔍 Detected workflow type: {self.workflow_type.upper()}")
         
+        # Find issue content index file
+        if not self.find_issue_content_index_file():
+            return False
+        
         # Load JSON data
         if not self.load_json_data():
             return False
         
-        # Create output folder
-        if not self.create_output_folder():
+        # Extract all chosen vocabulary terms
+        all_chosen_terms = self.extract_all_chosen_terms()
+        if not all_chosen_terms:
+            print("⚠️  No chosen vocabulary terms found in the data")
             return False
         
-        # Generate metadata files
-        print(f"📝 Generating individual page metadata files...")
-        if not self.generate_all_metadata_files():
+        print(f"📚 Found {len(all_chosen_terms)} unique chosen vocabulary terms")
+        
+        # Show breakdown by source
+        terms_by_source = defaultdict(int)
+        for term in all_chosen_terms:
+            source = term.get('source', 'Unknown')
+            terms_by_source[source] += 1
+        
+        for source, count in terms_by_source.items():
+            print(f"   - {source}: {count} terms")
+        
+        # Extract geographic terms
+        geographic_terms = self.extract_geographic_terms()
+        total_geo_mentions = sum(term.get('count', 1) for term in geographic_terms)
+        print(f"📍 Found {len(geographic_terms)} unique geographic terms ({total_geo_mentions} total mentions)")
+        
+        # Show geographic terms breakdown by source
+        if geographic_terms:
+            geo_by_source = defaultdict(int)
+            for term in geographic_terms:
+                source = term.get('source', 'Unknown')
+                geo_by_source[source] += 1
+            
+            for source, count in geo_by_source.items():
+                print(f"   - {source}: {count} unique geographic terms")
+            
+            # Show most frequently mentioned terms
+            frequent_terms = [term for term in geographic_terms if term.get('count', 1) > 1]
+            if frequent_terms:
+                print(f"   - {len(frequent_terms)} terms mentioned multiple times")
+                for term in frequent_terms[:3]:  # Show top 3
+                    print(f"     • {term['label']}: {term['count']} mentions")
+
+        # Read issue content index content
+        issue_content_index = self.read_issue_content_index()
+        if not issue_content_index:
             return False
         
-        # Create index file
-        if not self.create_index_file():
+        # Show model pricing info
+        model_info = get_model_info(self.model_name)
+        if model_info:
+            print(f"💰 Pricing: ${model_info['input_per_1k']:.5f}/1K input, ${model_info['output_per_1k']:.5f}/1K output")
+        
+        # Synthesize issue description and select vocabulary terms
+        print(f"\n🔄 Synthesizing issue description and selecting vocabulary terms...")
+        synthesis_result, raw_response, usage, processing_time = self.synthesizer.synthesize_issue(
+            issue_content_index, all_chosen_terms
+        )
+        
+        if not synthesis_result:
+            print("❌ Issue synthesis failed")
             return False
         
-        # Create issue-level table of contents
-        if not self.create_issue_toc():
+        # Create clean issue metadata file
+        if not self.create_issue_metadata_file(synthesis_result):
             return False
         
-        # Create summary report
-        if not self.create_summary_report():
+        # Append geographic terms to the file (after LLM synthesis is complete)
+        if geographic_terms:
+            if not self.append_geographic_terms_to_file(geographic_terms):
+                print("⚠️  Warning: Failed to append geographic terms to metadata file")
+        else:
+            print("ℹ️  No geographic terms found to append")
+        
+        # Update JSON with synthesis
+        if not self.update_json_with_synthesis(synthesis_result):
             return False
+        
+        # Create logs folder and log response
+        logs_folder_path = os.path.join(self.folder_path, "logs")
+        if not os.path.exists(logs_folder_path):
+            os.makedirs(logs_folder_path)
+        
+        # Log individual response
+        issue_name = self.get_issue_name()
+        log_individual_response(
+            logs_folder_path=logs_folder_path,
+            script_name="southern_architect_issue_synthesis",
+            row_number=1,
+            barcode=issue_name,
+            response_text=raw_response,
+            model_name=self.model_name,
+            prompt_tokens=usage.prompt_tokens if usage else 0,
+            completion_tokens=usage.completion_tokens if usage else 0,
+            processing_time=processing_time
+        )
+        
+        # Calculate cost
+        estimated_cost = calculate_cost(
+            model_name=self.model_name,
+            prompt_tokens=api_stats.total_input_tokens,
+            completion_tokens=api_stats.total_output_tokens,
+            is_batch=False
+        )
+        
+        create_token_usage_log(
+            logs_folder_path=logs_folder_path,
+            script_name="southern_architect_issue_synthesis",
+            model_name=self.model_name,
+            total_items=1,
+            items_with_issues=0,
+            total_time=processing_time,
+            total_prompt_tokens=api_stats.total_input_tokens,
+            total_completion_tokens=api_stats.total_output_tokens,
+            additional_metrics={
+                "Issue name": issue_name,
+                "Available chosen terms": len(all_chosen_terms),
+                "Selected subject headings": len(synthesis_result.get('selected_subject_headings', [])),
+                "Geographic terms found": len(geographic_terms),
+                "Total geographic mentions": sum(term.get('count', 1) for term in geographic_terms),
+                "Processing mode": "INDIVIDUAL",
+                "Actual cost": f"${estimated_cost:.4f}",
+                "Description length": f"{len(synthesis_result['issue_description'])} characters",
+                "LCSH terms available": terms_by_source.get('LCSH', 0),
+                "FAST terms available": terms_by_source.get('FAST', 0),
+                "Getty terms available": terms_by_source.get('Getty AAT', 0) + terms_by_source.get('Getty TGN', 0)
+            }
+        )
         
         # Final summary
-        metadata_files = [f for f in os.listdir(self.output_folder) 
-                         if f.endswith('_metadata.txt')]
-        
-        print(f"\n🎉 PAGE METADATA GENERATION COMPLETED!")
-        print(f"✅ Generated {len(metadata_files)} metadata files")
-        print(f"📁 Output folder: {self.output_folder}")
-        print(f"📋 Index file: {os.path.join(self.output_folder, '00_INDEX.txt')}")
-        
-        # Get the actual TOC filename that was created
-        data_items = self.json_data[:-1] if self.json_data and 'api_stats' in self.json_data[-1] else self.json_data
-        if data_items:
-            first_entry = data_items[0]
-            folder_name = first_entry.get('folder', 'Unknown')
-            toc_filename = f"{folder_name}_Table_of_Contents.txt"
-            print(f"📋 Issue-level TOC: {os.path.join(self.folder_path, toc_filename)}")
-        
-        print(f"📋 Generation report: {os.path.join(self.folder_path, 'page_metadata_generation_report.txt')}")
+        selected_headings = synthesis_result.get('selected_subject_headings', [])
+        print(f"\n🎉 ISSUE SYNTHESIS COMPLETED!")
+        print(f"📝 Issue description: {len(synthesis_result['issue_description'])} characters")
+        print(f"📚 Selected {len(selected_headings)} subject headings from {len(all_chosen_terms)} available chosen terms")
+        print(f"📍 Appended {len(geographic_terms)} unique geographic terms ({sum(term.get('count', 1) for term in geographic_terms)} total mentions)")
+        print(f"⏱️  Processing time: {processing_time:.2f} seconds")
+        print(f"🎯 Total tokens: {api_stats.total_input_tokens + api_stats.total_output_tokens:,}")
+        print(f"💰 Estimated cost: ${estimated_cost:.4f}")
+        print(f"\n📁 GENERATED FILES:")
+        print(f"  📄 Issue metadata: {os.path.join(self.folder_path, f'{issue_name}_Issue_Metadata.txt')}")
+        print(f"  📊 Updated JSON: {os.path.join(self.folder_path, f'{self.workflow_type}_workflow.json')}")
         
         return True
 
@@ -472,9 +616,10 @@ def find_newest_folder(base_directory: str) -> Optional[str]:
     return os.path.join(base_directory, folders[0])
 
 def main():
-    parser = argparse.ArgumentParser(description='Generate individual page-level metadata files')
+    parser = argparse.ArgumentParser(description='Synthesize issue-level descriptions and select from chosen vocabulary terms')
     parser.add_argument('--folder', help='Specific folder path to process')
     parser.add_argument('--newest', action='store_true', help='Process the newest folder in the output directory (default: True if no folder specified)')
+    parser.add_argument('--model', default="gpt-4o-2024-08-06", help='Model name to use for synthesis')
     args = parser.parse_args()
     
     # Default base directory for Southern Architect output folders
@@ -493,12 +638,12 @@ def main():
             return 1
         print(f"🔄 Auto-selected newest folder: {os.path.basename(folder_path)}")
     
-    # Create and run the generator
-    generator = PageMetadataGenerator(folder_path)
-    success = generator.run()
+    # Create and run the synthesizer
+    synthesizer = SouthernArchitectIssueSynthesizer(folder_path, args.model)
+    success = synthesizer.run()
     
     if not success:
-        print("❌ Page metadata generation failed")
+        print("❌ Issue synthesis failed")
         return 1
     
     return 0
