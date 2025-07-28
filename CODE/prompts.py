@@ -4,6 +4,7 @@ Southern Architect Prompts Module
 This module contains all prompt components for the Southern Architect archival project.
 All components are defined once and assembled into the original method names.
 """
+# ==================== STEP 1 PROMPTS (INITIAL METADATA EXTRACTION) ====================
 
 class SouthernArchitectPrompts:
     """Container for all Southern Architect text analysis prompts."""
@@ -214,3 +215,7 @@ Return ONLY the JSON response in the exact format specified above."""
             return cls.get_short_content_prompt(), "short"
         else:
             return cls.get_combined_prompt(), "normal"
+        
+        
+# ==================== STEP 3 PROMPTS (CONTROLLED VOCABULARY TERMS SELECTION) ====================
+# ==================== STEP 4 PROMPTS (ISSUE-LEVEL METADATA CREATION) ====================

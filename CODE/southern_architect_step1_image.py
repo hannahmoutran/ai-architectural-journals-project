@@ -643,7 +643,7 @@ def process_folder_individual(all_images, wb, analysis_sheet, raw_sheet, issues_
         time.sleep(1)
     
     return (wb, all_results, api_stats, len(all_images), items_with_issues, total_processing_time,
-           api_stats.total_input_tokens, api_stats.total_output_tokens, False)  # False for was_batch_processed
+           api_stats.total_input_tokens, api_stats.total_output_tokens, False)  
 
 def main():
     model_name = "gpt-4o-2024-08-06"  
@@ -651,36 +651,14 @@ def main():
     # Start timing the entire script execution
     script_start_time = time.time()
     
-    input_folder = "/Users/hannahmoutran/Desktop/southern_architect/CODE/image_folders/10_more_pages"
+    input_folder = "/Users/hannahmoutran/Desktop/southern_architect/CODE/image_folders/3_pages"
     
     # Create dynamic output folder name
     current_date = datetime.now().strftime("%Y-%m-%d")
     current_time = datetime.now().strftime("%H-%M-%S")
     
-    # Clean model name for folder (remove date versions but keep model identifiers)
-    # Handle various model name formats
-    if model_name.startswith("gpt-4o-mini-"):
-        clean_model_name = "gpt_4o_mini"
-    elif model_name.startswith("gpt-4o-"):
-        clean_model_name = "gpt_4o"
-    elif model_name == "gpt-4o":
-        clean_model_name = "gpt_4o"
-    elif model_name == "gpt-4o-mini":
-        clean_model_name = "gpt_4o_mini"
-    elif model_name.startswith("gpt-4.1-mini-"):
-        clean_model_name = "gpt_4_1_mini"
-    elif model_name.startswith("gpt-4.1-"):
-        clean_model_name = "gpt_4_1"
-    elif model_name == "gpt-4.1":
-        clean_model_name = "gpt_4_1"
-    elif model_name == "gpt-4.1-mini":
-        clean_model_name = "gpt_4_1_mini"
-    else:
-        # Fallback for any other model names
-        clean_model_name = model_name.replace("-", "_").replace(".", "_")
-    
     # Create folder name: model_Created_date_Time_time
-    folder_name = f"{clean_model_name}_Created_{current_date}_Time_{current_time}"
+    folder_name = f"SABN_Metadata_Created_{current_date}_Time_{current_time}"
     
     # Create the full output directory path
     base_output_dir = "/Users/hannahmoutran/Desktop/southern_architect/CODE/output_folders"

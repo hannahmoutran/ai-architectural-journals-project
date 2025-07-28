@@ -727,37 +727,16 @@ def main():
     current_date = datetime.now().strftime("%Y-%m-%d")
     current_time = datetime.now().strftime("%H-%M-%S")
     
-    # Clean model name for folder (remove date versions but keep model identifiers)
-    if model_name.startswith("gpt-4o-mini-"):
-        clean_model_name = "gpt_4o_mini"
-    elif model_name.startswith("gpt-4o-"):
-        clean_model_name = "gpt_4o"
-    elif model_name == "gpt-4o":
-        clean_model_name = "gpt_4o"
-    elif model_name == "gpt-4o-mini":
-        clean_model_name = "gpt_4o_mini"
-    elif model_name.startswith("gpt-4.1-mini-"):
-        clean_model_name = "gpt_4_1_mini"
-    elif model_name.startswith("gpt-4.1-"):
-        clean_model_name = "gpt_4_1"
-    elif model_name == "gpt-4.1":
-        clean_model_name = "gpt_4_1"
-    elif model_name == "gpt-4.1-mini":
-        clean_model_name = "gpt_4_1_mini"
-    else:
-        # Fallback for any other model names
-        clean_model_name = model_name.replace("-", "_").replace(".", "_")
-    
     # Create folder name: model_Created_date_Time_time
-    folder_name = f"{clean_model_name}_Created_{current_date}_Time_{current_time}"
-    
+    folder_name = f"SABN_Metadata_Created_{current_date}_Time_{current_time}"
+
     # Create the full output directory path
     base_output_dir = "/Users/hannahmoutran/Desktop/southern_architect/CODE/output_folders"
     
     # If resuming, try to find the most recent output folder for this model
     if args.resume:
         checkpoint_mgr = CheckpointManager("")  # Temporary for folder search
-        resume_dir = checkpoint_mgr.find_resume_folder(base_output_dir, clean_model_name)
+        resume_dir = checkpoint_mgr.find_resume_folder(base_output_dir, "SABN_Metadata")
         
         if resume_dir:
             output_dir = resume_dir
