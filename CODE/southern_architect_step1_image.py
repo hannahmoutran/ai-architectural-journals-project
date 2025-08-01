@@ -13,9 +13,6 @@ from PIL import Image as PILImage
 from io import BytesIO
 from openpyxl.drawing.image import Image as XLImage
 import time
-import tempfile
-import uuid
-from typing import List, Dict, Any, Optional
 from prompts import SouthernArchitectPrompts
 
 # Configure logging
@@ -44,7 +41,7 @@ class APIStats:
 api_stats = APIStats()
 
 def parse_json_response(raw_response):
-    """Enhanced JSON parsing with trailing comma handling - matching text workflow."""
+    """JSON parsing with trailing comma handling."""
     try:
         # First, try standard parsing after cleaning markdown
         cleaned_response = re.sub(r'```json\s*|\s*```', '', raw_response)
@@ -59,17 +56,17 @@ def parse_json_response(raw_response):
         
     except Exception as e:
         try:
-            # Second attempt: extract JSON object and fix trailing commas
+            # Extract JSON object and fix trailing commas
             match = re.search(r'{.*}', raw_response, re.DOTALL)
             if not match:
                 raise ValueError("No JSON object found in response")
                 
             json_str = match.group(0)
             
-            # Remove trailing commas more aggressively
+            # Remove trailing commas
             json_str = re.sub(r',(\s*[}\]])', r'\1', json_str)
             
-            # Also try to fix common JSON issues
+            # Fix common JSON issues
             json_str = re.sub(r'(\w+):', r'"\1":', json_str)  # Add quotes to unquoted keys
             json_str = re.sub(r':\s*([^",\[\{][^,\]\}]*)', r': "\1"', json_str)  # Quote unquoted string values
             
@@ -134,7 +131,7 @@ def prepare_batch_requests(all_images, model_name):
                     {"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{base64_image}"}}
                 ]
             }],
-            "max_tokens": 3000  # Increased to match text workflow
+            "max_tokens": 3000  
         }
         
         batch_requests.append(request_data)
@@ -155,7 +152,7 @@ def collect_all_images(input_folder):
         parts = x.split('-')
         return tuple(parts + [''] * (3 - len(parts)))
     
-    # Sort folders - matching text workflow
+    # Sort folders
     sorted_folders = sorted(os.listdir(input_folder), key=folder_sort_key, reverse=False)
     
     for folder_name in sorted_folders:
@@ -179,7 +176,7 @@ def collect_all_images(input_folder):
     retry=tenacity.retry_if_exception_type(Exception)
 )
 def process_image(image_path, model_name="gpt-4o-2024-08-06"):
-    """Process a single image with enhanced error handling."""
+    """Process a single image and return the parsed response."""
     with open(image_path, "rb") as image_file:
         base64_image = base64.b64encode(image_file.read()).decode('utf-8')
 
@@ -206,7 +203,7 @@ def process_image(image_path, model_name="gpt-4o-2024-08-06"):
     
     raw_response = response.choices[0].message.content.strip()
     
-    # Use the enhanced parsing function
+    # Use enhanced parsing function
     parsed_json, error = parse_json_response(raw_response)
     
     if parsed_json:
@@ -260,7 +257,7 @@ def process_folder_with_batch(input_folder, output_dir, model_name="gpt-4o-2024-
     all_images = collect_all_images(input_folder)
     total_items = len(all_images)
     
-    print(f"\n🎯 SOUTHERN ARCHITECT IMAGE METADATA EXTRACTION")
+    print(f"\n SOUTHERN ARCHITECT IMAGE METADATA EXTRACTION")
     print(f"Found {total_items} images to process")
     print(f"Starting metadata extraction using {model_name}...")
     print("-" * 50)
@@ -269,20 +266,19 @@ def process_folder_with_batch(input_folder, output_dir, model_name="gpt-4o-2024-
     processor = BatchProcessor()
     use_batch = processor.should_use_batch(total_items)
     
-    print(f"🤖 Processing mode: {'BATCH' if use_batch else 'INDIVIDUAL'}")
+    print(f"Processing mode: {'BATCH' if use_batch else 'INDIVIDUAL'}")
     
     # Show model pricing info
     model_info = get_model_info(model_name)
     if model_info:
-        print(f"🧠 Model: {model_name}")
-        print(f"💰 Pricing: ${model_info['input_per_1k']:.5f}/1K input, ${model_info['output_per_1k']:.5f}/1K output")
-        print(f"📦 Batch discount: {model_info['batch_discount']*100:.0f}%")
+        print(f"Model: {model_name}")
+        print(f"Pricing: ${model_info['input_per_1k']:.5f}/1K input, ${model_info['output_per_1k']:.5f}/1K output")
     
     wb = Workbook()
     analysis_sheet = wb.active
     analysis_sheet.title = "Analysis"
     
-    # Set up headers - 
+    # Set up headers 
     analysis_headers = [
         'Folder', 'Page Number', 'Image Path', 
         'Text Transcription', 'Visual Description',
@@ -305,7 +301,7 @@ def process_folder_with_batch(input_folder, output_dir, model_name="gpt-4o-2024-
     for i, width in enumerate([15, 10, 120]):
         raw_sheet.column_dimensions[raw_sheet.cell(row=1, column=i+1).column_letter].width = width
     
-    # Create issues sheet - matching text workflow
+    # Create issues sheet
     issues_sheet = wb.create_sheet("Issues")
     issues_sheet.append(["Image Path", "Error"])
     
@@ -323,7 +319,7 @@ def process_folder_with_batch(input_folder, output_dir, model_name="gpt-4o-2024-
         batch_requests, custom_id_mapping = prepare_batch_requests(all_images, model_name)
         cost_estimate = processor.estimate_batch_cost(batch_requests, model_name)
         
-        # Simplified cost display
+        # Cost display
         print(f"💰 Estimated cost: ${cost_estimate['batch_cost']:.4f} (${cost_estimate['savings']:.4f} savings)")
         
         # Convert to batch format
@@ -342,7 +338,7 @@ def process_folder_with_batch(input_folder, output_dir, model_name="gpt-4o-2024-
             # Process batch results
             processed_results = processor.process_batch_results(batch_results, custom_id_mapping)
             
-            print(f"📊 Processing batch results...")
+            print(f"Processing batch results...")
             
             # Track tokens for logging
             api_stats.total_input_tokens = processed_results["summary"]["total_prompt_tokens"]
@@ -385,7 +381,7 @@ def process_folder_with_batch(input_folder, output_dir, model_name="gpt-4o-2024-
                                             "visualDescription": f"Error: {error}",
                                             "tocEntry": f"Error: {error}",
                                             "namedEntities": [],
-                                            "geographicEntities": [],  # FIXED: This was missing
+                                            "geographicEntities": [],  
                                             "topics": [],
                                             "contentWarning": "None"
                                         }
@@ -505,7 +501,7 @@ def process_folder_with_batch(input_folder, output_dir, model_name="gpt-4o-2024-
                    summary["total_prompt_tokens"], summary["total_completion_tokens"], True)  # True for was_batch_processed
     
     # Fall back to individual processing
-    print(f"🔄 Using individual processing...")
+    print(f"Using individual processing...")
     return process_folder_individual(all_images, wb, analysis_sheet, raw_sheet, issues_sheet, logs_folder_path, model_name, max_row_height, all_results)
 
 def process_folder_individual(all_images, wb, analysis_sheet, raw_sheet, issues_sheet, logs_folder_path, model_name, max_row_height, all_results):
@@ -517,7 +513,7 @@ def process_folder_individual(all_images, wb, analysis_sheet, raw_sheet, issues_
         row_number = i + 2  # +2 for header row
         filename = os.path.basename(img_path)
         
-        print(f"\n📄 Processing image {i+1}/{len(all_images)}")
+        print(f"\n Processing image {i+1}/{len(all_images)}")
         print(f"   Folder: {folder_name}")
         print(f"   Page: {page_number}")
         print(f"   File: {filename}")
@@ -540,7 +536,7 @@ def process_folder_individual(all_images, wb, analysis_sheet, raw_sheet, issues_
                 processing_time=processing_time
             )
             
-            print(f"   ✅ Processed successfully! Tokens: {(usage.prompt_tokens + usage.completion_tokens) if usage else 0:,}")
+            print(f"   Processed successfully - Tokens: {(usage.prompt_tokens + usage.completion_tokens) if usage else 0:,}")
             
         except Exception as e:
             logging.error(f"Error processing {img_path}: {str(e)}")
@@ -551,7 +547,7 @@ def process_folder_individual(all_images, wb, analysis_sheet, raw_sheet, issues_
                 "visualDescription": raw_response,
                 "tocEntry": f"Error: {str(e)}",
                 "namedEntities": [],
-                "geographicEntities": [],  # FIXED: This was missing
+                "geographicEntities": [], 
                 "topics": [],
                 "contentWarning": "None"
             }
@@ -573,7 +569,7 @@ def process_folder_individual(all_images, wb, analysis_sheet, raw_sheet, issues_
                 processing_time=0
             )
             
-            print(f"   ❌ Processing failed: {str(e)}")
+            print(f"   Processing failed: {str(e)}")
         
         # Add to analysis sheet
         analysis_row = [
@@ -621,7 +617,7 @@ def process_folder_individual(all_images, wb, analysis_sheet, raw_sheet, issues_
         for cell in raw_sheet[raw_sheet.max_row]:
             cell.alignment = Alignment(vertical='top', wrap_text=True)
         
-        # Add to results - UPDATED: using 'topics' instead of 'subject_headings'
+        # Add to results
         entry_result = {
             'folder': folder_name,
             'page_number': page_number,
@@ -651,7 +647,7 @@ def main():
     # Start timing the entire script execution
     script_start_time = time.time()
     
-    input_folder = "/Users/hannahmoutran/Desktop/southern_architect/CODE/image_folders/3_pages"
+    input_folder = "/Users/hannahmoutran/Desktop/southern_architect/CODE/image_folders/4_pages"
     
     # Create dynamic output folder name
     current_date = datetime.now().strftime("%Y-%m-%d")
@@ -730,34 +726,21 @@ def main():
             "Processing time percentage": f"{(total_processing_time/script_duration)*100:.1f}%" if script_duration > 0 else "0%",
             "Items successfully processed": total_items - items_with_issues,
             "Processing mode": "BATCH" if was_batch_processed else "INDIVIDUAL",
-            "Actual cost": f"${estimated_cost:.4f}",
+            "Cost": f"${estimated_cost:.4f}",
             "Average tokens per item": f"{(total_prompt_tokens + total_completion_tokens)/total_items:.0f}" if total_items > 0 else "0"
         }
     )
     
-    # Enhanced final summary
-    print(f"\n🎉 SOUTHERN ARCHITECT IMAGE PROCESSING COMPLETED!")
-    print(f"✅ Successfully processed: {total_items - items_with_issues}/{total_items} images")
-    print(f"❌ Items with issues: {items_with_issues}")
-    print(f"⏱️  Total script time: {script_duration:.1f}s ({script_duration/60:.1f} minutes)")
-    print(f"⏱️  Processing time: {total_processing_time:.1f}s")
-    print(f"🎯 Total tokens: {total_prompt_tokens + total_completion_tokens:,} (Input: {total_prompt_tokens:,}, Output: {total_completion_tokens:,})")
-    print(f"🤖 Processing mode: {'BATCH' if was_batch_processed else 'INDIVIDUAL'}")
-    print(f"💰 Actual cost: ${estimated_cost:.4f}")
-    
-    # Show batch savings if applicable
-    if was_batch_processed:
-        regular_cost = calculate_cost(model_name, total_prompt_tokens, total_completion_tokens, is_batch=False)
-        savings = regular_cost - estimated_cost
-        savings_percentage = (savings / regular_cost) * 100 if regular_cost > 0 else 0
-        print(f"💰 Regular API cost would have been: ${regular_cost:.4f}")
-        print(f"💰 Batch savings: ${savings:.4f} ({savings_percentage:.1f}%)")
-    
-    print(f"📄 Results saved to: {excel_path}")
-    print(f"📊 JSON data saved to: {json_path}")
-    print(f"📊 Token usage log saved to: {os.path.join(logs_folder_path, 'southern_architect_image_metadata_token_usage_log.txt')}")
-    print(f"📝 Full responses log saved to: {os.path.join(logs_folder_path, 'southern_architect_image_metadata_full_responses_log.txt')}")
-    print(f"📁 All files saved in: {output_dir}")
+    # Final summary - terminal output
+    print(f"\nSTEP 1 COMPLETE: Generated image metadata in {os.path.basename(output_dir)}")
+    print(f"Excel file, JSON data, logs, and thumbnails created")
+    print(f"Successfully processed: {total_items - items_with_issues}/{total_items} images")
+    print(f"Items with issues: {items_with_issues}")
+    print(f"Total script time: {script_duration:.1f}s ({script_duration/60:.1f} minutes)")
+    print(f"Tokens: {total_prompt_tokens + total_completion_tokens:,} (Input: {total_prompt_tokens:,}, Output: {total_completion_tokens:,})")
+    print(f"Processing mode: {'BATCH' if was_batch_processed else 'INDIVIDUAL'}")
+    print(f"Cost estimate: ${estimated_cost:.4f}")
+   
 
 if __name__ == "__main__":
     main()

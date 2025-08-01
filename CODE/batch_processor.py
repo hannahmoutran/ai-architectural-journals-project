@@ -63,8 +63,8 @@ class BatchProcessor:
             return True
         elif use_batch_env == 'false':
             return False
-        else:  # auto mode
-            # Use batch for >5 requests (cost effective threshold)
+        else:  # 'auto' for automatic mode
+            # Uses batch for more than 5 requests
             return num_requests > 5
     
     def create_batch_requests(self, requests_data: List[Dict[str, Any]], 

@@ -10,6 +10,7 @@ from openai import OpenAI
 import tenacity
 from collections import defaultdict
 import re
+from prompts import SouthernArchitectPrompts
 
 # Import our custom modules
 from model_pricing import calculate_cost, get_model_info
@@ -39,41 +40,11 @@ class IssueSynthesizer:
     
     def __init__(self, model_name: str = "gpt-4o-mini"):
         self.model_name = model_name
-        self.system_prompt = self.create_system_prompt()
-    
+        self.system_prompt = SouthernArchitectPrompts.get_issue_synthesis_system_prompt()
+
     def create_system_prompt(self) -> str:
         """Create the system prompt for issue synthesis."""
-        return """You are an archivist at UT Austin cataloging The Southern Architect (1892-1931) for architectural historians and students. Create metadata for this complete issue that emphasizes its unique architectural and historical content.
-
-TASK: Synthesize an issue-level description and select up to 10 subject headings from the provided chosen vocabulary terms.
-
-ISSUE DESCRIPTION GUIDELINES:
-- Write 150-250 words from a modern historian's perspective
-- Focus on SPECIFIC details: architect names, firms, buildings, cities, projects, competitions, events
-- Emphasize architectural styles, building types, construction technologies, materials
-- Highlight historically significant innovations or trends
-- Contextualize within American South architectural history (1892-1931)
-- Use scholarly tone; avoid generic statements that could apply to any issue
-- Write as "This issue features..." not "The issue includes..."
-
-SUBJECT HEADING SELECTION:
-- Select exactly 10 terms from provided chosen vocabulary
-- Prioritize architectural styles, building types, construction technologies
-- Focus on terms most valuable for architectural history research
-- Balance across vocabulary sources when possible
-
-Return JSON format:
-{
-  "issue_description": "Specific description emphasizing unique architectural content and historical significance",
-  "selected_subject_headings": [
-    {
-      "label": "Term label",
-      "uri": "Term URI", 
-      "source": "LCSH/FAST/Getty AAT/Getty TGN",
-      "reasoning": "Why this term represents the issue"
-    }
-  ]
-}"""
+        return SouthernArchitectPrompts.get_issue_synthesis_system_prompt()
 
     def create_user_prompt(self, toc_content: str, selected_terms: List[Dict[str, str]]) -> str:
         formatted_terms = []
@@ -218,20 +189,25 @@ class SouthernArchitectIssueSynthesizer:
         
         return True
 
-    def find_issue_content_index_file(self) -> bool:
-        """Find the issue content index file created in step 3."""
+    def find_issue_content_index_files(self) -> bool:
+        """Find all issue content index files created in step 3."""
         # Look for files ending with "_Issue_Content_Index.txt"
         issue_content_index_files = [f for f in os.listdir(self.folder_path) if f.endswith('_Issue_Content_Index.txt')]
 
         if not issue_content_index_files:
-            logging.error("No issue content index file found. Please run step 3 first.")
+            logging.error("No issue content index files found. Please run step 3 first.")
             return False
 
-        if len(issue_content_index_files) > 1:
-            logging.warning(f"Multiple issue content index files found: {issue_content_index_files}. Using the first one.")
-
-        self.issue_content_index_file_path = os.path.join(self.folder_path, issue_content_index_files[0])
-        print(f"📋 Found issue content index: {issue_content_index_files[0]}")
+        # Store all files for processing
+        self.issue_content_index_files = []
+        for filename in issue_content_index_files:
+            full_path = os.path.join(self.folder_path, filename)
+            self.issue_content_index_files.append(full_path)
+        
+        print(f"Found {len(issue_content_index_files)} issue content index files:")
+        for filename in issue_content_index_files:
+            print(f"  - {filename}")
+        
         return True
     
     def load_json_data(self) -> bool:
@@ -242,12 +218,63 @@ class SouthernArchitectIssueSynthesizer:
         try:
             with open(json_path, 'r', encoding='utf-8') as f:
                 self.json_data = json.load(f)
-            print(f"📊 Loaded JSON data from {json_filename}")
+            print(f"Loaded JSON data from {json_filename}")
             return True
         except Exception as e:
             logging.error(f"Error loading JSON data: {e}")
             return False
-    
+    def extract_issue_specific_data(self, issue_name: str) -> Tuple[List[Dict[str, str]], List[Dict[str, Any]]]:
+        """Extract chosen terms and geographic terms for a specific issue."""
+        all_terms = []
+        geographic_terms_count = {}
+        seen_uris = set()
+        
+        # Skip the last item if it's API stats
+        data_items = self.json_data[:-1] if self.json_data and 'api_stats' in self.json_data[-1] else self.json_data
+        
+        for item in data_items:
+            # Only process items that belong to this specific issue
+            item_folder = item.get('folder', '')
+            if item_folder != issue_name:
+                continue
+                
+            if 'analysis' in item:
+                analysis = item['analysis']
+                
+                # Get chosen vocabulary terms from step 3
+                vocabulary_terms = analysis.get('final_selected_terms', [])
+                for term in vocabulary_terms:
+                    if isinstance(term, dict) and 'uri' in term and term['uri'] not in seen_uris:
+                        all_terms.append({
+                            'label': term.get('label', ''),
+                            'uri': term.get('uri', ''),
+                            'source': term.get('source', 'Unknown')
+                        })
+                        seen_uris.add(term['uri'])
+                
+                # Get geographic vocabulary search results
+                geo_results = analysis.get('geographic_vocabulary_search_results', {})
+                for location_key, terms_list in geo_results.items():
+                    if isinstance(terms_list, list):
+                        for term in terms_list:
+                            if isinstance(term, dict) and 'uri' in term:
+                                uri = term.get('uri', '')
+                                if uri:
+                                    if uri not in geographic_terms_count:
+                                        geographic_terms_count[uri] = {
+                                            'label': term.get('label', ''),
+                                            'uri': uri,
+                                            'source': term.get('source', 'Unknown'),
+                                            'count': 0
+                                        }
+                                    geographic_terms_count[uri]['count'] += 1
+        
+        # Convert geographic terms to list and sort
+        geographic_terms = list(geographic_terms_count.values())
+        geographic_terms.sort(key=lambda x: (-x['count'], x['label']))
+        
+        return all_terms, geographic_terms
+
     def extract_all_chosen_terms(self) -> List[Dict[str, str]]:
         """Extract all unique chosen vocabulary terms from the JSON data."""
         all_terms = []
@@ -307,7 +334,45 @@ class SouthernArchitectIssueSynthesizer:
         geographic_terms.sort(key=lambda x: (-x['count'], x['label']))
         
         return geographic_terms
-
+    
+    def append_geographic_terms_to_file_in_folder(self, geographic_terms: List[Dict[str, Any]], issue_name: str, output_folder: str) -> bool:
+        """Append geographic terms to the existing issue metadata file in specified folder."""
+        try:
+            metadata_filename = f"{issue_name}_Issue_Metadata.txt"
+            metadata_path = os.path.join(output_folder, metadata_filename)
+            
+            if not os.path.exists(metadata_path):
+                logging.error(f"Issue metadata file not found: {metadata_filename}")
+                return False
+            
+            total_mentions = sum(term.get('count', 1) for term in geographic_terms)
+            
+            with open(metadata_path, 'a', encoding='utf-8') as f:
+                f.write(f"\nGEOGRAPHIC TERMS ({len(geographic_terms)} unique terms, {total_mentions} total mentions):\n")
+                f.write("-" * 60 + "\n")
+                
+                for i, term in enumerate(geographic_terms, 1):
+                    label = term.get('label', 'Unknown')
+                    uri = term.get('uri', '')
+                    source = term.get('source', 'Unknown')
+                    count = term.get('count', 1)
+                    
+                    if count > 1:
+                        f.write(f"{i:2d}. {label} [{source}] ({count} mentions)\n")
+                    else:
+                        f.write(f"{i:2d}. {label} [{source}]\n")
+                    
+                    if uri:
+                        f.write(f"    URI: {uri}\n")
+                
+                f.write("\n" + "=" * (len(issue_name) + 17) + "\n")
+            
+            return True
+            
+        except Exception as e:
+            logging.error(f"Error appending geographic terms to file: {e}")
+            return False
+    
     def read_issue_content_index(self) -> str:
         """Read the issue content index."""
         try:
@@ -325,12 +390,11 @@ class SouthernArchitectIssueSynthesizer:
         issue_name = issue_content_index_filename.replace('_Issue_Content_Index.txt', '')
         return issue_name
     
-    def create_issue_metadata_file(self, synthesis_result: Dict[str, Any]) -> bool:
+    def create_issue_metadata_file(self, synthesis_result: Dict[str, Any], issue_name: str, output_folder: str) -> bool:
         """Create clean issue metadata file without processing information."""
         try:
-            issue_name = self.get_issue_name()
             metadata_filename = f"{issue_name}_Issue_Metadata.txt"
-            metadata_path = os.path.join(self.folder_path, metadata_filename)
+            metadata_path = os.path.join(output_folder, metadata_filename)
             
             with open(metadata_path, 'w', encoding='utf-8') as f:
                 f.write(f"{issue_name} - Issue Metadata\n")
@@ -357,7 +421,7 @@ class SouthernArchitectIssueSynthesizer:
                 
                 f.write("\n" + "=" * (len(issue_name) + 17) + "\n")
             
-            print(f"📄 Created issue metadata: {metadata_filename}")
+            print(f"Created issue metadata: {metadata_filename}")
             return True
             
         except Exception as e:
@@ -401,7 +465,7 @@ class SouthernArchitectIssueSynthesizer:
                 
                 f.write("\n" + "=" * (len(issue_name) + 17) + "\n")
             
-            print(f"📍 Appended {len(geographic_terms)} unique geographic terms ({total_mentions} total mentions) to issue metadata")
+            print(f"Appended {len(geographic_terms)} unique geographic terms ({total_mentions} total mentions) to issue metadata")
             return True
             
         except Exception as e:
@@ -431,7 +495,36 @@ class SouthernArchitectIssueSynthesizer:
             with open(json_path, 'w', encoding='utf-8') as f:
                 json.dump(self.json_data, f, indent=2, ensure_ascii=False)
             
-            print(f"✅ Updated JSON file with issue synthesis")
+            print(f"Updated JSON file with issue synthesis")
+            return True
+            
+        except Exception as e:
+            logging.error(f"Error updating JSON with synthesis: {e}")
+            return False
+    
+    def update_json_with_multiple_synthesis(self, all_synthesis_results: List[Dict[str, Any]]) -> bool:
+        """Update the JSON file with multiple issue-level synthesis results."""
+        try:
+            # Add all issue syntheses to the JSON data
+            issue_syntheses = {
+                "issue_syntheses": {
+                    "issues": all_synthesis_results,
+                    "total_issues": len(all_synthesis_results),
+                    "generated_date": datetime.now().isoformat(),
+                    "model_used": self.model_name
+                }
+            }
+            
+            self.json_data.append(issue_syntheses)
+            
+            # Save updated JSON
+            json_filename = f"{self.workflow_type}_workflow.json"
+            json_path = os.path.join(self.folder_path, json_filename)
+            
+            with open(json_path, 'w', encoding='utf-8') as f:
+                json.dump(self.json_data, f, indent=2, ensure_ascii=False)
+            
+            print(f"Updated JSON file with {len(all_synthesis_results)} issue syntheses")
             return True
             
         except Exception as e:
@@ -440,163 +533,115 @@ class SouthernArchitectIssueSynthesizer:
     
     def run(self) -> bool:
         """Main execution method."""
-        print(f"\n🎯 SOUTHERN ARCHITECT STEP 4 - ISSUE SYNTHESIS")
-        print(f"📁 Processing folder: {self.folder_path}")
-        print(f"🤖 Model: {self.model_name}")
+        print(f"\nSOUTHERN ARCHITECT STEP 4 - ISSUE SYNTHESIS")
+        print(f"Processing folder: {self.folder_path}")
+        print(f"Model: {self.model_name}")
         print("-" * 50)
         
         # Detect workflow type
         if not self.detect_workflow_type():
             return False
         
-        print(f"🔍 Detected workflow type: {self.workflow_type.upper()}")
+        print(f"Detected workflow type: {self.workflow_type.upper()}")
         
-        # Find issue content index file
-        if not self.find_issue_content_index_file():
+        # Find issue content index files (plural)
+        if not self.find_issue_content_index_files():
             return False
-        
+
         # Load JSON data
         if not self.load_json_data():
             return False
-        
-        # Extract all chosen vocabulary terms
-        all_chosen_terms = self.extract_all_chosen_terms()
-        if not all_chosen_terms:
-            print("⚠️  No chosen vocabulary terms found in the data")
-            return False
-        
-        print(f"📚 Found {len(all_chosen_terms)} unique chosen vocabulary terms")
-        
-        # Show breakdown by source
-        terms_by_source = defaultdict(int)
-        for term in all_chosen_terms:
-            source = term.get('source', 'Unknown')
-            terms_by_source[source] += 1
-        
-        for source, count in terms_by_source.items():
-            print(f"   - {source}: {count} terms")
-        
-        # Extract geographic terms
-        geographic_terms = self.extract_geographic_terms()
-        total_geo_mentions = sum(term.get('count', 1) for term in geographic_terms)
-        print(f"📍 Found {len(geographic_terms)} unique geographic terms ({total_geo_mentions} total mentions)")
-        
-        # Show geographic terms breakdown by source
-        if geographic_terms:
-            geo_by_source = defaultdict(int)
-            for term in geographic_terms:
-                source = term.get('source', 'Unknown')
-                geo_by_source[source] += 1
-            
-            for source, count in geo_by_source.items():
-                print(f"   - {source}: {count} unique geographic terms")
-            
-            # Show most frequently mentioned terms
-            frequent_terms = [term for term in geographic_terms if term.get('count', 1) > 1]
-            if frequent_terms:
-                print(f"   - {len(frequent_terms)} terms mentioned multiple times")
-                for term in frequent_terms[:3]:  # Show top 3
-                    print(f"     • {term['label']}: {term['count']} mentions")
 
-        # Read issue content index content
-        issue_content_index = self.read_issue_content_index()
-        if not issue_content_index:
+        # Create issue_metadata folder
+        issue_metadata_folder = os.path.join(self.folder_path, "issue_metadata")
+        os.makedirs(issue_metadata_folder, exist_ok=True)
+        print(f"Created issue metadata folder: {issue_metadata_folder}")
+
+        # Process each issue separately
+        total_issues_processed = 0
+        all_synthesis_results = []
+
+        for issue_content_index_path in self.issue_content_index_files:
+            # Extract issue name from filename
+            filename = os.path.basename(issue_content_index_path)
+            issue_name = filename.replace('_Issue_Content_Index.txt', '')
+            
+            print(f"\nProcessing issue: {issue_name}")
+            print("-" * 30)
+            
+            # Extract issue-specific data
+            issue_chosen_terms, issue_geographic_terms = self.extract_issue_specific_data(issue_name)
+            
+            if not issue_chosen_terms:
+                print(f"No chosen vocabulary terms found for issue: {issue_name}")
+                continue
+            
+            print(f"Found {len(issue_chosen_terms)} unique chosen vocabulary terms for {issue_name}")
+            
+            # Extract geographic terms count
+            total_geo_mentions = sum(term.get('count', 1) for term in issue_geographic_terms)
+            print(f"Found {len(issue_geographic_terms)} unique geographic terms ({total_geo_mentions} total mentions)")
+            
+            # Read issue content index content
+            try:
+                with open(issue_content_index_path, 'r', encoding='utf-8') as f:
+                    issue_content_index = f.read()
+            except Exception as e:
+                logging.error(f"Error reading issue content index file {issue_content_index_path}: {e}")
+                continue
+            
+            # Synthesize issue description and select vocabulary terms
+            print(f"Synthesizing issue description and selecting vocabulary terms for {issue_name}...")
+            synthesis_result, raw_response, usage, processing_time = self.synthesizer.synthesize_issue(
+                issue_content_index, issue_chosen_terms
+            )
+            
+            if not synthesis_result:
+                print(f"Issue synthesis failed for {issue_name}")
+                continue
+            
+            # Store synthesis result with issue name
+            synthesis_result['issue_name'] = issue_name
+            all_synthesis_results.append(synthesis_result)
+            
+            # Create clean issue metadata file in the dedicated folder
+            if not self.create_issue_metadata_file(synthesis_result, issue_name, issue_metadata_folder):
+                continue
+            
+            # Append geographic terms to the file
+            if issue_geographic_terms:
+                if not self.append_geographic_terms_to_file_in_folder(issue_geographic_terms, issue_name, issue_metadata_folder):
+                    print(f"Warning: Failed to append geographic terms to metadata file for {issue_name}")
+            
+            # Log individual response
+            logs_folder_path = os.path.join(self.folder_path, "logs")
+            if not os.path.exists(logs_folder_path):
+                os.makedirs(logs_folder_path)
+            
+            log_individual_response(
+                logs_folder_path=logs_folder_path,
+                script_name="southern_architect_issue_synthesis",
+                row_number=total_issues_processed + 1,
+                barcode=issue_name,
+                response_text=raw_response,
+                model_name=self.model_name,
+                prompt_tokens=usage.prompt_tokens if usage else 0,
+                completion_tokens=usage.completion_tokens if usage else 0,
+                processing_time=processing_time
+            )
+            
+            total_issues_processed += 1
+            print(f"Completed synthesis for {issue_name}")
+
+        if total_issues_processed == 0:
+            print("No issues were successfully processed")
             return False
-        
-        # Show model pricing info
-        model_info = get_model_info(self.model_name)
-        if model_info:
-            print(f"💰 Pricing: ${model_info['input_per_1k']:.5f}/1K input, ${model_info['output_per_1k']:.5f}/1K output")
-        
-        # Synthesize issue description and select vocabulary terms
-        print(f"\n🔄 Synthesizing issue description and selecting vocabulary terms...")
-        synthesis_result, raw_response, usage, processing_time = self.synthesizer.synthesize_issue(
-            issue_content_index, all_chosen_terms
-        )
-        
-        if not synthesis_result:
-            print("❌ Issue synthesis failed")
+
+        # Update JSON with all synthesis results
+        if not self.update_json_with_multiple_synthesis(all_synthesis_results):
             return False
-        
-        # Create clean issue metadata file
-        if not self.create_issue_metadata_file(synthesis_result):
-            return False
-        
-        # Append geographic terms to the file (after LLM synthesis is complete)
-        if geographic_terms:
-            if not self.append_geographic_terms_to_file(geographic_terms):
-                print("⚠️  Warning: Failed to append geographic terms to metadata file")
-        else:
-            print("ℹ️  No geographic terms found to append")
-        
-        # Update JSON with synthesis
-        if not self.update_json_with_synthesis(synthesis_result):
-            return False
-        
-        # Create logs folder and log response
-        logs_folder_path = os.path.join(self.folder_path, "logs")
-        if not os.path.exists(logs_folder_path):
-            os.makedirs(logs_folder_path)
-        
-        # Log individual response
-        issue_name = self.get_issue_name()
-        log_individual_response(
-            logs_folder_path=logs_folder_path,
-            script_name="southern_architect_issue_synthesis",
-            row_number=1,
-            barcode=issue_name,
-            response_text=raw_response,
-            model_name=self.model_name,
-            prompt_tokens=usage.prompt_tokens if usage else 0,
-            completion_tokens=usage.completion_tokens if usage else 0,
-            processing_time=processing_time
-        )
-        
-        # Calculate cost
-        estimated_cost = calculate_cost(
-            model_name=self.model_name,
-            prompt_tokens=api_stats.total_input_tokens,
-            completion_tokens=api_stats.total_output_tokens,
-            is_batch=False
-        )
-        
-        create_token_usage_log(
-            logs_folder_path=logs_folder_path,
-            script_name="southern_architect_issue_synthesis",
-            model_name=self.model_name,
-            total_items=1,
-            items_with_issues=0,
-            total_time=processing_time,
-            total_prompt_tokens=api_stats.total_input_tokens,
-            total_completion_tokens=api_stats.total_output_tokens,
-            additional_metrics={
-                "Issue name": issue_name,
-                "Available chosen terms": len(all_chosen_terms),
-                "Selected subject headings": len(synthesis_result.get('selected_subject_headings', [])),
-                "Geographic terms found": len(geographic_terms),
-                "Total geographic mentions": sum(term.get('count', 1) for term in geographic_terms),
-                "Processing mode": "INDIVIDUAL",
-                "Actual cost": f"${estimated_cost:.4f}",
-                "Description length": f"{len(synthesis_result['issue_description'])} characters",
-                "LCSH terms available": terms_by_source.get('LCSH', 0),
-                "FAST terms available": terms_by_source.get('FAST', 0),
-                "Getty terms available": terms_by_source.get('Getty AAT', 0) + terms_by_source.get('Getty TGN', 0)
-            }
-        )
-        
-        # Final summary
-        selected_headings = synthesis_result.get('selected_subject_headings', [])
-        print(f"\n🎉 ISSUE SYNTHESIS COMPLETED!")
-        print(f"📝 Issue description: {len(synthesis_result['issue_description'])} characters")
-        print(f"📚 Selected {len(selected_headings)} subject headings from {len(all_chosen_terms)} available chosen terms")
-        print(f"📍 Appended {len(geographic_terms)} unique geographic terms ({sum(term.get('count', 1) for term in geographic_terms)} total mentions)")
-        print(f"⏱️  Processing time: {processing_time:.2f} seconds")
-        print(f"🎯 Total tokens: {api_stats.total_input_tokens + api_stats.total_output_tokens:,}")
-        print(f"💰 Estimated cost: ${estimated_cost:.4f}")
-        print(f"\n📁 GENERATED FILES:")
-        print(f"  📄 Issue metadata: {os.path.join(self.folder_path, f'{issue_name}_Issue_Metadata.txt')}")
-        print(f"  📊 Updated JSON: {os.path.join(self.folder_path, f'{self.workflow_type}_workflow.json')}")
-        
+
+        print(f"\nProcessed {total_issues_processed} issues successfully")
         return True
 
 def find_newest_folder(base_directory: str) -> Optional[str]:
@@ -627,23 +672,23 @@ def main():
     
     if args.folder:
         if not os.path.exists(args.folder):
-            print(f"❌ Folder not found: {args.folder}")
+            print(f"Folder not found: {args.folder}")
             return 1
         folder_path = args.folder
     else:
         # Default to newest folder if no specific folder provided
         folder_path = find_newest_folder(base_output_dir)
         if not folder_path:
-            print(f"❌ No folders found in: {base_output_dir}")
+            print(f"No folders found in: {base_output_dir}")
             return 1
-        print(f"🔄 Auto-selected newest folder: {os.path.basename(folder_path)}")
+        print(f"Auto-selected newest folder: {os.path.basename(folder_path)}")
     
     # Create and run the synthesizer
     synthesizer = SouthernArchitectIssueSynthesizer(folder_path, args.model)
     success = synthesizer.run()
     
     if not success:
-        print("❌ Issue synthesis failed")
+        print("Issue synthesis failed")
         return 1
     
     return 0

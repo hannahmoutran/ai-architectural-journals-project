@@ -11,6 +11,7 @@ from openai import OpenAI
 import tenacity
 from openpyxl import load_workbook
 from openpyxl.styles import Alignment
+from prompts import SouthernArchitectPrompts
 
 # Import our custom modules
 from model_pricing import calculate_cost, get_model_info
@@ -70,63 +71,15 @@ def prepare_batch_requests(entries_with_vocab, vocabulary_selector, model_name):
     return batch_requests, custom_id_mapping
 
 class VocabularySelector:
-    """Class to select the best vocabulary terms for each page using LLM."""
+    """Class to select the best vocabulary terms for each page using an LLM."""
     
     def __init__(self, model_name: str = "gpt-4o"):
         self.model_name = model_name
-        self.system_prompt = self.create_system_prompt()
-    
+        self.system_prompt = SouthernArchitectPrompts.get_vocabulary_selection_system_prompt()
+
     def create_system_prompt(self) -> str:
         """Create the system prompt for vocabulary selection."""
-        return """
-    This metadata is for a page from 'Southern Architect and Building News', a periodical published from 1892 to 1931 that covered topics of interest to persons in the architecture, building, and hardware trades in the American South. You are a professional librarian specializing in controlled vocabularies for architectural history. You work for the Architecture and Planning Library Special Collections at University of Texas Libraries in Austin. You are formalizing this metadata for architectural historians and architectural history students.
-
-CRITICAL CONTEXT: This content is from the early 20th century American South (1892-1931). Only select terms that are historically appropriate for this period and geographically relevant to the Southern United States.
-
-SELECTION CRITERIA:
-1. TEMPORAL ACCURACY: Terms must be appropriate for 1892-1931 architectural practices
-2. GEOGRAPHICAL RELEVANCE: Focus on American South; avoid other regional references unless explicitly mentioned
-3. CONTENT RELEVANCE: Terms must directly relate to what's actually described in the page summary
-4. PRECISION: Choose specific terms over general ones when available
-5. QUALITY CONTROL: Select NOTHING rather than forcing poor matches
-
-DECISION PROCESS:
-For each topic, evaluate whether ANY available terms genuinely describe the specific page content:
-- RELEVANCE CHECK: Does the term directly and accurately describe what's actually described in the page summary?
-- FIELD MATCH: Does the term match the subject field of the content (architectural vs. literary vs. other)?
-- HISTORICAL CONTEXT: Is this appropriate for 1892-1931 American Southern architecture?
-- GEOGRAPHICAL CONTEXT: Does this fit American South context (avoid California, Northeast, etc.)?
-- SPECIFICITY: Choose the most specific accurate term if multiple apply
-
-AVOID selecting terms that are:
-- Geographically incorrect (e.g., "Southern California Presbyterian Homes" for general Southern residential content)
-- Temporally inappropriate (modern movements, contemporary terminology)
-- Institutionally irrelevant (specific institution types not mentioned in content)
-- From different subject fields (e.g., literary terms for architectural content)
-- Representative of different content types (e.g., novels about architecture vs. actual architectural descriptions)
-- Based on partial word matches rather than actual content relevance
-- Overly broad when specific terms are available
-
-DECISION RULES:
-- If a topic has NO genuinely relevant terms, SKIP that entire topic
-- Do not force selections based on partial word matches
-- Better to select fewer accurate terms than many irrelevant ones
-- If multiple terms are exactly the same, select the one with the best source (Getty AAT > LCSH > Getty TGN > FAST)
-- For institutional content, only select institution-specific terms if the page specifically discusses that type of institution
-
-You will be provided with page content and available vocabulary terms organized by topic. For each relevant topic, select the most appropriate term that accurately represents the page content AND is historically/geographically appropriate.
-
-Return JSON format:
-{
-"selected_terms": [
-    {
-    "label": "Exact label",
-    "source": "LCSH/FAST/Getty AAT/Getty TGN", 
-    "reasoning": "Brief explanation of relevance and historical/geographical appropriateness"
-    }
-]
-}
-"""
+        return SouthernArchitectPrompts.get_vocabulary_selection_system_prompt()
 
     def create_user_prompt(self, entry_data: Dict[str, Any]) -> str:
         """Create the user prompt for a specific entry with topics organized format."""
@@ -147,7 +100,7 @@ Return JSON format:
         if analysis.get('toc_entry'):
             content_parts.append(f"SUMMARY:\n{analysis['toc_entry']}")
         
-        # Add original topics (but NOT geographic entities - they're handled separately)
+        # Add original topics (NOT geographic entities)
         if analysis.get('topics'):
             topics = analysis['topics']
             if isinstance(topics, list):
@@ -157,8 +110,7 @@ Return JSON format:
         
         content_description = "\n\n".join(content_parts)
         
-        # Build topic-organized vocabulary terms using the new topic_to_terms mapping
-        # ONLY include vocabulary_search_results (topics), NOT geographic_vocabulary_search_results
+        # Build topic-organized vocabulary terms
         topic_to_terms = analysis.get('vocabulary_search_results', {})
         
         if not topic_to_terms:
@@ -342,7 +294,7 @@ class SouthernArchitectVocabularyProcessor:
                 logging.error("No vocabulary terms found. Please run step 2 first.")
                 return False
             
-            print(f"📊 Loaded JSON data from {json_filename}")
+            print(f"Loaded JSON data from {json_filename}")
             return True
             
         except Exception as e:
@@ -379,10 +331,10 @@ class SouthernArchitectVocabularyProcessor:
         processor = BatchProcessor()
         use_batch = processor.should_use_batch(total_entries)
         
-        print(f"🤖 Processing mode: {'BATCH' if use_batch else 'INDIVIDUAL'}")
+        print(f"Processing mode: {'BATCH' if use_batch else 'INDIVIDUAL'}")
         
         if use_batch:
-            print(f"📦 Preparing {total_entries} requests for batch processing...")
+            print(f"Preparing {total_entries} requests for batch processing...")
             
             # Prepare batch requests
             batch_requests, custom_id_mapping = prepare_batch_requests(
@@ -390,12 +342,12 @@ class SouthernArchitectVocabularyProcessor:
             )
             
             if not batch_requests:
-                print("⚠️  No valid requests to process")
+                print("No valid requests to process")
                 return selection_results
             
             # Estimate costs
             cost_estimate = processor.estimate_batch_cost(batch_requests, self.model_name)
-            print(f"💰 Estimated cost: ${cost_estimate['batch_cost']:.4f} (${cost_estimate['savings']:.4f} savings)")
+            print(f"Cost estimate: ${cost_estimate['batch_cost']:.4f} (${cost_estimate['savings']:.4f} savings)")
             
             # Convert to batch format
             formatted_requests = processor.create_batch_requests(batch_requests, "vocab_selection")
@@ -413,7 +365,7 @@ class SouthernArchitectVocabularyProcessor:
                 # Process batch results
                 processed_results = processor.process_batch_results(batch_results, custom_id_mapping)
                 
-                print(f"📊 Processing batch results...")
+                print(f"Processing batch results...")
                 
                 # Track tokens for logging
                 api_stats.total_input_tokens = processed_results["summary"]["total_prompt_tokens"]
@@ -467,7 +419,7 @@ class SouthernArchitectVocabularyProcessor:
                                         }
                                         
                                         selected_count = len(selection_result.get('selected_terms', []))
-                                        print(f"   ✅ Entry {entry_index}: Selected {selected_count} vocabulary terms")
+                                        print(f"   Entry {entry_index}: Selected {selected_count} vocabulary terms")
                                         
                                     else:
                                         # Handle error case
@@ -493,30 +445,30 @@ class SouthernArchitectVocabularyProcessor:
                                             'processing_time': 0
                                         }
                                         
-                                        print(f"   ❌ Entry {entry_index}: Processing failed: {error_msg}")
+                                        print(f"   Entry {entry_index}: Processing failed: {error_msg}")
                                         
                             except (ValueError, IndexError) as e:
                                 logging.error(f"Error processing custom_id {custom_id}: {e}")
                                 continue
                 
                 processed_entries = len(selection_results)
-                print(f"\n📊 Batch processing completed: {processed_entries}/{total_entries} entries processed")
+                print(f"\nBatch processing completed: {processed_entries}/{total_entries} entries processed")
                 return selection_results
         
         # Fall back to individual processing (existing code)
-        print(f"🔄 Using individual processing...")
+        print(f"Using individual processing:")
         self.was_batch_processed = False
         return self.process_vocabulary_selection_individual(entries_with_vocab, logs_folder_path)
 
     def process_vocabulary_selection_individual(self, entries_with_vocab: List[Tuple[int, Dict[str, Any]]], logs_folder_path: str) -> Dict[int, Dict[str, Any]]:
-        """Process vocabulary selection using individual API calls (existing logic)."""
+        """Process vocabulary selection using individual API calls."""
         self.was_batch_processed = False
         selection_results = {}
         total_entries = len(entries_with_vocab)
         processed_entries = 0
         
         for i, (entry_index, entry_data) in enumerate(entries_with_vocab):
-            print(f"\n📋 Processing entry {i+1}/{total_entries}")
+            print(f"\nProcessing entry {i+1}/{total_entries}")
             print(f"   Entry index: {entry_index}")
             print(f"   Progress: {((i+1)/total_entries)*100:.1f}%")
             
@@ -543,7 +495,7 @@ class SouthernArchitectVocabularyProcessor:
                 }
                 
                 selected_count = len(selection_result.get('selected_terms', []))
-                print(f"   ✅ Selected {selected_count} vocabulary terms")
+                print(f"   Selected {selected_count} vocabulary terms")
                 processed_entries += 1
                 
             except Exception as e:
@@ -553,12 +505,12 @@ class SouthernArchitectVocabularyProcessor:
                     'raw_response': f"Error: {str(e)}",
                     'processing_time': 0
                 }
-                print(f"   ❌ Processing failed: {str(e)}")
+                print(f"   Processing failed: {str(e)}")
             
             # Add delay between requests
             time.sleep(0.5)
         
-        print(f"\n📊 Individual processing completed: {processed_entries}/{total_entries} entries processed")
+        print(f"\nIndividual processing completed: {processed_entries}/{total_entries} entries processed")
         return selection_results
     
     def normalize_label_for_matching(self, label: str) -> str:
@@ -803,7 +755,7 @@ class SouthernArchitectVocabularyProcessor:
             with open(json_path, 'w', encoding='utf-8') as f:
                 json.dump(updated_items, f, indent=2, ensure_ascii=False)
             
-            print(f"✅ Updated JSON file with selected vocabulary terms")
+            print(f"Updated JSON file with selected vocabulary terms")
             return True
             
         except Exception as e:
@@ -875,7 +827,7 @@ class SouthernArchitectVocabularyProcessor:
             
             # Save the updated workbook
             wb.save(self.excel_path)
-            print(f"✅ Updated Excel file with selected vocabulary terms in {updated_rows} rows")
+            print(f"Updated Excel file with selected vocabulary terms in {updated_rows} rows")
             return True
             
         except Exception as e:
@@ -901,8 +853,8 @@ class SouthernArchitectVocabularyProcessor:
                     folder = item.get('folder', 'Unknown')
                     page_number = item.get('page_number', 'Unknown')
                     
-                    f.write(f"PAGE {page_number} ({folder}):\n")
-                    f.write("-" * 30 + "\n")
+                    f.write(f"PAGE {page_number} (ISSUE: {folder}):\n")
+                    f.write("=" * (len(f"PAGE {page_number} (ISSUE: {folder}):")) + "\n")
                     
                     # Get vocabulary search results, geographic vocabulary results, and final selected terms
                     vocab_search_results = item['analysis'].get('vocabulary_search_results', {})
@@ -984,7 +936,7 @@ class SouthernArchitectVocabularyProcessor:
                                     f.write(f"  - {label} ({uri}) [{source}]\n")
                             f.write("\n")
                     
-                    # Show geographic vocabulary terms (NOT selected by LLM, just display)
+                    # Show geographic vocabulary terms (NOT selected by LLM, just for display)
                     if geo_vocab_results:
                         f.write(f"GEOGRAPHIC VOCABULARY TERMS (not selected by LLM):\n")
                         for entity, terms in geo_vocab_results.items():
@@ -1008,7 +960,7 @@ class SouthernArchitectVocabularyProcessor:
                     
                     f.write("\n" + "=" * 50 + "\n\n")
             
-            print(f"📋 Created vocabulary mapping report: {report_path}")
+            print(f"Created vocabulary mapping report: {report_path}")
             return True
             
         except Exception as e:
@@ -1100,7 +1052,7 @@ class SouthernArchitectVocabularyProcessor:
                             f.write(f"  - {entity}\n")
                         f.write("\n")
 
-                    # ADDED: Geographic Entities (from step 1, not LLM selected)
+                    # ADD: Geographic Entities (from step 1)
                     geographic_entities = analysis.get('geographic_entities', [])
                     if isinstance(geographic_entities, str):
                         # Handle comma-separated string format
@@ -1123,7 +1075,7 @@ class SouthernArchitectVocabularyProcessor:
                                 f.write(f"  - {label} ({uri}) [{source}]\n")
                         f.write("\n")
                     
-                    # ADDED: Geographic Subject Headings (from step 2, not LLM selected)
+                    # Geographic Subject Headings (from step 2)
                     geo_vocab_results = analysis.get('geographic_vocabulary_search_results', {})
                     if geo_vocab_results:
                         f.write("Geographic Subject Headings (from vocabulary lookup):\n")
@@ -1145,7 +1097,7 @@ class SouthernArchitectVocabularyProcessor:
                     
                     f.write("=" * 60 + "\n")
             
-            print(f"📁 Created page metadata files in: {output_folder}")
+            print(f"Created page metadata files in: {output_folder}")
             return True
             
         except Exception as e:
@@ -1153,105 +1105,117 @@ class SouthernArchitectVocabularyProcessor:
             return False
 
     def create_issue_content_index(self) -> bool:
-        """Create issue content index with geographic entities included."""
+        """Create separate issue content indexes for each unique folder/issue."""
         try:
             # Skip API stats for processing
             data_items = self.json_data[:-1] if self.json_data and 'api_stats' in self.json_data[-1] else self.json_data
             
             if not data_items:
-                print("⚠️  No data items found for issue content index")
+                print("No data items found for issue content index")
                 return False
             
-            # Get folder name from first entry
-            first_entry = data_items[0]
-            folder_name = first_entry.get('folder', 'Unknown')
+            # Group entries by folder/issue
+            issues = {}
+            for entry in data_items:
+                folder_name = entry.get('folder', 'Unknown')
+                if folder_name not in issues:
+                    issues[folder_name] = []
+                issues[folder_name].append(entry)
             
-            # Create filename and path
-            toc_filename = f"{folder_name}_Issue_Content_Index.txt"
-            toc_path = os.path.join(self.folder_path, toc_filename)
+            print(f"Found {len(issues)} unique issues: {list(issues.keys())}")
             
-            with open(toc_path, 'w', encoding='utf-8') as f:
-                f.write(f"{folder_name} Issue Content Index\n")
-                f.write("=" * (len(folder_name) + 22) + "\n\n\n")
+            # Create separate index file for each issue
+            for folder_name, entries in issues.items():
+                # Create filename and path
+                toc_filename = f"{folder_name}_Issue_Index.txt"
+                toc_path = os.path.join(self.folder_path, toc_filename)
+                
+                with open(toc_path, 'w', encoding='utf-8') as f:
+                    f.write(f"ISSUE INDEX: {folder_name}\n")
+                    f.write("=" * (len(f"ISSUE INDEX: {folder_name}")) + "\n\n")
+                    
+                    # Sort entries by page number for logical ordering
+                    sorted_entries = sorted(entries, key=lambda x: x.get('page_number', 0))
+                    
+                    for entry in sorted_entries:
+                        analysis = entry.get('analysis', {})
+                        page_number = entry.get('page_number', 'Unknown')
+                        
+                        # TOC entry (summary)
+                        toc_entry = analysis.get('toc_entry', '').strip()
+                        if not toc_entry or toc_entry.lower() == '[no toc entry]':
+                            toc_entry = "[No summary available]"
+                        
+                        f.write(f"Page {page_number} (Issue: {folder_name}):\n\n{toc_entry}\n\n")
+                        
+                        # Topics
+                        topics = analysis.get('topics', [])
+                        if isinstance(topics, str):
+                            topics = [s.strip() for s in topics.split(',') if s.strip()]
+                        if topics:
+                            f.write("Topics:\n")
+                            for topic in topics:
+                                f.write(f"  - {topic}\n")
+                            f.write("\n")
+                        
+                        # Named Entities
+                        named_entities = analysis.get('named_entities', [])
+                        if isinstance(named_entities, str):
+                            # Handle comma-separated string format
+                            named_entities = [s.strip() for s in named_entities.split(',') if s.strip()]
+                        if named_entities:
+                            f.write("Named Entities:\n")
+                            for entity in named_entities:
+                                f.write(f"  - {entity}\n")
+                            f.write("\n")
 
-                for entry in data_items:
-                    analysis = entry.get('analysis', {})
-                    page_number = entry.get('page_number', 'Unknown')
-                    
-                    # TOC entry (summary)
-                    toc_entry = analysis.get('toc_entry', '').strip()
-                    if not toc_entry or toc_entry.lower() == '[no toc entry]':
-                        toc_entry = "[No summary available]"
-                    
-                    f.write(f"Page {page_number}:\n\n{toc_entry}\n\n")
-                    
-                    # Topics
-                    topics = analysis.get('topics', [])
-                    if isinstance(topics, str):
-                        topics = [s.strip() for s in topics.split(',') if s.strip()]
-                    if topics:
-                        f.write("Topics:\n")
-                        for topic in topics:
-                            f.write(f"  - {topic}\n")
-                        f.write("\n")
-                    
-                    # Named Entities
-                    named_entities = analysis.get('named_entities', [])
-                    if isinstance(named_entities, str):
-                        # Handle comma-separated string format
-                        named_entities = [s.strip() for s in named_entities.split(',') if s.strip()]
-                    if named_entities:
-                        f.write("Named Entities:\n")
-                        for entity in named_entities:
-                            f.write(f"  - {entity}\n")
-                        f.write("\n")
+                        # Geographic Entities
+                        geographic_entities = analysis.get('geographic_entities', [])
+                        if isinstance(geographic_entities, str):
+                            # Handle comma-separated string format
+                            geographic_entities = [s.strip() for s in geographic_entities.split(',') if s.strip()]
+                        if geographic_entities:
+                            f.write("Geographic Entities:\n")
+                            for entity in geographic_entities:
+                                f.write(f"  - {entity}\n")
+                            f.write("\n")
 
-                    # ADDED: Geographic Entities
-                    geographic_entities = analysis.get('geographic_entities', [])
-                    if isinstance(geographic_entities, str):
-                        # Handle comma-separated string format
-                        geographic_entities = [s.strip() for s in geographic_entities.split(',') if s.strip()]
-                    if geographic_entities:
-                        f.write("Geographic Entities:\n")
-                        for entity in geographic_entities:
-                            f.write(f"  - {entity}\n")
-                        f.write("\n")
-
-                    # Subject headings - use final_selected_terms only (LLM selected)
-                    vocabulary_terms = analysis.get('final_selected_terms', [])
-                    if vocabulary_terms:
-                        f.write("Subject Headings (Selected):\n")
-                        for term in vocabulary_terms:
-                            if isinstance(term, dict):
-                                label = term.get('label', '')
-                                uri = term.get('uri', '')
-                                source = term.get('source', '')
-                                f.write(f"  - {label} ({uri}) [{source}]\n")
-                        f.write("\n")
-                    
-                    # ADDED: Geographic Subject Headings (from step 2, not LLM selected)
-                    geo_vocab_results = analysis.get('geographic_vocabulary_search_results', {})
-                    if geo_vocab_results:
-                        f.write("Geographic Subject Headings:\n")
-                        for entity, terms in geo_vocab_results.items():
-                            if terms:
-                                for term in terms:
-                                    if isinstance(term, dict):
-                                        label = term.get('label', '')
-                                        uri = term.get('uri', '')
-                                        source = term.get('source', '')
-                                        f.write(f"  - {label} ({uri}) [{source}]\n")
-                        f.write("\n")
-                    
-                    # Content Warning if present
-                    content_warning = analysis.get('content_warning', '').strip()
-                    if content_warning and content_warning.lower() != 'none':
-                        f.write(f"Content Warning:\n")
-                        f.write(f"  {content_warning}\n")
-                    
-                    f.write("\n")
+                        # Subject headings - use final_selected_terms only (LLM selected)
+                        vocabulary_terms = analysis.get('final_selected_terms', [])
+                        if vocabulary_terms:
+                            f.write("Subject Headings (Selected):\n")
+                            for term in vocabulary_terms:
+                                if isinstance(term, dict):
+                                    label = term.get('label', '')
+                                    uri = term.get('uri', '')
+                                    source = term.get('source', '')
+                                    f.write(f"  - {label} ({uri}) [{source}]\n")
+                            f.write("\n")
+                        
+                        # Geographic Subject Headings 
+                        geo_vocab_results = analysis.get('geographic_vocabulary_search_results', {})
+                        if geo_vocab_results:
+                            f.write("Geographic Subject Headings:\n")
+                            for entity, terms in geo_vocab_results.items():
+                                if terms:
+                                    for term in terms:
+                                        if isinstance(term, dict):
+                                            label = term.get('label', '')
+                                            uri = term.get('uri', '')
+                                            source = term.get('source', '')
+                                            f.write(f"  - {label} ({uri}) [{source}]\n")
+                            f.write("\n")
+                        
+                        # Content Warning if present
+                        content_warning = analysis.get('content_warning', '').strip()
+                        if content_warning and content_warning.lower() != 'none':
+                            f.write(f"Content Warning:\n")
+                            f.write(f"  {content_warning}\n")
+                        
+                        f.write("\n" + "-" * 50 + "\n\n")
+                
+                print(f"Created issue content index: {toc_path} ({len(entries)} pages)")
             
-            print(f"📋 Created issue content index: {toc_path}")
             return True
             
         except Exception as e:
@@ -1260,17 +1224,17 @@ class SouthernArchitectVocabularyProcessor:
     
     def run(self) -> bool:
         """Main execution method."""
-        print(f"\n🎯 SOUTHERN ARCHITECT STEP 3 - VOCABULARY SELECTION & CLEAN OUTPUT")
-        print(f"📁 Processing folder: {self.folder_path}")
-        print(f"🤖 Model: {self.model_name}")
-        print(f"📍 Note: Geographic entities are included in outputs but NOT sent to LLM for selection")
+        print(f"\nSOUTHERN ARCHITECT STEP 3 - VOCABULARY SELECTION")
+        print(f"Processing folder: {self.folder_path}")
+        print(f"Model: {self.model_name}")
+        print(f"Note: Geographic entities are included in outputs but NOT sent to LLM for selection")
         print("-" * 50)
         
         # Detect workflow type
         if not self.detect_workflow_type():
             return False
         
-        print(f"🔍 Detected workflow type: {self.workflow_type.upper()}")
+        print(f"Detected workflow type: {self.workflow_type.upper()}")
         
         # Load JSON data
         if not self.load_json_data():
@@ -1279,23 +1243,23 @@ class SouthernArchitectVocabularyProcessor:
         # Find entries with vocabulary terms
         entries_with_vocab = self.find_entries_with_vocabulary()
         if not entries_with_vocab:
-            print("⚠️  No entries with vocabulary terms found")
+            print("No entries with vocabulary terms found")
             return False
         
-        print(f"📚 Found {len(entries_with_vocab)} entries with vocabulary terms")
+        print(f"Found {len(entries_with_vocab)} entries with vocabulary terms")
         
         # Show model pricing info
         model_info = get_model_info(self.model_name)
         if model_info:
-            print(f"💰 Pricing: ${model_info['input_per_1k']:.5f}/1K input, ${model_info['output_per_1k']:.5f}/1K output")
+            print(f"Pricing: ${model_info['input_per_1k']:.5f}/1K input, ${model_info['output_per_1k']:.5f}/1K output")
         
         # Process vocabulary selection
-        print(f"\n🔄 Selecting best topic vocabulary terms for each page...")
-        print(f"📍 Geographic entities will be preserved but not processed by LLM")
+        print(f"\nSelecting best topic vocabulary terms for each page...")
+        print(f"Geographic entities will be preserved but not processed by LLM")
         selection_results = self.process_vocabulary_selection(entries_with_vocab)
         
         if not selection_results:
-            print("❌ Vocabulary selection failed")
+            print("Vocabulary selection failed")
             return False
         
         # Update JSON data with selected terms only
@@ -1351,31 +1315,28 @@ class SouthernArchitectVocabularyProcessor:
         }
     )
         
-        # Final summary
-        total_selected = sum(len(result['selection_result'].get('selected_terms', [])) 
-                           for result in selection_results.values())
-        entries_with_selections = sum(1 for result in selection_results.values() 
-                                    if result['selection_result'].get('selected_terms'))
+        # Show final summary
+        total_selected = sum(len(result['selection_result'].get('selected_terms', [])) for result in selection_results.values())
+        entries_with_selections = sum(1 for result in selection_results.values() if result['selection_result'].get('selected_terms'))
         
-        print(f"\n🎉 VOCABULARY SELECTION COMPLETED!")
-        print(f"✅ Entries processed: {len(selection_results)}")
-        print(f"📚 Total vocabulary terms selected: {total_selected}")
-        print(f"📊 Entries with selections: {entries_with_selections}/{len(selection_results)}")
-        print(f"📈 Selection rate: {(entries_with_selections/len(selection_results)*100):.1f}%")
-        print(f"🎯 Total tokens: {api_stats.total_input_tokens + api_stats.total_output_tokens:,}")
-        print(f"💰 Estimated cost: ${estimated_cost:.4f}")
-        print(f"🌍 Geographic entities preserved in outputs (not processed by LLM)")
-        print("\n📁 GENERATED FILES:")
-        print(f"  📄 Updated Excel file: {self.excel_path}")
-        print(f"  📄 Updated JSON file: {os.path.join(self.folder_path, f'{self.workflow_type}_workflow.json')}")
-        print(f"  📋 Vocabulary mapping report: {os.path.join(self.folder_path, 'vocabulary_mapping_report.txt')}")
-        print(f"  📁 Page metadata folder: {os.path.join(self.folder_path, 'page_level_metadata')}")
-        # Get folder name for TOC filename
-        first_entry = self.json_data[0] if self.json_data else {}
-        folder_name = first_entry.get('folder', 'Unknown')
-        toc_filename = f"{folder_name}_Issue_Content_Index.txt"
-        print(f"  📋 Issue content index: {os.path.join(self.folder_path, toc_filename)}")
-        
+        print("\n" + "=" * 50)
+        print(f"FINAL SUMMARY:")
+        print(f"\nSTEP 3 COMPLETE: Selected vocabulary terms in {os.path.basename(self.folder_path)}")
+        print(f"Page metadata files, issue indexes, updated Excel/JSON, and vocabulary report created")
+        print(f"Entries processed: {len(selection_results)}")
+        print(f"Total vocabulary terms selected: {total_selected}")
+        print(f"Entries with selections: {entries_with_selections}/{len(selection_results)}")
+        print(f"Selection rate: {(entries_with_selections/len(selection_results)*100):.1f}%")
+        print(f"Total tokens: {api_stats.total_input_tokens + api_stats.total_output_tokens:,}")
+        print(f"Estimated cost: ${estimated_cost:.4f}")
+
+        # Show which issue content index files were created
+        data_items = self.json_data[:-1] if self.json_data and 'api_stats' in self.json_data[-1] else self.json_data
+        unique_issues = set(entry.get('folder', 'Unknown') for entry in data_items)
+        for issue in sorted(unique_issues):
+            toc_filename = f"{issue}_Issue_Index.txt"
+            print(f"  Issue index: {os.path.join(self.folder_path, toc_filename)}")
+
         return True
 
 def find_newest_folder(base_directory: str) -> Optional[str]:
@@ -1406,23 +1367,23 @@ def main():
     
     if args.folder:
         if not os.path.exists(args.folder):
-            print(f"❌ Folder not found: {args.folder}")
+            print(f"Folder not found: {args.folder}")
             return 1
         folder_path = args.folder
     else:
         # Default to newest folder if no specific folder provided
         folder_path = find_newest_folder(base_output_dir)
         if not folder_path:
-            print(f"❌ No folders found in: {base_output_dir}")
+            print(f"No folders found in: {base_output_dir}")
             return 1
-        print(f"🔄 Auto-selected newest folder: {os.path.basename(folder_path)}")
+        print(f"Auto-selected newest folder: {os.path.basename(folder_path)}")
     
     # Create and run the processor
     processor = SouthernArchitectVocabularyProcessor(folder_path, args.model)
     success = processor.run()
     
     if not success:
-        print("❌ Vocabulary selection failed")
+        print("Vocabulary selection failed")
         return 1
     
     return 0

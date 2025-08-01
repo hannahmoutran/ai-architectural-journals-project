@@ -172,7 +172,7 @@ class SouthernArchitectWorkflowRunner:
     def run_step2(self) -> bool:
         """Run Step 2: Multi-Vocabulary Enhancement."""
         step_name = "STEP 2: MULTI-VOCABULARY ENHANCEMENT"
-        step_description = "Add LCSH, FAST, Getty AAT/TGN controlled vocabulary terms with comprehensive API logging"
+        step_description = "Add LCSH, FAST, Getty AAT and TGN controlled vocabulary terms with API logging"
         
         self.announce_step(step_name, step_description)
         
@@ -187,7 +187,7 @@ class SouthernArchitectWorkflowRunner:
     def run_step3(self, model: str = "gpt-4o-mini-2024-07-18") -> bool:
         """Run Step 3: AI-Powered Vocabulary Selection."""
         step_name = "STEP 3: AI-POWERED VOCABULARY SELECTION"
-        step_description = "Use AI to select optimal vocabulary terms and generate clean metadata outputs"
+        step_description = "Use AI to select best vocabulary terms and generate clean metadata outputs"
         
         self.announce_step(step_name, step_description)
         
@@ -202,7 +202,7 @@ class SouthernArchitectWorkflowRunner:
     def run_step4(self, model: str = "gpt-4o-2024-08-06") -> bool:
         """Run Step 4: Issue-Level Synthesis."""
         step_name = "STEP 4: ISSUE-LEVEL SYNTHESIS"
-        step_description = "Create scholarly issue description and select top 10 subject headings with geographic terms"
+        step_description = "Create issue-level metadata file with subject headings and geographic terms"
         
         self.announce_step(step_name, step_description)
         
@@ -217,7 +217,7 @@ class SouthernArchitectWorkflowRunner:
     def run_step5(self) -> bool:
         """Run Step 5: Entity Authority File Creation."""
         step_name = "STEP 5: ENTITY AUTHORITY FILE CREATION"
-        step_description = "Build comprehensive authority file for named entities with type classification"
+        step_description = "Build authority file for named entities with type classification"
         
         self.announce_step(step_name, step_description)
         
@@ -238,12 +238,12 @@ class SouthernArchitectWorkflowRunner:
                 missing_scripts.append(script_path)
         
         if missing_scripts:
-            print("❌ Missing required scripts:")
+            print(" Missing required scripts:")
             for script in missing_scripts:
                 print(f"   - {script}")
             return False
         
-        print("✅ All required scripts found")
+        print(" All required scripts found")
         return True
     
     def run_complete_workflow(self, resume: bool = False, 
@@ -258,16 +258,14 @@ class SouthernArchitectWorkflowRunner:
         if not self.check_dependencies():
             return False
         
-        print("🔍 WORKFLOW OVERVIEW:")
-        print("Step 1: Extract metadata from source files (with checkpoints & batch processing)")
+        print(" WORKFLOW OVERVIEW:")
+        print("Step 1: Extract metadata from source files (with batch processing if applicable)")
         print("Step 2: Enhance with controlled vocabulary terms (LCSH, FAST, Getty)")
         print("Step 3: AI-powered selection of optimal vocabulary terms")
-        print("Step 4: Create issue-level description and top subject headings")
+        print("Step 4: Create issue-level description")
         print("Step 5: Build entity authority file with type classification")
-        print()
-        print("🤖 All steps will run automatically - you can step away!")
-        print("💡 Step 1 supports resume functionality with Ctrl+C")
-        print("📊 Comprehensive logging and cost tracking throughout")
+        print(" All steps will run automatically - you can step away!")
+        print(" Comprehensive logging and cost tracking throughout")
         print()
         
         # Track overall success
@@ -275,12 +273,12 @@ class SouthernArchitectWorkflowRunner:
         failed_steps = []
         start_time = datetime.now()
         
-        print(f"🚀 Starting complete workflow at {start_time.strftime('%H:%M:%S')}")
+        print(f" Starting complete workflow at {start_time.strftime('%H:%M:%S')}")
         print("="*70)
         
         # Run Step 1
         if not self.run_step1(resume, step1_model):
-            print("❌ Step 1 failed - stopping workflow")
+            print(" Step 1 failed - stopping workflow")
             return False
         
         # Run Step 2
@@ -308,33 +306,33 @@ class SouthernArchitectWorkflowRunner:
         total_duration = end_time - start_time
         
         print("\n" + "="*70)
-        print("🎉 WORKFLOW COMPLETION SUMMARY")
+        print(" WORKFLOW COMPLETION SUMMARY")
         print("="*70)
-        print(f"⏱️  Total runtime: {total_duration}")
-        print(f"🕐 Started: {start_time.strftime('%H:%M:%S')}")
-        print(f"🕐 Finished: {end_time.strftime('%H:%M:%S')}")
+        print(f"  Total runtime: {total_duration}")
+        print(f" Started: {start_time.strftime('%H:%M:%S')}")
+        print(f" Finished: {end_time.strftime('%H:%M:%S')}")
         print()
         
         if overall_success:
-            print("✅ All steps completed successfully!")
-            print("🎊 Your Southern Architect workflow is complete!")
+            print(" All steps completed successfully!")
+            print(" Your Southern Architect workflow is complete!")
         else:
-            print(f"⚠️  Workflow completed with {len(failed_steps)} failed step(s):")
+            print(f"  Workflow completed with {len(failed_steps)} failed step(s):")
             for step in failed_steps:
-                print(f"   ❌ {step}")
+                print(f"    {step}")
             print("\n💡 You can re-run individual steps if needed")
         
         if self.output_folder:
-            print(f"\n📁 Final output folder: {self.output_folder}")
+            print(f"\n Final output folder: {self.output_folder}")
             print("📄 Generated files include:")
-            print("   ✅ Excel and JSON workflow files with selected vocabulary terms")
-            print("   ✅ Page-level metadata files with geographic entities")
-            print("   ✅ Issue summary with scholarly description")
-            print("   ✅ Table of contents with comprehensive metadata")
-            print("   ✅ Vocabulary mapping reports with checkmarks")
-            print("   ✅ Entity authority file with type classification")
-            print("   ✅ Processing reports and comprehensive API logs")
-            print("   ✅ Cost tracking and token usage logs")
+            print("   Excel and JSON workflow files with selected vocabulary terms")
+            print("   Page-level metadata files with geographic entities")
+            print("   Issue summary with scholarly description")
+            print("   Table of contents with comprehensive metadata")
+            print("   Vocabulary mapping reports with checkmarks")
+            print("   Entity authority file with type classification")
+            print("   Processing reports and comprehensive API logs")
+            print("   Cost tracking and token usage logs")
         
         print("\n" + "="*70)
         
@@ -354,9 +352,9 @@ Examples:
   python southern_architect_run.py --step3-model gpt-4o-2024-08-06 --step4-model gpt-4o-mini-2024-07-18
 
 New Features:
-  - Step 1: Checkpoint/resume support, batch processing, enhanced JSON parsing
-  - Step 2: Multi-vocabulary enhancement (LCSH, FAST, Getty) with comprehensive API logging
-  - Step 3: AI-powered vocabulary selection with clean output generation
+  - Step 1: Initial metadata extraction with batch processing
+  - Step 2: Multi-vocabulary enhancement (LCSH, FAST, Getty) with API logging
+  - Step 3: AI-powered vocabulary selection
   - Step 4: Issue-level synthesis with geographic terms
   - Step 5: Entity authority file creation with type classification
   - Comprehensive cost tracking and token logging throughout

@@ -1,5 +1,5 @@
 # southern_architect_entity_authority.py
-# Create local authority file for Southern Architect named entities
+# Create local authority file for Southern Architect named entities with fuzzy matching
 
 import os
 import json
@@ -10,13 +10,30 @@ from collections import defaultdict
 import re
 import argparse
 
+# Fuzzy matching imports - try rapidfuzz first (faster), fallback to fuzzywuzzy
+try:
+    from rapidfuzz import fuzz, process
+    FUZZY_LIB = "rapidfuzz"
+except ImportError:
+    try:
+        from fuzzywuzzy import fuzz, process
+        FUZZY_LIB = "fuzzywuzzy"
+    except ImportError:
+        print("Warning: Neither rapidfuzz nor fuzzywuzzy found. Install one for fuzzy matching:")
+        print("pip install rapidfuzz  # recommended")
+        print("# or")
+        print("pip install fuzzywuzzy python-levenshtein")
+        FUZZY_LIB = None
+
 class EntityAuthority:
-    """Build authority records for Southern Architect entities."""
+    """Build authority records for Southern Architect entities with fuzzy matching."""
     
-    def __init__(self, folder_path: str):
+    def __init__(self, folder_path: str, similarity_threshold: int = 85):
         self.folder_path = folder_path
         self.workflow_type = None
         self.json_data = None
+        self.similarity_threshold = similarity_threshold
+        self.entity_clusters = {}  # Maps normalized names to canonical forms
         
     def detect_workflow_type(self) -> bool:
         """Detect workflow type."""
@@ -47,6 +64,41 @@ class EntityAuthority:
             logging.error(f"Error loading JSON data: {e}")
             return False
     
+    def normalize_entity_name(self, name: str) -> str:
+        """Basic normalization for entity names."""
+        # Remove extra whitespace and punctuation
+        normalized = re.sub(r'\s+', ' ', name.strip())
+        
+        # Handle common abbreviations and variations for better matching
+        normalized = normalized.replace('&', 'and')
+        normalized = re.sub(r'\bCo\.\b', 'Company', normalized, flags=re.IGNORECASE)
+        normalized = re.sub(r'\bInc\.\b', 'Incorporated', normalized, flags=re.IGNORECASE)
+        
+        return normalized
+    
+    def find_similar_entity(self, entity_name: str, existing_entities: List[str]) -> Optional[str]:
+        """Find if entity is similar to existing ones using fuzzy matching."""
+        if not FUZZY_LIB or not existing_entities:
+            return None
+        
+        normalized_name = self.normalize_entity_name(entity_name)
+        normalized_existing = [self.normalize_entity_name(e) for e in existing_entities]
+        
+        # Find best match
+        match = process.extractOne(
+            normalized_name, 
+            normalized_existing, 
+            scorer=fuzz.ratio,
+            score_cutoff=self.similarity_threshold
+        )
+        
+        if match:
+            # Return the original entity name that corresponds to the match
+            match_index = normalized_existing.index(match[0])
+            return existing_entities[match_index]
+        
+        return None
+    
     def parse_typed_entity(self, entity_str: str) -> Tuple[str, str]:
         """Parse entity string to extract name and type.
         
@@ -71,7 +123,7 @@ class EntityAuthority:
         entity_lower = entity.lower()
         
         # Geographic locations (common suffixes)
-        if any(suffix in entity for suffix in [', Tenn.', ', Md.', ', Va.', ', Ga.', ', Ala.', ', N. C.', ', Fla.', ', S. C.', ', Tex.']):
+        if any(suffix in entity for suffix in [', Tenn.', ', Md.', ', Va.', ', Ga.', ', Ala.', ', N. C.', ', Fla.', ', S. C.', ', Tex.', ', Miss.', ', Ky.', ', La.', ', Ark.', ', Mo.', ', Okla.', ', N. J.', ', N. Y.', ', Pa.', ', D. C.', ' (location)', ', Tx.', ', Calif.', ', Cal.']):
             return 'location'
         
         # Residences
@@ -96,20 +148,63 @@ class EntityAuthority:
         
         return 'unknown'
     
+    def cluster_similar_entities(self, raw_entities: List[str]) -> Dict[str, List[str]]:
+        """Group similar entities using fuzzy matching."""
+        if not FUZZY_LIB:
+            # If no fuzzy matching library, treat each entity as unique
+            return {entity: [entity] for entity in raw_entities}
+        
+        clusters = {}
+        processed = set()
+        
+        print(f"Clustering {len(raw_entities)} entities with similarity threshold {self.similarity_threshold}%...")
+        
+        for entity in raw_entities:
+            if entity in processed:
+                continue
+                
+            # Find all similar entities
+            similar_entities = [entity]
+            processed.add(entity)
+            
+            for other_entity in raw_entities:
+                if other_entity in processed:
+                    continue
+                    
+                # Check similarity
+                similarity = fuzz.ratio(
+                    self.normalize_entity_name(entity),
+                    self.normalize_entity_name(other_entity)
+                )
+                
+                if similarity >= self.similarity_threshold:
+                    similar_entities.append(other_entity)
+                    processed.add(other_entity)
+            
+            # Use the most common or longest form as canonical
+            canonical = max(similar_entities, key=lambda x: (raw_entities.count(x), len(x)))
+            clusters[canonical] = similar_entities
+        
+        # Show clustering results
+        merged_count = sum(len(cluster) - 1 for cluster in clusters.values() if len(cluster) > 1)
+        if merged_count > 0:
+            print(f"   Merged {merged_count} entity variations into {len(clusters)} unique entities")
+            
+            # Show some examples of merges
+            merge_examples = [(canonical, cluster) for canonical, cluster in clusters.items() if len(cluster) > 1][:5]
+            for canonical, cluster in merge_examples:
+                print(f"   • '{canonical}' ← {cluster[1:]}")
+        
+        return clusters
+    
     def extract_all_entities(self) -> Dict[str, Dict]:
-        """Extract all named entities and analyze patterns."""
-        entity_records = defaultdict(lambda: {
-            'appearances': [],
-            'contexts': [],
-            'entity_type': 'unknown',
-            'locations': set(),
-            'time_periods': set(),
-            'original_forms': set()  # Track different ways entity appears
-        })
+        """Extract all named entities and analyze patterns with fuzzy matching."""
+        raw_entity_data = []  # Store raw entities with their contexts
         
         # Skip API stats
         data_items = self.json_data[:-1] if self.json_data and 'api_stats' in self.json_data[-1] else self.json_data
         
+        # First pass: collect all raw entities
         for item in data_items:
             if 'analysis' in item:
                 analysis = item['analysis']
@@ -130,31 +225,68 @@ class EntityAuthority:
                     if not entity_str or len(entity_str.strip()) < 2:
                         continue
                     
-                    # Parse the typed entity
                     entity_name, entity_type = self.parse_typed_entity(entity_str)
-                    
                     if not entity_name:
                         continue
                     
-                    record = entity_records[entity_name]
-                    record['appearances'].append(f"{folder}_page{page}")
-                    record['contexts'].append(context)
-                    record['original_forms'].add(entity_str.strip())
-                    
-                    # Set entity type (use the parsed type or keep existing if already set)
-                    if record['entity_type'] == 'unknown' or entity_type != 'unknown':
-                        record['entity_type'] = entity_type
-                    
-                    # Extract year from folder name
-                    year_match = re.search(r'(\d{4})', folder)
-                    if year_match:
-                        record['time_periods'].add(year_match.group(1))
+                    raw_entity_data.append({
+                        'original_str': entity_str.strip(),
+                        'entity_name': entity_name,
+                        'entity_type': entity_type,
+                        'folder': folder,
+                        'page': page,
+                        'context': context
+                    })
+        
+        # Get all unique entity names for clustering
+        all_entity_names = [item['entity_name'] for item in raw_entity_data]
+        entity_clusters = self.cluster_similar_entities(all_entity_names)
+        
+        # Second pass: group by canonical entity names
+        entity_records = defaultdict(lambda: {
+            'appearances': [],
+            'contexts': [],
+            'entity_type': 'unknown',
+            'locations': set(),
+            'time_periods': set(),
+            'original_forms': set(),
+            'clustered_variants': set()
+        })
+        
+        for item in raw_entity_data:
+            entity_name = item['entity_name']
+            
+            # Find canonical name for this entity
+            canonical_name = None
+            for canonical, cluster in entity_clusters.items():
+                if entity_name in cluster:
+                    canonical_name = canonical
+                    break
+            
+            if not canonical_name:
+                canonical_name = entity_name
+            
+            record = entity_records[canonical_name]
+            record['appearances'].append(f"{item['folder']}_page{item['page']}")
+            record['contexts'].append(item['context'])
+            record['original_forms'].add(item['original_str'])
+            record['clustered_variants'].add(entity_name)
+            
+            # Set entity type (use the parsed type or keep existing if already set)
+            if record['entity_type'] == 'unknown' or item['entity_type'] != 'unknown':
+                record['entity_type'] = item['entity_type']
+            
+            # Extract year from folder name
+            year_match = re.search(r'(\d{4})', item['folder'])
+            if year_match:
+                record['time_periods'].add(year_match.group(1))
         
         # Convert sets to lists for JSON serialization and calculate frequency
         for entity, record in entity_records.items():
             record['locations'] = list(record['locations'])
             record['time_periods'] = list(record['time_periods'])
             record['original_forms'] = list(record['original_forms'])
+            record['clustered_variants'] = list(record['clustered_variants'])
             record['frequency'] = len(record['appearances'])
         
         return dict(entity_records)
@@ -171,6 +303,11 @@ class EntityAuthority:
                     "source": "Southern Architect and Building News (1892-1931)",
                     "total_entities": len(entity_records),
                     "extraction_method": "Named Entity Recognition via GPT-4 with Type Classification",
+                    "fuzzy_matching": {
+                        "enabled": FUZZY_LIB is not None,
+                        "library": FUZZY_LIB,
+                        "similarity_threshold": self.similarity_threshold
+                    },
                     "entity_types": list(set(record['entity_type'] for record in entity_records.values()))
                 },
                 "entities": entity_records,
@@ -193,7 +330,11 @@ class EntityAuthority:
             'by_type': defaultdict(int),
             'by_frequency': defaultdict(int),
             'by_decade': defaultdict(int),
-            'type_examples': defaultdict(list)
+            'type_examples': defaultdict(list),
+            'clustering_stats': {
+                'entities_with_variants': 0,
+                'total_variants_merged': 0
+            }
         }
         
         for entity, record in entity_records.items():
@@ -205,6 +346,11 @@ class EntityAuthority:
             # Add examples for each type (up to 3)
             if len(stats['type_examples'][entity_type]) < 3:
                 stats['type_examples'][entity_type].append(entity)
+            
+            # Clustering statistics
+            if len(record['clustered_variants']) > 1:
+                stats['clustering_stats']['entities_with_variants'] += 1
+                stats['clustering_stats']['total_variants_merged'] += len(record['clustered_variants']) - 1
             
             # Frequency buckets
             if frequency == 1:
@@ -226,7 +372,8 @@ class EntityAuthority:
             'by_type': dict(stats['by_type']),
             'by_frequency': dict(stats['by_frequency']),
             'by_decade': dict(stats['by_decade']),
-            'type_examples': dict(stats['type_examples'])
+            'type_examples': dict(stats['type_examples']),
+            'clustering_stats': stats['clustering_stats']
         }
     
     def create_human_readable_report(self, entity_records: Dict) -> bool:
@@ -238,10 +385,21 @@ class EntityAuthority:
                 f.write("SOUTHERN ARCHITECT ENTITY AUTHORITY REPORT\n")
                 f.write("=" * 50 + "\n\n")
                 f.write(f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
-                f.write(f"Total Entities: {len(entity_records)}\n\n")
+                f.write(f"Total Entities: {len(entity_records)}\n")
+                f.write(f"Fuzzy Matching: {'Enabled' if FUZZY_LIB else 'Disabled'}")
+                if FUZZY_LIB:
+                    f.write(f" ({FUZZY_LIB}, threshold: {self.similarity_threshold}%)")
+                f.write("\n\n")
                 
                 # Show statistics summary
                 stats = self.generate_statistics(entity_records)
+                
+                if FUZZY_LIB and stats['clustering_stats']['entities_with_variants'] > 0:
+                    f.write("FUZZY MATCHING RESULTS:\n")
+                    f.write("-" * 25 + "\n")
+                    f.write(f"  Entities with variants: {stats['clustering_stats']['entities_with_variants']}\n")
+                    f.write(f"  Total variants merged: {stats['clustering_stats']['total_variants_merged']}\n\n")
+                
                 f.write("ENTITY TYPE BREAKDOWN:\n")
                 f.write("-" * 25 + "\n")
                 for entity_type, count in sorted(stats['by_type'].items(), key=lambda x: x[1], reverse=True):
@@ -266,6 +424,11 @@ class EntityAuthority:
                         f.write(f"    Frequency: {record['frequency']} appearances\n")
                         f.write(f"    Time periods: {', '.join(sorted(record['time_periods']))}\n")
                         
+                        # Show clustered variants if any
+                        if len(record['clustered_variants']) > 1:
+                            variants = [v for v in record['clustered_variants'] if v != entity]
+                            f.write(f"    Variants: {', '.join(variants)}\n")
+                        
                         # Show different forms if multiple
                         if len(record['original_forms']) > 1:
                             f.write(f"    Forms: {', '.join(record['original_forms'])}\n")
@@ -275,7 +438,7 @@ class EntityAuthority:
                             f.write(f" ... (+{len(record['appearances'])-5} more)")
                         f.write("\n\n")
                 
-            print(f"📋 Created human-readable report: {report_path}")
+            print(f"📄 Created human-readable report: {report_path}")
             return True
             
         except Exception as e:
@@ -284,29 +447,33 @@ class EntityAuthority:
     
     def run(self) -> bool:
         """Main execution method."""
-        print(f"\n🎯 SOUTHERN ARCHITECT ENTITY AUTHORITY BUILDER")
-        print(f"📁 Processing folder: {self.folder_path}")
+        print(f"\nSOUTHERN ARCHITECT ENTITY AUTHORITY BUILDER")
+        print(f"Processing folder: {self.folder_path}")
+        if FUZZY_LIB:
+            print(f"Fuzzy matching: Enabled ({FUZZY_LIB}, threshold: {self.similarity_threshold}%)")
+        else:
+            print("Fuzzy matching: Disabled (install rapidfuzz or fuzzywuzzy)")
         print("-" * 50)
         
         if not self.detect_workflow_type():
-            print("❌ Could not detect workflow type")
+            print("Could not detect workflow type")
             return False
         
         print(f"🔍 Detected workflow type: {self.workflow_type.upper()}")
         
         if not self.load_json_data():
-            print("❌ Could not load JSON data")
+            print("Could not load JSON data")
             return False
         
-        # Extract all entities
-        print("🔄 Extracting and analyzing typed named entities...")
+        # Extract all entities with fuzzy matching
+        print("Extracting and analyzing typed named entities with fuzzy matching...")
         entity_records = self.extract_all_entities()
         
         if not entity_records:
-            print("⚠️  No named entities found")
+            print("No named entities found")
             return False
         
-        print(f"📊 Found {len(entity_records)} unique entities")
+        print(f"Found {len(entity_records)} unique entities after clustering")
         
         # Show type breakdown
         type_counts = defaultdict(int)
@@ -323,9 +490,8 @@ class EntityAuthority:
         if not self.create_human_readable_report(entity_records):
             return False
         
-        print(f"\n🎉 ENTITY AUTHORITY BUILDING COMPLETED!")
-        print(f"📋 JSON authority file: southern_architect_entity_authority.json")
-        print(f"📋 Human-readable report: entity_authority_report.txt")
+        print(f"\n✅ STEP 5 COMPLETE: Built entity authority in {os.path.basename(self.folder_path)}")
+        print(f"Entity authority JSON and human-readable report created with fuzzy matching")
         
         return True
     
@@ -346,9 +512,10 @@ def find_newest_folder(base_directory: str) -> Optional[str]:
     return os.path.join(base_directory, folders[0])
 
 def main():
-    parser = argparse.ArgumentParser(description='Build entity authority file for Southern Architect with typed entities')
+    parser = argparse.ArgumentParser(description='Build entity authority file for Southern Architect with fuzzy matching')
     parser.add_argument('--folder', help='Specific folder path to process')
     parser.add_argument('--newest', action='store_true', help='Process the newest folder in the output directory (default: True if no folder specified)')
+    parser.add_argument('--threshold', type=int, default=85, help='Fuzzy matching similarity threshold (default: 85)')
     args = parser.parse_args()
     
     # Default base directory for Southern Architect output folders
@@ -356,18 +523,18 @@ def main():
     
     if args.folder:
         if not os.path.exists(args.folder):
-            print(f"❌ Folder not found: {args.folder}")
+            print(f"Folder not found: {args.folder}")
             return 1
         folder_path = args.folder
     else:
         # Default to newest folder if no specific folder provided
         folder_path = find_newest_folder(base_output_dir)
         if not folder_path:
-            print(f"❌ No folders found in: {base_output_dir}")
+            print(f"No folders found in: {base_output_dir}")
             return 1
-        print(f"🔄 Auto-selected newest folder: {os.path.basename(folder_path)}")
+        print(f"Auto-selected newest folder: {os.path.basename(folder_path)}")
 
-    builder = EntityAuthority(folder_path)
+    builder = EntityAuthority(folder_path, similarity_threshold=args.threshold)
     success = builder.run()
     
     return 0 if success else 1

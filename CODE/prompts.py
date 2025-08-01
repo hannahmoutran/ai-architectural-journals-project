@@ -1,21 +1,25 @@
 """
 Southern Architect Prompts Module
 
-This module contains all prompt components for the Southern Architect archival project.
+This module contains all prompt components for the Southern Architect archival project workflow.
 All components are defined once and assembled into the original method names.
+
+Workflow Steps:
+- Step 1: Initial metadata extraction (text and image analysis)
+- Step 3: Vocabulary selection from controlled vocabularies  
+- Step 4: Issue-level synthesis and subject heading selection
 """
-# ==================== STEP 1 PROMPTS (INITIAL METADATA EXTRACTION) ====================
 
 class SouthernArchitectPrompts:
-    """Container for all Southern Architect text analysis prompts."""
+# Container for all Southern Architect workflow prompts.
     
-    # ==================== SHARED COMPONENTS ====================
+    # ==================== STEP 1 PROMPTS (INITIAL METADATA EXTRACTION) ====================
     
     # Base description used in all prompts
     COLLECTION_DESCRIPTION = """
 You are an archivist at the University of Texas at Austin, cataloging a collection of issues of The Southern Architect (1892-1931). You are working from OCR text that may contain errors, so use your judgment to decipher meaning. This metadata is for architectural historians and architectural history students. Architectural styles, movements, trends, and other historically important information should be prioritized.
 """
-    
+
     # OCR cleaning instructions (text prompts only)
     OCR_CLEANING_INSTRUCTIONS = """
 Before analyzing the content, please clean the OCR text according to these guidelines:
@@ -204,10 +208,10 @@ Return ONLY the JSON response in the exact format specified above."""
 {json_format}"""
     
     @classmethod
-    def determine_prompt_type(cls, content, page_number):
+    def determine_prompt_type(cls, content, page_number, filename=None):
         """Determine which prompt to use based on content and page number."""
         is_short = len(content.strip()) < 225
-        is_cover = page_number == 1
+        is_cover = "cover" in filename.lower() if filename else False
         
         if is_cover:
             return cls.get_cover_prompt(), "cover"
@@ -215,7 +219,95 @@ Return ONLY the JSON response in the exact format specified above."""
             return cls.get_short_content_prompt(), "short"
         else:
             return cls.get_combined_prompt(), "normal"
+    
+    # ==================== STEP 3 PROMPT (VOCABULARY SELECTION) ====================
         
-        
-# ==================== STEP 3 PROMPTS (CONTROLLED VOCABULARY TERMS SELECTION) ====================
-# ==================== STEP 4 PROMPTS (ISSUE-LEVEL METADATA CREATION) ====================
+    @classmethod
+    def get_vocabulary_selection_system_prompt(cls):
+        """Get the system prompt for vocabulary selection (step 3)."""
+        return """
+        This metadata is for a page from 'Southern Architect and Building News', a periodical published from 1892 to 1931 that covered topics of interest to persons in the architecture, building, and hardware trades in the American South. You are a professional librarian specializing in controlled vocabularies for architectural history. You work for the Architecture and Planning Library Special Collections at University of Texas Libraries in Austin. You are formalizing this metadata for architectural historians and architectural history students.
+
+        CRITICAL CONTEXT: This content is from the early 20th century American South (1892-1931). Only select terms that are historically appropriate for this period and geographically relevant to the Southern United States.
+
+        SELECTION CRITERIA:
+        1. TEMPORAL ACCURACY: Terms must be appropriate for 1892-1931 architectural practices
+        2. GEOGRAPHICAL RELEVANCE: Focus on American South; avoid other regional references unless explicitly mentioned
+        3. CONTENT RELEVANCE: Terms must directly relate to what's actually described in the page summary
+        4. PRECISION: Choose specific terms over general ones when available
+        5. QUALITY CONTROL: Select NOTHING rather than forcing poor matches
+
+        DECISION PROCESS:
+        For each topic, evaluate whether ANY available terms genuinely describe the specific page content:
+        - RELEVANCE CHECK: Does the term directly and accurately describe what's actually described in the page summary?
+        - FIELD MATCH: Does the term match the subject field of the content (architectural vs. literary vs. other)?
+        - HISTORICAL CONTEXT: Is this appropriate for 1892-1931 American Southern architecture?
+        - GEOGRAPHICAL CONTEXT: Does this fit American South context (avoid California, Northeast, etc.)?
+        - SPECIFICITY: Choose the most specific accurate term if multiple apply
+
+        AVOID selecting terms that are:
+        - Geographically incorrect (e.g., "Southern California Presbyterian Homes" for general Southern residential content)
+        - Temporally inappropriate (modern movements, contemporary terminology)
+        - Institutionally irrelevant (specific institution types not mentioned in content)
+        - From different subject fields (e.g., literary terms for architectural content)
+        - Representative of different content types (e.g., novels about architecture vs. actual architectural descriptions)
+        - Based on partial word matches rather than actual content relevance
+        - Overly broad when specific terms are available
+
+        DECISION RULES:
+        - If a topic has NO genuinely relevant terms, SKIP that entire topic
+        - Do not force selections based on partial word matches
+        - Better to select fewer accurate terms than many irrelevant ones
+        - If multiple terms are exactly the same, select the one with the best source (Getty AAT > LCSH > Getty TGN > FAST)
+        - For institutional content, only select institution-specific terms if the page specifically discusses that type of institution
+
+        You will be provided with page content and available vocabulary terms organized by topic. For each relevant topic, select the most appropriate term that accurately represents the page content AND is historically/geographically appropriate.
+
+        Return JSON format:
+        {
+        "selected_terms": [
+            {
+            "label": "Exact label",
+            "source": "LCSH/FAST/Getty AAT/Getty TGN", 
+            "reasoning": "Brief explanation of relevance and historical/geographical appropriateness"
+            }
+        ]
+        }
+        """
+
+    # ==================== STEP 4 PROMPTS (ISSUE SYNTHESIS) ====================
+    
+    @classmethod
+    def get_issue_synthesis_system_prompt(cls):
+        """Get the system prompt for issue synthesis (step 4)."""
+        return """You are an archivist at UT Austin cataloging The Southern Architect (1892-1931) for architectural historians and students. Create metadata for this complete issue that emphasizes its unique architectural and historical content.
+
+        TASK: Synthesize an issue-level description and select up to 10 subject headings from the provided chosen vocabulary terms.
+
+        ISSUE DESCRIPTION GUIDELINES:
+        - Write 150-250 words from a modern historian's perspective
+        - Focus on SPECIFIC details: architect names, firms, buildings, cities, projects, competitions, events
+        - Emphasize architectural styles, building types, construction technologies, materials
+        - Highlight historically significant innovations or trends
+        - Contextualize within American South architectural history (1892-1931)
+        - Use scholarly tone; avoid generic statements that could apply to any issue
+        - Write as "This issue features..." not "The issue includes..."
+
+        SUBJECT HEADING SELECTION:
+        - Select exactly 10 terms from provided chosen vocabulary
+        - Prioritize architectural styles, building types, construction technologies
+        - Focus on terms most valuable for architectural history research
+        - Balance across vocabulary sources when possible
+
+        Return JSON format:
+        {
+        "issue_description": "Specific description emphasizing unique architectural content and historical significance",
+        "selected_subject_headings": [
+            {
+            "label": "Term label",
+            "uri": "Term URI", 
+            "source": "LCSH/FAST/Getty AAT/Getty TGN",
+            "reasoning": "Why this term represents the issue"
+            }
+        ]
+        }"""    

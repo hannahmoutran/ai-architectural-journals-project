@@ -12,14 +12,13 @@ from typing import List, Dict, Any, Optional, Tuple
 from openpyxl import load_workbook
 from openpyxl.styles import Alignment
 from collections import defaultdict
-from urllib.parse import quote_plus
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 def create_vocab_api_usage_log(logs_folder_path: str, script_name: str, total_topics: int, 
                               api_stats: Dict[str, Any]) -> bool:
-    """Create comprehensive vocabulary API usage log."""
+    """Create vocabulary API usage log."""
     try:
         pass  # Add your code here
     except Exception as e:
@@ -66,7 +65,7 @@ def create_vocab_api_usage_log(logs_folder_path: str, script_name: str, total_to
                     f.write(f"  {api_name}: {count} terms\n")
                 f.write(f"  Processing time: {result.get('processing_time', 0):.2f}s\n\n")
         
-        print(f"📊 Vocabulary API usage log created: {log_path}")
+        print(f"Vocabulary API usage log created: {log_path}")
         return True
         
     except Exception as e:
@@ -129,7 +128,7 @@ class APIStatsTracker:
             'Getty TGN': {'requests': 0, 'successful': 0, 'failed': 0, 'total_time': 0, 'terms_found': 0, 'cache_hits': 0}
         }
         self.topic_results = {}
-        self.geographic_results = {}  # New tracking for geographic entities
+        self.geographic_results = {}  # Track geographic results separately
         self.total_requests = 0
     
     def record_api_call(self, api_name: str, topic: str, query: str, success: bool, 
@@ -247,7 +246,7 @@ class FASTTermFinder:
                         for result in word_results:
                             if self._is_relevant_to_query(result, query):
                                 results.append(result)
-                        if len(results) >= self.max_results:  # Stop if we have enough
+                        if len(results) >= self.max_results:  # Stop when we have enough
                             break
             
             # Remove duplicates based on URI and STRICT LIMIT TO 3
@@ -285,6 +284,7 @@ class FASTTermFinder:
         
         time.sleep(self.request_delay)
         return results
+    
     def search_geographic(self, query: str, topic: str = None) -> List[Dict[str, str]]:
         """Search FAST for geographic entities with additional metadata."""
         cache_key = f"fast_geo_{query}"
@@ -313,12 +313,12 @@ class FASTTermFinder:
         error_msg = None
         
         try:
-            # Try method 1: New suggest API focusing on geographic facets
+            # Try method 1: Suggest API focusing on geographic facets
             params = {
                 'query': query,
                 'queryReturn': 'suggestall,idroot,auth,type,tag',
                 'suggest': 'autoSubject',
-                'rows': self.max_geo_results * 2,  # CHANGED: Use max_geo_results instead of max_results
+                'rows': self.max_geo_results * 2,  # Use max_geo_results instead of max_results
                 'sort': 'usage desc',
                 'facet': 'type',
                 'facet.field': 'type',
@@ -343,7 +343,7 @@ class FASTTermFinder:
                 
                 # Parse and filter for geographic relevance
                 all_results = self._parse_geographic_response(data)
-                results = [r for r in all_results if self._is_geographic_relevant(r, query)][:self.max_geo_results]  # CHANGED: Use max_geo_results
+                results = [r for r in all_results if self._is_geographic_relevant(r, query)][:self.max_geo_results] 
             
             success = True
             
@@ -548,14 +548,14 @@ class FASTTermFinder:
             if topic in results:
                 continue
                 
-            # Search for terms using the updated method - STRICT LIMIT TO 3
+            # Search for terms - STRICT LIMIT TO 3
             fast_results = self.search(topic, topic)[:self.max_results]
             results[topic] = fast_results
             
             if fast_results:
-                print(f"   📚 Found {len(fast_results)} FAST terms for '{topic}'")
+                print(f"   Found {len(fast_results)} FAST terms for '{topic}'")
             else:
-                print(f"   ⚠️  No FAST terms found for '{topic}'")
+                print(f"   No FAST terms found for '{topic}'")
         
         return results
 
@@ -584,18 +584,16 @@ class FASTTermFinder:
                 paren_index = entity.rfind('(')
                 if paren_index > 0:
                     search_term = entity[:paren_index].strip()
-            
-            print(f"   🔍 Searching for '{entity}' using query: '{search_term}'")
-            
+                        
             # Search for geographic terms using the cleaned search term - LIMITED TO 1 TERM
-            fast_results = self.search_geographic(search_term, entity)[:self.max_geo_results]  # CHANGED: Use max_geo_results
+            fast_results = self.search_geographic(search_term, entity)[:self.max_geo_results]  
             results[entity] = fast_results  # Store under the original entity name
             
             if fast_results:
-                print(f"   🌍 Found {len(fast_results)} FAST geographic term for '{entity}'")  # CHANGED: "term" instead of "terms"
+                print(f"   Found FAST geographic term for '{entity}'")  
             else:
-                print(f"   ⚠️  No FAST geographic terms found for '{entity}'")
-        
+                print(f"   No FAST geographic term found for '{entity}'")
+
         return results
 
 class GettyTermFinder:
@@ -852,7 +850,7 @@ class GettyTermFinder:
         
         processing_time = time.time() - start_time
         
-        # Remove duplicates and STRICT LIMIT TO 3
+        # Remove duplicates and LIMIT TO 3
         seen_uris = set()
         unique_results = []
         for result in all_results:
@@ -879,7 +877,7 @@ class GettyTermFinder:
         return results
     
     def find_terms(self, topics: List[str]) -> Dict[str, List[Dict[str, str]]]:
-        """Find Getty terms for multiple topics with improved search strategies."""
+        """Find Getty terms for multiple topics."""
         if not topics:
             return {}
             
@@ -895,27 +893,27 @@ class GettyTermFinder:
             if topic in results:
                 continue
                 
-            # Search AAT and TGN (skip ULAN for now as it's for people)
+            # Search AAT and TGN
             all_results = []
             
             # Search AAT (Art & Architecture Thesaurus)
             aat_results = self.search_aat(topic, topic)
             all_results.extend(aat_results)
             
-            # Search TGN (Thesaurus of Geographic Names) - only if we have room
+            # Search TGN (Thesaurus of Geographic Names) - if we have room
             if len(all_results) < self.max_results:
                 tgn_results = self.search_tgn(topic, topic)
                 # Add TGN results up to the limit
                 remaining_slots = self.max_results - len(all_results)
                 all_results.extend(tgn_results[:remaining_slots])
             
-            # STRICT LIMIT TO 3 TOTAL
+            # LIMIT TO 3 TOTAL
             results[topic] = all_results[:self.max_results]
             
             if all_results:
-                print(f"   🏛️  Found {len(all_results)} Getty terms for '{topic}'")
+                print(f"   Found {len(all_results)} Getty terms for '{topic}'")
             else:
-                print(f"   ⚠️  No Getty terms found for '{topic}'")
+                print(f"   No Getty terms found for '{topic}'")
         
         return results
 
@@ -928,7 +926,7 @@ class LOCAuthorizedTermFinder:
             'User-Agent': 'Python-LOC-Term-Finder/1.0 (Educational/Research Use)'
         }
         self.lcsh_authorized_headings = "http://id.loc.gov/authorities/subjects/collection_LCSHAuthorizedHeadings"
-        self.max_results = 3  # Strict limit to 3 terms
+        self.max_results = 3  # Limit to 3 terms
         self.request_delay = 0.5
         self.cache = {}
         self.stats_tracker = stats_tracker
@@ -1041,13 +1039,13 @@ class LOCAuthorizedTermFinder:
                     if result['uri'] not in existing_uris:
                         keyword_results.append(result)
             
-            # STRICT LIMIT TO 3
+            # LIMIT TO 3
             results[topic] = keyword_results[:self.max_results]
             
             if keyword_results:
-                print(f"   📚 Found {len(keyword_results)} LCSH terms for '{topic}'")
+                print(f"   Found {len(keyword_results)} LCSH terms for '{topic}'")
             else:
-                print(f"   ⚠️  No LCSH terms found for '{topic}'")
+                print(f"   No LCSH terms found for '{topic}'")
         
         return results
 
@@ -1074,7 +1072,7 @@ class SouthernArchitectEnhancer:
         self.json_data = None
         self.excel_path = None
         self.max_terms_per_vocabulary = 3  # For topics
-        self.max_geo_terms_per_vocabulary = 1  # NEW: For geographic entities
+        self.max_geo_terms_per_vocabulary = 1  # For geographic entities
         self.max_total_terms = 12  # 3 terms × 4 vocabularies = 12 max total for topics
     
     def detect_workflow_type(self) -> bool:
@@ -1109,7 +1107,7 @@ class SouthernArchitectEnhancer:
         try:
             with open(json_path, 'r', encoding='utf-8') as f:
                 self.json_data = json.load(f)
-            print(f"📊 Loaded JSON data from {json_filename}")
+            print(f"Loaded JSON data from {json_filename}")
             return True
         except Exception as e:
             logging.error(f"Error loading JSON data: {e}")
@@ -1156,47 +1154,36 @@ class SouthernArchitectEnhancer:
     def process_multi_vocabulary_lookup(self, subjects: List[str], geographic_entities: List[str]) -> Tuple[Dict[str, str], Dict[str, List[Dict[str, str]]], Dict[str, str], Dict[str, List[Dict[str, str]]]]:
         """Process multi-vocabulary lookup for subjects and geographic entities."""
         
-        print(f"\n🔍 Processing multi-vocabulary lookup...")
-        print(f"📚 Topics: {len(subjects)} unique subjects")
-        print(f"🌍 Geographic entities: {len(geographic_entities)} unique entities")
-        print(f"⚠️  LIMITING TO {self.max_terms_per_vocabulary} TERMS PER VOCABULARY PER TOPIC")
-        print(f"⚠️  LIMITING TO {self.max_geo_terms_per_vocabulary} TERM PER GEOGRAPHIC ENTITY")  # NEW
-        print(f"📊 API calls will be logged to: {self.logs_folder_path}")
+        print(f"\nProcessing multi-vocabulary lookup...")
+        print(f"API calls will be logged to: {self.logs_folder_path}")
         
-        # Process subjects (existing logic)
+        # Process subjects
         subject_to_terms_excel = {}
         subject_to_terms_json = {}
         
         for i, subject in enumerate(subjects, 1):
-            print(f"\n📋 Processing subject {i}/{len(subjects)}: '{subject}'")
             
             # Search all vocabularies for THIS SPECIFIC subject
             all_terms = []
             
-            # Search LCSH FIRST (most important) - LIMITED TO 3 TERMS
+            # Search LCSH FIRST - LIMIT TO 3 TERMS
             lcsh_results = self.lcsh_finder.find_terms([subject])
             if subject in lcsh_results:
                 lcsh_terms = lcsh_results[subject][:self.max_terms_per_vocabulary]
                 all_terms.extend(lcsh_terms)
-                print(f"     📚 LCSH: {len(lcsh_terms)} terms")
             
-            # Search FAST - LIMITED TO 3 TERMS
+            # Search FAST - LIMIT TO 3 TERMS
             fast_results = self.fast_finder.find_terms([subject])
             if subject in fast_results:
                 fast_terms = fast_results[subject][:self.max_terms_per_vocabulary]
                 all_terms.extend(fast_terms)
-                print(f"     🚀 FAST: {len(fast_terms)} terms")
             
-            # Search Getty - LIMITED TO 3 TERMS
+            # Search Getty - LIMIT TO 3 TERMS
             getty_results = self.getty_finder.find_terms([subject])
             if subject in getty_results:
                 getty_terms = getty_results[subject][:self.max_terms_per_vocabulary]
                 all_terms.extend(getty_terms)
-                print(f"     🏛️ Getty: {len(getty_terms)} terms")
-            
-            # Show summary for this subject
-            print(f"     ✅ Total: {len(all_terms)} terms for '{subject}'")
-            
+                        
             # Format results for this subject
             formatted_terms_excel = self.format_results_for_excel(all_terms)
             formatted_terms_json = self.format_results_for_json(all_terms)
@@ -1205,22 +1192,21 @@ class SouthernArchitectEnhancer:
             subject_to_terms_excel[subject] = formatted_terms_excel
             subject_to_terms_json[subject] = formatted_terms_json
         
-        # Process geographic entities (NEW)
+        # Process geographic entities
         geographic_to_terms_excel = {}
         geographic_to_terms_json = {}
         
         for i, entity in enumerate(geographic_entities, 1):
-            print(f"\n🌍 Processing geographic entity {i}/{len(geographic_entities)}: '{entity}'")
+            print(f"\nProcessing geographic entity {i}/{len(geographic_entities)}: '{entity}'")
             
             # Search FAST Geographic only - LIMITED TO 3 TERMS
             fast_geo_results = self.fast_finder.find_geographic_terms([entity])
             if entity in fast_geo_results:
-                geo_terms = fast_geo_results[entity][:self.max_terms_per_vocabulary]
-                print(f"     🌍 FAST Geographic: {len(geo_terms)} terms")
+                geo_terms = fast_geo_results[entity][:self.max_geo_terms_per_vocabulary]
             else:
                 geo_terms = []
-                print(f"     ⚠️  No FAST Geographic terms found")
-            
+                print(f"     No FAST Geographic term found")
+
             # Format results for this geographic entity
             formatted_terms_excel = self.format_results_for_excel(geo_terms)
             formatted_terms_json = self.format_results_for_json(geo_terms)
@@ -1379,7 +1365,7 @@ class SouthernArchitectEnhancer:
             
             # Save the enhanced workbook
             wb.save(self.excel_path)
-            print(f"✅ Enhanced Excel file saved with vocabulary terms in {processed_rows} rows")
+            print(f"Enhanced Excel file saved with vocabulary terms in {processed_rows} rows")
             return True
             
         except Exception as e:
@@ -1447,7 +1433,6 @@ class SouthernArchitectEnhancer:
             with open(json_path, 'w', encoding='utf-8') as f:
                 json.dump(enhanced_items, f, indent=2, ensure_ascii=False)
             
-            print(f"✅ Enhanced JSON file saved with vocabulary search results in {processed_items} items")
             return True
             
         except Exception as e:
@@ -1460,9 +1445,10 @@ class SouthernArchitectEnhancer:
         try:
             report_path = os.path.join(self.folder_path, "vocabulary_mapping_report.txt")
             
-            # Create mappings of page number to topics/geographic entities
+            # Create mappings of page number to topics/geographic entities and folder info
             page_to_topics = defaultdict(list)
             page_to_geographic = defaultdict(list)
+            page_to_folder = {}  
             
             # Load the existing workbook to get page information
             wb = load_workbook(self.excel_path)
@@ -1485,6 +1471,9 @@ class SouthernArchitectEnhancer:
                 geo_cell = analysis_sheet.cell(row=row_num, column=geo_col)
                 
                 page_number = page_cell.value or "Unknown"
+                folder_cell = analysis_sheet.cell(row=row_num, column=1)  # Folder column
+                folder_name = folder_cell.value or "Unknown"
+                page_to_folder[page_number] = folder_name  # Store folder for this page
                 topics = subject_cell.value or ""
                 geo_entities = geo_cell.value or ""
                 
@@ -1619,8 +1608,8 @@ class SouthernArchitectEnhancer:
                     topics_on_page = page_to_topics.get(page_num, [])
                     geo_entities_on_page = page_to_geographic.get(page_num, [])
                     
-                    f.write(f"PAGE {page_num}:\n")
-                    f.write("=" * 20 + "\n")
+                    folder_name = page_to_folder.get(page_num, "Unknown")
+                    f.write(f"PAGE {page_num} (ISSUE: {folder_name}):\n")
                     
                     if not topics_on_page and not geo_entities_on_page:
                         f.write("No topics or geographic entities found for this page\n\n")
@@ -1737,7 +1726,6 @@ class SouthernArchitectEnhancer:
                         f.write("Terms: No terms found\n")
                     f.write("\n")
             
-            print(f"📋 Vocabulary mapping report (organized by page) saved to: {report_path}")
             return True
             
         except Exception as e:
@@ -1746,18 +1734,18 @@ class SouthernArchitectEnhancer:
     
     def run(self) -> bool:
         """Main execution method with comprehensive API logging for topics and geographic entities."""
-        print(f"\n🎯 SOUTHERN ARCHITECT STEP 2 - MULTI-VOCABULARY ENHANCEMENT")
-        print(f"📁 Processing folder: {self.folder_path}")
-        print(f"⚠️  LIMITING TO {self.max_terms_per_vocabulary} TERMS PER VOCABULARY")
-        print(f"⚠️  MAXIMUM {self.max_total_terms} TERMS TOTAL PER SUBJECT")
-        print(f"📊 API logging enabled in: {self.logs_folder_path}")
+        print(f"\nSTEP 2 - MULTI-VOCABULARY ENHANCEMENT")
+        print(f"Processing folder: {self.folder_path}")
+        print(f"Maximum {self.max_terms_per_vocabulary} terms per vocabulary")
+        print(f"Maximum {self.max_total_terms} terms total per subject")
+        print(f"API log: {self.logs_folder_path}")
         print("-" * 50)
         
         # Detect workflow type
         if not self.detect_workflow_type():
             return False
         
-        print(f"🔍 Detected workflow type: {self.workflow_type.upper()}")
+        print(f"Detected workflow type: {self.workflow_type.upper()}")
         
         # Load JSON data
         if not self.load_json_data():
@@ -1766,11 +1754,11 @@ class SouthernArchitectEnhancer:
         # Extract topics and geographic entities
         subjects, geographic_entities = self.extract_subject_headings()
         if not subjects and not geographic_entities:
-            print("⚠️  No topics or geographic entities found in the data")
+            print("No topics or geographic entities found in the data")
             return False
         
-        print(f"📚 Found {len(subjects)} unique topics")
-        print(f"🌍 Found {len(geographic_entities)} unique geographic entities")
+        print(f"Found {len(subjects)} unique topics")
+        print(f"Found {len(geographic_entities)} unique geographic entities")
         
         # Process multi-vocabulary lookup with comprehensive logging
         (subject_to_terms_excel, subject_to_terms_json, 
@@ -1803,25 +1791,22 @@ class SouthernArchitectEnhancer:
         subjects_with_terms = sum(1 for terms in subject_to_terms_excel.values() if terms)
         geo_with_terms = sum(1 for terms in geographic_to_terms_excel.values() if terms)
         
-        print(f"\n🎉 MULTI-VOCABULARY ENHANCEMENT COMPLETED!")
-        print(f"✅ Topics with vocabulary terms: {subjects_with_terms}/{len(subjects)}")
-        print(f"✅ Geographic entities with vocabulary terms: {geo_with_terms}/{len(geographic_entities)}")
+        print(f"\nSTEP 2 COMPLETE: Enhanced with vocabulary terms in {os.path.basename(self.folder_path)}")
+        print(f"Updated Excel/JSON files, vocabulary report, and API logs created")
+        print(f"Topics with vocabulary terms: {subjects_with_terms}/{len(subjects)}")
+        print(f"Geographic entities with vocabulary terms: {geo_with_terms}/{len(geographic_entities)}")
         if subjects:
-            print(f"📊 Topic success rate: {(subjects_with_terms/len(subjects)*100):.1f}%")
+            print(f"Topic success rate: {(subjects_with_terms/len(subjects)*100):.1f}%")
         if geographic_entities:
-            print(f"📊 Geographic success rate: {(geo_with_terms/len(geographic_entities)*100):.1f}%")
-        print(f"⚠️  LIMITED TO {self.max_terms_per_vocabulary} TERMS PER VOCABULARY")
-        print(f"⚠️  MAXIMUM {self.max_total_terms} TERMS TOTAL PER SUBJECT")
-        print(f"🔗 Total API requests made: {api_summary_stats['total_requests']}")
-        print(f"⏱️  Total processing time: {api_summary_stats['total_time']:.1f}s")
-        print(f"📄 Enhanced Excel file: {self.excel_path}")
-        print(f"📄 Enhanced JSON file: {os.path.join(self.folder_path, f'{self.workflow_type}_workflow.json')}")
-        print(f"📋 Mapping report: {os.path.join(self.folder_path, 'vocabulary_mapping_report.txt')}")
-        print(f"📊 API usage log: {os.path.join(self.logs_folder_path, 'southern_architect_step2_vocab_api_usage_log.txt')}")
-        print(f"📋 Detailed API responses: {os.path.join(self.logs_folder_path, 'southern_architect_step2_vocab_full_responses_log.txt')}")
+            print(f"Geographic success rate: {(geo_with_terms/len(geographic_entities)*100):.1f}%")
+        print(f"Limited to {self.max_terms_per_vocabulary} terms per vocabulary")
+        print(f"Maximum {self.max_total_terms} terms total per subject")
+        print(f"Total API requests made: {api_summary_stats['total_requests']}")
+        print(f"Processing time: {api_summary_stats['total_time']:.1f}s")
+       
         
         # Show API breakdown
-        print(f"\n📊 API BREAKDOWN:")
+        print(f"\nAPI BREAKDOWN:")
         for api_name, stats in api_summary_stats['api_breakdown'].items():
             requests = stats['requests']
             success_rate = stats['success_rate']
@@ -1858,23 +1843,23 @@ def main():
     
     if args.folder:
         if not os.path.exists(args.folder):
-            print(f"❌ Folder not found: {args.folder}")
+            print(f"Folder not found: {args.folder}")
             return
         folder_path = args.folder
     else:
         # Default to newest folder if no specific folder provided
         folder_path = find_newest_folder(base_output_dir)
         if not folder_path:
-            print(f"❌ No folders found in: {base_output_dir}")
+            print(f"No folders found in: {base_output_dir}")
             return
-        print(f"🔄 Auto-selected newest folder: {os.path.basename(folder_path)}")
+        print(f"Auto-selected newest folder: {os.path.basename(folder_path)}")
     
     # Create and run the enhancer with comprehensive API logging
     enhancer = SouthernArchitectEnhancer(folder_path)
     success = enhancer.run()
     
     if not success:
-        print("❌ Multi-vocabulary enhancement failed")
+        print("Multi-vocabulary enhancement failed")
         return 1
     
     return 0
