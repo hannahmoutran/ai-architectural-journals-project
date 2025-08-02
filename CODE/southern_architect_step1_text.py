@@ -234,7 +234,8 @@ def process_single_file(file_path, folder_name, page_number, content, model_name
             "role": "user",
             "content": f"{prompt}\n\nHere's the content to analyze:\n\n{content.strip()}\n\nNote: This content is {'short (less than 250 characters)' if prompt_type == 'short' else 'of normal length' if prompt_type == 'normal' else 'from a cover page'}."
         }],
-        max_tokens=3000
+        max_tokens=3000, 
+        temperature=0.3 # Lower temperature for more focused responses, but still creative
     )
     
     processing_time = time.time() - start_time

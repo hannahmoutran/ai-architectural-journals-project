@@ -179,7 +179,7 @@ class BatchProcessor:
             temp_file_path = f.name
         
         try:
-            print(f"📤 Uploading batch file with {len(batch_requests)} requests...")
+            print(f" Uploading batch file with {len(batch_requests)} requests...")
             
             # Upload the batch file
             with open(temp_file_path, 'rb') as f:
@@ -274,7 +274,7 @@ class BatchProcessor:
         max_wait_time = timedelta(hours=max_wait_hours)
         check_interval = timedelta(minutes=check_interval_minutes)
         
-        print(f"⏳ Waiting for batch completion (ID: {batch_id})")
+        print(f" Waiting for batch completion (ID: {batch_id})")
         print(f"   Max wait time: {max_wait_hours} hours")
         
         last_progress_report = start_time

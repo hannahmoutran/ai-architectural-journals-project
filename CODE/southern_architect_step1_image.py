@@ -192,7 +192,8 @@ def process_image(image_path, model_name="gpt-4o-2024-08-06"):
                 {"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{base64_image}"}}
             ]
         }],
-        max_tokens=3000
+        max_tokens=3000, 
+        temperature=0.3 # Lower temperature for more focused responses, but still creative
     )
     
     processing_time = time.time() - start_time
@@ -313,14 +314,14 @@ def process_folder_with_batch(input_folder, output_dir, model_name="gpt-4o-2024-
     items_with_issues = 0
     
     if use_batch:
-        print(f"📦 Preparing {total_items} requests for batch processing...")
+        print(f" Preparing {total_items} requests for batch processing...")
         
         # Estimate costs
         batch_requests, custom_id_mapping = prepare_batch_requests(all_images, model_name)
         cost_estimate = processor.estimate_batch_cost(batch_requests, model_name)
         
         # Cost display
-        print(f"💰 Estimated cost: ${cost_estimate['batch_cost']:.4f} (${cost_estimate['savings']:.4f} savings)")
+        print(f" Estimated cost: ${cost_estimate['batch_cost']:.4f} (${cost_estimate['savings']:.4f} savings)")
         
         # Convert to batch format
         formatted_requests = processor.create_batch_requests(batch_requests, "southern_architect")
@@ -647,7 +648,7 @@ def main():
     # Start timing the entire script execution
     script_start_time = time.time()
     
-    input_folder = "/Users/hannahmoutran/Desktop/southern_architect/CODE/image_folders/two_issue_test"
+    input_folder = "/Users/hannahmoutran/Desktop/southern_architect/CODE/image_folders/20_pages"
     
     # Create dynamic output folder name
     current_date = datetime.now().strftime("%Y-%m-%d")
