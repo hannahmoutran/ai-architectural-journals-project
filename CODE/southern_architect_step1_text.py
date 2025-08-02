@@ -731,7 +731,7 @@ def main():
     )
     
     # Final summary
-    print(f"\nSTEP 1 COMPLETE: Generated text metadata in {os.path.basename(output_dir)}")
+    print(f"\n ✅ STEP 1 COMPLETE: Generated text metadata in {os.path.basename(output_dir)}")
     print(f"Excel file, JSON data, and processing logs created")
     print(f"Successfully processed: {total_items - items_with_issues}/{total_items} files")
     print(f"Items with issues: {items_with_issues}")

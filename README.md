@@ -7,7 +7,10 @@ This code is part of an ongoing project focused on cataloging the University of 
 [Southern Architect and Building News](https://collections.lib.utexas.edu/?f%5Bmods_relatedItem_titleInfo_title_source_t%5D%5B%5D=Southern+Architect+and+Building+News) was an illustrated monthly journal devoted to the interests of architects, builders, and the hardware trade. It was published from 1882-1932. The collection is currently housed in the Architecture and Planning Library Special Collections at the University of Texas Libraries, The University of Texas at Austin.
 
 ### Project Goals
-Initially, we tested Large Language Models' ability to contribute effectively in the following metadata tasks: OCR creation/improvement, summarization, named entity extraction, and subject heading assignment. The current implementation has evolved into a comprehensive 5-step workflow that integrates controlled vocabularies and produces scholarly-quality archival metadata.
+Initially, we tested Large Language Models' ability to contribute effectively in the following metadata tasks: OCR creation/improvement, summarization, named entity extraction, and subject heading assignment. The current implementation has evolved into a comprehensive 5-step w
+'[]\
+
+\]]orkflow that integrates controlled vocabularies and produces scholarly-quality archival metadata.
 
 ### Workflow Architecture
 
@@ -99,16 +102,13 @@ python southern_architect_run.py
 python southern_architect_run.py --workflow text
 python southern_architect_run.py --workflow image # best results
 
-# Custom model selection
+# Custom model selection - you can also just edit the individual scripts 
 python southern_architect_run.py --workflow text --step1-model gpt-4o --step3-model gpt-4o-mini
 ```
 
 ## Cost Management
 
-### Estimated Costs (per 1,000 pages)
-- **GPT-4o-mini**: $0.52 (text) / $1.15 (image)
-- **GPT-4o**: $8.77 (text) / $10.82 (image)
-- **Claude Sonnet 3.5**: $11.18 (text) / $14.16 (image)
+**Note:** See `model_pricing.py` - Updated as of July 2025
 
 ### Cost Optimization Strategies
 1. **Batch Processing**: Use for 50% cost reduction on large collections
@@ -146,6 +146,7 @@ python southern_architect_run.py --workflow text --step1-model gpt-4o --step3-mo
 - Automatic batch API usage for large collections
 - Progress monitoring and estimated completion times
 - Comprehensive error handling and retry logic
+- Keep in mind that batch processing could potentially take up to 24 hours for *each step* where it is used.  
 
 ### Geographic Entity Processing
 - Standardized geographic name formatting
@@ -159,11 +160,11 @@ python southern_architect_run.py --workflow text --step1-model gpt-4o --step3-mo
 ## Privacy & Data Security
 
 ### Quality Assurance
-- We recommend comprehensive oversight and complete transparency about the metadata creation process
+- In all AI assisted workflows, we recommend: comprehensive oversight *and* complete transparency
 - Comprehensive logging is in place so that any issues that arise may be tracked
 
 ### API Usage (Recommended)
-- **OpenAI**: Does not use API data for training
+- **OpenAI**: Does not use API data for training, for more information visit: [OpenAI Enterprise Privacy](https://openai.com/enterprise-privacy/)
 
 ### Web Interface Considerations
 - Limited privacy guarantees

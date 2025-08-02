@@ -156,7 +156,7 @@ class IssueSynthesizer:
 class SouthernArchitectIssueSynthesizer:
     """Main class for synthesizing issue-level descriptions and selecting from chosen vocabulary terms."""
     
-    def __init__(self, folder_path: str, model_name: str = "gpt-4o-2024-08-06"):
+    def __init__(self, folder_path: str, model_name: str = "gpt-4o-mini"):
         self.folder_path = folder_path
         self.model_name = model_name
         self.workflow_type = None
@@ -632,6 +632,7 @@ class SouthernArchitectIssueSynthesizer:
             
             total_issues_processed += 1
             print(f"Completed synthesis for {issue_name}")
+            print("✅ STEP 4 COMPLETE")
 
         if total_issues_processed == 0:
             print("No issues were successfully processed")
@@ -664,7 +665,7 @@ def main():
     parser = argparse.ArgumentParser(description='Synthesize issue-level descriptions and select from chosen vocabulary terms')
     parser.add_argument('--folder', help='Specific folder path to process')
     parser.add_argument('--newest', action='store_true', help='Process the newest folder in the output directory (default: True if no folder specified)')
-    parser.add_argument('--model', default="gpt-4o-2024-08-06", help='Model name to use for synthesis')
+    parser.add_argument('--model', default="gpt-4o-mini", help='Model name to use for synthesis')
     args = parser.parse_args()
     
     # Default base directory for Southern Architect output folders

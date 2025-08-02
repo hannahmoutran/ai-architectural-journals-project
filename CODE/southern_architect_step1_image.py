@@ -642,12 +642,12 @@ def process_folder_individual(all_images, wb, analysis_sheet, raw_sheet, issues_
            api_stats.total_input_tokens, api_stats.total_output_tokens, False)  
 
 def main():
-    model_name = "gpt-4o-2024-08-06"  
+    model_name = "gpt-4o"  
     
     # Start timing the entire script execution
     script_start_time = time.time()
     
-    input_folder = "/Users/hannahmoutran/Desktop/southern_architect/CODE/image_folders/4_pages"
+    input_folder = "/Users/hannahmoutran/Desktop/southern_architect/CODE/image_folders/two_issue_test"
     
     # Create dynamic output folder name
     current_date = datetime.now().strftime("%Y-%m-%d")
@@ -663,7 +663,7 @@ def main():
     # Create the directory
     os.makedirs(output_dir, exist_ok=True)
     
-    print(f"📁 Output directory: {output_dir}")
+    print(f" Output directory: {output_dir}")
     
     # Process folder with enhanced logging
     (wb, all_results, api_stats, total_items, items_with_issues, total_processing_time,
@@ -732,7 +732,7 @@ def main():
     )
     
     # Final summary - terminal output
-    print(f"\nSTEP 1 COMPLETE: Generated image metadata in {os.path.basename(output_dir)}")
+    print(f"\n ✅ STEP 1 COMPLETE: Generated image metadata in {os.path.basename(output_dir)}")
     print(f"Excel file, JSON data, logs, and thumbnails created")
     print(f"Successfully processed: {total_items - items_with_issues}/{total_items} images")
     print(f"Items with issues: {items_with_issues}")

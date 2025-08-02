@@ -45,7 +45,7 @@ class SouthernArchitectWorkflowRunner:
     def print_banner(self):
         """Print the workflow banner."""
         print("\n" + "="*70)
-        print("🏛️  SOUTHERN ARCHITECT COMPLETE WORKFLOW PIPELINE")
+        print("  SOUTHERN ARCHITECT COMPLETE WORKFLOW PIPELINE")
         print("="*70)
         print("Processing historical architectural journals (1892-1931)")
         print("University of Texas at Austin Digital Collections")
@@ -56,10 +56,10 @@ class SouthernArchitectWorkflowRunner:
         if workflow_type:
             if workflow_type.lower() in ['text', 'image']:
                 self.workflow_type = workflow_type.lower()
-                print(f"📋 Using specified workflow type: {self.workflow_type.upper()}")
+                print(f" Using specified workflow type: {self.workflow_type.upper()}")
                 return True
             else:
-                print(f"❌ Invalid workflow type: {workflow_type}. Must be 'text' or 'image'.")
+                print(f" Invalid workflow type: {workflow_type}. Must be 'text' or 'image'.")
                 return False
         
         # Interactive selection
@@ -79,48 +79,48 @@ class SouthernArchitectWorkflowRunner:
                     self.workflow_type = "image"
                     break
                 else:
-                    print("❌ Invalid choice. Please enter 1 or 2.")
+                    print(" Invalid choice. Please enter 1 or 2.")
                     
             except KeyboardInterrupt:
-                print("\n\n👋 Workflow cancelled by user.")
+                print("\n\n Workflow cancelled by user.")
                 return False
         
-        print(f"✅ Selected: {self.workflow_type.upper()} workflow\n")
+        print(f" Selected: {self.workflow_type.upper()} workflow\n")
         return True
     
     def announce_step(self, step_name: str, step_description: str) -> None:
         """Announce the next step that will run automatically."""
-        print(f"\n📍 STARTING: {step_name}")
-        print(f"📝 {step_description}")
-        print("🚀 Running automatically...")
+        print(f"\n STARTING: {step_name}")
+        print(f" {step_description}")
+        print(" Running automatically...")
         print("-" * 50)
     
     def run_script(self, script_path: str, args: list = None) -> bool:
         """Run a Python script with optional arguments."""
         if not os.path.exists(script_path):
-            print(f"❌ Script not found: {script_path}")
+            print(f" Script not found: {script_path}")
             return False
         
         cmd = [sys.executable, script_path]
         if args:
             cmd.extend(args)
         
-        print(f"🔄 Running: {' '.join(cmd)}")
+        print(f" Running: {' '.join(cmd)}")
         print("-" * 50)
         
         try:
             result = subprocess.run(cmd, check=True, capture_output=False)
             print("-" * 50)
-            print(f"✅ Script completed successfully: {os.path.basename(script_path)}")
+            print(f" Script completed successfully: {os.path.basename(script_path)}")
             return True
             
         except subprocess.CalledProcessError as e:
             print("-" * 50)
-            print(f"❌ Script failed: {os.path.basename(script_path)}")
+            print(f" Script failed: {os.path.basename(script_path)}")
             print(f"Exit code: {e.returncode}")
             return False
         except KeyboardInterrupt:
-            print("\n\n⚠️  Script interrupted by user.")
+            print("\n\n  Script interrupted by user.")
             return False
     
     def find_newest_output_folder(self) -> Optional[str]:
@@ -320,18 +320,18 @@ class SouthernArchitectWorkflowRunner:
             print(f"  Workflow completed with {len(failed_steps)} failed step(s):")
             for step in failed_steps:
                 print(f"    {step}")
-            print("\n💡 You can re-run individual steps if needed")
+            print("\n You can re-run individual steps if needed")
         
         if self.output_folder:
             print(f"\n Final output folder: {self.output_folder}")
-            print("📄 Generated files include:")
-            print("   Excel and JSON workflow files with selected vocabulary terms")
-            print("   Page-level metadata files with geographic entities")
-            print("   Issue summary with scholarly description")
-            print("   Table of contents with comprehensive metadata")
-            print("   Vocabulary mapping reports with checkmarks")
+            print(" Generated files include:")
+            print("   Excel and JSON workflow files")
+            print("   Page-level metadata files")
+            print("   Issue-level metadata files")
+            print("   Issue index with key metadata")
+            print("   Vocabulary mapping report")
             print("   Entity authority file with type classification")
-            print("   Processing reports and comprehensive API logs")
+            print("   Processing reports and API logs")
             print("   Cost tracking and token usage logs")
         
         print("\n" + "="*70)
@@ -351,11 +351,11 @@ Examples:
   python southern_architect_run.py --workflow text --step1-model gpt-4o-2024-08-06
   python southern_architect_run.py --step3-model gpt-4o-2024-08-06 --step4-model gpt-4o-mini-2024-07-18
 
-New Features:
-  - Step 1: Initial metadata extraction with batch processing
-  - Step 2: Multi-vocabulary enhancement (LCSH, FAST, Getty) with API logging
-  - Step 3: AI-powered vocabulary selection
-  - Step 4: Issue-level synthesis with geographic terms
+Features:
+  - Step 1: AI: Initial metadata extraction with batch processing
+  - Step 2: AI: Multi-vocabulary enhancement (LCSH, FAST, Getty) with API logging
+  - Step 3: AI: Vocabulary selection
+  - Step 4: AI: Issue-level synthesis with geographic terms
   - Step 5: Entity authority file creation with type classification
   - Comprehensive cost tracking and token logging throughout
         """
@@ -398,10 +398,10 @@ New Features:
         return 0 if success else 1
         
     except KeyboardInterrupt:
-        print("\n\n👋 Workflow cancelled by user.")
+        print("\n\n Workflow cancelled by user.")
         return 1
     except Exception as e:
-        print(f"\n❌ Unexpected error: {e}")
+        print(f"\n Unexpected error: {e}")
         logging.exception("Unexpected error in workflow runner")
         return 1
 

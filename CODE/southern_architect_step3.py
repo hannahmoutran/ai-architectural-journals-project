@@ -1127,12 +1127,12 @@ class SouthernArchitectVocabularyProcessor:
             # Create separate index file for each issue
             for folder_name, entries in issues.items():
                 # Create filename and path
-                toc_filename = f"{folder_name}_Issue_Index.txt"
+                toc_filename = f"{folder_name}_Issue_Content_Index.txt"
                 toc_path = os.path.join(self.folder_path, toc_filename)
                 
                 with open(toc_path, 'w', encoding='utf-8') as f:
-                    f.write(f"ISSUE INDEX: {folder_name}\n")
-                    f.write("=" * (len(f"ISSUE INDEX: {folder_name}")) + "\n\n")
+                    f.write(f"ISSUE CONTENT INDEX: {folder_name}\n")
+                    f.write("=" * (len(f"ISSUE CONTENT INDEX: {folder_name}")) + "\n\n")
                     
                     # Sort entries by page number for logical ordering
                     sorted_entries = sorted(entries, key=lambda x: x.get('page_number', 0))
@@ -1321,7 +1321,7 @@ class SouthernArchitectVocabularyProcessor:
         
         print("\n" + "=" * 50)
         print(f"FINAL SUMMARY:")
-        print(f"\nSTEP 3 COMPLETE: Selected vocabulary terms in {os.path.basename(self.folder_path)}")
+        print(f"\n ✅ STEP 3 COMPLETE: Selected vocabulary terms in {os.path.basename(self.folder_path)}")
         print(f"Page metadata files, issue indexes, updated Excel/JSON, and vocabulary report created")
         print(f"Entries processed: {len(selection_results)}")
         print(f"Total vocabulary terms selected: {total_selected}")
@@ -1334,7 +1334,7 @@ class SouthernArchitectVocabularyProcessor:
         data_items = self.json_data[:-1] if self.json_data and 'api_stats' in self.json_data[-1] else self.json_data
         unique_issues = set(entry.get('folder', 'Unknown') for entry in data_items)
         for issue in sorted(unique_issues):
-            toc_filename = f"{issue}_Issue_Index.txt"
+            toc_filename = f"{issue}_Issue_Content_Index.txt"
             print(f"  Issue index: {os.path.join(self.folder_path, toc_filename)}")
 
         return True

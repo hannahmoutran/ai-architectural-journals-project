@@ -1790,8 +1790,8 @@ class SouthernArchitectEnhancer:
         # Final summary
         subjects_with_terms = sum(1 for terms in subject_to_terms_excel.values() if terms)
         geo_with_terms = sum(1 for terms in geographic_to_terms_excel.values() if terms)
-        
-        print(f"\nSTEP 2 COMPLETE: Enhanced with vocabulary terms in {os.path.basename(self.folder_path)}")
+
+        print(f"\n✅ STEP 2 COMPLETE: Enhanced with vocabulary terms in {os.path.basename(self.folder_path)}")
         print(f"Updated Excel/JSON files, vocabulary report, and API logs created")
         print(f"Topics with vocabulary terms: {subjects_with_terms}/{len(subjects)}")
         print(f"Geographic entities with vocabulary terms: {geo_with_terms}/{len(geographic_entities)}")
