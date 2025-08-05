@@ -90,7 +90,7 @@ class SouthernArchitectWorkflowRunner:
     
     def announce_step(self, step_name: str, step_description: str) -> None:
         """Announce the next step that will run automatically."""
-        print(f"\n STARTING: {step_name}")
+        print(f"\n ➡️ STARTING: {step_name}")
         print(f" {step_description}")
         print(" Running automatically...")
         print("-" * 50)
