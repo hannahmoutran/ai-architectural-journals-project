@@ -5,10 +5,11 @@ Southern Architect Master Workflow Runner
 
 This script runs the complete Southern Architect workflow pipeline:
 1. Step 1: OCR Text/Image Metadata Extraction
-2. Step 2: Multi-Vocabulary Enhancement (LCSH, FAST, Getty)
-3. Step 3: AI-Powered Vocabulary Selection & Clean Output Generation
-4. Step 4: Issue-Level Synthesis & Final Metadata
-5. Step 5: Entity Authority File Creation
+2. Step 1.5: Batch Cleanup (automatic if batch processing was used)
+3. Step 2: Multi-Vocabulary Enhancement (LCSH, FAST, Getty)
+4. Step 3: AI-Powered Vocabulary Selection & Clean Output Generation
+5. Step 4: Issue-Level Synthesis & Final Metadata
+6. Step 5: Entity Authority File Creation
 
 Author: Southern Architect Processing Team
 """
@@ -36,6 +37,7 @@ class SouthernArchitectWorkflowRunner:
         self.scripts = {
             'text_step1': os.path.join(self.script_dir, 'southern_architect_step1_text.py'),
             'image_step1': os.path.join(self.script_dir, 'southern_architect_step1_image.py'),
+            'step1_5': os.path.join(self.script_dir, 'southern_architect_step1.5.py'),  # NEW
             'step2': os.path.join(self.script_dir, 'southern_architect_step2.py'),
             'step3': os.path.join(self.script_dir, 'southern_architect_step3.py'),
             'step4': os.path.join(self.script_dir, 'southern_architect_step4.py'),
@@ -125,7 +127,8 @@ class SouthernArchitectWorkflowRunner:
     
     def find_newest_output_folder(self) -> Optional[str]:
         """Find the newest output folder for the current workflow type."""
-        base_output_dir = "/Users/hannahmoutran/Desktop/southern_architect/CODE/output_folders"
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        base_output_dir = os.path.join(script_dir, "output_folders")
         
         if not os.path.exists(base_output_dir):
             return None
@@ -168,6 +171,20 @@ class SouthernArchitectWorkflowRunner:
                 print("⚠️  Could not find output folder")
         
         return success
+    
+    def run_step1_5(self, model: str = "gpt-4o-2024-08-06") -> bool:
+        """Run Step 1.5: Batch Cleanup (automatic detection and processing)."""
+        step_name = "STEP 1.5: BATCH CLEANUP"
+        step_description = "Automatically detect and fix any batch processing failures from Step 1"
+        
+        self.announce_step(step_name, step_description)
+        
+        args = ["--model", model]
+        if self.output_folder:
+            args.extend(["--folder", self.output_folder])
+        # Note: Step 1.5 auto-detects newest folder if no folder specified
+        
+        return self.run_script(self.scripts['step1_5'], args)
     
     def run_step2(self) -> bool:
         """Run Step 2: Multi-Vocabulary Enhancement."""
@@ -248,6 +265,7 @@ class SouthernArchitectWorkflowRunner:
     
     def run_complete_workflow(self, resume: bool = False, 
                             step1_model: str = None,
+                            step1_5_model: str = "gpt-4o-2024-08-06",  # NEW
                             step3_model: str = "gpt-4o-mini-2024-07-18",
                             step4_model: str = "gpt-4o-2024-08-06") -> bool:
         """Run the complete workflow pipeline."""
@@ -260,6 +278,7 @@ class SouthernArchitectWorkflowRunner:
         
         print(" WORKFLOW OVERVIEW:")
         print("Step 1: Extract metadata from source files (with batch processing if applicable)")
+        print("Step 1.5: Automatically detect and fix any batch processing failures")  # NEW
         print("Step 2: Enhance with controlled vocabulary terms (LCSH, FAST, Getty)")
         print("Step 3: AI-powered selection of optimal vocabulary terms")
         print("Step 4: Create issue-level description")
@@ -280,6 +299,12 @@ class SouthernArchitectWorkflowRunner:
         if not self.run_step1(resume, step1_model):
             print(" Step 1 failed - stopping workflow")
             return False
+        
+        # Run Step 1.5 (NEW - automatic batch cleanup)
+        if not self.run_step1_5(step1_5_model):
+            # Note: Step 1.5 failure is not critical - it may just mean no cleanup was needed
+            print(" Step 1.5 completed with issues, but continuing workflow")
+            # Don't mark as overall failure since Step 1.5 might return False for "no cleanup needed"
         
         # Run Step 2
         if not self.run_step2():
@@ -333,6 +358,7 @@ class SouthernArchitectWorkflowRunner:
             print("   Entity authority file with type classification")
             print("   Processing reports and API logs")
             print("   Cost tracking and token usage logs")
+            print("   Batch cleanup reports (if applicable)")  # NEW
         
         print("\n" + "="*70)
         
@@ -353,6 +379,7 @@ Examples:
 
 Features:
   - Step 1: AI: Initial metadata extraction with batch processing
+  - Step 1.5: Automatic batch cleanup (detects and fixes failed items)
   - Step 2: AI: Multi-vocabulary enhancement (LCSH, FAST, Getty) with API logging
   - Step 3: AI: Vocabulary selection
   - Step 4: AI: Issue-level synthesis with geographic terms
@@ -367,6 +394,8 @@ Features:
                        help='Resume from last checkpoint (Step 1 only)')
     parser.add_argument('--step1-model', 
                        help='Model for Step 1 (default: gpt-4o-2024-08-06 for images, gpt-4o-2024-08-06 for text)')
+    parser.add_argument('--step1-5-model', default="gpt-4o-2024-08-06",  # NEW
+                       help='Model for Step 1.5 (batch cleanup)')
     parser.add_argument('--step3-model', default="gpt-4o-mini-2024-07-18",
                        help='Model for Step 3 (vocabulary selection)')
     parser.add_argument('--step4-model', default="gpt-4o-2024-08-06",
@@ -391,6 +420,7 @@ Features:
         success = runner.run_complete_workflow(
             resume=args.resume,
             step1_model=step1_model,
+            step1_5_model=args.step1_5_model,  # NEW
             step3_model=args.step3_model,
             step4_model=args.step4_model
         )

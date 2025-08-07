@@ -246,34 +246,37 @@ class SouthernArchitectVocabularyProcessor:
     
     def detect_workflow_type(self) -> bool:
         """Detect workflow type and check for vocabulary enhancement."""
-        # Check for expected files
+        # Check for expected files in the metadata/collection_metadata subfolder
+        metadata_dir = os.path.join(self.folder_path, "metadata", "collection_metadata")
         text_files = ['text_workflow.xlsx', 'text_workflow.json']
         image_files = ['image_workflow.xlsx', 'image_workflow.json']
         
-        has_text_files = all(os.path.exists(os.path.join(self.folder_path, f)) for f in text_files)
-        has_image_files = all(os.path.exists(os.path.join(self.folder_path, f)) for f in image_files)
+        has_text_files = all(os.path.exists(os.path.join(metadata_dir, f)) for f in text_files)
+        has_image_files = all(os.path.exists(os.path.join(metadata_dir, f)) for f in image_files)
         
         if has_text_files and not has_image_files:
             self.workflow_type = 'text'
-            self.excel_path = os.path.join(self.folder_path, 'text_workflow.xlsx')
+            self.excel_path = os.path.join(metadata_dir, 'text_workflow.xlsx')
         elif has_image_files and not has_text_files:
             self.workflow_type = 'image'
-            self.excel_path = os.path.join(self.folder_path, 'image_workflow.xlsx')
+            self.excel_path = os.path.join(metadata_dir, 'image_workflow.xlsx')
         else:
             logging.error("Could not determine workflow type or multiple workflow files found.")
             return False
         
         # Check if vocabulary enhancement has been run (step 2)
-        if not os.path.exists(os.path.join(self.folder_path, 'vocabulary_mapping_report.txt')):
+        vocab_report_path = os.path.join(metadata_dir, 'vocabulary_mapping_report.txt')
+        if not os.path.exists(vocab_report_path):
             logging.error("Vocabulary enhancement (step 2) must be run before step 3.")
             return False
-        
+
         return True
     
     def load_json_data(self) -> bool:
         """Load JSON data and verify vocabulary terms exist."""
         json_filename = f"{self.workflow_type}_workflow.json"
-        json_path = os.path.join(self.folder_path, json_filename)
+        metadata_dir = os.path.join(self.folder_path, "metadata", "collection_metadata")
+        json_path = os.path.join(metadata_dir, json_filename)
         
         try:
             with open(json_path, 'r', encoding='utf-8') as f:
@@ -750,7 +753,8 @@ class SouthernArchitectVocabularyProcessor:
             
             # Save updated JSON
             json_filename = f"{self.workflow_type}_workflow.json"
-            json_path = os.path.join(self.folder_path, json_filename)
+            metadata_dir = os.path.join(self.folder_path, "metadata", "collection_metadata")
+            json_path = os.path.join(metadata_dir, json_filename)
             
             with open(json_path, 'w', encoding='utf-8') as f:
                 json.dump(updated_items, f, indent=2, ensure_ascii=False)
@@ -837,7 +841,9 @@ class SouthernArchitectVocabularyProcessor:
     def create_vocabulary_mapping_report(self, selection_results: Dict[int, Dict[str, Any]]) -> bool:
         """Create vocabulary mapping report showing original terms organized by topic with checkmarks for chosen ones."""
         try:
-            report_path = os.path.join(self.folder_path, "vocabulary_mapping_report.txt")
+            # Save vocabulary report in the collection_metadata folder
+            metadata_dir = os.path.join(self.folder_path, "metadata", "collection_metadata")
+            report_path = os.path.join(metadata_dir, "vocabulary_mapping_report.txt")
             
             # Skip the last item if it's API stats
             data_items = self.json_data[:-1] if self.json_data and 'api_stats' in self.json_data[-1] else self.json_data
@@ -970,8 +976,8 @@ class SouthernArchitectVocabularyProcessor:
     def create_page_metadata_files(self) -> bool:
         """Create individual page metadata files with geographic entities included."""
         try:
-            # Create page_level_metadata folder
-            output_folder = os.path.join(self.folder_path, "page_level_metadata")
+            # Create page_metadata folder inside metadata
+            output_folder = os.path.join(self.folder_path, "metadata", "page_metadata")
             os.makedirs(output_folder, exist_ok=True)
             
             # Skip the last item if it's API stats
@@ -1124,11 +1130,15 @@ class SouthernArchitectVocabularyProcessor:
             
             print(f"Found {len(issues)} unique issues: {list(issues.keys())}")
             
+            # Create issue_metadata folder inside metadata
+            issue_metadata_dir = os.path.join(self.folder_path, "metadata", "issue_metadata")
+            os.makedirs(issue_metadata_dir, exist_ok=True)
+
             # Create separate index file for each issue
             for folder_name, entries in issues.items():
                 # Create filename and path
                 toc_filename = f"{folder_name}_Issue_Content_Index.txt"
-                toc_path = os.path.join(self.folder_path, toc_filename)
+                toc_path = os.path.join(issue_metadata_dir, toc_filename)
                 
                 with open(toc_path, 'w', encoding='utf-8') as f:
                     f.write(f"ISSUE CONTENT INDEX: {folder_name}\n")
@@ -1333,9 +1343,10 @@ class SouthernArchitectVocabularyProcessor:
         # Show which issue content index files were created
         data_items = self.json_data[:-1] if self.json_data and 'api_stats' in self.json_data[-1] else self.json_data
         unique_issues = set(entry.get('folder', 'Unknown') for entry in data_items)
+        issue_metadata_dir = os.path.join(self.folder_path, "metadata", "issue_metadata")
         for issue in sorted(unique_issues):
             toc_filename = f"{issue}_Issue_Content_Index.txt"
-            print(f"  Issue index: {os.path.join(self.folder_path, toc_filename)}")
+            print(f"  Issue index: {os.path.join(issue_metadata_dir, toc_filename)}")
 
         return True
 
@@ -1363,7 +1374,9 @@ def main():
     args = parser.parse_args()
     
     # Default base directory for Southern Architect output folders
-    base_output_dir = "/Users/hannahmoutran/Desktop/southern_architect/CODE/output_folders"
+    # Get script directory and build path to output folders
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    base_output_dir = os.path.join(script_dir, "output_folders")
     
     if args.folder:
         if not os.path.exists(args.folder):

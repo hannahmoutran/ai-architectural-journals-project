@@ -127,28 +127,46 @@ def collect_all_files(input_folder):
     return all_files
 
 def postprocess_api_response(response_data):
-    """Post-process the API response for consistency."""
+    """Post-process the API response for consistency - updated for geographic entities."""
+    
+    # Helper function to convert string to list if needed
+    def ensure_list(field_value):
+        if isinstance(field_value, str):
+            # Split by comma and clean up each item
+            items = [item.strip() for item in field_value.split(',') if item.strip()]
+            return items
+        elif isinstance(field_value, list):
+            return field_value
+        else:
+            return []
+    
     # Handle named entities
     if 'namedEntities' in response_data:
+        response_data['namedEntities'] = ensure_list(response_data['namedEntities'])
         # Remove duplicates while preserving order
         response_data['namedEntities'] = list(dict.fromkeys(response_data['namedEntities']))
-        
         # Remove any entities that are just single letters or numbers
-        response_data['namedEntities'] = [entity for entity in response_data['namedEntities'] if len(entity) > 1 or not entity.isalnum()]
+        response_data['namedEntities'] = [entity for entity in response_data['namedEntities'] 
+                                        if len(entity) > 1 or not entity.isalnum()]
     
     # Handle geographic entities
     if 'geographicEntities' in response_data:
+        response_data['geographicEntities'] = ensure_list(response_data['geographicEntities'])
         # Remove duplicates while preserving order
         response_data['geographicEntities'] = list(dict.fromkeys(response_data['geographicEntities']))
-        
         # Remove any entities that are just single letters or numbers
-        response_data['geographicEntities'] = [entity for entity in response_data['geographicEntities'] if len(entity) > 1 or not entity.isalnum()]
+        response_data['geographicEntities'] = [entity for entity in response_data['geographicEntities'] 
+                                             if len(entity) > 1 or not entity.isalnum()]
+    
+    # Handle topics field (also ensure it's a list)
+    if 'topics' in response_data:
+        response_data['topics'] = ensure_list(response_data['topics'])
     
     # Handle subjects field variations - convert all to 'topics'
     if 'subjects' in response_data and 'topics' not in response_data:
-        response_data['topics'] = response_data.pop('subjects')
+        response_data['topics'] = ensure_list(response_data.pop('subjects'))
     elif 'subjectHeadings' in response_data and 'topics' not in response_data:
-        response_data['topics'] = response_data.pop('subjectHeadings')
+        response_data['topics'] = ensure_list(response_data.pop('subjectHeadings'))
     
     # Ensure 'contentWarning' field exists and is properly formatted
     if 'contentWarning' not in response_data:
@@ -199,7 +217,7 @@ def parse_json_response(raw_response):
 
 @tenacity.retry(
     wait=tenacity.wait_exponential(multiplier=1, min=4, max=10),
-    stop=tenacity.stop_after_attempt(5),
+    stop=tenacity.stop_after_attempt(3),
     retry=tenacity.retry_if_exception_type(Exception)
 )
 
@@ -248,7 +266,7 @@ def process_single_file(file_path, folder_name, page_number, content, model_name
     
     # Use the new parsing function
     parsed_json, error = parse_json_response(raw_response)
-    
+
     if parsed_json:
         # Handle field name variations - convert to 'topics'
         if 'subjects' in parsed_json and 'topics' not in parsed_json:
@@ -275,16 +293,8 @@ def process_single_file(file_path, folder_name, page_number, content, model_name
         return parsed_json, raw_response, response.usage, processing_time
     else:
         logging.error(f"JSON parsing failed for {file_path}: {error}\nRaw response: {raw_response}")
-        # Return error response in expected format
-        error_response = {
-            "cleanedText": raw_response,
-            "tocEntry": f"Error: {error}",
-            "namedEntities": [],
-            "geographicEntities": [],  # NEW
-            "topics": [],
-            "contentWarning": "None"
-        }
-        return error_response, raw_response, response.usage, processing_time
+        # Raise exception to trigger retry
+        raise Exception(f"JSON parsing failed: {error}")
 
 def process_folder_individual(all_files, wb, analysis_sheet, raw_sheet, issues_sheet, logs_folder_path, model_name, all_results, output_dir):
     """Process using individual API calls."""
@@ -647,7 +657,9 @@ def main():
     # Start timing the entire script execution
     script_start_time = time.time()
     
-    input_folder = "/Users/hannahmoutran/Desktop/southern_architect/CODE/image_folders/4_pages"
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    input_folder_name = "4_pages"  # Change this to whichever folder you want
+    input_folder = os.path.join(script_dir, "image_folders", input_folder_name)
     
     # Create dynamic output folder name
     current_date = datetime.now().strftime("%Y-%m-%d")
@@ -657,12 +669,16 @@ def main():
     folder_name = f"SABN_Metadata_Created_{current_date}_Time_{current_time}"
 
     # Create the full output directory path
-    base_output_dir = "/Users/hannahmoutran/Desktop/southern_architect/CODE/output_folders"
+    base_output_dir = os.path.join(script_dir, "output_folders")
     output_dir = os.path.join(base_output_dir, folder_name)
     
     # Create the directory
     os.makedirs(output_dir, exist_ok=True)
     
+    # Create metadata folder structure
+    metadata_folder = os.path.join(output_dir, "metadata", "collection_metadata")
+    os.makedirs(metadata_folder, exist_ok=True)
+
     print(f"Output directory: {output_dir}")
     
     # Process folder
@@ -688,8 +704,8 @@ def main():
         stats_sheet.append([key, value])
     
     # Save files
-    excel_path = os.path.join(output_dir, "text_workflow.xlsx")
-    json_path = os.path.join(output_dir, "text_workflow.json")
+    excel_path = os.path.join(metadata_folder, "image_workflow.xlsx")
+    json_path = os.path.join(metadata_folder, "image_workflow.json")
     
     wb.save(excel_path)
     with open(json_path, 'w') as f:

@@ -1077,20 +1077,21 @@ class SouthernArchitectEnhancer:
     
     def detect_workflow_type(self) -> bool:
         """Detect whether this is a text or image workflow folder."""
-        # Check for expected files
+        # Check for expected files in the metadata/collection_metadata subfolder
+        metadata_dir = os.path.join(self.folder_path, "metadata", "collection_metadata")
         text_files = ['text_workflow.xlsx', 'text_workflow.json']
         image_files = ['image_workflow.xlsx', 'image_workflow.json']
         
-        has_text_files = all(os.path.exists(os.path.join(self.folder_path, f)) for f in text_files)
-        has_image_files = all(os.path.exists(os.path.join(self.folder_path, f)) for f in image_files)
-        
+        has_text_files = all(os.path.exists(os.path.join(metadata_dir, f)) for f in text_files)
+        has_image_files = all(os.path.exists(os.path.join(metadata_dir, f)) for f in image_files)
+            
         if has_text_files and not has_image_files:
             self.workflow_type = 'text'
-            self.excel_path = os.path.join(self.folder_path, 'text_workflow.xlsx')
+            self.excel_path = os.path.join(self.folder_path, "metadata", "collection_metadata", "text_workflow.xlsx")
             return True
         elif has_image_files and not has_text_files:
             self.workflow_type = 'image'
-            self.excel_path = os.path.join(self.folder_path, 'image_workflow.xlsx')
+            self.excel_path = os.path.join(self.folder_path, "metadata", "collection_metadata", "image_workflow.xlsx")
             return True
         elif has_text_files and has_image_files:
             logging.error("Both text and image workflow files found. Please specify workflow type.")
@@ -1101,9 +1102,11 @@ class SouthernArchitectEnhancer:
     
     def load_json_data(self) -> bool:
         """Load the JSON data from the appropriate workflow file."""
+        # Save the enhanced JSON in the collection_metadata folder
         json_filename = f"{self.workflow_type}_workflow.json"
-        json_path = os.path.join(self.folder_path, json_filename)
-        
+        collection_metadata_dir = os.path.join(self.folder_path, "metadata", "collection_metadata")
+        json_path = os.path.join(collection_metadata_dir, json_filename)
+
         try:
             with open(json_path, 'r', encoding='utf-8') as f:
                 self.json_data = json.load(f)
@@ -1428,7 +1431,9 @@ class SouthernArchitectEnhancer:
             
             # Save the enhanced JSON
             json_filename = f"{self.workflow_type}_workflow.json"
-            json_path = os.path.join(self.folder_path, json_filename)
+            # Saves in collection_metadata folder
+            collection_metadata_dir = os.path.join(self.folder_path, "metadata", "collection_metadata")
+            json_path = os.path.join(collection_metadata_dir, json_filename)
             
             with open(json_path, 'w', encoding='utf-8') as f:
                 json.dump(enhanced_items, f, indent=2, ensure_ascii=False)
@@ -1443,7 +1448,9 @@ class SouthernArchitectEnhancer:
                              geographic_to_terms: Dict[str, str]) -> bool:
         """Create a detailed vocabulary mapping report organized by page for both topics and geographic entities."""
         try:
-            report_path = os.path.join(self.folder_path, "vocabulary_mapping_report.txt")
+            # Save vocabulary report in the collection_metadata folder
+            collection_metadata_dir = os.path.join(self.folder_path, "metadata", "collection_metadata")
+            report_path = os.path.join(collection_metadata_dir, "vocabulary_mapping_report.txt")
             
             # Create mappings of page number to topics/geographic entities and folder info
             page_to_topics = defaultdict(list)
@@ -1839,7 +1846,8 @@ def main():
     args = parser.parse_args()
     
     # Default base directory for Southern Architect output folders
-    base_output_dir = "/Users/hannahmoutran/Desktop/southern_architect/CODE/output_folders"
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    base_output_dir = os.path.join(script_dir, "output_folders")
     
     if args.folder:
         if not os.path.exists(args.folder):

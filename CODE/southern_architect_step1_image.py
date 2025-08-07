@@ -78,27 +78,45 @@ def parse_json_response(raw_response):
 
 def postprocess_api_response(response_data):
     """Post-process the API response for consistency - updated for geographic entities."""
+    
+    # Helper function to convert string to list if needed
+    def ensure_list(field_value):
+        if isinstance(field_value, str):
+            # Split by comma and clean up each item
+            items = [item.strip() for item in field_value.split(',') if item.strip()]
+            return items
+        elif isinstance(field_value, list):
+            return field_value
+        else:
+            return []
+    
     # Handle named entities
     if 'namedEntities' in response_data:
+        response_data['namedEntities'] = ensure_list(response_data['namedEntities'])
         # Remove duplicates while preserving order
         response_data['namedEntities'] = list(dict.fromkeys(response_data['namedEntities']))
-        
         # Remove any entities that are just single letters or numbers
-        response_data['namedEntities'] = [entity for entity in response_data['namedEntities'] if len(entity) > 1 or not entity.isalnum()]
+        response_data['namedEntities'] = [entity for entity in response_data['namedEntities'] 
+                                        if len(entity) > 1 or not entity.isalnum()]
     
-    # Handle geographic entities (NEW)
+    # Handle geographic entities
     if 'geographicEntities' in response_data:
+        response_data['geographicEntities'] = ensure_list(response_data['geographicEntities'])
         # Remove duplicates while preserving order
         response_data['geographicEntities'] = list(dict.fromkeys(response_data['geographicEntities']))
-        
         # Remove any entities that are just single letters or numbers
-        response_data['geographicEntities'] = [entity for entity in response_data['geographicEntities'] if len(entity) > 1 or not entity.isalnum()]
+        response_data['geographicEntities'] = [entity for entity in response_data['geographicEntities'] 
+                                             if len(entity) > 1 or not entity.isalnum()]
+    
+    # Handle topics field (also ensure it's a list)
+    if 'topics' in response_data:
+        response_data['topics'] = ensure_list(response_data['topics'])
     
     # Handle subjects field variations - convert all to 'topics'
     if 'subjects' in response_data and 'topics' not in response_data:
-        response_data['topics'] = response_data.pop('subjects')
+        response_data['topics'] = ensure_list(response_data.pop('subjects'))
     elif 'subjectHeadings' in response_data and 'topics' not in response_data:
-        response_data['topics'] = response_data.pop('subjectHeadings')
+        response_data['topics'] = ensure_list(response_data.pop('subjectHeadings'))
     
     # Ensure 'contentWarning' field exists and is properly formatted
     if 'contentWarning' not in response_data:
@@ -172,7 +190,7 @@ def collect_all_images(input_folder):
 
 @tenacity.retry(
     wait=tenacity.wait_exponential(multiplier=1, min=4, max=10),
-    stop=tenacity.stop_after_attempt(5),
+    stop=tenacity.stop_after_attempt(3),
     retry=tenacity.retry_if_exception_type(Exception)
 )
 def process_image(image_path, model_name="gpt-4o-2024-08-06"):
@@ -206,7 +224,7 @@ def process_image(image_path, model_name="gpt-4o-2024-08-06"):
     
     # Use enhanced parsing function
     parsed_json, error = parse_json_response(raw_response)
-    
+
     if parsed_json:
         # Handle field name variations - convert to 'topics'
         if 'subjects' in parsed_json and 'topics' not in parsed_json:
@@ -215,7 +233,7 @@ def process_image(image_path, model_name="gpt-4o-2024-08-06"):
             parsed_json['topics'] = parsed_json.pop('subjectHeadings')
         
         required_fields = ['textTranscription', 'visualDescription', 'tocEntry', 
-                  'namedEntities', 'geographicEntities', 'topics', 'contentWarning']
+                'namedEntities', 'geographicEntities', 'topics', 'contentWarning']
         
         # Check for required fields, handle missing ones gracefully
         for field in required_fields:
@@ -234,17 +252,8 @@ def process_image(image_path, model_name="gpt-4o-2024-08-06"):
         return parsed_json, raw_response, response.usage, processing_time
     else:
         logging.error(f"JSON parsing failed for {image_path}: {error}\nRaw response: {raw_response}")
-        # Return error response in expected format
-        error_response = {
-            "textTranscription": raw_response,
-            "visualDescription": f"Error: {error}",
-            "tocEntry": f"Error: {error}",
-            "namedEntities": [],
-            "geographicEntities": [], 
-            "topics": [],
-            "contentWarning": "None"
-        }
-        return error_response, raw_response, response.usage, processing_time
+        # Raise exception to trigger retry
+        raise Exception(f"JSON parsing failed: {error}")
 
 def process_folder_with_batch(input_folder, output_dir, model_name="gpt-4o-2024-08-06"):
     """Process folder using batch processing when appropriate."""
@@ -258,7 +267,7 @@ def process_folder_with_batch(input_folder, output_dir, model_name="gpt-4o-2024-
     all_images = collect_all_images(input_folder)
     total_items = len(all_images)
     
-    print(f"\n SOUTHERN ARCHITECT IMAGE METADATA EXTRACTION")
+    print(f"\nSOUTHERN ARCHITECT IMAGE METADATA EXTRACTION")
     print(f"Found {total_items} images to process")
     print(f"Starting metadata extraction using {model_name}...")
     print("-" * 50)
@@ -648,7 +657,9 @@ def main():
     # Start timing the entire script execution
     script_start_time = time.time()
     
-    input_folder = "/Users/hannahmoutran/Desktop/southern_architect/CODE/image_folders/20_pages"
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    input_folder_name = "two_issue_test"  # Change this to whichever folder you want
+    input_folder = os.path.join(script_dir, "image_folders", input_folder_name)
     
     # Create dynamic output folder name
     current_date = datetime.now().strftime("%Y-%m-%d")
@@ -658,13 +669,17 @@ def main():
     folder_name = f"SABN_Metadata_Created_{current_date}_Time_{current_time}"
     
     # Create the full output directory path
-    base_output_dir = "/Users/hannahmoutran/Desktop/southern_architect/CODE/output_folders"
+    base_output_dir = os.path.join(script_dir, "output_folders")
     output_dir = os.path.join(base_output_dir, folder_name)
     
     # Create the directory
     os.makedirs(output_dir, exist_ok=True)
-    
-    print(f" Output directory: {output_dir}")
+
+    # Create metadata folder structure
+    metadata_folder = os.path.join(output_dir, "metadata", "collection_metadata")
+    os.makedirs(metadata_folder, exist_ok=True)
+
+    print(f"Output directory: {output_dir}")
     
     # Process folder with enhanced logging
     (wb, all_results, api_stats, total_items, items_with_issues, total_processing_time,
@@ -689,8 +704,8 @@ def main():
         stats_sheet.append([key, value])
     
     # Save files
-    excel_path = os.path.join(output_dir, "image_workflow.xlsx")
-    json_path = os.path.join(output_dir, "image_workflow.json")
+    excel_path = os.path.join(metadata_folder, "image_workflow.xlsx")
+    json_path = os.path.join(metadata_folder, "image_workflow.json")
     
     wb.save(excel_path)
     with open(json_path, 'w') as f:

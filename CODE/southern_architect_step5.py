@@ -40,8 +40,9 @@ class EntityAuthority:
         text_files = ['text_workflow.xlsx', 'text_workflow.json']
         image_files = ['image_workflow.xlsx', 'image_workflow.json']
         
-        has_text_files = all(os.path.exists(os.path.join(self.folder_path, f)) for f in text_files)
-        has_image_files = all(os.path.exists(os.path.join(self.folder_path, f)) for f in image_files)
+        metadata_dir = os.path.join(self.folder_path, "metadata", "collection_metadata")
+        has_text_files = all(os.path.exists(os.path.join(metadata_dir, f)) for f in text_files)
+        has_image_files = all(os.path.exists(os.path.join(metadata_dir, f)) for f in image_files)
         
         if has_text_files and not has_image_files:
             self.workflow_type = 'text'
@@ -54,7 +55,8 @@ class EntityAuthority:
     def load_json_data(self) -> bool:
         """Load JSON data."""
         json_filename = f"{self.workflow_type}_workflow.json"
-        json_path = os.path.join(self.folder_path, json_filename)
+        metadata_dir = os.path.join(self.folder_path, "metadata", "collection_metadata")
+        json_path = os.path.join(metadata_dir, json_filename)
         
         try:
             with open(json_path, 'r', encoding='utf-8') as f:
@@ -294,7 +296,8 @@ class EntityAuthority:
     def create_authority_file(self, entity_records: Dict) -> bool:
         """Create comprehensive authority file."""
         try:
-            authority_path = os.path.join(self.folder_path, "southern_architect_entity_authority.json")
+            metadata_dir = os.path.join(self.folder_path, "metadata", "collection_metadata")
+            authority_path = os.path.join(metadata_dir, "southern_architect_entity_authority.json")
             
             # Create structured authority data
             authority_data = {
@@ -379,7 +382,8 @@ class EntityAuthority:
     def create_human_readable_report(self, entity_records: Dict) -> bool:
         """Create human-readable authority report."""
         try:
-            report_path = os.path.join(self.folder_path, "entity_authority_report.txt")
+            metadata_dir = os.path.join(self.folder_path, "metadata", "collection_metadata")
+            report_path = os.path.join(metadata_dir, "entity_authority_report.txt")
             
             with open(report_path, 'w', encoding='utf-8') as f:
                 f.write("SOUTHERN ARCHITECT ENTITY AUTHORITY REPORT\n")
@@ -519,7 +523,8 @@ def main():
     args = parser.parse_args()
     
     # Default base directory for Southern Architect output folders
-    base_output_dir = "/Users/hannahmoutran/Desktop/southern_architect/CODE/output_folders"
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    base_output_dir = os.path.join(script_dir, "output_folders")
     
     if args.folder:
         if not os.path.exists(args.folder):

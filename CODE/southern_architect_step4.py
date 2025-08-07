@@ -170,8 +170,9 @@ class SouthernArchitectIssueSynthesizer:
         text_files = ['text_workflow.xlsx', 'text_workflow.json']
         image_files = ['image_workflow.xlsx', 'image_workflow.json']
         
-        has_text_files = all(os.path.exists(os.path.join(self.folder_path, f)) for f in text_files)
-        has_image_files = all(os.path.exists(os.path.join(self.folder_path, f)) for f in image_files)
+        metadata_dir = os.path.join(self.folder_path, "metadata", "collection_metadata")
+        has_text_files = all(os.path.exists(os.path.join(metadata_dir, f)) for f in text_files)
+        has_image_files = all(os.path.exists(os.path.join(metadata_dir, f)) for f in image_files)
         
         if has_text_files and not has_image_files:
             self.workflow_type = 'text'
@@ -182,7 +183,7 @@ class SouthernArchitectIssueSynthesizer:
             return False
         
         # Check if step 3 has been run (page metadata generation)
-        page_metadata_folder = os.path.join(self.folder_path, 'page_level_metadata')
+        page_metadata_folder = os.path.join(self.folder_path, 'metadata', 'page_metadata')
         if not os.path.exists(page_metadata_folder):
             logging.error("Page metadata generation (step 3) must be run before step 4.")
             return False
@@ -192,8 +193,12 @@ class SouthernArchitectIssueSynthesizer:
     def find_issue_content_index_files(self) -> bool:
         """Find all issue content index files created in step 3."""
         # Look for files ending with "_Issue_Content_Index.txt"
-        issue_content_index_files = [f for f in os.listdir(self.folder_path) if f.endswith('_Issue_Content_Index.txt')]
-
+        issue_metadata_dir = os.path.join(self.folder_path, "metadata", "issue_metadata")
+        if not os.path.exists(issue_metadata_dir):
+            logging.error("Issue metadata folder not found. Please run step 3 first.")
+            return False
+        issue_content_index_files = [f for f in os.listdir(issue_metadata_dir) if f.endswith('_Issue_Content_Index.txt')]
+        
         if not issue_content_index_files:
             logging.error("No issue content index files found. Please run step 3 first.")
             return False
@@ -201,7 +206,8 @@ class SouthernArchitectIssueSynthesizer:
         # Store all files for processing
         self.issue_content_index_files = []
         for filename in issue_content_index_files:
-            full_path = os.path.join(self.folder_path, filename)
+            issue_metadata_dir = os.path.join(self.folder_path, "metadata", "issue_metadata")
+            full_path = os.path.join(issue_metadata_dir, filename)
             self.issue_content_index_files.append(full_path)
         
         print(f"Found {len(issue_content_index_files)} issue content index files:")
@@ -213,7 +219,8 @@ class SouthernArchitectIssueSynthesizer:
     def load_json_data(self) -> bool:
         """Load JSON data to extract chosen vocabulary terms."""
         json_filename = f"{self.workflow_type}_workflow.json"
-        json_path = os.path.join(self.folder_path, json_filename)
+        metadata_dir = os.path.join(self.folder_path, "metadata", "collection_metadata")
+        json_path = os.path.join(metadata_dir, json_filename)
         
         try:
             with open(json_path, 'r', encoding='utf-8') as f:
@@ -490,7 +497,8 @@ class SouthernArchitectIssueSynthesizer:
             
             # Save updated JSON
             json_filename = f"{self.workflow_type}_workflow.json"
-            json_path = os.path.join(self.folder_path, json_filename)
+            metadata_dir = os.path.join(self.folder_path, "metadata", "collection_metadata")
+            json_path = os.path.join(metadata_dir, json_filename)
             
             with open(json_path, 'w', encoding='utf-8') as f:
                 json.dump(self.json_data, f, indent=2, ensure_ascii=False)
@@ -553,7 +561,7 @@ class SouthernArchitectIssueSynthesizer:
             return False
 
         # Create issue_metadata folder
-        issue_metadata_folder = os.path.join(self.folder_path, "issue_metadata")
+        issue_metadata_folder = os.path.join(self.folder_path, "metadata", "issue_metadata")
         os.makedirs(issue_metadata_folder, exist_ok=True)
         print(f"Created issue metadata folder: {issue_metadata_folder}")
 
@@ -669,7 +677,9 @@ def main():
     args = parser.parse_args()
     
     # Default base directory for Southern Architect output folders
-    base_output_dir = "/Users/hannahmoutran/Desktop/southern_architect/CODE/output_folders"
+    # Get script directory and build path to output folders
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    base_output_dir = os.path.join(script_dir, "output_folders")
     
     if args.folder:
         if not os.path.exists(args.folder):
