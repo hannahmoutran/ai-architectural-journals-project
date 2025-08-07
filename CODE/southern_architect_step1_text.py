@@ -704,8 +704,8 @@ def main():
         stats_sheet.append([key, value])
     
     # Save files
-    excel_path = os.path.join(metadata_folder, "image_workflow.xlsx")
-    json_path = os.path.join(metadata_folder, "image_workflow.json")
+    excel_path = os.path.join(metadata_folder, "text_workflow.xlsx")
+    json_path = os.path.join(metadata_folder, "text_workflow.json")
     
     wb.save(excel_path)
     with open(json_path, 'w') as f:

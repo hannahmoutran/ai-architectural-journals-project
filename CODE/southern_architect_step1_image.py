@@ -658,7 +658,7 @@ def main():
     script_start_time = time.time()
     
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    input_folder_name = "two_issue_test"  # Change this to whichever folder you want
+    input_folder_name = "4_pages"  # Change this to whichever folder you want
     input_folder = os.path.join(script_dir, "image_folders", input_folder_name)
     
     # Create dynamic output folder name

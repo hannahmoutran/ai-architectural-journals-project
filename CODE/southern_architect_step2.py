@@ -12,6 +12,7 @@ from typing import List, Dict, Any, Optional, Tuple
 from openpyxl import load_workbook
 from openpyxl.styles import Alignment
 from collections import defaultdict
+import re
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -1154,8 +1155,68 @@ class SouthernArchitectEnhancer:
         
         return sorted(list(all_subjects)), sorted(list(all_geographic_entities))
     
-    def process_multi_vocabulary_lookup(self, subjects: List[str], geographic_entities: List[str]) -> Tuple[Dict[str, str], Dict[str, List[Dict[str, str]]], Dict[str, str], Dict[str, List[Dict[str, str]]]]:
-        """Process multi-vocabulary lookup for subjects and geographic entities."""
+    def extract_chronological_terms_from_issues(self) -> List[str]:
+        """Extract chronological terms dynamically from issue folder names."""
+        
+        # Skip API stats for processing
+        data_items = self.json_data[:-1] if self.json_data and 'api_stats' in self.json_data[-1] else self.json_data
+        
+        # Collect all unique years from folder names
+        years_found = set()
+        for item in data_items:
+            folder_name = item.get('folder', '')
+            # Extract 4-digit year from folder name (e.g., "1923-10-24" -> "1923")
+            year_match = re.search(r'\b(18\d{2}|19\d{2})\b', folder_name)
+            if year_match:
+                years_found.add(int(year_match.group(1)))
+        
+        if not years_found:
+            print("No years found in folder names")
+            return []
+        
+        print(f"Found years in collection: {sorted(years_found)}")
+        
+        # Generate chronological terms
+        chronological_terms = set()
+        decades_found = set()
+        centuries_found = set()
+        
+        for year in years_found:
+            # Determine decade and century
+            decade = (year // 10) * 10  # e.g., 1923 -> 1920
+            century = 19 if year < 1900 else 20
+            
+            decades_found.add(decade)
+            centuries_found.add(century)
+        
+        # Map decades to LCSH spelled-out format
+        decade_mapping = {
+            1890: "Eighteen nineties",
+            1900: "Nineteen hundreds (Decade)",  # 1900-1909
+            1910: "Nineteen tens", 
+            1920: "Nineteen twenties",
+            1930: "Nineteen thirties"
+        }
+        
+        # Add decade terms
+        for decade in decades_found:
+            lcsh_decade = decade_mapping.get(decade)
+            if lcsh_decade:
+                chronological_terms.add(lcsh_decade)
+                print(f"  Adding decade term: {lcsh_decade}")
+        
+        # Add architecture-specific century terms
+        for century in centuries_found:
+            if century == 19:
+                chronological_terms.add("Architecture--United States--History--19th century")
+                print(f"  Adding architecture century term: Architecture--United States--History--19th century")
+            elif century == 20:
+                chronological_terms.add("Architecture--United States--History--20th century") 
+                print(f"  Adding architecture century term: Architecture--United States--History--20th century")
+        
+        return list(chronological_terms)
+    def process_multi_vocabulary_lookup(self, subjects: List[str], geographic_entities: List[str], chronological_terms: List[str]) -> Tuple[Dict[str, str], Dict[str, List[Dict[str, str]]], Dict[str, str], Dict[str, List[Dict[str, str]]], Dict[str, str], Dict[str, List[Dict[str, str]]]]:
+        """Process multi-vocabulary lookup for subjects, geographic entities, and chronological terms."""
         
         print(f"\nProcessing multi-vocabulary lookup...")
         print(f"API calls will be logged to: {self.logs_folder_path}")
@@ -1218,7 +1279,71 @@ class SouthernArchitectEnhancer:
             geographic_to_terms_excel[entity] = formatted_terms_excel
             geographic_to_terms_json[entity] = formatted_terms_json
         
-        return subject_to_terms_excel, subject_to_terms_json, geographic_to_terms_excel, geographic_to_terms_json
+            # Process chronological terms - search LCSH for actual URIs with quoted searches
+            chronological_to_terms_excel = {}
+            chronological_to_terms_json = {}
+
+            for chronological_term in chronological_terms:
+                print(f"\nProcessing chronological term: '{chronological_term}'")
+                
+                # Search LCSH for this chronological term with quotes for exact match
+                quoted_term = f'"{chronological_term}"'  # Add quotes for exact matching
+                lcsh_results = self.lcsh_finder.find_terms([quoted_term])
+                
+                if quoted_term in lcsh_results and lcsh_results[quoted_term]:
+                    # Found LCSH term with URI using quoted search
+                    lcsh_terms = lcsh_results[quoted_term][:1]  # Only take 1 term
+                    
+                    # Update the label to remove quotes from display
+                    for term in lcsh_terms:
+                        term['label'] = chronological_term  # Use original unquoted term for display
+                    
+                    # Format results for this chronological term
+                    formatted_terms_excel = self.format_results_for_excel(lcsh_terms)
+                    formatted_terms_json = self.format_results_for_json(lcsh_terms)
+                    
+                    chronological_to_terms_excel[chronological_term] = formatted_terms_excel
+                    chronological_to_terms_json[chronological_term] = formatted_terms_json
+                    
+                    print(f"   Found LCSH chronological term with URI (quoted search): {chronological_term}")
+                else:
+                    # If quoted search fails, try without quotes as fallback
+                    lcsh_results_unquoted = self.lcsh_finder.find_terms([chronological_term])
+                    
+                    if chronological_term in lcsh_results_unquoted and lcsh_results_unquoted[chronological_term]:
+                        # Found with unquoted search
+                        lcsh_terms = lcsh_results_unquoted[chronological_term][:1]  # Only take 1 term
+                        
+                        # Format results for this chronological term
+                        formatted_terms_excel = self.format_results_for_excel(lcsh_terms)
+                        formatted_terms_json = self.format_results_for_json(lcsh_terms)
+                        
+                        chronological_to_terms_excel[chronological_term] = formatted_terms_excel
+                        chronological_to_terms_json[chronological_term] = formatted_terms_json
+                        
+                        print(f"   Found LCSH chronological term with URI (unquoted fallback): {chronological_term}")
+                    else:
+                        # Fallback: create term without URI if not found in LCSH at all
+                        term_object = {
+                            'label': chronological_term,
+                            'uri': '',  # No URI available
+                            'source': 'LCSH Chronological (generated)',
+                            'description': f'Generated chronological term for Southern Architect collection',
+                            'type': 'chronological'
+                        }
+                        
+                        # Format for Excel and JSON
+                        formatted_excel = f"{chronological_term} [{term_object['source']}]"
+                        formatted_json = [term_object]
+                        
+                        chronological_to_terms_excel[chronological_term] = formatted_terms_excel
+                        chronological_to_terms_json[chronological_term] = formatted_json
+                        
+                        print(f"   Created chronological term without URI: {chronological_term}")
+        
+        return (subject_to_terms_excel, subject_to_terms_json, 
+            geographic_to_terms_excel, geographic_to_terms_json,
+            chronological_to_terms_excel, chronological_to_terms_json)
     
     def format_results_for_excel(self, terms: List[Dict[str, str]]) -> str:
         """Format results for spreadsheet display with labels, URIs, and sources."""
@@ -1263,8 +1388,8 @@ class SouthernArchitectEnhancer:
         
         return formatted_terms
     
-    def enhance_excel_file(self, subject_to_terms: Dict[str, str], geographic_to_terms: Dict[str, str]) -> bool:
-        """Add vocabulary terms columns to the Excel file for both topics and geographic entities."""
+    def enhance_excel_file(self, subject_to_terms: Dict[str, str], geographic_to_terms: Dict[str, str], chronological_to_terms: Dict[str, str]) -> bool:
+        """Add vocabulary terms columns to the Excel file for both topics, geographic entities, and chronological terms."""
         try:
             # Load the existing workbook
             wb = load_workbook(self.excel_path)
@@ -1280,8 +1405,8 @@ class SouthernArchitectEnhancer:
                 geo_col = 8       # Geographic Entities column
                 insert_col = 10   # Insert vocabulary terms after Content Warning (column 10)
             
-            # Insert two new columns (one for topic vocab terms, one for geographic vocab terms)
-            analysis_sheet.insert_cols(insert_col, 2)
+            # Insert THREE new columns (one for topic vocab terms, one for geographic vocab terms, one for chronological terms)
+            analysis_sheet.insert_cols(insert_col, 3)
             
             # Add headers
             topic_vocab_header = analysis_sheet.cell(row=1, column=insert_col)
@@ -1292,11 +1417,18 @@ class SouthernArchitectEnhancer:
             geo_vocab_header.value = "Geographic Vocabulary Terms (FAST only)"
             geo_vocab_header.alignment = Alignment(vertical='top', wrap_text=True)
             
+            # NEW: Add chronological terms header
+            chrono_vocab_header = analysis_sheet.cell(row=1, column=insert_col + 2)
+            chrono_vocab_header.value = "Chronological Terms (LCSH)"
+            chrono_vocab_header.alignment = Alignment(vertical='top', wrap_text=True)
+            
             # Set column widths
             topic_col_letter = topic_vocab_header.column_letter
             geo_col_letter = geo_vocab_header.column_letter
+            chrono_col_letter = chrono_vocab_header.column_letter
             analysis_sheet.column_dimensions[topic_col_letter].width = 50
             analysis_sheet.column_dimensions[geo_col_letter].width = 50
+            analysis_sheet.column_dimensions[chrono_col_letter].width = 50
             
             # Process each data row
             processed_rows = 0
@@ -1336,7 +1468,14 @@ class SouthernArchitectEnhancer:
                         else:
                             print(f"  - '{entity}': No geographic terms found")
                 
-                # Remove duplicates while preserving order for both
+                # NEW: Process chronological terms - these apply to ALL rows since they're collection-wide
+                chrono_vocab_terms = []
+                for chrono_term in chronological_to_terms.values():
+                    if chrono_term:  # Only add non-empty terms
+                        terms = [t.strip() for t in chrono_term.split(';') if t.strip()]
+                        chrono_vocab_terms.extend(terms)
+                
+                # Remove duplicates while preserving order for all three types
                 unique_topic_terms = []
                 seen_topic = set()
                 for term in topic_vocab_terms:
@@ -1351,8 +1490,16 @@ class SouthernArchitectEnhancer:
                         unique_geo_terms.append(term)
                         seen_geo.add(term)
                 
+                unique_chrono_terms = []
+                seen_chrono = set()
+                for term in chrono_vocab_terms:
+                    if term not in seen_chrono:
+                        unique_chrono_terms.append(term)
+                        seen_chrono.add(term)
+                
                 print(f"  → Total unique topic terms: {len(unique_topic_terms)}")
                 print(f"  → Total unique geographic terms: {len(unique_geo_terms)}")
+                print(f"  → Total unique chronological terms: {len(unique_chrono_terms)}")
                 
                 # Set the vocabulary terms cell values
                 topic_vocab_cell = analysis_sheet.cell(row=row_num, column=insert_col)
@@ -1363,7 +1510,12 @@ class SouthernArchitectEnhancer:
                 geo_vocab_cell.value = "; ".join(unique_geo_terms) if unique_geo_terms else ""
                 geo_vocab_cell.alignment = Alignment(vertical='top', wrap_text=True)
                 
-                if unique_topic_terms or unique_geo_terms:
+                # NEW: Set chronological terms cell value
+                chrono_vocab_cell = analysis_sheet.cell(row=row_num, column=insert_col + 2)
+                chrono_vocab_cell.value = "; ".join(unique_chrono_terms) if unique_chrono_terms else ""
+                chrono_vocab_cell.alignment = Alignment(vertical='top', wrap_text=True)
+                
+                if unique_topic_terms or unique_geo_terms or unique_chrono_terms:
                     processed_rows += 1
             
             # Save the enhanced workbook
@@ -1376,8 +1528,9 @@ class SouthernArchitectEnhancer:
             return False
     
     def enhance_json_file(self, subject_to_terms_json: Dict[str, List[Dict[str, str]]], 
-                      geographic_to_terms_json: Dict[str, List[Dict[str, str]]]) -> bool:
-        """Add vocabulary search results to JSON file with topic-to-terms and geographic-to-terms mapping."""
+                    geographic_to_terms_json: Dict[str, List[Dict[str, str]]],
+                    chronological_to_terms_json: Dict[str, List[Dict[str, str]]]) -> bool:
+        """Add vocabulary search results to JSON file with topic-to-terms, geographic-to-terms, and chronological terms mapping."""
         try:
             # Skip the last item if it's API stats
             data_items = self.json_data[:-1] if self.json_data and 'api_stats' in self.json_data[-1] else self.json_data
@@ -1385,6 +1538,11 @@ class SouthernArchitectEnhancer:
             
             enhanced_items = []
             processed_items = 0
+            
+            # NEW: Prepare collection-wide chronological terms (same for all items)
+            all_chronological_terms = []
+            for term_list in chronological_to_terms_json.values():
+                all_chronological_terms.extend(term_list)
             
             for item in data_items:
                 if 'analysis' in item:
@@ -1416,11 +1574,13 @@ class SouthernArchitectEnhancer:
                         if entity in geographic_to_terms_json and geographic_to_terms_json[entity]:
                             geographic_to_terms[entity] = geographic_to_terms_json[entity].copy()
                     
-                    # Add both mappings to the analysis
+                    # Add all mappings to the analysis
                     item['analysis']['vocabulary_search_results'] = topic_to_terms
                     item['analysis']['geographic_vocabulary_search_results'] = geographic_to_terms
+                    # NEW: Add chronological terms to all items (they apply to the whole collection)
+                    item['analysis']['chronological_vocabulary_terms'] = all_chronological_terms.copy()
                     
-                    if topic_to_terms or geographic_to_terms:
+                    if topic_to_terms or geographic_to_terms or all_chronological_terms:
                         processed_items += 1
                 
                 enhanced_items.append(item)
@@ -1445,8 +1605,9 @@ class SouthernArchitectEnhancer:
             return False
     
     def create_vocabulary_report(self, subject_to_terms: Dict[str, str], 
-                             geographic_to_terms: Dict[str, str]) -> bool:
-        """Create a detailed vocabulary mapping report organized by page for both topics and geographic entities."""
+                            geographic_to_terms: Dict[str, str], 
+                            chronological_to_terms: Dict[str, str]) -> bool:
+        """Create a detailed vocabulary mapping report organized by page for topics, geographic entities, and chronological terms."""
         try:
             # Save vocabulary report in the collection_metadata folder
             collection_metadata_dir = os.path.join(self.folder_path, "metadata", "collection_metadata")
@@ -1507,6 +1668,8 @@ class SouthernArchitectEnhancer:
                 f.write(f"Workflow Type: {self.workflow_type.upper()}\n")
                 f.write(f"Total Topics Processed: {len(subject_to_terms)}\n")
                 f.write(f"Total Geographic Entities Processed: {len(geographic_to_terms)}\n")
+                # NEW: Add chronological terms count
+                f.write(f"Total Chronological Terms Generated: {len(chronological_to_terms)}\n")
                 f.write(f"Terms Per Vocabulary Limit: {self.max_terms_per_vocabulary}\n")
                 f.write(f"Max Total Terms Per Topic: {self.max_total_terms}\n\n")
                 
@@ -1517,13 +1680,19 @@ class SouthernArchitectEnhancer:
                 f.write("- Getty AAT (Art & Architecture Thesaurus)\n")
                 f.write("- Getty TGN (Thesaurus of Geographic Names)\n")
                 f.write("FOR GEOGRAPHIC ENTITIES:\n")
-                f.write("- FAST Geographic (Faceted Application of Subject Terminology - Geographic)\n\n")
+                f.write("- FAST Geographic (Faceted Application of Subject Terminology - Geographic)\n")
+                # NEW: Add chronological section
+                f.write("FOR CHRONOLOGICAL COVERAGE:\n")
+                f.write("- LCSH (Library of Congress Subject Headings - Generated from issue dates)\n\n")
                 
                 # Statistics
                 topics_with_terms = sum(1 for terms in subject_to_terms.values() if terms)
                 topics_without_terms = len(subject_to_terms) - topics_with_terms
                 geo_with_terms = sum(1 for terms in geographic_to_terms.values() if terms)
                 geo_without_terms = len(geographic_to_terms) - geo_with_terms
+                # NEW: Add chronological statistics
+                chrono_with_terms = sum(1 for terms in chronological_to_terms.values() if terms)
+                chrono_without_terms = len(chronological_to_terms) - chrono_with_terms
                 
                 # Get all pages that have either topics or geographic entities
                 all_pages = set(list(page_to_topics.keys()) + list(page_to_geographic.keys()))
@@ -1540,9 +1709,16 @@ class SouthernArchitectEnhancer:
                 f.write(f"- Geographic entities with vocabulary terms: {geo_with_terms}\n")
                 f.write(f"- Geographic entities without vocabulary terms: {geo_without_terms}\n")
                 if len(geographic_to_terms) > 0:
-                    f.write(f"- Geographic success rate: {(geo_with_terms/len(geographic_to_terms)*100):.1f}%\n\n")
+                    f.write(f"- Geographic success rate: {(geo_with_terms/len(geographic_to_terms)*100):.1f}%\n")
                 else:
-                    f.write("- Geographic success rate: 0%\n\n")
+                    f.write("- Geographic success rate: 0%\n")
+                # NEW: Add chronological statistics
+                f.write(f"- Chronological terms with vocabulary URIs: {chrono_with_terms}\n")
+                f.write(f"- Chronological terms without vocabulary URIs: {chrono_without_terms}\n")
+                if len(chronological_to_terms) > 0:
+                    f.write(f"- Chronological success rate: {(chrono_with_terms/len(chronological_to_terms)*100):.1f}%\n\n")
+                else:
+                    f.write("- Chronological success rate: 0%\n\n")
                 
                 # Count terms by source for topics
                 topic_source_counts = {'LCSH': 0, 'FAST': 0, 'Getty AAT': 0, 'Getty TGN': 0}
@@ -1566,12 +1742,41 @@ class SouthernArchitectEnhancer:
                             if '[FAST Geographic]' in term:
                                 geo_source_counts['FAST Geographic'] += 1
                 
+                # NEW: Count terms by source for chronological terms
+                chrono_source_counts = {'LCSH': 0, 'LCSH Chronological (generated)': 0}
+                for terms_str in chronological_to_terms.values():
+                    if terms_str:
+                        for term in terms_str.split(';'):
+                            if '[LCSH]' in term:
+                                chrono_source_counts['LCSH'] += 1
+                            elif '[LCSH Chronological (generated)]' in term:
+                                chrono_source_counts['LCSH Chronological (generated)'] += 1
+                
                 f.write("TOPIC TERMS BY SOURCE:\n")
                 for source, count in topic_source_counts.items():
                     f.write(f"- {source}: {count} terms\n")
                 f.write("\nGEOGRAPHIC TERMS BY SOURCE:\n")
                 for source, count in geo_source_counts.items():
                     f.write(f"- {source}: {count} terms\n")
+                # NEW: Add chronological terms by source
+                f.write("\nCHRONOLOGICAL TERMS BY SOURCE:\n")
+                for source, count in chrono_source_counts.items():
+                    f.write(f"- {source}: {count} terms\n")
+                f.write("\n")
+                
+                # NEW: Add chronological terms section (collection-wide)
+                f.write("CHRONOLOGICAL TERMS (COLLECTION-WIDE):\n")
+                f.write("-" * 40 + "\n")
+                if chronological_to_terms:
+                    for chrono_term, vocab_terms in sorted(chronological_to_terms.items()):
+                        f.write(f"Chronological Term: {chrono_term}\n")
+                        if vocab_terms:
+                            f.write(f"LCSH Terms: {vocab_terms}\n")
+                        else:
+                            f.write("LCSH Terms: No terms found\n")
+                        f.write("\n")
+                else:
+                    f.write("No chronological terms generated for this collection.\n")
                 f.write("\n")
                 
                 # Page statistics
@@ -1597,9 +1802,15 @@ class SouthernArchitectEnhancer:
                 f.write(f"- Pages with topic vocabulary terms: {pages_with_topic_terms}/{total_pages}\n")
                 f.write(f"- Pages with geographic vocabulary terms: {pages_with_geo_terms}/{total_pages}\n")
                 f.write(f"- Pages with any vocabulary terms: {pages_with_any_terms}/{total_pages}\n")
+                # NEW: Add note about chronological terms
+                f.write(f"- Pages with chronological terms: {total_pages}/{total_pages} (applied to all pages)\n")
                 if total_pages > 0:
                     f.write(f"- Overall page success rate: {(pages_with_any_terms/total_pages*100):.1f}%\n")
                 f.write("\n")
+                
+                # Rest of the existing detailed mappings code stays the same...
+                # (The detailed page-by-page breakdown section doesn't need changes since 
+                # chronological terms are collection-wide, not page-specific)
                 
                 # Detailed mappings organized by page
                 f.write("DETAILED MAPPINGS BY PAGE:\n")
@@ -1619,7 +1830,9 @@ class SouthernArchitectEnhancer:
                     f.write(f"PAGE {page_num} (ISSUE: {folder_name}):\n")
                     
                     if not topics_on_page and not geo_entities_on_page:
-                        f.write("No topics or geographic entities found for this page\n\n")
+                        f.write("No topics or geographic entities found for this page\n")
+                        # NEW: Still mention chronological terms apply
+                        f.write(f"Collection chronological terms apply: {len(chronological_to_terms)} terms\n\n")
                         continue
                     
                     # Show topics for this page
@@ -1631,6 +1844,9 @@ class SouthernArchitectEnhancer:
                     if geo_entities_on_page:
                         unique_geo = list(set(geo_entities_on_page))
                         f.write(f"Geographic entities on this page ({len(unique_geo)}): {', '.join(sorted(unique_geo))}\n")
+                    
+                    # NEW: Show chronological terms (same for all pages)
+                    f.write(f"Collection chronological terms ({len(chronological_to_terms)}): {', '.join(sorted(chronological_to_terms.keys()))}\n")
                     
                     f.write("\n")
                     
@@ -1662,26 +1878,43 @@ class SouthernArchitectEnhancer:
                                 f.write(f"  Terms: No terms found\n")
                             f.write("\n")
                     
+                    # NEW: Show chronological vocabulary terms (same for all pages)
+                    if chronological_to_terms:
+                        f.write("CHRONOLOGICAL VOCABULARY TERMS (COLLECTION-WIDE):\n")
+                        for chrono_term, vocab_terms in sorted(chronological_to_terms.items()):
+                            f.write(f"  Chronological Term: {chrono_term}\n")
+                            if vocab_terms:
+                                f.write(f"  Terms: {vocab_terms}\n")
+                            else:
+                                f.write(f"  Terms: No terms found\n")
+                            f.write("\n")
+                    
                     # Page summary
                     unique_topics_on_page = list(set(topics_on_page)) if topics_on_page else []
                     unique_geo_entities_on_page = list(set(geo_entities_on_page)) if geo_entities_on_page else []
                     
                     topics_with_terms_on_page = sum(1 for topic in unique_topics_on_page if subject_to_terms.get(topic, ''))
                     geo_with_terms_on_page = sum(1 for entity in unique_geo_entities_on_page if geographic_to_terms.get(entity, ''))
+                    # NEW: Add chronological terms to page summary
+                    chrono_with_terms_count = sum(1 for terms in chronological_to_terms.values() if terms)
                     
                     f.write(f"Page Summary:\n")
                     if len(unique_topics_on_page) > 0:
                         f.write(f"  - Topics with vocabulary terms: {topics_with_terms_on_page}/{len(unique_topics_on_page)}\n")
                     if len(unique_geo_entities_on_page) > 0:
                         f.write(f"  - Geographic entities with vocabulary terms: {geo_with_terms_on_page}/{len(unique_geo_entities_on_page)}\n")
+                    # NEW: Add chronological terms to summary
+                    f.write(f"  - Chronological terms available: {chrono_with_terms_count}/{len(chronological_to_terms)}\n")
                     
                     total_items_on_page = len(unique_topics_on_page) + len(unique_geo_entities_on_page)
                     total_with_terms_on_page = topics_with_terms_on_page + geo_with_terms_on_page
                     if total_items_on_page > 0:
-                        f.write(f"  - Overall page success: {total_with_terms_on_page}/{total_items_on_page} ({(total_with_terms_on_page/total_items_on_page*100):.1f}%)\n")
+                        f.write(f"  - Page-specific success: {total_with_terms_on_page}/{total_items_on_page} ({(total_with_terms_on_page/total_items_on_page*100):.1f}%)\n")
+                    f.write(f"  - Collection chronological coverage: {chrono_with_terms_count} terms available\n")
                     
                     f.write("\n" + "-" * 40 + "\n\n")
                 
+                # Rest of the existing reference sections...
                 # Summary by topic (alphabetical) at the end for reference
                 f.write("ALPHABETICAL TOPIC REFERENCE:\n")
                 f.write("-" * 40 + "\n\n")
@@ -1732,13 +1965,27 @@ class SouthernArchitectEnhancer:
                     else:
                         f.write("Terms: No terms found\n")
                     f.write("\n")
+                
+                # NEW: Summary by chronological term (alphabetical) at the end for reference
+                f.write("ALPHABETICAL CHRONOLOGICAL TERM REFERENCE:\n")
+                f.write("-" * 50 + "\n\n")
+                
+                for chrono_term, vocab_terms in sorted(chronological_to_terms.items()):
+                    f.write(f"Chronological Term: {chrono_term}\n")
+                    f.write(f"Applies to: All pages (collection-wide coverage)\n")
+                    
+                    if vocab_terms:
+                        f.write(f"LCSH Terms: {vocab_terms}\n")
+                    else:
+                        f.write("LCSH Terms: No terms found\n")
+                    f.write("\n")
             
             return True
             
         except Exception as e:
             logging.error(f"Error creating vocabulary report: {e}")
             return False
-    
+        
     def run(self) -> bool:
         """Main execution method with comprehensive API logging for topics and geographic entities."""
         print(f"\nSTEP 2 - MULTI-VOCABULARY ENHANCEMENT")
@@ -1760,29 +2007,35 @@ class SouthernArchitectEnhancer:
         
         # Extract topics and geographic entities
         subjects, geographic_entities = self.extract_subject_headings()
-        if not subjects and not geographic_entities:
-            print("No topics or geographic entities found in the data")
+
+        # NEW: Extract chronological terms from actual issue dates
+        chronological_terms = self.extract_chronological_terms_from_issues()
+
+        if not subjects and not geographic_entities and not chronological_terms:
+            print("No topics, geographic entities, or chronological terms found in the data")
             return False
-        
+
         print(f"Found {len(subjects)} unique topics")
+        print(f"Found {len(chronological_terms)} chronological terms") 
         print(f"Found {len(geographic_entities)} unique geographic entities")
         
         # Process multi-vocabulary lookup with comprehensive logging
         (subject_to_terms_excel, subject_to_terms_json, 
-        geographic_to_terms_excel, geographic_to_terms_json) = self.process_multi_vocabulary_lookup(
-            subjects, geographic_entities
+        geographic_to_terms_excel, geographic_to_terms_json,
+        chronological_to_terms_excel, chronological_to_terms_json) = self.process_multi_vocabulary_lookup(
+            subjects, geographic_entities, chronological_terms
         )
         
         # Enhance Excel file
-        if not self.enhance_excel_file(subject_to_terms_excel, geographic_to_terms_excel):
+        if not self.enhance_excel_file(subject_to_terms_excel, geographic_to_terms_excel, chronological_to_terms_excel):
             return False
-        
+
         # Enhance JSON file
-        if not self.enhance_json_file(subject_to_terms_json, geographic_to_terms_json):
+        if not self.enhance_json_file(subject_to_terms_json, geographic_to_terms_json, chronological_to_terms_json):
             return False
-        
+
         # Create vocabulary report
-        self.create_vocabulary_report(subject_to_terms_excel, geographic_to_terms_excel)
+        self.create_vocabulary_report(subject_to_terms_excel, geographic_to_terms_excel, chronological_to_terms_excel)
         
         # Generate comprehensive API usage logs
         total_items = len(subjects) + len(geographic_entities)
