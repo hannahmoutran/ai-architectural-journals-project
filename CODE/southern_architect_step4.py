@@ -479,37 +479,6 @@ class SouthernArchitectIssueSynthesizer:
             logging.error(f"Error appending geographic terms to file: {e}")
             return False
     
-    def update_json_with_synthesis(self, synthesis_result: Dict[str, Any]) -> bool:
-        """Update the JSON file with issue-level synthesis."""
-        try:
-            # Add issue-level synthesis to the JSON data
-            issue_synthesis = {
-                "issue_synthesis": {
-                    "issue_description": synthesis_result['issue_description'],
-                    "selected_subject_headings": synthesis_result['selected_subject_headings'],
-                    "generated_date": datetime.now().isoformat(),
-                    "model_used": self.model_name
-                }
-            }
-            
-            # Add synthesis to the JSON data
-            self.json_data.append(issue_synthesis)
-            
-            # Save updated JSON
-            json_filename = f"{self.workflow_type}_workflow.json"
-            metadata_dir = os.path.join(self.folder_path, "metadata", "collection_metadata")
-            json_path = os.path.join(metadata_dir, json_filename)
-            
-            with open(json_path, 'w', encoding='utf-8') as f:
-                json.dump(self.json_data, f, indent=2, ensure_ascii=False)
-            
-            print(f"Updated JSON file with issue synthesis")
-            return True
-            
-        except Exception as e:
-            logging.error(f"Error updating JSON with synthesis: {e}")
-            return False
-    
     def update_json_with_multiple_synthesis(self, all_synthesis_results: List[Dict[str, Any]]) -> bool:
         """Update the JSON file with multiple issue-level synthesis results."""
         try:
@@ -527,7 +496,8 @@ class SouthernArchitectIssueSynthesizer:
             
             # Save updated JSON
             json_filename = f"{self.workflow_type}_workflow.json"
-            json_path = os.path.join(self.folder_path, json_filename)
+            metadata_dir = os.path.join(self.folder_path, "metadata", "collection_metadata")
+            json_path = os.path.join(metadata_dir, json_filename)
             
             with open(json_path, 'w', encoding='utf-8') as f:
                 json.dump(self.json_data, f, indent=2, ensure_ascii=False)
