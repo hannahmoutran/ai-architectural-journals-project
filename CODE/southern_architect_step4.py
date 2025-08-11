@@ -11,6 +11,7 @@ import tenacity
 from collections import defaultdict
 import re
 from prompts import SouthernArchitectPrompts
+from shared_utilities import APIStats, find_newest_folder
 
 # Import our custom modules
 from model_pricing import calculate_cost, get_model_info
@@ -25,13 +26,6 @@ logging.getLogger("urllib3").setLevel(logging.WARNING)
 logging.getLogger("httpx").setLevel(logging.WARNING)
 
 client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
-
-class APIStats:
-    def __init__(self):
-        self.total_requests = 0
-        self.total_input_tokens = 0
-        self.total_output_tokens = 0
-        self.processing_times = []
 
 api_stats = APIStats()
 
@@ -132,26 +126,14 @@ class IssueSynthesizer:
 
     def parse_json_response(self, raw_response: str) -> Dict[str, Any]:
         """Parse JSON response from the API."""
-        # Remove markdown formatting
-        cleaned_response = re.sub(r'```json\s*|\s*```', '', raw_response)
-        cleaned_response = re.sub(r'^[^{]*({.*})[^}]*$', r'\1', cleaned_response, flags=re.DOTALL)
+        from shared_utilities import parse_json_response_enhanced
         
-        # Remove trailing commas
-        cleaned_response = re.sub(r',(\s*[}\]])', r'\1', cleaned_response)
+        parsed_json, error = parse_json_response_enhanced(raw_response)
         
-        try:
-            parsed_json = json.loads(cleaned_response)
-            return parsed_json
-            
-        except json.JSONDecodeError as e:
-            # Try to extract JSON object
-            match = re.search(r'{.*}', raw_response, re.DOTALL)
-            if match:
-                json_str = match.group(0)
-                json_str = re.sub(r',(\s*[}\]])', r'\1', json_str)
-                return json.loads(json_str)
-            else:
-                raise ValueError(f"Could not parse JSON response: {e}")
+        if parsed_json is None:
+            raise ValueError(f"Could not parse JSON response: {error}")
+        
+        return parsed_json
 
 class SouthernArchitectIssueSynthesizer:
     """Main class for synthesizing issue-level descriptions and selecting from chosen vocabulary terms."""
@@ -622,22 +604,6 @@ class SouthernArchitectIssueSynthesizer:
 
         print(f"\nProcessed {total_issues_processed} issues successfully")
         return True
-
-def find_newest_folder(base_directory: str) -> Optional[str]:
-    """Find the newest folder in the base directory."""
-    if not os.path.exists(base_directory):
-        return None
-    
-    folders = [f for f in os.listdir(base_directory) 
-              if os.path.isdir(os.path.join(base_directory, f))]
-    
-    if not folders:
-        return None
-    
-    # Sort by modification time (newest first)
-    folders.sort(key=lambda x: os.path.getmtime(os.path.join(base_directory, x)), reverse=True)
-    
-    return os.path.join(base_directory, folders[0])
 
 def main():
     parser = argparse.ArgumentParser(description='Synthesize issue-level descriptions and select from chosen vocabulary terms')

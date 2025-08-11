@@ -5,10 +5,10 @@ import os
 import json
 import logging
 from datetime import datetime
-from typing import List, Dict, Any, Optional, Tuple
+from typing import List, Dict, Optional, Tuple
 from collections import defaultdict
 import re
-import argparse
+from shared_utilities import find_newest_folder
 
 # Fuzzy matching imports - try rapidfuzz first (faster), fallback to fuzzywuzzy
 try:
@@ -499,47 +499,19 @@ class EntityAuthority:
         
         return True
     
-def find_newest_folder(base_directory: str) -> Optional[str]:
-    """Find the newest folder in the base directory."""
-    if not os.path.exists(base_directory):
-        return None
-    
-    folders = [f for f in os.listdir(base_directory) 
-              if os.path.isdir(os.path.join(base_directory, f))]
-    
-    if not folders:
-        return None
-    
-    # Sort by modification time (newest first)
-    folders.sort(key=lambda x: os.path.getmtime(os.path.join(base_directory, x)), reverse=True)
-    
-    return os.path.join(base_directory, folders[0])
-
 def main():
-    parser = argparse.ArgumentParser(description='Build entity authority file for Southern Architect with fuzzy matching')
-    parser.add_argument('--folder', help='Specific folder path to process')
-    parser.add_argument('--newest', action='store_true', help='Process the newest folder in the output directory (default: True if no folder specified)')
-    parser.add_argument('--threshold', type=int, default=85, help='Fuzzy matching similarity threshold (default: 85)')
-    args = parser.parse_args()
     
     # Default base directory for Southern Architect output folders
     script_dir = os.path.dirname(os.path.abspath(__file__))
     base_output_dir = os.path.join(script_dir, "output_folders")
-    
-    if args.folder:
-        if not os.path.exists(args.folder):
-            print(f"Folder not found: {args.folder}")
-            return 1
-        folder_path = args.folder
-    else:
-        # Default to newest folder if no specific folder provided
-        folder_path = find_newest_folder(base_output_dir)
-        if not folder_path:
+
+    folder_path = find_newest_folder(base_output_dir)
+    if not folder_path:
             print(f"No folders found in: {base_output_dir}")
             return 1
-        print(f"Auto-selected newest folder: {os.path.basename(folder_path)}")
+    print(f"Auto-selected newest folder: {os.path.basename(folder_path)}")
 
-    builder = EntityAuthority(folder_path, similarity_threshold=args.threshold)
+    builder = EntityAuthority(folder_path, similarity_threshold=85)
     success = builder.run()
     
     return 0 if success else 1

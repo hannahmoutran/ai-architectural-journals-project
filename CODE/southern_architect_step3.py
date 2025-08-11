@@ -4,14 +4,14 @@ import os
 import json
 import logging
 import time
-import argparse
 from datetime import datetime
-from typing import List, Dict, Any, Optional, Tuple
+from typing import List, Dict, Any, Tuple
 from openai import OpenAI
 import tenacity
 from openpyxl import load_workbook
 from openpyxl.styles import Alignment
 from prompts import SouthernArchitectPrompts
+from shared_utilities import APIStats, find_newest_folder
 
 # Import our custom modules
 from model_pricing import calculate_cost, get_model_info
@@ -27,13 +27,6 @@ logging.getLogger("urllib3").setLevel(logging.WARNING)
 logging.getLogger("httpx").setLevel(logging.WARNING)
 
 client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
-
-class APIStats:
-    def __init__(self):
-        self.total_requests = 0
-        self.total_input_tokens = 0
-        self.total_output_tokens = 0
-        self.processing_times = []
 
 api_stats = APIStats()
 
@@ -204,33 +197,18 @@ Select the most relevant terms following your instructions. Use exact labels wit
 
     def parse_json_response(self, raw_response: str) -> Dict[str, Any]:
         """Parse JSON response from the API."""
-        import re
+        from shared_utilities import parse_json_response_enhanced
         
-        # Remove markdown formatting
-        cleaned_response = re.sub(r'```json\s*|\s*```', '', raw_response)
-        cleaned_response = re.sub(r'^[^{]*({.*})[^}]*$', r'\1', cleaned_response, flags=re.DOTALL)
+        parsed_json, error = parse_json_response_enhanced(raw_response)
         
-        # Remove trailing commas
-        cleaned_response = re.sub(r',(\s*[}\]])', r'\1', cleaned_response)
+        if parsed_json is None:
+            raise ValueError(f"Could not parse JSON response: {error}")
         
-        try:
-            parsed_json = json.loads(cleaned_response)
-            
-            # Validate structure
-            if 'selected_terms' not in parsed_json:
-                parsed_json['selected_terms'] = []
-            
-            return parsed_json
-            
-        except json.JSONDecodeError as e:
-            # Try to extract JSON object
-            match = re.search(r'{.*}', raw_response, re.DOTALL)
-            if match:
-                json_str = match.group(0)
-                json_str = re.sub(r',(\s*[}\]])', r'\1', json_str)
-                return json.loads(json_str)
-            else:
-                raise ValueError(f"Could not parse JSON response: {e}")
+        # Validate structure
+        if 'selected_terms' not in parsed_json:
+            parsed_json['selected_terms'] = []
+        
+        return parsed_json
 
 class SouthernArchitectVocabularyProcessor:
     """Main class for vocabulary selection and clean output generation."""
@@ -1350,49 +1328,25 @@ class SouthernArchitectVocabularyProcessor:
 
         return True
 
-def find_newest_folder(base_directory: str) -> Optional[str]:
-    """Find the newest folder in the base directory."""
-    if not os.path.exists(base_directory):
-        return None
-    
-    folders = [f for f in os.listdir(base_directory) 
-              if os.path.isdir(os.path.join(base_directory, f))]
-    
-    if not folders:
-        return None
-    
-    # Sort by modification time (newest first)
-    folders.sort(key=lambda x: os.path.getmtime(os.path.join(base_directory, x)), reverse=True)
-    
-    return os.path.join(base_directory, folders[0])
-
 def main():
-    parser = argparse.ArgumentParser(description='Select optimal vocabulary terms and generate clean outputs')
-    parser.add_argument('--folder', help='Specific folder path to process')
-    parser.add_argument('--newest', action='store_true', help='Process the newest folder in the output directory')
-    parser.add_argument('--model', default="gpt-4o-mini-2024-07-18", help='Model name to use for vocabulary selection')
-    args = parser.parse_args()
     
     # Default base directory for Southern Architect output folders
     # Get script directory and build path to output folders
     script_dir = os.path.dirname(os.path.abspath(__file__))
     base_output_dir = os.path.join(script_dir, "output_folders")
     
-    if args.folder:
-        if not os.path.exists(args.folder):
-            print(f"Folder not found: {args.folder}")
-            return 1
-        folder_path = args.folder
-    else:
-        # Default to newest folder if no specific folder provided
-        folder_path = find_newest_folder(base_output_dir)
-        if not folder_path:
-            print(f"No folders found in: {base_output_dir}")
-            return 1
-        print(f"Auto-selected newest folder: {os.path.basename(folder_path)}")
-    
+    model_name = "gpt-4o-mini"  # Default model name
+
+    # Default folder path (newest folder if not specified)
+    folder_path = find_newest_folder(base_output_dir)
+    if not folder_path:
+        print(f"No folders found in: {base_output_dir}")
+        return 1
+    print(f"Auto-selected newest folder: {os.path.basename(folder_path)}")
+
+
     # Create and run the processor
-    processor = SouthernArchitectVocabularyProcessor(folder_path, args.model)
+    processor = SouthernArchitectVocabularyProcessor(folder_path, model_name)
     success = processor.run()
     
     if not success:

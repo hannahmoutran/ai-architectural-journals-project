@@ -9,14 +9,12 @@ individually with retry logic to ensure clean, complete metadata before Steps 2-
 This runs immediately after Step 1 if batch processing was used, ensuring all 
 downstream steps have high-quality data to work with.
 
-Author: Southern Architect Processing Team
 """
 
 import os
 import json
 import logging
 import time
-import argparse
 from datetime import datetime
 from typing import List, Dict, Any, Optional, Tuple
 from openai import OpenAI
@@ -28,6 +26,8 @@ from PIL import Image as PILImage
 from io import BytesIO
 from openpyxl.drawing.image import Image as XLImage
 import base64
+from shared_utilities import APIStats, postprocess_api_response, parse_json_response_enhanced, find_newest_folder
+
 
 # Import our custom modules
 from model_pricing import calculate_cost, get_model_info
@@ -44,60 +44,7 @@ logging.getLogger("httpx").setLevel(logging.WARNING)
 
 client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
 
-class APIStats:
-    def __init__(self):
-        self.total_requests = 0
-        self.total_input_tokens = 0
-        self.total_output_tokens = 0
-        self.processing_times = []
-
 api_stats = APIStats()
-
-def postprocess_api_response(response_data):
-    """Post-process the API response for consistency (same as Step 1)."""
-    
-    # Helper function to convert string to list if needed
-    def ensure_list(field_value):
-        if isinstance(field_value, str):
-            # Split by comma and clean up each item
-            items = [item.strip() for item in field_value.split(',') if item.strip()]
-            return items
-        elif isinstance(field_value, list):
-            return field_value
-        else:
-            return []
-    
-    # Handle named entities
-    if 'namedEntities' in response_data:
-        response_data['namedEntities'] = ensure_list(response_data['namedEntities'])
-        response_data['namedEntities'] = list(dict.fromkeys(response_data['namedEntities']))
-        response_data['namedEntities'] = [entity for entity in response_data['namedEntities'] 
-                                        if len(entity) > 1 or not entity.isalnum()]
-    
-    # Handle geographic entities
-    if 'geographicEntities' in response_data:
-        response_data['geographicEntities'] = ensure_list(response_data['geographicEntities'])
-        response_data['geographicEntities'] = list(dict.fromkeys(response_data['geographicEntities']))
-        response_data['geographicEntities'] = [entity for entity in response_data['geographicEntities'] 
-                                             if len(entity) > 1 or not entity.isalnum()]
-    
-    # Handle topics field variations
-    if 'subjects' in response_data and 'topics' not in response_data:
-        response_data['topics'] = ensure_list(response_data.pop('subjects'))
-    elif 'subjectHeadings' in response_data and 'topics' not in response_data:
-        response_data['topics'] = ensure_list(response_data.pop('subjectHeadings'))
-    elif 'topics' in response_data:
-        response_data['topics'] = ensure_list(response_data['topics'])
-    
-    # Ensure content warning field
-    if 'contentWarning' not in response_data:
-        response_data['contentWarning'] = 'None'
-    elif response_data['contentWarning'].lower() == 'none' or response_data['contentWarning'].strip() == '':
-        response_data['contentWarning'] = 'None'
-    else:
-        response_data['contentWarning'] = response_data['contentWarning'].capitalize().rstrip('.') + '.'
-    
-    return response_data
 
 class BatchCleanupProcessor:
     """Detect and reprocess failed batch items from Step 1."""
@@ -292,57 +239,8 @@ class BatchCleanupProcessor:
             return analysis.get('text_transcription', '')
     
     def parse_json_response_enhanced(self, raw_response: str) -> Tuple[Dict[str, Any], Optional[str]]:
-        """Enhanced JSON parsing with multiple recovery strategies (same as original Step 1)."""
-        if not raw_response or not raw_response.strip():
-            return None, "Empty response"
-        
-        try:
-            # Strategy 1: Standard cleaning
-            cleaned_response = re.sub(r'```json\s*|\s*```', '', raw_response)
-            cleaned_response = re.sub(r'^[^{]*({.*})[^}]*$', r'\1', cleaned_response, flags=re.DOTALL)
-            cleaned_response = re.sub(r',(\s*[}\]])', r'\1', cleaned_response)
-            
-            parsed_json = json.loads(cleaned_response)
-            return parsed_json, None
-            
-        except json.JSONDecodeError:
-            pass
-        
-        try:
-            # Strategy 2: Extract JSON object more aggressively
-            json_match = re.search(r'\{[^{}]*(?:\{[^{}]*\}[^{}]*)*\}', raw_response, re.DOTALL)
-            if json_match:
-                json_str = json_match.group(0)
-                json_str = re.sub(r',(\s*[}\]])', r'\1', json_str)
-                parsed_json = json.loads(json_str)
-                return parsed_json, None
-                
-        except json.JSONDecodeError:
-            pass
-        
-        try:
-            # Strategy 3: Fix common issues
-            fixed_response = raw_response
-            
-            # Fix unquoted keys
-            fixed_response = re.sub(r'(\w+):', r'"\1":', fixed_response)
-            
-            # Fix unquoted string values
-            fixed_response = re.sub(r':\s*([^",\[\{][^,\]\}]*)', r': "\1"', fixed_response)
-            
-            # Remove trailing commas
-            fixed_response = re.sub(r',(\s*[}\]])', r'\1', fixed_response)
-            
-            # Extract JSON part
-            json_match = re.search(r'\{.*\}', fixed_response, re.DOTALL)
-            if json_match:
-                parsed_json = json.loads(json_match.group(0))
-                return parsed_json, None
-                
-        except json.JSONDecodeError:
-            pass
-        
-        return None, "All parsing strategies failed"
+        """Enhanced JSON parsing using shared utility."""
+        return parse_json_response_enhanced(raw_response)
     
     @tenacity.retry(
         wait=tenacity.wait_exponential(multiplier=1, min=4, max=10),
@@ -972,73 +870,25 @@ class BatchCleanupProcessor:
         print(f"✅ STEP 1.5 COMPLETE: Batch cleanup finished")
         return True
 
-def find_newest_folder(base_directory: str) -> Optional[str]:
-    """Find the newest folder in the base directory."""
-    if not os.path.exists(base_directory):
-        return None
-    
-    folders = [f for f in os.listdir(base_directory) 
-              if os.path.isdir(os.path.join(base_directory, f))]
-    
-    if not folders:
-        return None
-    
-    # Sort by modification time (newest first)
-    folders.sort(key=lambda x: os.path.getmtime(os.path.join(base_directory, x)), reverse=True)
-    
-    return os.path.join(base_directory, folders[0])
-
-
 def main():
-    parser = argparse.ArgumentParser(
-        description='Step 1.5: Clean up failed batch processing items before downstream processing',
-        formatter_class=argparse.RawDescriptionHelpFormatter,
-        epilog="""
-Step 1.5: Batch Cleanup Overview:
-  - Runs immediately after Step 1 if batch processing was used
-  - Detects JSON parsing errors, infinite loops, missing fields, etc.
-  - Reprocesses failed items individually with retry logic
-  - Updates JSON and Excel files with improved results
-  - Ensures clean, complete metadata for Steps 2-5
-  - Creates detailed logs and reports
+    # Default model name
+    model_name = "gpt-4o-2024-08-06"
 
-Examples:
-  python southern_architect_step1_5.py                           # Process newest folder
-  python southern_architect_step1_5.py --folder /path/to/folder  # Process specific folder
-  python southern_architect_step1_5.py --model gpt-4o-2024-08-06 # Use specific model
-
-This step ensures that downstream processing (vocabulary enhancement, synthesis, etc.)
-has high-quality, complete metadata to work with.
-        """
-    )
-    
-    parser.add_argument('--folder', help='Specific folder path to process')
-    parser.add_argument('--newest', action='store_true', help='Process the newest folder (default: True if no folder specified)')
-    parser.add_argument('--model', default="gpt-4o-2024-08-06", help='Model for reprocessing (default: gpt-4o-2024-08-06)')
-    
-    args = parser.parse_args()
-    
     # Default base directory
     script_dir = os.path.dirname(os.path.abspath(__file__))
     base_output_dir = os.path.join(script_dir, "output_folders")
-    
-    if args.folder:
-        if not os.path.exists(args.folder):
-            print(f"Folder not found: {args.folder}")
-            return 1
-        folder_path = args.folder
-    else:
-        # Default to newest folder
-        folder_path = find_newest_folder(base_output_dir)
-        if not folder_path:
-            print(f"No folders found in: {base_output_dir}")
-            return 1
-        print(f"Auto-selected newest folder: {os.path.basename(folder_path)}")
-    
+
+    # Find the newest folder
+    folder_path = find_newest_folder(base_output_dir)
+    if not folder_path:
+        print(f"No folders found in: {base_output_dir}")
+        return 1
+    print(f"Auto-selected newest folder: {os.path.basename(folder_path)}")
+
     # Create and run the cleanup processor
     processor = BatchCleanupProcessor(folder_path)
-    success = processor.run(args.model)
-    
+    success = processor.run(model_name)
+
     return 0 if success else 1
 
 

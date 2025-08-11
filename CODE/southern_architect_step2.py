@@ -5,14 +5,14 @@ import json
 import logging
 import time
 import requests
-import argparse
 import xml.etree.ElementTree as ET
 from datetime import datetime
-from typing import List, Dict, Any, Optional, Tuple
+from typing import List, Dict, Any, Tuple
 from openpyxl import load_workbook
 from openpyxl.styles import Alignment
 from collections import defaultdict
 import re
+from shared_utilities import find_newest_folder
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -21,10 +21,6 @@ def create_vocab_api_usage_log(logs_folder_path: str, script_name: str, total_to
                               api_stats: Dict[str, Any]) -> bool:
     """Create vocabulary API usage log."""
     try:
-        pass  # Add your code here
-    except Exception as e:
-        logging.error(f"An error occurred: {e}")
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         log_filename = f"{script_name}_vocab_api_usage_log.txt"
         log_path = os.path.join(logs_folder_path, log_filename)
         
@@ -2076,45 +2072,19 @@ class SouthernArchitectEnhancer:
         
         return True
 
-def find_newest_folder(base_directory: str) -> Optional[str]:
-    """Find the newest folder in the base directory."""
-    if not os.path.exists(base_directory):
-        return None
-    
-    folders = [f for f in os.listdir(base_directory) 
-              if os.path.isdir(os.path.join(base_directory, f))]
-    
-    if not folders:
-        return None
-    
-    # Sort by modification time (newest first)
-    folders.sort(key=lambda x: os.path.getmtime(os.path.join(base_directory, x)), reverse=True)
-    
-    return os.path.join(base_directory, folders[0])
-
 def main():
-    parser = argparse.ArgumentParser(description='Enhance Southern Architect results with multi-vocabulary terms (3 max per vocabulary) - WITH COMPREHENSIVE API LOGGING')
-    parser.add_argument('--folder', help='Specific folder path to process')
-    parser.add_argument('--newest', action='store_true', help='Process the newest folder in the output directory (default: True if no folder specified)')
-    args = parser.parse_args()
     
     # Default base directory for Southern Architect output folders
     script_dir = os.path.dirname(os.path.abspath(__file__))
     base_output_dir = os.path.join(script_dir, "output_folders")
     
-    if args.folder:
-        if not os.path.exists(args.folder):
-            print(f"Folder not found: {args.folder}")
-            return
-        folder_path = args.folder
-    else:
-        # Default to newest folder if no specific folder provided
-        folder_path = find_newest_folder(base_output_dir)
-        if not folder_path:
-            print(f"No folders found in: {base_output_dir}")
-            return
-        print(f"Auto-selected newest folder: {os.path.basename(folder_path)}")
-    
+    # Default folder path (newest folder if not specified)
+    folder_path = find_newest_folder(base_output_dir)
+    if not folder_path:
+        print(f"No folders found in: {base_output_dir}")
+        return 1
+    print(f"Auto-selected newest folder: {os.path.basename(folder_path)}")
+
     # Create and run the enhancer with comprehensive API logging
     enhancer = SouthernArchitectEnhancer(folder_path)
     success = enhancer.run()

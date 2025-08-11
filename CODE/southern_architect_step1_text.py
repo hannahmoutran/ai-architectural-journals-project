@@ -8,7 +8,7 @@ import re
 from openpyxl import Workbook
 from openpyxl.styles import Alignment
 import time
-import argparse
+from shared_utilities import APIStats, postprocess_api_response, parse_json_response_enhanced, preprocess_ocr_text
 
 # Import custom modules
 from model_pricing import calculate_cost, get_model_info
@@ -26,30 +26,7 @@ logging.getLogger("httpx").setLevel(logging.WARNING)
 
 client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
 
-class APIStats:
-    def __init__(self):
-        self.total_requests = 0
-        self.total_input_tokens = 0
-        self.total_output_tokens = 0
-        self.total_cached_tokens = 0
-        self.processing_times = []
-
 api_stats = APIStats()
-
-def preprocess_ocr_text(text):
-    """Preprocess OCR text to fix common errors."""
-    replacements = {
-        "Sv'cink i^idam": "Frank Adam",
-        # add more common OCR errors here as needed
-    }
-    
-    for error, correction in replacements.items():
-        text = text.replace(error, correction)
-    
-    # Remove unusual characters
-    text = re.sub(r'[^\w\s.,;:!?()-]', '', text)
-    
-    return text
 
 def prepare_batch_requests(all_files, model_name):
     """Prepare all requests for batch processing."""
@@ -126,94 +103,9 @@ def collect_all_files(input_folder):
     
     return all_files
 
-def postprocess_api_response(response_data):
-    """Post-process the API response for consistency - updated for geographic entities."""
-    
-    # Helper function to convert string to list if needed
-    def ensure_list(field_value):
-        if isinstance(field_value, str):
-            # Split by comma and clean up each item
-            items = [item.strip() for item in field_value.split(',') if item.strip()]
-            return items
-        elif isinstance(field_value, list):
-            return field_value
-        else:
-            return []
-    
-    # Handle named entities
-    if 'namedEntities' in response_data:
-        response_data['namedEntities'] = ensure_list(response_data['namedEntities'])
-        # Remove duplicates while preserving order
-        response_data['namedEntities'] = list(dict.fromkeys(response_data['namedEntities']))
-        # Remove any entities that are just single letters or numbers
-        response_data['namedEntities'] = [entity for entity in response_data['namedEntities'] 
-                                        if len(entity) > 1 or not entity.isalnum()]
-    
-    # Handle geographic entities
-    if 'geographicEntities' in response_data:
-        response_data['geographicEntities'] = ensure_list(response_data['geographicEntities'])
-        # Remove duplicates while preserving order
-        response_data['geographicEntities'] = list(dict.fromkeys(response_data['geographicEntities']))
-        # Remove any entities that are just single letters or numbers
-        response_data['geographicEntities'] = [entity for entity in response_data['geographicEntities'] 
-                                             if len(entity) > 1 or not entity.isalnum()]
-    
-    # Handle topics field (also ensure it's a list)
-    if 'topics' in response_data:
-        response_data['topics'] = ensure_list(response_data['topics'])
-    
-    # Handle subjects field variations - convert all to 'topics'
-    if 'subjects' in response_data and 'topics' not in response_data:
-        response_data['topics'] = ensure_list(response_data.pop('subjects'))
-    elif 'subjectHeadings' in response_data and 'topics' not in response_data:
-        response_data['topics'] = ensure_list(response_data.pop('subjectHeadings'))
-    
-    # Ensure 'contentWarning' field exists and is properly formatted
-    if 'contentWarning' not in response_data:
-        response_data['contentWarning'] = 'None'
-    elif response_data['contentWarning'].lower() == 'none' or response_data['contentWarning'].strip() == '':
-        response_data['contentWarning'] = 'None'
-    else:
-        # Capitalize the first letter and ensure it ends with a period
-        response_data['contentWarning'] = response_data['contentWarning'].capitalize().rstrip('.') + '.'
-    
-    return response_data
-
 def parse_json_response(raw_response):
     """Enhanced JSON parsing with trailing comma handling."""
-    try:
-        # First, try standard parsing after cleaning markdown
-        cleaned_response = re.sub(r'```json\s*|\s*```', '', raw_response)
-        cleaned_response = re.sub(r'^[^{]*({.*})[^}]*$', r'\1', cleaned_response, flags=re.DOTALL)
-        
-        # Remove trailing commas that break JSON parsing
-        # This regex finds commas followed by whitespace and then ] or }
-        cleaned_response = re.sub(r',(\s*[}\]])', r'\1', cleaned_response)
-        
-        parsed_json = json.loads(cleaned_response)
-        return parsed_json, None
-        
-    except Exception as e:
-        try:
-            # Second attempt: extract JSON object and fix trailing commas
-            match = re.search(r'{.*}', raw_response, re.DOTALL)
-            if not match:
-                raise ValueError("No JSON object found in response")
-                
-            json_str = match.group(0)
-            
-            # Remove trailing commas more aggressively
-            json_str = re.sub(r',(\s*[}\]])', r'\1', json_str)
-            
-            # Fix common JSON issues
-            json_str = re.sub(r'(\w+):', r'"\1":', json_str)  # Add quotes to unquoted keys
-            json_str = re.sub(r':\s*([^",\[\{][^,\]\}]*)', r': "\1"', json_str)  # Quote unquoted string values
-            
-            parsed_json = json.loads(json_str)
-            return parsed_json, None
-            
-        except Exception as e2:
-            return None, f"JSON parsing failed: {str(e2)}"
+    return parse_json_response_enhanced(raw_response)
 
 @tenacity.retry(
     wait=tenacity.wait_exponential(multiplier=1, min=4, max=10),
@@ -647,12 +539,8 @@ def process_folder_with_batch(input_folder, output_dir, model_name="gpt-4o-2024-
     return process_folder_individual(all_files, wb, analysis_sheet, raw_sheet, issues_sheet, logs_folder_path, model_name, all_results, output_dir)
 
 def main():
-    # Add argument parsing for model selection
-    parser = argparse.ArgumentParser(description='Process Southern Architect texts')
-    parser.add_argument('--model', default="gpt-4o-2024-08-06", help='Model name to use')
-    args = parser.parse_args()
     
-    model_name = args.model
+    model_name = "gpt-4o-2024-08-06" # Default model
     
     # Start timing the entire script execution
     script_start_time = time.time()
