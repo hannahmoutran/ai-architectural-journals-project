@@ -587,7 +587,6 @@ class SouthernArchitectVocabularyProcessor:
                 removed_terms = [t for t in group if t != best_term]
                 removed_labels = [f"{t.get('label')} [{t.get('source')}]" for t in removed_terms]
                 best_label = f"{best_term.get('label')} [{best_term.get('source')}]"
-                print(f"DEBUG: Deduplicated '{best_label}', removed: {removed_labels}")
 
         return deduplicated_terms
 
@@ -596,7 +595,6 @@ class SouthernArchitectVocabularyProcessor:
         Improved matching that finds all semantically equivalent terms and applies source priority.
         This fixes the issue where LLM selects one source but we end up with a different source in output.
         """
-        print(f"DEBUG: Looking for matches for {len(selected_labels)} selected labels")
         
         # Create a comprehensive mapping of all available terms
         all_available_terms = []
@@ -605,7 +603,6 @@ class SouthernArchitectVocabularyProcessor:
                 if isinstance(term, dict):
                     all_available_terms.append(term)
         
-        print(f"DEBUG: Total available terms to search: {len(all_available_terms)}")
         
         def normalize_for_comparison(label: str) -> str:
             """Normalize labels for semantic comparison - remove punctuation, lowercase, normalize spaces"""
@@ -616,15 +613,12 @@ class SouthernArchitectVocabularyProcessor:
         
         matched_terms = []
         
-        for selected_label in selected_labels:
-            print(f"DEBUG: Processing selected label: '{selected_label}'")
-            
+        for selected_label in selected_labels:            
             # Find all terms that could semantically match this selected label
             candidate_matches = []
             
             # Normalize the selected label for comparison
             selected_words = set(normalize_for_comparison(selected_label).split())
-            print(f"DEBUG: Selected label normalized words: {selected_words}")
             
             # Search through all available terms for semantic matches
             for term in all_available_terms:
@@ -634,7 +628,7 @@ class SouthernArchitectVocabularyProcessor:
                 # Check if they have the same words (order doesn't matter)
                 if selected_words == term_words and len(selected_words) > 0:
                     candidate_matches.append(term)
-                    print(f"DEBUG: Semantic match found: '{selected_label}' -> '{term_label}' [{term.get('source')}]")
+                    
             
             # If we found semantic matches, apply source priority
             if candidate_matches:
@@ -653,12 +647,9 @@ class SouthernArchitectVocabularyProcessor:
                 if len(candidate_matches) > 1:
                     rejected_terms = [t for t in candidate_matches if t != best_match]
                     rejected_labels = [f"{t.get('label')} [{t.get('source')}]" for t in rejected_terms]
-                    print(f"DEBUG: Source priority applied for '{selected_label}': chose '{best_match.get('label')}' [{best_match.get('source')}], rejected: {rejected_labels}")
-                else:
-                    print(f"DEBUG: Single match selected: '{best_match.get('label')}' [{best_match.get('source')}]")
+
             else:
                 # If no semantic matches, try exact string matching as fallback
-                print(f"DEBUG: No semantic matches, trying exact matching for '{selected_label}'")
                 selected_normalized = selected_label.lower().strip()
                 
                 for term in all_available_terms:
@@ -667,18 +658,12 @@ class SouthernArchitectVocabularyProcessor:
                     
                     if selected_normalized == term_normalized:
                         candidate_matches.append(term)
-                        print(f"DEBUG: Exact match found: '{selected_label}' -> '{term_label}' [{term.get('source')}]")
                 
                 if candidate_matches:
                     # Apply priority even for exact matches
                     best_match = min(candidate_matches, key=lambda t: source_priority.get(t.get('source', ''), 999))
                     matched_terms.append(best_match)
-                    print(f"DEBUG: Exact match selected: '{best_match.get('label')}' [{best_match.get('source')}]")
-                else:
-                    print(f"DEBUG: No matches found for '{selected_label}'")
-        
-        print(f"DEBUG: Successfully matched {len(matched_terms)} out of {len(selected_labels)} selected terms")
-        
+                
         seen_uris = set()
         deduplicated_terms = []
         for term in matched_terms:

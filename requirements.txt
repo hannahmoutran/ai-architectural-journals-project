@@ -1,9 +1,8 @@
+openai>=1.0.0
 lxml
 spacy
 openpyxl 
-anthropic
 tiktoken
-openai
 tenacity
 pandas
 requests
