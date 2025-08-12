@@ -34,7 +34,7 @@ Before analyzing the content, please clean the OCR text according to these guide
 Provide the cleaned text followed by '---' before proceeding with the metadata extraction.
 """
     
-    # Advertisement identification help
+    # Advertisement identification
     ADVERTISEMENT_INSTRUCTIONS = """
 How to identify advertisements:
 1. Look for company names prominently displayed
@@ -92,7 +92,7 @@ If no sensitive content is present, simply return 'None'.
     # TOC entry variations
     TOC_ENTRY_COVER = [
         "tocEntry",
-        "Start with 'Cover:' followed by a brief description of the cover content, based on the text"
+        "Start with 'Cover:' followed by a brief description of the cover content, based on the text."
     ]
     
     TOC_ENTRY_SHORT = [
@@ -105,9 +105,9 @@ If no sensitive content is present, simply return 'None'.
         "A descriptive entry appropriate for a table of contents",
         [
             "Page type (cover, table of contents, advertisement, editorial, article, photo, image, or other)",
-            "Short description of the content of the page",
+            "Short description of the content of the page, no more than 1-2 sentences.",
             "Specific persons or organizations mentioned (give a brief description of their importance and relevance to the content - for example, 'Zaha Hadid (Parametric architecture pioneer)', or 'Frank Lloyd Wright (Prairie School architect)')",
-            "Key topics or themes covered"
+            "Include key topics, themes, technologies, architectural styles, or anything of historical significance covered on page"
         ]
     ]
     
@@ -157,7 +157,7 @@ If no sensitive content is present, simply return 'None'.
         ]
     ]
     
-    # Subjects field (all prompts)
+    # Subjects/topics field (all prompts)
     SUBJECTS_FIELD = [
         "subjects",
         "Topics that will be used as search terms in controlled vocabulary APIs",
@@ -175,10 +175,15 @@ If no sensitive content is present, simply return 'None'.
     # Content warning field (text prompts)
     CONTENT_WARNING_FIELD_TEXT = [
         "contentWarning",
-        "Assess for content that merits review by another archivist or 'None' if none exists"
+        "Note potentially sensitive content, or 'None' if none exists. Another archivist will assess if any measures are appropriate, your job is just to note if there is anything that may be concerning",
+        [
+            "Consider: Biased language or terminology",
+            "Consider: Culturally sensitive material", 
+            "Consider: Offensive or harmful language"
+        ]
     ]
     
-    # Content warning field (image prompts - more detailed)
+    # Content warning field (image prompts - mentions imagery)
     CONTENT_WARNING_FIELD_IMAGE = [
         "contentWarning",
         "Note potentially sensitive content, or 'None' if none exists. Another archivist will assess if any measures are appropriate, your job is just to note if there is anything that may be concerning",

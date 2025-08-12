@@ -32,7 +32,6 @@ logging.getLogger("httpx").setLevel(logging.WARNING)
 client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
 
 api_stats = APIStats()
-
 def parse_json_response(raw_response):
     """JSON parsing with trailing comma handling."""
     return parse_json_response_enhanced(raw_response)
@@ -560,7 +559,7 @@ def process_folder_individual(all_images, wb, analysis_sheet, raw_sheet, issues_
            api_stats.total_input_tokens, api_stats.total_output_tokens, False)  
 
 def main():
-    model_name = "gpt-4o"  
+    model_name = "gpt-4o-2024-08-06"  # Default model, can be changed as needed
     
     # Start timing the entire script execution
     script_start_time = time.time()

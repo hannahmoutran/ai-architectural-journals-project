@@ -6,12 +6,6 @@ This module provides batch processing capabilities for OpenAI API calls,
 offering significant cost savings (50% discount) and higher rate limits
 for large-scale CD metadata processing.
 
-Usage:
-    from batch_processor import BatchProcessor
-    
-    processor = BatchProcessor()
-    batch_id = processor.submit_batch(requests)
-    results = processor.wait_for_completion(batch_id)
 """
 
 import os
@@ -290,7 +284,7 @@ class BatchProcessor:
             status = status_info["status"]
             request_counts = status_info.get("request_counts", {})
             
-            # Only show progress updates every 10 minutes (instead of every 5)
+            # Show progress updates every 10 minutes
             current_time = datetime.now()
             if current_time - last_progress_report >= timedelta(minutes=10):
                 if status == "in_progress" and request_counts:
@@ -446,7 +440,7 @@ class BatchProcessor:
                 }
                 failed_results += 1
         
-        # Simplified summary (removed detailed print statements)
+        # Summary 
         return {
             "results": processed_results,
             "summary": {
