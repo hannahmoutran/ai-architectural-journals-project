@@ -30,6 +30,7 @@ logging.getLogger("urllib3").setLevel(logging.WARNING)
 logging.getLogger("httpx").setLevel(logging.WARNING)
 
 client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
+DEFAULT_MODEL = "gpt-4o-2024-08-06"  # Default model, change as needed
 
 api_stats = APIStats()
 def parse_json_response(raw_response):
@@ -100,7 +101,7 @@ def collect_all_images(input_folder):
     stop=tenacity.stop_after_attempt(3),
     retry=tenacity.retry_if_exception_type(Exception)
 )
-def process_image(image_path, model_name="gpt-4o-2024-08-06"):
+def process_image(image_path, model_name=DEFAULT_MODEL):
     """Process a single image and return the parsed response."""
     with open(image_path, "rb") as image_file:
         base64_image = base64.b64encode(image_file.read()).decode('utf-8')
@@ -162,7 +163,7 @@ def process_image(image_path, model_name="gpt-4o-2024-08-06"):
         # Raise exception to trigger retry
         raise Exception(f"JSON parsing failed: {error}")
 
-def process_folder_with_batch(input_folder, output_dir, model_name="gpt-4o-2024-08-06"):
+def process_folder_with_batch(input_folder, output_dir, model_name=DEFAULT_MODEL):
     """Process folder using batch processing when appropriate."""
     
     # Create logs folder
@@ -559,13 +560,13 @@ def process_folder_individual(all_images, wb, analysis_sheet, raw_sheet, issues_
            api_stats.total_input_tokens, api_stats.total_output_tokens, False)  
 
 def main():
-    model_name = "gpt-4o-2024-08-06"  # Default model, can be changed as needed
-    
+    model_name = DEFAULT_MODEL  
+
     # Start timing the entire script execution
     script_start_time = time.time()
     
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    input_folder_name = "4_pages"  # input folder name can be changed as needed
+    input_folder_name = "issues_pages"  # input folder name can be changed as needed
     input_folder = os.path.join(script_dir, "image_folders", input_folder_name)
     
     # Create dynamic output folder name

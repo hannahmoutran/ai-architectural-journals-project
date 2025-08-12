@@ -43,6 +43,7 @@ logging.getLogger("urllib3").setLevel(logging.WARNING)
 logging.getLogger("httpx").setLevel(logging.WARNING)
 
 client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
+DEFAULT_MODEL = "gpt-4o-2024-08-06"  # Default model name, change as needed
 
 api_stats = APIStats()
 
@@ -566,7 +567,7 @@ class BatchCleanupProcessor:
                 # API usage stats
                 if api_stats.total_requests > 0:
                     total_cost = calculate_cost(
-                        model_name="gpt-4o-2024-08-06",  # Default model
+                        model_name=DEFAULT_MODEL,
                         prompt_tokens=api_stats.total_input_tokens,
                         completion_tokens=api_stats.total_output_tokens,
                         is_batch=False
@@ -653,8 +654,8 @@ class BatchCleanupProcessor:
                 if idx == item_index:
                     print(f"Failure reasons: {reasons}")
                     break
-    
-    def run(self, model_name: str = "gpt-4o-2024-08-06") -> bool:
+
+    def run(self, model_name: str = DEFAULT_MODEL) -> bool:
         """Main execution method for Step 1.5."""
         print(f"\nSOUTHERN ARCHITECT STEP 1.5 - BATCH CLEANUP")
         print(f"Processing folder: {os.path.basename(self.folder_path)}")
@@ -872,7 +873,7 @@ class BatchCleanupProcessor:
 
 def main():
     # Default model name
-    model_name = "gpt-4o-2024-08-06"
+    model_name = DEFAULT_MODEL
 
     # Default base directory
     script_dir = os.path.dirname(os.path.abspath(__file__))

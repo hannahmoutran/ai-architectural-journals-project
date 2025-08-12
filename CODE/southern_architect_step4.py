@@ -1,21 +1,17 @@
 # issue-level metadata - using OpenAI's GPT-4o-mini model
+
 import os
 import json
 import logging
 import time
-import argparse
 from datetime import datetime
-from typing import List, Dict, Any, Optional, Tuple
+from typing import List, Dict, Any, Tuple
 from openai import OpenAI
 import tenacity
-from collections import defaultdict
-import re
+# Import custom modules
 from prompts import SouthernArchitectPrompts
 from shared_utilities import APIStats, find_newest_folder
-
-# Import our custom modules
-from model_pricing import calculate_cost, get_model_info
-from token_logging import create_token_usage_log, log_individual_response
+from token_logging import log_individual_response
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -26,13 +22,14 @@ logging.getLogger("urllib3").setLevel(logging.WARNING)
 logging.getLogger("httpx").setLevel(logging.WARNING)
 
 client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
+DEFAULT_MODEL = "gpt-4o-mini"
 
 api_stats = APIStats()
 
 class IssueSynthesizer:
     """Class to synthesize issue-level descriptions and select top subject headings from chosen vocabulary terms."""
-    
-    def __init__(self, model_name: str = "gpt-4o-mini"):
+
+    def __init__(self, model_name: str = DEFAULT_MODEL):
         self.model_name = model_name
         self.system_prompt = SouthernArchitectPrompts.get_issue_synthesis_system_prompt()
 
@@ -137,8 +134,8 @@ class IssueSynthesizer:
 
 class SouthernArchitectIssueSynthesizer:
     """Main class for synthesizing issue-level descriptions and selecting from chosen vocabulary terms."""
-    
-    def __init__(self, folder_path: str, model_name: str = "gpt-4o-mini"):
+
+    def __init__(self, folder_path: str, model_name: str = DEFAULT_MODEL):
         self.folder_path = folder_path
         self.model_name = model_name
         self.workflow_type = None
@@ -606,32 +603,20 @@ class SouthernArchitectIssueSynthesizer:
         return True
 
 def main():
-    parser = argparse.ArgumentParser(description='Synthesize issue-level descriptions and select from chosen vocabulary terms')
-    parser.add_argument('--folder', help='Specific folder path to process')
-    parser.add_argument('--newest', action='store_true', help='Process the newest folder in the output directory (default: True if no folder specified)')
-    parser.add_argument('--model', default="gpt-4o-mini", help='Model name to use for synthesis')
-    args = parser.parse_args()
-    
-    # Default base directory for Southern Architect output folders
+    model_name = os.getenv('MODEL_NAME', DEFAULT_MODEL) 
+
     # Get script directory and build path to output folders
     script_dir = os.path.dirname(os.path.abspath(__file__))
     base_output_dir = os.path.join(script_dir, "output_folders")
     
-    if args.folder:
-        if not os.path.exists(args.folder):
-            print(f"Folder not found: {args.folder}")
-            return 1
-        folder_path = args.folder
-    else:
-        # Default to newest folder if no specific folder provided
-        folder_path = find_newest_folder(base_output_dir)
-        if not folder_path:
-            print(f"No folders found in: {base_output_dir}")
-            return 1
-        print(f"Auto-selected newest folder: {os.path.basename(folder_path)}")
+    folder_path = find_newest_folder(base_output_dir)
+    if not folder_path:
+        print(f"No folders found in: {base_output_dir}")
+        return 1
+    print(f"Auto-selected newest folder: {os.path.basename(folder_path)}")
     
     # Create and run the synthesizer
-    synthesizer = SouthernArchitectIssueSynthesizer(folder_path, args.model)
+    synthesizer = SouthernArchitectIssueSynthesizer(folder_path, model_name)
     success = synthesizer.run()
     
     if not success:

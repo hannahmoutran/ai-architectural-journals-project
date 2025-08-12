@@ -147,7 +147,7 @@ class SouthernArchitectWorkflowRunner:
     def run_step1(self, resume: bool = False, model: str = None) -> bool:
         """Run Step 1: Initial metadata extraction."""
         step_name = f"STEP 1: {self.workflow_type.upper()} METADATA EXTRACTION"
-        step_description = f"Extract metadata from {self.workflow_type} files using AI with enhanced parsing and checkpoint support"
+        step_description = f"Extract metadata from {self.workflow_type} files using AI"
         
         self.announce_step(step_name, step_description)
         

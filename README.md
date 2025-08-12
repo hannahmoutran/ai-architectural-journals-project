@@ -11,7 +11,7 @@ Initially, we tested Large Language Models' ability to contribute effectively in
 
 ### Workflow Architecture
 
-The processing pipeline consists of five integrated steps that transform raw OCR text or images into comprehensive archival metadata:
+The processing pipeline consists of five integrated steps that transform raw OCR text or journal page images into comprehensive archival metadata:
 
 #### Step 1: Initial Metadata Extraction
 **Scripts**: `southern_architect_step1_text.py`, `southern_architect_step1_image.py`

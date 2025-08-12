@@ -27,6 +27,7 @@ logging.getLogger("urllib3").setLevel(logging.WARNING)
 logging.getLogger("httpx").setLevel(logging.WARNING)
 
 client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
+DEFAULT_MODEL = "gpt-4o-mini"  # Default model name, change as needed
 
 api_stats = APIStats()
 
@@ -65,8 +66,8 @@ def prepare_batch_requests(entries_with_vocab, vocabulary_selector, model_name):
 
 class VocabularySelector:
     """Class to select the best vocabulary terms for each page using an LLM."""
-    
-    def __init__(self, model_name: str = "gpt-4o"):
+
+    def __init__(self, model_name: str = DEFAULT_MODEL):
         self.model_name = model_name
         self.system_prompt = SouthernArchitectPrompts.get_vocabulary_selection_system_prompt()
 
@@ -212,8 +213,8 @@ Select the most relevant terms following your instructions. Use exact labels wit
 
 class SouthernArchitectVocabularyProcessor:
     """Main class for vocabulary selection and clean output generation."""
-    
-    def __init__(self, folder_path: str, model_name: str = "gpt-4o-mini-2024-07-18"):
+
+    def __init__(self, folder_path: str, model_name: str = DEFAULT_MODEL):
         self.folder_path = folder_path
         self.model_name = model_name
         self.workflow_type = None
@@ -1319,8 +1320,8 @@ def main():
     # Get script directory and build path to output folders
     script_dir = os.path.dirname(os.path.abspath(__file__))
     base_output_dir = os.path.join(script_dir, "output_folders")
-    
-    model_name = "gpt-4o-mini"  # Default model name
+
+    model_name = os.getenv('MODEL_NAME', DEFAULT_MODEL)
 
     # Default folder path (newest folder if not specified)
     folder_path = find_newest_folder(base_output_dir)

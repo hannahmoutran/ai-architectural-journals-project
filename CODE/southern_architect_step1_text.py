@@ -25,6 +25,7 @@ logging.getLogger("urllib3").setLevel(logging.WARNING)
 logging.getLogger("httpx").setLevel(logging.WARNING)
 
 client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
+DEFAULT_MODEL = "gpt-4o-2024-08-06"  # Default model name, change as needed
 
 api_stats = APIStats()
 
@@ -113,7 +114,7 @@ def parse_json_response(raw_response):
     retry=tenacity.retry_if_exception_type(Exception)
 )
 
-def process_single_file(file_path, folder_name, page_number, content, model_name="gpt-4o-2024-08-06"):
+def process_single_file(file_path, folder_name, page_number, content, model_name=DEFAULT_MODEL):
     """Process a single text file (for individual processing)."""
     # Preprocess the OCR text
     content = preprocess_ocr_text(content)
@@ -303,7 +304,7 @@ def process_folder_individual(all_files, wb, analysis_sheet, raw_sheet, issues_s
     return (wb, all_results, api_stats, len(all_files), items_with_issues, total_processing_time,
            api_stats.total_input_tokens, api_stats.total_output_tokens, False)  # False for was_batch_processed
 
-def process_folder_with_batch(input_folder, output_dir, model_name="gpt-4o-2024-08-06"):
+def process_folder_with_batch(input_folder, output_dir, model_name=DEFAULT_MODEL):
     """Process folder using batch processing when appropriate."""
     
     # Create logs folder
@@ -539,9 +540,9 @@ def process_folder_with_batch(input_folder, output_dir, model_name="gpt-4o-2024-
     return process_folder_individual(all_files, wb, analysis_sheet, raw_sheet, issues_sheet, logs_folder_path, model_name, all_results, output_dir)
 
 def main():
-    
-    model_name = "gpt-4o-2024-08-06" # Default model
-    
+
+    model_name = DEFAULT_MODEL
+
     # Start timing the entire script execution
     script_start_time = time.time()
     
