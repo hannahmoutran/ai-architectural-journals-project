@@ -182,10 +182,10 @@ python southern_architect_run.py --workflow image # best results
 This project represents ongoing research into AI applications for archival metadata. Contributions are welcome! 
 For questions about implementation or research collaboration, please reach out via email. 
 
-- Hannah Moutran: Library Specialist, AI Implementation [hlm2454@my.utexas.edu](mailto:hlm2454@my.utexas.edu)
-- Devon Murphy, Metadata Analyst [devon.murphy@austin.utexas.edu​](mailto:devon.murphy@austin.utexas.edu​)
-- Karina Sanchez, Scholars Lab Librarian [karinasanchez@austin.utexas.edu](mailto:karinasanchez@austin.utexas.edu)
-- Katie Pierce Meyer, Head of Architectural Collections [katiepiercemeyer@austin.utexas.edu](mailto:katiepiercemeyer@austin.utexas.edu)
+- Hannah Moutran: Library Specialist, AI Implementation: [hlm2454@my.utexas.edu](mailto:hlm2454@my.utexas.edu)
+- Devon Murphy, Metadata Analyst: [devon.murphy@austin.utexas.edu​](mailto:devon.murphy@austin.utexas.edu​)
+- Karina Sanchez, Scholars Lab Librarian: [karinasanchez@austin.utexas.edu](mailto:karinasanchez@austin.utexas.edu)
+- Katie Pierce Meyer, Head of Architectural Collections: [katiepiercemeyer@austin.utexas.edu](mailto:katiepiercemeyer@austin.utexas.edu)
 - Willem Borkgren, Scholars Lab GRA
 - Josh Conrad, Digital Initiatives Archival Fellow for the Alexander Architectural Archives
 
