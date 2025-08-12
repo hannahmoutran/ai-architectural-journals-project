@@ -49,7 +49,7 @@ The processing pipeline consists of five integrated steps that transform raw OCR
 **Script**: `southern_architect_step4.py`
 - Synthesizes scholarly issue-level descriptions using AI
 - LLM selects top 10 subject headings per issue from previously chosen page-level vocabulary terms
-- Notes geographic terms with frequency analysis
+- Notes FAST geographic terms with URIs
 - Creates comprehensive issue metadata files for each journal issue
 
 #### Step 5: Entity Authority File Creation
@@ -119,7 +119,7 @@ python southern_architect_run.py --workflow image # best results
 ### Cost Optimization Strategies
 1. **Batch Processing**: Use for 50% cost reduction on large collections
 2. **Model Selection**: Use GPT-4o-mini for cost-sensitive operations
-3. **Input Format**: Text processing typically more cost-effective than images
+3. **Input Format**: Text processing typically more cost-effective than images, though image processing may produce better quality outputs
 
 ## Output Files
 
@@ -150,7 +150,7 @@ python southern_architect_run.py --workflow image # best results
 - Automatic batch API usage for large collections
 - Progress monitoring and estimated completion times
 - Comprehensive error handling and retry logic
-- Keep in mind that batch processing could potentially take up to 24 hours for *each step* where it is used.  
+- Batch processing could potentially take up to 24 hours for *each step* where it is used.  
 
 ### Geographic Entity Processing
 - Standardized geographic name formatting
@@ -160,14 +160,18 @@ python southern_architect_run.py --workflow image # best results
 - Automatic detection of potentially sensitive content
 - Historical context preservation while flagging concerns
 
+### Verified Subject Headings
+- No reliance on LLM to return valid subject headings - subject heading lookup treated as a tool in this workflow
+- Produces guaranteed controlled vocabulary subject headings with accompanying URIs 
+
 ## Privacy & Data Security
 
 ### Quality Assurance
 - In all AI assisted workflows, we recommend: comprehensive oversight *and* complete transparency about the process of metadata creation
 - Comprehensive logging is in place so that any issues that arise may be tracked
 
-### API Usage (Recommended)
-- **OpenAI**: Does not use API data for training, for more information visit: [OpenAI Enterprise Privacy](https://openai.com/enterprise-privacy/)
+### API Usage
+- **OpenAI**: Assurances that OpenAI does not use API data for training: [OpenAI Enterprise Privacy](https://openai.com/enterprise-privacy/)
 
 ## Research Publications/Presentations
 - DCMI Annual Conference 2025
@@ -181,7 +185,7 @@ For questions about implementation or research collaboration, please reach out v
 - Hannah Moutran: Library Specialist, AI Implementation [hlm2454@my.utexas.edu](mailto:hlm2454@my.utexas.edu)
 - Devon Murphy, Metadata Analyst [devon.murphy@austin.utexas.edu​](mailto:devon.murphy@austin.utexas.edu​)
 - Karina Sanchez, Scholars Lab Librarian [karinasanchez@austin.utexas.edu](mailto:karinasanchez@austin.utexas.edu)
-- Katie Pierce Meyer, Head of Architectural Collections[katiepiercemeyer@austin.utexas.edu](mailto:katiepiercemeyer@austin.utexas.edu)
+- Katie Pierce Meyer, Head of Architectural Collections [katiepiercemeyer@austin.utexas.edu](mailto:katiepiercemeyer@austin.utexas.edu)
 - Willem Borkgren, Scholars Lab GRA
 - Josh Conrad, Digital Initiatives Archival Fellow for the Alexander Architectural Archives
 
