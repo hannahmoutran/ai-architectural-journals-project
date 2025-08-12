@@ -566,7 +566,7 @@ def main():
     script_start_time = time.time()
     
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    input_folder_name = "issues_pages"  # input folder name can be changed as needed
+    input_folder_name = "4_pages"  # input folder name can be changed as needed
     input_folder = os.path.join(script_dir, "image_folders", input_folder_name)
     
     # Create dynamic output folder name

@@ -303,7 +303,7 @@ class SouthernArchitectWorkflowRunner:
         # Run Step 1.5 (NEW - automatic batch cleanup)
         if not self.run_step1_5(step1_5_model):
             # Note: Step 1.5 failure is not critical - it may just mean no cleanup was needed
-            print(" Step 1.5 completed with issues, but continuing workflow")
+            print(" Step 1.5 completed with issues.  Continuing workflow")
             # Don't mark as overall failure since Step 1.5 might return False for "no cleanup needed"
         
         # Run Step 2
@@ -366,40 +366,17 @@ class SouthernArchitectWorkflowRunner:
 
 def main():
     parser = argparse.ArgumentParser(
-        description='Run the complete Southern Architect workflow pipeline with enhanced features',
-        formatter_class=argparse.RawDescriptionHelpFormatter,
+        description='Run the complete Southern Architect workflow pipeline',
         epilog="""
 Examples:
-  python southern_architect_run.py                              # Interactive mode
-  python southern_architect_run.py --workflow text              # Text workflow
-  python southern_architect_run.py --workflow image             # Image workflow
-  python southern_architect_run.py --resume                     # Resume text workflow from checkpoint
-  python southern_architect_run.py --workflow text --step1-model gpt-4o-2024-08-06
-  python southern_architect_run.py --step3-model gpt-4o-2024-08-06 --step4-model gpt-4o-mini-2024-07-18
-
-Features:
-  - Step 1: AI: Initial metadata extraction with batch processing
-  - Step 1.5: Automatic batch cleanup (detects and fixes failed items)
-  - Step 2: AI: Multi-vocabulary enhancement (LCSH, FAST, Getty) with API logging
-  - Step 3: AI: Vocabulary selection
-  - Step 4: AI: Issue-level synthesis with geographic terms
-  - Step 5: Entity authority file creation with type classification
-  - Comprehensive cost tracking and token logging throughout
+  python southern_architect_run.py --workflow text    # Process OCR text files
+  python southern_architect_run.py --workflow image   # Process image files
+  python southern_architect_run.py                    # Interactive mode
         """
     )
     
     parser.add_argument('--workflow', choices=['text', 'image'], 
                        help='Workflow type (text or image)')
-    parser.add_argument('--resume', action='store_true',
-                       help='Resume from last checkpoint (Step 1 only)')
-    parser.add_argument('--step1-model', 
-                       help='Model for Step 1 (default: gpt-4o-2024-08-06 for images, gpt-4o-2024-08-06 for text)')
-    parser.add_argument('--step1-5-model', default="gpt-4o-2024-08-06",  # NEW
-                       help='Model for Step 1.5 (batch cleanup)')
-    parser.add_argument('--step3-model', default="gpt-4o-mini-2024-07-18",
-                       help='Model for Step 3 (vocabulary selection)')
-    parser.add_argument('--step4-model', default="gpt-4o-2024-08-06",
-                       help='Model for Step 4 (issue synthesis)')
     
     args = parser.parse_args()
     
@@ -411,27 +388,16 @@ Features:
         if not runner.get_workflow_type(args.workflow):
             return 1
         
-        # Set default step1 model if not specified
-        step1_model = args.step1_model
-        if not step1_model:
-            step1_model = "gpt-4o-2024-08-06"  # Same default for both text and image
-        
-        # Run complete workflow
-        success = runner.run_complete_workflow(
-            resume=args.resume,
-            step1_model=step1_model,
-            step1_5_model=args.step1_5_model,  # NEW
-            step3_model=args.step3_model,
-            step4_model=args.step4_model
-        )
+        # Run complete workflow with proven defaults
+        success = runner.run_complete_workflow()
         
         return 0 if success else 1
         
     except KeyboardInterrupt:
-        print("\n\n Workflow cancelled by user.")
+        print("\n\n⏹️ Workflow cancelled by user.")
         return 1
     except Exception as e:
-        print(f"\n Unexpected error: {e}")
+        print(f"\n❌ Unexpected error: {e}")
         logging.exception("Unexpected error in workflow runner")
         return 1
 

@@ -10,7 +10,7 @@ from openai import OpenAI
 import tenacity
 # Import custom modules
 from prompts import SouthernArchitectPrompts
-from shared_utilities import APIStats, find_newest_folder
+from shared_utilities import APIStats, find_newest_folder, parse_json_response_enhanced
 from token_logging import log_individual_response
 
 # Configure logging
@@ -38,29 +38,117 @@ class IssueSynthesizer:
         return SouthernArchitectPrompts.get_issue_synthesis_system_prompt()
 
     def create_user_prompt(self, toc_content: str, selected_terms: List[Dict[str, str]]) -> str:
+        """Create user prompt that only allows selection from existing terms."""
         formatted_terms = []
-        for term in selected_terms:
-            formatted_terms.append(f"- {term['label']} ({term['uri']}) [{term['source']}]")
+        for i, term in enumerate(selected_terms, 1):
+            formatted_terms.append(f"{i}. {term['label']} ({term['uri']}) [{term['source']}]")
         
         terms_section = "\n".join(formatted_terms)
         
         user_prompt = f"""Analyze this issue content index and create issue metadata:
 
-        ISSUE CONTENT INDEX:
-        {toc_content}
+    ISSUE CONTENT INDEX:
+    {toc_content}
 
-        SELECTED SUBJECT HEADINGS:
-        {terms_section}
+    AVAILABLE SUBJECT HEADINGS (choose exactly 10 from this numbered list):
+    {terms_section}
 
-        Create a scholarly description emphasizing this issue's unique architectural content and historical significance. Use the provided subject headings as-is."""
+    Create a scholarly description emphasizing this issue's unique architectural content and historical significance. Use the provided subject headings as-is. Select exactly 10 terms by returning their numbers (1-{len(selected_terms)})."""
         
         return user_prompt
+
+    def map_selected_numbers_to_terms(self, synthesis_result: Dict[str, Any], original_terms: List[Dict[str, str]]) -> Dict[str, Any]:
+        """Map the LLM's number selections back to the original term data."""
+        
+        if "selected_numbers" not in synthesis_result:
+            # Fallback: try to parse if LLM still returned full terms
+            if "selected_subject_headings" in synthesis_result:
+                return self.map_selected_terms_to_originals(synthesis_result, original_terms)
+            else:
+                synthesis_result["selected_subject_headings"] = []
+                return synthesis_result
+        
+        selected_numbers = synthesis_result["selected_numbers"]
+        mapped_headings = []
+        
+        for number in selected_numbers:
+            try:
+                # Convert to 0-based index
+                index = int(number) - 1
+                if 0 <= index < len(original_terms):
+                    original_term = original_terms[index]
+                    mapped_headings.append({
+                        "label": original_term["label"],
+                        "uri": original_term["uri"], 
+                        "source": original_term["source"]
+                    })
+                else:
+                    logging.warning(f"Selected number {number} is out of range (1-{len(original_terms)})")
+            except (ValueError, TypeError):
+                logging.warning(f"Invalid selected number: {number}")
+        
+        # Limit to 10 terms and remove the numbers field
+        synthesis_result["selected_subject_headings"] = mapped_headings[:10]
+        if "selected_numbers" in synthesis_result:
+            del synthesis_result["selected_numbers"]
+        
+        return synthesis_result
+
+    def map_selected_terms_to_originals(self, synthesis_result: Dict[str, Any], original_terms: List[Dict[str, str]]) -> Dict[str, Any]:
+        """Fallback method for mapping LLM's term selections back to original data."""
+        
+        if "selected_subject_headings" not in synthesis_result:
+            return synthesis_result
+        
+        selected_headings = synthesis_result["selected_subject_headings"]
+        mapped_headings = []
+        
+        # Create a lookup for original terms by label (normalized)
+        original_terms_lookup = {}
+        for term in original_terms:
+            label_key = term["label"].lower().strip()
+            original_terms_lookup[label_key] = term
+        
+        for heading in selected_headings:
+            if isinstance(heading, dict) and "label" in heading:
+                selected_label = heading["label"].lower().strip()
+                
+                # Find the matching original term
+                if selected_label in original_terms_lookup:
+                    original_term = original_terms_lookup[selected_label]
+                    mapped_headings.append({
+                        "label": original_term["label"],
+                        "uri": original_term["uri"], 
+                        "source": original_term["source"]
+                    })
+                else:
+                    # If no exact match, try to find partial matches
+                    best_match = None
+                    for orig_label, orig_term in original_terms_lookup.items():
+                        if selected_label in orig_label or orig_label in selected_label:
+                            best_match = orig_term
+                            break
+                    
+                    if best_match:
+                        mapped_headings.append({
+                            "label": best_match["label"],
+                            "uri": best_match["uri"],
+                            "source": best_match["source"]
+                        })
+                    else:
+                        # Log warning but skip invalid selections
+                        logging.warning(f"Could not map selected term: {heading.get('label', 'Unknown')}")
+        
+        # Limit to 10 terms
+        synthesis_result["selected_subject_headings"] = mapped_headings[:10]
+        return synthesis_result
 
     @tenacity.retry(
         wait=tenacity.wait_exponential(multiplier=1, min=4, max=10),
         stop=tenacity.stop_after_attempt(5),
         retry=tenacity.retry_if_exception_type(Exception)
     )
+    
     def synthesize_issue(self, toc_content: str, all_chosen_terms: List[Dict[str, str]]) -> Tuple[Dict[str, Any], str, Any, float]:
         """Synthesize issue-level description and select subject headings from chosen vocabulary terms."""
         user_prompt = self.create_user_prompt(toc_content, all_chosen_terms)
@@ -75,7 +163,7 @@ class IssueSynthesizer:
                 {"role": "user", "content": user_prompt}
             ],
             max_tokens=2500,
-            temperature=0.3  # Slightly higher temperature for more creative synthesis
+            temperature=0.3
         )
         
         processing_time = time.time() - start_time
@@ -90,6 +178,9 @@ class IssueSynthesizer:
         try:
             parsed_response = self.parse_json_response(raw_response)
             
+            # Map selected numbers back to original terms to ensure URI accuracy
+            parsed_response = self.map_selected_numbers_to_terms(parsed_response, all_chosen_terms)
+            
             # Validate response structure
             if not isinstance(parsed_response, dict):
                 raise ValueError("Response is not a JSON object")
@@ -100,35 +191,43 @@ class IssueSynthesizer:
             if "selected_subject_headings" not in parsed_response:
                 raise ValueError("Missing 'selected_subject_headings' field")
             
-            # Validate that we have exactly 10 subject headings
-            headings = parsed_response["selected_subject_headings"]
-            if not isinstance(headings, list):
-                raise ValueError("'selected_subject_headings' must be a list")
-            
-            if len(headings) != 10:
-                logging.warning(f"Expected 10 subject headings, got {len(headings)}")
-                # Adjust to exactly 10 - truncate or keep what we have
-                if len(headings) > 10:
-                    parsed_response["selected_subject_headings"] = headings[:10]
-            
             return parsed_response, raw_response, response.usage, processing_time
             
         except Exception as e:
             logging.error(f"Error parsing issue synthesis response: {e}")
-            # Return error response
+            # Return error response with empty selections
             return {
                 "issue_description": f"Error synthesizing issue description: {str(e)}",
                 "selected_subject_headings": []
             }, raw_response, response.usage, processing_time
 
     def parse_json_response(self, raw_response: str) -> Dict[str, Any]:
-        """Parse JSON response from the API."""
-        from shared_utilities import parse_json_response_enhanced
-        
+        """Parse JSON response and validate structure."""
         parsed_json, error = parse_json_response_enhanced(raw_response)
         
         if parsed_json is None:
             raise ValueError(f"Could not parse JSON response: {error}")
+        
+        # Validate that we have either selected_numbers or selected_subject_headings
+        if "selected_numbers" in parsed_json:
+            # New format - validate selected_numbers is a list of integers
+            numbers = parsed_json["selected_numbers"]
+            if not isinstance(numbers, list):
+                raise ValueError("'selected_numbers' must be a list")
+            
+            # Convert any string numbers to integers
+            try:
+                parsed_json["selected_numbers"] = [int(n) for n in numbers]
+            except (ValueError, TypeError):
+                raise ValueError("'selected_numbers' must contain only integers")
+                
+        elif "selected_subject_headings" in parsed_json:
+            # Old format - validate it's a list
+            headings = parsed_json["selected_subject_headings"]
+            if not isinstance(headings, list):
+                raise ValueError("'selected_subject_headings' must be a list")
+        else:
+            raise ValueError("Response must contain either 'selected_numbers' or 'selected_subject_headings'")
         
         return parsed_json
 
@@ -399,8 +498,13 @@ class SouthernArchitectIssueSynthesizer:
                 for i, heading in enumerate(selected_headings, 1):
                     if isinstance(heading, dict):
                         label = heading.get('label', 'Unknown')
+                        uri = heading.get('uri', '')
                         source = heading.get('source', 'Unknown')
-                        f.write(f"{i:2d}. {label} [{source}]\n")
+                        # Include URI in the same format as page metadata
+                        if uri:
+                            f.write(f"{i:2d}. {label} ({uri}) [{source}]\n")
+                        else:
+                            f.write(f"{i:2d}. {label} [{source}]\n")
                     else:
                         # Handle string format as fallback
                         f.write(f"{i:2d}. {heading}\n")
