@@ -1,4 +1,4 @@
-# issue-level metadata - using OpenAI's GPT-4o-mini model
+# issue-level metadata - using OpenAI's GPT-4o- model
 
 import os
 import json
@@ -22,7 +22,7 @@ logging.getLogger("urllib3").setLevel(logging.WARNING)
 logging.getLogger("httpx").setLevel(logging.WARNING)
 
 client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
-DEFAULT_MODEL = "gpt-4o-mini"
+DEFAULT_MODEL = "gpt-4o"
 
 api_stats = APIStats()
 

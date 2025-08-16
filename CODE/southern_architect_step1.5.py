@@ -110,13 +110,13 @@ class BatchCleanupProcessor:
             return False
     
     def detect_failed_items(self) -> List[Tuple[int, Dict[str, Any], str]]:
-        """Detect items that genuinely failed during batch processing (VERY conservative approach)."""
+        """Detect items that genuinely failed during batch processing - FIXED VERSION"""
         failed_items = []
         
         # Skip API stats if present
         data_items = self.json_data[:-1] if self.json_data and 'api_stats' in self.json_data[-1] else self.json_data
         
-        print(f"🔍 Analyzing {len(data_items)} items for genuine batch processing failures...")
+        print(f" Analyzing {len(data_items)} items for batch processing failures...")
         
         for i, item in enumerate(data_items):
             if 'analysis' not in item:
@@ -133,21 +133,35 @@ class BatchCleanupProcessor:
             error_indicators = [
                 'Processing error:', 'Error:', 'Failed to', 'Exception:', 'Traceback:',
                 'REPROCESSING FAILED:', 'Timeout', 'Connection error', 'API error',
-                'Internal server error', 'Rate limit', 'Service unavailable'
+                'Internal server error', 'Rate limit', 'Service unavailable', 'Bad gateway'
             ]
             if any(error_indicator in raw_response for error_indicator in error_indicators):
                 failure_reasons.append("Explicit processing error in response")
             
-            # 2. COMPLETELY empty main content (not just short - actually empty)
-            main_content = self._get_main_content_field(analysis)
-            if not main_content or len(main_content.strip()) == 0:
-                failure_reasons.append("Completely empty main content field")
+            # 2. CHARACTER FLOOD DETECTION - these should be adjusted if they are too high or low for content
+            corruption_indicators = [  
+                raw_response.count('.') > 2500,      
+                raw_response.count('-') > 2500,         
+                raw_response.count('_') > 2500,     
+                raw_response.count('=') > 2500,     
+                raw_response.count('*') > 2500,     
+                raw_response.count('#') > 2500,      
+                raw_response.count('/') > 2500,      
+                raw_response.count('~') > 2500,      
+                raw_response.count('|') > 2500,      
+                raw_response.count('+') > 2500,      
+                raw_response.count('. ') > 2500,     
+                '........' in raw_response and raw_response.count('........') > 700,  
+            ]  
             
-            # 3. VERY OBVIOUS repetition patterns (much more conservative)
-            if self._has_severe_repetition_problems(analysis):
-                failure_reasons.append("Severe repetition pattern detected")
+            if any(corruption_indicators):
+                failure_reasons.append("Response corruption detected")
             
-            # 4. Raw response is literally unparseable JSON
+            # 3. Repetition detection 
+            if self._has_extreme_repetition(analysis, raw_response):
+                failure_reasons.append("Extreme repetition/corruption pattern detected")
+
+            # 4. JSON parsing detection
             if raw_response and self._is_completely_broken_json(raw_response):
                 failure_reasons.append("Completely broken JSON structure")
             
@@ -155,82 +169,86 @@ class BatchCleanupProcessor:
                 failed_items.append((i, item, '; '.join(failure_reasons)))
         
         return failed_items
-    
-    def _has_severe_repetition_problems(self, analysis: Dict[str, Any]) -> bool:
-        """Check for SEVERE repetition problems only - very conservative."""
+
+    def _has_extreme_repetition(self, analysis: Dict[str, Any], raw_response: str) -> bool:
+        """Detect extreme repetition cases"""
         main_content = self._get_main_content_field(analysis)
         toc_entry = analysis.get('toc_entry', '')
         
-        # Only check main fields
-        fields_to_check = [main_content, toc_entry]
+        # Check main fields
+        fields_to_check = [main_content, toc_entry, raw_response]
         
         for field_content in fields_to_check:
             if not field_content or len(field_content.strip()) < 30:
                 continue
+            
+            # Check for extreme character repetition
+            if len(field_content) > 2500:
+                char_counts = {}
+                for char in field_content:
+                    if char not in [' ', '\n', '\t', '\r']:
+                        char_counts[char] = char_counts.get(char, 0) + 1
                 
-            # Look for VERY obvious problems only
-            if self._has_extreme_repetition(field_content):
-                return True
-        
-        return False
-
-    def _has_extreme_repetition(self, content: str) -> bool:
-        """Detect only extreme repetition cases - very conservative."""
-        if not content or len(content) < 50:
-            return False
-        
-        words = content.split()
-        if len(words) < 10:
-            return False
-        
-        # Only flag if we see the EXACT patterns from your manufactured error
-        # Look for sequences like "the the the the the the" or "error error error error"
-        
-        # Check for repeated single words (like "the the the the")
-        for i in range(len(words) - 7):  # Need at least 8 repetitions to flag
-            word = words[i]
-            if len(word) <= 3:  # Only flag short words like "the", "and", "is"
-                consecutive_count = 1
-                for j in range(i + 1, min(i + 20, len(words))):
-                    if words[j] == word:
-                        consecutive_count += 1
-                    else:
-                        break
-                
-                if consecutive_count >= 8:  # 8+ consecutive identical words
-                    # Check if it's a problematic word
-                    if word.lower() in ['the', 'and', 'is', 'a', 'to', 'of', 'in', 'error', 'failed', 'null', 'loading']:
+                if char_counts:
+                    max_char_count = max(char_counts.values())
+                    # If any single character appears more than 2500 times, it's corruption
+                    if max_char_count > 2500:
                         return True
-        
-        # Check for repeated error phrases (like "error error error error")
-        error_phrases = [
-            'error error', 'failed failed', 'null null', 'loading loading',
-            'undefined undefined', 'timeout timeout', 'processing processing'
-        ]
-        
-        content_lower = content.lower()
-        for phrase in error_phrases:
-            if content_lower.count(phrase) >= 3:  # Phrase appears 3+ times
-                return True
+
+                    # If any single character dominates more than 80% of long content, it's corruption
+                    if max_char_count / len(field_content) > 0.8 and len(field_content) > 2000:
+                        return True
+            
+            # Repetition checks - ANY word repeated 500+ times is corruption
+            words = field_content.split()
+            if len(words) >= 500:
+                # Check for repeated single words
+                for i in range(len(words) - 500):  # Need at least 500 repetitions to flag
+                    word = words[i]
+                    if len(word) >= 1:  
+                        consecutive_count = 1
+                        for j in range(i + 1, min(i + 100, len(words))):
+                            if words[j] == word:
+                                consecutive_count += 1
+                            else:
+                                break
+
+                        if consecutive_count >= 500:  # 500+ consecutive identical words
+                            return True
         
         return False
 
     def _is_completely_broken_json(self, raw_response: str) -> bool:
-        """Check for completely broken JSON - very conservative."""
+        """Check for completely broken JSON - SIMPLIFIED (no character flood detection)."""
         if not raw_response or len(raw_response.strip()) < 10:
             return False
         
-        # Only flag if JSON is completely broken
+        # Check for JSON structure problems 
         broken_indicators = [
             # No JSON structure at all
             (raw_response.count('{') == 0 and raw_response.count('}') == 0),
-            # Massively unbalanced braces (way beyond normal)
-            (abs(raw_response.count('{') - raw_response.count('}')) > 5),
+            # Massively unbalanced braces 
+            (abs(raw_response.count('{') - raw_response.count('}')) > 12),
             # Response is just an error message and very short
             (raw_response.strip().startswith(('Error:', 'Failed:', 'Exception:')) and len(raw_response) < 50),
+            # Response is overwhelmingly one character (80%+ in long responses)
+            (len(raw_response) > 1000 and self._get_max_char_dominance(raw_response) >= 0.8),
         ]
         
         return any(broken_indicators)
+    
+    def _get_max_char_dominance(self, text: str) -> float:
+        """Helper: Get the percentage of the most common non-whitespace character."""
+        char_counts = {}
+        for char in text:
+            if char not in [' ', '\n', '\t', '\r']:
+                char_counts[char] = char_counts.get(char, 0) + 1
+        
+        if not char_counts:
+            return 0.0
+        
+        max_count = max(char_counts.values())
+        return max_count / len(text)
     
     def _get_main_content_field(self, analysis: Dict[str, Any]) -> str:
         """Get the main content field value."""
@@ -631,7 +649,7 @@ class BatchCleanupProcessor:
         
         # Test each detection method
         print(f"\n=== DETECTION TESTS ===")
-        print(f"Has severe repetition: {self._has_severe_repetition_problems(analysis)}")
+        print(f"Has extreme repetition: {self._has_extreme_repetition(analysis)}")
         print(f"Completely broken JSON: {self._is_completely_broken_json(raw_response)}")
         print(f"Empty main content: {not main_content or len(main_content.strip()) == 0}")
         
