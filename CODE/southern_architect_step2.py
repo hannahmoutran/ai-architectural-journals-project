@@ -1151,39 +1151,21 @@ class SouthernArchitectEnhancer:
         
         return sorted(list(all_subjects)), sorted(list(all_geographic_entities))
     
-    def extract_chronological_terms_from_issues(self) -> List[str]:
-        """Extract chronological terms dynamically from issue folder names."""
-        
-        # Skip API stats for processing
-        data_items = self.json_data[:-1] if self.json_data and 'api_stats' in self.json_data[-1] else self.json_data
-        
-        # Collect all unique years from folder names
-        years_found = set()
-        for item in data_items:
-            folder_name = item.get('folder', '')
-            # Extract 4-digit year from folder name (e.g., "1923-10-24" -> "1923")
-            year_match = re.search(r'\b(18\d{2}|19\d{2})\b', folder_name)
-            if year_match:
-                years_found.add(int(year_match.group(1)))
-        
-        if not years_found:
-            print("No years found in folder names")
+    def get_chronological_terms_for_folder(self, folder_name: str) -> List[str]:
+        """Extract chronological terms for a specific folder/issue."""
+        # Extract 4-digit year from folder name (e.g., "1923-10-24" -> "1923")
+        year_match = re.search(r'\b(18\d{2}|19\d{2})\b', folder_name)
+        if not year_match:
             return []
         
-        print(f"Found years in collection: {sorted(years_found)}")
+        year = int(year_match.group(1))
         
-        # Generate chronological terms
-        chronological_terms = set()
-        decades_found = set()
-        centuries_found = set()
+        # Generate chronological terms for this specific year
+        chronological_terms = []
         
-        for year in years_found:
-            # Determine decade and century
-            decade = (year // 10) * 10  # e.g., 1923 -> 1920
-            century = 19 if year < 1900 else 20
-            
-            decades_found.add(decade)
-            centuries_found.add(century)
+        # Determine decade and century
+        decade = (year // 10) * 10  # e.g., 1923 -> 1920
+        century = 19 if year < 1900 else 20
         
         # Map decades to LCSH spelled-out format
         decade_mapping = {
@@ -1194,23 +1176,39 @@ class SouthernArchitectEnhancer:
             1930: "Nineteen thirties"
         }
         
-        # Add decade terms
-        for decade in decades_found:
-            lcsh_decade = decade_mapping.get(decade)
-            if lcsh_decade:
-                chronological_terms.add(lcsh_decade)
-                print(f"  Adding decade term: {lcsh_decade}")
+        # Add decade term
+        lcsh_decade = decade_mapping.get(decade)
+        if lcsh_decade:
+            chronological_terms.append(lcsh_decade)
         
-        # Add architecture-specific century terms
-        for century in centuries_found:
-            if century == 19:
-                chronological_terms.add("Architecture--United States--History--19th century")
-                print(f"  Adding architecture century term: Architecture--United States--History--19th century")
-            elif century == 20:
-                chronological_terms.add("Architecture--United States--History--20th century") 
-                print(f"  Adding architecture century term: Architecture--United States--History--20th century")
+        # Add architecture-specific century term
+        if century == 19:
+            chronological_terms.append("Architecture--United States--History--19th century")
+        elif century == 20:
+            chronological_terms.append("Architecture--United States--History--20th century")
         
-        return list(chronological_terms)
+        return chronological_terms
+
+    def extract_all_chronological_terms(self) -> List[str]:
+        """Extract all unique chronological terms from all issues for lookup purposes."""
+        # Skip API stats for processing
+        data_items = self.json_data[:-1] if self.json_data and 'api_stats' in self.json_data[-1] else self.json_data
+        
+        # Collect all unique chronological terms
+        all_chronological_terms = set()
+        
+        for item in data_items:
+            folder_name = item.get('folder', '')
+            folder_terms = self.get_chronological_terms_for_folder(folder_name)
+            all_chronological_terms.update(folder_terms)
+        
+        if not all_chronological_terms:
+            print("No chronological terms found in folder names")
+            return []
+        
+        print(f"Found chronological terms: {sorted(all_chronological_terms)}")
+        return list(all_chronological_terms)
+        
     def process_multi_vocabulary_lookup(self, subjects: List[str], geographic_entities: List[str], chronological_terms: List[str]) -> Tuple[Dict[str, str], Dict[str, List[Dict[str, str]]], Dict[str, str], Dict[str, List[Dict[str, str]]], Dict[str, str], Dict[str, List[Dict[str, str]]]]:
         """Process multi-vocabulary lookup for subjects, geographic entities, and chronological terms."""
         
@@ -1464,11 +1462,16 @@ class SouthernArchitectEnhancer:
                         else:
                             print(f"  - '{entity}': No geographic terms found")
                 
-                # NEW: Process chronological terms - these apply to ALL rows since they're collection-wide
+                # NEW: Process chronological terms - these are specific to each row's folder
+                folder_cell = analysis_sheet.cell(row=row_num, column=1)  # Folder column
+                folder_name = folder_cell.value or ""
+
+                # Get chronological terms specific to this row's folder
+                row_chronological_terms = self.get_chronological_terms_for_folder(folder_name)
                 chrono_vocab_terms = []
-                for chrono_term in chronological_to_terms.values():
-                    if chrono_term:  # Only add non-empty terms
-                        terms = [t.strip() for t in chrono_term.split(';') if t.strip()]
+                for chrono_term in row_chronological_terms:
+                    if chrono_term in chronological_to_terms and chronological_to_terms[chrono_term]:
+                        terms = [t.strip() for t in chronological_to_terms[chrono_term].split(';') if t.strip()]
                         chrono_vocab_terms.extend(terms)
                 
                 # Remove duplicates while preserving order for all three types
@@ -1535,11 +1538,6 @@ class SouthernArchitectEnhancer:
             enhanced_items = []
             processed_items = 0
             
-            # NEW: Prepare collection-wide chronological terms (same for all items)
-            all_chronological_terms = []
-            for term_list in chronological_to_terms_json.values():
-                all_chronological_terms.extend(term_list)
-            
             for item in data_items:
                 if 'analysis' in item:
                     # Get topics for this item
@@ -1570,13 +1568,24 @@ class SouthernArchitectEnhancer:
                         if entity in geographic_to_terms_json and geographic_to_terms_json[entity]:
                             geographic_to_terms[entity] = geographic_to_terms_json[entity].copy()
                     
+                    # NEW: Get chronological terms specific to this item's folder
+                    folder_name = item.get('folder', '')
+                    folder_chronological_terms = self.get_chronological_terms_for_folder(folder_name)
+                    
+                    # Get the vocabulary terms for this folder's chronological terms
+                    item_chronological_vocab_terms = []
+                    for chrono_term in folder_chronological_terms:
+                        if chrono_term in chronological_to_terms_json and chronological_to_terms_json[chrono_term]:
+                            item_chronological_vocab_terms.extend(chronological_to_terms_json[chrono_term])
+                    
                     # Add all mappings to the analysis
                     item['analysis']['vocabulary_search_results'] = topic_to_terms
                     item['analysis']['geographic_vocabulary_search_results'] = geographic_to_terms
-                    # NEW: Add chronological terms to all items (they apply to the whole collection)
-                    item['analysis']['chronological_vocabulary_terms'] = all_chronological_terms.copy()
+                    # NEW: Add chronological terms specific to this item's folder
+                    item['analysis']['chronological_vocabulary_terms'] = item_chronological_vocab_terms
+                    item['analysis']['chronological_vocabulary_search_results'] = folder_chronological_terms    
                     
-                    if topic_to_terms or geographic_to_terms or all_chronological_terms:
+                    if topic_to_terms or geographic_to_terms or item_chronological_vocab_terms:
                         processed_items += 1
                 
                 enhanced_items.append(item)
@@ -2005,7 +2014,7 @@ class SouthernArchitectEnhancer:
         subjects, geographic_entities = self.extract_subject_headings()
 
         # NEW: Extract chronological terms from actual issue dates
-        chronological_terms = self.extract_chronological_terms_from_issues()
+        chronological_terms = self.extract_all_chronological_terms()
 
         if not subjects and not geographic_entities and not chronological_terms:
             print("No topics, geographic entities, or chronological terms found in the data")
