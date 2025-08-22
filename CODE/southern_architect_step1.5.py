@@ -319,8 +319,8 @@ class BatchCleanupProcessor:
                 "role": "user",
                 "content": f"{prompt}\n\nHere's the content to analyze:\n\n{content.strip()}\n\nNote: This is a Step 1.5 cleanup - reprocessing to fix batch processing issues."
             }],
-            max_tokens=3000,
-            temperature=0.1  # Lower temperature for more consistent results
+            max_tokens=4000,
+            temperature=0.1  # Low temperature for more consistent results
         )
         
         processing_time = time.time() - start_time
@@ -381,7 +381,7 @@ class BatchCleanupProcessor:
                 ]
             }],
             max_tokens=3000,
-            temperature=0.1  # Lower temperature for consistency
+            temperature=0.1  # Low temperature for consistency
         )
         
         processing_time = time.time() - start_time
