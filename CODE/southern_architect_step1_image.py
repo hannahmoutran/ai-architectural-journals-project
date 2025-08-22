@@ -71,29 +71,42 @@ def prepare_batch_requests(all_images, model_name):
     return batch_requests, custom_id_mapping
 
 def collect_all_images(input_folder):
-    """Collect all images to process."""
+    """Collect all images to process.
+    Accepts either:
+      1) input_folder/Issue*/page*.jpg   (subfolders with page-numbered files)
+      2) input_folder/page*.jpg          (images directly in the folder)
+    Files without a 'pageN' pattern are allowed and will be ordered by filename.
+    """
     all_images = []
-    
-    def folder_sort_key(x):
-        parts = x.split('-')
-        return tuple(parts + [''] * (3 - len(parts)))
-    
-    # Sort folders
-    sorted_folders = sorted(os.listdir(input_folder), key=folder_sort_key, reverse=False)
-    
-    for folder_name in sorted_folders:
+
+    def safe_page_num(fname: str) -> int:
+        m = re.search(r'page(\d+)', fname, re.IGNORECASE)
+        return int(m.group(1)) if m else 0
+
+    # 1) Images directly in input_folder
+    direct_images = [f for f in os.listdir(input_folder)
+                     if os.path.isfile(os.path.join(input_folder, f))
+                     and f.lower().endswith(('.jpg', '.jpeg', '.png'))]
+    if direct_images:
+        direct_images_sorted = sorted(direct_images, key=lambda x: (safe_page_num(x), x.lower()))
+        folder_label = os.path.basename(os.path.normpath(input_folder)) or "root"
+        for idx, img_file in enumerate(direct_images_sorted, start=1):
+            page_number = safe_page_num(img_file) or idx
+            img_path = os.path.join(input_folder, img_file)
+            all_images.append((folder_label, page_number, img_path))
+
+    # 2) Images inside subfolders of input_folder
+    for folder_name in sorted(os.listdir(input_folder), key=lambda x: x.lower()):
         folder_path = os.path.join(input_folder, folder_name)
         if os.path.isdir(folder_path):
-            # Sort files within the folder by page number
-            image_files = sorted([f for f in os.listdir(folder_path) 
-                                if f.lower().endswith(('.jpg', '.jpeg', '.png'))],
-                               key=lambda x: int(re.search(r'page(\d+)', x).group(1)))
-            
-            for img_file in image_files:
-                page_number = int(re.search(r'page(\d+)', img_file).group(1))
+            image_files = [f for f in os.listdir(folder_path)
+                           if f.lower().endswith(('.jpg', '.jpeg', '.png'))]
+            image_files_sorted = sorted(image_files, key=lambda x: (safe_page_num(x), x.lower()))
+            for idx, img_file in enumerate(image_files_sorted, start=1):
+                page_number = safe_page_num(img_file) or idx
                 img_path = os.path.join(folder_path, img_file)
                 all_images.append((folder_name, page_number, img_path))
-    
+
     return all_images
 
 @tenacity.retry(
@@ -566,9 +579,23 @@ def main():
     script_start_time = time.time()
     
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    input_folder_name = "two_issue_test"  # input folder name can be changed as needed
-    input_folder = os.path.join(script_dir, "image_folders", input_folder_name)
-    
+
+    # Resolve input folder from environment or default.
+    # If INPUT_FOLDER_PATH is set (absolute or relative to this script), it takes precedence.
+    env_path = os.getenv("INPUT_FOLDER_PATH")
+    if env_path:
+        input_folder = env_path if os.path.isabs(env_path) else os.path.join(script_dir, env_path)
+    else:
+        input_folder_name = os.getenv("INPUT_FOLDER_NAME", "4_pages")
+        input_folder = os.path.join(script_dir, "image_folders", input_folder_name)
+
+    # Optional visibility for troubleshooting
+    if not os.path.exists(input_folder):
+        print(f"Input folder not found: {os.path.abspath(input_folder)}")
+    else:
+        print(f"Using input folder: {os.path.abspath(input_folder)}")
+
+        
     # Create dynamic output folder name
     current_date = datetime.now().strftime("%Y-%m-%d")
     current_time = datetime.now().strftime("%H-%M-%S")
@@ -618,6 +645,9 @@ def main():
     wb.save(excel_path)
     with open(json_path, 'w') as f:
         json.dump(all_results, f, indent=2)
+    print(f"Excel saved to: {os.path.abspath(excel_path)}")
+    print(f"JSON saved to: {os.path.abspath(json_path)}")
+
     
     # Calculate script metrics
     script_duration = time.time() - script_start_time
