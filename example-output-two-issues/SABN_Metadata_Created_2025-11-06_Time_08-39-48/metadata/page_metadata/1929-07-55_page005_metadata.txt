@@ -1,0 +1,72 @@
+============================================================
+SOUTHERN ARCHITECT - PAGE METADATA
+============================================================
+
+PAGE IDENTIFICATION:
+Folder: 1929-07-55
+Page Number: 5
+
+CONTENT:
+------------------------------
+Text Transcription:
+SOUTHERN ARCHITECT and BUILDING NEWS
+VOLUME 55 JULY, 1929 NUMBER 7
+A Restoration Problem
+By Mary Rolls Dockstader
+Levy & Clarke, Architects
+An architect seldom comes in contact with a client whose appreciation and judgment of the qualities of a really fine old piece of architecture is sufficient to warrant him encouraging rather than discouraging its duplication for present day use. In the case of the house which Levy & Clarke recently completed for Mills B Lane, Esq., at Savannah this unusual circumstance was encountered by the architects.
+The work of the architects in handling this problem is of more than passing interest. Whether you find your inspiration in the classicism of the eighteenth century or in the modernism of the twentieth, you cannot fail to be sensible of the beauty and grace of this restoration. Dignified and refined, with its white stucco walls, green shutters, well balanced fenestration, a perfectly scaled portico and interesting Palladian window, facing as it does the tropical beauty of Forsyth Park it stands as a living tribute to the good taste of its builders and will perpetuate a work of architecture, noble in itself, that no doubt will soon be swallowed up with the encroachment of commercial buildings.
+The problem presented the architects was to duplicate as near as possible the old house on Abercorn Street which is known familiarly to Savannahians as the “old pink stucco” house. To more fully understand the significance of the architects problem and that you might better appreciate the results as you see them in the illustrations of the Mills B. Lane house, a brief history of the original example from which the architects had to work should prove of interest.
+The lot upon which the “old pink stucco” house now stands was sold in 1771 by Joseph Clay for six hundred and fifty pounds, the lot being sixty by one hundred and eighty feet, to James Habersham, Jr., the son of the James Habersham who came to Georgia in 1737. The senior Habersham was Secretary of the Province, and acting governor during the absence in England of Governor James Wright in 1771. He was also a partner in the first importing and exporting firm of Savannah, in which business his son, James junior, followed him.
+It appears that James Habersham, Jr., did not immediately build on this property. At the time of building the house, the records show that Joseph Clay built it and financed it for James Habersham and that up to 1789 no brick buildings stood on the lot, but there is evidence of some frame structures. Mr. Habersham evidently built beyond his means as the court records tell us. Clay levied on the east half of the lot and the brick building thereon in 1789. So it is well established that this house was not actually built until shortly before 1790. In 1800 the house was bought at public sale by Hester Habersham, widow of James, Jr., for $2,300. In 1802 Thomas Willing acting for the United States Bank bought the property for $9,000, and it was again bought in 1811 by the Planters’ Bank of Savannah for $15,500.
+A description of the original house will give you a clear idea of the fidelity with which the architects went about their work.
+It is constructed of smooth stucco over brick, two stories above a low basement, and without dormers. There is a chimney at either end of a stepped gable, and quoined corners. The doorway is unusual —instead of the customary six or eight-panel door this one has a greater number of small, square panels, with fanlight above, and a lattice design at either side formed of narrow mouldings. Above the doorway, and lighting the second-floor stair landing, is a handsome Palladian window. There is a fairly large Doric portico with wrought-iron railings between the columns, formerly surmounted by a graceful white balustrade. This must have added a pleasing touch of lightness to the building’s otherwise plain exterior.
+
+Visual Description:
+The page features a formal layout typical of periodicals from the early 20th century. The title 'SOUTHERN ARCHITECT and BUILDING NEWS' is prominently displayed at the top in a large, bold serif font. Below the title, the volume and issue number are listed alongside the date 'JULY, 1929'. The article title 'A Restoration Problem' is centered and followed by the author's name and the architects involved, 'Levy & Clarke, Architects', in italics. The text is organized into justified columns with a drop cap 'A' starting the article. The page is text-heavy with no illustrations or photographs, focusing on a detailed narrative about architectural restoration.
+
+Description:
+Article: 'A Restoration Problem' by Mary Rolls Dockstader discusses the architectural restoration of a historic house in Savannah by Levy & Clarke, Architects. The article explores the challenges and historical context of duplicating the 'old pink stucco' house, highlighting its architectural features and historical significance.
+
+METADATA:
+------------------------------
+Topics:
+  - Architectural restoration
+  - Palladian architecture
+  - Stucco construction
+  - Historic preservation
+  - 18th-century architecture
+  - Classicism
+  - Modernism
+  - Architectural history
+
+Named Entities:
+  - Mary Rolls Dockstader (Person)
+  - Levy & Clarke (Firm)
+  - Mills B Lane (Person)
+  - James Habersham Jr. (Person)
+  - Joseph Clay (Person)
+  - Hester Habersham (Person)
+  - Thomas Willing (Person)
+  - United States Bank (Organization)
+  - Planters’ Bank of Savannah (Organization)
+
+Geographic Entities:
+  - Savannah--Georgia (City)
+  - Georgia (State)
+  - England (Country)
+
+Subject Headings (Selected):
+  - historic preservation (http://vocab.getty.edu/aat/300054166) [Getty AAT]
+  - Palladian (http://vocab.getty.edu/aat/300021161) [Getty AAT]
+  - Stucco (http://id.worldcat.org/fast/fst01135778) [FAST]
+  - eighteenth century (dates CE) (http://vocab.getty.edu/aat/300404512) [Getty AAT]
+  - Classicism in architecture (http://id.loc.gov/authorities/subjects/sh85026715) [LCSH]
+  - architectural history (http://vocab.getty.edu/aat/300054162) [Getty AAT]
+
+Geographic Subject Headings (from vocabulary lookup):
+  - Georgia--Savannah (http://id.worldcat.org/fast/fst01207319) [FAST Geographic]
+  - Georgia (http://id.worldcat.org/fast/fst01204622) [FAST Geographic]
+  - Great Britain (http://id.worldcat.org/fast/fst01204623) [FAST Geographic]
+
+============================================================

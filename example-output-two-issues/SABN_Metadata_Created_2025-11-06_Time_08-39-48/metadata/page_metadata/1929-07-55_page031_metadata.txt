@@ -1,0 +1,54 @@
+============================================================
+SOUTHERN ARCHITECT - PAGE METADATA
+============================================================
+
+PAGE IDENTIFICATION:
+Folder: 1929-07-55
+Page Number: 31
+
+CONTENT:
+------------------------------
+Text Transcription:
+JULY, 1929 SOUTHERN ARCHITECT AND BUILDING NEWS 67
+
+SIDE ELEVATION
+
+PATIO
+HOUSE OF GILMAN PRICHARD, AUGUSTA, GA.
+SCROGGS & EWING, ARCHITECTS
+
+Visual Description:
+The page features two black and white photographs. The top photograph shows a side elevation of a house with a sloped roof, dormer windows, and a brick wall lining a curved driveway. The bottom photograph depicts a patio area with a central door flanked by circular windows, surrounded by brickwork. The text is in a serif font, with the title 'SOUTHERN ARCHITECT AND BUILDING NEWS' at the top center, and page number '67' at the top right. Captions are placed below each photograph in a smaller font.
+
+Description:
+Photo: House of Gilman Prichard, Augusta, GA. Features side elevation and patio views. Designed by Scroggs & Ewing, showcasing residential architectural design in the American South during the late 1920s.
+
+METADATA:
+------------------------------
+Topics:
+  - Residential architecture
+  - 1920s architecture
+  - Architectural photography
+  - Brickwork
+  - Dormer windows
+  - Patio design
+
+Named Entities:
+  - Gilman Prichard (Person)
+  - Scroggs & Ewing (Firm)
+
+Geographic Entities:
+  - Augusta--Georgia (City)
+  - Georgia (State)
+
+Subject Headings (Selected):
+  - architectural photography (http://vocab.getty.edu/aat/300435151) [Getty AAT]
+  - Brickwork (http://id.loc.gov/authorities/subjects/sh2001003032) [LCSH]
+  - dormers (http://vocab.getty.edu/aat/300002232) [Getty AAT]
+  - Patios--Design and construction (http://id.worldcat.org/fast/fst01055061) [FAST]
+
+Geographic Subject Headings (from vocabulary lookup):
+  - Georgia--Augusta (http://id.worldcat.org/fast/fst01206406) [FAST Geographic]
+  - Georgia (http://id.worldcat.org/fast/fst01204622) [FAST Geographic]
+
+============================================================

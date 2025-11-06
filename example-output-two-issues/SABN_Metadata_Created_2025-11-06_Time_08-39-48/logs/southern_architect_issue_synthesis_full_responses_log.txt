@@ -1,0 +1,156 @@
+LLM Full Responses Log - Southern Architect Issue Synthesis
+Created at: 2025-11-06 11:00:34
+================================================================================
+
+Row 1 - Barcode 1929-07-55 - 2025-11-06 11:00:34
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 14.41s
+TOKENS: 12,196 (Prompt: 11,268, Completion: 928)
+ESTIMATED COST: $0.0060
+
+LLM RESPONSE:
+{
+  "issue_description": "This July 1929 issue of The Southern Architect and Building News offers a comprehensive examination of Southern architectural practices and historic preservation efforts during the late 1920s, highlighting key architects, firms, and building types across the American South. Notably, it features detailed studies of residential and institutional architecture, including the classical Mills B. Lane House in Savannah by Levy & Clarke, and the Tudor Revival residence in Richmond, VA, designed by W. Duncan Lee. The issue emphasizes architectural restoration challenges, such as the replication of eighteenth-century Palladian and Colonial structures, with in-depth discussions on materials like stucco and tabby concrete, and craftsmanship in entrance gates and brickwork. The coverage of Bayard Dominick's Hunting Lodge by Willis Irvin illustrates the integration of Colonial and Georgian styles within rural plantation architecture, underscoring regional design adaptations. Architectural floor plans and photographic documentation provide valuable insights into early 20th-century residential layouts and interior design elements, including fanlights, fireplaces, and staircases. Additionally, the issue addresses the professional and economic challenges faced by Southern architects amid competition from other regions, and announces the Southern Architectural and Industrial Arts Exposition in Memphis, spotlighting the intersection of architecture with industrial arts and cultural events. This issue serves as a critical resource for understanding the evolution of Southern architectural identity, preservation practices, and design innovation during a transformative period in American architectural history.",
+  "selected_subject_headings": [
+    {
+      "label": "Architecture--Southern States",
+      "uri": "http://id.loc.gov/authorities/subjects/sh98003122",
+      "source": "LCSH",
+      "reasoning": "Central focus on Southern architecture and regional design trends throughout the issue."
+    },
+    {
+      "label": "Architecture, Classical",
+      "uri": "http://id.loc.gov/authorities/subjects/sh85006718",
+      "source": "LCSH",
+      "reasoning": "Highlights classical architectural style in institutional and residential buildings such as the Mills B. Lane House and University of Alabama Post Office."
+    },
+    {
+      "label": "Architecture, Colonial",
+      "uri": "http://id.worldcat.org/fast/fst00813657",
+      "source": "FAST",
+      "reasoning": "Focus on Colonial architectural restoration and design, including eighteenth-century houses and historic preservation."
+    },
+    {
+      "label": "Architectural photography",
+      "uri": "http://vocab.getty.edu/aat/300435151",
+      "source": "Getty AAT",
+      "reasoning": "Extensive photographic documentation of buildings and architectural details supports visual analysis of Southern architecture."
+    },
+    {
+      "label": "historic preservation",
+      "uri": "http://vocab.getty.edu/aat/300054166",
+      "source": "Getty AAT",
+      "reasoning": "Key theme in articles addressing restoration challenges and conservation of historic Southern buildings."
+    },
+    {
+      "label": "Brickwork",
+      "uri": "http://id.loc.gov/authorities/subjects/sh2001003032",
+      "source": "LCSH",
+      "reasoning": "Emphasized in residential architecture and detailed construction techniques, particularly in Southern homes."
+    },
+    {
+      "label": "Architectural design",
+      "uri": "http://id.loc.gov/authorities/subjects/sh85006585",
+      "source": "LCSH",
+      "reasoning": "Covers design principles and floor plans for various residential and institutional projects featured in the issue."
+    },
+    {
+      "label": "Architectural drawings",
+      "uri": "http://id.worldcat.org/fast/fst01986246",
+      "source": "FAST",
+      "reasoning": "Includes detailed floor plans and architectural layouts critical for understanding building design."
+    },
+    {
+      "label": "20th-century architecture",
+      "uri": "http://id.worldcat.org/fast/fst01775377",
+      "source": "FAST",
+      "reasoning": "Documents architectural trends and residential designs from the late 1920s in the American South."
+    },
+    {
+      "label": "Architectural design--Awards",
+      "uri": "http://id.worldcat.org/fast/fst00813186",
+      "source": "FAST",
+      "reasoning": "Highlights the Southern Architectural and Industrial Arts Exposition and recognition of architectural excellence."
+    }
+  ]
+}
+
+================================================================================
+
+Row 2 - Barcode 1917-05-39 - 2025-11-06 11:00:55
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 21.30s
+TOKENS: 46,182 (Prompt: 45,268, Completion: 914)
+ESTIMATED COST: $0.0196
+
+LLM RESPONSE:
+{
+  "issue_description": "This May 1917 issue of The Southern Architect offers a comprehensive snapshot of early 20th-century architectural and construction innovations, with a particular focus on the American South's evolving built environment amid World War I. It features extensive advertisements and articles highlighting advancements in building materials such as concrete construction, structural steel, and roofing technologies including metal shingles and roofing slate. Noteworthy are discussions on heating and ventilation systems, including forced air heating and warm air furnaces, reflecting growing attention to building comfort and energy efficiency. The issue also addresses sanitary engineering innovations, including chemical closets and sewerage systems, underscoring public health concerns in suburban and urban development. Architectural firms and prominent architects like G. Lloyd Preacher and Sanguinet & Staats are noted for their contributions to Southern residential, church, and institutional architecture, with emphasis on Gothic Revival and industrial architectural styles. Articles on architectural practice, professional ethics, and civil service examinations reveal the period's professionalization trends. Significant coverage of sculptural arts, featuring Henry Hering and Richard Engelmann, connects architectural ornamentation with broader artistic movements such as realism and classicism. Urban planning and community development discussions, including the call for city planning boards in Atlanta, situate architecture within civic improvement efforts. The issue also documents the impact of World War I on construction industries and advertising, highlighting economic and material challenges. Overall, this issue is a rich resource for understanding technological, stylistic, and professional developments shaping Southern architecture during a pivotal historical moment.",
+  "selected_subject_headings": [
+    {
+      "label": "Concrete construction",
+      "uri": "http://id.worldcat.org/fast/fst00874261",
+      "source": "FAST",
+      "reasoning": "Central to the issue's focus on modern building materials and construction technology."
+    },
+    {
+      "label": "structural steel",
+      "uri": "http://vocab.getty.edu/aat/300010931",
+      "source": "Getty AAT",
+      "reasoning": "Highlights innovations in steel framing and construction prevalent in the period."
+    },
+    {
+      "label": "forced air heating",
+      "uri": "http://vocab.getty.edu/aat/300051535",
+      "source": "Getty AAT",
+      "reasoning": "Reflects advancements in building comfort and mechanical systems discussed in the issue."
+    },
+    {
+      "label": "building materials",
+      "uri": "http://vocab.getty.edu/aat/300014857",
+      "source": "Getty AAT",
+      "reasoning": "A broad category encompassing the diverse materials and products featured throughout."
+    },
+    {
+      "label": "plumbing systems",
+      "uri": "http://vocab.getty.edu/aat/300078157",
+      "source": "Getty AAT",
+      "reasoning": "Emphasizes sanitary engineering developments and public health concerns."
+    },
+    {
+      "label": "Architectural design--Standards",
+      "uri": "http://id.worldcat.org/fast/fst00813220",
+      "source": "FAST",
+      "reasoning": "Addresses professionalization and evolving architectural practice standards."
+    },
+    {
+      "label": "Architectural history",
+      "uri": "http://vocab.getty.edu/aat/300054162",
+      "source": "Getty AAT",
+      "reasoning": "Captures the issue's exploration of historical figures like Thomas Jefferson and sculptors."
+    },
+    {
+      "label": "Architectural acoustics",
+      "uri": "http://id.loc.gov/authorities/subjects/sh85006581",
+      "source": "LCSH",
+      "reasoning": "Reflects technical innovations in building design for improved functionality."
+    },
+    {
+      "label": "Architecture--Southern States",
+      "uri": "http://id.loc.gov/authorities/subjects/sh98003122",
+      "source": "LCSH",
+      "reasoning": "Situates the issue's content within the regional context of Southern architectural development."
+    },
+    {
+      "label": "Gothic revival (Architecture)",
+      "uri": "http://id.worldcat.org/fast/fst00945078",
+      "source": "FAST",
+      "reasoning": "Highlights stylistic trends in church and institutional architecture featured in the issue."
+    }
+  ]
+}
+
+================================================================================
+

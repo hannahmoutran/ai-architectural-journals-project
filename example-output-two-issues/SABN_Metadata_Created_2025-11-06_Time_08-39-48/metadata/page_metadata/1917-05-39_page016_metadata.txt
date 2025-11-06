@@ -1,0 +1,91 @@
+============================================================
+SOUTHERN ARCHITECT - PAGE METADATA
+============================================================
+
+PAGE IDENTIFICATION:
+Folder: 1917-05-39
+Page Number: 16
+
+CONTENT:
+------------------------------
+Text Transcription:
+tracts on a cost-plus-percentage basis. In so doing they select a contractor who has the ability, the money and the organization to perform the desired work in the specified time and the way it is desired to be done. The causes for low-priced contracts are not alone due to the contractors, but the blame is shared equally by the builders who have been poor buyers of contracts. In buying shoes, the ordinary person takes quality into consideration. He buys from a firm whom he knows to be reliable and from whom he knows the article he purchases will be exactly as represented. The same man, in buying a suit of clothes, selects the store where he knows he will be accorded fair treatment and will not be given a cheap article when he has paid for a good one. The same commonsense methods should be applied to letting contracts; and if they were in more general use, there would be less failure on the part of contractors, less unsatisfactory concrete work, and contractors would be regarded in a more professional light than at present.
+
+The condition is deplorable, but will only be corrected by the contractors themselves refusing to take contracts at less than the legitimate profit due them for their knowledge and their more or less hazardous investment.
+
+The Duty of the Hour.
+
+The President speaks the will of the nation. He does it temperately, dispassionately, but with a convincing finality that leaves nothing to be desired. * * * American citizens of other nativities should do their utmost to respect the feelings of the German-born, and to help them in standing fast by their American faith. It is their hour of trial. They will come through it triumphantly, but they should have the sympathy and help of their fellow-citizens. * * * We are one people in the presence of this great moment in history, says the Minneapolis Journal.
+
+Estimating the Loss.
+
+They are beginning to arrive at figures which show the loss of wooden buildings in the European war. It is the merest beginning as yet, but the light it throws on the situation is unmistakable, and it affords a sort of basis for estimating how much lumber will be needed to restore what has been destroyed. That phase of the case is of interest to lumbermen in America who are looking for export business after the close of the war.
+
+The French Minister of the Interior has completed a tally of the buildings destroyed by the Germans in that part of France which they occupied during their dash for Paris, but from which they retired after a few days or a few weeks. That district is now in French possession-and the count of the loss of wooden buildings has been finished. The destruction amounted to 345,840,000 feet, about one-third of it being fine joinery work and interior finish. The invading army occupied that district a short time only. The wave of invasion rolled in and receded, but within that brief period the destruction of wooden buildings reached the enormous total given above.
+
+The Germans still occupy a region of France nearly four times as large as that from which they have withdrawn, and the destruction there has been, from all accounts, more complete than that in the districts where their stay was short. Based on that estimate, considerably more than a billion feet of wood has been destroyed, counting buildings alone.
+
+But France is only one corner of the devastated areas. As much or more has been destroyed in Belgium, a greater amount in Poland, while in East Prussia, Austria, and the Balkans the totals are enormous. It is doubtful if the whole exports of lumber from the United States to Europe in many years would suffice to restore what the war has destroyed in buildings alone, comments Hardware Record.
+
+Thomas Jefferson, Architect.
+
+It was all right for Thomas Jefferson to write the Declaration of Independence, to revolutionize the laws of Virginia as to primogeniture, and establish religious freedom and create a feeling of tolerance among the people, but they were not proud that he was also a great architect.
+
+On this point the Christian Science Monitor says: 'The truth is, neither in his time, nor for years afterward, were Jefferson's fellow-countrymen willing to dissociate him from his public achievements for any reason whatsoever. For his part in the framing of the Declaration of Independence, for his part in the making of the Constitution, and for his part in directing the government in its tender years, they were willing to grant him all praise, to do him all honor, but they could not become enthusiastic when told that he was an expert draftsman and had designed some very fine buildings. They even thought that it was beneath the dignity of so great a man to putter around with a trestle board, compasses, rules, crayons, and the like. Their idea of him was that he should devote his whole time to composing declarations, framing Constitutions or dictating essays on the fundamentals of democracy.'
+
+But Jefferson's architectural work was as unhampered by established limitations as was his political vision. He designed the Virginia Capitol at Richmond, the graceful University of Virginia group and the mansion at Monticello, and these achievements have been admired for generations.
+
+Visual Description:
+The page is from a periodical titled 'Southern Architect and Building News'. It features a two-column layout with justified text. The header includes the page number '18' and the periodical's name. The text is divided into sections with bold headings such as 'The Duty of the Hour', 'Estimating the Loss', and 'Thomas Jefferson, Architect'. The font is serif, typical of early 20th-century publications. There are no images or illustrations on the page.
+
+Description:
+Article: Discussion on the impact of the European war on wooden buildings and Thomas Jefferson's architectural contributions. Highlights the destruction of buildings in Europe and Jefferson's overlooked architectural achievements.
+
+METADATA:
+------------------------------
+Topics:
+  - Architectural contracts
+  - Building restoration
+  - Wooden buildings
+  - European war impact
+  - Architectural achievements
+  - Thomas Jefferson
+  - Architectural history
+  - Lumber industry
+
+Named Entities:
+  - Thomas Jefferson (Architect)
+  - Christian Science Monitor (Publication)
+  - Minneapolis Journal (Publication)
+  - Hardware Record (Publication)
+  - Virginia Capitol (Building)
+  - University of Virginia (Building)
+  - Monticello (Building)
+
+Geographic Entities:
+  - France (Country)
+  - Belgium (Country)
+  - Poland (Country)
+  - East Prussia (Region)
+  - Austria (Country)
+  - Balkans (Region)
+  - United States (Country)
+  - Richmond--Virginia (City)
+
+Subject Headings (Selected):
+  - Wooden-frame buildings (http://id.loc.gov/authorities/subjects/sh85147931) [LCSH]
+  - World War (1939-1945) (http://id.worldcat.org/fast/fst01180924) [FAST]
+  - Jefferson, Thomas, 1743-1826 (http://id.worldcat.org/fast/fst00040754) [FAST]
+  - architectural history (http://vocab.getty.edu/aat/300054162) [Getty AAT]
+
+Geographic Subject Headings (from vocabulary lookup):
+  - France (http://id.worldcat.org/fast/fst01204289) [FAST Geographic]
+  - Belgium (http://id.worldcat.org/fast/fst01210278) [FAST Geographic]
+  - Poland (http://id.worldcat.org/fast/fst01206891) [FAST Geographic]
+  - Europe--East Prussia (Poland and Russia) (http://id.worldcat.org/fast/fst01692702) [FAST Geographic]
+  - Netherlands (http://id.worldcat.org/fast/fst01204034) [FAST Geographic]
+  - Balkan Peninsula (http://id.worldcat.org/fast/fst01241484) [FAST Geographic]
+  - United States (http://id.worldcat.org/fast/fst01204155) [FAST Geographic]
+  - Virginia--Richmond (http://id.worldcat.org/fast/fst01205345) [FAST Geographic]
+
+============================================================

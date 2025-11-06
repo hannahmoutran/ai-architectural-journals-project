@@ -1,0 +1,57 @@
+============================================================
+SOUTHERN ARCHITECT - PAGE METADATA
+============================================================
+
+PAGE IDENTIFICATION:
+Folder: 1917-05-39
+Page Number: 31
+
+CONTENT:
+------------------------------
+Text Transcription:
+Richard Engleman, Sculptor
+
+AT HIS DESK in an office, Richard Englemann, a twenty-three-year-old bookkeeper, began to create plastic forms of various descriptions. Life was so very monotonous that something had to be done for amusement and recreation. In this way Englemann modeled small wax figures without any special thought of sculpture. Some of the work, however, of this amateur found its way to Ruemann, and not long afterwards Englemann became a student at the academy.
+
+Born in 1868, at St. Georgen, near Bayreuth,
+
+Richard Englemann, the son of a doctor, was now, at the age of twenty-four, entering upon the career of a sculptor. Only half a year after entering the Academy, about 1893, his first large work was created, the “Philosopher,” a mature head of very complicated surfaces. It appeared to be the work of an advanced artist and would be considered a beginning only by that young sculptor who was striving for more than the untrained eye would be able to see; to him sculpture must display ideas.
+
+This first work met with success at the exhibit.
+
+Josef Flossmann, Sculptor. The Mother. From Die Kunst.
+
+Visual Description:
+The page features a title at the top in bold, serif font: 'Richard Engleman, Sculptor'. The text is arranged in two columns, with a narrative about Richard Englemann's early career and development as a sculptor. Below the text is a black-and-white photograph of a sculpture titled 'The Mother' by Josef Flossmann. The sculpture depicts a seated woman holding a child, with another child beside her. The caption beneath the image reads 'Josef Flossmann, Sculptor. The Mother. From Die Kunst.' The layout is clean and formal, typical of early 20th-century periodicals.
+
+Description:
+Article: Biography of Richard Englemann, a sculptor known for his early work 'Philosopher'. Discusses his transition from bookkeeper to sculptor and his early success. Includes an image of 'The Mother' by Josef Flossmann.
+
+METADATA:
+------------------------------
+Topics:
+  - Sculpture
+  - Artistic Development
+  - 19th Century Art
+  - Wax Modeling
+  - Art Exhibitions
+
+Named Entities:
+  - Richard Englemann (Sculptor)
+  - Josef Flossmann (Sculptor)
+  - The Mother (Sculpture)
+  - Philosopher (Sculpture)
+
+Geographic Entities:
+  - St. Georgen--Germany (City)
+  - Bayreuth--Germany (City)
+
+Subject Headings (Selected):
+  - Sculpture (http://id.loc.gov/authorities/subjects/sh85119004) [LCSH]
+  - artistic change (http://vocab.getty.edu/aat/300263368) [Getty AAT]
+
+Geographic Subject Headings (from vocabulary lookup):
+  - Germany--Sankt Georgen im Schwarzwald (http://id.worldcat.org/fast/fst01237011) [FAST Geographic]
+  - Germany--Bayreuth (http://id.worldcat.org/fast/fst01202701) [FAST Geographic]
+
+============================================================

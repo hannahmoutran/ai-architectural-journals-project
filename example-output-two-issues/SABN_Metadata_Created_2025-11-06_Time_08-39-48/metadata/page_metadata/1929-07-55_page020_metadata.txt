@@ -1,0 +1,90 @@
+============================================================
+SOUTHERN ARCHITECT - PAGE METADATA
+============================================================
+
+PAGE IDENTIFICATION:
+Folder: 1929-07-55
+Page Number: 20
+
+CONTENT:
+------------------------------
+Text Transcription:
+SECOND FLOOR PLAN
+
+STORAGE
+
+BEDROOM
+13' 4 x 15' 0
+
+BEDROOM
+17' 0 x 13' 0
+
+DRESSING ROOM
+
+GUEST'S ROOM
+13' 6 x 15' 0
+
+FIRST FLOOR PLAN
+
+PORCH
+
+DINING ROOM
+17' 2 x 13' 0
+
+LIVING ROOM
+16' 6 x 17' 3
+
+OFFICE
+13' 5 x 15' 0
+
+KITCHEN
+13' 0 x 15' 0
+
+MAID'S ROOM
+10' 0 x 14' 0
+
+MAID'S ROOM
+10' 0 x 14' 0
+
+LAUNDRY
+10' 0 x 14' 0
+
+SERVANT'S DINING RM
+10' 0 x 12' 0
+
+HOUSE NEAR CHARLOTTESVILLE, VIRGINIA
+W. DUNCAN LEE, ARCHITECT
+
+Visual Description:
+The page features architectural floor plans for a house near Charlottesville, Virginia, designed by W. Duncan Lee. The layout includes two detailed floor plans: the first floor and the second floor. The first floor plan is positioned at the bottom, showing rooms such as the living room, dining room, kitchen, office, and maid's rooms. The second floor plan is above, displaying bedrooms, a guest room, and storage. The plans are drawn with precise measurements and labeled in a serif font. The page is cleanly designed with a focus on the architectural drawings.
+
+Description:
+Page: Architectural Floor Plans - House near Charlottesville, Virginia by W. Duncan Lee. Detailed first and second floor plans showcasing residential design elements and room layouts.
+
+METADATA:
+------------------------------
+Topics:
+  - Residential architecture
+  - Floor plans
+  - Architectural design
+  - Room layout
+  - 20th century architecture
+
+Named Entities:
+  - W. Duncan Lee (Architect)
+
+Geographic Entities:
+  - Charlottesville--Virginia (City)
+  - Virginia (State)
+
+Subject Headings (Selected):
+  - Floor plans (http://id.loc.gov/authorities/subjects/sh2003008965) [LCSH]
+  - Architectural design (http://id.loc.gov/authorities/subjects/sh85006585) [LCSH]
+  - Room layout (Dwellings) (http://id.loc.gov/authorities/subjects/sh85115349) [LCSH]
+  - 20th-century architecture (http://id.worldcat.org/fast/fst01775377) [FAST]
+
+Geographic Subject Headings (from vocabulary lookup):
+  - Virginia--Charlottesville (http://id.worldcat.org/fast/fst01204493) [FAST Geographic]
+  - Virginia (http://id.worldcat.org/fast/fst01204597) [FAST Geographic]
+
+============================================================

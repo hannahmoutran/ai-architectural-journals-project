@@ -1,0 +1,5226 @@
+SOUTHERN ARCHITECT VOCABULARY API USAGE LOG
+==================================================
+
+Generated: 2025-11-06 10:56:13
+Script: southern_architect_step2
+
+SUMMARY STATISTICS:
+--------------------
+Total topics processed: 788
+Total API requests made: 3410
+Total processing time: 5557.23 seconds
+Average time per topic: 7.05 seconds
+
+LCSH API STATISTICS:
+--------------------
+Requests made: 1943
+Successful responses: 1909
+Failed responses: 34
+Success rate: 98.3%
+Total processing time: 251.47 seconds
+Average time per request: 0.13 seconds
+Terms found: 2526
+Cache hits: 1060
+
+FAST API STATISTICS:
+--------------------
+Requests made: 522
+Successful responses: 505
+Failed responses: 17
+Success rate: 96.7%
+Total processing time: 893.91 seconds
+Average time per request: 1.71 seconds
+Terms found: 934
+Cache hits: 0
+
+FAST GEOGRAPHIC API STATISTICS:
+-------------------------------
+Requests made: 266
+Successful responses: 266
+Failed responses: 0
+Success rate: 100.0%
+Total processing time: 200.62 seconds
+Average time per request: 0.75 seconds
+Terms found: 252
+Cache hits: 0
+
+GETTY AAT API STATISTICS:
+-------------------------
+Requests made: 522
+Successful responses: 505
+Failed responses: 17
+Success rate: 96.7%
+Total processing time: 1767.78 seconds
+Average time per request: 3.39 seconds
+Terms found: 1258
+Cache hits: 0
+
+GETTY TGN API STATISTICS:
+-------------------------
+Requests made: 157
+Successful responses: 140
+Failed responses: 17
+Success rate: 89.2%
+Total processing time: 53.58 seconds
+Average time per request: 0.34 seconds
+Terms found: 260
+Cache hits: 0
+
+TOPIC PROCESSING RESULTS:
+-------------------------
+Topic: 18th-century architecture
+  Total terms found: 7
+  LCSH: 3 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 3.57s
+
+Topic: 1920s architecture
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 3.98s
+
+Topic: 19th Century Art
+  Total terms found: 8
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 1.80s
+
+Topic: 19th century art
+  Total terms found: 8
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 1.85s
+
+Topic: 20th century architecture
+  Total terms found: 7
+  LCSH: 3 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 1.81s
+
+Topic: 20th-century architecture
+  Total terms found: 7
+  LCSH: 3 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 1.07s
+
+Topic: Acoustic treatment
+  Total terms found: 3
+  LCSH: 0 terms
+  FAST: 0 terms
+  Getty AAT: 3 terms
+  Processing time: 3.01s
+
+Topic: Adjustable stanchions
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 2.92s
+
+Topic: Advertising
+  Total terms found: 7
+  LCSH: 3 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 1.69s
+
+Topic: Advertising strategies
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 2.21s
+
+Topic: Agricultural architecture
+  Total terms found: 6
+  LCSH: 0 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 1.37s
+
+Topic: Air purification technology
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 2.50s
+
+Topic: Air quality
+  Total terms found: 10
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 2 terms
+  Getty TGN: 3 terms
+  Processing time: 1.45s
+
+Topic: Aircraft materials
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 1.91s
+
+Topic: American home economics
+  Total terms found: 6
+  LCSH: 1 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 2.29s
+
+Topic: Animal husbandry equipment
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 3.75s
+
+Topic: Antique whitewashing techniques
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 3.67s
+
+Topic: Apartment buildings
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 1.14s
+
+Topic: Application procedures
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 1.47s
+
+Topic: Arched windows
+  Total terms found: 6
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 2 terms
+  Getty TGN: 3 terms
+  Processing time: 3.68s
+
+Topic: Architectural Advertising
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 2.07s
+
+Topic: Architectural Awards
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 1.16s
+
+Topic: Architectural Drafting
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 2.43s
+
+Topic: Architectural Expositions
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 2.42s
+
+Topic: Architectural History
+  Total terms found: 6
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 1.52s
+
+Topic: Architectural Innovations
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 2.49s
+
+Topic: Architectural Models
+  Total terms found: 7
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 1 terms
+  Getty TGN: 1 terms
+  Processing time: 1.64s
+
+Topic: Architectural Motifs
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 2.48s
+
+Topic: Architectural Photography
+  Total terms found: 6
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 1 terms
+  Getty TGN: 0 terms
+  Processing time: 1.46s
+
+Topic: Architectural Styles
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 1.50s
+
+Topic: Architectural Training
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 1.54s
+
+Topic: Architectural achievements
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 1.89s
+
+Topic: Architectural acoustics
+  Total terms found: 7
+  LCSH: 2 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 1.88s
+
+Topic: Architectural advertisements
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 2.76s
+
+Topic: Architectural associations
+  Total terms found: 2
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 1 terms
+  Getty TGN: 0 terms
+  Processing time: 2.39s
+
+Topic: Architectural columns
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 2.65s
+
+Topic: Architectural community
+  Total terms found: 5
+  LCSH: 1 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 1.94s
+
+Topic: Architectural competition
+  Total terms found: 6
+  LCSH: 0 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 1.80s
+
+Topic: Architectural contracts
+  Total terms found: 7
+  LCSH: 3 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 1.76s
+
+Topic: Architectural conventions
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 2.27s
+
+Topic: Architectural design
+  Total terms found: 8
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 1.39s
+
+Topic: Architectural details
+  Total terms found: 8
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 2.08s
+
+Topic: Architectural drawings
+  Total terms found: 8
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 2 terms
+  Getty TGN: 0 terms
+  Processing time: 1.84s
+
+Topic: Architectural elements
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 2.11s
+
+Topic: Architectural endorsements
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 2.44s
+
+Topic: Architectural engineering
+  Total terms found: 8
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 1.73s
+
+Topic: Architectural fees
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 1.89s
+
+Topic: Architectural finishes
+  Total terms found: 5
+  LCSH: 1 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 2.26s
+
+Topic: Architectural firms
+  Total terms found: 6
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 1 terms
+  Getty TGN: 0 terms
+  Processing time: 1.23s
+
+Topic: Architectural floor plans
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 2.57s
+
+Topic: Architectural hardware
+  Total terms found: 7
+  LCSH: 2 terms
+  FAST: 1 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 2.34s
+
+Topic: Architectural history
+  Total terms found: 6
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 1.58s
+
+Topic: Architectural illustration
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 1.66s
+
+Topic: Architectural innovation
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 2.68s
+
+Topic: Architectural innovations
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 2.44s
+
+Topic: Architectural materials
+  Total terms found: 8
+  LCSH: 3 terms
+  FAST: 1 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 2.12s
+
+Topic: Architectural meetings
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 2.44s
+
+Topic: Architectural obituaries
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 1.75s
+
+Topic: Architectural offices
+  Total terms found: 8
+  LCSH: 4 terms
+  FAST: 3 terms
+  Getty AAT: 1 terms
+  Getty TGN: 0 terms
+  Processing time: 1.95s
+
+Topic: Architectural partnerships
+  Total terms found: 5
+  LCSH: 1 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 2.72s
+
+Topic: Architectural photography
+  Total terms found: 6
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 1 terms
+  Getty TGN: 0 terms
+  Processing time: 1.62s
+
+Topic: Architectural planning
+  Total terms found: 8
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 2.01s
+
+Topic: Architectural plans
+  Total terms found: 7
+  LCSH: 3 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 1.96s
+
+Topic: Architectural practices
+  Total terms found: 8
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 1.78s
+
+Topic: Architectural printing
+  Total terms found: 7
+  LCSH: 2 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 1.79s
+
+Topic: Architectural products
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 2.74s
+
+Topic: Architectural publications
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 2.40s
+
+Topic: Architectural replication
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 2.42s
+
+Topic: Architectural restoration
+  Total terms found: 7
+  LCSH: 1 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 1.81s
+
+Topic: Architectural safety
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 2.33s
+
+Topic: Architectural specifications
+  Total terms found: 7
+  LCSH: 3 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 2.63s
+
+Topic: Architectural standards
+  Total terms found: 6
+  LCSH: 0 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 2.12s
+
+Topic: Architectural supplies
+  Total terms found: 5
+  LCSH: 1 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 2.41s
+
+Topic: Architectural tools
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 2.39s
+
+Topic: Architectural trends
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 2.91s
+
+Topic: Architecture
+  Total terms found: 7
+  LCSH: 3 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 1.49s
+
+Topic: Art Criticism
+  Total terms found: 6
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 1 terms
+  Getty TGN: 0 terms
+  Processing time: 1.56s
+
+Topic: Art Exhibitions
+  Total terms found: 6
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 1 terms
+  Getty TGN: 0 terms
+  Processing time: 1.64s
+
+Topic: Art Market
+  Total terms found: 7
+  LCSH: 1 terms
+  FAST: 2 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 1.90s
+
+Topic: Art and Architecture
+  Total terms found: 9
+  LCSH: 4 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 3.87s
+
+Topic: Art exhibitions
+  Total terms found: 6
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 1 terms
+  Getty TGN: 0 terms
+  Processing time: 0.79s
+
+Topic: Artistic Development
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 2.88s
+
+Topic: Artistic Influence
+  Total terms found: 8
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 1.32s
+
+Topic: Artistic Philosophy
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 1.44s
+
+Topic: Artistic evolution
+  Total terms found: 6
+  LCSH: 0 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 3.03s
+
+Topic: Artistic expression
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 1.59s
+
+Topic: Artistic expression in architecture
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 2.90s
+
+Topic: Artistic influences
+  Total terms found: 7
+  LCSH: 3 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 2.70s
+
+Topic: Artistic movements
+  Total terms found: 6
+  LCSH: 1 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 2.40s
+
+Topic: Artistic rejection
+  Total terms found: 5
+  LCSH: 1 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 1.45s
+
+Topic: Arts and Crafts
+  Total terms found: 8
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 1.52s
+
+Topic: Automatic lighting
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 1.51s
+
+Topic: Automatic operation
+  Total terms found: 5
+  LCSH: 1 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 1.73s
+
+Topic: Automatic sprinkler systems
+  Total terms found: 5
+  LCSH: 1 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 3.62s
+
+Topic: Automobile infrastructure
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 3.13s
+
+Topic: Automobile trailers
+  Total terms found: 8
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 1.66s
+
+Topic: Ball-bearing conveyors
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 2.45s
+
+Topic: Bank buildings
+  Total terms found: 8
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 1 terms
+  Getty TGN: 1 terms
+  Processing time: 1.66s
+
+Topic: Bas-relief
+  Total terms found: 7
+  LCSH: 2 terms
+  FAST: 3 terms
+  Getty AAT: 2 terms
+  Getty TGN: 0 terms
+  Processing time: 1.40s
+
+Topic: Batch mixers
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 3.49s
+
+Topic: Blackboards
+  Total terms found: 5
+  LCSH: 2 terms
+  FAST: 1 terms
+  Getty AAT: 2 terms
+  Getty TGN: 0 terms
+  Processing time: 1.62s
+
+Topic: Boiler technology
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 2.95s
+
+Topic: Brass and bronze work
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 2.36s
+
+Topic: Brass rails
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 2.08s
+
+Topic: Brass signs
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 2.14s
+
+Topic: Brick Wall Anchors
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 4.35s
+
+Topic: Brick construction
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 1.75s
+
+Topic: Brick manufacturing
+  Total terms found: 6
+  LCSH: 0 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 3.30s
+
+Topic: Brick textures
+  Total terms found: 6
+  LCSH: 0 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 2.90s
+
+Topic: Brickwork
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 1.18s
+
+Topic: Bridges
+  Total terms found: 7
+  LCSH: 3 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 1.62s
+
+Topic: Bronze memorials
+  Total terms found: 6
+  LCSH: 0 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 3.01s
+
+Topic: Bronze sculpture
+  Total terms found: 8
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 1.61s
+
+Topic: Builders' exchanges
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 3.11s
+
+Topic: Builders' hardware
+  Total terms found: 5
+  LCSH: 1 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 1.39s
+
+Topic: Building Design
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 1.53s
+
+Topic: Building Materials
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 1.53s
+
+Topic: Building Trades
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 1.24s
+
+Topic: Building accessories
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 4.14s
+
+Topic: Building campaigns
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 3.36s
+
+Topic: Building codes
+  Total terms found: 9
+  LCSH: 2 terms
+  FAST: 3 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 1.37s
+
+Topic: Building commissions
+  Total terms found: 4
+  LCSH: 1 terms
+  FAST: 0 terms
+  Getty AAT: 3 terms
+  Processing time: 3.52s
+
+Topic: Building construction
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 2.17s
+
+Topic: Building design
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 1.78s
+
+Topic: Building economy
+  Total terms found: 3
+  LCSH: 0 terms
+  FAST: 0 terms
+  Getty AAT: 3 terms
+  Processing time: 3.90s
+
+Topic: Building efficiency
+  Total terms found: 6
+  LCSH: 0 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 2.30s
+
+Topic: Building industry
+  Total terms found: 8
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 2.25s
+
+Topic: Building innovations
+  Total terms found: 7
+  LCSH: 1 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 2.69s
+
+Topic: Building layout
+  Total terms found: 7
+  LCSH: 2 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 2.56s
+
+Topic: Building maintenance
+  Total terms found: 7
+  LCSH: 2 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 2.30s
+
+Topic: Building materials
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 1.30s
+
+Topic: Building products
+  Total terms found: 7
+  LCSH: 1 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 2.41s
+
+Topic: Building restoration
+  Total terms found: 6
+  LCSH: 1 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 2.27s
+
+Topic: Building technology
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 1.80s
+
+Topic: Building trades
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 1.49s
+
+Topic: Building trades organization
+  Total terms found: 5
+  LCSH: 1 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 2.38s
+
+Topic: Bungalows
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 1.19s
+
+Topic: Cast iron columns
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 4.28s
+
+Topic: Cattle stanchions
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 2.84s
+
+Topic: Cement Stave Silo
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 2.35s
+
+Topic: Cement finishes
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 2.58s
+
+Topic: Cement stave silos
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 2.79s
+
+Topic: Chemical closets
+  Total terms found: 7
+  LCSH: 2 terms
+  FAST: 1 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 1.47s
+
+Topic: Cherokee Cement Plaster
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 2.21s
+
+Topic: Church architecture
+  Total terms found: 10
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 1.69s
+
+Topic: City beautiful movement
+  Total terms found: 7
+  LCSH: 2 terms
+  FAST: 1 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 3.96s
+
+Topic: City planning
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 3.62s
+
+Topic: Civic pride
+  Total terms found: 7
+  LCSH: 0 terms
+  FAST: 3 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 3.01s
+
+Topic: Civil Service Examinations
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 1.46s
+
+Topic: Civil service
+  Total terms found: 7
+  LCSH: 3 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 1.46s
+
+Topic: Civil service examinations
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 0.58s
+
+Topic: Clamps
+  Total terms found: 8
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 1.34s
+
+Topic: Classical architecture
+  Total terms found: 8
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 0.79s
+
+Topic: Classicism
+  Total terms found: 8
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 0.64s
+
+Topic: Classroom equipment
+  Total terms found: 2
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 1 terms
+  Getty TGN: 0 terms
+  Processing time: 2.39s
+
+Topic: Co-operative publicity
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 3.37s
+
+Topic: Coal chutes
+  Total terms found: 7
+  LCSH: 2 terms
+  FAST: 1 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 1.61s
+
+Topic: Coal heating technology
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 3.92s
+
+Topic: Colonial Architecture
+  Total terms found: 8
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 1.36s
+
+Topic: Colonial architecture
+  Total terms found: 8
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 1.54s
+
+Topic: Colonial columns
+  Total terms found: 3
+  LCSH: 0 terms
+  FAST: 0 terms
+  Getty AAT: 3 terms
+  Processing time: 3.10s
+
+Topic: Colonial interior design
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 3.12s
+
+Topic: Community development
+  Total terms found: 10
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 2 terms
+  Getty TGN: 3 terms
+  Processing time: 1.53s
+
+Topic: Community engagement
+  Total terms found: 5
+  LCSH: 1 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 1.65s
+
+Topic: Community engagement in architecture
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 3.31s
+
+Topic: Composition capitals
+  Total terms found: 6
+  LCSH: 0 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 3.27s
+
+Topic: Concrete Tile Roofing
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 2.07s
+
+Topic: Concrete blocks
+  Total terms found: 10
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 1.49s
+
+Topic: Concrete construction
+  Total terms found: 8
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 1.63s
+
+Topic: Concrete inserts
+  Total terms found: 8
+  LCSH: 2 terms
+  FAST: 2 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 1.74s
+
+Topic: Concrete roads
+  Total terms found: 8
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 1.65s
+
+Topic: Concrete waterproofing
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 2.45s
+
+Topic: Construction Business
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 1.48s
+
+Topic: Construction Techniques
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 2.94s
+
+Topic: Construction Tools
+  Total terms found: 10
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 0.92s
+
+Topic: Construction bonds
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 3.24s
+
+Topic: Construction costs
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 2.00s
+
+Topic: Construction engineering
+  Total terms found: 8
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 1.58s
+
+Topic: Construction equipment
+  Total terms found: 8
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 1.21s
+
+Topic: Construction guarantees
+  Total terms found: 6
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 3.21s
+
+Topic: Construction industry
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 1.83s
+
+Topic: Construction innovations
+  Total terms found: 8
+  LCSH: 2 terms
+  FAST: 3 terms
+  Getty AAT: 0 terms
+  Getty TGN: 3 terms
+  Processing time: 2.15s
+
+Topic: Construction inspection
+  Total terms found: 8
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 1.99s
+
+Topic: Construction materials
+  Total terms found: 10
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 1.49s
+
+Topic: Construction methods
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 1.83s
+
+Topic: Construction problems
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 0 terms
+  Getty TGN: 3 terms
+  Processing time: 3.42s
+
+Topic: Construction services
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 2.24s
+
+Topic: Construction techniques
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 2.85s
+
+Topic: Construction technology
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 1.38s
+
+Topic: Construction tools
+  Total terms found: 10
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 1.50s
+
+Topic: Contractor opportunities
+  Total terms found: 2
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 1 terms
+  Getty TGN: 0 terms
+  Processing time: 3.32s
+
+Topic: Contractor practices
+  Total terms found: 3
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 1 terms
+  Getty TGN: 0 terms
+  Processing time: 2.04s
+
+Topic: Contractor's pumps
+  Total terms found: 3
+  LCSH: 0 terms
+  FAST: 0 terms
+  Getty AAT: 3 terms
+  Processing time: 2.79s
+
+Topic: Convertible levels
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 1.86s
+
+Topic: Conveyor systems
+  Total terms found: 5
+  LCSH: 1 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 2.49s
+
+Topic: Cost-effective solutions
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 3.01s
+
+Topic: Court House Architecture
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 3.27s
+
+Topic: Craftsmanship in architecture
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 3.34s
+
+Topic: Cultural Events
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 2.86s
+
+Topic: Cut stone
+  Total terms found: 9
+  LCSH: 1 terms
+  FAST: 3 terms
+  Getty AAT: 2 terms
+  Getty TGN: 3 terms
+  Processing time: 2.53s
+
+Topic: Dairy equipment
+  Total terms found: 8
+  LCSH: 2 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 1.54s
+
+Topic: Damp-proofing
+  Total terms found: 3
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 1 terms
+  Getty TGN: 0 terms
+  Processing time: 1.31s
+
+Topic: Decimal system
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 2.14s
+
+Topic: Decorative ironwork
+  Total terms found: 6
+  LCSH: 1 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 1.46s
+
+Topic: Decorative marbles
+  Total terms found: 6
+  LCSH: 0 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 3.11s
+
+Topic: Dining rooms
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 1.34s
+
+Topic: Dogwood trees
+  Total terms found: 5
+  LCSH: 1 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 3.85s
+
+Topic: Dormer windows
+  Total terms found: 3
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 1 terms
+  Getty TGN: 1 terms
+  Processing time: 2.01s
+
+Topic: Drafting Techniques
+  Total terms found: 6
+  LCSH: 0 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 3.14s
+
+Topic: Drawing Tables
+  Total terms found: 7
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 2 terms
+  Getty TGN: 3 terms
+  Processing time: 3.33s
+
+Topic: Dutch architectural influence
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 2.68s
+
+Topic: Early 20th-century architecture
+  Total terms found: 6
+  LCSH: 0 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 3.99s
+
+Topic: Early 20th-century design
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 3.84s
+
+Topic: Early 20th-century skyscrapers
+  Total terms found: 6
+  LCSH: 0 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 4.00s
+
+Topic: Early American architecture
+  Total terms found: 6
+  LCSH: 0 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 3.47s
+
+Topic: Economic factors
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 2.14s
+
+Topic: Educational facilities
+  Total terms found: 6
+  LCSH: 2 terms
+  FAST: 3 terms
+  Getty AAT: 1 terms
+  Getty TGN: 0 terms
+  Processing time: 2.05s
+
+Topic: Educational initiatives
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 2.47s
+
+Topic: Educational supplies
+  Total terms found: 6
+  LCSH: 1 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 2.31s
+
+Topic: Eighteenth-century architecture
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 2.62s
+
+Topic: Electric lighting
+  Total terms found: 10
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 0.99s
+
+Topic: Electric water systems
+  Total terms found: 3
+  LCSH: 0 terms
+  FAST: 0 terms
+  Getty AAT: 3 terms
+  Processing time: 3.24s
+
+Topic: Elevator lubricators
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 0 terms
+  Getty AAT: 2 terms
+  Getty TGN: 3 terms
+  Processing time: 3.12s
+
+Topic: Elevators
+  Total terms found: 7
+  LCSH: 3 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 1.39s
+
+Topic: Employment Qualifications
+  Total terms found: 2
+  LCSH: 0 terms
+  FAST: 0 terms
+  Getty AAT: 2 terms
+  Getty TGN: 0 terms
+  Processing time: 2.99s
+
+Topic: Employment requirements
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 2 terms
+  Getty TGN: 0 terms
+  Processing time: 3.36s
+
+Topic: Energy efficiency
+  Total terms found: 8
+  LCSH: 2 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 1.76s
+
+Topic: Engine technology
+  Total terms found: 6
+  LCSH: 0 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 1.47s
+
+Topic: Engineering challenges
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 2.45s
+
+Topic: Engineering inspection
+  Total terms found: 8
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 0.97s
+
+Topic: Engineering solutions
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 2.32s
+
+Topic: Engineering support for war
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 2.62s
+
+Topic: Entrance design
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 1.16s
+
+Topic: European art movements
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 3.42s
+
+Topic: European war impact
+  Total terms found: 6
+  LCSH: 0 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 2.83s
+
+Topic: Exhibitions
+  Total terms found: 7
+  LCSH: 3 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 0.75s
+
+Topic: Expansion tanks
+  Total terms found: 6
+  LCSH: 0 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 3.02s
+
+Topic: Experience evaluation
+  Total terms found: 3
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 2 terms
+  Getty TGN: 0 terms
+  Processing time: 1.78s
+
+Topic: Factory design
+  Total terms found: 6
+  LCSH: 2 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 1.33s
+
+Topic: Fanlight
+  Total terms found: 3
+  LCSH: 1 terms
+  FAST: 1 terms
+  Getty AAT: 1 terms
+  Getty TGN: 0 terms
+  Processing time: 1.41s
+
+Topic: Filing cabinets
+  Total terms found: 5
+  LCSH: 2 terms
+  FAST: 1 terms
+  Getty AAT: 1 terms
+  Getty TGN: 1 terms
+  Processing time: 1.69s
+
+Topic: Fire alarm systems
+  Total terms found: 6
+  LCSH: 1 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 2.94s
+
+Topic: Fire escapes
+  Total terms found: 4
+  LCSH: 2 terms
+  FAST: 1 terms
+  Getty AAT: 1 terms
+  Getty TGN: 0 terms
+  Processing time: 1.64s
+
+Topic: Fire insurance
+  Total terms found: 7
+  LCSH: 3 terms
+  FAST: 1 terms
+  Getty AAT: 1 terms
+  Getty TGN: 2 terms
+  Processing time: 1.57s
+
+Topic: Fire resistance
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 2 terms
+  Getty TGN: 1 terms
+  Processing time: 3.19s
+
+Topic: Fire-proof doors
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 3.50s
+
+Topic: Fireplace design
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 1.33s
+
+Topic: Fireplace heating
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 2.79s
+
+Topic: Fireplaces
+  Total terms found: 8
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 1.32s
+
+Topic: Fireproof buildings
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 3.79s
+
+Topic: Fireproofing techniques
+  Total terms found: 6
+  LCSH: 0 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 1.93s
+
+Topic: Flameless hot water systems
+  Total terms found: 3
+  LCSH: 0 terms
+  FAST: 0 terms
+  Getty AAT: 3 terms
+  Processing time: 4.68s
+
+Topic: Floor finishes
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 3.26s
+
+Topic: Floor plans
+  Total terms found: 7
+  LCSH: 2 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 1.44s
+
+Topic: Floor surfacers
+  Total terms found: 3
+  LCSH: 0 terms
+  FAST: 0 terms
+  Getty AAT: 3 terms
+  Processing time: 3.32s
+
+Topic: Floor surfacing
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 3.03s
+
+Topic: Floor varnish
+  Total terms found: 3
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 1 terms
+  Getty TGN: 1 terms
+  Processing time: 2.91s
+
+Topic: Flooring materials
+  Total terms found: 6
+  LCSH: 1 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 3.37s
+
+Topic: Floral wallpaper
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 2.86s
+
+Topic: Flush valves
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 2.77s
+
+Topic: Furnace durability
+  Total terms found: 3
+  LCSH: 0 terms
+  FAST: 0 terms
+  Getty AAT: 3 terms
+  Processing time: 2.99s
+
+Topic: Furnace pipes
+  Total terms found: 5
+  LCSH: 1 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 2.59s
+
+Topic: Furniture design
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 1 terms
+  Getty TGN: 2 terms
+  Processing time: 1.66s
+
+Topic: Gambrel roof
+  Total terms found: 3
+  LCSH: 0 terms
+  FAST: 0 terms
+  Getty AAT: 1 terms
+  Getty TGN: 2 terms
+  Processing time: 4.20s
+
+Topic: Garage design
+  Total terms found: 7
+  LCSH: 1 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 4.09s
+
+Topic: Garbage burning technology
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 4.25s
+
+Topic: Garden and interior design
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 4.19s
+
+Topic: Georgian Architecture
+  Total terms found: 8
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 1.79s
+
+Topic: Glazing composition
+  Total terms found: 6
+  LCSH: 0 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 2.29s
+
+Topic: Gothic architecture
+  Total terms found: 8
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 1.45s
+
+Topic: Government Employment
+  Total terms found: 8
+  LCSH: 2 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 1.51s
+
+Topic: Government positions
+  Total terms found: 6
+  LCSH: 2 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 1.82s
+
+Topic: Gravel and Sand
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 1.48s
+
+Topic: Greek Art
+  Total terms found: 8
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 1.63s
+
+Topic: Hardware
+  Total terms found: 8
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 1.25s
+
+Topic: Heating innovations
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 2.54s
+
+Topic: Heating systems
+  Total terms found: 8
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 1.11s
+
+Topic: Heating technology
+  Total terms found: 6
+  LCSH: 0 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 2.93s
+
+Topic: Hellenism
+  Total terms found: 7
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 1 terms
+  Getty TGN: 0 terms
+  Processing time: 1.45s
+
+Topic: Highway construction
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 0 terms
+  Getty TGN: 3 terms
+  Processing time: 2.17s
+
+Topic: Historic homes
+  Total terms found: 10
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 1.42s
+
+Topic: Historic houses
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 1.00s
+
+Topic: Historic preservation
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 1 terms
+  Getty AAT: 2 terms
+  Getty TGN: 3 terms
+  Processing time: 0.74s
+
+Topic: Historical Buildings
+  Total terms found: 8
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 1.47s
+
+Topic: Historical architecture
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 2.21s
+
+Topic: Historical building materials
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 1.53s
+
+Topic: Historical preservation
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 1.36s
+
+Topic: Home Furnishing
+  Total terms found: 8
+  LCSH: 2 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 1.67s
+
+Topic: Home comfort
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 1.68s
+
+Topic: Home heating solutions
+  Total terms found: 6
+  LCSH: 0 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 4.01s
+
+Topic: Home improvement
+  Total terms found: 8
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 2.04s
+
+Topic: Home ownership
+  Total terms found: 6
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 1 terms
+  Getty TGN: 0 terms
+  Processing time: 0.96s
+
+Topic: Home ownership promotion
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 3.95s
+
+Topic: Home sanitation
+  Total terms found: 7
+  LCSH: 1 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 1.83s
+
+Topic: Hot water heating
+  Total terms found: 10
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 3.53s
+
+Topic: Hot water heating systems
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 4.51s
+
+Topic: Hot water systems
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 0 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 4.58s
+
+Topic: House layout
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 3.97s
+
+Topic: Humidity control
+  Total terms found: 8
+  LCSH: 2 terms
+  FAST: 2 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 2.10s
+
+Topic: Hunting lodges
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 1.61s
+
+Topic: Hydrated lime
+  Total terms found: 7
+  LCSH: 4 terms
+  FAST: 2 terms
+  Getty AAT: 1 terms
+  Getty TGN: 0 terms
+  Processing time: 1.95s
+
+Topic: Idealism
+  Total terms found: 7
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 2 terms
+  Getty TGN: 0 terms
+  Processing time: 1.72s
+
+Topic: Idealism in art
+  Total terms found: 4
+  LCSH: 2 terms
+  FAST: 1 terms
+  Getty AAT: 1 terms
+  Getty TGN: 0 terms
+  Processing time: 2.06s
+
+Topic: Industrial Arts
+  Total terms found: 11
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 2 terms
+  Getty TGN: 3 terms
+  Processing time: 1.87s
+
+Topic: Industrial Progress
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 1.97s
+
+Topic: Industrial advertising
+  Total terms found: 8
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 2.48s
+
+Topic: Industrial architecture
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 2.08s
+
+Topic: Industrial design
+  Total terms found: 10
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 2 terms
+  Getty TGN: 3 terms
+  Processing time: 1.48s
+
+Topic: Industrial fans
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 2.71s
+
+Topic: Industrial machinery
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 1.85s
+
+Topic: Industrial manufacturing
+  Total terms found: 8
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 1.73s
+
+Topic: Industrial readjustment
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 3.30s
+
+Topic: Inks and adhesives
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 2.56s
+
+Topic: Innovation in architecture
+  Total terms found: 6
+  LCSH: 0 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 1.65s
+
+Topic: Installation techniques
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 2.31s
+
+Topic: Integration of natural elements
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 4.47s
+
+Topic: Interior Decorations
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 1.26s
+
+Topic: Interior decoration
+  Total terms found: 8
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 1.28s
+
+Topic: Interior design
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 1.31s
+
+Topic: Interior furnishings
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 1.58s
+
+Topic: Interior surfaces
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 2.30s
+
+Topic: Iron and bronze work
+  Total terms found: 6
+  LCSH: 0 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 4.24s
+
+Topic: Iron and steel
+  Total terms found: 7
+  LCSH: 3 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 2.15s
+
+Topic: Kitchen design
+  Total terms found: 6
+  LCSH: 0 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 1.52s
+
+Topic: Landscape architecture
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 1.34s
+
+Topic: Landscape design
+  Total terms found: 10
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 2 terms
+  Getty TGN: 3 terms
+  Processing time: 1.56s
+
+Topic: Latticework
+  Total terms found: 5
+  LCSH: 2 terms
+  FAST: 1 terms
+  Getty AAT: 2 terms
+  Getty TGN: 0 terms
+  Processing time: 1.54s
+
+Topic: Lighting fixtures
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 1.40s
+
+Topic: Lighting services
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 3.55s
+
+Topic: Lightning rods
+  Total terms found: 7
+  LCSH: 2 terms
+  FAST: 1 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 1.85s
+
+Topic: Limestone
+  Total terms found: 8
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 1.46s
+
+Topic: Lithographic reproduction
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 2.92s
+
+Topic: Living rooms
+  Total terms found: 10
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 1.47s
+
+Topic: Loader skips
+  Total terms found: 3
+  LCSH: 0 terms
+  FAST: 0 terms
+  Getty AAT: 3 terms
+  Processing time: 3.13s
+
+Topic: Lumber industry
+  Total terms found: 7
+  LCSH: 2 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 1.36s
+
+Topic: Luxury bathing
+  Total terms found: 6
+  LCSH: 0 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 3.12s
+
+Topic: Machinery and material testing
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 2.33s
+
+Topic: Manufacturing
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 1.01s
+
+Topic: Marble
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 1.81s
+
+Topic: Marble Products
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 3.42s
+
+Topic: Masonry construction
+  Total terms found: 8
+  LCSH: 1 terms
+  FAST: 2 terms
+  Getty AAT: 2 terms
+  Getty TGN: 3 terms
+  Processing time: 1.51s
+
+Topic: Memorial Windows
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 2.94s
+
+Topic: Memory
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 1.20s
+
+Topic: Metal Shingles
+  Total terms found: 6
+  LCSH: 0 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 3.64s
+
+Topic: Metal ceilings
+  Total terms found: 6
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 3.16s
+
+Topic: Metal frame window screens
+  Total terms found: 6
+  LCSH: 0 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 5.26s
+
+Topic: Metal guards
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 3.62s
+
+Topic: Metal lath
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 1.20s
+
+Topic: Metal shingles
+  Total terms found: 6
+  LCSH: 0 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 3.24s
+
+Topic: Metric system
+  Total terms found: 8
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 2.38s
+
+Topic: Millwork
+  Total terms found: 6
+  LCSH: 2 terms
+  FAST: 3 terms
+  Getty AAT: 1 terms
+  Getty TGN: 0 terms
+  Processing time: 1.43s
+
+Topic: Modern Sculpture
+  Total terms found: 8
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 1.47s
+
+Topic: Modern construction
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 1.66s
+
+Topic: Modernism
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 0.69s
+
+Topic: Monolithic structures
+  Total terms found: 2
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 1 terms
+  Getty TGN: 0 terms
+  Processing time: 3.66s
+
+Topic: Mortar coloring
+  Total terms found: 6
+  LCSH: 0 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 3.10s
+
+Topic: Mortar colors
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 2.85s
+
+Topic: Municipal reservoirs
+  Total terms found: 6
+  LCSH: 2 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 3.36s
+
+Topic: Mural Paintings
+  Total terms found: 7
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 2 terms
+  Getty TGN: 3 terms
+  Processing time: 2.25s
+
+Topic: Natural landscapes
+  Total terms found: 8
+  LCSH: 3 terms
+  FAST: 1 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 3.51s
+
+Topic: Navy Department
+  Total terms found: 6
+  LCSH: 1 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 2.13s
+
+Topic: Non-combustible roofing
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 2.92s
+
+Topic: Office building design
+  Total terms found: 6
+  LCSH: 0 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 1.86s
+
+Topic: Ornamental Iron
+  Total terms found: 6
+  LCSH: 0 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 1.52s
+
+Topic: Ornamental iron
+  Total terms found: 6
+  LCSH: 0 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 1.46s
+
+Topic: Ornamental ironwork
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 2.20s
+
+Topic: Ornamental metalwork
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 2.06s
+
+Topic: Outside capital
+  Total terms found: 3
+  LCSH: 0 terms
+  FAST: 0 terms
+  Getty AAT: 3 terms
+  Processing time: 2.64s
+
+Topic: Palladian architecture
+  Total terms found: 5
+  LCSH: 1 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 2.16s
+
+Topic: Park design
+  Total terms found: 7
+  LCSH: 1 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 1.78s
+
+Topic: Patio design
+  Total terms found: 5
+  LCSH: 1 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 1.26s
+
+Topic: Period mantels
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 2.69s
+
+Topic: Pipe organs
+  Total terms found: 4
+  LCSH: 3 terms
+  FAST: 0 terms
+  Getty AAT: 1 terms
+  Getty TGN: 0 terms
+  Processing time: 3.02s
+
+Topic: Piping work
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 1.42s
+
+Topic: Planing Mills
+  Total terms found: 8
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 1 terms
+  Getty TGN: 1 terms
+  Processing time: 1.38s
+
+Topic: Planning boards
+  Total terms found: 6
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 1.85s
+
+Topic: Plantation architecture
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 3.09s
+
+Topic: Plastic art
+  Total terms found: 6
+  LCSH: 1 terms
+  FAST: 2 terms
+  Getty AAT: 1 terms
+  Getty TGN: 2 terms
+  Processing time: 1.54s
+
+Topic: Plastic decoration
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 1.57s
+
+Topic: Plumbing
+  Total terms found: 6
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 0 terms
+  Getty TGN: 0 terms
+  Processing time: 1.42s
+
+Topic: Plumbing fixtures
+  Total terms found: 7
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 1 terms
+  Getty TGN: 0 terms
+  Processing time: 1.26s
+
+Topic: Plumbing supplies
+  Total terms found: 8
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 2 terms
+  Getty TGN: 0 terms
+  Processing time: 1.83s
+
+Topic: Plumbing systems
+  Total terms found: 5
+  LCSH: 1 terms
+  FAST: 1 terms
+  Getty AAT: 1 terms
+  Getty TGN: 2 terms
+  Processing time: 3.53s
+
+Topic: Poetry
+  Total terms found: 7
+  LCSH: 3 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 1.17s
+
+Topic: Porch columns
+  Total terms found: 3
+  LCSH: 0 terms
+  FAST: 0 terms
+  Getty AAT: 3 terms
+  Processing time: 3.87s
+
+Topic: Portable sewerage systems
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 3.41s
+
+Topic: Portland cement
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 1.48s
+
+Topic: Portraiture
+  Total terms found: 8
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 2 terms
+  Getty TGN: 0 terms
+  Processing time: 1.69s
+
+Topic: Post-war economy
+  Total terms found: 3
+  LCSH: 0 terms
+  FAST: 0 terms
+  Getty AAT: 3 terms
+  Processing time: 3.75s
+
+Topic: Professional Certification
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 1.38s
+
+Topic: Professional ethics
+  Total terms found: 10
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 1.09s
+
+Topic: Professional ethics in architecture
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 3.43s
+
+Topic: Professional networking in architecture
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 3.39s
+
+Topic: Public buildings
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 1.33s
+
+Topic: Public health recommendations
+  Total terms found: 1
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 0 terms
+  Getty TGN: 0 terms
+  Processing time: 1589.28s
+
+Topic: Public instruction
+  Total terms found: 0
+  LCSH: 0 terms
+  FAST: 0 terms
+  Getty AAT: 0 terms
+  Getty TGN: 0 terms
+  Processing time: 0.02s
+
+Topic: Pueblo Indian style
+  Total terms found: 0
+  LCSH: 0 terms
+  FAST: 0 terms
+  Getty AAT: 0 terms
+  Getty TGN: 0 terms
+  Processing time: 0.02s
+
+Topic: Pumping technology
+  Total terms found: 0
+  LCSH: 0 terms
+  FAST: 0 terms
+  Getty AAT: 0 terms
+  Getty TGN: 0 terms
+  Processing time: 0.02s
+
+Topic: Radiator accessories
+  Total terms found: 0
+  LCSH: 0 terms
+  FAST: 0 terms
+  Getty AAT: 0 terms
+  Getty TGN: 0 terms
+  Processing time: 0.02s
+
+Topic: Radiator design
+  Total terms found: 0
+  LCSH: 0 terms
+  FAST: 0 terms
+  Getty AAT: 0 terms
+  Getty TGN: 0 terms
+  Processing time: 0.03s
+
+Topic: Real estate
+  Total terms found: 0
+  LCSH: 0 terms
+  FAST: 0 terms
+  Getty AAT: 0 terms
+  Getty TGN: 0 terms
+  Processing time: 0.03s
+
+Topic: Real estate advertising
+  Total terms found: 0
+  LCSH: 0 terms
+  FAST: 0 terms
+  Getty AAT: 0 terms
+  Getty TGN: 0 terms
+  Processing time: 0.03s
+
+Topic: Real estate campaigns
+  Total terms found: 0
+  LCSH: 0 terms
+  FAST: 0 terms
+  Getty AAT: 0 terms
+  Getty TGN: 0 terms
+  Processing time: 0.03s
+
+Topic: Realism
+  Total terms found: 0
+  LCSH: 0 terms
+  FAST: 0 terms
+  Getty AAT: 0 terms
+  Getty TGN: 0 terms
+  Processing time: 0.03s
+
+Topic: Realism in art
+  Total terms found: 0
+  LCSH: 0 terms
+  FAST: 0 terms
+  Getty AAT: 0 terms
+  Getty TGN: 0 terms
+  Processing time: 0.03s
+
+Topic: Reflectors
+  Total terms found: 0
+  LCSH: 0 terms
+  FAST: 0 terms
+  Getty AAT: 0 terms
+  Getty TGN: 0 terms
+  Processing time: 0.03s
+
+Topic: Regional expertise
+  Total terms found: 0
+  LCSH: 0 terms
+  FAST: 0 terms
+  Getty AAT: 0 terms
+  Getty TGN: 0 terms
+  Processing time: 0.04s
+
+Topic: Reinforced concrete
+  Total terms found: 0
+  LCSH: 0 terms
+  FAST: 0 terms
+  Getty AAT: 0 terms
+  Getty TGN: 0 terms
+  Processing time: 0.03s
+
+Topic: Residential Architecture
+  Total terms found: 0
+  LCSH: 0 terms
+  FAST: 0 terms
+  Getty AAT: 0 terms
+  Getty TGN: 0 terms
+  Processing time: 0.03s
+
+Topic: Residential architecture
+  Total terms found: 0
+  LCSH: 0 terms
+  FAST: 0 terms
+  Getty AAT: 0 terms
+  Getty TGN: 0 terms
+  Processing time: 0.02s
+
+Topic: Residential buildings
+  Total terms found: 0
+  LCSH: 0 terms
+  FAST: 0 terms
+  Getty AAT: 0 terms
+  Getty TGN: 0 terms
+  Processing time: 0.03s
+
+Topic: Resource conservation
+  Total terms found: 3
+  LCSH: 0 terms
+  FAST: 0 terms
+  Getty AAT: 3 terms
+  Processing time: 0.50s
+
+Topic: Reversible mirrors
+  Total terms found: 6
+  LCSH: 0 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 4.20s
+
+Topic: Revolving doors
+  Total terms found: 6
+  LCSH: 3 terms
+  FAST: 1 terms
+  Getty AAT: 1 terms
+  Getty TGN: 1 terms
+  Processing time: 1.78s
+
+Topic: Rolling ladders
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 3.20s
+
+Topic: Roof scaffolding
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 4.29s
+
+Topic: Roofing Slate
+  Total terms found: 7
+  LCSH: 1 terms
+  FAST: 2 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 2.51s
+
+Topic: Roofing materials
+  Total terms found: 8
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 0.85s
+
+Topic: Roofing slate
+  Total terms found: 7
+  LCSH: 1 terms
+  FAST: 2 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 1.83s
+
+Topic: Roofing tiles
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 1.45s
+
+Topic: Room layout
+  Total terms found: 9
+  LCSH: 4 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 232.71s
+
+Topic: Rural architecture
+  Total terms found: 8
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 2.15s
+
+Topic: Safe and vault manufacturing
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 4.56s
+
+Topic: Safety Equipment
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 1.67s
+
+Topic: Safety cabinets
+  Total terms found: 8
+  LCSH: 4 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 2.38s
+
+Topic: Safety systems
+  Total terms found: 8
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 2.24s
+
+Topic: Salt glazed bricks
+  Total terms found: 6
+  LCSH: 0 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 4.16s
+
+Topic: Sanitary Walls and Floors
+  Total terms found: 6
+  LCSH: 0 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 2.48s
+
+Topic: Sanitary barn equipment
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 3.71s
+
+Topic: Sanitary drinking solutions
+  Total terms found: 6
+  LCSH: 0 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 3.75s
+
+Topic: Sanitary engineering
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 1.59s
+
+Topic: Sanitary fixtures
+  Total terms found: 6
+  LCSH: 0 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 2.41s
+
+Topic: Sanitary solutions
+  Total terms found: 6
+  LCSH: 0 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 3.09s
+
+Topic: Saw filing machines
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 1.59s
+
+Topic: Scaffolding
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 1.51s
+
+Topic: School construction
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 1.82s
+
+Topic: School furniture
+  Total terms found: 8
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 1.94s
+
+Topic: Scientific skill in architecture
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 3.69s
+
+Topic: Sculpture
+  Total terms found: 8
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 1.35s
+
+Topic: Sculpture techniques
+  Total terms found: 6
+  LCSH: 2 terms
+  FAST: 3 terms
+  Getty AAT: 1 terms
+  Getty TGN: 0 terms
+  Processing time: 3.29s
+
+Topic: Secession
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 0.67s
+
+Topic: Self-cleaning strainers
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 3.07s
+
+Topic: Self-clinching nails
+  Total terms found: 6
+  LCSH: 0 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 2.73s
+
+Topic: Sewage disposal
+  Total terms found: 10
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 2 terms
+  Getty TGN: 3 terms
+  Processing time: 0.79s
+
+Topic: Shafting
+  Total terms found: 6
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 0 terms
+  Getty TGN: 0 terms
+  Processing time: 1.33s
+
+Topic: Shelf pins
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 2.72s
+
+Topic: Shooting lodges
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 3.06s
+
+Topic: Silo construction
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 0 terms
+  Getty TGN: 3 terms
+  Processing time: 1.94s
+
+Topic: Slate roofing
+  Total terms found: 8
+  LCSH: 2 terms
+  FAST: 2 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 1.73s
+
+Topic: Soundproofing
+  Total terms found: 7
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 1 terms
+  Getty TGN: 0 terms
+  Processing time: 0.84s
+
+Topic: Southern Architecture
+  Total terms found: 7
+  LCSH: 3 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 1.67s
+
+Topic: Southern architecture
+  Total terms found: 7
+  LCSH: 3 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 1.14s
+
+Topic: Southern manufacturing
+  Total terms found: 5
+  LCSH: 1 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 1.91s
+
+Topic: Spiral stairways
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 3.26s
+
+Topic: Spring
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 1.41s
+
+Topic: Staircases
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 1.12s
+
+Topic: Steam engines
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 1.32s
+
+Topic: Steam heating
+  Total terms found: 10
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 1.37s
+
+Topic: Steel construction
+  Total terms found: 8
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 1.46s
+
+Topic: Steel stalls
+  Total terms found: 6
+  LCSH: 0 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 3.06s
+
+Topic: Stone and marble
+  Total terms found: 6
+  LCSH: 0 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 3.80s
+
+Topic: Stone construction
+  Total terms found: 8
+  LCSH: 2 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 2.40s
+
+Topic: Structural Steel
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 1.62s
+
+Topic: Structural brass work
+  Total terms found: 6
+  LCSH: 0 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 3.11s
+
+Topic: Structural iron
+  Total terms found: 6
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 1 terms
+  Getty TGN: 0 terms
+  Processing time: 1.33s
+
+Topic: Structural steel
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 1.63s
+
+Topic: Structural steel connections
+  Total terms found: 6
+  LCSH: 0 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 2.97s
+
+Topic: Structural work
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 1.83s
+
+Topic: Stucco construction
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 2.75s
+
+Topic: Stucco techniques
+  Total terms found: 6
+  LCSH: 0 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 2.73s
+
+Topic: Suburban infrastructure
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 2.82s
+
+Topic: Summer cottages
+  Total terms found: 7
+  LCSH: 2 terms
+  FAST: 1 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 0.94s
+
+Topic: Surveying instruments
+  Total terms found: 8
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 1.31s
+
+Topic: Symbolism
+  Total terms found: 7
+  LCSH: 3 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 1.15s
+
+Topic: Symmetrical design
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 3.27s
+
+Topic: Tabby concrete
+  Total terms found: 5
+  LCSH: 1 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 1.47s
+
+Topic: Technical Education
+  Total terms found: 7
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 1 terms
+  Getty TGN: 1 terms
+  Processing time: 1.40s
+
+Topic: Technical education
+  Total terms found: 7
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 1 terms
+  Getty TGN: 1 terms
+  Processing time: 1.27s
+
+Topic: Technological advancements
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 1 terms
+  Getty TGN: 2 terms
+  Processing time: 2.47s
+
+Topic: Temperature regulation
+  Total terms found: 8
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 1.58s
+
+Topic: Theatre construction
+  Total terms found: 6
+  LCSH: 1 terms
+  FAST: 0 terms
+  Getty AAT: 2 terms
+  Getty TGN: 3 terms
+  Processing time: 4.00s
+
+Topic: Thermometers
+  Total terms found: 8
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 1.11s
+
+Topic: Thomas Jefferson
+  Total terms found: 10
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 2 terms
+  Getty TGN: 3 terms
+  Processing time: 2.66s
+
+Topic: Thrift and economy
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 2.88s
+
+Topic: Tiles and Mosaics
+  Total terms found: 6
+  LCSH: 0 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 2.91s
+
+Topic: Tower clocks
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 1 terms
+  Getty AAT: 2 terms
+  Getty TGN: 3 terms
+  Processing time: 1.51s
+
+Topic: Trade Opportunities
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 1.48s
+
+Topic: Trade paper advertising
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 3.94s
+
+Topic: Traditional American architecture
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 3.25s
+
+Topic: Traditional interior design
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 3.09s
+
+Topic: Tudor Revival architecture
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 3.61s
+
+Topic: University buildings
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 2.26s
+
+Topic: Urban development
+  Total terms found: 10
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 1.58s
+
+Topic: Urban parks
+  Total terms found: 10
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 1.59s
+
+Topic: Urban renewal
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 1 terms
+  Getty AAT: 2 terms
+  Getty TGN: 3 terms
+  Processing time: 1.45s
+
+Topic: Venetian blinds
+  Total terms found: 7
+  LCSH: 2 terms
+  FAST: 1 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 1.50s
+
+Topic: Ventilating systems
+  Total terms found: 6
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 2 terms
+  Getty TGN: 2 terms
+  Processing time: 2.33s
+
+Topic: Ventilation
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 1.11s
+
+Topic: Ventilation systems
+  Total terms found: 5
+  LCSH: 1 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 1.59s
+
+Topic: Ventilator irons
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 3.68s
+
+Topic: Ventilators
+  Total terms found: 7
+  LCSH: 3 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 1.17s
+
+Topic: Vitrolite
+  Total terms found: 1
+  LCSH: 0 terms
+  FAST: 0 terms
+  Getty AAT: 1 terms
+  Getty TGN: 0 terms
+  Processing time: 1.37s
+
+Topic: War impact on industry
+  Total terms found: 3
+  LCSH: 0 terms
+  FAST: 0 terms
+  Getty AAT: 3 terms
+  Processing time: 3.11s
+
+Topic: Warm air furnaces
+  Total terms found: 3
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 1 terms
+  Getty TGN: 0 terms
+  Processing time: 3.13s
+
+Topic: Warm air heating
+  Total terms found: 6
+  LCSH: 1 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 1.57s
+
+Topic: Water closets
+  Total terms found: 6
+  LCSH: 1 terms
+  FAST: 1 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 3.39s
+
+Topic: Water heaters
+  Total terms found: 8
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 1.16s
+
+Topic: Water pumps
+  Total terms found: 9
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 3.30s
+
+Topic: Watering systems
+  Total terms found: 6
+  LCSH: 3 terms
+  FAST: 0 terms
+  Getty AAT: 3 terms
+  Processing time: 2.83s
+
+Topic: Waterproofing
+  Total terms found: 6
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 1 terms
+  Getty TGN: 0 terms
+  Processing time: 1.30s
+
+Topic: Waterproofing techniques
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 2.41s
+
+Topic: Waterproofing technology
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 2.27s
+
+Topic: Waterways
+  Total terms found: 8
+  LCSH: 3 terms
+  FAST: 3 terms
+  Getty AAT: 1 terms
+  Getty TGN: 1 terms
+  Processing time: 1.31s
+
+Topic: Wax Modeling
+  Total terms found: 4
+  LCSH: 1 terms
+  FAST: 2 terms
+  Getty AAT: 1 terms
+  Getty TGN: 0 terms
+  Processing time: 1.58s
+
+Topic: Window glass technology
+  Total terms found: 6
+  LCSH: 0 terms
+  FAST: 3 terms
+  Getty AAT: 3 terms
+  Processing time: 5.19s
+
+Topic: Window guards
+  Total terms found: 7
+  LCSH: 2 terms
+  FAST: 1 terms
+  Getty AAT: 1 terms
+  Getty TGN: 3 terms
+  Processing time: 1.33s
+
+Topic: Window sash balances
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 4.69s
+
+Topic: Wire work
+  Total terms found: 5
+  LCSH: 1 terms
+  FAST: 3 terms
+  Getty AAT: 1 terms
+  Getty TGN: 0 terms
+  Processing time: 1.56s
+
+Topic: Wooden buildings
+  Total terms found: 8
+  LCSH: 3 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 1.71s
+
+Topic: Woodworking tools
+  Total terms found: 9
+  LCSH: 4 terms
+  FAST: 3 terms
+  Getty AAT: 1 terms
+  Getty TGN: 1 terms
+  Processing time: 1.62s
+
+Topic: World War I impact
+  Total terms found: 4
+  LCSH: 0 terms
+  FAST: 1 terms
+  Getty AAT: 3 terms
+  Processing time: 2.61s
+
+Topic: Wrought iron railings
+  Total terms found: 5
+  LCSH: 0 terms
+  FAST: 2 terms
+  Getty AAT: 3 terms
+  Processing time: 4.22s
+
+Topic: Aiken--South Carolina (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.71s
+
+Topic: "Nineteen tens"
+  Total terms found: 266
+  LCSH: 266 terms
+  Processing time: 0.36s
+
+Topic: "Nineteen twenties"
+  Total terms found: 798
+  LCSH: 798 terms
+  Processing time: 0.30s
+
+Topic: "Architecture--United States--History--20th century"
+  Total terms found: 798
+  LCSH: 798 terms
+  Processing time: 0.26s
+
+Topic: Akron--Ohio (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.70s
+
+Topic: Alabama (State)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.72s
+
+Topic: Albany--New York (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.73s
+
+Topic: Albert Lea--Minnesota (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.68s
+
+Topic: Albion--Pennsylvania (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.21s
+
+Topic: Alcorn--Mississippi (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.77s
+
+Topic: Anderson--South Carolina (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.72s
+
+Topic: Arcadia--Florida (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.72s
+
+Topic: Asheville--North Carolina (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.72s
+
+Topic: Atlanta--Georgia (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.74s
+
+Topic: Attalla--Alabama (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.93s
+
+Topic: Augusta--Georgia (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.72s
+
+Topic: Aurora--Illinois (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.69s
+
+Topic: Austria (Country)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.69s
+
+Topic: Bainbridge--Georgia (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.71s
+
+Topic: Balboa Heights--Canal Zone (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.74s
+
+Topic: Balkans (Region)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.69s
+
+Topic: Baltimore--Maryland (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.73s
+
+Topic: Bangor--Pennsylvania (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.72s
+
+Topic: Barranquilla--Colombia (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 1.14s
+
+Topic: Battle Creek--Michigan (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.76s
+
+Topic: Bayreuth--Germany (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.77s
+
+Topic: Bedford--Indiana (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.80s
+
+Topic: Belgium (Country)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.71s
+
+Topic: Belleville--Illinois (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.69s
+
+Topic: Berlin--Germany (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.70s
+
+Topic: Birmingham--Alabama (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.20s
+
+Topic: Bogota--Colombia (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.70s
+
+Topic: Boston--Massachusetts (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.70s
+
+Topic: Bowling Green--Kentucky (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.73s
+
+Topic: Boyles--Alabama (City)
+  Total terms found: 0
+  FAST Geographic: 0 terms
+  Processing time: 1.67s
+
+Topic: Bridgeport--Connecticut (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.70s
+
+Topic: Bristol--Connecticut (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.72s
+
+Topic: Brooklyn--New York (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.83s
+
+Topic: Brunswick--Georgia (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.79s
+
+Topic: Bucyrus--Ohio (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.21s
+
+Topic: Buffalo--New York (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 1.03s
+
+Topic: Buffville--Kansas (City)
+  Total terms found: 0
+  FAST Geographic: 0 terms
+  Processing time: 1.82s
+
+Topic: Burkburnett--Texas (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.71s
+
+Topic: Burlington--Iowa (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.74s
+
+Topic: Burlington--New Jersey (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.70s
+
+Topic: Burlington--Vermont (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.71s
+
+Topic: Cambridge Springs--Pennsylvania (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.82s
+
+Topic: Camden--New Jersey (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.71s
+
+Topic: Canada (Country)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.74s
+
+Topic: Canadian--Texas (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.79s
+
+Topic: Cardiff--Maryland (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.72s
+
+Topic: Carey--Ohio (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.69s
+
+Topic: Carolina (Region)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.75s
+
+Topic: Charleston--South Carolina (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.89s
+
+Topic: Charlotte--North Carolina (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.73s
+
+Topic: Charlottesville--Virginia (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.71s
+
+Topic: Chattanooga--Tennessee (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.80s
+
+Topic: Chicago--Illinois (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.71s
+
+Topic: Cincinnati--Ohio (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.72s
+
+Topic: Cleburne--Texas (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.70s
+
+Topic: Cleveland--Ohio (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.85s
+
+Topic: Cloverport--Kentucky (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.74s
+
+Topic: Columbia--South Carolina (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.69s
+
+Topic: Columbus--Ohio (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.70s
+
+Topic: Concord--Massachusetts (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.72s
+
+Topic: Cordele--Georgia (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.72s
+
+Topic: Corinth--Mississippi (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.80s
+
+Topic: Cotton Plant--Arkansas (City)
+  Total terms found: 0
+  FAST Geographic: 0 terms
+  Processing time: 1.42s
+
+Topic: Dallas--Texas (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.84s
+
+Topic: Dalton--Georgia (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.73s
+
+Topic: Danielsville--Pennsylvania (City)
+  Total terms found: 0
+  FAST Geographic: 0 terms
+  Processing time: 1.46s
+
+Topic: Dayton--Ohio (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.77s
+
+Topic: Delta--Pennsylvania (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.80s
+
+Topic: Denver--Colorado (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.72s
+
+Topic: Des Moines--Iowa (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.73s
+
+Topic: Detroit--Michigan (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.72s
+
+Topic: Earle--Arkansas (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.72s
+
+Topic: East (Region)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.71s
+
+Topic: East Bangor--Pennsylvania (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.70s
+
+Topic: East Orange--New Jersey (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.82s
+
+Topic: East Prussia (Region)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.71s
+
+Topic: Edgefield--South Carolina (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.82s
+
+Topic: El Paso--Texas (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.69s
+
+Topic: Ellenton--Florida (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.70s
+
+Topic: England (Country)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.21s
+
+Topic: Ennis--Texas (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.71s
+
+Topic: Europe (Continent)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.74s
+
+Topic: Evanston--Illinois (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.72s
+
+Topic: Evansville--Indiana (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.70s
+
+Topic: Fitchburg--Massachusetts (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.68s
+
+Topic: Florence--Italy (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.70s
+
+Topic: Florida (State)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.80s
+
+Topic: Forestville--Connecticut (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.83s
+
+Topic: Fort Branch--Indiana (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.70s
+
+Topic: Fort Dodge--Iowa (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.72s
+
+Topic: Fort Payne--Alabama (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.72s
+
+Topic: France (Country)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.71s
+
+Topic: Franklin--Virginia (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.80s
+
+Topic: Fulton County--Georgia (County)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.71s
+
+Topic: Gainesville--Texas (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.73s
+
+Topic: Gary--Indiana (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.82s
+
+Topic: Georgetown--South Carolina (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.74s
+
+Topic: Georgia (State)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.85s
+
+Topic: Germany (Country)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.68s
+
+Topic: Gibson--Iowa (City)
+  Total terms found: 0
+  FAST Geographic: 0 terms
+  Processing time: 1.40s
+
+Topic: Glenbeulah--Wisconsin (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.71s
+
+Topic: Glenpool--Oklahoma (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.73s
+
+Topic: Great Falls--South Carolina (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.72s
+
+Topic: Greensboro--North Carolina (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.70s
+
+Topic: Greenville--South Carolina (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.70s
+
+Topic: Greer--South Carolina (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.70s
+
+Topic: Groveland--Florida (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.77s
+
+Topic: Halifax--Nova Scotia (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.71s
+
+Topic: Hamilton--Ohio (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.70s
+
+Topic: Harrisburg--Pennsylvania (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.68s
+
+Topic: Hartford--Connecticut (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.19s
+
+Topic: Heavener--Oklahoma (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.76s
+
+Topic: Hickory--North Carolina (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.74s
+
+Topic: Hillsdale--Michigan (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.79s
+
+Topic: Hillsdale--Oklahoma (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.92s
+
+Topic: Hoffman--North Carolina (City)
+  Total terms found: 0
+  FAST Geographic: 0 terms
+  Processing time: 1.64s
+
+Topic: Holland--Michigan (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.72s
+
+Topic: Honolulu--Hawaii (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.79s
+
+Topic: Houston--Texas (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.70s
+
+Topic: Huntington--West Virginia (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.73s
+
+Topic: Indiana (State)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.71s
+
+Topic: Indianapolis--Indiana (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.71s
+
+Topic: Iowa (State)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.72s
+
+Topic: Jackson--Georgia (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.73s
+
+Topic: Jackson--Mississippi (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.72s
+
+Topic: Jackson--Tennessee (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.72s
+
+Topic: Jacksonville--Florida (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.70s
+
+Topic: Jefferson--Georgia (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.72s
+
+Topic: Kansas City--Missouri (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.72s
+
+Topic: Kewanee--Illinois (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.72s
+
+Topic: Knoxville--Tennessee (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.70s
+
+Topic: Lakeland--Florida (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.71s
+
+Topic: Lansing--Michigan (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.72s
+
+Topic: Laurel Hill--Florida (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.70s
+
+Topic: Lavonia--Georgia (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.72s
+
+Topic: Lee County--Mississippi (County)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.69s
+
+Topic: Lexington--North Carolina (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.70s
+
+Topic: Little Rock--Arkansas (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.72s
+
+Topic: Louisville--Georgia (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.71s
+
+Topic: Louisville--Kentucky (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.72s
+
+Topic: Macon--Georgia (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.70s
+
+Topic: Madison--Wisconsin (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.75s
+
+Topic: Manistee--Michigan (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.72s
+
+Topic: Marseilles--France (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.68s
+
+Topic: Marshalltown--Iowa (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.71s
+
+Topic: McKinney--Texas (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.73s
+
+Topic: Medina--Oklahoma (City)
+  Total terms found: 0
+  FAST Geographic: 0 terms
+  Processing time: 1.63s
+
+Topic: Memphis--Tennessee (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.72s
+
+Topic: Menominee--Michigan (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.72s
+
+Topic: Mercer--Pennsylvania (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.70s
+
+Topic: Meridian--Mississippi (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.73s
+
+Topic: Miami--Florida (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.88s
+
+Topic: Millen--Georgia (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.71s
+
+Topic: Milwaukee--Wisconsin (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.74s
+
+Topic: Mineral City--Ohio (City)
+  Total terms found: 0
+  FAST Geographic: 0 terms
+  Processing time: 1.40s
+
+Topic: Minneapolis--Minnesota (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.70s
+
+Topic: Montgomery--Alabama (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.72s
+
+Topic: Montreal--Canada (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.70s
+
+Topic: Montreal--Quebec (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.72s
+
+Topic: Munich--Germany (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.71s
+
+Topic: Muskogee--Oklahoma (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.69s
+
+Topic: Nashville--Tennessee (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.73s
+
+Topic: New England (Region)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.76s
+
+Topic: New Galilee--Pennsylvania (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.71s
+
+Topic: New Haven--Connecticut (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.71s
+
+Topic: New Orleans--Louisiana (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.72s
+
+Topic: New York City--New York (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.74s
+
+Topic: New York--New York (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.71s
+
+Topic: Newark--New Jersey (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.83s
+
+Topic: Newport--Kentucky (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.70s
+
+Topic: Newport--Rhode Island (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.73s
+
+Topic: Norfolk--Connecticut (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.20s
+
+Topic: Norfolk--Virginia (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.69s
+
+Topic: North Carolina (State)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.69s
+
+Topic: North Holston--Virginia (City)
+  Total terms found: 0
+  FAST Geographic: 0 terms
+  Processing time: 1.40s
+
+Topic: North St. Paul--Minnesota (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.74s
+
+Topic: Northville--Michigan (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.73s
+
+Topic: Ocala--Florida (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.68s
+
+Topic: Ohio (State)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.72s
+
+Topic: Orange--Texas (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.71s
+
+Topic: Osnabrueck--Germany (City)
+  Total terms found: 0
+  FAST Geographic: 0 terms
+  Processing time: 1.43s
+
+Topic: Paris--France (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.70s
+
+Topic: Parkersburg--West Virginia (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.71s
+
+Topic: Pembroke--Georgia (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.77s
+
+Topic: Peoria--Illinois (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.70s
+
+Topic: Perry--Florida (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.32s
+
+Topic: Philadelphia--Pennsylvania (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.76s
+
+Topic: Pittsburg--Pennsylvania (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.22s
+
+Topic: Pittsburgh--Pennsylvania (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.70s
+
+Topic: Plainview--Nebraska (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.72s
+
+Topic: Plant City--Florida (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.70s
+
+Topic: Poland (Country)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.70s
+
+Topic: Port Arthur--Texas (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.71s
+
+Topic: Portland--Maine (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.71s
+
+Topic: Portland--Oregon (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.71s
+
+Topic: Princeton--Illinois (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.70s
+
+Topic: Quanah--Texas (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.71s
+
+Topic: Quincy--Illinois (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.69s
+
+Topic: Raleigh--North Carolina (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.71s
+
+Topic: Reading--Pennsylvania (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.77s
+
+Topic: Rich Mountain--Arkansas (City)
+  Total terms found: 0
+  FAST Geographic: 0 terms
+  Processing time: 1.49s
+
+Topic: Richmond--Virginia (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.82s
+
+Topic: Rochester--New York (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.82s
+
+Topic: Rome--New York (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.72s
+
+Topic: Saint Louis--Missouri (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.70s
+
+Topic: Salt Lake City--Utah (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.71s
+
+Topic: San Antonio--Texas (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.70s
+
+Topic: San Francisco--California (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.73s
+
+Topic: San Juan--Puerto Rico (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.71s
+
+Topic: Sandersville--Georgia (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.69s
+
+Topic: Savannah--Georgia (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.88s
+
+Topic: Seattle--Washington (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.71s
+
+Topic: Sharon--Pennsylvania (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.70s
+
+Topic: Shelby--Ohio (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.19s
+
+Topic: Shenandoah--Iowa (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.74s
+
+Topic: South (Region)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.71s
+
+Topic: South Carolina (State)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.71s
+
+Topic: Southeastern States (Region)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.72s
+
+Topic: Southern Pennsylvania (Region)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.72s
+
+Topic: Spain (Country)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.71s
+
+Topic: Springfield--Ohio (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.72s
+
+Topic: St. Augustine--Florida (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.76s
+
+Topic: St. Georgen--Germany (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.78s
+
+Topic: St. John--New Brunswick (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.72s
+
+Topic: St. Louis--Missouri (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.81s
+
+Topic: St. Paul--Minnesota (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.71s
+
+Topic: St. Petersburg--Florida (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.71s
+
+Topic: Statesville--North Carolina (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.74s
+
+Topic: Switzerland (Country)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.73s
+
+Topic: Sydney--Nova Scotia (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.84s
+
+Topic: Syracuse--New York (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.18s
+
+Topic: Tate--Georgia (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.72s
+
+Topic: Tennessee (State)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.71s
+
+Topic: Terre Haute--Indiana (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.70s
+
+Topic: Texarkana--Texas (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.69s
+
+Topic: Texas (State)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.70s
+
+Topic: Thomson--Georgia (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.73s
+
+Topic: Toledo--Ohio (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.73s
+
+Topic: Toronto--Canada (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.77s
+
+Topic: Toronto--Ontario (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.69s
+
+Topic: Trenton--South Carolina (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.70s
+
+Topic: Tuscaloosa--Alabama (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.91s
+
+Topic: United States (Country)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.70s
+
+Topic: Vancouver--Canada (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.74s
+
+Topic: Vincennes--Indiana (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.68s
+
+Topic: Virginia (State)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.70s
+
+Topic: Warren--Ohio (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.71s
+
+Topic: Washington (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.70s
+
+Topic: Washington--District of Columbia (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.73s
+
+Topic: Waterford--New York (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.69s
+
+Topic: West (Region)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.69s
+
+Topic: West Palm Beach--Florida (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.70s
+
+Topic: West Pawlet--Vermont (City)
+  Total terms found: 0
+  FAST Geographic: 0 terms
+  Processing time: 1.41s
+
+Topic: Wheeling--West Virginia (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.80s
+
+Topic: Wilmington--North Carolina (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.74s
+
+Topic: Winder--Georgia (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.73s
+
+Topic: Winnipeg--Canada (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.75s
+
+Topic: Winnipeg--Manitoba (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.26s
+
+Topic: Woodland--North Carolina (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.73s
+
+Topic: Woodrow--Florida (City)
+  Total terms found: 0
+  FAST Geographic: 0 terms
+  Processing time: 1.48s
+
+Topic: Worcester--Massachusetts (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.79s
+
+Topic: Yoakum--Texas (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.71s
+
+Topic: York--Pennsylvania (City)
+  Total terms found: 1
+  FAST Geographic: 1 terms
+  Processing time: 0.81s
+
+Topic: Yorkville--Tennessee (City)
+  Total terms found: 0
+  FAST Geographic: 0 terms
+  Processing time: 1.54s
+

@@ -22,7 +22,7 @@ logging.getLogger("urllib3").setLevel(logging.WARNING)
 logging.getLogger("httpx").setLevel(logging.WARNING)
 
 client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
-DEFAULT_MODEL = "gpt-4o-mini-2024-07-18"
+DEFAULT_MODEL = "gpt-4.1-mini"
 
 api_stats = APIStats()
 

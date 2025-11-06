@@ -1,0 +1,1048 @@
+ISSUE CONTENT INDEX: 1929-07-55
+===============================
+
+Page 1 (Issue: 1929-07-55):
+
+Cover: Southern Architect and Building News, July 1929. Features an illustration of a building with detailed latticework, emphasizing Southern architectural styles. Includes a library stamp from the University of Texas.
+
+Topics:
+  - Southern architecture
+  - Architectural illustration
+  - Building design
+  - Latticework
+  - Architectural publications
+  - Historical architecture
+
+Named Entities:
+  - Southern Architect and Building News (Publication)
+  - University of Texas (Organization)
+
+Geographic Entities:
+  - Texas (State)
+
+Subject Headings (Selected):
+  - Architecture--Southern States (http://id.loc.gov/authorities/subjects/sh98003122) [LCSH]
+  - Latticework (http://id.loc.gov/authorities/subjects/sh85074995) [LCSH]
+
+Geographic Subject Headings:
+  - Texas (http://id.worldcat.org/fast/fst01210336) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 2 (Issue: 1929-07-55):
+
+Advertisement: Sepco Flameless Hot Water Service, King Tank Heaters, and Georgian Mantel Company. Highlights innovations in home heating and period mantel designs, appealing to architects and builders.
+
+Topics:
+  - Flameless hot water systems
+  - Coal heating technology
+  - Period mantels
+  - Architectural design
+  - Home heating solutions
+  - Craftsmanship in architecture
+
+Named Entities:
+  - Sepco (Product)
+  - Automatic Electric Heater Company (Firm)
+  - King Tank Heaters (Product)
+  - Oakland Foundry Co. (Firm)
+  - Georgian Mantel Company (Firm)
+
+Geographic Entities:
+  - Philadelphia--Pennsylvania (City)
+  - Belleville--Illinois (City)
+  - New York City--New York (City)
+  - Atlanta--Georgia (City)
+
+Subject Headings (Selected):
+  - Mantels (http://id.worldcat.org/fast/fst01007958) [FAST]
+  - Heating (http://id.worldcat.org/fast/fst00954023) [FAST]
+  - craftsmanship (http://vocab.getty.edu/aat/300056112) [Getty AAT]
+
+Geographic Subject Headings:
+  - Pennsylvania--Philadelphia (http://id.worldcat.org/fast/fst01204170) [FAST Geographic]
+  - Illinois--Belleville (http://id.worldcat.org/fast/fst01202799) [FAST Geographic]
+  - New York (State)--New York (http://id.worldcat.org/fast/fst01204333) [FAST Geographic]
+  - Georgia--Atlanta (http://id.worldcat.org/fast/fst01204627) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 3 (Issue: 1929-07-55):
+
+Editorial: Discussion on the economic and professional challenges faced by southern architects due to competition from eastern and western architects. Key topics include architectural fees, regional expertise, and the impact of outside capital on southern architecture.
+
+Topics:
+  - Architectural fees
+  - Professional ethics
+  - Regional expertise
+  - Economic factors
+  - Architectural competition
+  - Building commissions
+  - Southern architecture
+  - Outside capital
+
+Named Entities:
+  - Dame rumor (Concept)
+
+Geographic Entities:
+  - South (Region)
+  - East (Region)
+  - West (Region)
+
+Subject Headings (Selected):
+  - Architectural services marketing--Fees (http://id.worldcat.org/fast/fst00813330) [FAST]
+  - professional ethics (http://vocab.getty.edu/aat/300055942) [Getty AAT]
+  - Economic history (http://id.worldcat.org/fast/fst00901974) [FAST]
+  - Architectural design--Competitions (http://id.worldcat.org/fast/fst00813187) [FAST]
+  - Architecture--Southern States (http://id.loc.gov/authorities/subjects/sh98003122) [LCSH]
+  - capital (economic concept) (http://vocab.getty.edu/aat/300138242) [Getty AAT]
+
+Geographic Subject Headings:
+  - South Africa (http://id.worldcat.org/fast/fst01204616) [FAST Geographic]
+  - Indonesia (http://id.worldcat.org/fast/fst01209242) [FAST Geographic]
+  - Music (http://id.worldcat.org/fast/fst01030269) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 4 (Issue: 1929-07-55):
+
+Photo: Entrance Door of an Eighteenth Century Virginia House. This page features a photograph of a historic architectural element, highlighting the design and craftsmanship of the period.
+
+Topics:
+  - Eighteenth-century architecture
+  - Entrance design
+  - Brickwork
+  - Historic houses
+  - Architectural photography
+  - Colonial architecture
+
+Geographic Entities:
+  - Virginia (State)
+
+Subject Headings (Selected):
+  - entrance gates (http://vocab.getty.edu/aat/300448964) [Getty AAT]
+  - Brickwork (http://id.loc.gov/authorities/subjects/sh2001003032) [LCSH]
+  - historic houses (http://vocab.getty.edu/aat/300008064) [Getty AAT]
+  - architectural photography (http://vocab.getty.edu/aat/300435151) [Getty AAT]
+  - Architecture, British colonial (http://id.loc.gov/authorities/subjects/sh2002008694) [LCSH]
+
+Geographic Subject Headings:
+  - Virginia (http://id.worldcat.org/fast/fst01204597) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 5 (Issue: 1929-07-55):
+
+Article: 'A Restoration Problem' by Mary Rolls Dockstader discusses the architectural restoration of a historic house in Savannah by Levy & Clarke, Architects. The article explores the challenges and historical context of duplicating the 'old pink stucco' house, highlighting its architectural features and historical significance.
+
+Topics:
+  - Architectural restoration
+  - Palladian architecture
+  - Stucco construction
+  - Historic preservation
+  - 18th-century architecture
+  - Classicism
+  - Modernism
+  - Architectural history
+
+Named Entities:
+  - Mary Rolls Dockstader (Person)
+  - Levy & Clarke (Firm)
+  - Mills B Lane (Person)
+  - James Habersham Jr. (Person)
+  - Joseph Clay (Person)
+  - Hester Habersham (Person)
+  - Thomas Willing (Person)
+  - United States Bank (Organization)
+  - Planters’ Bank of Savannah (Organization)
+
+Geographic Entities:
+  - Savannah--Georgia (City)
+  - Georgia (State)
+  - England (Country)
+
+Subject Headings (Selected):
+  - historic preservation (http://vocab.getty.edu/aat/300054166) [Getty AAT]
+  - Palladian (http://vocab.getty.edu/aat/300021161) [Getty AAT]
+  - Stucco (http://id.worldcat.org/fast/fst01135778) [FAST]
+  - eighteenth century (dates CE) (http://vocab.getty.edu/aat/300404512) [Getty AAT]
+  - Classicism in architecture (http://id.loc.gov/authorities/subjects/sh85026715) [LCSH]
+  - architectural history (http://vocab.getty.edu/aat/300054162) [Getty AAT]
+
+Geographic Subject Headings:
+  - Georgia--Savannah (http://id.worldcat.org/fast/fst01207319) [FAST Geographic]
+  - Georgia (http://id.worldcat.org/fast/fst01204622) [FAST Geographic]
+  - Great Britain (http://id.worldcat.org/fast/fst01204623) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 6 (Issue: 1929-07-55):
+
+Image: Entrance Detail of Mills B. Lane House, Savannah, GA. Description of restoration efforts focusing on architectural precision and material authenticity. Mention of Mr. William Murphey, president of the Citizens & Southern Bank.
+
+Topics:
+  - Architectural restoration
+  - Classical architecture
+  - Stucco techniques
+  - Historical building materials
+  - Architectural replication
+  - Spiral stairways
+  - Tabby concrete
+
+Named Entities:
+  - Mills B. Lane House (Building)
+  - William Murphey (Person)
+  - Citizens & Southern Bank (Organization)
+
+Geographic Entities:
+  - Savannah--Georgia (City)
+
+Subject Headings (Selected):
+  - Architecture, Classical (http://id.loc.gov/authorities/subjects/sh85006718) [LCSH]
+  - Architecture--Conservation and restoration--Business community participation (http://id.loc.gov/authorities/subjects/sh85006620) [LCSH]
+
+Geographic Subject Headings:
+  - Georgia--Savannah (http://id.worldcat.org/fast/fst01207319) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 7 (Issue: 1929-07-55):
+
+Photo: The House of Mills B. Lane, Savannah, GA. A classical style residential building designed by Levy & Clarke, Architects, featured in the July 1929 issue.
+
+Topics:
+  - Classical architecture
+  - Residential buildings
+  - Architectural photography
+  - 20th century architecture
+  - Architectural firms
+
+Named Entities:
+  - Levy & Clarke (Firm)
+  - Mills B. Lane (Person)
+
+Geographic Entities:
+  - Savannah--Georgia (City)
+  - Georgia (State)
+
+Subject Headings (Selected):
+  - Architecture, Classical (http://id.loc.gov/authorities/subjects/sh85006718) [LCSH]
+  - architectural photography (http://vocab.getty.edu/aat/300435151) [Getty AAT]
+  - 20th-century architecture (http://id.worldcat.org/fast/fst01775377) [FAST]
+  - architectural firms (http://vocab.getty.edu/aat/300312082) [Getty AAT]
+
+Geographic Subject Headings:
+  - Georgia--Savannah (http://id.worldcat.org/fast/fst01207319) [FAST Geographic]
+  - Georgia (http://id.worldcat.org/fast/fst01204622) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 8 (Issue: 1929-07-55):
+
+Error: All parsing strategies failed
+
+
+--------------------------------------------------
+
+Page 9 (Issue: 1929-07-55):
+
+Article: Hunting Lodge of Bayard Dominick. Discusses the architectural and historical significance of the Gregory Neck Plantation, designed by Willis Irvin. Highlights the picturesque setting and architectural details of the lodge.
+
+Topics:
+  - Hunting lodges
+  - Plantation architecture
+  - Architectural photography
+  - Southern architecture
+  - Historical preservation
+  - Architectural design
+  - Rural architecture
+
+Named Entities:
+  - Willis Irvin (Architect)
+  - Bayard Dominick (Person)
+  - Gregory Neck Plantation (Project)
+  - Tebbs & Knell, Inc. (Firm)
+
+Geographic Entities:
+  - Georgetown--South Carolina (City)
+  - Brunswick--Georgia (City)
+  - New York--New York (City)
+  - South Carolina (State)
+  - Georgia (State)
+
+Subject Headings (Selected):
+  - hunting lodges (http://vocab.getty.edu/aat/300007177) [Getty AAT]
+  - plantation houses (http://vocab.getty.edu/aat/300005582) [Getty AAT]
+  - architectural photography (http://vocab.getty.edu/aat/300435151) [Getty AAT]
+  - Architecture--Southern States (http://id.loc.gov/authorities/subjects/sh98003122) [LCSH]
+  - Architectural design (http://id.loc.gov/authorities/subjects/sh85006585) [LCSH]
+  - Architecture, Domestic (http://id.loc.gov/authorities/subjects/sh85006722) [LCSH]
+
+Geographic Subject Headings:
+  - South Carolina--Georgetown County (http://id.worldcat.org/fast/fst01206896) [FAST Geographic]
+  - Georgia--Brunswick (http://id.worldcat.org/fast/fst01218163) [FAST Geographic]
+  - New York (State)--New York (http://id.worldcat.org/fast/fst01204333) [FAST Geographic]
+  - South Carolina (http://id.worldcat.org/fast/fst01204600) [FAST Geographic]
+  - Georgia (http://id.worldcat.org/fast/fst01204622) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 10 (Issue: 1929-07-55):
+
+Article: Description of Bayard Dominick Shooting Lodge, focusing on Colonial and Georgian architectural styles, with emphasis on historical context and design elements.
+
+Topics:
+  - Colonial Architecture
+  - Georgian Architecture
+  - Architectural History
+  - Building Design
+  - Historical Buildings
+  - Architectural Styles
+  - Residential Architecture
+
+Named Entities:
+  - Bayard Dominick (Person)
+  - Colonial Architecture (Style)
+  - Georgian Architecture (Style)
+
+Geographic Entities:
+  - Southeastern States (Region)
+
+Subject Headings (Selected):
+  - Architecture, Colonial (http://id.worldcat.org/fast/fst00813657) [FAST]
+  - Architecture, Georgian--United States (http://id.loc.gov/authorities/subjects/sh85006789) [LCSH]
+  - architectural history (http://vocab.getty.edu/aat/300054162) [Getty AAT]
+  - Building (http://id.loc.gov/authorities/subjects/sh85017693) [LCSH]
+  - Historic buildings (http://id.loc.gov/authorities/subjects/sh85061097) [LCSH]
+
+Geographic Subject Headings:
+  - Southern States (http://id.worldcat.org/fast/fst01244550) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 11 (Issue: 1929-07-55):
+
+Photo: The Shooting Lodge of Bayard Dominick near Georgetown, S.C. - Designed by Willis Irvin, this lodge exemplifies early 20th-century Southern architecture.
+
+Topics:
+  - Southern architecture
+  - Shooting lodges
+  - 20th-century architecture
+  - Architectural photography
+  - Building design
+
+Named Entities:
+  - Bayard Dominick (Person)
+  - Willis Irvin (Architect)
+  - Southern Architect and Building News (Publication)
+
+Geographic Entities:
+  - Georgetown--South Carolina (City)
+  - Augusta--Georgia (City)
+
+Subject Headings (Selected):
+  - Architecture--Southern States (http://id.loc.gov/authorities/subjects/sh98003122) [LCSH]
+  - 20th-century architecture (http://id.worldcat.org/fast/fst01775377) [FAST]
+  - architectural photography (http://vocab.getty.edu/aat/300435151) [Getty AAT]
+  - Building (http://id.loc.gov/authorities/subjects/sh85017693) [LCSH]
+
+Geographic Subject Headings:
+  - South Carolina--Georgetown County (http://id.worldcat.org/fast/fst01206896) [FAST Geographic]
+  - Georgia--Augusta (http://id.worldcat.org/fast/fst01206406) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 12 (Issue: 1929-07-55):
+
+Page 48: Architectural floor plans for the Shooting Lodge of Bayard Dominick, designed by Willis Irvin. Includes detailed layouts of the first and second floors, highlighting residential design elements of the period.
+
+Topics:
+  - Architectural floor plans
+  - Residential architecture
+  - 20th century architecture
+  - Architectural design
+  - Building layout
+  - Southern architecture
+
+Named Entities:
+  - Bayard Dominick (Person)
+  - Willis Irvin (Architect)
+
+Geographic Entities:
+  - Augusta--Georgia (City)
+
+Subject Headings (Selected):
+  - Architectural drawings (http://id.worldcat.org/fast/fst01986246) [FAST]
+  - 20th-century architecture (http://id.worldcat.org/fast/fst01775377) [FAST]
+  - Architectural design (http://id.loc.gov/authorities/subjects/sh85006585) [LCSH]
+  - Building layout (http://id.loc.gov/authorities/subjects/sh85017736) [LCSH]
+  - Architecture--Southern States (http://id.loc.gov/authorities/subjects/sh98003122) [LCSH]
+
+Geographic Subject Headings:
+  - Georgia--Augusta (http://id.worldcat.org/fast/fst01206406) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 13 (Issue: 1929-07-55):
+
+Photo: House of A. L. James, Esq., Charlotte, N.C. A. L. Bowen, Jr., Architect. A photograph showcasing a residential architectural design from the late 1920s, highlighting traditional brick construction and symmetrical design.
+
+Topics:
+  - Residential architecture
+  - Brick construction
+  - Symmetrical design
+  - 1920s architecture
+  - Landscape design
+
+Named Entities:
+  - A. L. James (Person)
+  - A. L. Bowen, Jr. (Architect)
+  - Todd & Kraf, Inc. (Firm)
+
+Geographic Entities:
+  - Charlotte--North Carolina (City)
+  - New York--New York (City)
+
+Subject Headings (Selected):
+  - Brick houses--Design and construction (http://id.worldcat.org/fast/fst00838582) [FAST]
+  - Landscape design (http://id.loc.gov/authorities/subjects/sh92003550) [LCSH]
+
+Geographic Subject Headings:
+  - North Carolina--Charlotte (http://id.worldcat.org/fast/fst01204596) [FAST Geographic]
+  - New York (State)--New York (http://id.worldcat.org/fast/fst01204333) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 14 (Issue: 1929-07-55):
+
+Architectural Plans: Floor plans for the house of A. L. James, Esq. in Charlotte, N.C., designed by M. E. Boyer, Jr. The plans detail the layout of the first and second floors, highlighting residential architectural design elements.
+
+Topics:
+  - Residential architecture
+  - Floor plans
+  - Architectural design
+  - 20th century architecture
+  - House layout
+  - Architectural drawings
+
+Named Entities:
+  - A. L. James (Person)
+  - M. E. Boyer, Jr. (Architect)
+
+Geographic Entities:
+  - Charlotte--North Carolina (City)
+
+Subject Headings (Selected):
+  - Floor plans (http://id.loc.gov/authorities/subjects/sh2003008965) [LCSH]
+  - Architectural design (http://id.loc.gov/authorities/subjects/sh85006585) [LCSH]
+  - 20th-century architecture (http://id.worldcat.org/fast/fst01775377) [FAST]
+  - Architectural drawings (http://id.worldcat.org/fast/fst01986246) [FAST]
+
+Geographic Subject Headings:
+  - North Carolina--Charlotte (http://id.worldcat.org/fast/fst01204596) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 15 (Issue: 1929-07-55):
+
+Photo: Entrance detail of the House of A. L. James, Esq., Charlotte, N.C. Designed by M. E. Boyer, Jr. Features architectural details of early 20th-century Southern architecture.
+
+Topics:
+  - Architectural details
+  - Brick construction
+  - Fanlight
+  - Wrought iron railings
+  - Southern architecture
+  - Residential architecture
+
+Named Entities:
+  - A. L. James (Person)
+  - M. E. Boyer, Jr. (Architect)
+
+Geographic Entities:
+  - Charlotte--North Carolina (City)
+
+Subject Headings (Selected):
+  - Architecture--Details (http://id.loc.gov/authorities/subjects/sh85006626) [LCSH]
+  - Brick houses--Design and construction (http://id.worldcat.org/fast/fst00838582) [FAST]
+  - fanlights (http://vocab.getty.edu/aat/300002983) [Getty AAT]
+  - Architecture--Southern States (http://id.loc.gov/authorities/subjects/sh98003122) [LCSH]
+
+Geographic Subject Headings:
+  - North Carolina--Charlotte (http://id.worldcat.org/fast/fst01204596) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 16 (Issue: 1929-07-55):
+
+Blank page
+
+
+--------------------------------------------------
+
+Page 17 (Issue: 1929-07-55):
+
+Photo: Interior Stairhall of A. L. James House, Charlotte, N.C. Designed by M. E. Boyer, Jr. Features early 20th-century residential architecture.
+
+Topics:
+  - Residential architecture
+  - Interior design
+  - Staircases
+  - Early 20th-century architecture
+
+Named Entities:
+  - A. L. James (Person)
+  - M. E. Boyer, Jr. (Architect)
+
+Geographic Entities:
+  - Charlotte--North Carolina (City)
+
+Subject Headings (Selected):
+  - interior design (http://vocab.getty.edu/aat/300054184) [Getty AAT]
+  - Staircases (http://id.loc.gov/authorities/subjects/sh85127265) [LCSH]
+
+Geographic Subject Headings:
+  - North Carolina--Charlotte (http://id.worldcat.org/fast/fst01204596) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 18 (Issue: 1929-07-55):
+
+Blank page
+
+
+--------------------------------------------------
+
+Page 19 (Issue: 1929-07-55):
+
+Photo: House near Charlottesville, Virginia by W. Duncan Lee. A photograph showcasing traditional American residential architecture with stone construction and a steeply pitched roof.
+
+Topics:
+  - Residential architecture
+  - Stone construction
+  - Traditional American architecture
+  - Architectural photography
+
+Named Entities:
+  - W. Duncan Lee (Architect)
+  - Harold Baby (Person)
+
+Geographic Entities:
+  - Charlottesville--Virginia (City)
+  - Virginia (State)
+
+Subject Headings (Selected):
+  - Stone houses--Design and construction (http://id.worldcat.org/fast/fst01133860) [FAST]
+  - traditional (style) (http://vocab.getty.edu/aat/300310540) [Getty AAT]
+  - architectural photography (http://vocab.getty.edu/aat/300435151) [Getty AAT]
+
+Geographic Subject Headings:
+  - Virginia--Charlottesville (http://id.worldcat.org/fast/fst01204493) [FAST Geographic]
+  - Virginia (http://id.worldcat.org/fast/fst01204597) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 20 (Issue: 1929-07-55):
+
+Page: Architectural Floor Plans - House near Charlottesville, Virginia by W. Duncan Lee. Detailed first and second floor plans showcasing residential design elements and room layouts.
+
+Topics:
+  - Residential architecture
+  - Floor plans
+  - Architectural design
+  - Room layout
+  - 20th century architecture
+
+Named Entities:
+  - W. Duncan Lee (Architect)
+
+Geographic Entities:
+  - Charlottesville--Virginia (City)
+  - Virginia (State)
+
+Subject Headings (Selected):
+  - Floor plans (http://id.loc.gov/authorities/subjects/sh2003008965) [LCSH]
+  - Architectural design (http://id.loc.gov/authorities/subjects/sh85006585) [LCSH]
+  - Room layout (Dwellings) (http://id.loc.gov/authorities/subjects/sh85115349) [LCSH]
+  - 20th-century architecture (http://id.worldcat.org/fast/fst01775377) [FAST]
+
+Geographic Subject Headings:
+  - Virginia--Charlottesville (http://id.worldcat.org/fast/fst01204493) [FAST Geographic]
+  - Virginia (http://id.worldcat.org/fast/fst01204597) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 21 (Issue: 1929-07-55):
+
+Photo: House of W. Duncan Lee, Richmond, VA. Designed by W. Duncan Lee, showcasing Tudor Revival architecture. July, 1929.
+
+Topics:
+  - Tudor Revival architecture
+  - Residential architecture
+  - Architectural photography
+  - Early 20th-century design
+
+Named Entities:
+  - W. Duncan Lee (Architect)
+  - Huestis Prichey (Person)
+
+Geographic Entities:
+  - Richmond--Virginia (City)
+
+Subject Headings (Selected):
+  - Tudor (http://vocab.getty.edu/aat/300021035) [Getty AAT]
+  - architectural photography (http://vocab.getty.edu/aat/300435151) [Getty AAT]
+
+Geographic Subject Headings:
+  - Virginia--Richmond (http://id.worldcat.org/fast/fst01205345) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 22 (Issue: 1929-07-55):
+
+Floor Plans: House of W. Duncan Lee, Richmond, VA. Detailed architectural floor plans for a residential building, showcasing room layouts and dimensions. Designed by W. Duncan Lee, a notable architect.
+
+Topics:
+  - Residential architecture
+  - Floor plans
+  - Architectural design
+  - Room layout
+  - Architectural drawings
+
+Named Entities:
+  - W. Duncan Lee (Architect)
+
+Geographic Entities:
+  - Richmond--Virginia (City)
+
+Subject Headings (Selected):
+  - Floor plans (http://id.loc.gov/authorities/subjects/sh2003008965) [LCSH]
+  - Architectural design (http://id.loc.gov/authorities/subjects/sh85006585) [LCSH]
+  - Room layout (Dwellings) (http://id.loc.gov/authorities/subjects/sh85115349) [LCSH]
+  - Architectural drawings (http://id.worldcat.org/fast/fst01986246) [FAST]
+
+Geographic Subject Headings:
+  - Virginia--Richmond (http://id.worldcat.org/fast/fst01205345) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 23 (Issue: 1929-07-55):
+
+Photo: Living Room Detail of W. Duncan Lee's House, Richmond, VA. Features traditional interior design elements and furnishings. Architect: W. Duncan Lee.
+
+Topics:
+  - Traditional interior design
+  - Fireplace design
+  - Architectural photography
+  - Historic homes
+  - Interior furnishings
+
+Named Entities:
+  - W. Duncan Lee (Architect)
+
+Geographic Entities:
+  - Richmond--Virginia (City)
+
+Subject Headings (Selected):
+  - traditional (style) (http://vocab.getty.edu/aat/300310540) [Getty AAT]
+  - Fireplaces--Design and construction (http://id.worldcat.org/fast/fst00925677) [FAST]
+  - architectural photography (http://vocab.getty.edu/aat/300435151) [Getty AAT]
+  - historic houses (http://vocab.getty.edu/aat/300008064) [Getty AAT]
+
+Geographic Subject Headings:
+  - Virginia--Richmond (http://id.worldcat.org/fast/fst01205345) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 24 (Issue: 1929-07-55):
+
+Blank page
+
+
+--------------------------------------------------
+
+Page 25 (Issue: 1929-07-55):
+
+Photo: Post Office Building, University of Alabama, Tuscaloosa, Ala. Designed by Miller & Martin, Architects. The image showcases classical architectural elements.
+
+Topics:
+  - Classical architecture
+  - University buildings
+  - Architectural photography
+  - Architectural firms
+
+Named Entities:
+  - Miller & Martin (Firm)
+  - Jno. B. Krehbiel, Inc. (Firm)
+
+Geographic Entities:
+  - Tuscaloosa--Alabama (City)
+  - Alabama (State)
+
+Subject Headings (Selected):
+  - Architecture, Classical (http://id.loc.gov/authorities/subjects/sh85006718) [LCSH]
+  - university buildings (http://vocab.getty.edu/aat/300448928) [Getty AAT]
+  - architectural photography (http://vocab.getty.edu/aat/300435151) [Getty AAT]
+  - architectural firms (http://vocab.getty.edu/aat/300312082) [Getty AAT]
+
+Geographic Subject Headings:
+  - Alabama--Tuscaloosa (http://id.worldcat.org/fast/fst01206929) [FAST Geographic]
+  - Alabama (http://id.worldcat.org/fast/fst01204694) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 26 (Issue: 1929-07-55):
+
+Blank page
+
+
+--------------------------------------------------
+
+Page 27 (Issue: 1929-07-55):
+
+Photo: Post Office Building, University of Alabama. A classical architectural design by Miller & Martin, showcasing traditional elements such as columns and arched windows.
+
+Topics:
+  - Classical architecture
+  - Brick construction
+  - Architectural columns
+  - Arched windows
+  - University buildings
+
+Named Entities:
+  - Miller & Martin (Firm)
+  - University of Alabama (Organization)
+
+Geographic Entities:
+  - Tuscaloosa--Alabama (City)
+  - Alabama (State)
+
+Subject Headings (Selected):
+  - Architecture, Classical (http://id.loc.gov/authorities/subjects/sh85006718) [LCSH]
+  - Brick walls--Design and construction (http://id.worldcat.org/fast/fst00838593) [FAST]
+  - arched (http://vocab.getty.edu/aat/300126995) [Getty AAT]
+  - university buildings (http://vocab.getty.edu/aat/300448928) [Getty AAT]
+
+Geographic Subject Headings:
+  - Alabama--Tuscaloosa (http://id.worldcat.org/fast/fst01206929) [FAST Geographic]
+  - Alabama (http://id.worldcat.org/fast/fst01204694) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 28 (Issue: 1929-07-55):
+
+Blank page
+
+
+--------------------------------------------------
+
+Page 29 (Issue: 1929-07-55):
+
+Article: 'House of Gilman Prichard, Augusta, Ga.' by E. Lynn Drummond. Discusses the architectural style and historical context of a house in Augusta, Georgia, inspired by summer cottages. Includes a photograph of the house's entrance.
+
+Topics:
+  - Colonial architecture
+  - Residential architecture
+  - Summer cottages
+  - Architectural history
+  - Historic homes
+  - 20th-century architecture
+
+Named Entities:
+  - Gilman Prichard (Person)
+  - E. Lynn Drummond (Person)
+  - Tebbs & Knell, Inc. (Firm)
+
+Geographic Entities:
+  - Augusta--Georgia (City)
+  - Concord--Massachusetts (City)
+
+Subject Headings (Selected):
+  - Colonial (general period) (http://vocab.getty.edu/aat/300443128) [Getty AAT]
+  - summer houses (seasonal dwellings) (http://vocab.getty.edu/aat/300005529) [Getty AAT]
+  - architectural history (http://vocab.getty.edu/aat/300054162) [Getty AAT]
+  - historic houses (http://vocab.getty.edu/aat/300008064) [Getty AAT]
+  - 20th-century architecture (http://id.worldcat.org/fast/fst01775377) [FAST]
+
+Geographic Subject Headings:
+  - Georgia--Augusta (http://id.worldcat.org/fast/fst01206406) [FAST Geographic]
+  - Massachusetts--Concord (http://id.worldcat.org/fast/fst01204990) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 30 (Issue: 1929-07-55):
+
+Page 66: Architectural floor plans for the House of Gilman Prichard in Augusta, Georgia, designed by Scroggs & Ewing. The plans illustrate the layout and room designations for both the first and second floors.
+
+Topics:
+  - Architectural floor plans
+  - Residential architecture
+  - 20th century architecture
+  - Southern architecture
+  - Architectural design
+  - Building layout
+
+Named Entities:
+  - Gilman Prichard (Person)
+  - Scroggs & Ewing (Firm)
+
+Geographic Entities:
+  - Augusta--Georgia (City)
+  - Georgia (State)
+
+Subject Headings (Selected):
+  - Architectural drawings (http://id.worldcat.org/fast/fst01986246) [FAST]
+  - 20th-century architecture (http://id.worldcat.org/fast/fst01775377) [FAST]
+  - Architecture--Southern States (http://id.loc.gov/authorities/subjects/sh98003122) [LCSH]
+  - Architectural design (http://id.loc.gov/authorities/subjects/sh85006585) [LCSH]
+  - Building layout (http://id.loc.gov/authorities/subjects/sh85017736) [LCSH]
+
+Geographic Subject Headings:
+  - Georgia--Augusta (http://id.worldcat.org/fast/fst01206406) [FAST Geographic]
+  - Georgia (http://id.worldcat.org/fast/fst01204622) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 31 (Issue: 1929-07-55):
+
+Photo: House of Gilman Prichard, Augusta, GA. Features side elevation and patio views. Designed by Scroggs & Ewing, showcasing residential architectural design in the American South during the late 1920s.
+
+Topics:
+  - Residential architecture
+  - 1920s architecture
+  - Architectural photography
+  - Brickwork
+  - Dormer windows
+  - Patio design
+
+Named Entities:
+  - Gilman Prichard (Person)
+  - Scroggs & Ewing (Firm)
+
+Geographic Entities:
+  - Augusta--Georgia (City)
+  - Georgia (State)
+
+Subject Headings (Selected):
+  - architectural photography (http://vocab.getty.edu/aat/300435151) [Getty AAT]
+  - Brickwork (http://id.loc.gov/authorities/subjects/sh2001003032) [LCSH]
+  - dormers (http://vocab.getty.edu/aat/300002232) [Getty AAT]
+  - Patios--Design and construction (http://id.worldcat.org/fast/fst01055061) [FAST]
+
+Geographic Subject Headings:
+  - Georgia--Augusta (http://id.worldcat.org/fast/fst01206406) [FAST Geographic]
+  - Georgia (http://id.worldcat.org/fast/fst01204622) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 32 (Issue: 1929-07-55):
+
+Image: Living room details from the House of Gilman Prichard, Augusta, GA, designed by Scroggs & Ewing. Features interior design elements and architectural details from 1929.
+
+Topics:
+  - Interior design
+  - Living rooms
+  - 1920s architecture
+  - Residential architecture
+  - Architectural photography
+  - Floral wallpaper
+  - Fireplaces
+  - Furniture design
+
+Named Entities:
+  - Gilman Prichard (Person)
+  - Scroggs & Ewing (Firm)
+
+Geographic Entities:
+  - Augusta--Georgia (City)
+  - Georgia (State)
+
+Subject Headings (Selected):
+  - interior design (http://vocab.getty.edu/aat/300054184) [Getty AAT]
+  - living rooms (http://vocab.getty.edu/aat/300004435) [Getty AAT]
+  - architectural photography (http://vocab.getty.edu/aat/300435151) [Getty AAT]
+  - Wallpaper (http://id.worldcat.org/fast/fst01170179) [FAST]
+  - Fireplaces (http://id.loc.gov/authorities/subjects/sh85048564) [LCSH]
+  - furniture design (http://vocab.getty.edu/aat/300435227) [Getty AAT]
+
+Geographic Subject Headings:
+  - Georgia--Augusta (http://id.worldcat.org/fast/fst01206406) [FAST Geographic]
+  - Georgia (http://id.worldcat.org/fast/fst01204622) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 33 (Issue: 1929-07-55):
+
+Image: Dining Room Details - House of Gilman Prichard, Augusta, GA. Photographs of dining room interior designed by Scroggs & Ewing, showcasing early 20th-century residential architecture and interior design.
+
+Topics:
+  - Dining rooms
+  - Interior design
+  - Residential architecture
+  - Early 20th-century design
+  - Architectural photography
+
+Named Entities:
+  - Gilman Prichard (Person)
+  - Scroggs & Ewing (Firm)
+
+Geographic Entities:
+  - Augusta--Georgia (City)
+
+Subject Headings (Selected):
+  - dining rooms (http://vocab.getty.edu/aat/300004349) [Getty AAT]
+  - interior design (http://vocab.getty.edu/aat/300054184) [Getty AAT]
+  - architectural photography (http://vocab.getty.edu/aat/300435151) [Getty AAT]
+
+Geographic Subject Headings:
+  - Georgia--Augusta (http://id.worldcat.org/fast/fst01206406) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 34 (Issue: 1929-07-55):
+
+Article: Description of architectural design and restoration techniques in the house of Gilman Prichard, Augusta, GA. Focus on Dutch influence, antique whitewashing, and Colonial interior details.
+
+Topics:
+  - Dutch architectural influence
+  - Antique whitewashing techniques
+  - Colonial interior design
+  - Historic preservation
+  - Gambrel roof
+  - Integration of natural elements
+  - Early American architecture
+  - Architectural restoration
+
+Named Entities:
+  - Gilman Prichard (Person)
+
+Geographic Entities:
+  - Augusta--Georgia (City)
+  - Georgia (State)
+
+Subject Headings (Selected):
+  - Dutch (culture or style) (http://vocab.getty.edu/aat/300111175) [Getty AAT]
+  - Colonial (general period) (http://vocab.getty.edu/aat/300443128) [Getty AAT]
+  - historic preservation (http://vocab.getty.edu/aat/300054166) [Getty AAT]
+  - gambrel roofs (http://vocab.getty.edu/aat/300002142) [Getty AAT]
+  - natural (http://vocab.getty.edu/aat/300219527) [Getty AAT]
+  - Colonial North American (http://vocab.getty.edu/aat/300107812) [Getty AAT]
+
+Geographic Subject Headings:
+  - Georgia--Augusta (http://id.worldcat.org/fast/fst01206406) [FAST Geographic]
+  - Georgia (http://id.worldcat.org/fast/fst01204622) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 35 (Issue: 1929-07-55):
+
+Article: Announcement of Medals to be Awarded at the Southern Architectural and Industrial Arts Exposition. Discusses the significance of architecture in the arts, the arrangement of exhibits, and the awards to be given. Mentions notable architects and firms involved.
+
+Topics:
+  - Architecture
+  - Industrial Arts
+  - Exhibitions
+  - Architectural Awards
+  - Building Materials
+  - Architectural Photography
+  - Architectural Models
+  - Cultural Events
+
+Named Entities:
+  - Walk C. Jones (Person)
+  - Jones and Furbringer (Firm)
+  - Tebbs & Knell (Firm)
+  - Neel Reid (Architect)
+  - Hentz, Reid & Adler (Firm)
+  - Henry E. Harman, Jr. (Person)
+  - Henry E. Harman (Person)
+  - Southern Architect and Building News (Publication)
+  - Milton S. Biswanger (Person)
+  - Biswanger & Company (Firm)
+  - American Institute of Architects (Organization)
+  - Bayard S. Cairnes (Person)
+
+Geographic Entities:
+  - Memphis--Tennessee (City)
+  - New York--New York (City)
+  - Atlanta--Georgia (City)
+  - South (Region)
+
+Subject Headings (Selected):
+  - Architecture (http://id.loc.gov/authorities/subjects/sh85006611) [LCSH]
+  - Industrial arts (http://id.loc.gov/authorities/subjects/sh85065826) [LCSH]
+  - Exhibitions (http://id.loc.gov/authorities/subjects/sh85046354) [LCSH]
+  - Architectural design--Awards (http://id.worldcat.org/fast/fst00813186) [FAST]
+
+Geographic Subject Headings:
+  - Tennessee--Memphis (http://id.worldcat.org/fast/fst01204194) [FAST Geographic]
+  - New York (State)--New York (http://id.worldcat.org/fast/fst01204333) [FAST Geographic]
+  - Georgia--Atlanta (http://id.worldcat.org/fast/fst01204627) [FAST Geographic]
+  - South Africa (http://id.worldcat.org/fast/fst01204616) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 36 (Issue: 1929-07-55):
+
+Advertisement: Announcement for the First Southern Architectural and Industrial Arts Exposition in Memphis, Tennessee, under the auspices of the Southern Chapters of the American Institute of Architects. Key topics include architecture, mural paintings, arts and crafts, and building materials.
+
+Topics:
+  - Architectural Expositions
+  - Industrial Arts
+  - Mural Paintings
+  - Arts and Crafts
+  - Interior Decorations
+  - Home Furnishing
+  - Building Materials
+
+Named Entities:
+  - American Institute of Architects (Organization)
+  - M. H. Furbringer (Person)
+  - Porter Building (Building)
+
+Geographic Entities:
+  - Memphis--Tennessee (City)
+  - Tennessee (State)
+
+Subject Headings (Selected):
+  - Industrial arts (http://id.loc.gov/authorities/subjects/sh85065826) [LCSH]
+  - Mural painting and decoration (http://id.worldcat.org/fast/fst01029558) [FAST]
+  - Arts and Crafts (movement) (http://vocab.getty.edu/aat/300266319) [Getty AAT]
+  - building materials (http://vocab.getty.edu/aat/300014857) [Getty AAT]
+
+Geographic Subject Headings:
+  - Tennessee--Memphis (http://id.worldcat.org/fast/fst01204194) [FAST Geographic]
+  - Tennessee (http://id.worldcat.org/fast/fst01205353) [FAST Geographic]
+
+
+--------------------------------------------------
+

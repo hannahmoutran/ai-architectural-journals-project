@@ -1,0 +1,48 @@
+OpenAI API Usage Log - Southern Architect Step1 5 Cleanup
+============================================================
+Processing completed at: 2025-11-06 09:23:36
+
+PROCESSING SUMMARY:
+------------------------------
+Total items processed: 2
+Successful items: 1
+Items with issues: 1
+Success rate: 50.0%
+Total processing time: 1171.61 seconds
+Average time per item: 585.81 seconds
+
+MODEL INFORMATION:
+------------------------------
+Model used: gpt-4.1-mini
+Input token rate: $0.00040 per 1K tokens
+Output token rate: $0.00160 per 1K tokens
+
+TOKEN USAGE:
+------------------------------
+Total prompt tokens: 13,865
+Total completion tokens: 10,617
+Total tokens: 24,482
+Average tokens per successful item: 24482.0
+
+COST BREAKDOWN:
+------------------------------
+Input token cost: $0.0055
+Output token cost: $0.0170
+Total actual cost: $0.0225
+Average cost per successful item: $0.0225
+
+ADDITIONAL METRICS:
+------------------------------
+Original failed items: 2
+Successfully reprocessed: 1
+Improvements made: 1
+Processing mode: INDIVIDUAL (Step 1.5 cleanup)
+Cleanup success rate: 50.0%
+Step: 1.5 - Batch Cleanup
+Total cost: $0.0225
+
+EFFICIENCY METRICS:
+------------------------------
+Tokens processed per second: 20.9
+Cost per minute of processing: $0.0012
+Items processed per minute: 0.1

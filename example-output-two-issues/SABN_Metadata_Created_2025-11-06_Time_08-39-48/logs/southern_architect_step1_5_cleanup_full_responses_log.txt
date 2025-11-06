@@ -1,0 +1,67 @@
+LLM Full Responses Log - Southern Architect Step1 5 Cleanup
+Created at: 2025-11-06 09:04:22
+================================================================================
+
+Row 20 - Barcode 1917-05-39_page19 - 2025-11-06 09:04:22
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 27.23s
+TOKENS: 5,066 (Prompt: 3,449, Completion: 1,617)
+ESTIMATED COST: $0.0040
+REPROCESSING_REASON: Response corruption detected; Extreme repetition/corruption pattern detected
+STEP: 1.5 - Batch Cleanup
+
+LLM RESPONSE:
+{
+  "textTranscription": "SOUTHERN ARCHITECT AND BUILDING NEWS 21\n\nATTENTION ARCHITECTS!\nWe want to send you a free sample of\nWolf's Elastine Lacquer\nThe Most Wonderful Floor Varnish Ever Produced.\nHERE ARE A FEW of the reasons Why it is superior to any other varnish.\nIt is impervious to mo'sture.\nIt will not crack, check or break.\nIt is not effected in scrubbing with soap and water.\nIt will not turn white from alcohol.\nIt is not affected by ammonia.\nFormaldehide, Lime, Steam, Boiling Water, Ice Water have no effect on it whatsoever.\nWE GUARANTEE EVERY GALLON OF ELASTINE TO GIVE PERFECT SATISFACTION or Money will be refunded.\nWrite for Free Sample and Prices.\nHave you seen our Elastine White Enamel for Interior and Exterior purposes? Investigate.\nA FEW REFERENCES\nUnion Central Bldg., . . . . . . Cincinnati, O.\n1st Nat. Bank Bldg., . . . . . . \" \"\nNeave Bldg. . . . . . . \" \"\nPerrin Bldg. . . . . . . \" \"\nProvident Bank Bldg. . . . . . . \" \"\nBell Telephone Bldg. . . . . . . \" \"\nEmery Estate . . . . . . \" \"\nFrederick Schmidt Co. . . . . . . \" \"\nUnion Rwy. & Depot Co. . . . . . . \" \"\nGrand Hotel . . . . . . \" \"\nGibson House . . . . . . \" \"\nSenton Hotel . . . . . . \" \"\nPalace Hotel . . . . . . \" \"\nFarren Lumber Co. . . . . . . \" \"\nIngalls Bldg. . . . . . . \" \"\nMiami Hotel . . . . . . Dayton, O.\nRybold Estate . . . . . . \" \"\nMiami Valley Hosp'tal . . . . . . \" \"\nDyton St. Rwy. . . . . . . \" \"\nHuntington Bank Bldg. . . . . . . Columbus, O.\nSt. Clair Hospital . . . . . . \" \"\nMercey Hospital . . . . . . \" \"\nGrant Hospital . . . . . . Indianapolis, Ind.\nLemcke Bldg. . . . . . . \" \"\nHume-Mansur Bldg. . . . . . . \" \"\nMerchants Light & Heat Co. . . . . . . \" \"\nSeverin Hotel . . . . . . \" \"\nWaldheim Bldg. . . . . . . Kansas City, Mo.\nJewish Hospital . . . . . . St. Louis, Mo.\nSecurity Bldg. . . . . . . St. Louis, Mo.\nJefferson Bldg. . . . . . . Peoria, Ill.\nBuffalo State Hospital . . . . . . Buffalo, N. Y.\nBridgeport Land & Title Co., Bridgeport, Conn.\n\n-Manufactured and Sold O y By-\nThe Leon L. Wolf Paint Company\nCINCINNATI, - - - - - - - OHIO\n\nUsed throughout Union Central Life Insurance Bldg., Cincinnati, O.\n\nAn Improved Convertible Level\n\nFor Architects, Builders, Contractors\nFor use as a level or for taking vertical sights. An improved level than can be converted into a transit in a few seconds without having to adjust any screws.\nOur exclusive patented axis makes this possible.\nCosts no more than ordinary convertible levels.\nAsk for circular of level and catalog of drawing materials.\nNew York Blue Print Paper Co.\n56-60 Reade Street, New York.\n\nPatented Axis\n\nDEFIANCE\n\nARCHITECTS\nENGINEERS\nARTISTS\n\nSUPPLIES\n\nBLUE AND BLACK PRINTS\nLithographic Reproductions\nCOMPO-BOARD\n\nDefiance Mfg. Company\nMurray Hill 4494 22 East 41 St., N. Y.",
+  "visualDescription": "Page from Southern Architect and Building News, page number 21 at top right. The page is divided into three main advertisement blocks. The top half features a large bordered ad titled 'ATTENTION ARCHITECTS!' in bold uppercase serif font. Below the title is a black-and-white photograph of a tall, early 20th-century skyscraper with a pyramidal roof, identified as the Union Central Life Insurance Building in Cincinnati, Ohio. To the right of the photo is text promoting 'Wolf's Elastine Lacquer,' a floor varnish, with detailed claims about its durability and resistance to moisture, ammonia, and chemicals. A list of references follows, naming various buildings and hospitals across multiple U.S. cities. The manufacturer's name, The Leon L. Wolf Paint Company, is prominently displayed at the bottom.\n\nThe lower left quarter contains an ad for 'An Improved Convertible Level' featuring a detailed illustration of a precision surveying instrument with knobs and a patented axis. The text explains its use for architects, builders, and contractors, emphasizing ease of conversion and patented technology. The company name and address, New York Blue Print Paper Co., are at the bottom.\n\nThe lower right quarter is an ad for 'DEFIANCE SUPPLIES' with a bold, large uppercase title and a small illustration of a classical warrior figure holding a shield and sword, labeled 'DEFIANCE QUALITY.' The ad targets architects, engineers, and artists, promoting blue and black prints, lithographic reproductions, and compo-board. The company name, Defiance Mfg. Company, and contact information in New York City are at the bottom. The page uses serif fonts predominantly, with bold and uppercase for emphasis, and dotted lines for separation in the references list.",
+  "tocEntry": "Advertisement page featuring promotional materials for architectural supplies and tools. Highlights include Wolf's Elastine Lacquer, a durable floor varnish used in prominent buildings; an improved convertible level surveying instrument for architects and builders; and Defiance Mfg. Company's printing and reproduction supplies. Key themes include early 20th-century building materials, architectural tools, and print reproduction technologies relevant to architectural practice.",
+  "namedEntities": [
+    "Wolf's Elastine Lacquer (Material)",
+    "The Leon L. Wolf Paint Company (Firm)",
+    "Union Central Life Insurance Building (Building)",
+    "New York Blue Print Paper Co. (Firm)",
+    "Defiance Mfg. Company (Firm)"
+  ],
+  "geographicEntities": [
+    "Cincinnati--Ohio (City)",
+    "Dayton--Ohio (City)",
+    "Columbus--Ohio (City)",
+    "Indianapolis--Indiana (City)",
+    "Kansas City--Missouri (City)",
+    "St. Louis--Missouri (City)",
+    "Peoria--Illinois (City)",
+    "Buffalo--New York (City)",
+    "Bridgeport--Connecticut (City)",
+    "New York--New York (City)"
+  ],
+  "subjects": [
+    "Floor varnish",
+    "Architectural finishes",
+    "Early 20th-century skyscrapers",
+    "Surveying instruments",
+    "Convertible levels",
+    "Architectural printing",
+    "Lithographic reproduction",
+    "Architectural supplies"
+  ],
+  "contentWarning": "None"
+}
+
+================================================================================
+
+Row 81 - Barcode 1917-05-39_page80 - 2025-11-06 09:23:35
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 0 (Prompt: 0, Completion: 0)
+ESTIMATED COST: $0.0000
+REPROCESSING_REASON: Response corruption detected; Extreme repetition/corruption pattern detected
+ERROR: RetryError[<Future at 0x109afb8d0 state=finished raised Exception>]
+STEP: 1.5 - Batch Cleanup
+
+LLM RESPONSE:
+REPROCESSING FAILED: RetryError[<Future at 0x109afb8d0 state=finished raised Exception>]
+
+================================================================================
+

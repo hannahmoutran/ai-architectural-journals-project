@@ -1,0 +1,48 @@
+OpenAI API Usage Log - Southern Architect Vocabulary Selection
+============================================================
+Processing completed at: 2025-11-06 11:00:19
+
+PROCESSING SUMMARY:
+------------------------------
+Total items processed: 105
+Successful items: 105
+Items with issues: 0
+Success rate: 100.0%
+Total processing time: 0.00 seconds
+Average time per item: 0.00 seconds
+
+MODEL INFORMATION:
+------------------------------
+Model used: gpt-4.1-mini
+Input token rate: $0.00040 per 1K tokens
+Output token rate: $0.00160 per 1K tokens
+Batch discount applied: 50%
+
+TOKEN USAGE:
+------------------------------
+Total prompt tokens: 211,468
+Total completion tokens: 27,477
+Total tokens: 238,945
+Average tokens per successful item: 2275.7
+
+COST BREAKDOWN:
+------------------------------
+Input token cost: $0.0423 (batch discounted)
+Output token cost: $0.0220 (batch discounted)
+Total actual cost: $0.0643
+Average cost per successful item: $0.0006
+Regular API cost would have been: $0.1286
+Batch processing savings: $0.0643
+
+ADDITIONAL METRICS:
+------------------------------
+Processing mode: BATCH
+Actual cost: $0.1286
+Average tokens per entry: 2276
+Batch processing used: Yes
+
+EFFICIENCY METRICS:
+------------------------------
+Tokens processed per second: 0.0
+Cost per minute of processing: $0.0000
+Items processed per minute: 0.0

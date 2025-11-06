@@ -1,0 +1,70 @@
+============================================================
+SOUTHERN ARCHITECT - PAGE METADATA
+============================================================
+
+PAGE IDENTIFICATION:
+Folder: 1929-07-55
+Page Number: 12
+
+CONTENT:
+------------------------------
+Text Transcription:
+SOUTHERN ARCHITECT AND BUILDING NEWS        JULY, 1929
+
+Second Floor Plan
+Scale in Feet
+
+First Floor Plan
+Scale in Feet
+
+SHOOTING LODGE OF BAYARD DOMINICK
+WILLIS IRVIN, ARCHITECT, AUGUSTA, GA.
+
+[Floor plans include labeled rooms such as:]
+- Owners Room
+- Children's Room
+- Bed Room
+- Hall
+- Bath
+- Porch
+- Terrace
+- Dining Room
+- Living Room
+- Kitchen
+- Pantry
+- Guest Room
+
+Visual Description:
+The page features two architectural floor plans, one for the second floor and one for the first floor of a building. The plans are detailed with labeled rooms and spaces, including 'Owners Room', 'Children's Room', 'Dining Room', and 'Living Room'. The layout is clean and precise, with a scale in feet provided for reference. The title 'Shooting Lodge of Bayard Dominick' is prominently displayed at the bottom, along with the architect's name, Willis Irvin, and location, Augusta, GA. The page is bordered with a simple line and the publication title and date are at the top.
+
+Description:
+Page 48: Architectural floor plans for the Shooting Lodge of Bayard Dominick, designed by Willis Irvin. Includes detailed layouts of the first and second floors, highlighting residential design elements of the period.
+
+METADATA:
+------------------------------
+Topics:
+  - Architectural floor plans
+  - Residential architecture
+  - 20th century architecture
+  - Architectural design
+  - Building layout
+  - Southern architecture
+
+Named Entities:
+  - Bayard Dominick (Person)
+  - Willis Irvin (Architect)
+
+Geographic Entities:
+  - Augusta--Georgia (City)
+
+Subject Headings (Selected):
+  - Architectural drawings (http://id.worldcat.org/fast/fst01986246) [FAST]
+  - 20th-century architecture (http://id.worldcat.org/fast/fst01775377) [FAST]
+  - Architectural design (http://id.loc.gov/authorities/subjects/sh85006585) [LCSH]
+  - Building layout (http://id.loc.gov/authorities/subjects/sh85017736) [LCSH]
+  - Architecture--Southern States (http://id.loc.gov/authorities/subjects/sh98003122) [LCSH]
+
+Geographic Subject Headings (from vocabulary lookup):
+  - Georgia--Augusta (http://id.worldcat.org/fast/fst01206406) [FAST Geographic]
+
+============================================================

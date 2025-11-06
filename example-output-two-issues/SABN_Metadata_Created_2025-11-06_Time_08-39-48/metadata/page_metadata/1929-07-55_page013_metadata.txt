@@ -1,0 +1,55 @@
+============================================================
+SOUTHERN ARCHITECT - PAGE METADATA
+============================================================
+
+PAGE IDENTIFICATION:
+Folder: 1929-07-55
+Page Number: 13
+
+CONTENT:
+------------------------------
+Text Transcription:
+SOUTHERN ARCHITECT AND BUILDING NEWS
+
+HOUSE OF A. L. JAMES, ESQ., CHARLOTTE, N. C.
+A. L. BOWEN, JR., ARCHITECT
+
+Photos: By Todd & Kraf, Inc., New York City
+
+JULY, 1929
+
+49
+
+Visual Description:
+The page features a large, sepia-toned photograph of a stately brick house with a symmetrical facade, gabled roof, and dormer windows. The house is set amidst a landscaped garden with a pathway leading to the entrance. The text is minimal, with the title and credits placed around the photograph. The page number '49' is located at the top left corner, and the publication name 'SOUTHERN ARCHITECT AND BUILDING NEWS' is vertically aligned on the left margin. The date 'JULY, 1929' is at the bottom left corner.
+
+Description:
+Photo: House of A. L. James, Esq., Charlotte, N.C. A. L. Bowen, Jr., Architect. A photograph showcasing a residential architectural design from the late 1920s, highlighting traditional brick construction and symmetrical design.
+
+METADATA:
+------------------------------
+Topics:
+  - Residential architecture
+  - Brick construction
+  - Symmetrical design
+  - 1920s architecture
+  - Landscape design
+
+Named Entities:
+  - A. L. James (Person)
+  - A. L. Bowen, Jr. (Architect)
+  - Todd & Kraf, Inc. (Firm)
+
+Geographic Entities:
+  - Charlotte--North Carolina (City)
+  - New York--New York (City)
+
+Subject Headings (Selected):
+  - Brick houses--Design and construction (http://id.worldcat.org/fast/fst00838582) [FAST]
+  - Landscape design (http://id.loc.gov/authorities/subjects/sh92003550) [LCSH]
+
+Geographic Subject Headings (from vocabulary lookup):
+  - North Carolina--Charlotte (http://id.worldcat.org/fast/fst01204596) [FAST Geographic]
+  - New York (State)--New York (http://id.worldcat.org/fast/fst01204333) [FAST Geographic]
+
+============================================================

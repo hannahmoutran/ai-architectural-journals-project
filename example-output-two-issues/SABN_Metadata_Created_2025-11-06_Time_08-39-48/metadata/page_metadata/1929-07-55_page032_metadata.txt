@@ -1,0 +1,60 @@
+============================================================
+SOUTHERN ARCHITECT - PAGE METADATA
+============================================================
+
+PAGE IDENTIFICATION:
+Folder: 1929-07-55
+Page Number: 32
+
+CONTENT:
+------------------------------
+Text Transcription:
+68
+SOUTHERN ARCHITECT AND BUILDING NEWS
+JULY, 1929
+
+DETAIL IN LIVING ROOM
+
+DETAIL IN LIVING ROOM
+HOUSE OF GILMAN PRICHARD, AUGUSTA, GA.
+SCROGGS & EWING, ARCHITECTS
+
+Visual Description:
+The page features two black and white photographs of a living room interior. The top photograph shows a room with a fireplace, ornate mantel, and various furnishings including chairs and a table. The bottom photograph displays another angle of the living room, highlighting floral wallpaper, a mirror, and additional furniture. The layout is simple, with the photographs centered on the page and captions beneath each image. The header includes the publication name and date, while the page number is at the top left.
+
+Description:
+Image: Living room details from the House of Gilman Prichard, Augusta, GA, designed by Scroggs & Ewing. Features interior design elements and architectural details from 1929.
+
+METADATA:
+------------------------------
+Topics:
+  - Interior design
+  - Living rooms
+  - 1920s architecture
+  - Residential architecture
+  - Architectural photography
+  - Floral wallpaper
+  - Fireplaces
+  - Furniture design
+
+Named Entities:
+  - Gilman Prichard (Person)
+  - Scroggs & Ewing (Firm)
+
+Geographic Entities:
+  - Augusta--Georgia (City)
+  - Georgia (State)
+
+Subject Headings (Selected):
+  - interior design (http://vocab.getty.edu/aat/300054184) [Getty AAT]
+  - living rooms (http://vocab.getty.edu/aat/300004435) [Getty AAT]
+  - architectural photography (http://vocab.getty.edu/aat/300435151) [Getty AAT]
+  - Wallpaper (http://id.worldcat.org/fast/fst01170179) [FAST]
+  - Fireplaces (http://id.loc.gov/authorities/subjects/sh85048564) [LCSH]
+  - furniture design (http://vocab.getty.edu/aat/300435227) [Getty AAT]
+
+Geographic Subject Headings (from vocabulary lookup):
+  - Georgia--Augusta (http://id.worldcat.org/fast/fst01206406) [FAST Geographic]
+  - Georgia (http://id.worldcat.org/fast/fst01204622) [FAST Geographic]
+
+============================================================

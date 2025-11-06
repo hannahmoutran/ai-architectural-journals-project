@@ -1,0 +1,51 @@
+============================================================
+SOUTHERN ARCHITECT - PAGE METADATA
+============================================================
+
+PAGE IDENTIFICATION:
+Folder: 1929-07-55
+Page Number: 15
+
+CONTENT:
+------------------------------
+Text Transcription:
+JULY, 1929        SOUTHERN ARCHITECT AND BUILDING NEWS        51
+
+ENTRANCE DETAIL
+
+HOUSE OF A. L. JAMES, ESQ., CHARLOTTE, N. C.
+M. E. BOYER, JR., ARCHITECT
+
+Visual Description:
+The page features a large photograph of a brick building facade with a detailed entrance. The entrance includes a semi-circular fanlight above the door and a set of steps leading up to it, flanked by wrought iron railings. The building has multiple windows with shutters. The text is minimal, located below the photograph, and includes the title 'ENTRANCE DETAIL' and information about the house and architect. The page header includes the publication name and date.
+
+Description:
+Photo: Entrance detail of the House of A. L. James, Esq., Charlotte, N.C. Designed by M. E. Boyer, Jr. Features architectural details of early 20th-century Southern architecture.
+
+METADATA:
+------------------------------
+Topics:
+  - Architectural details
+  - Brick construction
+  - Fanlight
+  - Wrought iron railings
+  - Southern architecture
+  - Residential architecture
+
+Named Entities:
+  - A. L. James (Person)
+  - M. E. Boyer, Jr. (Architect)
+
+Geographic Entities:
+  - Charlotte--North Carolina (City)
+
+Subject Headings (Selected):
+  - Architecture--Details (http://id.loc.gov/authorities/subjects/sh85006626) [LCSH]
+  - Brick houses--Design and construction (http://id.worldcat.org/fast/fst00838582) [FAST]
+  - fanlights (http://vocab.getty.edu/aat/300002983) [Getty AAT]
+  - Architecture--Southern States (http://id.loc.gov/authorities/subjects/sh98003122) [LCSH]
+
+Geographic Subject Headings (from vocabulary lookup):
+  - North Carolina--Charlotte (http://id.worldcat.org/fast/fst01204596) [FAST Geographic]
+
+============================================================

@@ -1,0 +1,53 @@
+============================================================
+SOUTHERN ARCHITECT - PAGE METADATA
+============================================================
+
+PAGE IDENTIFICATION:
+Folder: 1929-07-55
+Page Number: 7
+
+CONTENT:
+------------------------------
+Text Transcription:
+SOUTHERN ARCHITECT AND BUILDING NEWS
+
+JULY, 1929
+
+THE HOUSE OF MILLS B. LANE, SAVANNAH, GA.
+
+LEVY & CLARKE, ARCHITECTS
+
+Visual Description:
+The page features a black and white photograph of a residential building surrounded by trees. The building has a classical architectural style with columns and shuttered windows. The photograph is oriented vertically on the page. The text is placed along the left and right margins, with the publication name 'SOUTHERN ARCHITECT AND BUILDING NEWS' on the left and the architects 'LEVY & CLARKE, ARCHITECTS' on the right. The date 'JULY, 1929' is at the bottom left, and the description 'THE HOUSE OF MILLS B. LANE, SAVANNAH, GA.' is at the bottom right.
+
+Description:
+Photo: The House of Mills B. Lane, Savannah, GA. A classical style residential building designed by Levy & Clarke, Architects, featured in the July 1929 issue.
+
+METADATA:
+------------------------------
+Topics:
+  - Classical architecture
+  - Residential buildings
+  - Architectural photography
+  - 20th century architecture
+  - Architectural firms
+
+Named Entities:
+  - Levy & Clarke (Firm)
+  - Mills B. Lane (Person)
+
+Geographic Entities:
+  - Savannah--Georgia (City)
+  - Georgia (State)
+
+Subject Headings (Selected):
+  - Architecture, Classical (http://id.loc.gov/authorities/subjects/sh85006718) [LCSH]
+  - architectural photography (http://vocab.getty.edu/aat/300435151) [Getty AAT]
+  - 20th-century architecture (http://id.worldcat.org/fast/fst01775377) [FAST]
+  - architectural firms (http://vocab.getty.edu/aat/300312082) [Getty AAT]
+
+Geographic Subject Headings (from vocabulary lookup):
+  - Georgia--Savannah (http://id.worldcat.org/fast/fst01207319) [FAST Geographic]
+  - Georgia (http://id.worldcat.org/fast/fst01204622) [FAST Geographic]
+
+============================================================

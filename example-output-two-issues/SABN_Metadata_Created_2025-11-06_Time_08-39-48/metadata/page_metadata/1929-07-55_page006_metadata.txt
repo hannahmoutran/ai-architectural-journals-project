@@ -1,0 +1,56 @@
+============================================================
+SOUTHERN ARCHITECT - PAGE METADATA
+============================================================
+
+PAGE IDENTIFICATION:
+Folder: 1929-07-55
+Page Number: 6
+
+CONTENT:
+------------------------------
+Text Transcription:
+42
+SOUTHERN ARCHITECT AND BUILDING NEWS
+JULY, 1929
+
+ENTRANCE DETAIL, MILLS B. LANE HOUSE, SAVANNAH, GA.
+
+The addition to the north side occupies the site of the former garden, while the ugly cornices over the windows were added in late years.
+
+In the restoration in the new building, every exterior dimension and detail was duplicated to the smallest fraction of an inch. In the rebuilding of the main spiral stairway, fragments of the original were on the walls and the first floor, the outlines of which were all carefully followed. The iron work is an exact replica and every slab of marble in the portico was carefully measured and reproduced. One of the greatest problems was the restoration of the stucco to imitate the original. Analysis of the original showed that it was made of lime and sand, the lime being procured from the pulverizing of oyster shells. The sand was of an unusual pearly color. In the restoration this old “Tabby” was carefully produced so as to obtain the original color and texture.
+
+The house is now occupied by Mr. William Murphey, the president of the Citizens & Southern Bank.
+
+Visual Description:
+The page features a large black-and-white photograph of the entrance of the Mills B. Lane House in Savannah, Georgia. The image shows a symmetrical facade with classical architectural elements, including columns and a pediment. The text below the image describes the restoration process of the building, focusing on the replication of original details and materials. The layout is clean, with the photograph taking up the top half of the page and the text below it. The header includes the publication name and date, while the page number is at the top left.
+
+Description:
+Image: Entrance Detail of Mills B. Lane House, Savannah, GA. Description of restoration efforts focusing on architectural precision and material authenticity. Mention of Mr. William Murphey, president of the Citizens & Southern Bank.
+
+METADATA:
+------------------------------
+Topics:
+  - Architectural restoration
+  - Classical architecture
+  - Stucco techniques
+  - Historical building materials
+  - Architectural replication
+  - Spiral stairways
+  - Tabby concrete
+
+Named Entities:
+  - Mills B. Lane House (Building)
+  - William Murphey (Person)
+  - Citizens & Southern Bank (Organization)
+
+Geographic Entities:
+  - Savannah--Georgia (City)
+
+Subject Headings (Selected):
+  - Architecture, Classical (http://id.loc.gov/authorities/subjects/sh85006718) [LCSH]
+  - Architecture--Conservation and restoration--Business community participation (http://id.loc.gov/authorities/subjects/sh85006620) [LCSH]
+
+Geographic Subject Headings (from vocabulary lookup):
+  - Georgia--Savannah (http://id.worldcat.org/fast/fst01207319) [FAST Geographic]
+
+============================================================

@@ -1,0 +1,50 @@
+============================================================
+SOUTHERN ARCHITECT - PAGE METADATA
+============================================================
+
+PAGE IDENTIFICATION:
+Folder: 1929-07-55
+Page Number: 17
+
+CONTENT:
+------------------------------
+Text Transcription:
+SOUTHERN ARCHITECT AND BUILDING NEWS
+
+July, 1929
+
+53
+
+STAIRHALL
+HOUSE OF A. L. JAMES, ESQ., CHARLOTTE, N. C.
+M. E. BOYER, JR., ARCHITECT
+
+Visual Description:
+The page features a black and white photograph of an interior stairhall. The staircase is prominent, with a wooden handrail and white balusters. A small table with a vase and a chair are placed near the staircase. The background shows a room with a window, curtains, and a table with chairs. The text is aligned vertically on the left and horizontally at the bottom right, using a serif font.
+
+Description:
+Photo: Interior Stairhall of A. L. James House, Charlotte, N.C. Designed by M. E. Boyer, Jr. Features early 20th-century residential architecture.
+
+METADATA:
+------------------------------
+Topics:
+  - Residential architecture
+  - Interior design
+  - Staircases
+  - Early 20th-century architecture
+
+Named Entities:
+  - A. L. James (Person)
+  - M. E. Boyer, Jr. (Architect)
+
+Geographic Entities:
+  - Charlotte--North Carolina (City)
+
+Subject Headings (Selected):
+  - interior design (http://vocab.getty.edu/aat/300054184) [Getty AAT]
+  - Staircases (http://id.loc.gov/authorities/subjects/sh85127265) [LCSH]
+
+Geographic Subject Headings (from vocabulary lookup):
+  - North Carolina--Charlotte (http://id.worldcat.org/fast/fst01204596) [FAST Geographic]
+
+============================================================

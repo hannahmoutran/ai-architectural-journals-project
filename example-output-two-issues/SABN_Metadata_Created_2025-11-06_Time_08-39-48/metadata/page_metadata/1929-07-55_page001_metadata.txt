@@ -1,0 +1,53 @@
+============================================================
+SOUTHERN ARCHITECT - PAGE METADATA
+============================================================
+
+PAGE IDENTIFICATION:
+Folder: 1929-07-55
+Page Number: 1
+
+CONTENT:
+------------------------------
+Text Transcription:
+SOUTHERN ARCHITECT and BUILDING NEWS
+
+JULY 1929
+
+THE SOUTH'S ONLY JOURNAL OF ARCHITECTURE AND BUILDING
+.... SINCE 1882 ....
+
+University of Texas
+JUL 22 1939
+LIBRARY
+
+Visual Description:
+The page is the cover of the 'Southern Architect and Building News' from July 1929. The title is prominently displayed at the top in large, bold serif font. Below the title is an illustration of a two-story building with intricate wooden latticework and surrounded by trees, signed by 'Bailey'. The date 'JULY 1929' is centered below the illustration in bold font. At the bottom, a tagline reads 'THE SOUTH'S ONLY JOURNAL OF ARCHITECTURE AND BUILDING .... SINCE 1882 ....' in smaller font. A library stamp from the University of Texas dated July 22, 1939, is visible on the right side.
+
+Description:
+Cover: Southern Architect and Building News, July 1929. Features an illustration of a building with detailed latticework, emphasizing Southern architectural styles. Includes a library stamp from the University of Texas.
+
+METADATA:
+------------------------------
+Topics:
+  - Southern architecture
+  - Architectural illustration
+  - Building design
+  - Latticework
+  - Architectural publications
+  - Historical architecture
+
+Named Entities:
+  - Southern Architect and Building News (Publication)
+  - University of Texas (Organization)
+
+Geographic Entities:
+  - Texas (State)
+
+Subject Headings (Selected):
+  - Architecture--Southern States (http://id.loc.gov/authorities/subjects/sh98003122) [LCSH]
+  - Latticework (http://id.loc.gov/authorities/subjects/sh85074995) [LCSH]
+
+Geographic Subject Headings (from vocabulary lookup):
+  - Texas (http://id.worldcat.org/fast/fst01210336) [FAST Geographic]
+
+============================================================

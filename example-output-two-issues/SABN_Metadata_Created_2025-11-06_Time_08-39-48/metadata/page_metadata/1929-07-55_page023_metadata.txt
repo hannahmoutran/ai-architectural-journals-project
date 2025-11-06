@@ -1,0 +1,50 @@
+============================================================
+SOUTHERN ARCHITECT - PAGE METADATA
+============================================================
+
+PAGE IDENTIFICATION:
+Folder: 1929-07-55
+Page Number: 23
+
+CONTENT:
+------------------------------
+Text Transcription:
+July, 1929        SOUTHERN ARCHITECT AND BUILDING NEWS        59
+
+LIVING ROOM DETAIL.
+
+HOUSE OF W. DUNCAN LEE, RICHMOND, VA.
+
+W. DUNCAN LEE, ARCHITECT
+
+Visual Description:
+The page features a sepia-toned photograph of a living room interior. The focal point is a detailed fireplace with a wooden mantel adorned with small decorative items and a central oval portrait. A spinning wheel and a wooden rocking chair are positioned in front of the fireplace. The room has a traditional design with ornate molding on the ceiling. The text is minimal, located below the image, and uses a serif font.
+
+Description:
+Photo: Living Room Detail of W. Duncan Lee's House, Richmond, VA. Features traditional interior design elements and furnishings. Architect: W. Duncan Lee.
+
+METADATA:
+------------------------------
+Topics:
+  - Traditional interior design
+  - Fireplace design
+  - Architectural photography
+  - Historic homes
+  - Interior furnishings
+
+Named Entities:
+  - W. Duncan Lee (Architect)
+
+Geographic Entities:
+  - Richmond--Virginia (City)
+
+Subject Headings (Selected):
+  - traditional (style) (http://vocab.getty.edu/aat/300310540) [Getty AAT]
+  - Fireplaces--Design and construction (http://id.worldcat.org/fast/fst00925677) [FAST]
+  - architectural photography (http://vocab.getty.edu/aat/300435151) [Getty AAT]
+  - historic houses (http://vocab.getty.edu/aat/300008064) [Getty AAT]
+
+Geographic Subject Headings (from vocabulary lookup):
+  - Virginia--Richmond (http://id.worldcat.org/fast/fst01205345) [FAST Geographic]
+
+============================================================

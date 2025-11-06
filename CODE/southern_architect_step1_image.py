@@ -30,7 +30,7 @@ logging.getLogger("urllib3").setLevel(logging.WARNING)
 logging.getLogger("httpx").setLevel(logging.WARNING)
 
 client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
-DEFAULT_MODEL = "gpt-4o-2024-08-06"  # Default model, change as needed
+DEFAULT_MODEL = "gpt-4o"  # Default model, change as needed
 
 api_stats = APIStats()
 def parse_json_response(raw_response):
@@ -580,13 +580,12 @@ def main():
     
     script_dir = os.path.dirname(os.path.abspath(__file__))
 
-    # Resolve input folder from environment or default.
     # If INPUT_FOLDER_PATH is set (absolute or relative to this script), it takes precedence.
     env_path = os.getenv("INPUT_FOLDER_PATH")
     if env_path:
         input_folder = env_path if os.path.isabs(env_path) else os.path.join(script_dir, env_path)
     else:
-        input_folder_name = os.getenv("INPUT_FOLDER_NAME", "4_pages")
+        input_folder_name = os.getenv("INPUT_FOLDER_NAME", "two_issue_test_2")
         input_folder = os.path.join(script_dir, "image_folders", input_folder_name)
 
     # Optional visibility for troubleshooting
@@ -686,7 +685,7 @@ def main():
     )
     
     # Final summary - terminal output
-    print(f"\n ✅ STEP 1 COMPLETE: Generated image metadata in {os.path.basename(output_dir)}")
+    print(f"\nSTEP 1 COMPLETE: Generated image metadata in {os.path.basename(output_dir)}")
     print(f"Excel file, JSON data, logs, and thumbnails created")
     print(f"Successfully processed: {total_items - items_with_issues}/{total_items} images")
     print(f"Items with issues: {items_with_issues}")

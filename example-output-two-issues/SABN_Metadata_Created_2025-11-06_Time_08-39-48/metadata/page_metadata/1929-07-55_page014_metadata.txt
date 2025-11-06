@@ -1,0 +1,68 @@
+============================================================
+SOUTHERN ARCHITECT - PAGE METADATA
+============================================================
+
+PAGE IDENTIFICATION:
+Folder: 1929-07-55
+Page Number: 14
+
+CONTENT:
+------------------------------
+Text Transcription:
+SECOND FLOOR
+
+BED ROOM 14'-6" x 16'-0"
+BED ROOM 14'-6" x 16'-0"
+BATH
+DRESSING ROOM
+BED ROOM 14'-6" x 16'-0"
+BED ROOM 14'-6" x 16'-0"
+ROOF
+
+FIRST FLOOR
+
+PORCH
+LIVING ROOM 19'-6" x 30'-0"
+LIBRARY 14'-6" x 16'-0"
+HALL
+DINING ROOM 19'-6" x 16'-0"
+KITCHEN 10'-0" x 16'-0"
+PORCH
+GARAGE 19'-0" x 19'-0"
+
+HOUSE OF A. L. JAMES, ESQ., CHARLOTTE, N. C.
+M. E. BOYER, JR., ARCHITECT
+
+Visual Description:
+The page features architectural floor plans for the first and second floors of a house. The plans are drawn in a clean, technical style with precise lines and labeled rooms. The first floor includes a porch, living room, library, hall, dining room, kitchen, and another porch, along with a separate garage. The second floor shows multiple bedrooms, a bath, and a dressing room. The text is in a serif font, and the layout is minimalistic with ample white space around the plans.
+
+Description:
+Architectural Plans: Floor plans for the house of A. L. James, Esq. in Charlotte, N.C., designed by M. E. Boyer, Jr. The plans detail the layout of the first and second floors, highlighting residential architectural design elements.
+
+METADATA:
+------------------------------
+Topics:
+  - Residential architecture
+  - Floor plans
+  - Architectural design
+  - 20th century architecture
+  - House layout
+  - Architectural drawings
+
+Named Entities:
+  - A. L. James (Person)
+  - M. E. Boyer, Jr. (Architect)
+
+Geographic Entities:
+  - Charlotte--North Carolina (City)
+
+Subject Headings (Selected):
+  - Floor plans (http://id.loc.gov/authorities/subjects/sh2003008965) [LCSH]
+  - Architectural design (http://id.loc.gov/authorities/subjects/sh85006585) [LCSH]
+  - 20th-century architecture (http://id.worldcat.org/fast/fst01775377) [FAST]
+  - Architectural drawings (http://id.worldcat.org/fast/fst01986246) [FAST]
+
+Geographic Subject Headings (from vocabulary lookup):
+  - North Carolina--Charlotte (http://id.worldcat.org/fast/fst01204596) [FAST Geographic]
+
+============================================================

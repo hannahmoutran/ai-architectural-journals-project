@@ -1,0 +1,53 @@
+============================================================
+SOUTHERN ARCHITECT - PAGE METADATA
+============================================================
+
+PAGE IDENTIFICATION:
+Folder: 1929-07-55
+Page Number: 11
+
+CONTENT:
+------------------------------
+Text Transcription:
+SOUTHERN ARCHITECT AND BUILDING NEWS
+
+THE SHOOTING LODGE OF BAYARD DOMINICK NEAR GEORGETOWN, S. C.
+WILLIS IRVIN, ARCHITECT, AUGUSTA, GA.
+
+July, 1929
+
+Visual Description:
+The page features a black and white photograph of a two-story building surrounded by trees. The building has a symmetrical facade with a prominent central section and two wings. The architecture includes large windows and a decorative railing on the upper level. The text is placed vertically along the left side and horizontally at the bottom right of the image. The page number '47' is located at the top left corner.
+
+Description:
+Photo: The Shooting Lodge of Bayard Dominick near Georgetown, S.C. - Designed by Willis Irvin, this lodge exemplifies early 20th-century Southern architecture.
+
+METADATA:
+------------------------------
+Topics:
+  - Southern architecture
+  - Shooting lodges
+  - 20th-century architecture
+  - Architectural photography
+  - Building design
+
+Named Entities:
+  - Bayard Dominick (Person)
+  - Willis Irvin (Architect)
+  - Southern Architect and Building News (Publication)
+
+Geographic Entities:
+  - Georgetown--South Carolina (City)
+  - Augusta--Georgia (City)
+
+Subject Headings (Selected):
+  - Architecture--Southern States (http://id.loc.gov/authorities/subjects/sh98003122) [LCSH]
+  - 20th-century architecture (http://id.worldcat.org/fast/fst01775377) [FAST]
+  - architectural photography (http://vocab.getty.edu/aat/300435151) [Getty AAT]
+  - Building (http://id.loc.gov/authorities/subjects/sh85017693) [LCSH]
+
+Geographic Subject Headings (from vocabulary lookup):
+  - South Carolina--Georgetown County (http://id.worldcat.org/fast/fst01206896) [FAST Geographic]
+  - Georgia--Augusta (http://id.worldcat.org/fast/fst01206406) [FAST Geographic]
+
+============================================================

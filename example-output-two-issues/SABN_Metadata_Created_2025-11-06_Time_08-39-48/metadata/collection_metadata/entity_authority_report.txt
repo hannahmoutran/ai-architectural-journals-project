@@ -1,0 +1,2261 @@
+SOUTHERN ARCHITECT ENTITY AUTHORITY REPORT
+==================================================
+
+Generated: 2025-11-06 11:00:56
+Total Entities: 432
+Fuzzy Matching: Enabled (rapidfuzz, threshold: 85%)
+
+FUZZY MATCHING RESULTS:
+-------------------------
+  Entities with variants: 13
+  Total variants merged: 13
+
+ENTITY TYPE BREAKDOWN:
+-------------------------
+  FIRM: 214 entities
+  PERSON: 79 entities
+  ORGANIZATION: 34 entities
+  ARCHITECT: 31 entities
+  PRODUCT: 24 entities
+  SCULPTOR: 8 entities
+  PUBLICATION: 7 entities
+  BUILDING: 7 entities
+  MATERIAL: 7 entities
+  ARTIST: 7 entities
+  SCHOOL: 3 entities
+  MYTHOLOGICAL FIGURE: 2 entities
+  SCULPTURE: 2 entities
+  STYLE: 2 entities
+  PROFESSION: 1 entities
+  DESIGNER: 1 entities
+  ENGINEER: 1 entities
+  CONCEPT: 1 entities
+  PROJECT: 1 entities
+
+ARCHITECT (31 entities):
+----------------------------------------
+  W. Duncan Lee
+    Frequency: 5 appearances
+    Time periods: 1929
+    Pages: 1929-07-55_page19, 1929-07-55_page20, 1929-07-55_page21, 1929-07-55_page22, 1929-07-55_page23
+
+  Willis Irvin
+    Frequency: 3 appearances
+    Time periods: 1929
+    Pages: 1929-07-55_page9, 1929-07-55_page11, 1929-07-55_page12
+
+  M. E. Boyer, Jr.
+    Frequency: 3 appearances
+    Time periods: 1929
+    Pages: 1929-07-55_page14, 1929-07-55_page15, 1929-07-55_page17
+
+  John Lawrence Mauran
+    Frequency: 2 appearances
+    Time periods: 1917
+    Forms: John Lawrence Mauran (Person), John Lawrence Mauran (Architect)
+    Pages: 1917-05-39_page26, 1917-05-39_page41
+
+  G. Lloyd Preacher
+    Frequency: 2 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page46, 1917-05-39_page49
+
+  Thomas Jefferson
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page16
+
+  Elzner & Williams
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page24
+
+  Charles Platt
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page30
+
+  Everts Tracy
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page30
+
+  Gamble Rogers
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page30
+
+  Haralson Bleekley
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page41
+
+  J. F. Leitner
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page43
+
+  William T. Warren
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page43
+
+  Eugene H. Knight
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page43
+
+  William Roth Ware
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page43
+
+  E. P. Dennis
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page46
+
+  N. W. Overstreet
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page46
+
+  Fred A. Hendrick
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page46
+
+  Wm. Ward Watkin
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page48
+
+  L. L. Stephenson
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page48
+
+  A. C. Price
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page48
+
+  S. J. Welch
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page48
+
+  W. B. Taley
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page48
+
+  H. F. Saxelbye
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page48
+
+  L. L. Hunter
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page48
+
+  Wm. Newton Dibrell
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page48
+
+  Logan Beckley
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page49
+
+  Thomas M. Campbell
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page49
+
+  Philander P. Scroggs
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page49
+
+  A. L. Bowen, Jr.
+    Frequency: 1 appearances
+    Time periods: 1929
+    Pages: 1929-07-55_page13
+
+  Neel Reid
+    Frequency: 1 appearances
+    Time periods: 1929
+    Pages: 1929-07-55_page35
+
+ARTIST (7 entities):
+----------------------------------------
+  Hildebrandt
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page32
+
+  Boecklein
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page32
+
+  Rude
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page32
+
+  Carpeaux
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page32
+
+  Dubois
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page32
+
+  Mercie
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page32
+
+  Damot
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page32
+
+BUILDING (7 entities):
+----------------------------------------
+  Virginia Capitol
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page16
+
+  University of Virginia
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page16
+
+  Monticello
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page16
+
+  Union Central Life Insurance Building
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page19
+
+  Mather House
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page30
+
+  Mills B. Lane House
+    Frequency: 1 appearances
+    Time periods: 1929
+    Pages: 1929-07-55_page6
+
+  Porter Building
+    Frequency: 1 appearances
+    Time periods: 1929
+    Pages: 1929-07-55_page36
+
+CONCEPT (1 entities):
+----------------------------------------
+  Dame rumor
+    Frequency: 1 appearances
+    Time periods: 1929
+    Pages: 1929-07-55_page3
+
+DESIGNER (1 entities):
+----------------------------------------
+  H. B. Mulliken
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page38
+
+ENGINEER (1 entities):
+----------------------------------------
+  J. Rice Scott
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page48
+
+FIRM (214 entities):
+----------------------------------------
+  Scroggs & Ewing
+    Frequency: 4 appearances
+    Time periods: 1929
+    Pages: 1929-07-55_page30, 1929-07-55_page31, 1929-07-55_page32, 1929-07-55_page33
+
+  Bowlus Mfg. Co.
+    Frequency: 3 appearances
+    Time periods: 1917
+    Variants: The Bowlus Mfg. Co.
+    Forms: The Bowlus Mfg. Co. (Firm), Bowlus Mfg. Co. (Firm)
+    Pages: 1917-05-39_page6, 1917-05-39_page44, 1917-05-39_page45
+
+  M. L. Schlueter
+    Frequency: 2 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page5, 1917-05-39_page44
+
+  Sanitary Chemical Closet Company
+    Frequency: 2 appearances
+    Time periods: 1917
+    Variants: Sanitary Chemical Closet Co.
+    Forms: Sanitary Chemical Closet Company (Firm), Sanitary Chemical Closet Co. (Firm)
+    Pages: 1917-05-39_page20, 1917-05-39_page44
+
+  Philip Gruner & Bros. Lumber Co.
+    Frequency: 2 appearances
+    Time periods: 1917
+    Variants: Philip Gruner & Bros. Lbr. Co.
+    Forms: Philip Gruner & Bros. Lbr. Co. (Firm), Philip Gruner & Bros. Lumber Co. (Firm)
+    Pages: 1917-05-39_page23, 1917-05-39_page44
+
+  The Trus-Con Laboratories
+    Frequency: 2 appearances
+    Time periods: 1917
+    Variants: Trus-Con Laboratories
+    Forms: Trus-Con Laboratories (Organization), The Trus-Con Laboratories (Firm)
+    Pages: 1917-05-39_page43, 1917-05-39_page63
+
+  Rogers Brothers Company
+    Frequency: 2 appearances
+    Time periods: 1917
+    Variants: Rogers Bros. Company
+    Forms: Rogers Bros. Company (Firm), Rogers Brothers Company (Firm)
+    Pages: 1917-05-39_page44, 1917-05-39_page51
+
+  Keil - Dedlow Mfg. Co.
+    Frequency: 2 appearances
+    Time periods: 1917
+    Variants: Keil-Dellow Mfg. Co.
+    Forms: Keil - Dedlow Mfg. Co. (Firm), Keil-Dellow Mfg. Co. (Firm)
+    Pages: 1917-05-39_page44, 1917-05-39_page49
+
+  D. and T. Mfg. Co.
+    Frequency: 2 appearances
+    Time periods: 1917
+    Variants: D & T Mfg. Co.
+    Forms: D. and T. Mfg. Co. (Firm), D & T Mfg. Co. (Firm)
+    Pages: 1917-05-39_page44, 1917-05-39_page50
+
+  F. Meyer & Brother Co.
+    Frequency: 2 appearances
+    Time periods: 1917
+    Variants: F. Meyer & Bro. Co.
+    Forms: F. Meyer & Bro. Co. (Firm), F. Meyer & Brother Co. (Firm)
+    Pages: 1917-05-39_page44, 1917-05-39_page52
+
+  Levy & Clarke
+    Frequency: 2 appearances
+    Time periods: 1929
+    Pages: 1929-07-55_page5, 1929-07-55_page7
+
+  Tebbs & Knell, Inc.
+    Frequency: 2 appearances
+    Time periods: 1929
+    Pages: 1929-07-55_page9, 1929-07-55_page29
+
+  Miller & Martin
+    Frequency: 2 appearances
+    Time periods: 1929
+    Pages: 1929-07-55_page25, 1929-07-55_page27
+
+  L. Hansen & Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page1
+
+  Cortright Metal Roofing Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page1
+
+  W. N. Kratzer Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page1
+
+  American Elevator and Machine Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page1
+
+  Spiers Lederle Glass Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page1
+
+  Snead Architectural Iron Works
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page1
+
+  Samuel H. French Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page2
+
+  American Bell & Foundry Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page2
+
+  Bowling Green & Green River Quarries Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page2
+
+  Milbrandt Rolling Ladder Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page2
+
+  Thos. Kelly & Bros.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page2
+
+  Hardware Specialty Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page2
+
+  Geo. H. Hans
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page2
+
+  Wells & Newton Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page3
+
+  The J. E. Moss Iron Works
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page3
+
+  The Baldwin Brass Works
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page3
+
+  The Kinnear & Gager Mfg. Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page3
+
+  The New York Blower Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page4
+
+  Cutler & Proctor Stove Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page4
+
+  Peters Pump Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page4
+
+  Mt. Nebo Marble Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page4
+
+  The Brownwall Engine & Pulley Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page5
+
+  Beaver Clay Manufacturing Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page5
+
+  Maire Paint Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page6
+
+  The Frank Spangler Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page6
+
+  Gillette Light Projector Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page7
+
+  Caxton School Supply Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page7
+
+  Lytton Manufacturing Corporation
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page7
+
+  Austin Organ Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page8
+
+  The Norfolk Mfg. Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page8
+
+  E. A. Foy Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page8
+
+  Standard School Heater Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page11
+
+  Iowa Foundry & Mfg. Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page11
+
+  Milliken Brothers
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page11
+
+  Century Tower Clock Works
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page11
+
+  Garden City Sand Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page11
+
+  Ideal Reversible Hinge Cabinet Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page12
+
+  Hoosier Cut Stone Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page12
+
+  The Huntington Iron Works
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page12
+
+  J. Bray Slate Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page12
+
+  Enterprise Iron Works
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page12
+
+  The Newman Mfg. Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page12
+
+  Cement Products Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page13
+
+  Pullman Mfg. Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page14
+
+  Heitland Grate & Mantel Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page14
+
+  A Collins Lumber Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page14
+
+  Moffatt Machinery Mfg. Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page15
+
+  Self-Cleaning Strainer Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page17
+
+  Novelty Mfg. Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page17
+
+  Steel Scaffolding Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page17
+
+  Polk Genung Polk Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page18
+
+  The Leon L. Wolf Paint Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page19
+
+  New York Blue Print Paper Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page19
+
+  Defiance Mfg. Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page19
+
+  A. C. Chesley Co., Inc.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page20
+
+  United States Cast Iron Pipe and Foundry Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page20
+
+  Dail Steel Products Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page21
+
+  Dallas Show Case & Mfg. Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page21
+
+  Crown Iron Works Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page21
+
+  Ingalls Stone Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page21
+
+  Bruston Automatic Electric Lighting & Power Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page21
+
+  Auto Utilities Mfg. Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page23
+
+  I. P. Frink, Inc.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page23
+
+  H. J. Reedy Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page23
+
+  The Heltzel Steel Form & Iron Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page23
+
+  Barrett Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page24
+
+  J. A. Bentley & Sons
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page24
+
+  Hummel & Hillebrand
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page24
+
+  McKenzie Building Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page26
+
+  Woodward Lumber Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page26
+
+  Whitney-McNeil Electric Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page26
+
+  Brill Electric Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page26
+
+  Albro and Lindeberg
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page30
+
+  Northwestern Expanded Metal Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page36
+
+  Trussed Concrete Steel Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page36
+
+  Berger Manufacturing Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page36
+
+  Consolidated Expanded Metal Companies
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page36
+
+  Penn Metal Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page36
+
+  Milwaukee Corrugating Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page36
+
+  The Bostwick Steel Lath Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page36
+
+  Sandusky Cement Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page44
+
+  Phillips & Wainwright
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page46
+
+  Sanguinet & Staats
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page46
+
+  Bleckley & Irvin
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page46
+
+  W. A. Rayfield & Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page46
+
+  M. D. & H. L. Smith Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page47
+
+  Stephenson Company, Inc.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page47
+
+  Friddell Bros.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page47
+
+  Pickert Plumbing Supply Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page47
+
+  Knox & Maier Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page47
+
+  Capital Stone Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page47
+
+  B. Mifflin Hood Brick Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page47
+
+  McNinch & Kalb
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page47
+
+  Atlanta Waterproofing & Flooring Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page47
+
+  Bryan Electric Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page48
+
+  Walker Roofing Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page48
+
+  Cram & Ferguson
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page48
+
+  Finger & Bailey
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page48
+
+  Bryan & Potete
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page48
+
+  Sandusky Portland Cement Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page49
+
+  The Southern Desk Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page51
+
+  Standard Thermometer Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page53
+
+  Rising & Nelson Slate Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page53
+
+  Warren-Knight Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page53
+
+  Cook & Laurie Gravel Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page53
+
+  Geo. B. Sickles Marble Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page53
+
+  Phoenix Planing Mill
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page53
+
+  Franklin Brass Mfg. Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page54
+
+  Hartmann-Sanders Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page54
+
+  Dow Wire & Iron Works
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page54
+
+  McKenna Bros. Brass Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page55
+
+  Higgins'
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page55
+
+  Voigt Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page55
+
+  Grand Crossing Boiler Works
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page55
+
+  York Safe and Lock Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page55
+
+  Self-Clinching Nail Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page56
+
+  S. Wilks Mfg. Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page56
+
+  Bangor Slate Mining Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page56
+
+  L. Wolff Manufacturing Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page57
+
+  Ludowici-Celadon Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page57
+
+  The Taplin-Rice-Clerkin Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page57
+
+  The National Lime & Stone Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page58
+
+  Gem Plumbing Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page58
+
+  Proctor Slate Mfg. Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page58
+
+  Haynes-Langenburg Mfg. Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page58
+
+  Wright & Alexander Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page59
+
+  Southern Gypsum Co., Inc.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page60
+
+  Sciple Sons
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page60
+
+  Standard Cement Stave Silo Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page60
+
+  Columbia Clay Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page61
+
+  Vincennes Bridge Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page61
+
+  Chattanooga Roofing & Foundry Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page61
+
+  Hydraulic-Press Brick Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page61
+
+  Aurora Millwork Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page62
+
+  Jacobson & Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page62
+
+  The Kansas Buff Brick & Mfg. Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page62
+
+  Chattanooga Paint Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page62
+
+  The Fred J. Meyers Mfg. Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page62
+
+  National Silo Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page62
+
+  The Shelby Spring Hinge Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page63
+
+  The Powers Regulator Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page63
+
+  The Reading Heater & Supply Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page63
+
+  Reliance Ball Bearing Door Hanger Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page64
+
+  The Horn & Brannen Manufacturing Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page64
+
+  Bristol Metal MFG. CO.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page64
+
+  Burlington Venetian Blind Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page64
+
+  Appalachian Marble Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page64
+
+  Streeter Clip & Specialty Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page65
+
+  W. J. Baker Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page65
+
+  CHEARS COMPANY
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page65
+
+  MERCER MFG. CO.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page65
+
+  The L. Schreiber & Sons Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page65
+
+  LOBB, PARRY & COMPANY
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page65
+
+  Lombard Foundry, Machine and Boiler Works and Supply Store
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page65
+
+  Greenwood & O'Neill
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page66
+
+  Standard Iron Works
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page66
+
+  Chicago Perforating Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page66
+
+  North Bangor Slate Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page66
+
+  Standard Portland Cement Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page66
+
+  The XXth Century H. & V. Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page66
+
+  Rudolph Hegener Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page67
+
+  Murray Roofing Tile Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page67
+
+  The Georgia Marble Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page67
+
+  F. Weber & Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page67
+
+  Whisler Mfg. Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page67
+
+  The Cincinnati Iron & Steel Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page67
+
+  C. C. Shipp & Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page68
+
+  Sunlight Reflector Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page70
+
+  Chas. F. Lorenzen & Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page70
+
+  Steel Security Bond Anchor Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page70
+
+  The Philip Carey Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page70
+
+  Mound City Roofing Tile Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page71
+
+  Siphon Ventilator Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page71
+
+  Union Welded Products Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page71
+
+  Beecher-Fowler Mfg. Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page71
+
+  J. W. Wells Lumber Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page71
+
+  HAMLIN IMP-ERVIA Co., INC.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page72
+
+  DIXIE PORTLAND CEMENT CO.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page72
+
+  H. E. HESSLER CO.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page72
+
+  United States Register Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page72
+
+  Kewanee MFG. CO.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page73
+
+  The Federal Clay Product Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page73
+
+  The Vaile-Kimes Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page73
+
+  Jennison Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page73
+
+  Mitchell Mfg. Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page75
+
+  MacArthur Cement Products Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page77
+
+  McFell Signal Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page77
+
+  H. F. Huber & Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page78
+
+  Imperial Furnace Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page79
+
+  Jackson Iron & Bronze Works
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page79
+
+  The United States Roofing Tile Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page79
+
+  Manufacturing Equipment & Engineering Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page79
+
+  Automatic Electric Heater Company
+    Frequency: 1 appearances
+    Time periods: 1929
+    Pages: 1929-07-55_page2
+
+  Oakland Foundry Co.
+    Frequency: 1 appearances
+    Time periods: 1929
+    Pages: 1929-07-55_page2
+
+  Georgian Mantel Company
+    Frequency: 1 appearances
+    Time periods: 1929
+    Pages: 1929-07-55_page2
+
+  Todd & Kraf, Inc.
+    Frequency: 1 appearances
+    Time periods: 1929
+    Pages: 1929-07-55_page13
+
+  Jno. B. Krehbiel, Inc.
+    Frequency: 1 appearances
+    Time periods: 1929
+    Pages: 1929-07-55_page25
+
+  Jones and Furbringer
+    Frequency: 1 appearances
+    Time periods: 1929
+    Pages: 1929-07-55_page35
+
+  Tebbs & Knell
+    Frequency: 1 appearances
+    Time periods: 1929
+    Pages: 1929-07-55_page35
+
+  Hentz, Reid & Adler
+    Frequency: 1 appearances
+    Time periods: 1929
+    Pages: 1929-07-55_page35
+
+  Biswanger & Company
+    Frequency: 1 appearances
+    Time periods: 1929
+    Pages: 1929-07-55_page35
+
+MATERIAL (7 entities):
+----------------------------------------
+  POLK SYSTEM
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page18
+
+  Wolf's Elastine Lacquer
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page19
+
+  Hetzel's Cement
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page56
+
+  Monarch
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page58
+
+  Peach Bottom Slate
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page58
+
+  Percoproof
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page70
+
+  Vitrolite
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page78
+
+MYTHOLOGICAL FIGURE (2 entities):
+----------------------------------------
+  Venus
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page30
+
+  Diana
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page30
+
+ORGANIZATION (34 entities):
+----------------------------------------
+  American Institute of Architects
+    Frequency: 4 appearances
+    Time periods: 1917, 1929
+    Pages: 1917-05-39_page26, 1917-05-39_page42, 1929-07-55_page35, 1929-07-55_page36
+
+  United States Civil Service Commission
+    Frequency: 3 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page33, 1917-05-39_page34, 1917-05-39_page35
+
+  National Association of Real Estate Boards
+    Frequency: 2 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page9, 1917-05-39_page25
+
+  Civil Service Commission
+    Frequency: 2 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page34, 1917-05-39_page35
+
+  Navy Department
+    Frequency: 2 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page34, 1917-05-39_page35
+
+  General Fireproofing Company
+    Frequency: 2 appearances
+    Time periods: 1917
+    Variants: General Fireproofing Co.
+    Forms: General Fireproofing Company (Firm), General Fireproofing Co. (Organization)
+    Pages: 1917-05-39_page36, 1917-05-39_page43
+
+  Minnesota Manufacturers' Assn.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page5
+
+  Florida Engineering Society
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page10
+
+  Congress of the United States
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page10
+
+  United States Public Health Service
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page13
+
+  Board of Fire Underwriters
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page14
+
+  National Wholesale Grocers' Association
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page15
+
+  United States Fidelity and Guaranty Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page24
+
+  National Association of Builders’ Exchanges
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page26
+
+  Atlanta Builders’ Association
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page26
+
+  Metropolitan Museum of Art
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page29
+
+  Scarsdale Golf and Country Club
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page30
+
+  Raleigh Building Trades Association
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page30
+
+  Bureau of Foreign and Domestic Commerce
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page30
+
+  Porto Rican Civil Service Commission
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page34
+
+  Bureau of Yards and Docks
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page35
+
+  Julian Armstrong Bureau of Related Industries
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page36
+
+  Granite Paving Block Manufacturers’ Association
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page36
+
+  Associated Metal Lath Manufacturers
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page36
+
+  Greensboro Builders
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page42
+
+  Southern GF Co.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page43
+
+  Oak Flooring Manufacturers’ Association
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page44
+
+  Oak Flooring Service Bureau
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page44
+
+  The Vitrolite Company
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page78
+
+  University of Texas
+    Frequency: 1 appearances
+    Time periods: 1929
+    Pages: 1929-07-55_page1
+
+  United States Bank
+    Frequency: 1 appearances
+    Time periods: 1929
+    Pages: 1929-07-55_page5
+
+  Planters’ Bank of Savannah
+    Frequency: 1 appearances
+    Time periods: 1929
+    Pages: 1929-07-55_page5
+
+  Citizens & Southern Bank
+    Frequency: 1 appearances
+    Time periods: 1929
+    Pages: 1929-07-55_page6
+
+  University of Alabama
+    Frequency: 1 appearances
+    Time periods: 1929
+    Pages: 1929-07-55_page27
+
+PERSON (79 entities):
+----------------------------------------
+  Gilman Prichard
+    Frequency: 6 appearances
+    Time periods: 1929
+    Pages: 1929-07-55_page29, 1929-07-55_page30, 1929-07-55_page31, 1929-07-55_page32, 1929-07-55_page33 ... (+1 more)
+
+  Bayard Dominick
+    Frequency: 4 appearances
+    Time periods: 1929
+    Pages: 1929-07-55_page9, 1929-07-55_page10, 1929-07-55_page11, 1929-07-55_page12
+
+  A. L. James
+    Frequency: 4 appearances
+    Time periods: 1929
+    Pages: 1929-07-55_page13, 1929-07-55_page14, 1929-07-55_page15, 1929-07-55_page17
+
+  Wallace B. Crumb
+    Frequency: 3 appearances
+    Time periods: 1917
+    Forms: Wallace B. Crumb (Person), Wallace B. Crumb (Firm)
+    Pages: 1917-05-39_page5, 1917-05-39_page44, 1917-05-39_page45
+
+  Mills B. Lane
+    Frequency: 2 appearances
+    Time periods: 1929
+    Variants: Mills B Lane
+    Forms: Mills B Lane (Person), Mills B. Lane (Person)
+    Pages: 1929-07-55_page5, 1929-07-55_page7
+
+  Henry E. Harman, Jr.
+    Frequency: 2 appearances
+    Time periods: 1929
+    Variants: Henry E. Harman
+    Forms: Henry E. Harman, Jr. (Person), Henry E. Harman (Person)
+    Pages: 1929-07-55_page35, 1929-07-55_page35
+
+  G. A. Almorth
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page1
+
+  Eugene E. Nice
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page6
+
+  H. E. Walker
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page8
+
+  President Wilson
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page10
+
+  Governor Catts
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page10
+
+  Thomas Devlin
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page11
+
+  A. A. Parker
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page12
+
+  H. B. Fred. Kuhls
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page17
+
+  John W. Gates
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page17
+
+  J. D. Johnston
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page23
+
+  Hill Ferguson
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page25
+
+  J. E. Morris
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page25
+
+  Paul C. Murphy
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page25
+
+  I. F. Eppich
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page25
+
+  John S. Leslie
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page25
+
+  Joe T. Lawrence
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page26
+
+  T. T. Flagler
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page26
+
+  Dan Carey
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page26
+
+  F. E. Gibson
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page26
+
+  E. J. Erbelding
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page26
+
+  Mayor Candler
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page26
+
+  Guy Pene du Bois
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page27
+
+  Martini
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page27
+
+  John Freeman
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page29
+
+  Kenyon Cox
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page30
+
+  Ellen Emmet
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page30
+
+  Bishop Talbot
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page30
+
+  Roger Platt
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page30
+
+  Charles Albert Coffin
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page30
+
+  Alice Olin Dows
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page30
+
+  Stephen Olin Dows
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page30
+
+  John Thiem
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page30
+
+  J. C. Murphy
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page30
+
+  W. T. Barrow
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page30
+
+  Zenas W. Carter
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page36
+
+  C. O. Powell
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page36
+
+  S. E. Feeheimer
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page36
+
+  R. M. Nicholson
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page36
+
+  C. M. Stewart
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page36
+
+  L. E. Fisher
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page36
+
+  L. J. Rouleau
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page36
+
+  H. F. Ericksen
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page36
+
+  Wm. Geo. Lane
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page36
+
+  Walter L. Weeden
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page36
+
+  H. E. Harman
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page39
+
+  E. J. Putnam
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page43
+
+  J. L. Keil
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page44
+
+  H. C. Bowlus
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page45
+
+  J. P. Gaillard
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page46
+
+  John H. Eastwood
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page46
+
+  Albert Howell, Jr.
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page46
+
+  F. E. Markel
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page47
+
+  J. V. Burke
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page48
+
+  John Faragher
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page53
+
+  J. E. Warden
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page54
+
+  J. G. Hetzel
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page56
+
+  H. W. Thoresen
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page57
+
+  W. H. Hill
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page61
+
+  Ernest P. Hoerr
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page62
+
+  George H. Davidson
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page63
+
+  Mary Rolls Dockstader
+    Frequency: 1 appearances
+    Time periods: 1929
+    Pages: 1929-07-55_page5
+
+  James Habersham Jr.
+    Frequency: 1 appearances
+    Time periods: 1929
+    Pages: 1929-07-55_page5
+
+  Joseph Clay
+    Frequency: 1 appearances
+    Time periods: 1929
+    Pages: 1929-07-55_page5
+
+  Hester Habersham
+    Frequency: 1 appearances
+    Time periods: 1929
+    Pages: 1929-07-55_page5
+
+  Thomas Willing
+    Frequency: 1 appearances
+    Time periods: 1929
+    Pages: 1929-07-55_page5
+
+  William Murphey
+    Frequency: 1 appearances
+    Time periods: 1929
+    Pages: 1929-07-55_page6
+
+  Harold Baby
+    Frequency: 1 appearances
+    Time periods: 1929
+    Pages: 1929-07-55_page19
+
+  Huestis Prichey
+    Frequency: 1 appearances
+    Time periods: 1929
+    Pages: 1929-07-55_page21
+
+  E. Lynn Drummond
+    Frequency: 1 appearances
+    Time periods: 1929
+    Pages: 1929-07-55_page29
+
+  Walk C. Jones
+    Frequency: 1 appearances
+    Time periods: 1929
+    Pages: 1929-07-55_page35
+
+  Milton S. Biswanger
+    Frequency: 1 appearances
+    Time periods: 1929
+    Pages: 1929-07-55_page35
+
+  Bayard S. Cairnes
+    Frequency: 1 appearances
+    Time periods: 1929
+    Pages: 1929-07-55_page35
+
+  M. H. Furbringer
+    Frequency: 1 appearances
+    Time periods: 1929
+    Pages: 1929-07-55_page36
+
+PRODUCT (24 entities):
+----------------------------------------
+  Kingwelton Rotary Air Washers
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page3
+
+  Lexington All-Cast Warm Air Furnace
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page4
+
+  Seri-Vane Fans
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page4
+
+  Lytton Thermo Syphon Trap
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page7
+
+  Sanisep
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page13
+
+  Keystone
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page20
+
+  Wolverine Closets
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page21
+
+  American Standard Revolving Doors
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page21
+
+  Crumb’s Warriner Patent Chain Hanging Cattle Stanchion
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page45
+
+  Bowlus “Famous” flush valve
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page45
+
+  Bowlus “Jewel” flush valve
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page45
+
+  Medusa Waterproofing
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page49
+
+  Meyer's Nested Furnace Pipe
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page52
+
+  Dube Garbage Burning Water Heaters
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page55
+
+  Thermo
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page58
+
+  Front Rank
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page58
+
+  WRIALCO
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page59
+
+  D-I
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page68
+
+  J-K Siphon Ventilators
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page71
+
+  Jones System
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page72
+
+  Mitchell Sanitary Barn Equipments
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page75
+
+  Keith Bubbler
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page79
+
+  Sepco
+    Frequency: 1 appearances
+    Time periods: 1929
+    Pages: 1929-07-55_page2
+
+  King Tank Heaters
+    Frequency: 1 appearances
+    Time periods: 1929
+    Pages: 1929-07-55_page2
+
+PROFESSION (1 entities):
+----------------------------------------
+  Architect
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page37
+
+PROJECT (1 entities):
+----------------------------------------
+  Gregory Neck Plantation
+    Frequency: 1 appearances
+    Time periods: 1929
+    Pages: 1929-07-55_page9
+
+PUBLICATION (7 entities):
+----------------------------------------
+  Southern Architect and Building News
+    Frequency: 4 appearances
+    Time periods: 1917, 1929
+    Variants: American Architect and Building News
+    Forms: American Architect and Building News (Publication), Southern Architect and Building News (Publication)
+    Pages: 1917-05-39_page43, 1929-07-55_page1, 1929-07-55_page11, 1929-07-55_page35
+
+  The American Lumberman
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page15
+
+  Cement Era
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page15
+
+  Christian Science Monitor
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page16
+
+  Minneapolis Journal
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page16
+
+  Hardware Record
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page16
+
+  Popular Science Monthly
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page38
+
+SCHOOL (3 entities):
+----------------------------------------
+  Cooper Union
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page27
+
+  Julian Academy
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page32
+
+  University of Illinois
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page41
+
+SCULPTOR (8 entities):
+----------------------------------------
+  Henry Hering
+    Frequency: 4 appearances
+    Time periods: 1917
+    Forms: Henry Hering (Sculptor), Henry Hering (Person)
+    Pages: 1917-05-39_page9, 1917-05-39_page27, 1917-05-39_page28, 1917-05-39_page29
+
+  Richard Engelmann
+    Frequency: 4 appearances
+    Time periods: 1917
+    Variants: Richard Englemann
+    Forms: Richard Englemann (Sculptor), Richard Engelmann (Sculptor)
+    Pages: 1917-05-39_page9, 1917-05-39_page31, 1917-05-39_page32, 1917-05-39_page33
+
+  Rodin
+    Frequency: 2 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page27, 1917-05-39_page28
+
+  Augustus Saint Gaudens
+    Frequency: 2 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page27, 1917-05-39_page29
+
+  Praxiteles
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page30
+
+  Saint Gaudens
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page30
+
+  Josef Flossmann
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page31
+
+  Begas
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page32
+
+SCULPTURE (2 entities):
+----------------------------------------
+  The Mother
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page31
+
+  Philosopher
+    Frequency: 1 appearances
+    Time periods: 1917
+    Pages: 1917-05-39_page31
+
+STYLE (2 entities):
+----------------------------------------
+  Colonial Architecture
+    Frequency: 1 appearances
+    Time periods: 1929
+    Pages: 1929-07-55_page10
+
+  Georgian Architecture
+    Frequency: 1 appearances
+    Time periods: 1929
+    Pages: 1929-07-55_page10
+

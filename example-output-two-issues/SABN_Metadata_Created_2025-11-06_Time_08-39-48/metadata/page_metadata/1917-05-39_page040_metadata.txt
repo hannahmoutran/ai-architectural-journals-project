@@ -1,0 +1,43 @@
+============================================================
+SOUTHERN ARCHITECT - PAGE METADATA
+============================================================
+
+PAGE IDENTIFICATION:
+Folder: 1917-05-39
+Page Number: 40
+
+CONTENT:
+------------------------------
+Text Transcription:
+Some Pretty Park Scenes at Springfield, O.
+
+Visual Description:
+The page features three black and white photographs of park scenes. The top of the page has a title in a serif font. Two smaller photographs are aligned horizontally at the top, depicting a bridge over a body of water and a tree-lined waterway. Below, a larger photograph shows a winding path alongside a canal with lush vegetation. The layout is simple, with a focus on the images.
+
+Description:
+Image: Park scenes in Springfield, Ohio. Photographs depict serene park landscapes, including waterways and bridges, highlighting early 20th-century park design.
+
+METADATA:
+------------------------------
+Topics:
+  - Park design
+  - Landscape architecture
+  - Urban parks
+  - Early 20th-century architecture
+  - Bridges
+  - Waterways
+
+Geographic Entities:
+  - Springfield--Ohio (City)
+
+Subject Headings (Selected):
+  - Parks--Design and construction (http://id.worldcat.org/fast/fst01053716) [FAST]
+  - Landscape architecture (http://id.worldcat.org/fast/fst00991814) [FAST]
+  - urban parks (http://vocab.getty.edu/aat/300008197) [Getty AAT]
+  - Bridges (http://id.loc.gov/authorities/subjects/sh85016829) [LCSH]
+  - waterways (http://vocab.getty.edu/aat/300263418) [Getty AAT]
+
+Geographic Subject Headings (from vocabulary lookup):
+  - Ohio--Springfield (http://id.worldcat.org/fast/fst01219897) [FAST Geographic]
+
+============================================================

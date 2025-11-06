@@ -1,0 +1,119 @@
+============================================================
+SOUTHERN ARCHITECT - PAGE METADATA
+============================================================
+
+PAGE IDENTIFICATION:
+Folder: 1917-05-39
+Page Number: 44
+
+CONTENT:
+------------------------------
+Text Transcription:
+Trade Notes of Interest
+
+New Faces This Month.
+
+The attention of our readers is directed to these new advertisements appearing this month, all representative in their several lines and worthy the patronage of those interested:
+
+Rogers Brothers Company, Albion, Pa., are manufacturers of automobile trailers for every purpose and are made for service. They are idea for building contractors. The company has distributing agencies in principal cities. Ask for their catalogue.
+
+Keil-Dellow Mfg. Co., Plainview, Nebraska, are manufacturers of the Keil automatic saw filing machine which is used by carpenters and builders in all parts of the country.
+
+M. L. Schlueter, 225 W. Illinois St., Chicago, make the “Improved” rapid floor surfacer. There are more than 20,000 in use. Ask for illustrated catalogue and prices.
+
+D. and T. Mfg. Co., 1911-13 Pine St., St. Louis, Mo., make a system of hot water heating which is endorsed by the leading architects and heating engineers. Ask for booklet fully describing this system.
+
+Wallace B. Crumb, Forestville, Conn., is the manufacturer of Crumb’s Warriner patent chain hanging cattle stanchion. Ask for booklet.
+
+Bowlus Mfg. Co., Springfield, Ohio, make the “Bowlus” automatic water closets, which are positive in operation. Write your jobber for prices.
+
+Medusa White Portland Cement.
+
+Photographic reproductions of dwellings and other buildings in which Medusa White Portland Cement has been used are contained in a new catalog issued by the Sandusky Cement Company, 624 Engineers Building, Cleveland, Ohio, and entitled “Medusa White Portland Cement.” Interesting information is presented concerning stucco and its various finishes. A table of colors gives the pounds of color required for each bag of cement in order to secure either light or medium shades. There is also given some information about concrete building blocks, ornamental work, etc.
+
+Economy Chemical Closet.
+
+A chemical closet is one of the most necessary conveniences in rural communities when there is no public sewerage, as it replaces the so often condemned privy. One of the types of closet which has met with popular approval is the Economy Chemical Closet, manufactured by the Sanitary Chemical Closet Co., Hillsdale, Mich. It covers a floor space 14 x 21 in., and is 17 in. high, being made from rust-proof galvanized metal, enameled inside and out. At the back of the container is provided a place to keep the chemical and toilet paper. Each closet is guaranteed. A booklet illustrating and describing this convenience and entitled “Economy Chemical Closet,” is being distributed by the company. Its advantages and construction are set forth, together with illustrated descriptions of various ways in which it may be installed, and also illustrations and price list of parts which unusual installations may require.
+
+Now Carry Line Stock Mill Work.
+
+Philip Gruner & Bros. Lumber Co., of 4004 N. Broadway, St. Louis, Mo., have recently taken over a complete line of stock mill work, thus putting themselves in a position of being able to furnish a complete building job. Prices will be quoted f. o. b. anywhere.
+
+Keil Saw Filing Machine.
+
+The Keil Saw Filing machine is one of the wonders of the age. Mr. J. L. Keil, general superintendent of the plant of Keil-Dellow Manufacturing Co., at Plainview, Nebraska, is the inventor of the machine and it was his aim to make a machine to file all kinds of saws, and after years of labor and thousands of dollars expense, has for carpenters and wood-working mechanics a machine that will file saws from four to fourteen teeth to the inch—absolutely correct. Carpenters and others are to ask for further information about this machine.
+
+Removal Notice.
+
+The headquarters of the Oak Flooring Manufacturers’ Association and the Oak Flooring Service Bureau, formerly at 1362 Conway Building, Chicago, is now located at 1603 Union Trust Building, Cincinnati, Ohio.
+
+Valuable Booklet Issued.
+
+The Sandusky Cement Co., 626 Engineers’ Building, Cleveland, Ohio, has recently issued a valuable booklet of “Tables Giving the Quantities of Material required in Concrete Construction.” This is arranged so as to be most handy for architects, engineers, contractors and cement users and the information therein is most concise and accurate. The booklet will be sent to readers of the Southern Architect and Building News on request.
+
+A Handsome Furnace Catalogue.
+
+Catalogue No. 39 has been recently issued by F. Meyer & Bro. Co., Peoria, Ill. They are not distribut-
+
+Visual Description:
+The page is titled 'Trade Notes of Interest' and features a two-column layout with a serif font. The text is dense, with various sections separated by bold headings. There are no images or illustrations. The content includes advertisements and notices related to building materials and equipment, such as cement, saw filing machines, and chemical closets. The page is text-heavy, with a formal and informative tone.
+
+Description:
+Article: Trade Notes of Interest. This page features advertisements and updates on building materials and equipment, including innovations like the Keil Saw Filing Machine and Medusa White Portland Cement. Key companies and products are highlighted for their relevance to architects and builders.
+
+METADATA:
+------------------------------
+Topics:
+  - Automobile trailers
+  - Saw filing machines
+  - Floor surfacers
+  - Hot water heating systems
+  - Cattle stanchions
+  - Water closets
+  - Portland cement
+  - Chemical closets
+
+Named Entities:
+  - Rogers Brothers Company (Firm)
+  - Keil-Dellow Mfg. Co. (Firm)
+  - M. L. Schlueter (Firm)
+  - D. and T. Mfg. Co. (Firm)
+  - Wallace B. Crumb (Person)
+  - Bowlus Mfg. Co. (Firm)
+  - Sandusky Cement Company (Firm)
+  - Sanitary Chemical Closet Co. (Firm)
+  - Philip Gruner & Bros. Lumber Co. (Firm)
+  - J. L. Keil (Person)
+  - Oak Flooring Manufacturers’ Association (Organization)
+  - Oak Flooring Service Bureau (Organization)
+  - F. Meyer & Bro. Co. (Firm)
+
+Geographic Entities:
+  - Albion--Pennsylvania (City)
+  - Plainview--Nebraska (City)
+  - Chicago--Illinois (City)
+  - St. Louis--Missouri (City)
+  - Forestville--Connecticut (City)
+  - Springfield--Ohio (City)
+  - Cleveland--Ohio (City)
+  - Hillsdale--Michigan (City)
+  - Cincinnati--Ohio (City)
+  - Peoria--Illinois (City)
+
+Subject Headings (Selected):
+  - Portland cement (http://id.worldcat.org/fast/fst01072092) [FAST]
+  - chemical toilets (http://vocab.getty.edu/aat/300108693) [Getty AAT]
+
+Geographic Subject Headings (from vocabulary lookup):
+  - Pennsylvania--Albion (Erie County) (http://id.worldcat.org/fast/fst01314098) [FAST Geographic]
+  - Nebraska--Plainview (http://id.worldcat.org/fast/fst01230480) [FAST Geographic]
+  - Illinois--Chicago (http://id.worldcat.org/fast/fst01204048) [FAST Geographic]
+  - Missouri--Saint Louis (http://id.worldcat.org/fast/fst01204930) [FAST Geographic]
+  - Connecticut--Forestville (http://id.worldcat.org/fast/fst01247478) [FAST Geographic]
+  - Ohio--Springfield (http://id.worldcat.org/fast/fst01219897) [FAST Geographic]
+  - Ohio--Cleveland (http://id.worldcat.org/fast/fst01205966) [FAST Geographic]
+  - Michigan--Hillsdale County (http://id.worldcat.org/fast/fst01208681) [FAST Geographic]
+  - Ohio--Cincinnati (http://id.worldcat.org/fast/fst01205142) [FAST Geographic]
+  - Illinois--Peoria (http://id.worldcat.org/fast/fst01206107) [FAST Geographic]
+
+============================================================

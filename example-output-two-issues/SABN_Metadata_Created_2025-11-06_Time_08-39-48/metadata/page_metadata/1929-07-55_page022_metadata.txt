@@ -1,0 +1,87 @@
+============================================================
+SOUTHERN ARCHITECT - PAGE METADATA
+============================================================
+
+PAGE IDENTIFICATION:
+Folder: 1929-07-55
+Page Number: 22
+
+CONTENT:
+------------------------------
+Text Transcription:
+SECOND FLOOR PLAN.
+
+OWNER'S BEDROOM
+16'-0" x 17'-0"
+
+GUEST ROOM
+15'-0" x 15'-0"
+
+BEDROOM
+16'-0" x 14'-0"
+
+CLOSET
+DRESSING ROOM
+HALL
+LIN.
+CLO.
+
+FIRST FLOOR PLAN.
+
+SUN ROOM
+
+LIVING ROOM
+26'-6" x 17'-0"
+
+DINING ROOM
+16'-0" x 15'-0"
+
+KITCHEN
+
+PANTRY
+
+MAID'S ROOM
+
+TERRACE
+HALL
+PORCH
+CLO.
+FRIG.
+R.L.C.
+RANGE
+STORES
+
+HOUSE OF W. DUNCAN LEE, RICHMOND, VA.
+W. DUNCAN LEE, ARCHITECT
+
+Visual Description:
+The page features architectural floor plans for a house designed by W. Duncan Lee. The top half of the page shows the second floor plan, including labeled rooms such as 'Owner's Bedroom', 'Guest Room', and 'Bedroom', with dimensions provided. The bottom half displays the first floor plan, featuring a 'Living Room', 'Dining Room', 'Sun Room', and other areas. The layout is clean, with a clear, serif font used for labels. The plans are detailed with measurements and room functions, and the architect's name and location are noted at the bottom.
+
+Description:
+Floor Plans: House of W. Duncan Lee, Richmond, VA. Detailed architectural floor plans for a residential building, showcasing room layouts and dimensions. Designed by W. Duncan Lee, a notable architect.
+
+METADATA:
+------------------------------
+Topics:
+  - Residential architecture
+  - Floor plans
+  - Architectural design
+  - Room layout
+  - Architectural drawings
+
+Named Entities:
+  - W. Duncan Lee (Architect)
+
+Geographic Entities:
+  - Richmond--Virginia (City)
+
+Subject Headings (Selected):
+  - Floor plans (http://id.loc.gov/authorities/subjects/sh2003008965) [LCSH]
+  - Architectural design (http://id.loc.gov/authorities/subjects/sh85006585) [LCSH]
+  - Room layout (Dwellings) (http://id.loc.gov/authorities/subjects/sh85115349) [LCSH]
+  - Architectural drawings (http://id.worldcat.org/fast/fst01986246) [FAST]
+
+Geographic Subject Headings (from vocabulary lookup):
+  - Virginia--Richmond (http://id.worldcat.org/fast/fst01205345) [FAST Geographic]
+
+============================================================

@@ -1,0 +1,125 @@
+============================================================
+SOUTHERN ARCHITECT - PAGE METADATA
+============================================================
+
+PAGE IDENTIFICATION:
+Folder: 1917-05-39
+Page Number: 49
+
+CONTENT:
+------------------------------
+Text Transcription:
+SOUTHERN ARCHITECT AND BUILDING NEWS
+
+The Original Concrete Waterproofing
+(INTEGRAL METHOD)
+
+CIRCUIT Judge Baker, U. S. Circuit Court of Appeals for the Seventh Circuit, in delivering the opinion of the Court, re. Newberry (Medusa Waterproofing) patent said:
+
+"His patent is clear. Inexpert workers in concrete are plainly told how to achieve the new results in the best way. And in the light of this record we believe he is to be credited with an invention of a very high order."
+
+Contractors and builders will find our literature on the Waterproofing subject very interesting and valuable.
+
+The Sandusky Cement Co., Dept. V-4 Cleveland, O.
+
+MEDUSA WATERPROOFING
+PATENTED
+SANDUSKY PORTLAND CEMENT COMPANY
+CLEVELAND, OHIO, U.S.A.
+(Free Booklet—Write for it.)
+
+28 on $15,000 bonds to erect high school; Clara School Dist. will vote on bonds to erect school. Address Dist. School Trustees.
+
+Caddo, Tex.—Caddo and Mound Prairie Schools consolidated and will erect $3,500 school building. Address District School Trustees.
+
+Bank and Office.
+
+Texarkana, Tex.—Texarkana Chamber of Commerce adopted plans by Stewart Moore for remodeling Offenhauser Bldg. for offices.
+
+Chattanooga, Tenn.—C. E. James has plans, it is reported, by R. H. Hunt, Chattanooga, for 12-story addition to James Bldg., extending north wing of building back 60 ft.; steel, concrete and brick; all halls in north wing extended through new section; 48 rooms.
+
+McKinney, Tex.—Continental State Bank is having plans prepared by Sparger & Peters, Bonham, Tex., for bank building; 2 stories and basement; 30x80 ft.; materials include stone or terra cotta, structural and reinforced steel, face common brick, composition roof, concrete and tile floors, fireproofing, plate and prism glass, metal partitions, stone cornice, electric fixtures. Steam or hot-water heat; cost $20,000.
+
+Atlanta, Ga.—Proposals will be received until 10 A. M. May 24 for constructing and equipping Reserve Bank building, previously noted, after plans by Architect A. Ten Eyck Brown, 607 Forsyth Bldg.; 70x98 feet; basement, main floor and mezzanine floor; drawings may be had by depositing certified check for $10; all bids must be submitted on special proposal blanks furnished by the architect or they will not be considered; each proposal must be accompanied by certified check of two per cent of amount of bid. M. B. Wellborn, Chairman of the Board.
+
+Dwellings and Apartments.
+
+Atlanta, Ga.—E. L. Douglas, owner; cost about $50,000; Logan Beckley, Architect.
+
+Augusta, Ga.—Mrs. J. W. Johnston owner, two stories; stucco; four apartments; Thomas M. Campbell, Architect.
+
+Miami, Fla.—W. S. Witham, Atlanta, Ga., Dr. L. T. Towns and have begun erection of four story apartment.
+
+Aiken, S. C.—J. T. Cannon is having plans prepared by Architect Philander P. Scroggs, 582 Broad St., Augusta, Ga., for $10,000 residence; two stories; roofing not determined, although probably wood shingles; hot-water heating system; tiled bath rooms. Owner will let contracts.
+
+Augusta, Ga.—Miss E. H. Bohler, New York, will erect bungalow; plans are now being prepared by Architect G. Lloyd Preacher, Johnson Bldg.
+
+Having been a carpenter for years and having seen the need of a sharp and true running saw, I have spent much time and money in perfecting a saw for saw filing.
+
+We are now glad to have the pleasure of presenting to the public a machine that takes no expert to use, but any one can file a saw absolutely perfect with from 4 to 12 teeth to the inch and every tooth will be the exact set. So that every one will have a perfect saw that uses our machine.
+
+Write for descriptive circular and price list.
+
+Keil - Dedlow Mfg. Co.
+Plainview, Nebr.
+
+Visual Description:
+The page features a prominent advertisement for 'Medusa Waterproofing' by the Sandusky Portland Cement Company, with a decorative border and an illustration of a Medusa head. The text is in a serif font, with bold headings. The page includes a column of text detailing various construction projects and plans, with subheadings like 'Bank and Office' and 'Dwellings and Apartments'. An additional advertisement for Keil - Dedlow Mfg. Co. is located at the bottom, promoting a saw filing machine.
+
+Description:
+Advertisement and News: Page 67 features an advertisement for Medusa Waterproofing and details various construction projects in the Southern United States, including bank and office buildings, dwellings, and apartments. Notable architects mentioned include Logan Beckley and Thomas M. Campbell.
+
+METADATA:
+------------------------------
+Topics:
+  - Concrete waterproofing
+  - Building construction
+  - Architectural plans
+  - Bank buildings
+  - Apartment buildings
+  - Bungalows
+  - Construction materials
+  - Saw filing machines
+
+Named Entities:
+  - Medusa Waterproofing (Product)
+  - Sandusky Portland Cement Company (Firm)
+  - Logan Beckley (Architect)
+  - Thomas M. Campbell (Architect)
+  - Philander P. Scroggs (Architect)
+  - G. Lloyd Preacher (Architect)
+  - Keil - Dedlow Mfg. Co. (Firm)
+
+Geographic Entities:
+  - Cleveland--Ohio (City)
+  - Texarkana--Texas (City)
+  - Chattanooga--Tennessee (City)
+  - McKinney--Texas (City)
+  - Atlanta--Georgia (City)
+  - Augusta--Georgia (City)
+  - Miami--Florida (City)
+  - Aiken--South Carolina (City)
+  - Plainview--Nebraska (City)
+
+Subject Headings (Selected):
+  - Concrete construction (http://id.worldcat.org/fast/fst00874261) [FAST]
+  - Building (http://id.loc.gov/authorities/subjects/sh85017693) [LCSH]
+  - Architectural drawing (http://id.loc.gov/authorities/subjects/sh85006587) [LCSH]
+  - Bank buildings (http://id.loc.gov/authorities/subjects/sh85011556) [LCSH]
+  - apartment houses (http://vocab.getty.edu/aat/300005707) [Getty AAT]
+  - bungalows (http://vocab.getty.edu/aat/300005495) [Getty AAT]
+  - building materials (http://vocab.getty.edu/aat/300014857) [Getty AAT]
+  - filing (http://vocab.getty.edu/aat/300053079) [Getty AAT]
+
+Geographic Subject Headings (from vocabulary lookup):
+  - Ohio--Cleveland (http://id.worldcat.org/fast/fst01205966) [FAST Geographic]
+  - Texas--Texarkana (http://id.worldcat.org/fast/fst01216854) [FAST Geographic]
+  - Tennessee--Chattanooga (http://id.worldcat.org/fast/fst01205713) [FAST Geographic]
+  - Texas--McKinney (http://id.worldcat.org/fast/fst01221847) [FAST Geographic]
+  - Georgia--Atlanta (http://id.worldcat.org/fast/fst01204627) [FAST Geographic]
+  - Georgia--Augusta (http://id.worldcat.org/fast/fst01206406) [FAST Geographic]
+  - Florida--Miami (http://id.worldcat.org/fast/fst01213727) [FAST Geographic]
+  - South Carolina--Aiken County (http://id.worldcat.org/fast/fst01208635) [FAST Geographic]
+  - Nebraska--Plainview (http://id.worldcat.org/fast/fst01230480) [FAST Geographic]
+
+============================================================

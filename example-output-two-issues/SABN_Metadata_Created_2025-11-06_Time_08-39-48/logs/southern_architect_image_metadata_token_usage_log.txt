@@ -1,0 +1,50 @@
+OpenAI API Usage Log - Southern Architect Image Metadata
+============================================================
+Processing completed at: 2025-11-06 09:03:54
+
+PROCESSING SUMMARY:
+------------------------------
+Total items processed: 116
+Successful items: 116
+Items with issues: 0
+Success rate: 100.0%
+Total processing time: 0.00 seconds
+Average time per item: 0.00 seconds
+
+MODEL INFORMATION:
+------------------------------
+Model used: gpt-4o
+Input token rate: $0.00250 per 1K tokens
+Output token rate: $0.01000 per 1K tokens
+Batch discount applied: 50%
+
+TOKEN USAGE:
+------------------------------
+Total prompt tokens: 243,252
+Total completion tokens: 112,613
+Total tokens: 355,865
+Average tokens per successful item: 3067.8
+
+COST BREAKDOWN:
+------------------------------
+Input token cost: $0.3041 (batch discounted)
+Output token cost: $0.5631 (batch discounted)
+Total actual cost: $0.8671
+Average cost per successful item: $0.0075
+Regular API cost would have been: $1.7343
+Batch processing savings: $0.8671
+
+ADDITIONAL METRICS:
+------------------------------
+Total script execution time: 1445.94s
+Processing time percentage: 0.0%
+Items successfully processed: 116
+Processing mode: BATCH
+Cost: $0.8671
+Average tokens per item: 3068
+
+EFFICIENCY METRICS:
+------------------------------
+Tokens processed per second: 0.0
+Cost per minute of processing: $0.0000
+Items processed per minute: 0.0

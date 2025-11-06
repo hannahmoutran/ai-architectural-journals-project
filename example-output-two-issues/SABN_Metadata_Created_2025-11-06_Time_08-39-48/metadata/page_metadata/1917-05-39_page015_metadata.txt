@@ -1,0 +1,82 @@
+============================================================
+SOUTHERN ARCHITECT - PAGE METADATA
+============================================================
+
+PAGE IDENTIFICATION:
+Folder: 1917-05-39
+Page Number: 15
+
+CONTENT:
+------------------------------
+Text Transcription:
+SOUTHERN ARCHITECT AND BUILDING NEWS
+
+ELEVATORS MOFFATT MACHINERY MFG. CO.
+HAND-BELT-ELECTRIC MACHINISTS AND FOUNDERS
+AND HYDRAULIC CHARLOTTE, N. C.
+
+Others Discuss Some Timely Topics
+
+Contractor Relieved From Loss.
+An unusual experience is given in a New England paper, to the effect that a man who had made the low bid for a heating and ventilating system for a school building was released from his bond on the announcement that he had discovered an error in his figures which would lead to a loss. The matter was brought to the attention of the school board, and to the engineer in charge of the work, and after consideration the bidder was relieved of responsibility, the work being given to the next highest bidder, who was willing to carry out the work at the figures he had given.
+
+If the school board had adhered to its rights, the original bidder would have had either to withstand a loss of over $1,000, or have given up the certified check for $400, which he had furnished as evidence of his good faith for carrying out the contract. This is far better disposition of the matter for all concerned than a custom too frequently followed by men who discover they have made an error and then endeavor to carry through the work in a way that will save them from loss, with the result that the finished work is by no means of the quality and character that was expected. Here the school board saved itself from the risk or possibility of having such an equipment provided, says Building Age.
+
+Scientific Measurement System More Widely Favored.
+One result of the European war has been to bring to both England and the United States a large number of foreign orders in which the metric system of weights and measures has been used. England has also had its attention more specifically centered upon the extension of its foreign markets for its own manufactures, and a difficulty is imposed in this respect because its measures of both physical things and currency are expressed at the present time in non-decimal standards. There is a growing movement in England to adopt the decimal system for both money and measurement.
+
+The United States has not been so seriously handicapped in this respect, inasmuch as its money system has always been on the decimal basis. It has for many years had the opportunity to take a forward step in the matter of weights and measures in advance of the "mother country," from which our practices in that field have been derived. It would appear now, however, as though we shall merely follow England in that regard. There is, however, an awakening interest in the subject in our own country. The National Wholesale Grocers' Association recently adopted a resolution recommending that the metric equivalents of weights be added in stating the weights of all package goods, says The American Lumberman.
+
+Ask for a Square Deal.
+Cement Era thus editorially asks for a square deal for the building profession generally: Architects and engineers are professional men—at any rate, the good ones are. The architect is retained and paid for his services on the basis of fees, the same as collected by the doctor, the dentist, or the lawyer. He is often called into competition, but to compete with his ideas rather than with his prices on certain work. Consulting engineers operate on a similar basis. It is true that occasions have arisen wherein architects and engineers have gone into petty competitive building for small work, but fortunately this condition is not general and it is looked upon with disfavor by engineering societies and engineers prominent in their professional affairs.
+
+Contractors, in a sense, are as much or more professional than engineers and architects. Architects need originality of ideas and ability to develop them. In most cases this is a result of special adaptability or a product of hard work. Engineers are likewise. Contractors are usually confronted with much more serious and complicated problems. Theirs are real problems of construction. It is for them to decide upon methods, overcoming sometimes seemingly insurmountable obstacles and in a way that will permit them to do their work at a profit.
+
+Hundreds of contractors are doing work today with little profit or with profit entirely incommensurate with the amount of money invested and the knowledge and originality required. Why are contractors willing to cut prices just to get contracts? What is there in the contracting business which makes this necessary.
+
+A new era is in store for contractors, if the present tendencies are carried out in the coming years. Many railroads and power companies let their con-
+
+Visual Description:
+The page is from a periodical titled 'Southern Architect and Building News'. It features a header with the title and a footer with the page number '17'. The top section contains an advertisement for 'Moffatt Machinery Mfg. Co.' with bold fonts and capital letters. Below the advertisement, the main content is divided into three sections with bold headings: 'Contractor Relieved From Loss', 'Scientific Measurement System More Widely Favored', and 'Ask for a Square Deal'. The text is in a serif font, organized in columns, and includes a mix of regular and italicized text. There are no images or illustrations on the page.
+
+Description:
+Article: Discussion on contractor experiences, metric system adoption, and professional standards in architecture and engineering. Highlights the importance of fair practices and the evolving role of contractors.
+
+METADATA:
+------------------------------
+Topics:
+  - Contractor practices
+  - Metric system
+  - Architectural standards
+  - Professional ethics
+  - Building industry
+  - Engineering challenges
+  - Construction problems
+  - Decimal system
+
+Named Entities:
+  - Moffatt Machinery Mfg. Co. (Firm)
+  - National Wholesale Grocers' Association (Organization)
+  - The American Lumberman (Publication)
+  - Cement Era (Publication)
+
+Geographic Entities:
+  - New England (Region)
+  - England (Country)
+  - United States (Country)
+
+Subject Headings (Selected):
+  - building contractors (http://vocab.getty.edu/aat/300386816) [Getty AAT]
+  - Metric system (http://id.loc.gov/authorities/subjects/sh85084442) [LCSH]
+  - Architectural design--Standards (http://id.worldcat.org/fast/fst00813220) [FAST]
+  - professional ethics (http://vocab.getty.edu/aat/300055942) [Getty AAT]
+  - Construction industry (http://id.worldcat.org/fast/fst00875964) [FAST]
+  - Engineering (http://id.worldcat.org/fast/fst00910312) [FAST]
+  - Decimal system (http://id.loc.gov/authorities/subjects/sh85036192) [LCSH]
+
+Geographic Subject Headings (from vocabulary lookup):
+  - New England (http://id.worldcat.org/fast/fst01241913) [FAST Geographic]
+  - Great Britain (http://id.worldcat.org/fast/fst01204623) [FAST Geographic]
+  - United States (http://id.worldcat.org/fast/fst01204155) [FAST Geographic]
+
+============================================================

@@ -1,0 +1,47 @@
+============================================================
+SOUTHERN ARCHITECT - PAGE METADATA
+============================================================
+
+PAGE IDENTIFICATION:
+Folder: 1929-07-55
+Page Number: 4
+
+CONTENT:
+------------------------------
+Text Transcription:
+Entrance Door.
+An Eighteenth Century Virginia House
+
+Southern Architect and Building News
+July, 1929
+
+Visual Description:
+The page features a black and white photograph of an entrance door of an eighteenth-century Virginia house. The door is framed by a brick archway with decorative stonework above it. The steps leading up to the door are flanked by wrought iron railings. Ivy covers parts of the brick facade, and two windows are visible on either side of the door. The text is placed below the photograph, with the title 'Entrance Door' and a description 'An Eighteenth Century Virginia House' in a serif font. The publication name and date are in the bottom right corner in a smaller serif font.
+
+Description:
+Photo: Entrance Door of an Eighteenth Century Virginia House. This page features a photograph of a historic architectural element, highlighting the design and craftsmanship of the period.
+
+METADATA:
+------------------------------
+Topics:
+  - Eighteenth-century architecture
+  - Entrance design
+  - Brickwork
+  - Historic houses
+  - Architectural photography
+  - Colonial architecture
+
+Geographic Entities:
+  - Virginia (State)
+
+Subject Headings (Selected):
+  - entrance gates (http://vocab.getty.edu/aat/300448964) [Getty AAT]
+  - Brickwork (http://id.loc.gov/authorities/subjects/sh2001003032) [LCSH]
+  - historic houses (http://vocab.getty.edu/aat/300008064) [Getty AAT]
+  - architectural photography (http://vocab.getty.edu/aat/300435151) [Getty AAT]
+  - Architecture, British colonial (http://id.loc.gov/authorities/subjects/sh2002008694) [LCSH]
+
+Geographic Subject Headings (from vocabulary lookup):
+  - Virginia (http://id.worldcat.org/fast/fst01204597) [FAST Geographic]
+
+============================================================

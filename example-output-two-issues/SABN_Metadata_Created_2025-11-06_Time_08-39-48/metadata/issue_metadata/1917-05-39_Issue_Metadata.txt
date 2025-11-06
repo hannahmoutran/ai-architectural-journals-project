@@ -1,0 +1,494 @@
+1917-05-39 - Issue Metadata
+===========================
+
+ISSUE DESCRIPTION:
+--------------------
+This May 1917 issue of The Southern Architect offers a comprehensive snapshot of early 20th-century architectural and construction innovations, with a particular focus on the American South's evolving built environment amid World War I. It features extensive advertisements and articles highlighting advancements in building materials such as concrete construction, structural steel, and roofing technologies including metal shingles and roofing slate. Noteworthy are discussions on heating and ventilation systems, including forced air heating and warm air furnaces, reflecting growing attention to building comfort and energy efficiency. The issue also addresses sanitary engineering innovations, including chemical closets and sewerage systems, underscoring public health concerns in suburban and urban development. Architectural firms and prominent architects like G. Lloyd Preacher and Sanguinet & Staats are noted for their contributions to Southern residential, church, and institutional architecture, with emphasis on Gothic Revival and industrial architectural styles. Articles on architectural practice, professional ethics, and civil service examinations reveal the period's professionalization trends. Significant coverage of sculptural arts, featuring Henry Hering and Richard Engelmann, connects architectural ornamentation with broader artistic movements such as realism and classicism. Urban planning and community development discussions, including the call for city planning boards in Atlanta, situate architecture within civic improvement efforts. The issue also documents the impact of World War I on construction industries and advertising, highlighting economic and material challenges. Overall, this issue is a rich resource for understanding technological, stylistic, and professional developments shaping Southern architecture during a pivotal historical moment.
+
+SELECTED SUBJECT HEADINGS (10 terms):
+-----------------------------------
+ 1. Concrete construction (http://id.loc.gov/authorities/subjects/sh85030704) [LCSH]
+ 2. structural steel (http://vocab.getty.edu/aat/300010931) [Getty AAT]
+ 3. forced air heating (http://vocab.getty.edu/aat/300051535) [Getty AAT]
+ 4. building materials (http://vocab.getty.edu/aat/300014857) [Getty AAT]
+ 5. plumbing systems (http://vocab.getty.edu/aat/300078157) [Getty AAT]
+ 6. Architectural design--Standards (http://id.worldcat.org/fast/fst00813220) [FAST]
+ 7. architectural history (http://vocab.getty.edu/aat/300054162) [Getty AAT]
+ 8. Architectural acoustics (http://id.loc.gov/authorities/subjects/sh85006581) [LCSH]
+ 9. Architecture--Southern States (http://id.loc.gov/authorities/subjects/sh98003122) [LCSH]
+10. Gothic revival (Architecture) (http://id.worldcat.org/fast/fst00945078) [FAST]
+
+===========================
+
+GEOGRAPHIC TERMS (234 unique terms, 489 total mentions):
+------------------------------------------------------------
+ 1. Illinois--Chicago [FAST Geographic] (28 mentions)
+    URI: http://id.worldcat.org/fast/fst01204048
+ 2. New York (State)--New York [FAST Geographic] (25 mentions)
+    URI: http://id.worldcat.org/fast/fst01204333
+ 3. Georgia--Atlanta [FAST Geographic] (22 mentions)
+    URI: http://id.worldcat.org/fast/fst01204627
+ 4. Missouri--Saint Louis [FAST Geographic] (15 mentions)
+    URI: http://id.worldcat.org/fast/fst01204930
+ 5. Pennsylvania--Philadelphia [FAST Geographic] (15 mentions)
+    URI: http://id.worldcat.org/fast/fst01204170
+ 6. Ohio--Cincinnati [FAST Geographic] (11 mentions)
+    URI: http://id.worldcat.org/fast/fst01205142
+ 7. Alabama--Birmingham [FAST Geographic] (9 mentions)
+    URI: http://id.worldcat.org/fast/fst01204958
+ 8. Massachusetts--Boston [FAST Geographic] (9 mentions)
+    URI: http://id.worldcat.org/fast/fst01205012
+ 9. Ohio--Cleveland [FAST Geographic] (8 mentions)
+    URI: http://id.worldcat.org/fast/fst01205966
+10. Pennsylvania--Pittsburgh [FAST Geographic] (8 mentions)
+    URI: http://id.worldcat.org/fast/fst01205171
+11. United States [FAST Geographic] (8 mentions)
+    URI: http://id.worldcat.org/fast/fst01204155
+12. California--San Francisco [FAST Geographic] (7 mentions)
+    URI: http://id.worldcat.org/fast/fst01204481
+13. Tennessee--Chattanooga [FAST Geographic] (6 mentions)
+    URI: http://id.worldcat.org/fast/fst01205713
+14. Washington (State)--Seattle [FAST Geographic] (6 mentions)
+    URI: http://id.worldcat.org/fast/fst01204940
+15. Illinois--Peoria [FAST Geographic] (5 mentions)
+    URI: http://id.worldcat.org/fast/fst01206107
+16. Louisiana--New Orleans [FAST Geographic] (5 mentions)
+    URI: http://id.worldcat.org/fast/fst01204311
+17. Minnesota--Minneapolis [FAST Geographic] (5 mentions)
+    URI: http://id.worldcat.org/fast/fst01204260
+18. Georgia--Augusta [FAST Geographic] (4 mentions)
+    URI: http://id.worldcat.org/fast/fst01206406
+19. Michigan--Detroit [FAST Geographic] (4 mentions)
+    URI: http://id.worldcat.org/fast/fst01205010
+20. Missouri--Kansas City [FAST Geographic] (4 mentions)
+    URI: http://id.worldcat.org/fast/fst01204999
+21. New York (State)--New York--Brooklyn [FAST Geographic] (4 mentions)
+    URI: http://id.worldcat.org/fast/fst01312516
+22. Ohio--Springfield [FAST Geographic] (4 mentions)
+    URI: http://id.worldcat.org/fast/fst01219897
+23. Robert F. Kennedy Memorial Stadium (Washington, D.C.) [FAST Geographic] (4 mentions)
+    URI: http://id.worldcat.org/fast/fst00631048
+24. Tennessee--Nashville [FAST Geographic] (4 mentions)
+    URI: http://id.worldcat.org/fast/fst01204195
+25. Virginia--Richmond [FAST Geographic] (4 mentions)
+    URI: http://id.worldcat.org/fast/fst01205345
+26. Connecticut--Forestville [FAST Geographic] (3 mentions)
+    URI: http://id.worldcat.org/fast/fst01247478
+27. Georgia [FAST Geographic] (3 mentions)
+    URI: http://id.worldcat.org/fast/fst01204622
+28. Indiana--Indianapolis [FAST Geographic] (3 mentions)
+    URI: http://id.worldcat.org/fast/fst01205182
+29. Kentucky--Louisville [FAST Geographic] (3 mentions)
+    URI: http://id.worldcat.org/fast/fst01204602
+30. Maryland--Baltimore [FAST Geographic] (3 mentions)
+    URI: http://id.worldcat.org/fast/fst01204292
+31. New York (State)--Buffalo [FAST Geographic] (3 mentions)
+    URI: http://id.worldcat.org/fast/fst01205730
+32. North Carolina--Charlotte [FAST Geographic] (3 mentions)
+    URI: http://id.worldcat.org/fast/fst01204596
+33. Ohio--Dayton [FAST Geographic] (3 mentions)
+    URI: http://id.worldcat.org/fast/fst01204702
+34. Tennessee--Memphis [FAST Geographic] (3 mentions)
+    URI: http://id.worldcat.org/fast/fst01204194
+35. Arkansas--Little Rock [FAST Geographic] (2 mentions)
+    URI: http://id.worldcat.org/fast/fst01206922
+36. Canada [FAST Geographic] (2 mentions)
+    URI: http://id.worldcat.org/fast/fst01204310
+37. Church of England in Canada. Diocese of Toronto [FAST Geographic] (2 mentions)
+    URI: http://id.worldcat.org/fast/fst00629663
+38. Florida--Jacksonville [FAST Geographic] (2 mentions)
+    URI: http://id.worldcat.org/fast/fst01205259
+39. Florida--Miami [FAST Geographic] (2 mentions)
+    URI: http://id.worldcat.org/fast/fst01213727
+40. Florida--Saint Augustine [FAST Geographic] (2 mentions)
+    URI: http://id.worldcat.org/fast/fst01206165
+41. Georgia--Tate [FAST Geographic] (2 mentions)
+    URI: http://id.worldcat.org/fast/fst01288760
+42. Great Britain [FAST Geographic] (2 mentions)
+    URI: http://id.worldcat.org/fast/fst01204623
+43. Hawaii--Honolulu [FAST Geographic] (2 mentions)
+    URI: http://id.worldcat.org/fast/fst01204916
+44. Illinois--Kewanee [FAST Geographic] (2 mentions)
+    URI: http://id.worldcat.org/fast/fst01219159
+45. Indiana [FAST Geographic] (2 mentions)
+    URI: http://id.worldcat.org/fast/fst01204604
+46. Indiana--Bedford [FAST Geographic] (2 mentions)
+    URI: http://id.worldcat.org/fast/fst01218072
+47. Iowa--Des Moines [FAST Geographic] (2 mentions)
+    URI: http://id.worldcat.org/fast/fst01205836
+48. Michigan--Hillsdale County [FAST Geographic] (2 mentions)
+    URI: http://id.worldcat.org/fast/fst01208681
+49. Minnesota--Saint Paul [FAST Geographic] (2 mentions)
+    URI: http://id.worldcat.org/fast/fst01212130
+50. Nebraska--Plainview [FAST Geographic] (2 mentions)
+    URI: http://id.worldcat.org/fast/fst01230480
+51. New England [FAST Geographic] (2 mentions)
+    URI: http://id.worldcat.org/fast/fst01241913
+52. New York (State)--Rochester [FAST Geographic] (2 mentions)
+    URI: http://id.worldcat.org/fast/fst01204680
+53. North Carolina [FAST Geographic] (2 mentions)
+    URI: http://id.worldcat.org/fast/fst01204304
+54. North Carolina--Asheville [FAST Geographic] (2 mentions)
+    URI: http://id.worldcat.org/fast/fst01205440
+55. North Carolina--Wilmington [FAST Geographic] (2 mentions)
+    URI: http://id.worldcat.org/fast/fst01210117
+56. Ohio--Akron [FAST Geographic] (2 mentions)
+    URI: http://id.worldcat.org/fast/fst01207143
+57. Ohio--Columbus [FAST Geographic] (2 mentions)
+    URI: http://id.worldcat.org/fast/fst01205076
+58. Ohio--Toledo [FAST Geographic] (2 mentions)
+    URI: http://id.worldcat.org/fast/fst01211740
+59. Panama--Balboa Heights [FAST Geographic] (2 mentions)
+    URI: http://id.worldcat.org/fast/fst01202936
+60. Pennsylvania--Albion (Erie County) [FAST Geographic] (2 mentions)
+    URI: http://id.worldcat.org/fast/fst01314098
+61. Pennsylvania--Bangor [FAST Geographic] (2 mentions)
+    URI: http://id.worldcat.org/fast/fst01216878
+62. Puerto Rico--San Juan [FAST Geographic] (2 mentions)
+    URI: http://id.worldcat.org/fast/fst01214595
+63. South Carolina--Greer [FAST Geographic] (2 mentions)
+    URI: http://id.worldcat.org/fast/fst01210436
+64. Tennessee [FAST Geographic] (2 mentions)
+    URI: http://id.worldcat.org/fast/fst01205353
+65. Tennessee--Knoxville [FAST Geographic] (2 mentions)
+    URI: http://id.worldcat.org/fast/fst01206442
+66. Texas--Dallas [FAST Geographic] (2 mentions)
+    URI: http://id.worldcat.org/fast/fst01204635
+67. Texas--Houston [FAST Geographic] (2 mentions)
+    URI: http://id.worldcat.org/fast/fst01205077
+68. Texas--Port Arthur [FAST Geographic] (2 mentions)
+    URI: http://id.worldcat.org/fast/fst01211418
+69. Utah--Salt Lake City [FAST Geographic] (2 mentions)
+    URI: http://id.worldcat.org/fast/fst01205314
+70. Virginia [FAST Geographic] (2 mentions)
+    URI: http://id.worldcat.org/fast/fst01204597
+71. Virginia--Norfolk [FAST Geographic] (2 mentions)
+    URI: http://id.worldcat.org/fast/fst01206844
+72. West Virginia--Parkersburg [FAST Geographic] (2 mentions)
+    URI: http://id.worldcat.org/fast/fst01214465
+73. Alabama--Attalla [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01224251
+74. Alabama--Fort Payne [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01212124
+75. Alabama--Montgomery [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01202689
+76. Arkansas--Earle [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01224306
+77. Balkan Peninsula [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01241484
+78. Belgium [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01210278
+79. Canada. Forest Products Laboratory (Vancouver, B.C.) [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst00549968
+80. Colombia--Barranquilla [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01231007
+81. Colombia--Bogotá [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01204897
+82. Colorado--Denver [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01205192
+83. Connecticut--Bridgeport [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01209541
+84. Connecticut--Bristol [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01206697
+85. Connecticut--Hartford [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01207441
+86. Connecticut--New Haven [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01206280
+87. Connecticut--Norfolk [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01247877
+88. Connellsville and Southern Pennsylvania Railway Company [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst00761404
+89. Europe--East Prussia (Poland and Russia) [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01692702
+90. Florida [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01205150
+91. Florida--Arcadia [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01215619
+92. Florida--Ellenton [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01268440
+93. Florida--Groveland [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01215354
+94. Florida--Lakeland [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01216466
+95. Florida--Laurel Hill [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01251538
+96. Florida--Ocala [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01215855
+97. Florida--Perry [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01215235
+98. Florida--Plant City [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01212742
+99. Florida--Saint Petersburg [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01206910
+100. Florida--West Palm Beach [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01202776
+101. France [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01204289
+102. France--Marseille [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01206417
+103. France--Paris [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01205283
+104. Georgia--Bainbridge [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01213432
+105. Georgia--Cordele [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01218954
+106. Georgia--Dalton (Whitfield County) [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01729450
+107. Georgia--Fulton County [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01211153
+108. Georgia--Jackson County [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01216851
+109. Georgia--Jefferson County [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01218098
+110. Georgia--Lavonia [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01219081
+111. Georgia--Louisville [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01229190
+112. Georgia--Macon [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01206924
+113. Georgia--Millen [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01219339
+114. Georgia--Pembroke [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01309815
+115. Georgia--Sandersville [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01217764
+116. Georgia--Thomson [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01268460
+117. Georgia--Winder [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01217048
+118. Germany [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01210272
+119. Germany--Bayreuth [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01202701
+120. Germany--Berlin [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01204829
+121. Germany--Munich [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01205308
+122. Germany--Sankt Georgen im Schwarzwald [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01237011
+123. Ilarion, Metropolitan of Winnipeg and All Canada, 1882-1972 [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst00069859
+124. Illinois--Aurora [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01217071
+125. Illinois--Evanston [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01204903
+126. Illinois--Princeton [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01217877
+127. Illinois--Quincy [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01212078
+128. Indiana--Evansville [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01213859
+129. Indiana--Fort Branch [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01238717
+130. Indiana--Gary [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01205217
+131. Indiana--Terre Haute [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01207975
+132. Indiana--Vincennes [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01211937
+133. Iowa [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01205835
+134. Iowa--Burlington [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01216205
+135. Iowa--Fort Dodge [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01208885
+136. Iowa--Marshalltown [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01218593
+137. Iowa--Shenandoah [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01218597
+138. Italy--Florence [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01204699
+139. Kentucky--Bowling Green [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01202890
+140. Kentucky--Cloverport [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01252061
+141. Kentucky--Newport [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01226268
+142. Maine--Portland [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01213254
+143. Manitoba--Winnipeg [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01205803
+144. Maryland--Cardiff [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01303725
+145. Massachusetts--Fitchburg [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01210793
+146. Massachusetts--Worcester [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01207904
+147. Michigan--Battle Creek [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01218610
+148. Michigan--Holland [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01217530
+149. Michigan--Lansing [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01208349
+150. Michigan--Manistee County [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01214770
+151. Michigan--Menominee County [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01214745
+152. Michigan--Northville [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01219863
+153. Minnesota--Albert Lea [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01212828
+154. Minnesota--North Saint Paul [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01227918
+155. Mississippi--Alcorn County [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01209752
+156. Mississippi--Corinth [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01212022
+157. Mississippi--Jackson [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01205500
+158. Mississippi--Lee County [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01219293
+159. Mississippi--Meridian [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01209585
+160. Netherlands [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01204034
+161. New Brunswick--Saint John [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01233595
+162. New Jersey--Burlington County [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01213840
+163. New Jersey--Camden [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01207565
+164. New Jersey--East Orange [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01212122
+165. New Jersey--Newark [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01205929
+166. New York (State)--Albany [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01225716
+167. New York (State)--Rome [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01213046
+168. New York (State)--Syracuse [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01205293
+169. New York (State)--Waterford [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01228156
+170. North Carolina--Greensboro [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01205296
+171. North Carolina--Lexington [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01282979
+172. North Carolina--Raleigh [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01206341
+173. North Carolina--Statesville [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01213159
+174. North Carolina--Wilson (Wilson County) [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01211839
+175. North Carolina--Woodland [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01224390
+176. Nova Scotia--Halifax [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01219177
+177. Nova Scotia--Sydney [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01211019
+178. Ohio [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01205075
+179. Ohio--Bucyrus [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01222374
+180. Ohio--Carey (Wyandot County) [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01325737
+181. Ohio--Hamilton County [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01205597
+182. Ohio--Shelby County [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01215125
+183. Ohio--Warren County [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01204172
+184. Oklahoma--Glenpool [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01226849
+185. Oklahoma--Heavener [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01277813
+186. Oklahoma--Hillsdale [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01251679
+187. Oklahoma--Muskogee [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01218306
+188. Ontario--Toronto [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01205798
+189. Oregon--Portland [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01204325
+190. Pennsylvania--Cambridge Springs [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01223346
+191. Pennsylvania--Delta [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01301881
+192. Pennsylvania--East Bangor [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01216773
+193. Pennsylvania--Harrisburg [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01204725
+194. Pennsylvania--Mercer County [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01209966
+195. Pennsylvania--New Galilee [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01298436
+196. Pennsylvania--Reading [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01202803
+197. Pennsylvania--Sharon [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01221835
+198. Pennsylvania--York County [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01214906
+199. Poland [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01206891
+200. Québec--Île-de-Montréal [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01215779
+201. Québec--Montréal [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01210434
+202. Rhode Island--Newport [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01210119
+203. South Carolina--Aiken County [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01208635
+204. South Carolina--Anderson County [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01209417
+205. South Carolina--Charleston [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01204603
+206. South Carolina--Columbia [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01206785
+207. South Carolina--Edgefield County [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01215692
+208. South Carolina--Great Falls [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01222537
+209. South Carolina--Greenville [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01203010
+210. South Carolina--Trenton [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01268668
+211. Spain [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01204303
+212. Switzerland [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01205401
+213. Tennessee--Jackson [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01219777
+214. Texas--Burkburnett [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01224054
+215. Texas--Canadian [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01222146
+216. Texas--Cleburne [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01224718
+217. Texas--El Paso [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01206678
+218. Texas--Ennis [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01224048
+219. Texas--Gainesville [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01220975
+220. Texas--McKinney [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01221847
+221. Texas--Orange County [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01212974
+222. Texas--Quanah [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01873996
+223. Texas--San Antonio [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01205169
+224. Texas--Texarkana [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01216854
+225. Texas--Yoakum County [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01214240
+226. Vermont--Burlington [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01207603
+227. Virginia--Franklin County [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01204822
+228. Washington (State) [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01204703
+229. West Virginia--Huntington [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01202938
+230. West Virginia--Wheeling [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01213675
+231. Wisconsin--Glenbeulah [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01279406
+232. Wisconsin--Madison [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01205840
+233. Wisconsin--Milwaukee [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01206626
+234. World War (1939-1945) [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01180924
+
+===========================

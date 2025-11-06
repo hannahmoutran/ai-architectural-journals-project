@@ -1,0 +1,76 @@
+1929-07-55 - Issue Metadata
+===========================
+
+ISSUE DESCRIPTION:
+--------------------
+This July 1929 issue of The Southern Architect and Building News offers a comprehensive examination of Southern architectural practices and historic preservation efforts during the late 1920s, highlighting key architects, firms, and building types across the American South. Notably, it features detailed studies of residential and institutional architecture, including the classical Mills B. Lane House in Savannah by Levy & Clarke, and the Tudor Revival residence in Richmond, VA, designed by W. Duncan Lee. The issue emphasizes architectural restoration challenges, such as the replication of eighteenth-century Palladian and Colonial structures, with in-depth discussions on materials like stucco and tabby concrete, and craftsmanship in entrance gates and brickwork. The coverage of Bayard Dominick's Hunting Lodge by Willis Irvin illustrates the integration of Colonial and Georgian styles within rural plantation architecture, underscoring regional design adaptations. Architectural floor plans and photographic documentation provide valuable insights into early 20th-century residential layouts and interior design elements, including fanlights, fireplaces, and staircases. Additionally, the issue addresses the professional and economic challenges faced by Southern architects amid competition from other regions, and announces the Southern Architectural and Industrial Arts Exposition in Memphis, spotlighting the intersection of architecture with industrial arts and cultural events. This issue serves as a critical resource for understanding the evolution of Southern architectural identity, preservation practices, and design innovation during a transformative period in American architectural history.
+
+SELECTED SUBJECT HEADINGS (10 terms):
+-----------------------------------
+ 1. Architecture--Southern States (http://id.loc.gov/authorities/subjects/sh98003122) [LCSH]
+ 2. Architecture, Classical (http://id.loc.gov/authorities/subjects/sh85006718) [LCSH]
+ 3. Architecture, Colonial (http://id.worldcat.org/fast/fst00813657) [FAST]
+ 4. architectural photography (http://vocab.getty.edu/aat/300435151) [Getty AAT]
+ 5. historic preservation (http://vocab.getty.edu/aat/300054166) [Getty AAT]
+ 6. Brickwork (http://id.loc.gov/authorities/subjects/sh2001003032) [LCSH]
+ 7. Architectural design (http://id.loc.gov/authorities/subjects/sh85006585) [LCSH]
+ 8. Architectural drawings (http://id.worldcat.org/fast/fst01986246) [FAST]
+ 9. 20th-century architecture (http://id.worldcat.org/fast/fst01775377) [FAST]
+10. Architectural design--Awards (http://id.worldcat.org/fast/fst00813186) [FAST]
+
+===========================
+
+GEOGRAPHIC TERMS (25 unique terms, 57 total mentions):
+------------------------------------------------------------
+ 1. Georgia--Augusta [FAST Geographic] (8 mentions)
+    URI: http://id.worldcat.org/fast/fst01206406
+ 2. Georgia [FAST Geographic] (7 mentions)
+    URI: http://id.worldcat.org/fast/fst01204622
+ 3. New York (State)--New York [FAST Geographic] (4 mentions)
+    URI: http://id.worldcat.org/fast/fst01204333
+ 4. North Carolina--Charlotte [FAST Geographic] (4 mentions)
+    URI: http://id.worldcat.org/fast/fst01204596
+ 5. Georgia--Savannah [FAST Geographic] (3 mentions)
+    URI: http://id.worldcat.org/fast/fst01207319
+ 6. Virginia [FAST Geographic] (3 mentions)
+    URI: http://id.worldcat.org/fast/fst01204597
+ 7. Virginia--Richmond [FAST Geographic] (3 mentions)
+    URI: http://id.worldcat.org/fast/fst01205345
+ 8. Alabama [FAST Geographic] (2 mentions)
+    URI: http://id.worldcat.org/fast/fst01204694
+ 9. Alabama--Tuscaloosa [FAST Geographic] (2 mentions)
+    URI: http://id.worldcat.org/fast/fst01206929
+10. Georgia--Atlanta [FAST Geographic] (2 mentions)
+    URI: http://id.worldcat.org/fast/fst01204627
+11. South Africa [FAST Geographic] (2 mentions)
+    URI: http://id.worldcat.org/fast/fst01204616
+12. South Carolina--Georgetown County [FAST Geographic] (2 mentions)
+    URI: http://id.worldcat.org/fast/fst01206896
+13. Tennessee--Memphis [FAST Geographic] (2 mentions)
+    URI: http://id.worldcat.org/fast/fst01204194
+14. Virginia--Charlottesville [FAST Geographic] (2 mentions)
+    URI: http://id.worldcat.org/fast/fst01204493
+15. Georgia--Brunswick [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01218163
+16. Great Britain [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01204623
+17. Illinois--Belleville [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01202799
+18. Indonesia [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01209242
+19. Massachusetts--Concord [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01204990
+20. Music [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01030269
+21. Pennsylvania--Philadelphia [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01204170
+22. South Carolina [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01204600
+23. Southern States [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01244550
+24. Tennessee [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01205353
+25. Texas [FAST Geographic]
+    URI: http://id.worldcat.org/fast/fst01210336
+
+===========================

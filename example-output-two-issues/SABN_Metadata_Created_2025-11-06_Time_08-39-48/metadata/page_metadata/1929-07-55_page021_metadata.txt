@@ -1,0 +1,49 @@
+============================================================
+SOUTHERN ARCHITECT - PAGE METADATA
+============================================================
+
+PAGE IDENTIFICATION:
+Folder: 1929-07-55
+Page Number: 21
+
+CONTENT:
+------------------------------
+Text Transcription:
+SOUTHERN ARCHITECT AND BUILDING NEWS
+
+HOUSE OF W. DUNCAN LEE, RICHMOND, VA.
+W. DUNCAN LEE, ARCHITECT
+
+Photo: By Huestis Prichey
+
+July, 1929
+
+Visual Description:
+The page features a large photograph of a house, showcasing a steeply pitched roof and multiple chimneys, indicative of a Tudor Revival style. The house has several windows with small panes and a prominent entrance. The layout is simple, with the photograph occupying most of the page. The text is minimal, with the title and credits placed around the image. The font is classic and serif, typical of early 20th-century publications.
+
+Description:
+Photo: House of W. Duncan Lee, Richmond, VA. Designed by W. Duncan Lee, showcasing Tudor Revival architecture. July, 1929.
+
+METADATA:
+------------------------------
+Topics:
+  - Tudor Revival architecture
+  - Residential architecture
+  - Architectural photography
+  - Early 20th-century design
+
+Named Entities:
+  - W. Duncan Lee (Architect)
+  - Huestis Prichey (Person)
+
+Geographic Entities:
+  - Richmond--Virginia (City)
+
+Subject Headings (Selected):
+  - Tudor (http://vocab.getty.edu/aat/300021035) [Getty AAT]
+  - architectural photography (http://vocab.getty.edu/aat/300435151) [Getty AAT]
+
+Geographic Subject Headings (from vocabulary lookup):
+  - Virginia--Richmond (http://id.worldcat.org/fast/fst01205345) [FAST Geographic]
+
+============================================================

@@ -1,0 +1,83 @@
+============================================================
+SOUTHERN ARCHITECT - PAGE METADATA
+============================================================
+
+PAGE IDENTIFICATION:
+Folder: 1917-05-39
+Page Number: 41
+
+CONTENT:
+------------------------------
+Text Transcription:
+SOUTHERN ARCHITECT AND BUILDING NEWS
+
+Curing Auditorium of Echoes.
+The auditorium of the University of Illinois was a veritable sounding board before its acoustic faults were remedied. Echoes and reverberations were so pronounced as to distress an audience. Various methods of cure were considered—the effect of padding and paneling the walls, the possible advantages of installing wires and sounding boards, and finally, the action of the ventilating system. These were all discarded in favor of padding the walls with sound-absorbing hairfelt.
+
+Before the effective cure was found several methods of tracing sound were tried. One test was made by talking, through a megaphone toward different walls. The sound was generated inside a small house and its direction controlled by two megaphones, one being pointed toward a listener and the other toward a wall which gave echoes. No distinct echo could be obtained by speaking simultaneously into the two megaphones. The ticks of a metronome (a clock-moved pendulum for marking exact time in music) produced very little additional effect, but when a sharp intense metallic sound was tried, echoes were obtained from unpadded walls but only faint response from padded walls. The intense hissing sound of an arc light backed by a reflector gave more pronounced results. It showed that the padded walls produced a marked effect in reducing the intensity of the sound.
+
+Before it was decided to use hairfelt as an absorbing material, curtains and draperies were hung at critical points suggested by the reverberating sounds. Four large pieces of canvas were suspended in the dome. From an acoustic standpoint the auditorium was in a much improved condition as soon as the curtains and draperies were suspended. Of course the architectural features of the auditorium forbade the continued use of curtains. Hairfelt was finally adopted.
+
+Accordingly, one large curved wall was covered with strips of one-inch hairfelt thirty inches wide, placed vertically and thirty inches apart so as to leave bare spaces between them. Following this the dome above the arches and the double curved side walls and single curved rear wall above the balcony were padded. The felt was mounted on thin furring strips which were bent to fit the curvature of the surfaces.
+
+Says Atlanta Needs City Planning Board.
+"Atlanta needs a city planning commission to handle its development problems, traffic problems and plaza scheme," was the remedy suggested by Architect John Lawrence Mauran, of St. Louis, Mo., in Atlanta in February to attend the Building Exchange convention.
+
+His subject before the convention was "Co-operation Between Contractor, Architect and Owner."
+"What do you think of Atlanta’s problems?" was asked Mr. Mauran.
+"There is no such thing as ‘Atlanta’s problems.’ What is one city’s problems is every city’s problems. The problems of Atlanta are likewise the problems of Seattle, Wash., and Portland, Maine. On the other hand, what is good for one city is good for another.
+"Atlanta can handle its problems and provide for its future growth, 50 years hence, by having a city planning commission. In a few weeks I am to take before the United States congress a bill to make it compulsory upon every American city to have a city planning commission.
+"It is the only sane, commercially economic and scientific way in which to handle a city’s growth and problems. Marseilles, France, has just recently, despite the war, torn down six blocks in order to put up more modern and handsome buildings in order that her city may be attractive enough to compete with other European cities after the war terminates. It is a commercial and economic consideration with the city planning commission.
+"England has just passed a law making it obligatory that every English city and town have a town planning commission.
+"Always, locally the idea of a city planning commission is unpopular with the city politicians. They point with scorn to it as a ‘city beautiful’ dream of architects.
+"And so it is a dream! But what city can develop that does not dream? Every new idea has resulted from a dream. An ordinary citizen might walk across your Whitehall viaduct, every day in the year and see nothing but a horrible looking spot and plenty of smoke in the center of your city. But it took a dream like that of your local architect (Haralson Bleekley), to bring to the surface a scheme, now shown to be practical, whereby Atlanta may rid herself of this terrible eyesore disgrace in the center of your prosperous city.
+"The city planning commission idea has long ago demonstrated its practical value to cities. Harrisburg, Pa., has secured wonderful results from it, as well as other American cities. It can no longer be called an idle dream of the ‘city beautiful.’ It is only beautiful in that it makes a city practical and more attractive to live in. And this is the great problem for all cities to study—that of making their cities more attractive for the people who live therein.
+"By all means, tell your Atlanta people for me that they will profit multifold by having a city planning commission, and by building that plaza."
+Mr. Mauran has had much experience in city planning. He was on St. Louis’ first city planning
+
+Visual Description:
+The page is divided into two main sections, each with a distinct heading. The first section, 'Curing Auditorium of Echoes,' discusses acoustic treatments in an auditorium. The second section, 'Says Atlanta Needs City Planning Board,' covers urban planning issues in Atlanta. The text is in a serif font, typical of early 20th-century publications. The layout is columnar, with justified text and no images or illustrations. The page number '43' is at the top right corner, and the periodical title 'SOUTHERN ARCHITECT AND BUILDING NEWS' is centered at the top.
+
+Description:
+Article: 'Curing Auditorium of Echoes' and 'Says Atlanta Needs City Planning Board'. Discusses acoustic improvements in the University of Illinois auditorium and urban planning challenges in Atlanta, featuring insights from Architect John Lawrence Mauran.
+
+METADATA:
+------------------------------
+Topics:
+  - Acoustic treatment
+  - City planning
+  - Urban development
+  - Architectural acoustics
+  - Soundproofing
+  - City beautiful movement
+  - Urban renewal
+  - Architectural innovation
+
+Named Entities:
+  - University of Illinois (School)
+  - John Lawrence Mauran (Architect)
+  - Haralson Bleekley (Architect)
+
+Geographic Entities:
+  - Atlanta--Georgia (City)
+  - St. Louis--Missouri (City)
+  - Seattle--Washington (City)
+  - Portland--Maine (City)
+  - Marseilles--France (City)
+  - Harrisburg--Pennsylvania (City)
+  - England (Country)
+
+Subject Headings (Selected):
+  - Architectural acoustics (http://id.loc.gov/authorities/subjects/sh85006581) [LCSH]
+  - City planning (http://id.loc.gov/authorities/subjects/sh85026282) [LCSH]
+
+Geographic Subject Headings (from vocabulary lookup):
+  - Georgia--Atlanta (http://id.worldcat.org/fast/fst01204627) [FAST Geographic]
+  - Missouri--Saint Louis (http://id.worldcat.org/fast/fst01204930) [FAST Geographic]
+  - Washington (State)--Seattle (http://id.worldcat.org/fast/fst01204940) [FAST Geographic]
+  - Maine--Portland (http://id.worldcat.org/fast/fst01213254) [FAST Geographic]
+  - France--Marseille (http://id.worldcat.org/fast/fst01206417) [FAST Geographic]
+  - Pennsylvania--Harrisburg (http://id.worldcat.org/fast/fst01204725) [FAST Geographic]
+  - Great Britain (http://id.worldcat.org/fast/fst01204623) [FAST Geographic]
+
+============================================================

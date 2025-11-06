@@ -1,0 +1,50 @@
+============================================================
+SOUTHERN ARCHITECT - PAGE METADATA
+============================================================
+
+PAGE IDENTIFICATION:
+Folder: 1929-07-55
+Page Number: 27
+
+CONTENT:
+------------------------------
+Text Transcription:
+JULY, 1929        SOUTHERN ARCHITECT AND BUILDING NEWS        63
+
+POST OFFICE BUILDING, UNIVERSITY OF ALABAMA, TUSCALOOSA, ALA.
+MILLER & MARTIN, ARCHITECTS
+
+Visual Description:
+The page features a large photograph of a building with classical architectural elements. The building has a brick facade with large, white columns supporting a pediment. There are arched windows with decorative trim and a set of stairs leading to the entrance. The photograph is centered on the page, with a caption below it. The page number and publication title are at the top, with a clean and formal font style.
+
+Description:
+Photo: Post Office Building, University of Alabama. A classical architectural design by Miller & Martin, showcasing traditional elements such as columns and arched windows.
+
+METADATA:
+------------------------------
+Topics:
+  - Classical architecture
+  - Brick construction
+  - Architectural columns
+  - Arched windows
+  - University buildings
+
+Named Entities:
+  - Miller & Martin (Firm)
+  - University of Alabama (Organization)
+
+Geographic Entities:
+  - Tuscaloosa--Alabama (City)
+  - Alabama (State)
+
+Subject Headings (Selected):
+  - Architecture, Classical (http://id.loc.gov/authorities/subjects/sh85006718) [LCSH]
+  - Brick walls--Design and construction (http://id.worldcat.org/fast/fst00838593) [FAST]
+  - arched (http://vocab.getty.edu/aat/300126995) [Getty AAT]
+  - university buildings (http://vocab.getty.edu/aat/300448928) [Getty AAT]
+
+Geographic Subject Headings (from vocabulary lookup):
+  - Alabama--Tuscaloosa (http://id.worldcat.org/fast/fst01206929) [FAST Geographic]
+  - Alabama (http://id.worldcat.org/fast/fst01204694) [FAST Geographic]
+
+============================================================

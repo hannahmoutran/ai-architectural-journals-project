@@ -52,3 +52,5 @@ myenv/
 *.log
 *.pdf
 ~$*.xlsx
+
+/CODE/stubborn_layout_ocr.py

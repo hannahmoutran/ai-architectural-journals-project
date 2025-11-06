@@ -1,0 +1,52 @@
+============================================================
+SOUTHERN ARCHITECT - PAGE METADATA
+============================================================
+
+PAGE IDENTIFICATION:
+Folder: 1929-07-55
+Page Number: 19
+
+CONTENT:
+------------------------------
+Text Transcription:
+SOUTHERN ARCHITECT AND BUILDING NEWS
+
+July, 1929
+
+HOUSE NEAR CHARLOTTESVILLE, VIRGINIA
+W. DUNCAN LEE, ARCHITECT
+
+Photo. By Harold Baby
+
+Visual Description:
+The page features a sepia-toned photograph of a stone house with a steeply pitched roof, typical of traditional American residential architecture. The house has several windows with shutters and a prominent chimney. The foreground includes a stone pathway and garden with various plants. The text is aligned vertically along the left side of the page, with the publication name and date. The title and architect's name are placed to the right of the image, with the photographer's credit below.
+
+Description:
+Photo: House near Charlottesville, Virginia by W. Duncan Lee. A photograph showcasing traditional American residential architecture with stone construction and a steeply pitched roof.
+
+METADATA:
+------------------------------
+Topics:
+  - Residential architecture
+  - Stone construction
+  - Traditional American architecture
+  - Architectural photography
+
+Named Entities:
+  - W. Duncan Lee (Architect)
+  - Harold Baby (Person)
+
+Geographic Entities:
+  - Charlottesville--Virginia (City)
+  - Virginia (State)
+
+Subject Headings (Selected):
+  - Stone houses--Design and construction (http://id.worldcat.org/fast/fst01133860) [FAST]
+  - traditional (style) (http://vocab.getty.edu/aat/300310540) [Getty AAT]
+  - architectural photography (http://vocab.getty.edu/aat/300435151) [Getty AAT]
+
+Geographic Subject Headings (from vocabulary lookup):
+  - Virginia--Charlottesville (http://id.worldcat.org/fast/fst01204493) [FAST Geographic]
+  - Virginia (http://id.worldcat.org/fast/fst01204597) [FAST Geographic]
+
+============================================================

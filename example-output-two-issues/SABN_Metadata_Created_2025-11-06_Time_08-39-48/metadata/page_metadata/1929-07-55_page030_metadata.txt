@@ -1,0 +1,58 @@
+============================================================
+SOUTHERN ARCHITECT - PAGE METADATA
+============================================================
+
+PAGE IDENTIFICATION:
+Folder: 1929-07-55
+Page Number: 30
+
+CONTENT:
+------------------------------
+Text Transcription:
+66
+SOUTHERN ARCHITECT AND BUILDING NEWS
+JULY, 1929
+
+SECOND FLOOR PLAN
+
+FIRST FLOOR PLAN
+
+HOUSE OF GILMAN PRICHARD, AUGUSTA, GA.
+SCROGGS & EWING, ARCHITECTS
+
+Visual Description:
+The page features architectural floor plans for the House of Gilman Prichard in Augusta, Georgia. The top half of the page displays the second floor plan, while the bottom half shows the first floor plan. Both plans are detailed with labeled rooms such as 'BED RM', 'BATH', 'DINING ROOM', 'LIVING RM', and 'KITCHEN'. The layout is clean, with a clear black line drawing on a white background. The title and publication information are at the top, with the architects' names at the bottom.
+
+Description:
+Page 66: Architectural floor plans for the House of Gilman Prichard in Augusta, Georgia, designed by Scroggs & Ewing. The plans illustrate the layout and room designations for both the first and second floors.
+
+METADATA:
+------------------------------
+Topics:
+  - Architectural floor plans
+  - Residential architecture
+  - 20th century architecture
+  - Southern architecture
+  - Architectural design
+  - Building layout
+
+Named Entities:
+  - Gilman Prichard (Person)
+  - Scroggs & Ewing (Firm)
+
+Geographic Entities:
+  - Augusta--Georgia (City)
+  - Georgia (State)
+
+Subject Headings (Selected):
+  - Architectural drawings (http://id.worldcat.org/fast/fst01986246) [FAST]
+  - 20th-century architecture (http://id.worldcat.org/fast/fst01775377) [FAST]
+  - Architecture--Southern States (http://id.loc.gov/authorities/subjects/sh98003122) [LCSH]
+  - Architectural design (http://id.loc.gov/authorities/subjects/sh85006585) [LCSH]
+  - Building layout (http://id.loc.gov/authorities/subjects/sh85017736) [LCSH]
+
+Geographic Subject Headings (from vocabulary lookup):
+  - Georgia--Augusta (http://id.worldcat.org/fast/fst01206406) [FAST Geographic]
+  - Georgia (http://id.worldcat.org/fast/fst01204622) [FAST Geographic]
+
+============================================================

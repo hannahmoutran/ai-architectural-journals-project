@@ -1,0 +1,3617 @@
+ISSUE CONTENT INDEX: 1917-05-39
+===============================
+
+Page 1 (Issue: 1917-05-39):
+
+Advertisement page featuring various companies related to architecture and building materials, including L. Hansen & Co. (Concrete Tile Machine), Cortright Metal Roofing Company (Metal Shingles), and W. N. Kratzer Company (Structural Steel Work). Highlights include innovations in roofing and steel construction.
+
+Topics:
+  - Concrete Tile Roofing
+  - Metal Shingles
+  - Drawing Tables
+  - Structural Steel
+  - Elevators
+  - Memorial Windows
+  - Ornamental Iron
+  - Building Materials
+
+Named Entities:
+  - L. Hansen & Co. (Firm)
+  - Cortright Metal Roofing Company (Firm)
+  - G. A. Almorth (Person)
+  - W. N. Kratzer Company (Firm)
+  - American Elevator and Machine Co. (Firm)
+  - Spiers Lederle Glass Co. (Firm)
+  - Snead Architectural Iron Works (Firm)
+
+Geographic Entities:
+  - Kansas City--Missouri (City)
+  - Philadelphia--Pennsylvania (City)
+  - Chicago--Illinois (City)
+  - New Haven--Connecticut (City)
+  - Pittsburg--Pennsylvania (City)
+  - Louisville--Kentucky (City)
+  - New York--New York (City)
+
+Subject Headings (Selected):
+  - Concrete construction (http://id.worldcat.org/fast/fst00874261) [FAST]
+  - Shingles (http://id.worldcat.org/fast/fst01116039) [FAST]
+  - drawing tables (artists' tables) (http://vocab.getty.edu/aat/300039667) [Getty AAT]
+  - structural steel (http://vocab.getty.edu/aat/300010931) [Getty AAT]
+  - Elevators (http://id.loc.gov/authorities/subjects/sh85042556) [LCSH]
+  - building materials (http://vocab.getty.edu/aat/300014857) [Getty AAT]
+
+Geographic Subject Headings:
+  - Missouri--Kansas City (http://id.worldcat.org/fast/fst01204999) [FAST Geographic]
+  - Pennsylvania--Philadelphia (http://id.worldcat.org/fast/fst01204170) [FAST Geographic]
+  - Illinois--Chicago (http://id.worldcat.org/fast/fst01204048) [FAST Geographic]
+  - Connecticut--New Haven (http://id.worldcat.org/fast/fst01206280) [FAST Geographic]
+  - Pennsylvania--Pittsburgh (http://id.worldcat.org/fast/fst01205171) [FAST Geographic]
+  - Kentucky--Louisville (http://id.worldcat.org/fast/fst01204602) [FAST Geographic]
+  - New York (State)--New York (http://id.worldcat.org/fast/fst01204333) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 2 (Issue: 1917-05-39):
+
+Advertisement page featuring various building and hardware products. Includes ads for Samuel H. French Company (mortar coloring), American Bell & Foundry Co. (furnace), Bowling Green & Green River Quarries Co. (limestone), Milbrandt Rolling Ladder Company (ladders), Thos. Kelly & Bros. (plumbing), Hardware Specialty Co. (hardware), and Geo. H. Hans (roof scaffold brackets). Key topics include building materials and construction tools.
+
+Topics:
+  - Mortar coloring
+  - Heating systems
+  - Limestone
+  - Rolling ladders
+  - Plumbing systems
+  - Hardware
+  - Roof scaffolding
+  - Construction tools
+
+Named Entities:
+  - Samuel H. French Company (Firm)
+  - American Bell & Foundry Co. (Firm)
+  - Bowling Green & Green River Quarries Co. (Firm)
+  - Milbrandt Rolling Ladder Company (Firm)
+  - Thos. Kelly & Bros. (Firm)
+  - Hardware Specialty Co. (Firm)
+  - Geo. H. Hans (Firm)
+
+Geographic Entities:
+  - Philadelphia--Pennsylvania (City)
+  - Northville--Michigan (City)
+  - Bowling Green--Kentucky (City)
+  - St. Louis--Missouri (City)
+  - Chicago--Illinois (City)
+  - Glenbeulah--Wisconsin (City)
+
+Subject Headings (Selected):
+  - cement mortar (http://vocab.getty.edu/aat/300014743) [Getty AAT]
+  - forced air heating (http://vocab.getty.edu/aat/300051535) [Getty AAT]
+  - Limestone (http://id.loc.gov/authorities/subjects/sh85077017) [LCSH]
+  - Ladders (http://id.worldcat.org/fast/fst00990650) [FAST]
+  - plumbing systems (http://vocab.getty.edu/aat/300078157) [Getty AAT]
+  - Hardware (http://id.loc.gov/authorities/subjects/sh85058890) [LCSH]
+  - Scaffolding (http://id.worldcat.org/fast/fst01106287) [FAST]
+
+Geographic Subject Headings:
+  - Pennsylvania--Philadelphia (http://id.worldcat.org/fast/fst01204170) [FAST Geographic]
+  - Michigan--Northville (http://id.worldcat.org/fast/fst01219863) [FAST Geographic]
+  - Kentucky--Bowling Green (http://id.worldcat.org/fast/fst01202890) [FAST Geographic]
+  - Missouri--Saint Louis (http://id.worldcat.org/fast/fst01204930) [FAST Geographic]
+  - Illinois--Chicago (http://id.worldcat.org/fast/fst01204048) [FAST Geographic]
+  - Wisconsin--Glenbeulah (http://id.worldcat.org/fast/fst01279406) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 3 (Issue: 1917-05-39):
+
+Advertisement: Various building materials and products including Kingwelton Rotary Air Washers, structural steel, ornamental metals, and metal ceilings. Companies featured include Wells & Newton Co., The J. E. Moss Iron Works, The Baldwin Brass Works, and The Kinnear & Gager Mfg. Co. Key topics include air purification technology and ornamental metalwork.
+
+Topics:
+  - Air purification technology
+  - Structural steel
+  - Ornamental ironwork
+  - Brass and bronze work
+  - Metal ceilings
+  - Building materials
+  - Industrial manufacturing
+  - Architectural hardware
+
+Named Entities:
+  - Kingwelton Rotary Air Washers (Product)
+  - Wells & Newton Co. (Firm)
+  - The J. E. Moss Iron Works (Firm)
+  - The Baldwin Brass Works (Firm)
+  - The Kinnear & Gager Mfg. Co. (Firm)
+
+Geographic Entities:
+  - Washington--District of Columbia (City)
+  - New York--New York (City)
+  - Pittsburgh--Pennsylvania (City)
+  - Chicago--Illinois (City)
+  - Toronto--Canada (City)
+  - Wheeling--West Virginia (City)
+  - Columbus--Ohio (City)
+  - Boston--Massachusetts (City)
+
+Subject Headings (Selected):
+  - air purification (http://vocab.getty.edu/aat/300055364) [Getty AAT]
+  - structural steel (http://vocab.getty.edu/aat/300010931) [Getty AAT]
+  - brass (alloy) (http://vocab.getty.edu/aat/300010946) [Getty AAT]
+  - pressed metal ceiling tile (http://vocab.getty.edu/aat/300430788) [Getty AAT]
+  - building materials (http://vocab.getty.edu/aat/300014857) [Getty AAT]
+
+Geographic Subject Headings:
+  - Robert F. Kennedy Memorial Stadium (Washington, D.C.) (http://id.worldcat.org/fast/fst00631048) [FAST Geographic]
+  - New York (State)--New York (http://id.worldcat.org/fast/fst01204333) [FAST Geographic]
+  - Pennsylvania--Pittsburgh (http://id.worldcat.org/fast/fst01205171) [FAST Geographic]
+  - Illinois--Chicago (http://id.worldcat.org/fast/fst01204048) [FAST Geographic]
+  - Church of England in Canada. Diocese of Toronto (http://id.worldcat.org/fast/fst00629663) [FAST Geographic]
+  - West Virginia--Wheeling (http://id.worldcat.org/fast/fst01213675) [FAST Geographic]
+  - Ohio--Columbus (http://id.worldcat.org/fast/fst01205076) [FAST Geographic]
+  - Massachusetts--Boston (http://id.worldcat.org/fast/fst01205012) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 4 (Issue: 1917-05-39):
+
+Advertisement page featuring industrial products: Seri-Vane Fans, Lexington Warm Air Furnace, Peters Automatic Electric Water System, and decorative marbles by Mt. Nebo Marble Company. Highlights include innovations in heating and water systems, and the use of decorative marbles in architecture.
+
+Topics:
+  - Industrial fans
+  - Steam engines
+  - Warm air furnaces
+  - Electric water systems
+  - Decorative marbles
+  - Architectural materials
+  - Heating technology
+  - Pumping technology
+
+Named Entities:
+  - The New York Blower Company (Firm)
+  - Cutler & Proctor Stove Co. (Firm)
+  - Peters Pump Co. (Firm)
+  - Mt. Nebo Marble Company (Firm)
+  - Lexington All-Cast Warm Air Furnace (Product)
+  - Seri-Vane Fans (Product)
+
+Geographic Entities:
+  - Chicago--Illinois (City)
+  - Bucyrus--Ohio (City)
+  - Cleveland--Ohio (City)
+  - Minneapolis--Minnesota (City)
+  - East Orange--New Jersey (City)
+  - Peoria--Illinois (City)
+  - Kewanee--Illinois (City)
+  - Salt Lake City--Utah (City)
+
+Subject Headings (Selected):
+  - Steam-engines (http://id.loc.gov/authorities/subjects/sh85127673) [LCSH]
+  - warm air furnaces (http://vocab.getty.edu/aat/300052208) [Getty AAT]
+  - building materials (http://vocab.getty.edu/aat/300014857) [Getty AAT]
+
+Geographic Subject Headings:
+  - Illinois--Chicago (http://id.worldcat.org/fast/fst01204048) [FAST Geographic]
+  - Ohio--Bucyrus (http://id.worldcat.org/fast/fst01222374) [FAST Geographic]
+  - Ohio--Cleveland (http://id.worldcat.org/fast/fst01205966) [FAST Geographic]
+  - Minnesota--Minneapolis (http://id.worldcat.org/fast/fst01204260) [FAST Geographic]
+  - New Jersey--East Orange (http://id.worldcat.org/fast/fst01212122) [FAST Geographic]
+  - Illinois--Peoria (http://id.worldcat.org/fast/fst01206107) [FAST Geographic]
+  - Illinois--Kewanee (http://id.worldcat.org/fast/fst01219159) [FAST Geographic]
+  - Utah--Salt Lake City (http://id.worldcat.org/fast/fst01205314) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 5 (Issue: 1917-05-39):
+
+Advertisement page featuring various products for the building and architecture industry, including floor surfacers, stanchions, engines, bricks, and spiral chutes. Companies like M. L. Schlueter and Minnesota Manufacturers' Assn. are highlighted.
+
+Topics:
+  - Floor surfacing
+  - Dairy equipment
+  - Engine technology
+  - Brick manufacturing
+  - Conveyor systems
+  - Industrial machinery
+  - Building materials
+  - Architectural products
+
+Named Entities:
+  - M. L. Schlueter (Firm)
+  - Wallace B. Crumb (Firm)
+  - The Brownwall Engine & Pulley Co. (Firm)
+  - Beaver Clay Manufacturing Co. (Firm)
+  - Minnesota Manufacturers' Assn. (Organization)
+
+Geographic Entities:
+  - Chicago--Illinois (City)
+  - Forestville--Connecticut (City)
+  - Holland--Michigan (City)
+  - New Galilee--Pennsylvania (City)
+  - North St. Paul--Minnesota (City)
+
+Subject Headings (Selected):
+  - Dairying--Equipment and supplies (http://id.loc.gov/authorities/subjects/sh85035470) [LCSH]
+  - Building, Brick (http://id.worldcat.org/fast/fst00840899) [FAST]
+  - Roller conveyors (http://id.loc.gov/authorities/subjects/sh98003242) [LCSH]
+  - building materials (http://vocab.getty.edu/aat/300014857) [Getty AAT]
+
+Geographic Subject Headings:
+  - Illinois--Chicago (http://id.worldcat.org/fast/fst01204048) [FAST Geographic]
+  - Connecticut--Forestville (http://id.worldcat.org/fast/fst01247478) [FAST Geographic]
+  - Michigan--Holland (http://id.worldcat.org/fast/fst01217530) [FAST Geographic]
+  - Pennsylvania--New Galilee (http://id.worldcat.org/fast/fst01298436) [FAST Geographic]
+  - Minnesota--North Saint Paul (http://id.worldcat.org/fast/fst01227918) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 6 (Issue: 1917-05-39):
+
+Advertisement page featuring products for building and home improvement, including Maire's Roof Cement, TROKAL Liquid Floor Finish, Spangler Lock Joint Columns, and Bowlys Closets. Highlights include architectural elements like porch columns and modern sanitary fixtures.
+
+Topics:
+  - Roofing materials
+  - Floor finishes
+  - Porch columns
+  - Sanitary fixtures
+  - Building materials
+  - Home improvement
+  - Architectural elements
+  - Construction techniques
+
+Named Entities:
+  - Maire Paint Company (Firm)
+  - Eugene E. Nice (Person)
+  - The Frank Spangler Co. (Firm)
+  - The Bowlus Mfg. Co. (Firm)
+
+Geographic Entities:
+  - Minneapolis--Minnesota (City)
+  - Philadelphia--Pennsylvania (City)
+  - Camden--New Jersey (City)
+  - Toledo--Ohio (City)
+  - Springfield--Ohio (City)
+
+Subject Headings (Selected):
+  - Roofing (http://id.loc.gov/authorities/subjects/sh85115317) [LCSH]
+  - Finishes and finishing (http://id.worldcat.org/fast/fst00924885) [FAST]
+  - plumbing fixtures (http://vocab.getty.edu/aat/300052575) [Getty AAT]
+  - building materials (http://vocab.getty.edu/aat/300014857) [Getty AAT]
+  - architectural elements (http://vocab.getty.edu/aat/300000885) [Getty AAT]
+
+Geographic Subject Headings:
+  - Minnesota--Minneapolis (http://id.worldcat.org/fast/fst01204260) [FAST Geographic]
+  - Pennsylvania--Philadelphia (http://id.worldcat.org/fast/fst01204170) [FAST Geographic]
+  - New Jersey--Camden (http://id.worldcat.org/fast/fst01207565) [FAST Geographic]
+  - Ohio--Toledo (http://id.worldcat.org/fast/fst01211740) [FAST Geographic]
+  - Ohio--Springfield (http://id.worldcat.org/fast/fst01219897) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 7 (Issue: 1917-05-39):
+
+Advertisement: Electric Daylight, Lithoplate, and Lytton Thermo Syphon Trap. This page features advertisements for lighting solutions, blackboards, and heating system improvements, highlighting technological advancements in building materials and systems.
+
+Topics:
+  - Electric lighting
+  - Blackboards
+  - Heating systems
+  - Building materials
+  - Technological advancements
+  - Steam heating
+  - Classroom equipment
+  - Automatic operation
+
+Named Entities:
+  - Gillette Light Projector Co. (Firm)
+  - Caxton School Supply Co. (Firm)
+  - Lytton Manufacturing Corporation (Firm)
+  - Lytton Thermo Syphon Trap (Product)
+
+Geographic Entities:
+  - Cleveland--Ohio (City)
+  - Chicago--Illinois (City)
+  - Franklin--Virginia (City)
+
+Subject Headings (Selected):
+  - electric lighting (http://vocab.getty.edu/aat/300051958) [Getty AAT]
+  - blackboards (http://vocab.getty.edu/aat/300410506) [Getty AAT]
+  - Steam-heating (http://id.loc.gov/authorities/subjects/sh85127687) [LCSH]
+
+Geographic Subject Headings:
+  - Ohio--Cleveland (http://id.worldcat.org/fast/fst01205966) [FAST Geographic]
+  - Illinois--Chicago (http://id.worldcat.org/fast/fst01204048) [FAST Geographic]
+  - Virginia--Franklin County (http://id.worldcat.org/fast/fst01204822) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 8 (Issue: 1917-05-39):
+
+Advertisement: 'The Hugo' Clamp and Galvanized Lightning Rods. Features a testimonial from Austin Organ Co. and highlights the efficiency of E. A. Foy Company's lightning rods.
+
+Topics:
+  - Clamps
+  - Lightning rods
+  - Industrial design
+  - Building materials
+  - Pipe organs
+  - Manufacturing
+  - Advertising
+  - Construction technology
+
+Named Entities:
+  - Austin Organ Co. (Firm)
+  - The Norfolk Mfg. Co. (Firm)
+  - E. A. Foy Company (Firm)
+  - H. E. Walker (Person)
+
+Geographic Entities:
+  - Hartford--Connecticut (City)
+  - Norfolk--Connecticut (City)
+  - Cincinnati--Ohio (City)
+
+Subject Headings (Selected):
+  - Clamps (Engineering) (http://id.loc.gov/authorities/subjects/sh85026549) [LCSH]
+  - lightning rods (http://vocab.getty.edu/aat/300068915) [Getty AAT]
+  - building materials (http://vocab.getty.edu/aat/300014857) [Getty AAT]
+  - advertising (http://vocab.getty.edu/aat/300054347) [Getty AAT]
+
+Geographic Subject Headings:
+  - Connecticut--Hartford (http://id.worldcat.org/fast/fst01207441) [FAST Geographic]
+  - Connecticut--Norfolk (http://id.worldcat.org/fast/fst01247877) [FAST Geographic]
+  - Ohio--Cincinnati (http://id.worldcat.org/fast/fst01205142) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 9 (Issue: 1917-05-39):
+
+Table of Contents and Editorial Page. This page includes the table of contents for the May 1917 issue, along with editorials discussing the 'Buy a Home' campaign and conventions for builders and architects. Key topics include home ownership and the impact of war on trade paper advertising.
+
+Topics:
+  - Home ownership
+  - Architectural conventions
+  - Trade paper advertising
+  - Building materials
+  - War impact on industry
+  - Real estate campaigns
+  - Architectural community
+  - Planning boards
+
+Named Entities:
+  - Henry Hering (Person)
+  - Richard Engelmann (Sculptor)
+  - National Association of Real Estate Boards (Organization)
+
+Geographic Entities:
+  - Dalton--Georgia (City)
+  - Atlanta--Georgia (City)
+  - Memphis--Tennessee (City)
+  - Nashville--Tennessee (City)
+  - Georgia (State)
+  - Tennessee (State)
+
+Subject Headings (Selected):
+  - home ownership (http://vocab.getty.edu/aat/300055605) [Getty AAT]
+  - Advertising (http://id.worldcat.org/fast/fst00797511) [FAST]
+
+Geographic Subject Headings:
+  - Georgia--Dalton (Whitfield County) (http://id.worldcat.org/fast/fst01729450) [FAST Geographic]
+  - Georgia--Atlanta (http://id.worldcat.org/fast/fst01204627) [FAST Geographic]
+  - Tennessee--Memphis (http://id.worldcat.org/fast/fst01204194) [FAST Geographic]
+  - Tennessee--Nashville (http://id.worldcat.org/fast/fst01204195) [FAST Geographic]
+  - Georgia (http://id.worldcat.org/fast/fst01204622) [FAST Geographic]
+  - Tennessee (http://id.worldcat.org/fast/fst01205353) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 10 (Issue: 1917-05-39):
+
+Article: Discussion on post-war economic opportunities and the importance of thrift and economy. Mentions the potential impact of World War I on American industries and the role of advertising. Includes a note on the Florida Engineering Society's offer to support the war effort.
+
+Topics:
+  - Post-war economy
+  - Advertising strategies
+  - Thrift and economy
+  - World War I impact
+  - Industrial readjustment
+  - American home economics
+  - Resource conservation
+  - Engineering support for war
+
+Named Entities:
+  - President Wilson (Person)
+  - Florida Engineering Society (Organization)
+  - Governor Catts (Person)
+  - Congress of the United States (Organization)
+
+Geographic Entities:
+  - United States (Country)
+  - Germany (Country)
+  - Florida (State)
+
+Subject Headings (Selected):
+  - advertising (http://vocab.getty.edu/aat/300054347) [Getty AAT]
+  - economy (http://vocab.getty.edu/aat/300389790) [Getty AAT]
+  - World War (1939-1945) (http://id.worldcat.org/fast/fst01180924) [FAST]
+  - Engineering (http://id.worldcat.org/fast/fst00910312) [FAST]
+
+Geographic Subject Headings:
+  - United States (http://id.worldcat.org/fast/fst01204155) [FAST Geographic]
+  - Germany (http://id.worldcat.org/fast/fst01210272) [FAST Geographic]
+  - Florida (http://id.worldcat.org/fast/fst01205150) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 11 (Issue: 1917-05-39):
+
+Advertisement page featuring various building and construction products, including heating systems, batch mixers, window guards, fire escapes, steel construction, tower clocks, and cement finishes. Companies such as Standard School Heater Co., Iowa Foundry & Mfg. Co., Milliken Brothers, and Garden City Sand Co. are highlighted.
+
+Topics:
+  - Heating systems
+  - Batch mixers
+  - Window guards
+  - Fire escapes
+  - Steel construction
+  - Tower clocks
+  - Cement finishes
+  - Ventilator irons
+
+Named Entities:
+  - Standard School Heater Co. (Firm)
+  - Iowa Foundry & Mfg. Co. (Firm)
+  - Milliken Brothers (Firm)
+  - Century Tower Clock Works (Firm)
+  - Garden City Sand Co. (Firm)
+  - Thomas Devlin (Person)
+
+Geographic Entities:
+  - Chicago--Illinois (City)
+  - Fort Dodge--Iowa (City)
+  - Terre Haute--Indiana (City)
+  - Jacksonville--Florida (City)
+  - New York--New York (City)
+  - Manistee--Michigan (City)
+  - Philadelphia--Pennsylvania (City)
+
+Subject Headings (Selected):
+  - forced air heating (http://vocab.getty.edu/aat/300051535) [Getty AAT]
+  - Concrete mixers (http://id.worldcat.org/fast/fst00874332) [FAST]
+  - window guards (http://vocab.getty.edu/aat/300045475) [Getty AAT]
+  - fire escapes (http://vocab.getty.edu/aat/300003262) [Getty AAT]
+  - Building, Iron and steel (http://id.loc.gov/authorities/subjects/sh85017713) [LCSH]
+  - tower clocks (clocks) (http://vocab.getty.edu/aat/300205396) [Getty AAT]
+  - Cement (http://id.worldcat.org/fast/fst00850432) [FAST]
+  - ventilator damper (http://vocab.getty.edu/aat/300432256) [Getty AAT]
+
+Geographic Subject Headings:
+  - Illinois--Chicago (http://id.worldcat.org/fast/fst01204048) [FAST Geographic]
+  - Iowa--Fort Dodge (http://id.worldcat.org/fast/fst01208885) [FAST Geographic]
+  - Indiana--Terre Haute (http://id.worldcat.org/fast/fst01207975) [FAST Geographic]
+  - Florida--Jacksonville (http://id.worldcat.org/fast/fst01205259) [FAST Geographic]
+  - New York (State)--New York (http://id.worldcat.org/fast/fst01204333) [FAST Geographic]
+  - Michigan--Manistee County (http://id.worldcat.org/fast/fst01214770) [FAST Geographic]
+  - Pennsylvania--Philadelphia (http://id.worldcat.org/fast/fst01204170) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 12 (Issue: 1917-05-39):
+
+Advertisement page featuring various building and construction products, including reversible mirrors, cut stone, brass rails, metal guards, roofing slate, contractor's pumps, and coal chutes. Key companies include Ideal Reversible Hinge Cabinet Co. and Hoosier Cut Stone Co.
+
+Topics:
+  - Reversible mirrors
+  - Cut stone
+  - Brass rails
+  - Metal guards
+  - Roofing slate
+  - Contractor's pumps
+  - Coal chutes
+  - Building accessories
+
+Named Entities:
+  - Ideal Reversible Hinge Cabinet Co. (Firm)
+  - Hoosier Cut Stone Co. (Firm)
+  - The Huntington Iron Works (Firm)
+  - J. Bray Slate Co. (Firm)
+  - A. A. Parker (Person)
+  - Enterprise Iron Works (Firm)
+  - The Newman Mfg. Co. (Firm)
+
+Geographic Entities:
+  - St. Louis--Missouri (City)
+  - Bedford--Indiana (City)
+  - New York--New York (City)
+  - Cincinnati--Ohio (City)
+  - Huntington--West Virginia (City)
+  - East Bangor--Pennsylvania (City)
+  - Waterford--New York (City)
+  - Albert Lea--Minnesota (City)
+
+Subject Headings (Selected):
+  - Mirrors (http://id.worldcat.org/fast/fst01023582) [FAST]
+  - dimension stone (http://vocab.getty.edu/aat/300070045) [Getty AAT]
+  - roofing slate (http://vocab.getty.edu/aat/300011650) [Getty AAT]
+  - coal chutes (http://vocab.getty.edu/aat/300004250) [Getty AAT]
+
+Geographic Subject Headings:
+  - Missouri--Saint Louis (http://id.worldcat.org/fast/fst01204930) [FAST Geographic]
+  - Indiana--Bedford (http://id.worldcat.org/fast/fst01218072) [FAST Geographic]
+  - New York (State)--New York (http://id.worldcat.org/fast/fst01204333) [FAST Geographic]
+  - Ohio--Cincinnati (http://id.worldcat.org/fast/fst01205142) [FAST Geographic]
+  - West Virginia--Huntington (http://id.worldcat.org/fast/fst01202938) [FAST Geographic]
+  - Pennsylvania--East Bangor (http://id.worldcat.org/fast/fst01216773) [FAST Geographic]
+  - New York (State)--Waterford (http://id.worldcat.org/fast/fst01228156) [FAST Geographic]
+  - Minnesota--Albert Lea (http://id.worldcat.org/fast/fst01212828) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 13 (Issue: 1917-05-39):
+
+Advertisement: 'Sanisep' Portable Sewerage Systems by Cement Products Company. Discusses reinforced concrete tanks for sewage disposal, recommended by the United States Public Health Service.
+
+Topics:
+  - Portable sewerage systems
+  - Reinforced concrete
+  - Sewage disposal
+  - Public health recommendations
+  - Suburban infrastructure
+  - Architectural engineering
+
+Named Entities:
+  - Sanisep (Product)
+  - Cement Products Company (Firm)
+  - United States Public Health Service (Organization)
+
+Geographic Entities:
+  - Wilmington--North Carolina (City)
+  - North Carolina (State)
+
+Subject Headings (Selected):
+  - sewage disposal (http://vocab.getty.edu/aat/300055243) [Getty AAT]
+  - Public health (http://id.worldcat.org/fast/fst01082238) [FAST]
+  - suburban houses (http://vocab.getty.edu/aat/300005584) [Getty AAT]
+
+Geographic Subject Headings:
+  - North Carolina--Wilmington (http://id.worldcat.org/fast/fst01210117) [FAST Geographic]
+  - North Carolina (http://id.worldcat.org/fast/fst01204304) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 14 (Issue: 1917-05-39):
+
+Advertisement: Pullman Unit Sash Balances, Heitland Grate & Mantel Co., A Collins Lumber Co. - Featuring innovations in window sash balances, fireplace heating, and lumber for cotton mills.
+
+Topics:
+  - Window sash balances
+  - Fireplace heating
+  - Lumber industry
+  - Architectural innovations
+  - Building materials
+  - Energy efficiency
+  - Construction techniques
+  - Fireproof buildings
+
+Named Entities:
+  - Pullman Mfg. Company (Firm)
+  - Heitland Grate & Mantel Co. (Firm)
+  - A Collins Lumber Co. (Firm)
+  - Board of Fire Underwriters (Organization)
+
+Geographic Entities:
+  - Rochester--New York (City)
+  - Quincy--Illinois (City)
+  - Charlotte--North Carolina (City)
+
+Subject Headings (Selected):
+  - sash chains (http://vocab.getty.edu/aat/300033495) [Getty AAT]
+  - fireplace accessories (http://vocab.getty.edu/aat/300425514) [Getty AAT]
+  - Lumber trade (http://id.loc.gov/authorities/subjects/sh85078814) [LCSH]
+  - building materials (http://vocab.getty.edu/aat/300014857) [Getty AAT]
+
+Geographic Subject Headings:
+  - New York (State)--Rochester (http://id.worldcat.org/fast/fst01204680) [FAST Geographic]
+  - Illinois--Quincy (http://id.worldcat.org/fast/fst01212078) [FAST Geographic]
+  - North Carolina--Charlotte (http://id.worldcat.org/fast/fst01204596) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 15 (Issue: 1917-05-39):
+
+Article: Discussion on contractor experiences, metric system adoption, and professional standards in architecture and engineering. Highlights the importance of fair practices and the evolving role of contractors.
+
+Topics:
+  - Contractor practices
+  - Metric system
+  - Architectural standards
+  - Professional ethics
+  - Building industry
+  - Engineering challenges
+  - Construction problems
+  - Decimal system
+
+Named Entities:
+  - Moffatt Machinery Mfg. Co. (Firm)
+  - National Wholesale Grocers' Association (Organization)
+  - The American Lumberman (Publication)
+  - Cement Era (Publication)
+
+Geographic Entities:
+  - New England (Region)
+  - England (Country)
+  - United States (Country)
+
+Subject Headings (Selected):
+  - building contractors (http://vocab.getty.edu/aat/300386816) [Getty AAT]
+  - Metric system (http://id.loc.gov/authorities/subjects/sh85084442) [LCSH]
+  - Architectural design--Standards (http://id.worldcat.org/fast/fst00813220) [FAST]
+  - professional ethics (http://vocab.getty.edu/aat/300055942) [Getty AAT]
+  - Construction industry (http://id.worldcat.org/fast/fst00875964) [FAST]
+  - Engineering (http://id.worldcat.org/fast/fst00910312) [FAST]
+  - Decimal system (http://id.loc.gov/authorities/subjects/sh85036192) [LCSH]
+
+Geographic Subject Headings:
+  - New England (http://id.worldcat.org/fast/fst01241913) [FAST Geographic]
+  - Great Britain (http://id.worldcat.org/fast/fst01204623) [FAST Geographic]
+  - United States (http://id.worldcat.org/fast/fst01204155) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 16 (Issue: 1917-05-39):
+
+Article: Discussion on the impact of the European war on wooden buildings and Thomas Jefferson's architectural contributions. Highlights the destruction of buildings in Europe and Jefferson's overlooked architectural achievements.
+
+Topics:
+  - Architectural contracts
+  - Building restoration
+  - Wooden buildings
+  - European war impact
+  - Architectural achievements
+  - Thomas Jefferson
+  - Architectural history
+  - Lumber industry
+
+Named Entities:
+  - Thomas Jefferson (Architect)
+  - Christian Science Monitor (Publication)
+  - Minneapolis Journal (Publication)
+  - Hardware Record (Publication)
+  - Virginia Capitol (Building)
+  - University of Virginia (Building)
+  - Monticello (Building)
+
+Geographic Entities:
+  - France (Country)
+  - Belgium (Country)
+  - Poland (Country)
+  - East Prussia (Region)
+  - Austria (Country)
+  - Balkans (Region)
+  - United States (Country)
+  - Richmond--Virginia (City)
+
+Subject Headings (Selected):
+  - Wooden-frame buildings (http://id.loc.gov/authorities/subjects/sh85147931) [LCSH]
+  - World War (1939-1945) (http://id.worldcat.org/fast/fst01180924) [FAST]
+  - Jefferson, Thomas, 1743-1826 (http://id.worldcat.org/fast/fst00040754) [FAST]
+  - architectural history (http://vocab.getty.edu/aat/300054162) [Getty AAT]
+
+Geographic Subject Headings:
+  - France (http://id.worldcat.org/fast/fst01204289) [FAST Geographic]
+  - Belgium (http://id.worldcat.org/fast/fst01210278) [FAST Geographic]
+  - Poland (http://id.worldcat.org/fast/fst01206891) [FAST Geographic]
+  - Europe--East Prussia (Poland and Russia) (http://id.worldcat.org/fast/fst01692702) [FAST Geographic]
+  - Netherlands (http://id.worldcat.org/fast/fst01204034) [FAST Geographic]
+  - Balkan Peninsula (http://id.worldcat.org/fast/fst01241484) [FAST Geographic]
+  - United States (http://id.worldcat.org/fast/fst01204155) [FAST Geographic]
+  - Virginia--Richmond (http://id.worldcat.org/fast/fst01205345) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 17 (Issue: 1917-05-39):
+
+Advertisement page featuring products for architects and builders, including self-cleaning strainers, elastic glazing composition, bronze memorials, and scaffolding solutions. Highlights include innovative building materials and tools.
+
+Topics:
+  - Self-cleaning strainers
+  - Glazing composition
+  - Bronze memorials
+  - Scaffolding
+  - Architectural materials
+  - Building innovations
+  - Construction tools
+
+Named Entities:
+  - Self-Cleaning Strainer Co. (Firm)
+  - H. B. Fred. Kuhls (Person)
+  - Novelty Mfg. Co. (Firm)
+  - Steel Scaffolding Co. (Firm)
+  - John W. Gates (Person)
+
+Geographic Entities:
+  - Chicago--Illinois (City)
+  - Brooklyn--New York (City)
+  - Rome--New York (City)
+  - Port Arthur--Texas (City)
+  - Evansville--Indiana (City)
+
+Subject Headings (Selected):
+  - glazing (installing glass) (http://vocab.getty.edu/aat/300053676) [Getty AAT]
+  - Memorials (http://id.worldcat.org/fast/fst01015903) [FAST]
+  - Scaffolding (http://id.loc.gov/authorities/subjects/sh85117898) [LCSH]
+  - building materials (http://vocab.getty.edu/aat/300014857) [Getty AAT]
+  - Building--Technological innovations (http://id.loc.gov/authorities/subjects/sh85017703) [LCSH]
+  - Tools--Design and construction (http://id.loc.gov/authorities/subjects/sh2001000754) [LCSH]
+
+Geographic Subject Headings:
+  - Illinois--Chicago (http://id.worldcat.org/fast/fst01204048) [FAST Geographic]
+  - New York (State)--New York--Brooklyn (http://id.worldcat.org/fast/fst01312516) [FAST Geographic]
+  - New York (State)--Rome (http://id.worldcat.org/fast/fst01213046) [FAST Geographic]
+  - Texas--Port Arthur (http://id.worldcat.org/fast/fst01211418) [FAST Geographic]
+  - Indiana--Evansville (http://id.worldcat.org/fast/fst01213859) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 18 (Issue: 1917-05-39):
+
+Advertisement: Promotion of the POLK SYSTEM for circular monolithic concrete construction, highlighting its efficiency and cost-effectiveness for contractors. Includes contact information for Polk Genung Polk Company.
+
+Topics:
+  - Concrete construction
+  - Monolithic structures
+  - Construction technology
+  - Building efficiency
+  - Contractor opportunities
+
+Named Entities:
+  - POLK SYSTEM (Material)
+  - Polk Genung Polk Company (Firm)
+
+Geographic Entities:
+  - Fort Branch--Indiana (City)
+  - Chicago--Illinois (City)
+
+Subject Headings (Selected):
+  - Concrete construction (http://id.loc.gov/authorities/subjects/sh85030704) [LCSH]
+  - building contractors (http://vocab.getty.edu/aat/300386816) [Getty AAT]
+
+Geographic Subject Headings:
+  - Indiana--Fort Branch (http://id.worldcat.org/fast/fst01238717) [FAST Geographic]
+  - Illinois--Chicago (http://id.worldcat.org/fast/fst01204048) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 19 (Issue: 1917-05-39):
+
+Advertisement page featuring promotional materials for architectural supplies and tools. Highlights include Wolf's Elastine Lacquer, a durable floor varnish used in prominent buildings; an improved convertible level surveying instrument for architects and builders; and Defiance Mfg. Company's printing and reproduction supplies. Key themes include early 20th-century building materials, architectural tools, and print reproduction technologies relevant to architectural practice.
+
+Topics:
+  - Floor varnish
+  - Architectural finishes
+  - Early 20th-century skyscrapers
+  - Surveying instruments
+  - Convertible levels
+  - Architectural printing
+  - Lithographic reproduction
+  - Architectural supplies
+
+Named Entities:
+  - Wolf's Elastine Lacquer (Material)
+  - The Leon L. Wolf Paint Company (Firm)
+  - Union Central Life Insurance Building (Building)
+  - New York Blue Print Paper Co. (Firm)
+  - Defiance Mfg. Company (Firm)
+
+Geographic Entities:
+  - Cincinnati--Ohio (City)
+  - Dayton--Ohio (City)
+  - Columbus--Ohio (City)
+  - Indianapolis--Indiana (City)
+  - Kansas City--Missouri (City)
+  - St. Louis--Missouri (City)
+  - Peoria--Illinois (City)
+  - Buffalo--New York (City)
+  - Bridgeport--Connecticut (City)
+  - New York--New York (City)
+
+Subject Headings (Selected):
+  - finishing varnish (http://vocab.getty.edu/aat/300014984) [Getty AAT]
+  - Skyscrapers (http://id.worldcat.org/fast/fst01120291) [FAST]
+  - Levels (Surveying instruments) (http://id.loc.gov/authorities/subjects/sh85076319) [LCSH]
+  - Architectural drawing--Printing (http://id.loc.gov/authorities/subjects/sh85006593) [LCSH]
+  - Lithographic workshops (http://id.worldcat.org/fast/fst01000264) [FAST]
+
+Geographic Subject Headings:
+  - Ohio--Cincinnati (http://id.worldcat.org/fast/fst01205142) [FAST Geographic]
+  - Ohio--Dayton (http://id.worldcat.org/fast/fst01204702) [FAST Geographic]
+  - Ohio--Columbus (http://id.worldcat.org/fast/fst01205076) [FAST Geographic]
+  - Indiana--Indianapolis (http://id.worldcat.org/fast/fst01205182) [FAST Geographic]
+  - Missouri--Kansas City (http://id.worldcat.org/fast/fst01204999) [FAST Geographic]
+  - Missouri--Saint Louis (http://id.worldcat.org/fast/fst01204930) [FAST Geographic]
+  - Illinois--Peoria (http://id.worldcat.org/fast/fst01206107) [FAST Geographic]
+  - New York (State)--Buffalo (http://id.worldcat.org/fast/fst01205730) [FAST Geographic]
+  - Connecticut--Bridgeport (http://id.worldcat.org/fast/fst01209541) [FAST Geographic]
+  - New York (State)--New York (http://id.worldcat.org/fast/fst01204333) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 20 (Issue: 1917-05-39):
+
+Advertisement page featuring products for building and construction: fire-proof doors by A. C. Chesley Co., Economy Chemical Closet by Sanitary Chemical Closet Company, and Keystone Cast Iron Columns by United States Cast Iron Pipe and Foundry Company. Highlights innovations in building materials and sanitary solutions.
+
+Topics:
+  - Fire-proof doors
+  - Chemical closets
+  - Cast iron columns
+  - Building materials
+  - Sanitary solutions
+  - Construction innovations
+  - Architectural safety
+  - Building economy
+
+Named Entities:
+  - A. C. Chesley Co., Inc. (Firm)
+  - Sanitary Chemical Closet Company (Firm)
+  - United States Cast Iron Pipe and Foundry Company (Firm)
+  - Keystone (Product)
+
+Geographic Entities:
+  - New York City--New York (City)
+  - Hillsdale--Michigan (City)
+  - Burlington--New Jersey (City)
+  - Birmingham--Alabama (City)
+  - Philadelphia--Pennsylvania (City)
+  - Pittsburgh--Pennsylvania (City)
+  - St. Louis--Missouri (City)
+  - Chicago--Illinois (City)
+  - Buffalo--New York (City)
+  - San Francisco--California (City)
+  - Seattle--Washington (City)
+
+Subject Headings (Selected):
+  - Doors (http://id.worldcat.org/fast/fst00896894) [FAST]
+  - chemical toilets (http://vocab.getty.edu/aat/300108693) [Getty AAT]
+  - cast iron architecture (http://vocab.getty.edu/aat/300457667) [Getty AAT]
+  - building materials (http://vocab.getty.edu/aat/300014857) [Getty AAT]
+  - sanitary engineering (http://vocab.getty.edu/aat/300054485) [Getty AAT]
+  - Construction industry--Technological innovations (http://id.loc.gov/authorities/subjects/sh85031443) [LCSH]
+
+Geographic Subject Headings:
+  - New York (State)--New York (http://id.worldcat.org/fast/fst01204333) [FAST Geographic]
+  - Michigan--Hillsdale County (http://id.worldcat.org/fast/fst01208681) [FAST Geographic]
+  - New Jersey--Burlington County (http://id.worldcat.org/fast/fst01213840) [FAST Geographic]
+  - Alabama--Birmingham (http://id.worldcat.org/fast/fst01204958) [FAST Geographic]
+  - Pennsylvania--Philadelphia (http://id.worldcat.org/fast/fst01204170) [FAST Geographic]
+  - Pennsylvania--Pittsburgh (http://id.worldcat.org/fast/fst01205171) [FAST Geographic]
+  - Missouri--Saint Louis (http://id.worldcat.org/fast/fst01204930) [FAST Geographic]
+  - Illinois--Chicago (http://id.worldcat.org/fast/fst01204048) [FAST Geographic]
+  - New York (State)--Buffalo (http://id.worldcat.org/fast/fst01205730) [FAST Geographic]
+  - California--San Francisco (http://id.worldcat.org/fast/fst01204481) [FAST Geographic]
+  - Washington (State)--Seattle (http://id.worldcat.org/fast/fst01204940) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 21 (Issue: 1917-05-39):
+
+Advertisement page featuring various products and services for the building and architecture industry, including Wolverine Closets, American Standard Revolving Doors, and Bruston Automatic Electric Lighting. Highlights include innovations in sanitary solutions and automatic lighting systems.
+
+Topics:
+  - Sanitary solutions
+  - Revolving doors
+  - Ornamental ironwork
+  - Limestone
+  - Automatic lighting
+  - Building materials
+  - Architectural innovations
+  - Construction industry
+
+Named Entities:
+  - Wolverine Closets (Product)
+  - Dail Steel Products Company (Firm)
+  - Dallas Show Case & Mfg. Co. (Firm)
+  - American Standard Revolving Doors (Product)
+  - Crown Iron Works Company (Firm)
+  - Ingalls Stone Co. (Firm)
+  - Bruston Automatic Electric Lighting & Power Company (Firm)
+
+Geographic Entities:
+  - Lansing--Michigan (City)
+  - Dallas--Texas (City)
+  - Minneapolis--Minnesota (City)
+  - New York City--New York (City)
+  - Bedford--Indiana (City)
+
+Subject Headings (Selected):
+  - sanitary drainage systems (http://vocab.getty.edu/aat/300052546) [Getty AAT]
+  - revolving doors (http://vocab.getty.edu/aat/300374979) [Getty AAT]
+  - Limestone (http://id.loc.gov/authorities/subjects/sh85077017) [LCSH]
+  - automatic (http://vocab.getty.edu/aat/300037196) [Getty AAT]
+  - building materials (http://vocab.getty.edu/aat/300014857) [Getty AAT]
+
+Geographic Subject Headings:
+  - Michigan--Lansing (http://id.worldcat.org/fast/fst01208349) [FAST Geographic]
+  - Texas--Dallas (http://id.worldcat.org/fast/fst01204635) [FAST Geographic]
+  - Minnesota--Minneapolis (http://id.worldcat.org/fast/fst01204260) [FAST Geographic]
+  - New York (State)--New York (http://id.worldcat.org/fast/fst01204333) [FAST Geographic]
+  - Indiana--Bedford (http://id.worldcat.org/fast/fst01218072) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 22 (Issue: 1917-05-39):
+
+Error: All parsing strategies failed
+
+
+--------------------------------------------------
+
+Page 23 (Issue: 1917-05-39):
+
+Advertisement page featuring various products and services for architects and builders, including ventilators, lighting services, shelf pins, elevators, and building materials. Companies like Auto Utilities Mfg. Company and I. P. Frink, Inc. are highlighted.
+
+Topics:
+  - Ventilators
+  - Lighting services
+  - Shelf pins
+  - Elevators
+  - Building materials
+  - Loader skips
+  - Architectural products
+  - Construction equipment
+
+Named Entities:
+  - Auto Utilities Mfg. Company (Firm)
+  - I. P. Frink, Inc. (Firm)
+  - H. J. Reedy Co. (Firm)
+  - J. D. Johnston (Person)
+  - Philip Gruner & Bros. Lbr. Co. (Firm)
+  - The Heltzel Steel Form & Iron Co. (Firm)
+
+Geographic Entities:
+  - Chicago--Illinois (City)
+  - New York--New York (City)
+  - Boston--Massachusetts (City)
+  - Cleveland--Ohio (City)
+  - Detroit--Michigan (City)
+  - Philadelphia--Pennsylvania (City)
+  - Pittsburgh--Pennsylvania (City)
+  - St. Louis--Missouri (City)
+  - San Francisco--California (City)
+  - Seattle--Washington (City)
+  - Montreal--Quebec (City)
+  - Toronto--Ontario (City)
+  - Winnipeg--Manitoba (City)
+  - Newport--Rhode Island (City)
+  - Cincinnati--Ohio (City)
+  - Cleburne--Texas (City)
+  - Norfolk--Virginia (City)
+  - Birmingham--Alabama (City)
+  - Warren--Ohio (City)
+
+Subject Headings (Selected):
+  - fans (equipment) (http://vocab.getty.edu/aat/300209970) [Getty AAT]
+  - architectural lighting (http://vocab.getty.edu/aat/300052015) [Getty AAT]
+  - shelf hardware (http://vocab.getty.edu/aat/300078271) [Getty AAT]
+  - Elevators (http://id.loc.gov/authorities/subjects/sh85042556) [LCSH]
+  - building materials (http://vocab.getty.edu/aat/300014857) [Getty AAT]
+  - construction equipment (http://vocab.getty.edu/aat/300022242) [Getty AAT]
+
+Geographic Subject Headings:
+  - Illinois--Chicago (http://id.worldcat.org/fast/fst01204048) [FAST Geographic]
+  - New York (State)--New York (http://id.worldcat.org/fast/fst01204333) [FAST Geographic]
+  - Massachusetts--Boston (http://id.worldcat.org/fast/fst01205012) [FAST Geographic]
+  - Ohio--Cleveland (http://id.worldcat.org/fast/fst01205966) [FAST Geographic]
+  - Michigan--Detroit (http://id.worldcat.org/fast/fst01205010) [FAST Geographic]
+  - Pennsylvania--Philadelphia (http://id.worldcat.org/fast/fst01204170) [FAST Geographic]
+  - Pennsylvania--Pittsburgh (http://id.worldcat.org/fast/fst01205171) [FAST Geographic]
+  - Missouri--Saint Louis (http://id.worldcat.org/fast/fst01204930) [FAST Geographic]
+  - California--San Francisco (http://id.worldcat.org/fast/fst01204481) [FAST Geographic]
+  - Washington (State)--Seattle (http://id.worldcat.org/fast/fst01204940) [FAST Geographic]
+  - Québec--Montréal (http://id.worldcat.org/fast/fst01210434) [FAST Geographic]
+  - Ontario--Toronto (http://id.worldcat.org/fast/fst01205798) [FAST Geographic]
+  - Manitoba--Winnipeg (http://id.worldcat.org/fast/fst01205803) [FAST Geographic]
+  - Rhode Island--Newport (http://id.worldcat.org/fast/fst01210119) [FAST Geographic]
+  - Ohio--Cincinnati (http://id.worldcat.org/fast/fst01205142) [FAST Geographic]
+  - Texas--Cleburne (http://id.worldcat.org/fast/fst01224718) [FAST Geographic]
+  - Virginia--Norfolk (http://id.worldcat.org/fast/fst01206844) [FAST Geographic]
+  - Alabama--Birmingham (http://id.worldcat.org/fast/fst01204958) [FAST Geographic]
+  - Ohio--Warren County (http://id.worldcat.org/fast/fst01204172) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 24 (Issue: 1917-05-39):
+
+Advertisement: Barrett Specification Roofs. Discusses the benefits and features of Barrett Specification Roofs, including a 20-Year Guaranty Bond. Highlights modern construction techniques and fire insurance advantages.
+
+Topics:
+  - Roofing materials
+  - Fire insurance
+  - Modern construction
+  - Industrial architecture
+  - Building maintenance
+  - Architectural specifications
+  - Construction guarantees
+  - Factory design
+
+Named Entities:
+  - Barrett Company (Firm)
+  - United States Fidelity and Guaranty Company (Organization)
+  - Elzner & Williams (Architect)
+  - J. A. Bentley & Sons (Firm)
+  - Hummel & Hillebrand (Firm)
+
+Geographic Entities:
+  - New York--New York (City)
+  - Chicago--Illinois (City)
+  - Philadelphia--Pennsylvania (City)
+  - Boston--Massachusetts (City)
+  - St. Louis--Missouri (City)
+  - Cleveland--Ohio (City)
+  - Cincinnati--Ohio (City)
+  - Pittsburgh--Pennsylvania (City)
+  - Detroit--Michigan (City)
+  - Birmingham--Alabama (City)
+  - Kansas City--Missouri (City)
+  - Minneapolis--Minnesota (City)
+  - Nashville--Tennessee (City)
+  - Salt Lake City--Utah (City)
+  - Seattle--Washington (City)
+  - Peoria--Illinois (City)
+  - Montreal--Canada (City)
+  - Toronto--Canada (City)
+  - Winnipeg--Canada (City)
+  - Vancouver--Canada (City)
+  - St. John--New Brunswick (City)
+  - Halifax--Nova Scotia (City)
+  - Sydney--Nova Scotia (City)
+  - Toledo--Ohio (City)
+  - Dayton--Ohio (City)
+  - Baltimore--Maryland (City)
+  - United States (Country)
+  - Canada (Country)
+
+Subject Headings (Selected):
+  - Roofing (http://id.loc.gov/authorities/subjects/sh85115317) [LCSH]
+  - Fire insurance (http://id.loc.gov/authorities/subjects/sh85066892) [LCSH]
+  - Architecture, Industrial (http://id.loc.gov/authorities/subjects/sh85006803) [LCSH]
+  - guarantees (http://vocab.getty.edu/aat/300055567) [Getty AAT]
+  - Factories--Design and construction (http://id.loc.gov/authorities/subjects/sh85046827) [LCSH]
+
+Geographic Subject Headings:
+  - New York (State)--New York (http://id.worldcat.org/fast/fst01204333) [FAST Geographic]
+  - Illinois--Chicago (http://id.worldcat.org/fast/fst01204048) [FAST Geographic]
+  - Pennsylvania--Philadelphia (http://id.worldcat.org/fast/fst01204170) [FAST Geographic]
+  - Massachusetts--Boston (http://id.worldcat.org/fast/fst01205012) [FAST Geographic]
+  - Missouri--Saint Louis (http://id.worldcat.org/fast/fst01204930) [FAST Geographic]
+  - Ohio--Cleveland (http://id.worldcat.org/fast/fst01205966) [FAST Geographic]
+  - Ohio--Cincinnati (http://id.worldcat.org/fast/fst01205142) [FAST Geographic]
+  - Pennsylvania--Pittsburgh (http://id.worldcat.org/fast/fst01205171) [FAST Geographic]
+  - Michigan--Detroit (http://id.worldcat.org/fast/fst01205010) [FAST Geographic]
+  - Alabama--Birmingham (http://id.worldcat.org/fast/fst01204958) [FAST Geographic]
+  - Missouri--Kansas City (http://id.worldcat.org/fast/fst01204999) [FAST Geographic]
+  - Minnesota--Minneapolis (http://id.worldcat.org/fast/fst01204260) [FAST Geographic]
+  - Tennessee--Nashville (http://id.worldcat.org/fast/fst01204195) [FAST Geographic]
+  - Utah--Salt Lake City (http://id.worldcat.org/fast/fst01205314) [FAST Geographic]
+  - Washington (State)--Seattle (http://id.worldcat.org/fast/fst01204940) [FAST Geographic]
+  - Illinois--Peoria (http://id.worldcat.org/fast/fst01206107) [FAST Geographic]
+  - Québec--Île-de-Montréal (http://id.worldcat.org/fast/fst01215779) [FAST Geographic]
+  - Church of England in Canada. Diocese of Toronto (http://id.worldcat.org/fast/fst00629663) [FAST Geographic]
+  - Ilarion, Metropolitan of Winnipeg and All Canada, 1882-1972 (http://id.worldcat.org/fast/fst00069859) [FAST Geographic]
+  - Canada. Forest Products Laboratory (Vancouver, B.C.) (http://id.worldcat.org/fast/fst00549968) [FAST Geographic]
+  - New Brunswick--Saint John (http://id.worldcat.org/fast/fst01233595) [FAST Geographic]
+  - Nova Scotia--Halifax (http://id.worldcat.org/fast/fst01219177) [FAST Geographic]
+  - Nova Scotia--Sydney (http://id.worldcat.org/fast/fst01211019) [FAST Geographic]
+  - Ohio--Toledo (http://id.worldcat.org/fast/fst01211740) [FAST Geographic]
+  - Ohio--Dayton (http://id.worldcat.org/fast/fst01204702) [FAST Geographic]
+  - Maryland--Baltimore (http://id.worldcat.org/fast/fst01204292) [FAST Geographic]
+  - United States (http://id.worldcat.org/fast/fst01204155) [FAST Geographic]
+  - Canada (http://id.worldcat.org/fast/fst01204310) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 25 (Issue: 1917-05-39):
+
+Article: 'To Encourage More Home Building' - Discusses a nationwide campaign by the National Association of Real Estate Boards to promote home ownership and increase lumber consumption. Key figures include Hill Ferguson (Chairman) and other committee members. Topics include real estate, lumber industry, and community engagement strategies.
+
+Topics:
+  - Home ownership
+  - Real estate
+  - Lumber industry
+  - Community engagement
+  - Building campaigns
+  - Advertising strategies
+  - Educational initiatives
+  - Construction industry
+
+Named Entities:
+  - National Association of Real Estate Boards (Organization)
+  - Hill Ferguson (Person)
+  - J. E. Morris (Person)
+  - Paul C. Murphy (Person)
+  - I. F. Eppich (Person)
+  - John S. Leslie (Person)
+
+Geographic Entities:
+  - Birmingham--Alabama (City)
+  - Indianapolis--Indiana (City)
+  - Denver--Colorado (City)
+  - Portland--Oregon (City)
+  - Sharon--Pennsylvania (City)
+
+Subject Headings (Selected):
+  - Home ownership--United States (http://id.loc.gov/authorities/subjects/sh2008105753) [LCSH]
+  - Lumber trade (http://id.loc.gov/authorities/subjects/sh85078814) [LCSH]
+  - advertising (http://vocab.getty.edu/aat/300054347) [Getty AAT]
+
+Geographic Subject Headings:
+  - Alabama--Birmingham (http://id.worldcat.org/fast/fst01204958) [FAST Geographic]
+  - Indiana--Indianapolis (http://id.worldcat.org/fast/fst01205182) [FAST Geographic]
+  - Colorado--Denver (http://id.worldcat.org/fast/fst01205192) [FAST Geographic]
+  - Oregon--Portland (http://id.worldcat.org/fast/fst01204325) [FAST Geographic]
+  - Pennsylvania--Sharon (http://id.worldcat.org/fast/fst01221835) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 26 (Issue: 1917-05-39):
+
+Article: 'Buy a Home' Campaign Strategies and Augusta Builders' Exchange Formation. Discusses promotional tactics for real estate and the establishment of a builders' exchange in Augusta, Georgia. Includes mention of the American Institute of Architects meeting in Atlanta.
+
+Topics:
+  - Real estate advertising
+  - Builders' exchanges
+  - Architectural meetings
+  - Home ownership promotion
+  - Building trades organization
+  - Architectural associations
+  - Community engagement in architecture
+  - Professional networking in architecture
+
+Named Entities:
+  - Joe T. Lawrence (Person)
+  - McKenzie Building Company (Firm)
+  - T. T. Flagler (Person)
+  - National Association of Builders’ Exchanges (Organization)
+  - Dan Carey (Person)
+  - Atlanta Builders’ Association (Organization)
+  - F. E. Gibson (Person)
+  - Woodward Lumber Company (Firm)
+  - Whitney-McNeil Electric Company (Firm)
+  - E. J. Erbelding (Person)
+  - Brill Electric Company (Firm)
+  - American Institute of Architects (Organization)
+  - John Lawrence Mauran (Person)
+  - Mayor Candler (Person)
+
+Geographic Entities:
+  - Augusta--Georgia (City)
+  - Atlanta--Georgia (City)
+  - United States (Country)
+
+Subject Headings (Selected):
+  - architectural societies (http://vocab.getty.edu/aat/300026011) [Getty AAT]
+  - professional associations (http://vocab.getty.edu/aat/300025952) [Getty AAT]
+
+Geographic Subject Headings:
+  - Georgia--Augusta (http://id.worldcat.org/fast/fst01206406) [FAST Geographic]
+  - Georgia--Atlanta (http://id.worldcat.org/fast/fst01204627) [FAST Geographic]
+  - United States (http://id.worldcat.org/fast/fst01204155) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 27 (Issue: 1917-05-39):
+
+Article: 'The Work of Henry Hering' - An exploration of the sculptor Henry Hering's artistic philosophy and influences, contrasting realism and idealism in sculpture. Discusses Hering's background and his relationship with notable figures like Augustus Saint Gaudens.
+
+Topics:
+  - Sculpture
+  - Realism
+  - Idealism
+  - Artistic Influence
+  - Art Market
+  - Symbolism
+  - Artistic Philosophy
+
+Named Entities:
+  - Henry Hering (Sculptor)
+  - Rodin (Sculptor)
+  - Guy Pene du Bois (Person)
+  - Augustus Saint Gaudens (Sculptor)
+  - Cooper Union (School)
+  - Martini (Person)
+
+Geographic Entities:
+  - New York City--New York (City)
+
+Subject Headings (Selected):
+  - Sculpture (http://id.loc.gov/authorities/subjects/sh85119004) [LCSH]
+  - Idealism (http://id.loc.gov/authorities/subjects/sh85064123) [LCSH]
+  - Influence (Literary, artistic, etc.) (http://id.loc.gov/authorities/subjects/sh85066122) [LCSH]
+  - artistic concepts (http://vocab.getty.edu/aat/300168394) [Getty AAT]
+
+Geographic Subject Headings:
+  - New York (State)--New York (http://id.worldcat.org/fast/fst01204333) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 28 (Issue: 1917-05-39):
+
+Article: Discussion on the works of sculptor Henry Hering, focusing on his approach to realism and classicism in sculpture. Includes photographs of his works 'Spring' and 'Winter'. Key themes include the critique of modern sculptors and the balance between realism and idealism.
+
+Topics:
+  - Sculpture
+  - Realism
+  - Classicism
+  - Hellenism
+  - Art Criticism
+  - Modern Sculpture
+
+Named Entities:
+  - Henry Hering (Sculptor)
+  - Rodin (Sculptor)
+
+Subject Headings (Selected):
+  - Sculpture (http://id.loc.gov/authorities/subjects/sh85119004) [LCSH]
+  - classicism (http://vocab.getty.edu/aat/300056513) [Getty AAT]
+  - art criticism (http://vocab.getty.edu/aat/300168233) [Getty AAT]
+
+
+--------------------------------------------------
+
+Page 29 (Issue: 1917-05-39):
+
+Article: Discussion of Henry Hering's bronze sculptures 'L'Allegro' and 'Diana'. Includes themes of realism and idealism in art, and references to Augustus Saint Gaudens and John Freeman.
+
+Topics:
+  - Bronze sculpture
+  - Realism in art
+  - Idealism in art
+  - Artistic expression
+  - Sculpture techniques
+  - Art exhibitions
+
+Named Entities:
+  - Henry Hering (Sculptor)
+  - Augustus Saint Gaudens (Sculptor)
+  - John Freeman (Person)
+  - Metropolitan Museum of Art (Organization)
+
+Geographic Entities:
+  - New England (Region)
+
+Subject Headings (Selected):
+  - Bronze sculpture (http://id.worldcat.org/fast/fst00839496) [FAST]
+  - Idealism in art (http://id.loc.gov/authorities/subjects/sh85064130) [LCSH]
+  - Sculpture--Technique (http://id.loc.gov/authorities/subjects/sh85119016) [LCSH]
+
+Geographic Subject Headings:
+  - New England (http://id.worldcat.org/fast/fst01241913) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 30 (Issue: 1917-05-39):
+
+Article: Discussion on the works of sculptor Hering, highlighting his influence from ancient Greek art and his notable pieces. Includes information on the Raleigh Building Trades Association and foreign trade opportunities. Key figures include Charles Platt (Architect) and Gamble Rogers (Architect).
+
+Topics:
+  - Sculpture
+  - Greek Art
+  - Bas-relief
+  - Building Trades
+  - Trade Opportunities
+  - Architectural Motifs
+  - Portraiture
+  - Art and Architecture
+
+Named Entities:
+  - Kenyon Cox (Person)
+  - Ellen Emmet (Person)
+  - Bishop Talbot (Person)
+  - Roger Platt (Person)
+  - Charles Platt (Architect)
+  - Praxiteles (Sculptor)
+  - Venus (Mythological Figure)
+  - Diana (Mythological Figure)
+  - Saint Gaudens (Sculptor)
+  - Everts Tracy (Architect)
+  - Charles Albert Coffin (Person)
+  - Alice Olin Dows (Person)
+  - Stephen Olin Dows (Person)
+  - Scarsdale Golf and Country Club (Organization)
+  - Gamble Rogers (Architect)
+  - Mather House (Building)
+  - Albro and Lindeberg (Firm)
+  - Raleigh Building Trades Association (Organization)
+  - John Thiem (Person)
+  - J. C. Murphy (Person)
+  - W. T. Barrow (Person)
+  - Bureau of Foreign and Domestic Commerce (Organization)
+
+Geographic Entities:
+  - Southern Pennsylvania (Region)
+  - Raleigh--North Carolina (City)
+  - Washington--District of Columbia (City)
+  - New York--New York (City)
+  - Chicago--Illinois (City)
+  - New Orleans--Louisiana (City)
+  - San Francisco--California (City)
+  - Spain (Country)
+  - Switzerland (Country)
+
+Subject Headings (Selected):
+  - Sculpture (http://id.loc.gov/authorities/subjects/sh85119004) [LCSH]
+  - Art, Greek (http://id.loc.gov/authorities/subjects/sh85007690) [LCSH]
+  - building trades (http://vocab.getty.edu/aat/300263179) [Getty AAT]
+
+Geographic Subject Headings:
+  - Connellsville and Southern Pennsylvania Railway Company (http://id.worldcat.org/fast/fst00761404) [FAST Geographic]
+  - North Carolina--Raleigh (http://id.worldcat.org/fast/fst01206341) [FAST Geographic]
+  - Robert F. Kennedy Memorial Stadium (Washington, D.C.) (http://id.worldcat.org/fast/fst00631048) [FAST Geographic]
+  - New York (State)--New York (http://id.worldcat.org/fast/fst01204333) [FAST Geographic]
+  - Illinois--Chicago (http://id.worldcat.org/fast/fst01204048) [FAST Geographic]
+  - Louisiana--New Orleans (http://id.worldcat.org/fast/fst01204311) [FAST Geographic]
+  - California--San Francisco (http://id.worldcat.org/fast/fst01204481) [FAST Geographic]
+  - Spain (http://id.worldcat.org/fast/fst01204303) [FAST Geographic]
+  - Switzerland (http://id.worldcat.org/fast/fst01205401) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 31 (Issue: 1917-05-39):
+
+Article: Biography of Richard Englemann, a sculptor known for his early work 'Philosopher'. Discusses his transition from bookkeeper to sculptor and his early success. Includes an image of 'The Mother' by Josef Flossmann.
+
+Topics:
+  - Sculpture
+  - Artistic Development
+  - 19th Century Art
+  - Wax Modeling
+  - Art Exhibitions
+
+Named Entities:
+  - Richard Englemann (Sculptor)
+  - Josef Flossmann (Sculptor)
+  - The Mother (Sculpture)
+  - Philosopher (Sculpture)
+
+Geographic Entities:
+  - St. Georgen--Germany (City)
+  - Bayreuth--Germany (City)
+
+Subject Headings (Selected):
+  - Sculpture (http://id.loc.gov/authorities/subjects/sh85119004) [LCSH]
+  - artistic change (http://vocab.getty.edu/aat/300263368) [Getty AAT]
+
+Geographic Subject Headings:
+  - Germany--Sankt Georgen im Schwarzwald (http://id.worldcat.org/fast/fst01237011) [FAST Geographic]
+  - Germany--Bayreuth (http://id.worldcat.org/fast/fst01202701) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 32 (Issue: 1917-05-39):
+
+Article: Discussion of Richard Engelmann's sculptural work and influences, including his time in Florence, Paris, and Berlin. Key figures mentioned include Hildebrandt, Boecklein, and Begas. The page features images of Engelmann's sculptures, highlighting his style and artistic evolution.
+
+Topics:
+  - Sculpture
+  - Artistic influences
+  - Realism
+  - Plastic art
+  - Artistic rejection
+  - Artistic evolution
+  - 19th century art
+  - European art movements
+
+Named Entities:
+  - Richard Engelmann (Sculptor)
+  - Hildebrandt (Artist)
+  - Boecklein (Artist)
+  - Rude (Artist)
+  - Carpeaux (Artist)
+  - Dubois (Artist)
+  - Mercie (Artist)
+  - Damot (Artist)
+  - Begas (Sculptor)
+  - Julian Academy (School)
+
+Geographic Entities:
+  - Florence--Italy (City)
+  - Paris--France (City)
+  - Berlin--Germany (City)
+  - Munich--Germany (City)
+
+Subject Headings (Selected):
+  - Sculpture (http://id.loc.gov/authorities/subjects/sh85119004) [LCSH]
+  - Influence (Literary, artistic, etc.) (http://id.loc.gov/authorities/subjects/sh85066122) [LCSH]
+  - plastic arts (http://vocab.getty.edu/aat/300311925) [Getty AAT]
+  - artistic change (http://vocab.getty.edu/aat/300263368) [Getty AAT]
+  - Central European (http://vocab.getty.edu/aat/300385999) [Getty AAT]
+
+Geographic Subject Headings:
+  - Italy--Florence (http://id.worldcat.org/fast/fst01204699) [FAST Geographic]
+  - France--Paris (http://id.worldcat.org/fast/fst01205283) [FAST Geographic]
+  - Germany--Berlin (http://id.worldcat.org/fast/fst01204829) [FAST Geographic]
+  - Germany--Munich (http://id.worldcat.org/fast/fst01205308) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 33 (Issue: 1917-05-39):
+
+Article: Discussion of Richard Engelmann's sculptural work and a job announcement for an assistant inspector of engineering material. Key topics include Engelmann's artistic evolution and the requirements for a civil service position related to aircraft materials.
+
+Topics:
+  - Sculpture
+  - Artistic movements
+  - Secession
+  - Civil service
+  - Aircraft materials
+  - Engineering inspection
+  - Navy Department
+  - Machinery and material testing
+
+Named Entities:
+  - Richard Engelmann (Sculptor)
+  - United States Civil Service Commission (Organization)
+
+Geographic Entities:
+  - Boston--Massachusetts (City)
+  - Brooklyn--New York (City)
+  - Pittsburgh--Pennsylvania (City)
+  - Buffalo--New York (City)
+  - Osnabrueck--Germany (City)
+
+Subject Headings (Selected):
+  - Sculpture (http://id.loc.gov/authorities/subjects/sh85119004) [LCSH]
+  - Civil service (http://id.worldcat.org/fast/fst00862730) [FAST]
+  - Engineering inspection (http://id.loc.gov/authorities/subjects/sh85043228) [LCSH]
+
+Geographic Subject Headings:
+  - Massachusetts--Boston (http://id.worldcat.org/fast/fst01205012) [FAST Geographic]
+  - New York (State)--New York--Brooklyn (http://id.worldcat.org/fast/fst01312516) [FAST Geographic]
+  - Pennsylvania--Pittsburgh (http://id.worldcat.org/fast/fst01205171) [FAST Geographic]
+  - New York (State)--Buffalo (http://id.worldcat.org/fast/fst01205730) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 34 (Issue: 1917-05-39):
+
+Article: Civil Service Examination for Construction Roles. This page details the requirements and procedures for applying to civil service positions related to construction inspection. It includes information on education, experience, and application processes.
+
+Topics:
+  - Civil service examinations
+  - Construction inspection
+  - Building trades
+  - Technical education
+  - Employment requirements
+  - Government positions
+  - Application procedures
+  - Experience evaluation
+
+Named Entities:
+  - United States Civil Service Commission (Organization)
+  - Civil Service Commission (Organization)
+  - Porto Rican Civil Service Commission (Organization)
+  - Navy Department (Organization)
+
+Geographic Entities:
+  - Washington--District of Columbia (City)
+  - Boston--Massachusetts (City)
+  - Philadelphia--Pennsylvania (City)
+  - Atlanta--Georgia (City)
+  - Cincinnati--Ohio (City)
+  - Chicago--Illinois (City)
+  - St. Paul--Minnesota (City)
+  - Seattle--Washington (City)
+  - San Francisco--California (City)
+  - New York--New York (City)
+  - New Orleans--Louisiana (City)
+  - Honolulu--Hawaii (City)
+  - St. Louis--Missouri (City)
+  - Balboa Heights--Canal Zone (City)
+  - San Juan--Puerto Rico (City)
+
+Subject Headings (Selected):
+  - Civil service--United States--Examinations (http://id.loc.gov/authorities/subjects/sh2008101086) [LCSH]
+  - building inspection (http://vocab.getty.edu/aat/300417566) [Getty AAT]
+  - building trades (http://vocab.getty.edu/aat/300263179) [Getty AAT]
+  - Technical education (http://id.loc.gov/authorities/subjects/sh85133121) [LCSH]
+  - Civil service positions (http://id.loc.gov/authorities/subjects/sh85026413) [LCSH]
+  - application forms (http://vocab.getty.edu/aat/300027002) [Getty AAT]
+  - evaluation (http://vocab.getty.edu/aat/300054621) [Getty AAT]
+
+Geographic Subject Headings:
+  - Robert F. Kennedy Memorial Stadium (Washington, D.C.) (http://id.worldcat.org/fast/fst00631048) [FAST Geographic]
+  - Massachusetts--Boston (http://id.worldcat.org/fast/fst01205012) [FAST Geographic]
+  - Pennsylvania--Philadelphia (http://id.worldcat.org/fast/fst01204170) [FAST Geographic]
+  - Georgia--Atlanta (http://id.worldcat.org/fast/fst01204627) [FAST Geographic]
+  - Ohio--Cincinnati (http://id.worldcat.org/fast/fst01205142) [FAST Geographic]
+  - Illinois--Chicago (http://id.worldcat.org/fast/fst01204048) [FAST Geographic]
+  - Minnesota--Saint Paul (http://id.worldcat.org/fast/fst01212130) [FAST Geographic]
+  - Washington (State)--Seattle (http://id.worldcat.org/fast/fst01204940) [FAST Geographic]
+  - California--San Francisco (http://id.worldcat.org/fast/fst01204481) [FAST Geographic]
+  - New York (State)--New York (http://id.worldcat.org/fast/fst01204333) [FAST Geographic]
+  - Louisiana--New Orleans (http://id.worldcat.org/fast/fst01204311) [FAST Geographic]
+  - Hawaii--Honolulu (http://id.worldcat.org/fast/fst01204916) [FAST Geographic]
+  - Missouri--Saint Louis (http://id.worldcat.org/fast/fst01204930) [FAST Geographic]
+  - Panama--Balboa Heights (http://id.worldcat.org/fast/fst01202936) [FAST Geographic]
+  - Puerto Rico--San Juan (http://id.worldcat.org/fast/fst01214595) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 35 (Issue: 1917-05-39):
+
+Article: 'Want Architectural Draftsman.' Details the qualifications and requirements for architectural draftsman positions in the U.S. Civil Service, focusing on education, training, and experience. Discusses the application process and grading system for potential candidates.
+
+Topics:
+  - Architectural Drafting
+  - Civil Service Examinations
+  - Technical Education
+  - Employment Qualifications
+  - Architectural Training
+  - Government Employment
+  - Drafting Techniques
+  - Professional Certification
+
+Named Entities:
+  - United States Civil Service Commission (Organization)
+  - Bureau of Yards and Docks (Organization)
+  - Navy Department (Organization)
+  - Civil Service Commission (Organization)
+
+Geographic Entities:
+  - Washington--District of Columbia (City)
+  - United States (Country)
+
+Subject Headings (Selected):
+  - Civil service--United States--Examinations (http://id.loc.gov/authorities/subjects/sh2008101086) [LCSH]
+  - Technical education (http://id.loc.gov/authorities/subjects/sh85133121) [LCSH]
+  - architectural education (http://vocab.getty.edu/aat/300054377) [Getty AAT]
+  - drafting (http://vocab.getty.edu/aat/300053179) [Getty AAT]
+  - federal government (http://vocab.getty.edu/aat/300055506) [Getty AAT]
+
+Geographic Subject Headings:
+  - Robert F. Kennedy Memorial Stadium (Washington, D.C.) (http://id.worldcat.org/fast/fst00631048) [FAST Geographic]
+  - United States (http://id.worldcat.org/fast/fst01204155) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 36 (Issue: 1917-05-39):
+
+Article: Demand for plumbing supplies in Bogota and plans of the Metal Lath Association. Discusses the need for modern plumbing in Colombia and the strategic plans of the Metal Lath Association, including fire resistance testing and co-operative publicity campaigns.
+
+Topics:
+  - Plumbing supplies
+  - Metal lath
+  - Fire resistance
+  - Building codes
+  - Co-operative publicity
+  - Non-combustible roofing
+  - Construction materials
+  - Architectural trends
+
+Named Entities:
+  - Zenas W. Carter (Person)
+  - C. O. Powell (Person)
+  - S. E. Feeheimer (Person)
+  - R. M. Nicholson (Person)
+  - C. M. Stewart (Person)
+  - L. E. Fisher (Person)
+  - L. J. Rouleau (Person)
+  - H. F. Ericksen (Person)
+  - Wm. Geo. Lane (Person)
+  - Walter L. Weeden (Person)
+  - Northwestern Expanded Metal Company (Firm)
+  - Trussed Concrete Steel Company (Firm)
+  - Berger Manufacturing Company (Firm)
+  - Consolidated Expanded Metal Companies (Firm)
+  - General Fireproofing Company (Firm)
+  - Penn Metal Company (Firm)
+  - Milwaukee Corrugating Company (Firm)
+  - The Bostwick Steel Lath Company (Firm)
+  - Julian Armstrong Bureau of Related Industries (Organization)
+  - Granite Paving Block Manufacturers’ Association (Organization)
+  - Associated Metal Lath Manufacturers (Organization)
+
+Geographic Entities:
+  - Boston--Massachusetts (City)
+  - Philadelphia--Pennsylvania (City)
+  - Atlanta--Georgia (City)
+  - Cincinnati--Ohio (City)
+  - Chicago--Illinois (City)
+  - St. Paul--Minnesota (City)
+  - Seattle--Washington (City)
+  - San Francisco--California (City)
+  - New York--New York (City)
+  - New Orleans--Louisiana (City)
+  - Honolulu--Hawaii (City)
+  - St. Louis--Missouri (City)
+  - Balboa Heights--Canal Zone (City)
+  - San Juan--Puerto Rico (City)
+  - Barranquilla--Colombia (City)
+  - Bogota--Colombia (City)
+  - Cleveland--Ohio (City)
+  - Worcester--Massachusetts (City)
+  - Meridian--Mississippi (City)
+
+Subject Headings (Selected):
+  - Plumbing--Equipment and supplies (http://id.loc.gov/authorities/subjects/sh85103553) [LCSH]
+  - diamond mesh lath (http://vocab.getty.edu/aat/300014894) [Getty AAT]
+  - fire resistance (http://vocab.getty.edu/aat/300163592) [Getty AAT]
+  - Building laws (http://id.loc.gov/authorities/subjects/sh85017734) [LCSH]
+  - Publicity (http://id.worldcat.org/fast/fst01083449) [FAST]
+  - Roofing (http://id.worldcat.org/fast/fst01100272) [FAST]
+  - building materials (http://vocab.getty.edu/aat/300014857) [Getty AAT]
+
+Geographic Subject Headings:
+  - Massachusetts--Boston (http://id.worldcat.org/fast/fst01205012) [FAST Geographic]
+  - Pennsylvania--Philadelphia (http://id.worldcat.org/fast/fst01204170) [FAST Geographic]
+  - Georgia--Atlanta (http://id.worldcat.org/fast/fst01204627) [FAST Geographic]
+  - Ohio--Cincinnati (http://id.worldcat.org/fast/fst01205142) [FAST Geographic]
+  - Illinois--Chicago (http://id.worldcat.org/fast/fst01204048) [FAST Geographic]
+  - Minnesota--Saint Paul (http://id.worldcat.org/fast/fst01212130) [FAST Geographic]
+  - Washington (State)--Seattle (http://id.worldcat.org/fast/fst01204940) [FAST Geographic]
+  - California--San Francisco (http://id.worldcat.org/fast/fst01204481) [FAST Geographic]
+  - New York (State)--New York (http://id.worldcat.org/fast/fst01204333) [FAST Geographic]
+  - Louisiana--New Orleans (http://id.worldcat.org/fast/fst01204311) [FAST Geographic]
+  - Hawaii--Honolulu (http://id.worldcat.org/fast/fst01204916) [FAST Geographic]
+  - Missouri--Saint Louis (http://id.worldcat.org/fast/fst01204930) [FAST Geographic]
+  - Panama--Balboa Heights (http://id.worldcat.org/fast/fst01202936) [FAST Geographic]
+  - Puerto Rico--San Juan (http://id.worldcat.org/fast/fst01214595) [FAST Geographic]
+  - Colombia--Barranquilla (http://id.worldcat.org/fast/fst01231007) [FAST Geographic]
+  - Colombia--Bogotá (http://id.worldcat.org/fast/fst01204897) [FAST Geographic]
+  - Ohio--Cleveland (http://id.worldcat.org/fast/fst01205966) [FAST Geographic]
+  - Massachusetts--Worcester (http://id.worldcat.org/fast/fst01207904) [FAST Geographic]
+  - Mississippi--Meridian (http://id.worldcat.org/fast/fst01209585) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 37 (Issue: 1917-05-39):
+
+Article: 'The Architect and the Community' - Discusses the role of architects in enhancing civic pride and community development through thoughtful design and planning. Highlights the importance of scientific skill and artistic expression in architecture.
+
+Topics:
+  - Architectural design
+  - Civic pride
+  - Community development
+  - Architectural planning
+  - Scientific skill in architecture
+  - Artistic expression in architecture
+
+Named Entities:
+  - Architect (Profession)
+
+Geographic Entities:
+  - Europe (Continent)
+
+Subject Headings (Selected):
+  - Architectural design (http://id.loc.gov/authorities/subjects/sh85006585) [LCSH]
+  - Civic improvement (http://id.worldcat.org/fast/fst00862325) [FAST]
+  - community development (http://vocab.getty.edu/aat/300055433) [Getty AAT]
+  - Architectural design--Planning (http://id.worldcat.org/fast/fst00813212) [FAST]
+  - scientific analysis (http://vocab.getty.edu/aat/300379372) [Getty AAT]
+  - artistic concepts (http://vocab.getty.edu/aat/300168394) [Getty AAT]
+
+Geographic Subject Headings:
+  - World War (1939-1945) (http://id.worldcat.org/fast/fst01180924) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 38 (Issue: 1917-05-39):
+
+Article: Discussion on the role of architects in construction, a new garage design in New York City, and innovations in window glass. Key topics include architectural practices, garage design innovations, and new materials.
+
+Topics:
+  - Architectural practices
+  - Garage design
+  - Construction techniques
+  - Building materials
+  - Innovation in architecture
+  - Professional ethics in architecture
+  - Automobile infrastructure
+  - Window glass technology
+
+Named Entities:
+  - H. B. Mulliken (Designer)
+  - Popular Science Monthly (Publication)
+
+Geographic Entities:
+  - New York--New York (City)
+
+Subject Headings (Selected):
+  - Architectural practice (http://id.loc.gov/authorities/subjects/sh85006604) [LCSH]
+  - Garages--Design and construction (http://id.worldcat.org/fast/fst00937756) [FAST]
+  - construction techniques (http://vocab.getty.edu/aat/300379526) [Getty AAT]
+  - building materials (http://vocab.getty.edu/aat/300014857) [Getty AAT]
+  - Architecture--Technological innovations (http://id.worldcat.org/fast/fst00813538) [FAST]
+  - professional ethics (http://vocab.getty.edu/aat/300055942) [Getty AAT]
+  - Infrastructure (Economics) (http://id.worldcat.org/fast/fst00973275) [FAST]
+
+Geographic Subject Headings:
+  - New York (State)--New York (http://id.worldcat.org/fast/fst01204333) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 39 (Issue: 1917-05-39):
+
+Page 41: Poem and Photograph - 'The Dogwood Trees' by H. E. Harman. A poetic reflection on the beauty of dogwood trees, accompanied by a photograph of a blooming dogwood in a natural setting.
+
+Topics:
+  - Dogwood trees
+  - Poetry
+  - Natural landscapes
+  - Spring
+  - Memory
+
+Named Entities:
+  - H. E. Harman (Person)
+
+Geographic Entities:
+  - Carolina (Region)
+
+Subject Headings (Selected):
+  - dogwood (wood) (http://vocab.getty.edu/aat/300012069) [Getty AAT]
+  - Poetry (http://id.loc.gov/authorities/subjects/sh85103704) [LCSH]
+  - natural landscapes (http://vocab.getty.edu/aat/300132294) [Getty AAT]
+  - Spring (http://id.loc.gov/authorities/subjects/sh85127000) [LCSH]
+
+Geographic Subject Headings:
+  - North Carolina (http://id.worldcat.org/fast/fst01204304) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 40 (Issue: 1917-05-39):
+
+Image: Park scenes in Springfield, Ohio. Photographs depict serene park landscapes, including waterways and bridges, highlighting early 20th-century park design.
+
+Topics:
+  - Park design
+  - Landscape architecture
+  - Urban parks
+  - Early 20th-century architecture
+  - Bridges
+  - Waterways
+
+Geographic Entities:
+  - Springfield--Ohio (City)
+
+Subject Headings (Selected):
+  - Parks--Design and construction (http://id.worldcat.org/fast/fst01053716) [FAST]
+  - Landscape architecture (http://id.worldcat.org/fast/fst00991814) [FAST]
+  - urban parks (http://vocab.getty.edu/aat/300008197) [Getty AAT]
+  - Bridges (http://id.loc.gov/authorities/subjects/sh85016829) [LCSH]
+  - waterways (http://vocab.getty.edu/aat/300263418) [Getty AAT]
+
+Geographic Subject Headings:
+  - Ohio--Springfield (http://id.worldcat.org/fast/fst01219897) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 41 (Issue: 1917-05-39):
+
+Article: 'Curing Auditorium of Echoes' and 'Says Atlanta Needs City Planning Board'. Discusses acoustic improvements in the University of Illinois auditorium and urban planning challenges in Atlanta, featuring insights from Architect John Lawrence Mauran.
+
+Topics:
+  - Acoustic treatment
+  - City planning
+  - Urban development
+  - Architectural acoustics
+  - Soundproofing
+  - City beautiful movement
+  - Urban renewal
+  - Architectural innovation
+
+Named Entities:
+  - University of Illinois (School)
+  - John Lawrence Mauran (Architect)
+  - Haralson Bleekley (Architect)
+
+Geographic Entities:
+  - Atlanta--Georgia (City)
+  - St. Louis--Missouri (City)
+  - Seattle--Washington (City)
+  - Portland--Maine (City)
+  - Marseilles--France (City)
+  - Harrisburg--Pennsylvania (City)
+  - England (Country)
+
+Subject Headings (Selected):
+  - Architectural acoustics (http://id.loc.gov/authorities/subjects/sh85006581) [LCSH]
+  - City planning (http://id.loc.gov/authorities/subjects/sh85026282) [LCSH]
+
+Geographic Subject Headings:
+  - Georgia--Atlanta (http://id.worldcat.org/fast/fst01204627) [FAST Geographic]
+  - Missouri--Saint Louis (http://id.worldcat.org/fast/fst01204930) [FAST Geographic]
+  - Washington (State)--Seattle (http://id.worldcat.org/fast/fst01204940) [FAST Geographic]
+  - Maine--Portland (http://id.worldcat.org/fast/fst01213254) [FAST Geographic]
+  - France--Marseille (http://id.worldcat.org/fast/fst01206417) [FAST Geographic]
+  - Pennsylvania--Harrisburg (http://id.worldcat.org/fast/fst01204725) [FAST Geographic]
+  - Great Britain (http://id.worldcat.org/fast/fst01204623) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 42 (Issue: 1917-05-39):
+
+Article: Discussion on architectural trends and innovations, including Greensboro builders' meeting, unique house designs, new radiator technology, and a house built on a steep slope. Key topics include innovative architectural features and construction techniques.
+
+Topics:
+  - Architectural innovation
+  - Building technology
+  - Residential architecture
+  - Pueblo Indian style
+  - Radiator design
+  - Construction techniques
+  - Urban development
+  - Architectural meetings
+
+Named Entities:
+  - American Institute of Architects (Organization)
+  - Greensboro Builders (Organization)
+
+Geographic Entities:
+  - Greensboro--North Carolina (City)
+  - Evanston--Illinois (City)
+  - San Francisco--California (City)
+
+Subject Headings (Selected):
+  - construction techniques (http://vocab.getty.edu/aat/300379526) [Getty AAT]
+
+Geographic Subject Headings:
+  - North Carolina--Greensboro (http://id.worldcat.org/fast/fst01205296) [FAST Geographic]
+  - Illinois--Evanston (http://id.worldcat.org/fast/fst01204903) [FAST Geographic]
+  - California--San Francisco (http://id.worldcat.org/fast/fst01204481) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 43 (Issue: 1917-05-39):
+
+Article: Various architectural updates including new office openings, partnerships, and an obituary. Features a tribute to E. J. Putnam, a notable figure in the building materials industry.
+
+Topics:
+  - Architectural partnerships
+  - Architectural offices
+  - Building materials
+  - Waterproofing technology
+  - Architectural obituaries
+  - Architectural history
+  - Southern architecture
+  - Building industry
+
+Named Entities:
+  - J. F. Leitner (Architect)
+  - William T. Warren (Architect)
+  - Eugene H. Knight (Architect)
+  - William Roth Ware (Architect)
+  - E. J. Putnam (Person)
+  - Southern GF Co. (Organization)
+  - General Fireproofing Co. (Organization)
+  - Trus-Con Laboratories (Organization)
+  - American Architect and Building News (Publication)
+
+Geographic Entities:
+  - Wilmington--North Carolina (City)
+  - Atlanta--Georgia (City)
+  - Birmingham--Alabama (City)
+  - Cleveland--Ohio (City)
+  - Georgia (State)
+  - Ohio (State)
+
+Subject Headings (Selected):
+  - Architectural partnership (http://id.loc.gov/authorities/subjects/sh85006603) [LCSH]
+  - architectural offices (http://vocab.getty.edu/aat/300444916) [Getty AAT]
+  - building materials (http://vocab.getty.edu/aat/300014857) [Getty AAT]
+  - waterproofing (http://vocab.getty.edu/aat/300053698) [Getty AAT]
+  - architectural history (http://vocab.getty.edu/aat/300054162) [Getty AAT]
+  - Architecture--Southern States (http://id.loc.gov/authorities/subjects/sh98003122) [LCSH]
+  - Building materials industry (http://id.worldcat.org/fast/fst00840771) [FAST]
+
+Geographic Subject Headings:
+  - North Carolina--Wilmington (http://id.worldcat.org/fast/fst01210117) [FAST Geographic]
+  - Georgia--Atlanta (http://id.worldcat.org/fast/fst01204627) [FAST Geographic]
+  - Alabama--Birmingham (http://id.worldcat.org/fast/fst01204958) [FAST Geographic]
+  - Ohio--Cleveland (http://id.worldcat.org/fast/fst01205966) [FAST Geographic]
+  - Georgia (http://id.worldcat.org/fast/fst01204622) [FAST Geographic]
+  - Ohio (http://id.worldcat.org/fast/fst01205075) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 44 (Issue: 1917-05-39):
+
+Article: Trade Notes of Interest. This page features advertisements and updates on building materials and equipment, including innovations like the Keil Saw Filing Machine and Medusa White Portland Cement. Key companies and products are highlighted for their relevance to architects and builders.
+
+Topics:
+  - Automobile trailers
+  - Saw filing machines
+  - Floor surfacers
+  - Hot water heating systems
+  - Cattle stanchions
+  - Water closets
+  - Portland cement
+  - Chemical closets
+
+Named Entities:
+  - Rogers Brothers Company (Firm)
+  - Keil-Dellow Mfg. Co. (Firm)
+  - M. L. Schlueter (Firm)
+  - D. and T. Mfg. Co. (Firm)
+  - Wallace B. Crumb (Person)
+  - Bowlus Mfg. Co. (Firm)
+  - Sandusky Cement Company (Firm)
+  - Sanitary Chemical Closet Co. (Firm)
+  - Philip Gruner & Bros. Lumber Co. (Firm)
+  - J. L. Keil (Person)
+  - Oak Flooring Manufacturers’ Association (Organization)
+  - Oak Flooring Service Bureau (Organization)
+  - F. Meyer & Bro. Co. (Firm)
+
+Geographic Entities:
+  - Albion--Pennsylvania (City)
+  - Plainview--Nebraska (City)
+  - Chicago--Illinois (City)
+  - St. Louis--Missouri (City)
+  - Forestville--Connecticut (City)
+  - Springfield--Ohio (City)
+  - Cleveland--Ohio (City)
+  - Hillsdale--Michigan (City)
+  - Cincinnati--Ohio (City)
+  - Peoria--Illinois (City)
+
+Subject Headings (Selected):
+  - Portland cement (http://id.worldcat.org/fast/fst01072092) [FAST]
+  - chemical toilets (http://vocab.getty.edu/aat/300108693) [Getty AAT]
+
+Geographic Subject Headings:
+  - Pennsylvania--Albion (Erie County) (http://id.worldcat.org/fast/fst01314098) [FAST Geographic]
+  - Nebraska--Plainview (http://id.worldcat.org/fast/fst01230480) [FAST Geographic]
+  - Illinois--Chicago (http://id.worldcat.org/fast/fst01204048) [FAST Geographic]
+  - Missouri--Saint Louis (http://id.worldcat.org/fast/fst01204930) [FAST Geographic]
+  - Connecticut--Forestville (http://id.worldcat.org/fast/fst01247478) [FAST Geographic]
+  - Ohio--Springfield (http://id.worldcat.org/fast/fst01219897) [FAST Geographic]
+  - Ohio--Cleveland (http://id.worldcat.org/fast/fst01205966) [FAST Geographic]
+  - Michigan--Hillsdale County (http://id.worldcat.org/fast/fst01208681) [FAST Geographic]
+  - Ohio--Cincinnati (http://id.worldcat.org/fast/fst01205142) [FAST Geographic]
+  - Illinois--Peoria (http://id.worldcat.org/fast/fst01206107) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 45 (Issue: 1917-05-39):
+
+Article: Discussion on Crumb’s Cattle Stanchion and Bowlus Flush Valves. The page covers innovations in cattle stanchion design by Wallace B. Crumb and advancements in water closet technology by H. C. Bowlus, highlighting their impact on modern architecture and construction practices.
+
+Topics:
+  - Cattle stanchions
+  - Flush valves
+  - Water closets
+  - Sanitary engineering
+  - Architectural materials
+  - Building innovations
+  - Construction technology
+  - Architectural design
+
+Named Entities:
+  - Wallace B. Crumb (Person)
+  - H. C. Bowlus (Person)
+  - Bowlus Mfg. Co. (Firm)
+  - Crumb’s Warriner Patent Chain Hanging Cattle Stanchion (Product)
+  - Bowlus “Famous” flush valve (Product)
+  - Bowlus “Jewel” flush valve (Product)
+
+Geographic Entities:
+  - Forestville--Connecticut (City)
+  - Springfield--Ohio (City)
+  - Greer--South Carolina (City)
+  - Great Falls--South Carolina (City)
+  - Parkersburg--West Virginia (City)
+  - Glenpool--Oklahoma (City)
+  - Boyles--Alabama (City)
+  - Birmingham--Alabama (City)
+  - Atlanta--Georgia (City)
+  - Lavonia--Georgia (City)
+  - Winder--Georgia (City)
+  - Jefferson--Georgia (City)
+  - Perry--Florida (City)
+  - St. Augustine--Florida (City)
+  - Houston--Texas (City)
+  - Port Arthur--Texas (City)
+
+Subject Headings (Selected):
+  - cattle (http://vocab.getty.edu/aat/300250116) [Getty AAT]
+  - flush valves (http://vocab.getty.edu/aat/300079078) [Getty AAT]
+  - toilets (fixtures) (http://vocab.getty.edu/aat/300052638) [Getty AAT]
+  - sanitary engineering (http://vocab.getty.edu/aat/300054485) [Getty AAT]
+  - building materials (http://vocab.getty.edu/aat/300014857) [Getty AAT]
+  - Building--Technological innovations (http://id.loc.gov/authorities/subjects/sh85017703) [LCSH]
+  - Architectural design (http://id.loc.gov/authorities/subjects/sh85006585) [LCSH]
+
+Geographic Subject Headings:
+  - Connecticut--Forestville (http://id.worldcat.org/fast/fst01247478) [FAST Geographic]
+  - Ohio--Springfield (http://id.worldcat.org/fast/fst01219897) [FAST Geographic]
+  - South Carolina--Greer (http://id.worldcat.org/fast/fst01210436) [FAST Geographic]
+  - South Carolina--Great Falls (http://id.worldcat.org/fast/fst01222537) [FAST Geographic]
+  - West Virginia--Parkersburg (http://id.worldcat.org/fast/fst01214465) [FAST Geographic]
+  - Oklahoma--Glenpool (http://id.worldcat.org/fast/fst01226849) [FAST Geographic]
+  - Alabama--Birmingham (http://id.worldcat.org/fast/fst01204958) [FAST Geographic]
+  - Georgia--Atlanta (http://id.worldcat.org/fast/fst01204627) [FAST Geographic]
+  - Georgia--Lavonia (http://id.worldcat.org/fast/fst01219081) [FAST Geographic]
+  - Georgia--Winder (http://id.worldcat.org/fast/fst01217048) [FAST Geographic]
+  - Georgia--Jefferson County (http://id.worldcat.org/fast/fst01218098) [FAST Geographic]
+  - Florida--Perry (http://id.worldcat.org/fast/fst01215235) [FAST Geographic]
+  - Florida--Saint Augustine (http://id.worldcat.org/fast/fst01206165) [FAST Geographic]
+  - Texas--Houston (http://id.worldcat.org/fast/fst01205077) [FAST Geographic]
+  - Texas--Port Arthur (http://id.worldcat.org/fast/fst01211418) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 46 (Issue: 1917-05-39):
+
+Article: Overview of construction projects in the American South, detailing residential and church buildings. Includes architects like G. Lloyd Preacher and firms such as Sanguinet & Staats. Key topics include architectural styles, construction costs, and building materials.
+
+Topics:
+  - Residential architecture
+  - Church architecture
+  - Construction costs
+  - Architectural plans
+  - Building materials
+  - Architectural firms
+  - Southern architecture
+  - Apartment buildings
+
+Named Entities:
+  - J. P. Gaillard (Person)
+  - E. P. Dennis (Architect)
+  - G. Lloyd Preacher (Architect)
+  - N. W. Overstreet (Architect)
+  - John H. Eastwood (Person)
+  - Phillips & Wainwright (Firm)
+  - Fred A. Hendrick (Architect)
+  - Albert Howell, Jr. (Person)
+  - Sanguinet & Staats (Firm)
+  - Bleckley & Irvin (Firm)
+  - W. A. Rayfield & Co. (Firm)
+
+Geographic Entities:
+  - Charleston--South Carolina (City)
+  - Cordele--Georgia (City)
+  - Macon--Georgia (City)
+  - Corinth--Mississippi (City)
+  - Edgefield--South Carolina (City)
+  - Jackson--Mississippi (City)
+  - Louisville--Georgia (City)
+  - Miami--Florida (City)
+  - Pembroke--Georgia (City)
+  - St. Augustine--Florida (City)
+  - Thomson--Georgia (City)
+  - Asheville--North Carolina (City)
+  - Richmond--Virginia (City)
+  - Atlanta--Georgia (City)
+  - Jacksonville--Florida (City)
+  - West Palm Beach--Florida (City)
+  - Charlotte--North Carolina (City)
+  - Dallas--Texas (City)
+  - El Paso--Texas (City)
+  - San Antonio--Texas (City)
+  - Norfolk--Virginia (City)
+  - Plant City--Florida (City)
+  - St. Petersburg--Florida (City)
+  - Greenville--South Carolina (City)
+  - Ennis--Texas (City)
+  - Augusta--Georgia (City)
+  - Bainbridge--Georgia (City)
+  - Fort Payne--Alabama (City)
+  - Greer--South Carolina (City)
+  - Heavener--Oklahoma (City)
+  - Hillsdale--Oklahoma (City)
+  - Medina--Oklahoma (City)
+  - Gainesville--Texas (City)
+
+Subject Headings (Selected):
+  - churches (buildings) (http://vocab.getty.edu/aat/300007466) [Getty AAT]
+  - costs (http://vocab.getty.edu/aat/300068713) [Getty AAT]
+  - Architectural drawing (http://id.loc.gov/authorities/subjects/sh85006587) [LCSH]
+  - building materials (http://vocab.getty.edu/aat/300014857) [Getty AAT]
+  - architectural firms (http://vocab.getty.edu/aat/300312082) [Getty AAT]
+  - Architecture--Southern States (http://id.loc.gov/authorities/subjects/sh98003122) [LCSH]
+
+Geographic Subject Headings:
+  - South Carolina--Charleston (http://id.worldcat.org/fast/fst01204603) [FAST Geographic]
+  - Georgia--Cordele (http://id.worldcat.org/fast/fst01218954) [FAST Geographic]
+  - Georgia--Macon (http://id.worldcat.org/fast/fst01206924) [FAST Geographic]
+  - Mississippi--Corinth (http://id.worldcat.org/fast/fst01212022) [FAST Geographic]
+  - South Carolina--Edgefield County (http://id.worldcat.org/fast/fst01215692) [FAST Geographic]
+  - Mississippi--Jackson (http://id.worldcat.org/fast/fst01205500) [FAST Geographic]
+  - Georgia--Louisville (http://id.worldcat.org/fast/fst01229190) [FAST Geographic]
+  - Florida--Miami (http://id.worldcat.org/fast/fst01213727) [FAST Geographic]
+  - Georgia--Pembroke (http://id.worldcat.org/fast/fst01309815) [FAST Geographic]
+  - Florida--Saint Augustine (http://id.worldcat.org/fast/fst01206165) [FAST Geographic]
+  - Georgia--Thomson (http://id.worldcat.org/fast/fst01268460) [FAST Geographic]
+  - North Carolina--Asheville (http://id.worldcat.org/fast/fst01205440) [FAST Geographic]
+  - Virginia--Richmond (http://id.worldcat.org/fast/fst01205345) [FAST Geographic]
+  - Georgia--Atlanta (http://id.worldcat.org/fast/fst01204627) [FAST Geographic]
+  - Florida--Jacksonville (http://id.worldcat.org/fast/fst01205259) [FAST Geographic]
+  - Florida--West Palm Beach (http://id.worldcat.org/fast/fst01202776) [FAST Geographic]
+  - North Carolina--Charlotte (http://id.worldcat.org/fast/fst01204596) [FAST Geographic]
+  - Texas--Dallas (http://id.worldcat.org/fast/fst01204635) [FAST Geographic]
+  - Texas--El Paso (http://id.worldcat.org/fast/fst01206678) [FAST Geographic]
+  - Texas--San Antonio (http://id.worldcat.org/fast/fst01205169) [FAST Geographic]
+  - Virginia--Norfolk (http://id.worldcat.org/fast/fst01206844) [FAST Geographic]
+  - Florida--Plant City (http://id.worldcat.org/fast/fst01212742) [FAST Geographic]
+  - Florida--Saint Petersburg (http://id.worldcat.org/fast/fst01206910) [FAST Geographic]
+  - South Carolina--Greenville (http://id.worldcat.org/fast/fst01203010) [FAST Geographic]
+  - Texas--Ennis (http://id.worldcat.org/fast/fst01224048) [FAST Geographic]
+  - Georgia--Augusta (http://id.worldcat.org/fast/fst01206406) [FAST Geographic]
+  - Georgia--Bainbridge (http://id.worldcat.org/fast/fst01213432) [FAST Geographic]
+  - Alabama--Fort Payne (http://id.worldcat.org/fast/fst01212124) [FAST Geographic]
+  - South Carolina--Greer (http://id.worldcat.org/fast/fst01210436) [FAST Geographic]
+  - Oklahoma--Heavener (http://id.worldcat.org/fast/fst01277813) [FAST Geographic]
+  - Oklahoma--Hillsdale (http://id.worldcat.org/fast/fst01251679) [FAST Geographic]
+  - Texas--Gainesville (http://id.worldcat.org/fast/fst01220975) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 47 (Issue: 1917-05-39):
+
+Advertisement page featuring Atlanta-based building and supply companies. Includes ads for plumbing, roofing, stone, and waterproofing services. Highlights local firms and their specialties in construction materials and services.
+
+Topics:
+  - Plumbing supplies
+  - Roofing materials
+  - Stone and marble
+  - Waterproofing techniques
+  - Architectural engineering
+  - Building materials
+  - Construction services
+  - Interior decoration
+
+Named Entities:
+  - M. D. & H. L. Smith Co. (Firm)
+  - Stephenson Company, Inc. (Firm)
+  - Friddell Bros. (Firm)
+  - F. E. Markel (Person)
+  - Pickert Plumbing Supply Co. (Firm)
+  - Knox & Maier Co. (Firm)
+  - Capital Stone Company (Firm)
+  - B. Mifflin Hood Brick Company (Firm)
+  - McNinch & Kalb (Firm)
+  - Atlanta Waterproofing & Flooring Co. (Firm)
+
+Geographic Entities:
+  - Atlanta--Georgia (City)
+
+Subject Headings (Selected):
+  - Plumbing--Equipment and supplies (http://id.loc.gov/authorities/subjects/sh85103553) [LCSH]
+  - Roofing (http://id.loc.gov/authorities/subjects/sh85115317) [LCSH]
+  - Marble industry and trade (http://id.worldcat.org/fast/fst01008973) [FAST]
+  - waterproofing (http://vocab.getty.edu/aat/300053698) [Getty AAT]
+  - building materials (http://vocab.getty.edu/aat/300014857) [Getty AAT]
+
+Geographic Subject Headings:
+  - Georgia--Atlanta (http://id.worldcat.org/fast/fst01204627) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 48 (Issue: 1917-05-39):
+
+Advertisement and Article: This page includes advertisements for Bryan Electric Co. and Walker Roofing Co., followed by a detailed list of construction projects and school building plans across the Southern United States. Key topics include Gothic architectural style and various school construction projects.
+
+Topics:
+  - Gothic architecture
+  - School construction
+  - Church architecture
+  - Public instruction
+  - Building materials
+  - Architectural plans
+  - Construction bonds
+  - Educational facilities
+
+Named Entities:
+  - Bryan Electric Co. (Firm)
+  - Walker Roofing Co. (Firm)
+  - Wm. Ward Watkin (Architect)
+  - Cram & Ferguson (Firm)
+  - L. L. Stephenson (Architect)
+  - Finger & Bailey (Firm)
+  - A. C. Price (Architect)
+  - J. Rice Scott (Engineer)
+  - S. J. Welch (Architect)
+  - Bryan & Potete (Firm)
+  - J. V. Burke (Person)
+  - W. B. Taley (Architect)
+  - H. F. Saxelbye (Architect)
+  - L. L. Hunter (Architect)
+  - Wm. Newton Dibrell (Architect)
+
+Geographic Entities:
+  - Atlanta--Georgia (City)
+  - Houston--Texas (City)
+  - Orange--Texas (City)
+  - Quanah--Texas (City)
+  - Yoakum--Texas (City)
+  - Richmond--Virginia (City)
+  - Cotton Plant--Arkansas (City)
+  - Earle--Arkansas (City)
+  - Alcorn--Mississippi (City)
+  - Anderson--South Carolina (City)
+  - Ellenton--Florida (City)
+  - Jackson--Georgia (City)
+  - Millen--Georgia (City)
+  - Sandersville--Georgia (City)
+  - Trenton--South Carolina (City)
+  - Woodrow--Florida (City)
+  - Attalla--Alabama (City)
+  - Rich Mountain--Arkansas (City)
+  - Arcadia--Florida (City)
+  - Laurel Hill--Florida (City)
+  - Groveland--Florida (City)
+  - Lakeland--Florida (City)
+  - Ocala--Florida (City)
+  - Hoffman--North Carolina (City)
+  - Lexington--North Carolina (City)
+  - Statesville--North Carolina (City)
+  - Woodland--North Carolina (City)
+  - Knoxville--Tennessee (City)
+  - Yorkville--Tennessee (City)
+  - Burkburnett--Texas (City)
+
+Subject Headings (Selected):
+  - Gothic revival (Architecture) (http://id.worldcat.org/fast/fst00945078) [FAST]
+  - School buildings--Design and construction (http://id.worldcat.org/fast/fst01107058) [FAST]
+  - Church architecture (http://id.worldcat.org/fast/fst00860550) [FAST]
+  - building materials (http://vocab.getty.edu/aat/300014857) [Getty AAT]
+  - Architecture--Designs and plans--Working drawings (http://id.loc.gov/authorities/subjects/sh85006625) [LCSH]
+  - Bonds (http://id.worldcat.org/fast/fst00835887) [FAST]
+  - School facilities (http://id.loc.gov/authorities/subjects/sh85118328) [LCSH]
+
+Geographic Subject Headings:
+  - Georgia--Atlanta (http://id.worldcat.org/fast/fst01204627) [FAST Geographic]
+  - Texas--Houston (http://id.worldcat.org/fast/fst01205077) [FAST Geographic]
+  - Texas--Orange County (http://id.worldcat.org/fast/fst01212974) [FAST Geographic]
+  - Texas--Quanah (http://id.worldcat.org/fast/fst01873996) [FAST Geographic]
+  - Texas--Yoakum County (http://id.worldcat.org/fast/fst01214240) [FAST Geographic]
+  - Virginia--Richmond (http://id.worldcat.org/fast/fst01205345) [FAST Geographic]
+  - Arkansas--Earle (http://id.worldcat.org/fast/fst01224306) [FAST Geographic]
+  - Mississippi--Alcorn County (http://id.worldcat.org/fast/fst01209752) [FAST Geographic]
+  - South Carolina--Anderson County (http://id.worldcat.org/fast/fst01209417) [FAST Geographic]
+  - Florida--Ellenton (http://id.worldcat.org/fast/fst01268440) [FAST Geographic]
+  - Georgia--Jackson County (http://id.worldcat.org/fast/fst01216851) [FAST Geographic]
+  - Georgia--Millen (http://id.worldcat.org/fast/fst01219339) [FAST Geographic]
+  - Georgia--Sandersville (http://id.worldcat.org/fast/fst01217764) [FAST Geographic]
+  - South Carolina--Trenton (http://id.worldcat.org/fast/fst01268668) [FAST Geographic]
+  - Alabama--Attalla (http://id.worldcat.org/fast/fst01224251) [FAST Geographic]
+  - Florida--Arcadia (http://id.worldcat.org/fast/fst01215619) [FAST Geographic]
+  - Florida--Laurel Hill (http://id.worldcat.org/fast/fst01251538) [FAST Geographic]
+  - Florida--Groveland (http://id.worldcat.org/fast/fst01215354) [FAST Geographic]
+  - Florida--Lakeland (http://id.worldcat.org/fast/fst01216466) [FAST Geographic]
+  - Florida--Ocala (http://id.worldcat.org/fast/fst01215855) [FAST Geographic]
+  - North Carolina--Lexington (http://id.worldcat.org/fast/fst01282979) [FAST Geographic]
+  - North Carolina--Statesville (http://id.worldcat.org/fast/fst01213159) [FAST Geographic]
+  - North Carolina--Woodland (http://id.worldcat.org/fast/fst01224390) [FAST Geographic]
+  - Tennessee--Knoxville (http://id.worldcat.org/fast/fst01206442) [FAST Geographic]
+  - Texas--Burkburnett (http://id.worldcat.org/fast/fst01224054) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 49 (Issue: 1917-05-39):
+
+Advertisement and News: Page 67 features an advertisement for Medusa Waterproofing and details various construction projects in the Southern United States, including bank and office buildings, dwellings, and apartments. Notable architects mentioned include Logan Beckley and Thomas M. Campbell.
+
+Topics:
+  - Concrete waterproofing
+  - Building construction
+  - Architectural plans
+  - Bank buildings
+  - Apartment buildings
+  - Bungalows
+  - Construction materials
+  - Saw filing machines
+
+Named Entities:
+  - Medusa Waterproofing (Product)
+  - Sandusky Portland Cement Company (Firm)
+  - Logan Beckley (Architect)
+  - Thomas M. Campbell (Architect)
+  - Philander P. Scroggs (Architect)
+  - G. Lloyd Preacher (Architect)
+  - Keil - Dedlow Mfg. Co. (Firm)
+
+Geographic Entities:
+  - Cleveland--Ohio (City)
+  - Texarkana--Texas (City)
+  - Chattanooga--Tennessee (City)
+  - McKinney--Texas (City)
+  - Atlanta--Georgia (City)
+  - Augusta--Georgia (City)
+  - Miami--Florida (City)
+  - Aiken--South Carolina (City)
+  - Plainview--Nebraska (City)
+
+Subject Headings (Selected):
+  - Concrete construction (http://id.worldcat.org/fast/fst00874261) [FAST]
+  - Building (http://id.loc.gov/authorities/subjects/sh85017693) [LCSH]
+  - Architectural drawing (http://id.loc.gov/authorities/subjects/sh85006587) [LCSH]
+  - Bank buildings (http://id.loc.gov/authorities/subjects/sh85011556) [LCSH]
+  - apartment houses (http://vocab.getty.edu/aat/300005707) [Getty AAT]
+  - bungalows (http://vocab.getty.edu/aat/300005495) [Getty AAT]
+  - building materials (http://vocab.getty.edu/aat/300014857) [Getty AAT]
+  - filing (http://vocab.getty.edu/aat/300053079) [Getty AAT]
+
+Geographic Subject Headings:
+  - Ohio--Cleveland (http://id.worldcat.org/fast/fst01205966) [FAST Geographic]
+  - Texas--Texarkana (http://id.worldcat.org/fast/fst01216854) [FAST Geographic]
+  - Tennessee--Chattanooga (http://id.worldcat.org/fast/fst01205713) [FAST Geographic]
+  - Texas--McKinney (http://id.worldcat.org/fast/fst01221847) [FAST Geographic]
+  - Georgia--Atlanta (http://id.worldcat.org/fast/fst01204627) [FAST Geographic]
+  - Georgia--Augusta (http://id.worldcat.org/fast/fst01206406) [FAST Geographic]
+  - Florida--Miami (http://id.worldcat.org/fast/fst01213727) [FAST Geographic]
+  - South Carolina--Aiken County (http://id.worldcat.org/fast/fst01208635) [FAST Geographic]
+  - Nebraska--Plainview (http://id.worldcat.org/fast/fst01230480) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 50 (Issue: 1917-05-39):
+
+Advertisement: D & T Tank-in-Basement System of Hot Water Heating. Promotes a modern heating system with endorsements from architects and engineers. Highlights cost savings and efficiency over traditional methods.
+
+Topics:
+  - Hot water heating
+  - Heating systems
+  - Boiler technology
+  - Architectural endorsements
+  - Energy efficiency
+  - Heating innovations
+
+Named Entities:
+  - D & T Mfg. Co. (Firm)
+
+Geographic Entities:
+  - United States (Country)
+  - Canada (Country)
+  - St. Louis--Missouri (City)
+
+Subject Headings (Selected):
+  - Hot-water heating (http://id.loc.gov/authorities/subjects/sh85062454) [LCSH]
+  - gravity heating (http://vocab.getty.edu/aat/300105714) [Getty AAT]
+  - boiler rooms (http://vocab.getty.edu/aat/300004527) [Getty AAT]
+  - energy conservation (http://vocab.getty.edu/aat/300073222) [Getty AAT]
+
+Geographic Subject Headings:
+  - United States (http://id.worldcat.org/fast/fst01204155) [FAST Geographic]
+  - Canada (http://id.worldcat.org/fast/fst01204310) [FAST Geographic]
+  - Missouri--Saint Louis (http://id.worldcat.org/fast/fst01204930) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 51 (Issue: 1917-05-39):
+
+Advertisement: Rogers All-Steel Trailer and School Desks. Promotes the use of trailers for efficiency in building contracts and school supplies made in the South. Includes Rogers Bros. Company and The Southern Desk Company.
+
+Topics:
+  - Automobile trailers
+  - School furniture
+  - Building efficiency
+  - Southern manufacturing
+  - Educational supplies
+  - Industrial advertising
+
+Named Entities:
+  - Rogers Bros. Company (Firm)
+  - The Southern Desk Company (Firm)
+
+Geographic Entities:
+  - Albion--Pennsylvania (City)
+  - Hickory--North Carolina (City)
+
+Subject Headings (Selected):
+  - Automobile trailers (http://id.loc.gov/authorities/subjects/sh85010404) [LCSH]
+  - Schools--Furniture, equipment, etc. (http://id.loc.gov/authorities/subjects/sh85118459) [LCSH]
+  - Advertising, Industrial (http://id.loc.gov/authorities/subjects/sh85001183) [LCSH]
+
+Geographic Subject Headings:
+  - Pennsylvania--Albion (Erie County) (http://id.worldcat.org/fast/fst01314098) [FAST Geographic]
+  - North Carolina--Wilson (Wilson County) (http://id.worldcat.org/fast/fst01211839) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 52 (Issue: 1917-05-39):
+
+Advertisement: Promotion of Meyer's Nested Furnace Pipe by F. Meyer & Brother Co., highlighting their expertise in furnace pipe manufacturing and cost-effective solutions for heating installations.
+
+Topics:
+  - Furnace pipes
+  - Heating systems
+  - Industrial manufacturing
+  - Cost-effective solutions
+  - Warm air heating
+
+Named Entities:
+  - F. Meyer & Brother Co. (Firm)
+  - Meyer's Nested Furnace Pipe (Product)
+
+Geographic Entities:
+  - Peoria--Illinois (City)
+
+Subject Headings (Selected):
+  - furnace brazing (http://vocab.getty.edu/aat/300053953) [Getty AAT]
+  - forced air heating (http://vocab.getty.edu/aat/300051535) [Getty AAT]
+  - Manufacturing processes (http://id.loc.gov/authorities/subjects/sh85080664) [LCSH]
+
+Geographic Subject Headings:
+  - Illinois--Peoria (http://id.worldcat.org/fast/fst01206107) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 53 (Issue: 1917-05-39):
+
+Advertisement page featuring products and services for the architecture and building industry, including thermometers, roofing slate, safety equipment, and construction materials. Companies like Standard Thermometer Company and Rising & Nelson Slate Co. are highlighted.
+
+Topics:
+  - Thermometers
+  - Roofing Slate
+  - Safety Equipment
+  - Construction Tools
+  - Gravel and Sand
+  - Marble Products
+  - Planing Mills
+  - Building Materials
+
+Named Entities:
+  - Standard Thermometer Company (Firm)
+  - Rising & Nelson Slate Co. (Firm)
+  - John Faragher (Person)
+  - Warren-Knight Co. (Firm)
+  - Cook & Laurie Gravel Company (Firm)
+  - Geo. B. Sickles Marble Co. (Firm)
+  - Phoenix Planing Mill (Firm)
+
+Geographic Entities:
+  - Boston--Massachusetts (City)
+  - West Pawlet--Vermont (City)
+  - New York--New York (City)
+  - Madison--Wisconsin (City)
+  - Philadelphia--Pennsylvania (City)
+  - Montgomery--Alabama (City)
+  - Tate--Georgia (City)
+  - Atlanta--Georgia (City)
+
+Subject Headings (Selected):
+  - Thermometers (http://id.loc.gov/authorities/subjects/sh85134802) [LCSH]
+  - roofing slate (http://vocab.getty.edu/aat/300011650) [Getty AAT]
+  - Construction equipment--Safety measures (http://id.worldcat.org/fast/fst00875944) [FAST]
+  - construction equipment (http://vocab.getty.edu/aat/300022242) [Getty AAT]
+  - gravel (http://vocab.getty.edu/aat/300011689) [Getty AAT]
+  - Marble (http://id.worldcat.org/fast/fst01008958) [FAST]
+  - Planing-mills (http://id.loc.gov/authorities/subjects/sh85102684) [LCSH]
+  - building materials (http://vocab.getty.edu/aat/300014857) [Getty AAT]
+
+Geographic Subject Headings:
+  - Massachusetts--Boston (http://id.worldcat.org/fast/fst01205012) [FAST Geographic]
+  - New York (State)--New York (http://id.worldcat.org/fast/fst01204333) [FAST Geographic]
+  - Wisconsin--Madison (http://id.worldcat.org/fast/fst01205840) [FAST Geographic]
+  - Pennsylvania--Philadelphia (http://id.worldcat.org/fast/fst01204170) [FAST Geographic]
+  - Alabama--Montgomery (http://id.worldcat.org/fast/fst01202689) [FAST Geographic]
+  - Georgia--Tate (http://id.worldcat.org/fast/fst01288760) [FAST Geographic]
+  - Georgia--Atlanta (http://id.worldcat.org/fast/fst01204627) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 54 (Issue: 1917-05-39):
+
+Advertisement page featuring products for architects and builders, including Franklin Elevator Lubricator, Koll's Patent Columns, Dow Wire & Iron Works conveyors, and J. E. Warden cement stave silos. Highlights innovations in building materials and construction techniques.
+
+Topics:
+  - Elevator lubricators
+  - Architectural columns
+  - Ball-bearing conveyors
+  - Cement stave silos
+  - Building materials
+  - Construction techniques
+  - Architectural innovations
+  - Engineering solutions
+
+Named Entities:
+  - Franklin Brass Mfg. Co. (Firm)
+  - Hartmann-Sanders Co. (Firm)
+  - Dow Wire & Iron Works (Firm)
+  - J. E. Warden (Person)
+
+Geographic Entities:
+  - Philadelphia--Pennsylvania (City)
+  - Chicago--Illinois (City)
+  - New York--New York (City)
+  - Louisville--Kentucky (City)
+  - Shenandoah--Iowa (City)
+
+Subject Headings (Selected):
+  - pressure lubricators (http://vocab.getty.edu/aat/300430794) [Getty AAT]
+  - building materials (http://vocab.getty.edu/aat/300014857) [Getty AAT]
+  - construction techniques (http://vocab.getty.edu/aat/300379526) [Getty AAT]
+
+Geographic Subject Headings:
+  - Pennsylvania--Philadelphia (http://id.worldcat.org/fast/fst01204170) [FAST Geographic]
+  - Illinois--Chicago (http://id.worldcat.org/fast/fst01204048) [FAST Geographic]
+  - New York (State)--New York (http://id.worldcat.org/fast/fst01204333) [FAST Geographic]
+  - Kentucky--Louisville (http://id.worldcat.org/fast/fst01204602) [FAST Geographic]
+  - Iowa--Shenandoah (http://id.worldcat.org/fast/fst01218597) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 55 (Issue: 1917-05-39):
+
+Advertisement page featuring various companies: McKenna Bros. Brass Co. (structural brass work), Higgins' (inks and adhesives), Likestone (garden and interior products), Dube Garbage Burning Water Heaters, and York Safe and Lock Company (safes and vaults). Highlights include architectural materials and innovations in garbage burning technology.
+
+Topics:
+  - Structural brass work
+  - Inks and adhesives
+  - Garden and interior design
+  - Garbage burning technology
+  - Safe and vault manufacturing
+  - Architectural materials
+  - Office building design
+  - Theatre construction
+
+Named Entities:
+  - McKenna Bros. Brass Co. (Firm)
+  - Higgins' (Firm)
+  - Voigt Company (Firm)
+  - Dube Garbage Burning Water Heaters (Product)
+  - Grand Crossing Boiler Works (Firm)
+  - York Safe and Lock Company (Firm)
+
+Geographic Entities:
+  - Pittsburgh--Pennsylvania (City)
+  - Brooklyn--New York (City)
+  - Philadelphia--Pennsylvania (City)
+  - Chicago--Illinois (City)
+  - New York--New York (City)
+  - Baltimore--Maryland (City)
+  - Atlanta--Georgia (City)
+  - York--Pennsylvania (City)
+
+Subject Headings (Selected):
+  - Adhesives (http://id.worldcat.org/fast/fst00796614) [FAST]
+  - garden benches (http://vocab.getty.edu/aat/300424776) [Getty AAT]
+  - garbage (http://vocab.getty.edu/aat/300194441) [Getty AAT]
+  - safe rooms (http://vocab.getty.edu/aat/300419401) [Getty AAT]
+  - building materials (http://vocab.getty.edu/aat/300014857) [Getty AAT]
+
+Geographic Subject Headings:
+  - Pennsylvania--Pittsburgh (http://id.worldcat.org/fast/fst01205171) [FAST Geographic]
+  - New York (State)--New York--Brooklyn (http://id.worldcat.org/fast/fst01312516) [FAST Geographic]
+  - Pennsylvania--Philadelphia (http://id.worldcat.org/fast/fst01204170) [FAST Geographic]
+  - Illinois--Chicago (http://id.worldcat.org/fast/fst01204048) [FAST Geographic]
+  - New York (State)--New York (http://id.worldcat.org/fast/fst01204333) [FAST Geographic]
+  - Maryland--Baltimore (http://id.worldcat.org/fast/fst01204292) [FAST Geographic]
+  - Georgia--Atlanta (http://id.worldcat.org/fast/fst01204627) [FAST Geographic]
+  - Pennsylvania--York County (http://id.worldcat.org/fast/fst01214906) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 56 (Issue: 1917-05-39):
+
+Advertisement page featuring products for architects and builders, including self-clinching nails, Hetzel's Cement, Wilks Water Heaters, and West Bangor Slate. Highlights innovations in building materials and construction techniques.
+
+Topics:
+  - Self-clinching nails
+  - Roofing materials
+  - Water heaters
+  - Slate roofing
+  - Building materials
+  - Construction techniques
+  - Architectural innovations
+  - Heating systems
+
+Named Entities:
+  - Self-Clinching Nail Company (Firm)
+  - Hetzel's Cement (Material)
+  - J. G. Hetzel (Person)
+  - S. Wilks Mfg. Co. (Firm)
+  - Bangor Slate Mining Co. (Firm)
+
+Geographic Entities:
+  - Philadelphia--Pennsylvania (City)
+  - Newark--New Jersey (City)
+  - Chicago--Illinois (City)
+  - Bangor--Pennsylvania (City)
+
+Subject Headings (Selected):
+  - roofing slate (http://vocab.getty.edu/aat/300011650) [Getty AAT]
+  - water heaters (http://vocab.getty.edu/aat/300052669) [Getty AAT]
+  - building materials (http://vocab.getty.edu/aat/300014857) [Getty AAT]
+  - construction techniques (http://vocab.getty.edu/aat/300379526) [Getty AAT]
+
+Geographic Subject Headings:
+  - Pennsylvania--Philadelphia (http://id.worldcat.org/fast/fst01204170) [FAST Geographic]
+  - New Jersey--Newark (http://id.worldcat.org/fast/fst01205929) [FAST Geographic]
+  - Illinois--Chicago (http://id.worldcat.org/fast/fst01204048) [FAST Geographic]
+  - Pennsylvania--Bangor (http://id.worldcat.org/fast/fst01216878) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 57 (Issue: 1917-05-39):
+
+Advertisement: Plumbing, Roofing, and Heating Products. Features L. Wolff Manufacturing Company (Plumbing goods), Ludowici-Celadon Co. (Roofing tiles), and The Taplin-Rice-Clerkin Co. (Furnaces). Highlights luxury bathing, roofing solutions, and efficient heating.
+
+Topics:
+  - Plumbing fixtures
+  - Roofing tiles
+  - Heating systems
+  - Luxury bathing
+  - Architectural materials
+  - Home comfort
+  - Building products
+  - Architectural advertisements
+
+Named Entities:
+  - L. Wolff Manufacturing Company (Firm)
+  - Ludowici-Celadon Co. (Firm)
+  - The Taplin-Rice-Clerkin Co. (Firm)
+  - H. W. Thoresen (Person)
+
+Geographic Entities:
+  - Chicago--Illinois (City)
+  - Canadian--Texas (City)
+  - Akron--Ohio (City)
+  - Atlanta--Georgia (City)
+
+Subject Headings (Selected):
+  - plumbing fixtures (http://vocab.getty.edu/aat/300052575) [Getty AAT]
+  - roofing tile (http://vocab.getty.edu/aat/300010699) [Getty AAT]
+  - forced air heating (http://vocab.getty.edu/aat/300051535) [Getty AAT]
+  - bathing (hygienic activity) (http://vocab.getty.edu/aat/300343854) [Getty AAT]
+  - building materials (http://vocab.getty.edu/aat/300014857) [Getty AAT]
+
+Geographic Subject Headings:
+  - Illinois--Chicago (http://id.worldcat.org/fast/fst01204048) [FAST Geographic]
+  - Texas--Canadian (http://id.worldcat.org/fast/fst01222146) [FAST Geographic]
+  - Ohio--Akron (http://id.worldcat.org/fast/fst01207143) [FAST Geographic]
+  - Georgia--Atlanta (http://id.worldcat.org/fast/fst01204627) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 58 (Issue: 1917-05-39):
+
+Advertisement page featuring products for the building industry, including Monarch Hydrated Lime, Thermo Water Heater, Peach Bottom Slate, and Front Rank Warm Air Furnace. Highlights include historical references to slate usage and innovative heating solutions.
+
+Topics:
+  - Hydrated lime
+  - Water heaters
+  - Roofing materials
+  - Warm air furnaces
+  - Building materials
+  - Heating technology
+  - Slate roofing
+  - Construction innovations
+
+Named Entities:
+  - Monarch (Material)
+  - The National Lime & Stone Co. (Firm)
+  - Thermo (Product)
+  - Gem Plumbing Company (Firm)
+  - Peach Bottom Slate (Material)
+  - Proctor Slate Mfg. Co. (Firm)
+  - Front Rank (Product)
+  - Haynes-Langenburg Mfg. Co. (Firm)
+
+Geographic Entities:
+  - Carey--Ohio (City)
+  - Atlanta--Georgia (City)
+  - Cardiff--Maryland (City)
+  - Delta--Pennsylvania (City)
+  - Saint Louis--Missouri (City)
+
+Subject Headings (Selected):
+  - Lime (http://id.loc.gov/authorities/subjects/sh85077003) [LCSH]
+  - water heaters (http://vocab.getty.edu/aat/300052669) [Getty AAT]
+  - roofing slate (http://vocab.getty.edu/aat/300011650) [Getty AAT]
+  - warm air furnaces (http://vocab.getty.edu/aat/300052208) [Getty AAT]
+
+Geographic Subject Headings:
+  - Ohio--Carey (Wyandot County) (http://id.worldcat.org/fast/fst01325737) [FAST Geographic]
+  - Georgia--Atlanta (http://id.worldcat.org/fast/fst01204627) [FAST Geographic]
+  - Maryland--Cardiff (http://id.worldcat.org/fast/fst01303725) [FAST Geographic]
+  - Pennsylvania--Delta (http://id.worldcat.org/fast/fst01301881) [FAST Geographic]
+  - Missouri--Saint Louis (http://id.worldcat.org/fast/fst01204930) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 59 (Issue: 1917-05-39):
+
+Advertisement: 'WRIALCO' Patented Concrete Insert. Features and benefits of a concrete insert for building construction, specified by architects and engineers. Wright & Alexander Company, Rochester, New York.
+
+Topics:
+  - Concrete inserts
+  - Building construction
+  - Automatic sprinkler systems
+  - Shafting
+  - Piping work
+  - Construction engineering
+  - Architectural hardware
+
+Named Entities:
+  - WRIALCO (Product)
+  - Wright & Alexander Company (Firm)
+
+Geographic Entities:
+  - Rochester--New York (City)
+
+Subject Headings (Selected):
+  - concrete inserts (http://vocab.getty.edu/aat/300065911) [Getty AAT]
+
+Geographic Subject Headings:
+  - New York (State)--Rochester (http://id.worldcat.org/fast/fst01204680) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 60 (Issue: 1917-05-39):
+
+Advertisement: New Fulton County Court House and Standard Cement Stave Silo Company. Highlights the use of Cherokee Cement Plaster in the courthouse and promotes business opportunities with cement stave silos.
+
+Topics:
+  - Cherokee Cement Plaster
+  - Cement Stave Silo
+  - Building Materials
+  - Court House Architecture
+  - Construction Business
+  - Architectural Advertising
+  - Industrial Progress
+  - Southern Architecture
+
+Named Entities:
+  - Southern Gypsum Co., Inc. (Firm)
+  - Sciple Sons (Firm)
+  - Standard Cement Stave Silo Company (Firm)
+
+Geographic Entities:
+  - Atlanta--Georgia (City)
+  - North Holston--Virginia (City)
+  - Des Moines--Iowa (City)
+  - Georgia (State)
+  - Virginia (State)
+  - Iowa (State)
+
+Subject Headings (Selected):
+  - Cement (http://id.worldcat.org/fast/fst00850432) [FAST]
+  - building materials (http://vocab.getty.edu/aat/300014857) [Getty AAT]
+  - Architecture--Southern States (http://id.loc.gov/authorities/subjects/sh98003122) [LCSH]
+
+Geographic Subject Headings:
+  - Georgia--Atlanta (http://id.worldcat.org/fast/fst01204627) [FAST Geographic]
+  - Iowa--Des Moines (http://id.worldcat.org/fast/fst01205836) [FAST Geographic]
+  - Georgia (http://id.worldcat.org/fast/fst01204622) [FAST Geographic]
+  - Virginia (http://id.worldcat.org/fast/fst01204597) [FAST Geographic]
+  - Iowa (http://id.worldcat.org/fast/fst01205835) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 61 (Issue: 1917-05-39):
+
+Advertisement page featuring various companies related to construction and architecture, including Columbia Clay Company, Vincennes Bridge Co., and Hydraulic-Press Brick Company. Highlights include masonry products, structural work, and decorative fireplace designs.
+
+Topics:
+  - Masonry construction
+  - Structural work
+  - Fireplace design
+  - Brick manufacturing
+  - Architectural tools
+  - Decorative ironwork
+  - Building materials
+  - Construction technology
+
+Named Entities:
+  - Columbia Clay Company (Firm)
+  - Vincennes Bridge Co. (Firm)
+  - W. H. Hill (Person)
+  - Chattanooga Roofing & Foundry Co. (Firm)
+  - Hydraulic-Press Brick Company (Firm)
+
+Geographic Entities:
+  - Columbia--South Carolina (City)
+  - Vincennes--Indiana (City)
+  - Nashville--Tennessee (City)
+  - Muskogee--Oklahoma (City)
+  - Cambridge Springs--Pennsylvania (City)
+  - Chattanooga--Tennessee (City)
+  - St. Louis--Missouri (City)
+  - Washington (City)
+
+Subject Headings (Selected):
+  - masonry construction (technique or process) (http://vocab.getty.edu/aat/300404383) [Getty AAT]
+  - Fireplaces--Design and construction (http://id.worldcat.org/fast/fst00925677) [FAST]
+  - Building, Brick (http://id.worldcat.org/fast/fst00840899) [FAST]
+  - building materials (http://vocab.getty.edu/aat/300014857) [Getty AAT]
+
+Geographic Subject Headings:
+  - South Carolina--Columbia (http://id.worldcat.org/fast/fst01206785) [FAST Geographic]
+  - Indiana--Vincennes (http://id.worldcat.org/fast/fst01211937) [FAST Geographic]
+  - Tennessee--Nashville (http://id.worldcat.org/fast/fst01204195) [FAST Geographic]
+  - Oklahoma--Muskogee (http://id.worldcat.org/fast/fst01218306) [FAST Geographic]
+  - Pennsylvania--Cambridge Springs (http://id.worldcat.org/fast/fst01223346) [FAST Geographic]
+  - Tennessee--Chattanooga (http://id.worldcat.org/fast/fst01205713) [FAST Geographic]
+  - Missouri--Saint Louis (http://id.worldcat.org/fast/fst01204930) [FAST Geographic]
+  - Washington (State) (http://id.worldcat.org/fast/fst01204703) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 62 (Issue: 1917-05-39):
+
+Advertisement page featuring various companies related to building materials and services. Highlights include Aurora Millwork Company (Millwork supplier), Jacobson & Company (Plastic decoration manufacturer), and Fred J. Meyers Mfg. Co. (Wire, iron, and bronze work). Key topics include millwork, plastic decoration, and mortar colors.
+
+Topics:
+  - Millwork
+  - Plastic decoration
+  - Mortar colors
+  - Brick textures
+  - Wire work
+  - Iron and bronze work
+  - Silo construction
+  - Building materials
+
+Named Entities:
+  - Aurora Millwork Company (Firm)
+  - Ernest P. Hoerr (Person)
+  - Jacobson & Company (Firm)
+  - The Kansas Buff Brick & Mfg. Co. (Firm)
+  - Chattanooga Paint Co. (Firm)
+  - The Fred J. Meyers Mfg. Co. (Firm)
+  - National Silo Company (Firm)
+
+Geographic Entities:
+  - Aurora--Illinois (City)
+  - Buffville--Kansas (City)
+  - Chattanooga--Tennessee (City)
+  - New York City--New York (City)
+  - Hamilton--Ohio (City)
+  - Charlotte--North Carolina (City)
+
+Subject Headings (Selected):
+  - Millwork (Woodwork) (http://id.loc.gov/authorities/subjects/sh85085430) [LCSH]
+  - Plastics in interior decoration (http://id.worldcat.org/fast/fst01066656) [FAST]
+  - Mortar (http://id.worldcat.org/fast/fst01026537) [FAST]
+  - wirework (http://vocab.getty.edu/aat/300044077) [Getty AAT]
+  - cast iron (http://vocab.getty.edu/aat/300011004) [Getty AAT]
+  - Silos--Design and construction (http://id.worldcat.org/fast/fst01118810) [FAST]
+  - building materials (http://vocab.getty.edu/aat/300014857) [Getty AAT]
+
+Geographic Subject Headings:
+  - Illinois--Aurora (http://id.worldcat.org/fast/fst01217071) [FAST Geographic]
+  - Tennessee--Chattanooga (http://id.worldcat.org/fast/fst01205713) [FAST Geographic]
+  - New York (State)--New York (http://id.worldcat.org/fast/fst01204333) [FAST Geographic]
+  - Ohio--Hamilton County (http://id.worldcat.org/fast/fst01205597) [FAST Geographic]
+  - North Carolina--Charlotte (http://id.worldcat.org/fast/fst01204596) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 63 (Issue: 1917-05-39):
+
+Advertisement: Various building and hardware products including temperature regulators, waterproofing solutions, and hot water systems. Features The Shelby Spring Hinge Co., The Powers Regulator Company, and The Reading Heater & Supply Co.
+
+Topics:
+  - Builders' hardware
+  - Temperature regulation
+  - Waterproofing
+  - Hot water systems
+  - Expansion tanks
+  - Municipal reservoirs
+  - Building materials
+  - Construction technology
+
+Named Entities:
+  - The Shelby Spring Hinge Co. (Firm)
+  - The Powers Regulator Company (Firm)
+  - The Trus-Con Laboratories (Firm)
+  - The Reading Heater & Supply Co. (Firm)
+  - George H. Davidson (Person)
+
+Geographic Entities:
+  - Shelby--Ohio (City)
+  - New York--New York (City)
+  - Chicago--Illinois (City)
+  - Boston--Massachusetts (City)
+  - Asheville--North Carolina (City)
+  - Atlanta--Georgia (City)
+  - Detroit--Michigan (City)
+  - Reading--Pennsylvania (City)
+
+Subject Headings (Selected):
+  - Finish hardware (http://id.loc.gov/authorities/subjects/sh00003121) [LCSH]
+  - waterproofing (http://vocab.getty.edu/aat/300053698) [Getty AAT]
+  - hot water heating (http://vocab.getty.edu/aat/300051500) [Getty AAT]
+  - building materials (http://vocab.getty.edu/aat/300014857) [Getty AAT]
+
+Geographic Subject Headings:
+  - Ohio--Shelby County (http://id.worldcat.org/fast/fst01215125) [FAST Geographic]
+  - New York (State)--New York (http://id.worldcat.org/fast/fst01204333) [FAST Geographic]
+  - Illinois--Chicago (http://id.worldcat.org/fast/fst01204048) [FAST Geographic]
+  - Massachusetts--Boston (http://id.worldcat.org/fast/fst01205012) [FAST Geographic]
+  - North Carolina--Asheville (http://id.worldcat.org/fast/fst01205440) [FAST Geographic]
+  - Georgia--Atlanta (http://id.worldcat.org/fast/fst01204627) [FAST Geographic]
+  - Michigan--Detroit (http://id.worldcat.org/fast/fst01205010) [FAST Geographic]
+  - Pennsylvania--Reading (http://id.worldcat.org/fast/fst01202803) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 64 (Issue: 1917-05-39):
+
+Advertisement page featuring various building materials and fixtures, including door hangers, lighting fixtures, metal shingles, blinds, and marble. Highlights include Reliance Ball Bearing Door Hangers and Appalachian Marble Co. Key topics: architectural hardware, lighting, and building materials.
+
+Topics:
+  - Architectural hardware
+  - Lighting fixtures
+  - Metal shingles
+  - Venetian blinds
+  - Marble
+  - Building materials
+  - Interior design
+  - Construction technology
+
+Named Entities:
+  - Reliance Ball Bearing Door Hanger Company (Firm)
+  - The Horn & Brannen Manufacturing Co. (Firm)
+  - Bristol Metal MFG. CO. (Firm)
+  - Burlington Venetian Blind Co. (Firm)
+  - Appalachian Marble Co. (Firm)
+
+Geographic Entities:
+  - New York--New York (City)
+  - Memphis--Tennessee (City)
+  - Chattanooga--Tennessee (City)
+  - Birmingham--Alabama (City)
+  - Atlanta--Georgia (City)
+  - New Orleans--Louisiana (City)
+  - Philadelphia--Pennsylvania (City)
+  - Burlington--Vermont (City)
+  - Knoxville--Tennessee (City)
+  - Virginia (State)
+  - Tennessee (State)
+
+Subject Headings (Selected):
+  - finish builders' hardware (http://vocab.getty.edu/aat/300312357) [Getty AAT]
+  - lighting fixtures (http://vocab.getty.edu/aat/300180081) [Getty AAT]
+  - Shingles (http://id.worldcat.org/fast/fst01116039) [FAST]
+  - venetian blinds (http://vocab.getty.edu/aat/300204075) [Getty AAT]
+  - Marble (http://id.loc.gov/authorities/subjects/sh85080941) [LCSH]
+  - building materials (http://vocab.getty.edu/aat/300014857) [Getty AAT]
+
+Geographic Subject Headings:
+  - New York (State)--New York (http://id.worldcat.org/fast/fst01204333) [FAST Geographic]
+  - Tennessee--Memphis (http://id.worldcat.org/fast/fst01204194) [FAST Geographic]
+  - Tennessee--Chattanooga (http://id.worldcat.org/fast/fst01205713) [FAST Geographic]
+  - Alabama--Birmingham (http://id.worldcat.org/fast/fst01204958) [FAST Geographic]
+  - Georgia--Atlanta (http://id.worldcat.org/fast/fst01204627) [FAST Geographic]
+  - Louisiana--New Orleans (http://id.worldcat.org/fast/fst01204311) [FAST Geographic]
+  - Pennsylvania--Philadelphia (http://id.worldcat.org/fast/fst01204170) [FAST Geographic]
+  - Vermont--Burlington (http://id.worldcat.org/fast/fst01207603) [FAST Geographic]
+  - Tennessee--Knoxville (http://id.worldcat.org/fast/fst01206442) [FAST Geographic]
+  - Virginia (http://id.worldcat.org/fast/fst01204597) [FAST Geographic]
+  - Tennessee (http://id.worldcat.org/fast/fst01205353) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 65 (Issue: 1917-05-39):
+
+Advertisement page featuring various construction and architectural products, including structural steel connections, roofing materials, and metal frame window screens. Companies like Streeter Clip & Specialty Co. and W. J. Baker Company are highlighted.
+
+Topics:
+  - Structural steel connections
+  - Roofing materials
+  - Metal frame window screens
+  - Construction technology
+  - Architectural hardware
+  - Building materials
+  - Fireproofing techniques
+  - Ornamental iron
+
+Named Entities:
+  - Streeter Clip & Specialty Co. (Firm)
+  - W. J. Baker Company (Firm)
+  - CHEARS COMPANY (Firm)
+  - MERCER MFG. CO. (Firm)
+  - The L. Schreiber & Sons Co. (Firm)
+  - LOBB, PARRY & COMPANY (Firm)
+  - Lombard Foundry, Machine and Boiler Works and Supply Store (Firm)
+
+Geographic Entities:
+  - Chicago--Illinois (City)
+  - Newport--Kentucky (City)
+  - Memphis--Tennessee (City)
+  - Atlanta--Georgia (City)
+  - Birmingham--Alabama (City)
+  - Nashville--Tennessee (City)
+  - Little Rock--Arkansas (City)
+  - Chattanooga--Tennessee (City)
+  - Mercer--Pennsylvania (City)
+  - Cincinnati--Ohio (City)
+  - New York--New York (City)
+  - Pittsburg--Pennsylvania (City)
+  - New Orleans--Louisiana (City)
+  - San Francisco--California (City)
+  - Richmond--Virginia (City)
+  - Danielsville--Pennsylvania (City)
+  - Augusta--Georgia (City)
+
+Subject Headings (Selected):
+  - Building, Iron and steel (http://id.worldcat.org/fast/fst00840918) [FAST]
+  - Roofing (http://id.loc.gov/authorities/subjects/sh85115317) [LCSH]
+  - Screens (http://id.worldcat.org/fast/fst01109343) [FAST]
+  - Finish hardware (http://id.loc.gov/authorities/subjects/sh00003121) [LCSH]
+  - building materials (http://vocab.getty.edu/aat/300014857) [Getty AAT]
+  - fireproofing (http://vocab.getty.edu/aat/300053693) [Getty AAT]
+
+Geographic Subject Headings:
+  - Illinois--Chicago (http://id.worldcat.org/fast/fst01204048) [FAST Geographic]
+  - Kentucky--Newport (http://id.worldcat.org/fast/fst01226268) [FAST Geographic]
+  - Tennessee--Memphis (http://id.worldcat.org/fast/fst01204194) [FAST Geographic]
+  - Georgia--Atlanta (http://id.worldcat.org/fast/fst01204627) [FAST Geographic]
+  - Alabama--Birmingham (http://id.worldcat.org/fast/fst01204958) [FAST Geographic]
+  - Tennessee--Nashville (http://id.worldcat.org/fast/fst01204195) [FAST Geographic]
+  - Arkansas--Little Rock (http://id.worldcat.org/fast/fst01206922) [FAST Geographic]
+  - Tennessee--Chattanooga (http://id.worldcat.org/fast/fst01205713) [FAST Geographic]
+  - Pennsylvania--Mercer County (http://id.worldcat.org/fast/fst01209966) [FAST Geographic]
+  - Ohio--Cincinnati (http://id.worldcat.org/fast/fst01205142) [FAST Geographic]
+  - New York (State)--New York (http://id.worldcat.org/fast/fst01204333) [FAST Geographic]
+  - Pennsylvania--Pittsburgh (http://id.worldcat.org/fast/fst01205171) [FAST Geographic]
+  - Louisiana--New Orleans (http://id.worldcat.org/fast/fst01204311) [FAST Geographic]
+  - California--San Francisco (http://id.worldcat.org/fast/fst01204481) [FAST Geographic]
+  - Virginia--Richmond (http://id.worldcat.org/fast/fst01205345) [FAST Geographic]
+  - Georgia--Augusta (http://id.worldcat.org/fast/fst01206406) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 66 (Issue: 1917-05-39):
+
+Advertisement page featuring various products for architects and builders, including B.T.U. manuals, structural iron, roofing slate, concrete roads, and furnaces. Highlights include the promotion of concrete roads as a modern solution and the durability of XXth Century Furnaces.
+
+Topics:
+  - Concrete roads
+  - Roofing slate
+  - Heating systems
+  - Structural iron
+  - Building materials
+  - Highway construction
+  - Furnace durability
+  - Architectural products
+
+Named Entities:
+  - Greenwood & O'Neill (Firm)
+  - Standard Iron Works (Firm)
+  - Chicago Perforating Co. (Firm)
+  - North Bangor Slate Company (Firm)
+  - Standard Portland Cement Co. (Firm)
+  - The XXth Century H. & V. Co. (Firm)
+
+Geographic Entities:
+  - Princeton--Illinois (City)
+  - New York--New York (City)
+  - Chicago--Illinois (City)
+  - Bangor--Pennsylvania (City)
+  - Atlanta--Georgia (City)
+  - Birmingham--Alabama (City)
+  - Akron--Ohio (City)
+  - Indiana (State)
+
+Subject Headings (Selected):
+  - Concrete roads (http://id.loc.gov/authorities/subjects/sh85114556) [LCSH]
+  - roofing slate (http://vocab.getty.edu/aat/300011650) [Getty AAT]
+  - structural iron (http://vocab.getty.edu/aat/300011010) [Getty AAT]
+  - building materials (http://vocab.getty.edu/aat/300014857) [Getty AAT]
+
+Geographic Subject Headings:
+  - Illinois--Princeton (http://id.worldcat.org/fast/fst01217877) [FAST Geographic]
+  - New York (State)--New York (http://id.worldcat.org/fast/fst01204333) [FAST Geographic]
+  - Illinois--Chicago (http://id.worldcat.org/fast/fst01204048) [FAST Geographic]
+  - Pennsylvania--Bangor (http://id.worldcat.org/fast/fst01216878) [FAST Geographic]
+  - Georgia--Atlanta (http://id.worldcat.org/fast/fst01204627) [FAST Geographic]
+  - Alabama--Birmingham (http://id.worldcat.org/fast/fst01204958) [FAST Geographic]
+  - Ohio--Akron (http://id.worldcat.org/fast/fst01207143) [FAST Geographic]
+  - Indiana (http://id.worldcat.org/fast/fst01204604) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 67 (Issue: 1917-05-39):
+
+Advertisement page featuring various building materials and tools. Includes ads for columns, roofing tiles, marble, filing cabinets, woodworking tools, and iron and steel products. Key companies include Rudolph Hegener Co. and The Georgia Marble Company.
+
+Topics:
+  - Colonial columns
+  - Composition capitals
+  - Roofing tiles
+  - Marble
+  - Filing cabinets
+  - Woodworking tools
+  - Iron and steel
+  - Building materials
+
+Named Entities:
+  - Rudolph Hegener Co. (Firm)
+  - Murray Roofing Tile Co. (Firm)
+  - The Georgia Marble Company (Firm)
+  - F. Weber & Company (Firm)
+  - Whisler Mfg. Co. (Firm)
+  - The Cincinnati Iron & Steel Company (Firm)
+
+Geographic Entities:
+  - Chicago--Illinois (City)
+  - Cloverport--Kentucky (City)
+  - Atlanta--Georgia (City)
+  - Tate--Georgia (City)
+  - New York--New York (City)
+  - Philadelphia--Pennsylvania (City)
+  - St. Louis--Missouri (City)
+  - Baltimore--Maryland (City)
+  - Gibson--Iowa (City)
+  - Cincinnati--Ohio (City)
+
+Subject Headings (Selected):
+  - Capitals (Architecture) (http://id.worldcat.org/fast/fst00846477) [FAST]
+  - roofing tile (http://vocab.getty.edu/aat/300010699) [Getty AAT]
+  - Marble (http://id.loc.gov/authorities/subjects/sh85080941) [LCSH]
+  - filing cabinets (http://vocab.getty.edu/aat/300038936) [Getty AAT]
+  - woodworking tools (http://vocab.getty.edu/aat/300163324) [Getty AAT]
+  - Building, Iron and steel (http://id.loc.gov/authorities/subjects/sh85017713) [LCSH]
+  - building materials (http://vocab.getty.edu/aat/300014857) [Getty AAT]
+
+Geographic Subject Headings:
+  - Illinois--Chicago (http://id.worldcat.org/fast/fst01204048) [FAST Geographic]
+  - Kentucky--Cloverport (http://id.worldcat.org/fast/fst01252061) [FAST Geographic]
+  - Georgia--Atlanta (http://id.worldcat.org/fast/fst01204627) [FAST Geographic]
+  - Georgia--Tate (http://id.worldcat.org/fast/fst01288760) [FAST Geographic]
+  - New York (State)--New York (http://id.worldcat.org/fast/fst01204333) [FAST Geographic]
+  - Pennsylvania--Philadelphia (http://id.worldcat.org/fast/fst01204170) [FAST Geographic]
+  - Missouri--Saint Louis (http://id.worldcat.org/fast/fst01204930) [FAST Geographic]
+  - Maryland--Baltimore (http://id.worldcat.org/fast/fst01204292) [FAST Geographic]
+  - Ohio--Cincinnati (http://id.worldcat.org/fast/fst01205142) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 68 (Issue: 1917-05-39):
+
+Advertisement: Heating and Ventilating Systems by C. C. Shipp & Company. Highlights the D-I system's efficiency and benefits for public buildings. Key topics include air quality, humidity control, and energy efficiency.
+
+Topics:
+  - Heating systems
+  - Ventilation
+  - Air quality
+  - Humidity control
+  - Energy efficiency
+  - Public buildings
+  - Architectural engineering
+
+Named Entities:
+  - C. C. Shipp & Company (Firm)
+  - D-I (Product)
+
+Geographic Entities:
+  - Indianapolis--Indiana (City)
+  - Indiana (State)
+  - United States (Country)
+
+Subject Headings (Selected):
+  - forced air heating (http://vocab.getty.edu/aat/300051535) [Getty AAT]
+  - Ventilation (http://id.loc.gov/authorities/subjects/sh85142747) [LCSH]
+  - indoor air quality (http://vocab.getty.edu/aat/300150583) [Getty AAT]
+  - Humidity--Control (http://id.loc.gov/authorities/subjects/sh85062932) [LCSH]
+  - energy conservation (http://vocab.getty.edu/aat/300073222) [Getty AAT]
+  - Public buildings (http://id.loc.gov/authorities/subjects/sh85108620) [LCSH]
+
+Geographic Subject Headings:
+  - Indiana--Indianapolis (http://id.worldcat.org/fast/fst01205182) [FAST Geographic]
+  - Indiana (http://id.worldcat.org/fast/fst01204604) [FAST Geographic]
+  - United States (http://id.worldcat.org/fast/fst01204155) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 69 (Issue: 1917-05-39):
+
+Error: All parsing strategies failed
+
+
+--------------------------------------------------
+
+Page 70 (Issue: 1917-05-39):
+
+Advertisement page featuring products for architects and builders, including reflectors, tiles, bond anchors, and damp-proofing compounds. Highlights include Sunlight Reflector Co. and Steel Security Bond Anchor Co., with a focus on innovative building materials and techniques.
+
+Topics:
+  - Reflectors
+  - Tiles and Mosaics
+  - Brick Wall Anchors
+  - Damp-proofing
+  - Building Materials
+  - Architectural Innovations
+  - Construction Techniques
+  - Sanitary Walls and Floors
+
+Named Entities:
+  - Sunlight Reflector Co. (Firm)
+  - Chas. F. Lorenzen & Co. (Firm)
+  - Steel Security Bond Anchor Co. (Firm)
+  - The Philip Carey Company (Firm)
+  - Percoproof (Material)
+
+Geographic Entities:
+  - Brooklyn--New York (City)
+  - New York City--New York (City)
+  - Detroit--Michigan (City)
+  - Chicago--Illinois (City)
+  - Gary--Indiana (City)
+  - Cincinnati--Ohio (City)
+
+Subject Headings (Selected):
+  - Tiles (http://id.worldcat.org/fast/fst01150910) [FAST]
+  - dampproofing (http://vocab.getty.edu/aat/300256551) [Getty AAT]
+  - building materials (http://vocab.getty.edu/aat/300014857) [Getty AAT]
+
+Geographic Subject Headings:
+  - New York (State)--New York--Brooklyn (http://id.worldcat.org/fast/fst01312516) [FAST Geographic]
+  - New York (State)--New York (http://id.worldcat.org/fast/fst01204333) [FAST Geographic]
+  - Michigan--Detroit (http://id.worldcat.org/fast/fst01205010) [FAST Geographic]
+  - Illinois--Chicago (http://id.worldcat.org/fast/fst01204048) [FAST Geographic]
+  - Indiana--Gary (http://id.worldcat.org/fast/fst01205217) [FAST Geographic]
+  - Ohio--Cincinnati (http://id.worldcat.org/fast/fst01205142) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 71 (Issue: 1917-05-39):
+
+Advertisement page featuring various building and architectural products, including roofing tiles, ventilators, safety delivery cabinets, brass signs, and flooring. Companies such as Mound City Roofing Tile Company and Union Welded Products Co. are highlighted.
+
+Topics:
+  - Roofing materials
+  - Ventilation systems
+  - Safety cabinets
+  - Brass signs
+  - Bronze memorials
+  - Flooring materials
+  - Building materials
+  - Architectural products
+
+Named Entities:
+  - Mound City Roofing Tile Company (Firm)
+  - J-K Siphon Ventilators (Product)
+  - Siphon Ventilator Co. (Firm)
+  - Union Welded Products Co. (Firm)
+  - Beecher-Fowler Mfg. Co. (Firm)
+  - J. W. Wells Lumber Co. (Firm)
+
+Geographic Entities:
+  - St. Louis--Missouri (City)
+  - Little Rock--Arkansas (City)
+  - Chicago--Illinois (City)
+  - Louisville--Kentucky (City)
+  - Menominee--Michigan (City)
+
+Subject Headings (Selected):
+  - Roofing (http://id.loc.gov/authorities/subjects/sh85115317) [LCSH]
+  - exhaust ventilation (systems) (http://vocab.getty.edu/aat/300051547) [Getty AAT]
+  - fire safety (http://vocab.getty.edu/aat/300055285) [Getty AAT]
+  - brass (alloy) (http://vocab.getty.edu/aat/300010946) [Getty AAT]
+  - flooring (http://vocab.getty.edu/aat/300014866) [Getty AAT]
+  - building materials (http://vocab.getty.edu/aat/300014857) [Getty AAT]
+
+Geographic Subject Headings:
+  - Missouri--Saint Louis (http://id.worldcat.org/fast/fst01204930) [FAST Geographic]
+  - Arkansas--Little Rock (http://id.worldcat.org/fast/fst01206922) [FAST Geographic]
+  - Illinois--Chicago (http://id.worldcat.org/fast/fst01204048) [FAST Geographic]
+  - Kentucky--Louisville (http://id.worldcat.org/fast/fst01204602) [FAST Geographic]
+  - Michigan--Menominee County (http://id.worldcat.org/fast/fst01214745) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 72 (Issue: 1917-05-39):
+
+Advertisement page featuring products for waterproofing, concrete roads, plumbing, and heating systems. Includes Impervia waterproof products, Dixie Portland Cement Co., McGuire Adjustable Roof Flange, and the Jones System of Heating and Ventilation.
+
+Topics:
+  - Waterproofing
+  - Concrete roads
+  - Plumbing
+  - Heating systems
+  - Ventilation
+  - Construction materials
+  - Architectural products
+  - Building technology
+
+Named Entities:
+  - HAMLIN IMP-ERVIA Co., INC. (Firm)
+  - DIXIE PORTLAND CEMENT CO. (Firm)
+  - H. E. HESSLER CO. (Firm)
+  - United States Register Co. (Firm)
+  - Jones System (Product)
+
+Geographic Entities:
+  - New York City--New York (City)
+  - Lee County--Mississippi (County)
+  - Fulton County--Georgia (County)
+  - Atlanta--Georgia (City)
+  - Chattanooga--Tennessee (City)
+  - Syracuse--New York (City)
+  - Battle Creek--Michigan (City)
+  - Albany--New York (City)
+  - Minneapolis--Minnesota (City)
+  - Kansas City--Missouri (City)
+  - Des Moines--Iowa (City)
+
+Subject Headings (Selected):
+  - waterproofing (http://vocab.getty.edu/aat/300053698) [Getty AAT]
+  - Concrete roads (http://id.loc.gov/authorities/subjects/sh85114556) [LCSH]
+  - Plumbing (http://id.loc.gov/authorities/subjects/sh85103551) [LCSH]
+  - Ventilation (http://id.loc.gov/authorities/subjects/sh85142747) [LCSH]
+  - building materials (http://vocab.getty.edu/aat/300014857) [Getty AAT]
+
+Geographic Subject Headings:
+  - New York (State)--New York (http://id.worldcat.org/fast/fst01204333) [FAST Geographic]
+  - Mississippi--Lee County (http://id.worldcat.org/fast/fst01219293) [FAST Geographic]
+  - Georgia--Fulton County (http://id.worldcat.org/fast/fst01211153) [FAST Geographic]
+  - Georgia--Atlanta (http://id.worldcat.org/fast/fst01204627) [FAST Geographic]
+  - Tennessee--Chattanooga (http://id.worldcat.org/fast/fst01205713) [FAST Geographic]
+  - New York (State)--Syracuse (http://id.worldcat.org/fast/fst01205293) [FAST Geographic]
+  - Michigan--Battle Creek (http://id.worldcat.org/fast/fst01218610) [FAST Geographic]
+  - New York (State)--Albany (http://id.worldcat.org/fast/fst01225716) [FAST Geographic]
+  - Minnesota--Minneapolis (http://id.worldcat.org/fast/fst01204260) [FAST Geographic]
+  - Missouri--Kansas City (http://id.worldcat.org/fast/fst01204999) [FAST Geographic]
+  - Iowa--Des Moines (http://id.worldcat.org/fast/fst01205836) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 73 (Issue: 1917-05-39):
+
+Advertisement: Kewanee 'All-Steel' Coal Chutes and other building products. Includes technical details and installation methods for coal chutes, and advertisements for bricks, pumps, and radiator accessories.
+
+Topics:
+  - Coal chutes
+  - Building materials
+  - Salt glazed bricks
+  - Water pumps
+  - Radiator accessories
+  - Installation techniques
+  - Construction methods
+  - Architectural products
+
+Named Entities:
+  - Kewanee MFG. CO. (Firm)
+  - The Federal Clay Product Co. (Firm)
+  - The Vaile-Kimes Co. (Firm)
+  - Jennison Co. (Firm)
+
+Geographic Entities:
+  - Kewanee--Illinois (City)
+  - Mineral City--Ohio (City)
+  - Dayton--Ohio (City)
+  - Fitchburg--Massachusetts (City)
+
+Subject Headings (Selected):
+  - coal chutes (http://vocab.getty.edu/aat/300004250) [Getty AAT]
+  - building materials (http://vocab.getty.edu/aat/300014857) [Getty AAT]
+  - Glazed brick (http://id.worldcat.org/fast/fst00943386) [FAST]
+  - water pumps (http://vocab.getty.edu/aat/300432664) [Getty AAT]
+
+Geographic Subject Headings:
+  - Illinois--Kewanee (http://id.worldcat.org/fast/fst01219159) [FAST Geographic]
+  - Ohio--Dayton (http://id.worldcat.org/fast/fst01204702) [FAST Geographic]
+  - Massachusetts--Fitchburg (http://id.worldcat.org/fast/fst01210793) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 74 (Issue: 1917-05-39):
+
+Error: All parsing strategies failed
+
+
+--------------------------------------------------
+
+Page 75 (Issue: 1917-05-39):
+
+Advertisement: Modern Sanitary Barn Equipment by Mitchell Mfg. Co. Features illustrations of barn equipment and details on stanchions, stalls, and carriers. Highlights innovations in agricultural architecture and equipment design.
+
+Topics:
+  - Sanitary barn equipment
+  - Adjustable stanchions
+  - Steel stalls
+  - Agricultural architecture
+  - Ventilating systems
+  - Watering systems
+  - Animal husbandry equipment
+
+Named Entities:
+  - Mitchell Mfg. Co. (Firm)
+  - Mitchell Sanitary Barn Equipments (Product)
+
+Geographic Entities:
+  - Milwaukee--Wisconsin (City)
+
+Subject Headings (Selected):
+  - agricultural buildings (http://vocab.getty.edu/aat/300004898) [Getty AAT]
+  - animal husbandry equipment (http://vocab.getty.edu/aat/300255532) [Getty AAT]
+
+Geographic Subject Headings:
+  - Wisconsin--Milwaukee (http://id.worldcat.org/fast/fst01206626) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 76 (Issue: 1917-05-39):
+
+Error: All parsing strategies failed
+
+
+--------------------------------------------------
+
+Page 77 (Issue: 1917-05-39):
+
+Advertisement: MacArthur Cement Products Co. and McFell Industrial Fire Alarm Systems. The page features advertisements for concrete blocks and fire alarm systems, highlighting innovations in building materials and safety technology.
+
+Topics:
+  - Concrete blocks
+  - Building materials
+  - Fire alarm systems
+  - Construction technology
+  - Architectural innovation
+  - Safety systems
+
+Named Entities:
+  - MacArthur Cement Products Co. (Firm)
+  - McFell Signal Co. (Firm)
+
+Geographic Entities:
+  - Burlington--Iowa (City)
+  - Chicago--Illinois (City)
+
+Subject Headings (Selected):
+  - concrete blocks (http://vocab.getty.edu/aat/300374976) [Getty AAT]
+  - building materials (http://vocab.getty.edu/aat/300014857) [Getty AAT]
+  - Fire alarms (http://id.loc.gov/authorities/subjects/sh85048455) [LCSH]
+  - fire alarm systems (http://vocab.getty.edu/aat/300052741) [Getty AAT]
+
+Geographic Subject Headings:
+  - Iowa--Burlington (http://id.worldcat.org/fast/fst01216205) [FAST Geographic]
+  - Illinois--Chicago (http://id.worldcat.org/fast/fst01204048) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 78 (Issue: 1917-05-39):
+
+Advertisement: Vitrolite kitchen surfaces. Highlights the benefits of Vitrolite for kitchen cleanliness and durability. Features a kitchen designed by H. F. Huber & Co., Architects.
+
+Topics:
+  - Vitrolite
+  - Kitchen design
+  - Architectural materials
+  - Interior surfaces
+  - Home sanitation
+  - Architectural firms
+  - Building materials
+  - 20th century architecture
+
+Named Entities:
+  - Vitrolite (Material)
+  - H. F. Huber & Co. (Firm)
+  - The Vitrolite Company (Organization)
+
+Geographic Entities:
+  - Bristol--Connecticut (City)
+  - Chicago--Illinois (City)
+
+Subject Headings (Selected):
+  - Vitrolite (TM) (http://vocab.getty.edu/aat/300010863) [Getty AAT]
+  - Kitchens--Design and construction (http://id.worldcat.org/fast/fst00987929) [FAST]
+  - building materials (http://vocab.getty.edu/aat/300014857) [Getty AAT]
+  - interior (http://vocab.getty.edu/aat/300010279) [Getty AAT]
+  - architectural firms (http://vocab.getty.edu/aat/300312082) [Getty AAT]
+
+Geographic Subject Headings:
+  - Connecticut--Bristol (http://id.worldcat.org/fast/fst01206697) [FAST Geographic]
+  - Illinois--Chicago (http://id.worldcat.org/fast/fst01204048) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 79 (Issue: 1917-05-39):
+
+Advertisement page featuring various building and architectural products, including the Imperial Warm Air Furnace, grilles, wickets, roofing tiles, and ice-cooled drinking fountains. Key topics include steel construction and heating technology.
+
+Topics:
+  - Steel construction
+  - Warm air furnaces
+  - Ornamental metalwork
+  - Roofing tiles
+  - Heating technology
+  - Sanitary drinking solutions
+
+Named Entities:
+  - Imperial Furnace Company (Firm)
+  - Jackson Iron & Bronze Works (Firm)
+  - The United States Roofing Tile Co. (Firm)
+  - Manufacturing Equipment & Engineering Co. (Firm)
+  - Keith Bubbler (Product)
+
+Geographic Entities:
+  - Marshalltown--Iowa (City)
+  - Jackson--Tennessee (City)
+  - Parkersburg--West Virginia (City)
+  - Boston--Massachusetts (City)
+
+Subject Headings (Selected):
+  - Building, Iron and steel (http://id.loc.gov/authorities/subjects/sh85017713) [LCSH]
+  - warm air furnaces (http://vocab.getty.edu/aat/300052208) [Getty AAT]
+  - Tiles, Roofing (http://id.loc.gov/authorities/subjects/sh85135357) [LCSH]
+
+Geographic Subject Headings:
+  - Iowa--Marshalltown (http://id.worldcat.org/fast/fst01218593) [FAST Geographic]
+  - Tennessee--Jackson (http://id.worldcat.org/fast/fst01219777) [FAST Geographic]
+  - West Virginia--Parkersburg (http://id.worldcat.org/fast/fst01214465) [FAST Geographic]
+  - Massachusetts--Boston (http://id.worldcat.org/fast/fst01205012) [FAST Geographic]
+
+
+--------------------------------------------------
+
+Page 80 (Issue: 1917-05-39):
+
+Error: All parsing strategies failed
+
+
+--------------------------------------------------
+

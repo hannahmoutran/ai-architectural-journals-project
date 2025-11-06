@@ -1,0 +1,138 @@
+============================================================
+SOUTHERN ARCHITECT - PAGE METADATA
+============================================================
+
+PAGE IDENTIFICATION:
+Folder: 1917-05-39
+Page Number: 24
+
+CONTENT:
+------------------------------
+Text Transcription:
+26 SOUTHERN ARCHITECT AND BUILDING NEWS
+
+Barrett Specification Roofs
+
+An Ideal Factory—
+and an Ideal Roof
+
+THE modern manufacturer floods his workrooms with sunshine, and his workmen keep in better health and do better work. Here is one of these factories. It is built in the most modern and scientific manner and is covered with a Barrett Specification Roof.
+
+This is not to be wondered at. The wonder would be if some other type of roof had been specified, because most of the permanent structures of the country are covered with Barrett Specification Roofs.
+
+This preference is due to the fact that such roofs cost less per year of service than any other kind; that they are free from all maintenance expenses and, further, because they are guaranteed for twenty years.
+
+In addition, Barrett Specification Roofs take the base rate of fire insurance and are approved as “Class A” construction.
+
+This combination of 20-Year Guaranty with low cost and low insurance rate has put these roofs in a class by themselves.
+
+The Barrett Company
+Largest Manufacturers in the World of Roofing and Roofing Materials
+New York Chicago Philadelphia Boston St. Louis Cleveland Cincinnati Pittsburgh Detroit Birmingham Kansas City Minneapolis Nashville Salt Lake City Seattle Peoria The Barrett Manufacturing Co., Limited Montreal Toronto Winnipeg Vancouver St. John, N. B. Halifax, N. B. Sydney, N. S.
+
+Guaranteed for 20 Years
+
+We are now prepared to give a 20-Year Surety Bond Guaranty on every Barrett Specification Roof of fifty squares and over in all towns in the United States and Canada of 25,000 population and more, and in smaller places where our inspection service is available.
+
+This Surety Bond will be issued by the United States Fidelity and Guaranty Company of Baltimore and will be furnished by us without charge. Our only requirements are that the roofing contractor shall be approved by us and that The Barrett Specification dated May 1, 1916, shall be strictly followed.
+
+A copy of the Barrett 20-Year Specification, with roofing diagrams, sent free on request.
+
+TOLEDO FACTORIES
+Architects, Elzner & Williams, Dayton, Ohio.
+Gen. Cont., J. A. Bentley & Sons, Toledo, Ohio.
+Roofers, Hummel & Hillebrand, Toledo, Ohio
+
+Visual Description:
+The page features a large header with the text 'Barrett Specification Roofs' in a stylized script. Below, the text is divided into two main columns. The left column contains an article titled 'An Ideal Factory—and an Ideal Roof' with a description of the benefits of Barrett Specification Roofs. The right column offers details about a 20-Year Guaranty Bond. A small illustration of a factory building is at the bottom, with a list of cities where The Barrett Company operates. A decorative border surrounds a smaller inset image of a guaranty bond document.
+
+Description:
+Advertisement: Barrett Specification Roofs. Discusses the benefits and features of Barrett Specification Roofs, including a 20-Year Guaranty Bond. Highlights modern construction techniques and fire insurance advantages.
+
+METADATA:
+------------------------------
+Topics:
+  - Roofing materials
+  - Fire insurance
+  - Modern construction
+  - Industrial architecture
+  - Building maintenance
+  - Architectural specifications
+  - Construction guarantees
+  - Factory design
+
+Named Entities:
+  - Barrett Company (Firm)
+  - United States Fidelity and Guaranty Company (Organization)
+  - Elzner & Williams (Architect)
+  - J. A. Bentley & Sons (Firm)
+  - Hummel & Hillebrand (Firm)
+
+Geographic Entities:
+  - New York--New York (City)
+  - Chicago--Illinois (City)
+  - Philadelphia--Pennsylvania (City)
+  - Boston--Massachusetts (City)
+  - St. Louis--Missouri (City)
+  - Cleveland--Ohio (City)
+  - Cincinnati--Ohio (City)
+  - Pittsburgh--Pennsylvania (City)
+  - Detroit--Michigan (City)
+  - Birmingham--Alabama (City)
+  - Kansas City--Missouri (City)
+  - Minneapolis--Minnesota (City)
+  - Nashville--Tennessee (City)
+  - Salt Lake City--Utah (City)
+  - Seattle--Washington (City)
+  - Peoria--Illinois (City)
+  - Montreal--Canada (City)
+  - Toronto--Canada (City)
+  - Winnipeg--Canada (City)
+  - Vancouver--Canada (City)
+  - St. John--New Brunswick (City)
+  - Halifax--Nova Scotia (City)
+  - Sydney--Nova Scotia (City)
+  - Toledo--Ohio (City)
+  - Dayton--Ohio (City)
+  - Baltimore--Maryland (City)
+  - United States (Country)
+  - Canada (Country)
+
+Subject Headings (Selected):
+  - Roofing (http://id.loc.gov/authorities/subjects/sh85115317) [LCSH]
+  - Fire insurance (http://id.loc.gov/authorities/subjects/sh85066892) [LCSH]
+  - Architecture, Industrial (http://id.loc.gov/authorities/subjects/sh85006803) [LCSH]
+  - guarantees (http://vocab.getty.edu/aat/300055567) [Getty AAT]
+  - Factories--Design and construction (http://id.loc.gov/authorities/subjects/sh85046827) [LCSH]
+
+Geographic Subject Headings (from vocabulary lookup):
+  - New York (State)--New York (http://id.worldcat.org/fast/fst01204333) [FAST Geographic]
+  - Illinois--Chicago (http://id.worldcat.org/fast/fst01204048) [FAST Geographic]
+  - Pennsylvania--Philadelphia (http://id.worldcat.org/fast/fst01204170) [FAST Geographic]
+  - Massachusetts--Boston (http://id.worldcat.org/fast/fst01205012) [FAST Geographic]
+  - Missouri--Saint Louis (http://id.worldcat.org/fast/fst01204930) [FAST Geographic]
+  - Ohio--Cleveland (http://id.worldcat.org/fast/fst01205966) [FAST Geographic]
+  - Ohio--Cincinnati (http://id.worldcat.org/fast/fst01205142) [FAST Geographic]
+  - Pennsylvania--Pittsburgh (http://id.worldcat.org/fast/fst01205171) [FAST Geographic]
+  - Michigan--Detroit (http://id.worldcat.org/fast/fst01205010) [FAST Geographic]
+  - Alabama--Birmingham (http://id.worldcat.org/fast/fst01204958) [FAST Geographic]
+  - Missouri--Kansas City (http://id.worldcat.org/fast/fst01204999) [FAST Geographic]
+  - Minnesota--Minneapolis (http://id.worldcat.org/fast/fst01204260) [FAST Geographic]
+  - Tennessee--Nashville (http://id.worldcat.org/fast/fst01204195) [FAST Geographic]
+  - Utah--Salt Lake City (http://id.worldcat.org/fast/fst01205314) [FAST Geographic]
+  - Washington (State)--Seattle (http://id.worldcat.org/fast/fst01204940) [FAST Geographic]
+  - Illinois--Peoria (http://id.worldcat.org/fast/fst01206107) [FAST Geographic]
+  - Québec--Île-de-Montréal (http://id.worldcat.org/fast/fst01215779) [FAST Geographic]
+  - Church of England in Canada. Diocese of Toronto (http://id.worldcat.org/fast/fst00629663) [FAST Geographic]
+  - Ilarion, Metropolitan of Winnipeg and All Canada, 1882-1972 (http://id.worldcat.org/fast/fst00069859) [FAST Geographic]
+  - Canada. Forest Products Laboratory (Vancouver, B.C.) (http://id.worldcat.org/fast/fst00549968) [FAST Geographic]
+  - New Brunswick--Saint John (http://id.worldcat.org/fast/fst01233595) [FAST Geographic]
+  - Nova Scotia--Halifax (http://id.worldcat.org/fast/fst01219177) [FAST Geographic]
+  - Nova Scotia--Sydney (http://id.worldcat.org/fast/fst01211019) [FAST Geographic]
+  - Ohio--Toledo (http://id.worldcat.org/fast/fst01211740) [FAST Geographic]
+  - Ohio--Dayton (http://id.worldcat.org/fast/fst01204702) [FAST Geographic]
+  - Maryland--Baltimore (http://id.worldcat.org/fast/fst01204292) [FAST Geographic]
+  - United States (http://id.worldcat.org/fast/fst01204155) [FAST Geographic]
+  - Canada (http://id.worldcat.org/fast/fst01204310) [FAST Geographic]
+
+============================================================

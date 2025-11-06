@@ -1,0 +1,53 @@
+============================================================
+SOUTHERN ARCHITECT - PAGE METADATA
+============================================================
+
+PAGE IDENTIFICATION:
+Folder: 1929-07-55
+Page Number: 25
+
+CONTENT:
+------------------------------
+Text Transcription:
+SOUTHERN ARCHITECT AND BUILDING NEWS
+
+JULY, 1929
+
+POST OFFICE BUILDING, UNIVERSITY OF ALABAMA, TUSCALOOSA, ALA.
+MILLER & MARTIN, ARCHITECTS
+
+Photo: By Jno. B. Krehbiel, Inc., New York City
+
+Visual Description:
+The page features a sepia-toned photograph of a classical-style building with a symmetrical facade. The building has a prominent entrance with columns and arched windows. The text is aligned vertically on the left and right margins. The title 'SOUTHERN ARCHITECT AND BUILDING NEWS' is on the left, with the date 'JULY, 1929' below it. On the right, the building is identified as the 'POST OFFICE BUILDING, UNIVERSITY OF ALABAMA, TUSCALOOSA, ALA.' with 'MILLER & MARTIN, ARCHITECTS' below. The photo credit is at the bottom right.
+
+Description:
+Photo: Post Office Building, University of Alabama, Tuscaloosa, Ala. Designed by Miller & Martin, Architects. The image showcases classical architectural elements.
+
+METADATA:
+------------------------------
+Topics:
+  - Classical architecture
+  - University buildings
+  - Architectural photography
+  - Architectural firms
+
+Named Entities:
+  - Miller & Martin (Firm)
+  - Jno. B. Krehbiel, Inc. (Firm)
+
+Geographic Entities:
+  - Tuscaloosa--Alabama (City)
+  - Alabama (State)
+
+Subject Headings (Selected):
+  - Architecture, Classical (http://id.loc.gov/authorities/subjects/sh85006718) [LCSH]
+  - university buildings (http://vocab.getty.edu/aat/300448928) [Getty AAT]
+  - architectural photography (http://vocab.getty.edu/aat/300435151) [Getty AAT]
+  - architectural firms (http://vocab.getty.edu/aat/300312082) [Getty AAT]
+
+Geographic Subject Headings (from vocabulary lookup):
+  - Alabama--Tuscaloosa (http://id.worldcat.org/fast/fst01206929) [FAST Geographic]
+  - Alabama (http://id.worldcat.org/fast/fst01204694) [FAST Geographic]
+
+============================================================

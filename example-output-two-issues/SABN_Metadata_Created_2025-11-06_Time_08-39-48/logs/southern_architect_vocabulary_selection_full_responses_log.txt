@@ -1,0 +1,3949 @@
+LLM Full Responses Log - Southern Architect Vocabulary Selection
+Created at: 2025-11-06 11:00:18
+================================================================================
+
+Row 2 - Barcode 1917-05-39_page1 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,584 (Prompt: 2,250, Completion: 334)
+ESTIMATED COST: $0.0014
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Concrete construction",
+      "source": "FAST",
+      "reasoning": "The advertisement for the U.S. Champion Tile Machine relates to concrete tile roofing, which involves concrete construction methods appropriate to the period and region."
+    },
+    {
+      "label": "Shingles",
+      "source": "FAST",
+      "reasoning": "The Cortright Metal Shingles advertisement directly relates to roofing shingles, making this term specific and relevant for metal roofing materials."
+    },
+    {
+      "label": "drawing tables (artists' tables)",
+      "source": "Getty AAT",
+      "reasoning": "The Almorth Practical Drawing Table ad depicts a specialized table used for architectural drawing, fitting the term for drawing tables used in design work."
+    },
+    {
+      "label": "Steel, Structural",
+      "source": "LCSH",
+      "reasoning": "The W. N. Kratzer Company advertisement emphasizes structural steel work, making this term precise and historically appropriate for early 20th-century Southern structural steel."
+    },
+    {
+      "label": "Elevators",
+      "source": "LCSH",
+      "reasoning": "The American Elevator and Machine Co. ad relates to elevators, a relevant building technology in the period and region."
+    },
+    {
+      "label": "Building materials",
+      "source": "Getty AAT",
+      "reasoning": "The overall page features multiple companies advertising building materials such as glass, steel, and roofing products, making this broad but accurate term appropriate."
+    }
+  ]
+}
+
+================================================================================
+
+Row 3 - Barcode 1917-05-39_page2 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,776 (Prompt: 2,384, Completion: 392)
+ESTIMATED COST: $0.0016
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "cement mortar",
+      "source": "Getty AAT",
+      "reasoning": "The advertisement for Peerless Mortar Coloring relates specifically to mortar used in building construction, and cement mortar is the historically appropriate and specific term for mortar coloring in early 20th-century Southern architecture."
+    },
+    {
+      "label": "forced air heating",
+      "source": "Getty AAT",
+      "reasoning": "The American Bell & Foundry Co. ad features a furnace, which aligns with forced air heating systems common in the period and region."
+    },
+    {
+      "label": "Limestone",
+      "source": "LCSH",
+      "reasoning": "The Bowling Green & Green River Quarries Co. ad pertains to limestone, a key building material historically quarried and used in the American South."
+    },
+    {
+      "label": "Ladders",
+      "source": "FAST",
+      "reasoning": "The Milbrandt Rolling Ladder Company ad features ladders, and this term accurately describes the product relevant to construction and building trades."
+    },
+    {
+      "label": "plumbing systems",
+      "source": "Getty AAT",
+      "reasoning": "The Kelly Octopus ad illustrates a plumbing system, making this term precise and appropriate for the content."
+    },
+    {
+      "label": "Hardware",
+      "source": "LCSH",
+      "reasoning": "The Hardware Specialty Co. ad features hardware products, a broad but accurate term for building hardware in the early 20th-century Southern context."
+    },
+    {
+      "label": "Scaffolding",
+      "source": "FAST",
+      "reasoning": "The Geo. H. Hans ad shows roof scaffold brackets, and scaffolding is the correct term for temporary structures used in construction."
+    }
+  ]
+}
+
+================================================================================
+
+Row 4 - Barcode 1917-05-39_page3 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,495 (Prompt: 2,194, Completion: 301)
+ESTIMATED COST: $0.0014
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "air purification",
+      "source": "Getty AAT",
+      "reasoning": "The page features an advertisement for Kingwelton Rotary Air Washers, which relates directly to air purification technology relevant to early 20th-century building systems."
+    },
+    {
+      "label": "structural steel",
+      "source": "Getty AAT",
+      "reasoning": "The advertisement for The J. E. Moss Iron Works promoting structural steel is directly relevant to the use of structural steel in Southern architecture during the period."
+    },
+    {
+      "label": "brass (alloy)",
+      "source": "Getty AAT",
+      "reasoning": "The Baldwin Brass Works advertisement featuring a staircase railing illustration relates specifically to brass work, a common ornamental and functional metal in Southern architecture of the era."
+    },
+    {
+      "label": "pressed metal ceiling tile",
+      "source": "Getty AAT",
+      "reasoning": "The Kinnear & Gager Mfg. Co. advertisement for metal ceilings with illustrated ceiling panels corresponds precisely to pressed metal ceiling tiles used in early 20th-century Southern buildings."
+    },
+    {
+      "label": "building materials",
+      "source": "Getty AAT",
+      "reasoning": "The overall page content is centered on various building materials and products, making this a relevant general term encompassing the advertisements."
+    }
+  ]
+}
+
+================================================================================
+
+Row 5 - Barcode 1917-05-39_page4 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,113 (Prompt: 1,907, Completion: 206)
+ESTIMATED COST: $0.0011
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Fans",
+      "source": "FAST",
+      "reasoning": "The advertisement features Seri-Vane Fans, which are industrial fans relevant to early 20th-century Southern architecture and building technology."
+    },
+    {
+      "label": "Steam-engines",
+      "source": "LCSH",
+      "reasoning": "The page promotes steam engines by The New York Blower Company, appropriate for the period and region."
+    },
+    {
+      "label": "warm air furnaces",
+      "source": "Getty AAT",
+      "reasoning": "The Lexington All-Cast Warm Air Furnace is specifically highlighted, making this term precise and historically/geographically appropriate."
+    },
+    {
+      "label": "Building materials",
+      "source": "Getty AAT",
+      "reasoning": "Decorative marbles are architectural materials used in banks, theaters, and hotels, fitting this term well."
+    }
+  ]
+}
+
+================================================================================
+
+Row 6 - Barcode 1917-05-39_page5 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,452 (Prompt: 2,212, Completion: 240)
+ESTIMATED COST: $0.0013
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Dairying--Equipment and supplies",
+      "source": "LCSH",
+      "reasoning": "The advertisement for Crumb's Stanchions with a cow's head illustration directly relates to dairy equipment used in dairying, appropriate for early 20th-century Southern agricultural architecture."
+    },
+    {
+      "label": "Building, Brick",
+      "source": "FAST",
+      "reasoning": "The Beaver Clay Manufacturing Co. ad about bricks pertains specifically to brick building materials, relevant to Southern building practices in the period."
+    },
+    {
+      "label": "Roller conveyors",
+      "source": "LCSH",
+      "reasoning": "The Minnesota Manufacturers' Assn. ad featuring spiral chutes relates to conveyor systems used in industrial and architectural contexts, fitting the historical and regional context."
+    },
+    {
+      "label": "Building materials",
+      "source": "LCSH",
+      "reasoning": "The overall page features various building-related products including bricks and machinery, making the general term 'Building materials' appropriate for the content."
+    }
+  ]
+}
+
+================================================================================
+
+Row 7 - Barcode 1917-05-39_page6 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,408 (Prompt: 2,078, Completion: 330)
+ESTIMATED COST: $0.0014
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Roofing",
+      "source": "LCSH",
+      "reasoning": "The advertisement for Maire's Roof Cement directly relates to roofing materials used in building construction in the early 20th century American South."
+    },
+    {
+      "label": "Finishes and finishing",
+      "source": "FAST",
+      "reasoning": "The TROKAL Liquid Floor Finish ad pertains to floor finishing products, making this term appropriate and historically relevant."
+    },
+    {
+      "label": "Plumbing fixtures",
+      "source": "Getty AAT",
+      "reasoning": "The Bowlys Closets advertisement features sanitary fixtures, specifically toilets, which are accurately described by this term relevant to early 20th century Southern architecture."
+    },
+    {
+      "label": "Building materials",
+      "source": "LCSH",
+      "reasoning": "The page includes multiple building-related products such as roof cement and columns, making this general term appropriate for the materials advertised."
+    },
+    {
+      "label": "Home improvement",
+      "source": "LCSH",
+      "reasoning": "The overall theme of the page is products for building and home improvement, fitting this term which covers maintenance and repair relevant to the period and region."
+    },
+    {
+      "label": "architectural elements",
+      "source": "Getty AAT",
+      "reasoning": "The Frank Spangler Co. ad highlights porch columns, a specific architectural element common in Southern residential architecture of the era."
+    }
+  ]
+}
+
+================================================================================
+
+Row 8 - Barcode 1917-05-39_page7 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,389 (Prompt: 2,207, Completion: 182)
+ESTIMATED COST: $0.0012
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Electric lighting",
+      "source": "LCSH",
+      "reasoning": "The advertisement for 'Electric Daylight' lamp directly relates to electric lighting technology appropriate for the early 20th century Southern architecture context."
+    },
+    {
+      "label": "Blackboards",
+      "source": "LCSH",
+      "reasoning": "The 'Lithoplate' advertisement featuring a classroom with blackboards clearly pertains to blackboards as classroom equipment relevant to the period and region."
+    },
+    {
+      "label": "Steam-heating",
+      "source": "LCSH",
+      "reasoning": "The 'Lytton Thermo Syphon Trap' is a device for heating systems, specifically related to steam heating technology common in the early 1900s Southern buildings."
+    }
+  ]
+}
+
+================================================================================
+
+Row 9 - Barcode 1917-05-39_page8 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,652 (Prompt: 2,407, Completion: 245)
+ESTIMATED COST: $0.0014
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Clamps (Engineering)",
+      "source": "LCSH",
+      "reasoning": "The page features advertisements for 'The Hugo' clamp with illustrations of locking devices, directly relating to engineering clamps used in construction or manufacturing during the early 20th century American South."
+    },
+    {
+      "label": "Lightning rods",
+      "source": "LCSH",
+      "reasoning": "The advertisement for galvanized lightning rods by E. A. Foy Company is directly relevant to lightning rods as building safety devices common in the Southern United States during the period."
+    },
+    {
+      "label": "Building materials",
+      "source": "LCSH",
+      "reasoning": "Galvanized lightning rods and clamps are building materials used in construction technology, making this term appropriate for the content."
+    },
+    {
+      "label": "Advertising",
+      "source": "LCSH",
+      "reasoning": "The entire page consists of advertisements, including testimonials and product promotion, fitting the general term for advertising in the early 20th century Southern architectural and building trades context."
+    }
+  ]
+}
+
+================================================================================
+
+Row 10 - Barcode 1917-05-39_page9 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 1,974 (Prompt: 1,853, Completion: 121)
+ESTIMATED COST: $0.0009
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Home ownership",
+      "source": "LCSH",
+      "reasoning": "The page discusses the 'Buy a Home' campaign and home ownership, which is directly relevant and appropriate for early 20th century Southern U.S. architectural context."
+    },
+    {
+      "label": "Advertising",
+      "source": "FAST",
+      "reasoning": "The page addresses trade paper advertising and its impact during wartime, making 'Advertising' the most relevant and specific term for this content."
+    }
+  ]
+}
+
+================================================================================
+
+Row 11 - Barcode 1917-05-39_page10 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,106 (Prompt: 1,838, Completion: 268)
+ESTIMATED COST: $0.0012
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "advertising",
+      "source": "Getty AAT",
+      "reasoning": "The page discusses the role of advertising in post-war economic opportunities, making this term directly relevant and appropriate for early 20th-century Southern architectural and building news context."
+    },
+    {
+      "label": "economy",
+      "source": "Getty AAT",
+      "reasoning": "The article emphasizes thrift and economy as key themes in the post-war period, fitting the historical and geographical context of the American South during 1892-1931."
+    },
+    {
+      "label": "World War (1939-1945)",
+      "source": "FAST",
+      "reasoning": "Although the article references World War I, the available vocabulary only includes World War II terms under 'World War I impact'. Given the lack of a precise World War I term, this is the closest relevant term to represent wartime impact on industry and economy."
+    },
+    {
+      "label": "Engineering",
+      "source": "FAST",
+      "reasoning": "The Florida Engineering Society's offer to support the war effort is mentioned, making this general engineering term appropriate and historically relevant for the Southern United States during this period."
+    }
+  ]
+}
+
+================================================================================
+
+Row 12 - Barcode 1917-05-39_page11 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,657 (Prompt: 2,161, Completion: 496)
+ESTIMATED COST: $0.0017
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "forced air heating",
+      "source": "Getty AAT",
+      "reasoning": "The 'Sanit-Air System' advertisement relates to heating systems likely involving air circulation, making 'forced air heating' the most specific and historically appropriate term for early 20th-century Southern heating technology."
+    },
+    {
+      "label": "Concrete mixers",
+      "source": "FAST",
+      "reasoning": "The 'Iowa Batch Mixer' ad depicts a batch mixer used in construction, which corresponds directly to 'Concrete mixers,' a precise term for batch mixers in building trades of the period."
+    },
+    {
+      "label": "Window guards",
+      "source": "LCSH",
+      "reasoning": "The advertisement for 'Window Guards' directly matches this term, which is historically and geographically appropriate for Southern building security features in the early 20th century."
+    },
+    {
+      "label": "Fire escapes",
+      "source": "LCSH",
+      "reasoning": "The 'Fire Escapes' advertisement listing various products corresponds exactly to this term, relevant to Southern urban architecture safety features of the period."
+    },
+    {
+      "label": "Building, Iron and steel",
+      "source": "LCSH",
+      "reasoning": "The presence of steel construction products and companies like Milliken Brothers indicates relevance to iron and steel building construction, making this term appropriate and specific for the content."
+    },
+    {
+      "label": "Tower clocks",
+      "source": "LCSH",
+      "reasoning": "The 'Century Tower Clock Works' advertisement directly relates to tower clocks, a specific architectural feature relevant to Southern public and institutional buildings in the era."
+    },
+    {
+      "label": "Cement",
+      "source": "FAST",
+      "reasoning": "The 'Stonekote' ad for cement finishes corresponds broadly and accurately to 'Cement,' the general term appropriate for early 20th-century Southern building materials."
+    },
+    {
+      "label": "ventilator damper",
+      "source": "Getty AAT",
+      "reasoning": "The detailed illustration and description of 'The National Self-Locking Ventilator Irons' relate specifically to ventilator components controlling airflow, making 'ventilator damper' the most precise and relevant term."
+    }
+  ]
+}
+
+================================================================================
+
+Row 13 - Barcode 1917-05-39_page12 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,269 (Prompt: 1,951, Completion: 318)
+ESTIMATED COST: $0.0013
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Mirrors",
+      "source": "FAST",
+      "reasoning": "The advertisement features reversible mirrors, which are a type of mirror product; 'Mirrors' is the most appropriate and historically accurate term for architectural mirror products in the early 20th century American South."
+    },
+    {
+      "label": "dimension stone",
+      "source": "Getty AAT",
+      "reasoning": "The Hoosier Cut Stone Co. ad relates to cut stone used in building construction; 'dimension stone' specifically refers to cut stone prepared for architectural use, fitting the historical and regional context."
+    },
+    {
+      "label": "brass",
+      "source": "Getty AAT",
+      "reasoning": "The advertisement for brass rails involves brass as a building material; 'brass' is the precise term for the alloy used in architectural hardware and rails during the period."
+    },
+    {
+      "label": "roofing slate",
+      "source": "Getty AAT",
+      "reasoning": "The roofing slate advertisement pertains to slate used for roofing; 'roofing slate' is the specific and historically appropriate term for this building material in the Southern US context."
+    },
+    {
+      "label": "coal chutes",
+      "source": "Getty AAT",
+      "reasoning": "The coal chute advertisement directly corresponds to 'coal chutes' as architectural building accessories used for coal handling, appropriate for the period and region."
+    }
+  ]
+}
+
+================================================================================
+
+Row 14 - Barcode 1917-05-39_page13 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 1,759 (Prompt: 1,597, Completion: 162)
+ESTIMATED COST: $0.0009
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Sewage disposal",
+      "source": "Getty AAT",
+      "reasoning": "The advertisement describes reinforced concrete tanks for sewage disposal, directly relating to sewage disposal practices relevant to the period and region."
+    },
+    {
+      "label": "Public health",
+      "source": "FAST",
+      "reasoning": "The product is recommended by the United States Public Health Service, indicating a direct connection to public health concerns and recommendations."
+    },
+    {
+      "label": "suburban houses",
+      "source": "Getty AAT",
+      "reasoning": "The advertisement emphasizes suitability for suburban homes, making 'suburban houses' the most precise term related to the residential context."
+    }
+  ]
+}
+
+================================================================================
+
+Row 15 - Barcode 1917-05-39_page14 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,286 (Prompt: 2,018, Completion: 268)
+ESTIMATED COST: $0.0012
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "sash chains",
+      "source": "Getty AAT",
+      "reasoning": "The advertisement for Pullman Unit Sash Balances relates specifically to window sash hardware; sash chains are historically appropriate and specific to window sash balance mechanisms in the early 20th century American South."
+    },
+    {
+      "label": "fireplace accessories",
+      "source": "Getty AAT",
+      "reasoning": "The Heitland Grate & Mantel Co. advertisement features a fireplace heater, which falls under fireplace accessories, a term appropriate for heating elements related to fireplaces in the period and region."
+    },
+    {
+      "label": "Lumber trade",
+      "source": "LCSH",
+      "reasoning": "The Collins Lumber Co. advertisement focuses on lumber materials for cotton mill buildings, making 'Lumber trade' the most relevant and historically appropriate term for the lumber industry in the Southern United States during this era."
+    },
+    {
+      "label": "building materials",
+      "source": "LCSH",
+      "reasoning": "The advertisements collectively emphasize materials used in construction, including lumber and sash balances, making 'building materials' a precise and relevant term for the content."
+    }
+  ]
+}
+
+================================================================================
+
+Row 16 - Barcode 1917-05-39_page15 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,611 (Prompt: 2,233, Completion: 378)
+ESTIMATED COST: $0.0015
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "building contractors",
+      "source": "Getty AAT",
+      "reasoning": "The page discusses contractor experiences and the evolving role of contractors, making 'building contractors' the most precise and historically appropriate term for contractor practices in the Southern US during 1892-1931."
+    },
+    {
+      "label": "Metric system",
+      "source": "LCSH",
+      "reasoning": "The article highlights the adoption and wider favor of the metric system, making this term directly relevant and temporally/geographically appropriate."
+    },
+    {
+      "label": "Architectural design--Standards",
+      "source": "FAST",
+      "reasoning": "The content addresses architectural standards and professional practices, so this term accurately reflects the discussion of evolving architectural standards."
+    },
+    {
+      "label": "Professional ethics",
+      "source": "LCSH",
+      "reasoning": "The emphasis on fair practices and professional standards aligns directly with professional ethics, making this term appropriate and historically relevant."
+    },
+    {
+      "label": "Construction industry",
+      "source": "FAST",
+      "reasoning": "The discussion involves the building industry and contractor roles, so 'Construction industry' best captures the broader industrial context relevant to the Southern building trades of the period."
+    },
+    {
+      "label": "Engineering",
+      "source": "FAST",
+      "reasoning": "The article touches on engineering challenges and professional standards, making this general engineering term suitable and historically appropriate."
+    },
+    {
+      "label": "Decimal system",
+      "source": "LCSH",
+      "reasoning": "The mention of the decimal system in relation to measurement and metric adoption makes this term relevant and temporally/geographically appropriate."
+    }
+  ]
+}
+
+================================================================================
+
+Row 17 - Barcode 1917-05-39_page16 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,431 (Prompt: 2,186, Completion: 245)
+ESTIMATED COST: $0.0013
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Wooden-frame buildings",
+      "source": "LCSH",
+      "reasoning": "The article discusses the impact of the European war on wooden buildings, making 'Wooden-frame buildings' directly relevant and historically appropriate for early 20th-century Southern architecture."
+    },
+    {
+      "label": "World War (1914-1918)",
+      "source": "FAST",
+      "reasoning": "The European war referenced is the First World War, which affected buildings in Europe; this term accurately reflects the historical context and geographic relevance."
+    },
+    {
+      "label": "Jefferson, Thomas, 1743-1826",
+      "source": "FAST",
+      "reasoning": "The article highlights Thomas Jefferson's architectural contributions, making this term specifically relevant to the content and appropriate for the period and region."
+    },
+    {
+      "label": "architectural history",
+      "source": "Getty AAT",
+      "reasoning": "The discussion includes historical perspectives on architecture, particularly Jefferson's overlooked achievements, fitting the term 'architectural history' for the scholarly context."
+    }
+  ]
+}
+
+================================================================================
+
+Row 18 - Barcode 1917-05-39_page17 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,490 (Prompt: 2,120, Completion: 370)
+ESTIMATED COST: $0.0014
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "glazing (installing glass)",
+      "source": "Getty AAT",
+      "reasoning": "The advertisement for Kuhls' Elastic Glazing Composition directly relates to the installation of glass in architectural contexts, making this term precise and historically appropriate for early 20th-century Southern building practices."
+    },
+    {
+      "label": "Memorials",
+      "source": "FAST",
+      "reasoning": "The bronze memorial plaque depicted fits the general category of memorials, which is historically and geographically relevant to Southern architectural ornamentation and commemorative practices."
+    },
+    {
+      "label": "Scaffolding",
+      "source": "LCSH",
+      "reasoning": "The advertisement for 'Trouble-Saver Scaffolds' clearly pertains to scaffolding used in construction, a fundamental building practice in the period and region."
+    },
+    {
+      "label": "building materials",
+      "source": "Getty AAT",
+      "reasoning": "The page features various building products and materials, including glazing composition and scaffolding, making this term appropriate to encompass the architectural materials advertised."
+    },
+    {
+      "label": "Building--Technological innovations",
+      "source": "LCSH",
+      "reasoning": "The page highlights innovative building materials and tools such as self-cleaning strainers and elastic glazing composition, fitting the concept of technological innovations in building during the early 20th century."
+    },
+    {
+      "label": "Tools--Design and construction",
+      "source": "LCSH",
+      "reasoning": "The products advertised include construction tools and equipment relevant to architects and builders, making this term suitable for the tools aspect of the page content."
+    }
+  ]
+}
+
+================================================================================
+
+Row 19 - Barcode 1917-05-39_page18 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 1,769 (Prompt: 1,644, Completion: 125)
+ESTIMATED COST: $0.0009
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Concrete construction",
+      "source": "LCSH",
+      "reasoning": "The advertisement promotes the POLK SYSTEM for circular monolithic concrete construction, making 'Concrete construction' the most accurate and historically appropriate term for early 20th-century Southern US building practices."
+    },
+    {
+      "label": "building contractors",
+      "source": "Getty AAT",
+      "reasoning": "The advertisement targets contractors by highlighting efficiency and cost-effectiveness, making 'building contractors' relevant and appropriate for the context."
+    }
+  ]
+}
+
+================================================================================
+
+Row 20 - Barcode 1917-05-39_page19 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,609 (Prompt: 2,304, Completion: 305)
+ESTIMATED COST: $0.0014
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "finishing varnish",
+      "source": "Getty AAT",
+      "reasoning": "The advertisement promotes Wolf's Elastine Lacquer as a durable floor varnish, which fits precisely under finishing varnish, a term appropriate for early 20th-century architectural finishes in the American South."
+    },
+    {
+      "label": "Skyscrapers",
+      "source": "FAST",
+      "reasoning": "The page features a photograph of an early 20th-century skyscraper (Union Central Life Insurance Building), making 'Skyscrapers' a relevant and historically appropriate term."
+    },
+    {
+      "label": "Levels (Surveying instruments)",
+      "source": "LCSH",
+      "reasoning": "The ad for an improved convertible level surveying instrument directly relates to levels used in surveying, a key architectural tool in the period."
+    },
+    {
+      "label": "Architectural drawing--Printing",
+      "source": "LCSH",
+      "reasoning": "The Defiance Supplies ad promotes blue and black prints and lithographic reproductions for architects, which aligns with architectural drawing printing practices relevant to the era."
+    },
+    {
+      "label": "Lithographic workshops",
+      "source": "FAST",
+      "reasoning": "The advertisement references lithographic reproductions, making lithographic workshops a suitable term for the print reproduction technologies used in architectural practice."
+    }
+  ]
+}
+
+================================================================================
+
+Row 21 - Barcode 1917-05-39_page20 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,352 (Prompt: 2,014, Completion: 338)
+ESTIMATED COST: $0.0013
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Doors",
+      "source": "FAST",
+      "reasoning": "The advertisement features fire-proof doors, and 'Doors' is the most specific and relevant term available for this building product from the period."
+    },
+    {
+      "label": "Chemical toilets",
+      "source": "LCSH",
+      "reasoning": "The Economy Chemical Closet is a sanitary chemical closet, which corresponds directly to chemical toilets, a historically appropriate term for early 20th-century sanitary solutions."
+    },
+    {
+      "label": "cast iron architecture",
+      "source": "Getty AAT",
+      "reasoning": "The Keystone Cast Iron Columns are architectural elements made of cast iron, making 'cast iron architecture' the most precise and relevant term for these building components."
+    },
+    {
+      "label": "building materials",
+      "source": "Getty AAT",
+      "reasoning": "The page highlights innovations in building materials, so the general term 'building materials' accurately encompasses the advertised products."
+    },
+    {
+      "label": "sanitary engineering",
+      "source": "Getty AAT",
+      "reasoning": "The Economy Chemical Closet represents a sanitary solution, and 'sanitary engineering' is the appropriate term covering sanitary innovations in building technology of the period."
+    },
+    {
+      "label": "Construction industry--Technological innovations",
+      "source": "LCSH",
+      "reasoning": "The advertisements emphasize innovations in building materials and sanitary solutions, making this term relevant to the technological advances in construction during the era."
+    }
+  ]
+}
+
+================================================================================
+
+Row 22 - Barcode 1917-05-39_page21 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,480 (Prompt: 2,197, Completion: 283)
+ESTIMATED COST: $0.0013
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "sanitary drainage systems",
+      "source": "Getty AAT",
+      "reasoning": "The advertisement for Wolverine Closets with a bathroom illustration relates directly to sanitary solutions appropriate to early 20th-century Southern architecture, specifically sanitary drainage systems."
+    },
+    {
+      "label": "Revolving doors",
+      "source": "LCSH",
+      "reasoning": "The Dallas Show Case & Mfg. Co. ad featuring revolving doors is directly described by this term, which is historically and geographically appropriate."
+    },
+    {
+      "label": "Limestone",
+      "source": "LCSH",
+      "reasoning": "The Ingalls Stone Co. advertisement emphasizing limestone corresponds precisely to this term, relevant to building materials used in the American South during the period."
+    },
+    {
+      "label": "automatic",
+      "source": "Getty AAT",
+      "reasoning": "The Bruston Automatic Electric Lighting ad featuring automatic lighting innovations fits this term, which covers automatic lighting systems in early 20th-century architecture."
+    },
+    {
+      "label": "Building materials",
+      "source": "LCSH",
+      "reasoning": "The page includes multiple building-related products and materials, making this general but specific term appropriate for the overall content."
+    }
+  ]
+}
+
+================================================================================
+
+Row 24 - Barcode 1917-05-39_page23 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,547 (Prompt: 2,154, Completion: 393)
+ESTIMATED COST: $0.0015
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "fans (equipment)",
+      "source": "Getty AAT",
+      "reasoning": "The advertisement for 'Peerless Ventilators' relates to architectural ventilation equipment appropriate for the period; 'fans (equipment)' accurately describes ventilators in building contexts circa 1892-1931 in the American South."
+    },
+    {
+      "label": "architectural lighting",
+      "source": "Getty AAT",
+      "reasoning": "The 'FRINK Lighting Service for Architects' ad offering lighting services and products directly relates to architectural lighting, a historically appropriate term for early 20th-century Southern architectural practice."
+    },
+    {
+      "label": "shelf hardware",
+      "source": "Getty AAT",
+      "reasoning": "The 'Johnston's Patent Shelf Pin' advertisement concerns hardware used in shelving, making 'shelf hardware' the precise and relevant term for this architectural product."
+    },
+    {
+      "label": "Elevators",
+      "source": "LCSH",
+      "reasoning": "The 'Lightning' Loader Skip is a type of elevator or lifting device used in construction; 'Elevators' is the appropriate general term for such equipment in the architectural and building trades of the period."
+    },
+    {
+      "label": "Building materials",
+      "source": "LCSH",
+      "reasoning": "The advertisement for Philip Gruner & Bros. Lumber Co. and other building materials directly relates to 'Building materials,' a broad but accurate term for materials supplied for construction in the Southern US during this era."
+    },
+    {
+      "label": "Construction equipment",
+      "source": "LCSH",
+      "reasoning": "The loader skip and other mechanical devices advertised are types of construction equipment used in building trades, making this term relevant and historically appropriate."
+    }
+  ]
+}
+
+================================================================================
+
+Row 25 - Barcode 1917-05-39_page24 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,582 (Prompt: 2,292, Completion: 290)
+ESTIMATED COST: $0.0014
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Roofing",
+      "source": "LCSH",
+      "reasoning": "The page discusses Barrett Specification Roofs and their benefits, directly relating to roofing materials and systems appropriate for early 20th-century Southern industrial buildings."
+    },
+    {
+      "label": "Fire insurance",
+      "source": "LCSH",
+      "reasoning": "The advertisement highlights fire insurance advantages associated with the Barrett Specification Roofs, making this term relevant and historically appropriate."
+    },
+    {
+      "label": "Architecture, Industrial",
+      "source": "LCSH",
+      "reasoning": "The content centers on an ideal factory and its roof, fitting within the scope of industrial architecture relevant to the American South during the period."
+    },
+    {
+      "label": "guarantees",
+      "source": "Getty AAT",
+      "reasoning": "The mention of a 20-Year Guaranty Bond for the roofing product directly relates to construction guarantees, a historically relevant concept for building contracts and warranties."
+    },
+    {
+      "label": "Factories--Design and construction",
+      "source": "LCSH",
+      "reasoning": "The article describes an ideal factory design and roof, making this term specifically relevant to factory architectural design and construction in the early 20th-century Southern context."
+    }
+  ]
+}
+
+================================================================================
+
+Row 26 - Barcode 1917-05-39_page25 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,082 (Prompt: 1,916, Completion: 166)
+ESTIMATED COST: $0.0010
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Home ownership--United States",
+      "source": "LCSH",
+      "reasoning": "The article discusses a nationwide campaign in the United States to promote home ownership, making this term temporally and geographically appropriate."
+    },
+    {
+      "label": "Lumber trade",
+      "source": "LCSH",
+      "reasoning": "The campaign aims to increase lumber consumption, directly relating to the lumber trade relevant to the Southern United States during the early 20th century."
+    },
+    {
+      "label": "Advertising",
+      "source": "FAST",
+      "reasoning": "The campaign strategy involves promoting home building, which includes advertising efforts; this term accurately reflects the promotional aspect described."
+    }
+  ]
+}
+
+================================================================================
+
+Row 27 - Barcode 1917-05-39_page26 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 1,764 (Prompt: 1,634, Completion: 130)
+ESTIMATED COST: $0.0009
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "architectural societies",
+      "source": "Getty AAT",
+      "reasoning": "The page discusses the formation of the Augusta Builders' Exchange and mentions the American Institute of Architects meeting, both representing architectural associations relevant to the early 20th-century Southern United States."
+    },
+    {
+      "label": "professional associations",
+      "source": "Getty AAT",
+      "reasoning": "The content involves professional networking through the architects' meeting and builders' exchange, fitting the concept of professional associations in architecture during this period and region."
+    }
+  ]
+}
+
+================================================================================
+
+Row 28 - Barcode 1917-05-39_page27 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,315 (Prompt: 2,013, Completion: 302)
+ESTIMATED COST: $0.0013
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Sculpture",
+      "source": "LCSH",
+      "reasoning": "The page discusses Henry Hering's work as a sculptor, including a photograph of his bronze sculpture 'Diana', making the general term 'Sculpture' directly relevant and historically appropriate for early 20th-century Southern American architectural and artistic context."
+    },
+    {
+      "label": "Idealism",
+      "source": "LCSH",
+      "reasoning": "The article contrasts realism and idealism in sculpture, discussing Hering's artistic philosophy, making 'Idealism' a precise and relevant term for the philosophical aspect of his work in the given historical and geographical context."
+    },
+    {
+      "label": "Influence (Literary, artistic, etc.)",
+      "source": "LCSH",
+      "reasoning": "The text discusses Henry Hering's artistic influences, including Rodin and Augustus Saint Gaudens, making this term appropriate to describe the artistic influence topic in the early 20th-century Southern art context."
+    },
+    {
+      "label": "artistic concepts",
+      "source": "Getty AAT",
+      "reasoning": "The article explores Hering's artistic philosophy and concepts such as realism and idealism, making 'artistic concepts' a suitable term to capture the philosophical and conceptual discussion relevant to the period and region."
+    }
+  ]
+}
+
+================================================================================
+
+Row 29 - Barcode 1917-05-39_page28 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,065 (Prompt: 1,869, Completion: 196)
+ESTIMATED COST: $0.0011
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Sculpture",
+      "source": "LCSH",
+      "reasoning": "The page features photographs and discussion of Henry Hering's sculptural works, making the general term 'Sculpture' directly relevant and historically appropriate for early 20th-century Southern architectural and artistic context."
+    },
+    {
+      "label": "Classicism",
+      "source": "LCSH",
+      "reasoning": "The article discusses Hering's approach involving classicism in sculpture, which fits the historical period and Southern U.S. art context, making this term precise and appropriate."
+    },
+    {
+      "label": "Art criticism",
+      "source": "LCSH",
+      "reasoning": "The content includes critique and discussion of artistic approaches, including realism and idealism, thus 'Art criticism' accurately describes the analytical aspect of the page."
+    }
+  ]
+}
+
+================================================================================
+
+Row 30 - Barcode 1917-05-39_page29 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 1,830 (Prompt: 1,650, Completion: 180)
+ESTIMATED COST: $0.0009
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Bronze sculpture",
+      "source": "FAST",
+      "reasoning": "The page features bronze sculptures by Henry Hering, making 'Bronze sculpture' directly relevant and historically appropriate for early 20th-century American Southern architectural and artistic context."
+    },
+    {
+      "label": "Idealism in art",
+      "source": "LCSH",
+      "reasoning": "The text discusses themes of idealism in art, which is a historically appropriate artistic concept for the period and relevant to the sculptures described."
+    },
+    {
+      "label": "Sculpture--Technique",
+      "source": "LCSH",
+      "reasoning": "The article addresses the execution and artistic techniques of Hering's sculptures, making this term relevant and specific to the content."
+    }
+  ]
+}
+
+================================================================================
+
+Row 31 - Barcode 1917-05-39_page30 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,514 (Prompt: 2,313, Completion: 201)
+ESTIMATED COST: $0.0012
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Sculpture",
+      "source": "LCSH",
+      "reasoning": "The page discusses the works of sculptor Hering and his influence from ancient Greek art, making the general term 'Sculpture' appropriate and historically/geographically relevant."
+    },
+    {
+      "label": "Art, Greek",
+      "source": "LCSH",
+      "reasoning": "The article highlights Hering's influence from ancient Greek art, so 'Art, Greek' accurately reflects the cultural and stylistic context relevant to the early 20th century Southern architectural and artistic discourse."
+    },
+    {
+      "label": "Building trades",
+      "source": "FAST",
+      "reasoning": "The page includes information on the Raleigh Building Trades Association, making 'Building trades' a directly relevant and specific term for the content related to construction and labor in the Southern United States."
+    }
+  ]
+}
+
+================================================================================
+
+Row 32 - Barcode 1917-05-39_page31 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 1,900 (Prompt: 1,749, Completion: 151)
+ESTIMATED COST: $0.0009
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Sculpture",
+      "source": "LCSH",
+      "reasoning": "The page centers on sculptors and their works, including a photograph of a sculpture, making the general term 'Sculpture' directly relevant and historically appropriate for early 20th-century Southern architectural and artistic context."
+    },
+    {
+      "label": "artistic change",
+      "source": "Getty AAT",
+      "reasoning": "The article discusses Richard Englemann's transition from bookkeeper to sculptor and his early artistic development, which aligns with the concept of 'artistic change' as a specific term describing development in artistic practice."
+    }
+  ]
+}
+
+================================================================================
+
+Row 33 - Barcode 1917-05-39_page32 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,506 (Prompt: 2,145, Completion: 361)
+ESTIMATED COST: $0.0014
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Sculpture",
+      "source": "LCSH",
+      "reasoning": "The page features photographs and discussion of Richard Engelmann's sculptural works, making 'Sculpture' the most precise and historically appropriate term for the content."
+    },
+    {
+      "label": "Influence (Literary, artistic, etc.)",
+      "source": "LCSH",
+      "reasoning": "The text discusses Engelmann's artistic influences from European cities and key figures, making this term directly relevant and appropriate for the period and subject."
+    },
+    {
+      "label": "plastic arts",
+      "source": "Getty AAT",
+      "reasoning": "The content relates to three-dimensional artistic works (sculpture), which fall under the category of plastic arts, a historically accurate term for the period."
+    },
+    {
+      "label": "artistic change",
+      "source": "Getty AAT",
+      "reasoning": "The article discusses Engelmann's artistic evolution and stylistic development, making 'artistic change' a precise term reflecting this aspect."
+    },
+    {
+      "label": "nineteenth century",
+      "source": "Getty AAT",
+      "reasoning": "Engelmann's work and influences are rooted in 19th-century art movements and contexts, making this term temporally and geographically appropriate."
+    },
+    {
+      "label": "Central European",
+      "source": "Getty AAT",
+      "reasoning": "The artist's influences include European cities such as Florence, Paris, and Berlin, with Berlin situated in Central Europe; this term accurately reflects the geographic and cultural context."
+    }
+  ]
+}
+
+================================================================================
+
+Row 34 - Barcode 1917-05-39_page33 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,447 (Prompt: 2,263, Completion: 184)
+ESTIMATED COST: $0.0012
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Sculpture",
+      "source": "LCSH",
+      "reasoning": "The page features photographs and discussion of Richard Engelmann's sculptural works, making 'Sculpture' directly relevant and historically appropriate for early 20th-century Southern architectural and artistic context."
+    },
+    {
+      "label": "Civil service",
+      "source": "FAST",
+      "reasoning": "The page includes a job announcement for an assistant inspector of engineering material, a civil service position, making this term relevant and appropriate for the period and geographic context."
+    },
+    {
+      "label": "Engineering inspection",
+      "source": "LCSH",
+      "reasoning": "The job announcement relates to inspection of engineering materials, making 'Engineering inspection' a precise and relevant term for the content."
+    }
+  ]
+}
+
+================================================================================
+
+Row 35 - Barcode 1917-05-39_page34 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,529 (Prompt: 2,153, Completion: 376)
+ESTIMATED COST: $0.0015
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Civil service--United States--Examinations",
+      "source": "LCSH",
+      "reasoning": "The page details civil service examinations for construction roles in the United States, making this term temporally and geographically appropriate and directly relevant."
+    },
+    {
+      "label": "Building inspection",
+      "source": "LCSH",
+      "reasoning": "The content focuses on construction inspection roles, which aligns precisely with building inspection as a term relevant to early 20th-century Southern architecture and construction."
+    },
+    {
+      "label": "Building trades",
+      "source": "LCSH",
+      "reasoning": "The page relates to construction roles and requirements within the building trades, a historically appropriate and specific term for the described content."
+    },
+    {
+      "label": "Technical education",
+      "source": "LCSH",
+      "reasoning": "The examination requirements include education and training relevant to technical education, fitting the historical context of vocational preparation in the building trades."
+    },
+    {
+      "label": "Civil service positions",
+      "source": "LCSH",
+      "reasoning": "The page concerns employment in government civil service positions related to construction, making this term directly relevant and geographically appropriate."
+    },
+    {
+      "label": "Application forms",
+      "source": "Getty AAT",
+      "reasoning": "The detailed procedures for applying to civil service construction roles involve application forms, making this term specific and relevant to the content."
+    },
+    {
+      "label": "evaluation",
+      "source": "Getty AAT",
+      "reasoning": "The page includes evaluation of experience and qualifications for applicants, making this term appropriate and specific to the content."
+    }
+  ]
+}
+
+================================================================================
+
+Row 36 - Barcode 1917-05-39_page35 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,434 (Prompt: 2,125, Completion: 309)
+ESTIMATED COST: $0.0013
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Civil service--United States--Examinations",
+      "source": "LCSH",
+      "reasoning": "The page details qualifications and requirements for architectural draftsman positions in the U.S. Civil Service, focusing on examinations and application processes, making this term directly relevant and historically/geographically appropriate."
+    },
+    {
+      "label": "Technical education",
+      "source": "LCSH",
+      "reasoning": "The article discusses education, training, and experience requirements for architectural draftsmen, which aligns with the concept of technical education relevant to early 20th-century Southern U.S. architectural training."
+    },
+    {
+      "label": "architectural education",
+      "source": "Getty AAT",
+      "reasoning": "The content focuses on qualifications and training specific to architectural draftsmen, making architectural education a precise and appropriate term for the described professional training."
+    },
+    {
+      "label": "drafting",
+      "source": "Getty AAT",
+      "reasoning": "Since the article centers on architectural draftsman positions and their required skills, the general term drafting accurately reflects the technical skill set discussed."
+    },
+    {
+      "label": "federal government",
+      "source": "Getty AAT",
+      "reasoning": "The employment context is within the U.S. Civil Service, which is part of the federal government, making this term relevant and geographically appropriate."
+    }
+  ]
+}
+
+================================================================================
+
+Row 37 - Barcode 1917-05-39_page36 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,530 (Prompt: 2,152, Completion: 378)
+ESTIMATED COST: $0.0015
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Plumbing--Equipment and supplies",
+      "source": "LCSH",
+      "reasoning": "The article discusses the demand for plumbing supplies in Bogota, directly relating to plumbing equipment and supplies relevant to early 20th-century building practices."
+    },
+    {
+      "label": "diamond mesh lath",
+      "source": "Getty AAT",
+      "reasoning": "The Metal Lath Association's plans involve metal lath, and diamond mesh lath is a specific type of metal lath appropriate for the period and context."
+    },
+    {
+      "label": "fire resistance",
+      "source": "Getty AAT",
+      "reasoning": "The content includes fire resistance testing related to building materials, making this term directly relevant and historically appropriate."
+    },
+    {
+      "label": "building laws",
+      "source": "LCSH",
+      "reasoning": "Discussion of fire resistance testing and standards implies relevance to building laws regulating construction safety in the early 20th-century South."
+    },
+    {
+      "label": "Publicity",
+      "source": "FAST",
+      "reasoning": "The Metal Lath Association's co-operative publicity campaigns are directly related to publicity efforts in the architectural and building trades."
+    },
+    {
+      "label": "Roofing",
+      "source": "FAST",
+      "reasoning": "Non-combustible roofing is discussed, making the general term roofing appropriate and relevant to the building materials and architectural context."
+    },
+    {
+      "label": "Building materials",
+      "source": "LCSH",
+      "reasoning": "The article covers various construction materials including metal lath and roofing materials, making this a suitable broad term for the content."
+    }
+  ]
+}
+
+================================================================================
+
+Row 38 - Barcode 1917-05-39_page37 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,229 (Prompt: 1,893, Completion: 336)
+ESTIMATED COST: $0.0013
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Architectural design",
+      "source": "LCSH",
+      "reasoning": "The article discusses the role of architects in design and planning, making 'Architectural design' directly relevant and historically appropriate for early 20th-century Southern architecture."
+    },
+    {
+      "label": "Civic improvement",
+      "source": "FAST",
+      "reasoning": "The discussion of architects enhancing civic pride and community development aligns with the concept of civic improvement, which is historically and geographically appropriate."
+    },
+    {
+      "label": "Community development",
+      "source": "LCSH",
+      "reasoning": "The article emphasizes community development through architectural efforts, making this term directly relevant and appropriate for the Southern U.S. context of the period."
+    },
+    {
+      "label": "Architectural design--Planning",
+      "source": "FAST",
+      "reasoning": "The article highlights architectural planning as a key aspect of the architect's role, making this term specific and relevant to the content and period."
+    },
+    {
+      "label": "scientific analysis",
+      "source": "Getty AAT",
+      "reasoning": "The emphasis on scientific skill in architecture corresponds to 'scientific analysis,' which accurately reflects the technical and scientific aspects discussed."
+    },
+    {
+      "label": "artistic concepts",
+      "source": "Getty AAT",
+      "reasoning": "The article notes the importance of artistic expression in architecture, making 'artistic concepts' a precise and relevant term for this content."
+    }
+  ]
+}
+
+================================================================================
+
+Row 39 - Barcode 1917-05-39_page38 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,551 (Prompt: 2,179, Completion: 372)
+ESTIMATED COST: $0.0015
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Architectural practice",
+      "source": "LCSH",
+      "reasoning": "The page discusses the role and professional pride of architects, directly relating to architectural practice in the early 20th-century Southern architectural context."
+    },
+    {
+      "label": "Garages--Design and construction",
+      "source": "FAST",
+      "reasoning": "The article includes a discussion of a new garage design, making this term specifically relevant and historically appropriate for the period."
+    },
+    {
+      "label": "construction techniques",
+      "source": "Getty AAT",
+      "reasoning": "The content addresses architectural practices and innovations in building, which inherently involve construction techniques relevant to the era."
+    },
+    {
+      "label": "Building materials",
+      "source": "LCSH",
+      "reasoning": "Innovations in window glass and building materials are discussed, making this a suitable general term for materials used in construction at the time."
+    },
+    {
+      "label": "Architecture--Technological innovations",
+      "source": "FAST",
+      "reasoning": "The page covers innovations in architecture, including new materials and design approaches, fitting this term well within the historical and geographic context."
+    },
+    {
+      "label": "professional ethics",
+      "source": "Getty AAT",
+      "reasoning": "The discussion of architects' professional pride and role implies ethical considerations, making this term relevant to the professional ethics in architecture."
+    },
+    {
+      "label": "Infrastructure (Economics)",
+      "source": "FAST",
+      "reasoning": "The garage design relates to automobile infrastructure development, which is appropriate for the early 20th-century Southern United States context."
+    }
+  ]
+}
+
+================================================================================
+
+Row 40 - Barcode 1917-05-39_page39 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,068 (Prompt: 1,817, Completion: 251)
+ESTIMATED COST: $0.0011
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "dogwood (wood)",
+      "source": "Getty AAT",
+      "reasoning": "The page features a photograph of a blooming dogwood tree, making this term directly relevant and specific to the subject. It is historically and geographically appropriate for the American South during the period."
+    },
+    {
+      "label": "Poetry",
+      "source": "LCSH",
+      "reasoning": "The page includes a poem titled 'The Dogwood Trees,' making this term directly relevant to the content. It is appropriate for the period and context."
+    },
+    {
+      "label": "natural landscapes",
+      "source": "Getty AAT",
+      "reasoning": "The photograph depicts a dogwood tree in a natural landscape setting, making this term relevant and specific to the visual content. It fits the Southern U.S. context and time period."
+    },
+    {
+      "label": "Spring",
+      "source": "LCSH",
+      "reasoning": "The dogwood tree is shown in bloom, which is characteristic of spring, making this term relevant to the seasonal context of the image and poem."
+    }
+  ]
+}
+
+================================================================================
+
+Row 41 - Barcode 1917-05-39_page40 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,309 (Prompt: 2,034, Completion: 275)
+ESTIMATED COST: $0.0013
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Parks--Design and construction",
+      "source": "FAST",
+      "reasoning": "The page depicts early 20th-century park scenes focusing on park landscapes and design elements, making this term directly relevant and historically/geographically appropriate."
+    },
+    {
+      "label": "landscape architecture",
+      "source": "Getty AAT",
+      "reasoning": "The photographs illustrate designed natural environments including waterways and vegetation, fitting the discipline of landscape architecture in the early 20th-century Southern context."
+    },
+    {
+      "label": "Urban parks",
+      "source": "LCSH",
+      "reasoning": "The content shows park scenes within an urban setting (Springfield, Ohio), making this term appropriate for describing the type of park depicted."
+    },
+    {
+      "label": "Bridges",
+      "source": "LCSH",
+      "reasoning": "One photograph features a bridge over water, a key architectural element relevant to the page content and period."
+    },
+    {
+      "label": "Waterways",
+      "source": "LCSH",
+      "reasoning": "Water features such as canals and tree-lined waterways are prominent in the images, making this term directly relevant and historically appropriate."
+    }
+  ]
+}
+
+================================================================================
+
+Row 42 - Barcode 1917-05-39_page41 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,320 (Prompt: 2,198, Completion: 122)
+ESTIMATED COST: $0.0011
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Architectural acoustics",
+      "source": "LCSH",
+      "reasoning": "The article discusses acoustic improvements in an auditorium, directly relating to architectural acoustics as a discipline relevant to early 20th-century Southern architectural practice."
+    },
+    {
+      "label": "City planning",
+      "source": "LCSH",
+      "reasoning": "The discussion about the need for a city planning board in Atlanta directly pertains to city planning, a recognized field in the period and region."
+    }
+  ]
+}
+
+================================================================================
+
+Row 43 - Barcode 1917-05-39_page42 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 1,859 (Prompt: 1,738, Completion: 121)
+ESTIMATED COST: $0.0009
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "construction techniques",
+      "source": "Getty AAT",
+      "reasoning": "The page discusses innovative construction techniques including building a house on a steep slope, which directly relates to construction methods relevant to early 20th-century Southern architecture."
+    },
+    {
+      "label": "residential architecture",
+      "source": "LCSH",
+      "reasoning": "The content includes discussion of new house designs and residential building trends, making this term appropriate for the focus on Southern residential architecture."
+    }
+  ]
+}
+
+================================================================================
+
+Row 44 - Barcode 1917-05-39_page43 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,509 (Prompt: 2,130, Completion: 379)
+ESTIMATED COST: $0.0015
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Architectural partnership",
+      "source": "LCSH",
+      "reasoning": "The page includes updates on new partnerships in architecture, making this term directly relevant and historically/geographically appropriate for early 20th-century Southern architectural practice."
+    },
+    {
+      "label": "Architectural offices",
+      "source": "LCSH",
+      "reasoning": "The content mentions new architectural office openings, fitting this term which specifically addresses architectural offices in the relevant period and region."
+    },
+    {
+      "label": "Building materials",
+      "source": "LCSH",
+      "reasoning": "The tribute to E. J. Putnam, a notable figure in the building materials industry, and general building materials references make this term appropriate and specific."
+    },
+    {
+      "label": "Waterproofing",
+      "source": "FAST",
+      "reasoning": "Waterproofing technology is mentioned as part of architectural updates, making this term relevant and historically accurate for the period and region."
+    },
+    {
+      "label": "Architectural history",
+      "source": "Getty AAT",
+      "reasoning": "The obituary and tribute to a notable figure in the building materials industry contribute to the architectural history context, making this term appropriate."
+    },
+    {
+      "label": "Architecture--Southern States",
+      "source": "LCSH",
+      "reasoning": "The publication focuses on the American South and its architectural developments, making this term geographically and historically relevant."
+    },
+    {
+      "label": "Building materials industry",
+      "source": "FAST",
+      "reasoning": "The page discusses the building materials industry through the tribute and updates, making this term specific and appropriate for the content."
+    }
+  ]
+}
+
+================================================================================
+
+Row 45 - Barcode 1917-05-39_page44 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,190 (Prompt: 2,023, Completion: 167)
+ESTIMATED COST: $0.0011
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Saw filing machines",
+      "source": "LCSH",
+      "reasoning": "The page specifically mentions the Keil Saw Filing Machine, making this term directly relevant and historically appropriate for early 20th-century Southern building trades."
+    },
+    {
+      "label": "Portland cement",
+      "source": "FAST",
+      "reasoning": "Medusa White Portland Cement is highlighted, making the general term Portland cement the most precise and relevant for building materials discussed."
+    },
+    {
+      "label": "Chemical toilets",
+      "source": "LCSH",
+      "reasoning": "The page references chemical closets, which corresponds to chemical toilets, a historically appropriate term for sanitation fixtures in this period."
+    }
+  ]
+}
+
+================================================================================
+
+Row 46 - Barcode 1917-05-39_page45 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,737 (Prompt: 2,328, Completion: 409)
+ESTIMATED COST: $0.0016
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "cattle",
+      "source": "Getty AAT",
+      "reasoning": "The page discusses Crumb’s new cattle stanchion design, directly relating to cattle handling equipment relevant to Southern agricultural architecture in the early 20th century."
+    },
+    {
+      "label": "flush valves",
+      "source": "Getty AAT",
+      "reasoning": "The article highlights Bowlus 'Famous' and 'Jewel' flush valves, focusing on their design and functionality in water closets, appropriate for the period and region."
+    },
+    {
+      "label": "toilets (fixtures)",
+      "source": "Getty AAT",
+      "reasoning": "The discussion on modern water closets and material selection pertains directly to toilet fixtures, relevant to sanitary improvements in Southern architecture of the era."
+    },
+    {
+      "label": "sanitary engineering",
+      "source": "Getty AAT",
+      "reasoning": "The content addresses advancements in water closet technology and material selection, which fall under sanitary engineering practices important in early 20th century Southern building."
+    },
+    {
+      "label": "building materials",
+      "source": "Getty AAT",
+      "reasoning": "Material selection for water closets and construction is discussed, making building materials a relevant term for the architectural and construction context."
+    },
+    {
+      "label": "building--technological innovations",
+      "source": "LCSH",
+      "reasoning": "The page covers innovations in cattle stanchion design and flush valve technology, reflecting technological advancements in building and construction practices of the period."
+    },
+    {
+      "label": "architectural design",
+      "source": "LCSH",
+      "reasoning": "The courthouse photograph and discussion of design improvements in stanchions and valves relate to architectural design considerations in the Southern United States during the early 1900s."
+    }
+  ]
+}
+
+================================================================================
+
+Row 47 - Barcode 1917-05-39_page46 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,625 (Prompt: 2,300, Completion: 325)
+ESTIMATED COST: $0.0014
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "churches (buildings)",
+      "source": "Getty AAT",
+      "reasoning": "The page includes a category 'Church Buildings' listing church construction projects in the American South, making this term directly relevant and historically/geographically appropriate."
+    },
+    {
+      "label": "costs",
+      "source": "Getty AAT",
+      "reasoning": "The page details construction costs for various projects, so this term accurately reflects the financial aspect of building described."
+    },
+    {
+      "label": "Architectural drawing",
+      "source": "LCSH",
+      "reasoning": "The page discusses architectural plans and details, making this term appropriate to represent the design documentation relevant to the period and region."
+    },
+    {
+      "label": "building materials",
+      "source": "Getty AAT",
+      "reasoning": "Building materials are explicitly mentioned as a key topic, and this term accurately covers the physical components used in construction during the period."
+    },
+    {
+      "label": "architectural firms",
+      "source": "Getty AAT",
+      "reasoning": "The page lists architects and firms involved in projects, so this term precisely describes the professional entities responsible for the designs."
+    },
+    {
+      "label": "Architecture--Southern States",
+      "source": "LCSH",
+      "reasoning": "The content focuses on construction projects in the American South, making this term geographically and historically appropriate to contextualize the architecture."
+    }
+  ]
+}
+
+================================================================================
+
+Row 48 - Barcode 1917-05-39_page47 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,657 (Prompt: 2,371, Completion: 286)
+ESTIMATED COST: $0.0014
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Plumbing--Equipment and supplies",
+      "source": "LCSH",
+      "reasoning": "The page includes advertisements for plumbing supplies from Atlanta-based companies, making this term directly relevant and appropriate for early 20th-century Southern building trade context."
+    },
+    {
+      "label": "Roofing",
+      "source": "LCSH",
+      "reasoning": "Roofing materials and services are specifically advertised, and this term accurately reflects the roofing content in the Southern architectural trade context of the period."
+    },
+    {
+      "label": "Marble industry and trade",
+      "source": "FAST",
+      "reasoning": "Stone and marble services are advertised; 'Marble industry and trade' best captures the commercial and supply aspect relevant to the page's content and period."
+    },
+    {
+      "label": "Waterproofing",
+      "source": "FAST",
+      "reasoning": "Waterproofing services are highlighted in the advertisements, making this term directly relevant and historically appropriate for early 20th-century Southern construction."
+    },
+    {
+      "label": "Building materials",
+      "source": "LCSH",
+      "reasoning": "The page features multiple building supply companies offering various construction materials, making this broad but precise term suitable for the content."
+    }
+  ]
+}
+
+================================================================================
+
+Row 49 - Barcode 1917-05-39_page48 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,580 (Prompt: 2,191, Completion: 389)
+ESTIMATED COST: $0.0015
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Gothic revival (Architecture)",
+      "source": "FAST",
+      "reasoning": "The page discusses Gothic architectural style in the context of early 20th-century Southern school buildings, making Gothic revival the most historically and geographically appropriate term."
+    },
+    {
+      "label": "School buildings--Design and construction",
+      "source": "FAST",
+      "reasoning": "The page includes a detailed list of school construction projects and plans, directly relating to the design and construction of school buildings in the Southern United States."
+    },
+    {
+      "label": "Church architecture",
+      "source": "FAST",
+      "reasoning": "Although the page primarily focuses on school construction, Gothic style is often associated with church architecture, and the topic is mentioned; thus, the general term for church architecture is appropriate."
+    },
+    {
+      "label": "Building materials",
+      "source": "Getty AAT",
+      "reasoning": "The advertisements and construction projects imply use and discussion of building materials relevant to early 20th-century Southern architecture."
+    },
+    {
+      "label": "Architecture--Designs and plans--Working drawings",
+      "source": "LCSH",
+      "reasoning": "The page includes detailed school building plans and construction project listings, indicating working architectural drawings and plans."
+    },
+    {
+      "label": "Bonds",
+      "source": "FAST",
+      "reasoning": "The mention of construction bonds in the summary indicates financial instruments related to building projects, making the general term 'Bonds' appropriate."
+    },
+    {
+      "label": "School facilities",
+      "source": "FAST",
+      "reasoning": "The page covers educational facilities broadly, including school construction projects and plans, making this term relevant and specific to the content."
+    }
+  ]
+}
+
+================================================================================
+
+Row 50 - Barcode 1917-05-39_page49 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,816 (Prompt: 2,422, Completion: 394)
+ESTIMATED COST: $0.0016
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Concrete construction",
+      "source": "FAST",
+      "reasoning": "The advertisement for Medusa Waterproofing by a cement company directly relates to concrete construction practices relevant to the period and region."
+    },
+    {
+      "label": "Building",
+      "source": "LCSH",
+      "reasoning": "The page details various construction projects including bank and office buildings, dwellings, and apartments, making the general term 'Building' appropriate."
+    },
+    {
+      "label": "Architectural drawing",
+      "source": "LCSH",
+      "reasoning": "The page includes architectural plans and subheadings indicating design details, making 'Architectural drawing' a precise and relevant term."
+    },
+    {
+      "label": "Bank buildings",
+      "source": "LCSH",
+      "reasoning": "Specific mention of bank buildings and offices in the construction projects justifies selecting this term."
+    },
+    {
+      "label": "Apartment houses",
+      "source": "LCSH",
+      "reasoning": "The page references apartment buildings in the Southern United States, making this term directly relevant."
+    },
+    {
+      "label": "Bungalows",
+      "source": "LCSH",
+      "reasoning": "The mention of dwellings and apartments includes bungalows, a common Southern residential type in the period."
+    },
+    {
+      "label": "Building materials",
+      "source": "LCSH",
+      "reasoning": "The advertisement and construction news imply use and discussion of construction materials, making this term appropriate."
+    },
+    {
+      "label": "filing",
+      "source": "Getty AAT",
+      "reasoning": "The advertisement for a saw filing machine relates directly to filing as a metalworking process relevant to construction tool maintenance."
+    }
+  ]
+}
+
+================================================================================
+
+Row 51 - Barcode 1917-05-39_page50 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,124 (Prompt: 1,888, Completion: 236)
+ESTIMATED COST: $0.0011
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Hot-water heating",
+      "source": "LCSH",
+      "reasoning": "The advertisement promotes a hot water heating system, making this term directly relevant and historically appropriate for early 20th-century Southern architecture."
+    },
+    {
+      "label": "gravity heating",
+      "source": "Getty AAT",
+      "reasoning": "The 'Tank-in-Basement System' likely relies on gravity circulation typical of hot water heating systems of the period, making gravity heating a precise and contextually appropriate term."
+    },
+    {
+      "label": "boiler rooms",
+      "source": "Getty AAT",
+      "reasoning": "The illustration and description include a boiler as part of the heating system, and boiler rooms were standard architectural features for housing such equipment in this era."
+    },
+    {
+      "label": "energy conservation",
+      "source": "Getty AAT",
+      "reasoning": "The advertisement emphasizes cost savings and efficiency, which aligns with the concept of energy conservation relevant to early 20th-century heating innovations."
+    }
+  ]
+}
+
+================================================================================
+
+Row 52 - Barcode 1917-05-39_page51 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,153 (Prompt: 1,977, Completion: 176)
+ESTIMATED COST: $0.0011
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Automobile trailers",
+      "source": "LCSH",
+      "reasoning": "The advertisement features the Rogers All-Steel Trailer, directly relating to automobile trailers as used in the early 20th century Southern United States."
+    },
+    {
+      "label": "Schools--Furniture, equipment, etc.",
+      "source": "LCSH",
+      "reasoning": "The advertisement for school desks by The Southern Desk Company pertains specifically to school furniture and equipment relevant to Southern educational institutions of the period."
+    },
+    {
+      "label": "Advertising, Industrial",
+      "source": "LCSH",
+      "reasoning": "Both advertisements represent industrial advertising promoting manufactured products (trailers and school desks) in the Southern building and educational supply markets."
+    }
+  ]
+}
+
+================================================================================
+
+Row 53 - Barcode 1917-05-39_page52 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 1,907 (Prompt: 1,720, Completion: 187)
+ESTIMATED COST: $0.0010
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "furnace brazing",
+      "source": "Getty AAT",
+      "reasoning": "The advertisement concerns furnace pipes, and furnace brazing is a specific manufacturing process relevant to furnace pipe fabrication in the early 20th century Southern industrial context."
+    },
+    {
+      "label": "forced air heating",
+      "source": "Getty AAT",
+      "reasoning": "The furnace pipe is part of a warm air heating system; forced air heating accurately describes the heating system type relevant to furnace pipes and is historically appropriate for the period and region."
+    },
+    {
+      "label": "Manufacturing processes",
+      "source": "LCSH",
+      "reasoning": "The advertisement promotes industrial manufacturing expertise in furnace pipe production, making manufacturing processes a relevant and specific term for the industrial manufacturing topic."
+    }
+  ]
+}
+
+================================================================================
+
+Row 54 - Barcode 1917-05-39_page53 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 3,017 (Prompt: 2,518, Completion: 499)
+ESTIMATED COST: $0.0018
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Thermometers",
+      "source": "LCSH",
+      "reasoning": "The page features an advertisement for Standard Thermometer Company with an illustration of a thermometer, making the general term 'Thermometers' appropriate and historically/geographically relevant."
+    },
+    {
+      "label": "Slate roofing",
+      "source": "LCSH",
+      "reasoning": "The Rising & Nelson Slate Co. advertisement relates directly to roofing slate products, making 'Slate roofing' the precise and historically appropriate term for roofing slate in the American South during this period."
+    },
+    {
+      "label": "Construction equipment--Safety measures",
+      "source": "FAST",
+      "reasoning": "The page includes ads for safety brackets and safety equipment related to construction, so 'Construction equipment--Safety measures' accurately reflects safety equipment in the building trades context of the early 20th century South."
+    },
+    {
+      "label": "construction equipment",
+      "source": "Getty AAT",
+      "reasoning": "The advertisements include a convertible level and other tools related to construction, making 'construction equipment' a suitable and specific term for construction tools relevant to the period and region."
+    },
+    {
+      "label": "gravel",
+      "source": "Getty AAT",
+      "reasoning": "The bottom section has advertisements for gravel, making 'gravel' the most specific and relevant term for this construction material in the Southern US context."
+    },
+    {
+      "label": "Marble",
+      "source": "FAST",
+      "reasoning": "The page includes ads for marble products, so the general term 'Marble' is appropriate and historically relevant for architectural materials in the American South."
+    },
+    {
+      "label": "Planing-mills",
+      "source": "LCSH",
+      "reasoning": "An advertisement for a planing mill is present, making 'Planing-mills' the precise and historically appropriate term for this type of woodworking facility in the early 20th century South."
+    },
+    {
+      "label": "Building materials",
+      "source": "LCSH",
+      "reasoning": "The page features a variety of construction materials advertisements, so the broad but relevant term 'Building materials' accurately encompasses the content in a historically and geographically appropriate manner."
+    }
+  ]
+}
+
+================================================================================
+
+Row 55 - Barcode 1917-05-39_page54 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,090 (Prompt: 1,905, Completion: 185)
+ESTIMATED COST: $0.0011
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "pressure lubricators",
+      "source": "Getty AAT",
+      "reasoning": "The Franklin Elevator Lubricator is a type of elevator lubricator relevant to building machinery; 'pressure lubricators' accurately describe this product type and are appropriate for early 20th-century Southern building technology."
+    },
+    {
+      "label": "Building materials",
+      "source": "LCSH",
+      "reasoning": "The page features multiple building products including cement stave silos and iron works, making the general term 'Building materials' appropriate and historically/geographically relevant."
+    },
+    {
+      "label": "construction techniques",
+      "source": "Getty AAT",
+      "reasoning": "The advertisements highlight innovations in construction methods and materials, making 'construction techniques' a fitting term for the content."
+    }
+  ]
+}
+
+================================================================================
+
+Row 56 - Barcode 1917-05-39_page55 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,300 (Prompt: 1,988, Completion: 312)
+ESTIMATED COST: $0.0013
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Adhesives",
+      "source": "FAST",
+      "reasoning": "The Higgins' advertisement specifically references inks and adhesives, making 'Adhesives' directly relevant and historically appropriate for early 20th-century Southern architectural and building materials."
+    },
+    {
+      "label": "garden benches",
+      "source": "Getty AAT",
+      "reasoning": "The Likestone ad features a bird bath and garden-related products, making 'garden benches' the most specific and relevant term related to garden and exterior decorative elements in the Southern context."
+    },
+    {
+      "label": "garbage",
+      "source": "Getty AAT",
+      "reasoning": "The Dube Garbage Burning Water Heaters ad relates to garbage burning technology; 'garbage' is the most precise and appropriate term describing the subject matter."
+    },
+    {
+      "label": "safe rooms",
+      "source": "Getty AAT",
+      "reasoning": "The York Safe and Lock Company advertisement features safes and vaults; 'safe rooms' is the most specific term related to secure storage and vault construction relevant to the period and region."
+    },
+    {
+      "label": "building materials",
+      "source": "Getty AAT",
+      "reasoning": "The overall page includes architectural materials such as brass railings and other building products; 'building materials' accurately encompasses these elements in the historical Southern architectural context."
+    }
+  ]
+}
+
+================================================================================
+
+Row 57 - Barcode 1917-05-39_page56 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,519 (Prompt: 2,234, Completion: 285)
+ESTIMATED COST: $0.0013
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Nails",
+      "source": "FAST",
+      "reasoning": "The advertisement features self-clinching nails, which are a specific type of nails relevant to building and construction in the early 20th century American South."
+    },
+    {
+      "label": "Slate roofing",
+      "source": "LCSH",
+      "reasoning": "West Bangor Slate is a roofing material; slate roofing is a historically and geographically appropriate term for roofing materials used in the Southern United States during this period."
+    },
+    {
+      "label": "Water heaters",
+      "source": "LCSH",
+      "reasoning": "Wilks Water Heaters are featured, making the general term 'Water heaters' appropriate and historically relevant for early 20th century Southern architecture and building."
+    },
+    {
+      "label": "Building materials",
+      "source": "LCSH",
+      "reasoning": "The page promotes various building materials including cement, nails, slate, and water heaters, making this a suitable broad term encompassing the content."
+    },
+    {
+      "label": "Construction techniques",
+      "source": "Getty AAT",
+      "reasoning": "The advertisements highlight innovations in building materials and construction techniques, making this term relevant and appropriate for the content and period."
+    }
+  ]
+}
+
+================================================================================
+
+Row 58 - Barcode 1917-05-39_page57 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,596 (Prompt: 2,293, Completion: 303)
+ESTIMATED COST: $0.0014
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "plumbing fixtures",
+      "source": "Getty AAT",
+      "reasoning": "The page features an advertisement for a bathtub with a shower curtain, directly relating to plumbing fixtures appropriate for the 1892-1931 Southern US context."
+    },
+    {
+      "label": "roofing tile",
+      "source": "Getty AAT",
+      "reasoning": "The advertisement for Imperial Roofing Tiles by Ludowici-Celadon Co. specifically concerns roofing tiles, a historically relevant architectural material in the American South during this period."
+    },
+    {
+      "label": "forced air heating",
+      "source": "Getty AAT",
+      "reasoning": "The Climax furnaces advertisement relates to heating systems, and forced air heating is a historically appropriate and specific term for heating technology of the era."
+    },
+    {
+      "label": "bathing (hygienic activity)",
+      "source": "Getty AAT",
+      "reasoning": "The luxury bathing aspect is represented by the bathtub advertisement, making this term relevant and specific to hygienic bathing practices in the early 20th century South."
+    },
+    {
+      "label": "building materials",
+      "source": "Getty AAT",
+      "reasoning": "Roofing tiles and plumbing fixtures are types of building materials, making this term relevant to the architectural materials advertised on the page."
+    }
+  ]
+}
+
+================================================================================
+
+Row 59 - Barcode 1917-05-39_page58 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,447 (Prompt: 2,212, Completion: 235)
+ESTIMATED COST: $0.0013
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Lime",
+      "source": "LCSH",
+      "reasoning": "The advertisement for Monarch Hydrated Lime directly relates to lime as a building material commonly used in the early 20th century Southern United States."
+    },
+    {
+      "label": "Water heaters",
+      "source": "LCSH",
+      "reasoning": "The detailed illustration and description of the 'Thermo' water heater fits the general category of water heaters relevant to building industry products of the period."
+    },
+    {
+      "label": "Slate roofing",
+      "source": "LCSH",
+      "reasoning": "The advertisement for Peach Bottom Slate, including historical references to slate usage, directly pertains to slate roofing materials used in the Southern US during the period."
+    },
+    {
+      "label": "Warm air furnaces",
+      "source": "Getty AAT",
+      "reasoning": "The 'Front Rank' warm air furnace advertisement clearly relates to warm air furnaces as heating technology relevant to early 20th century Southern architecture."
+    }
+  ]
+}
+
+================================================================================
+
+Row 60 - Barcode 1917-05-39_page59 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,062 (Prompt: 1,995, Completion: 67)
+ESTIMATED COST: $0.0009
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Concrete inserts",
+      "source": "LCSH",
+      "reasoning": "The advertisement specifically describes a patented concrete insert used in building construction, making this term directly relevant and historically appropriate for early 20th-century Southern architecture."
+    }
+  ]
+}
+
+================================================================================
+
+Row 61 - Barcode 1917-05-39_page60 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,200 (Prompt: 2,016, Completion: 184)
+ESTIMATED COST: $0.0011
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Cement",
+      "source": "FAST",
+      "reasoning": "The page highlights the use of Cherokee Cement Plaster and cement stave silos, making 'Cement' the most relevant and specific building material term appropriate for early 20th-century Southern architecture."
+    },
+    {
+      "label": "Building materials",
+      "source": "Getty AAT",
+      "reasoning": "The advertisements focus on construction materials such as cement plaster and cement stave silos, so the general term 'Building materials' accurately reflects the content."
+    },
+    {
+      "label": "Architecture--Southern States",
+      "source": "LCSH",
+      "reasoning": "The New Fulton County Court House is a significant Southern architectural example in Atlanta, Georgia, making this term geographically and historically appropriate."
+    }
+  ]
+}
+
+================================================================================
+
+Row 62 - Barcode 1917-05-39_page61 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,447 (Prompt: 2,220, Completion: 227)
+ESTIMATED COST: $0.0013
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "masonry construction (technique or process)",
+      "source": "Getty AAT",
+      "reasoning": "The page features advertisements for masonry products such as bricks and tile blocks, directly relating to masonry construction techniques relevant to the period and region."
+    },
+    {
+      "label": "Fireplaces--Design and construction",
+      "source": "FAST",
+      "reasoning": "An advertisement includes a decorative fireplace illustration, indicating relevance to fireplace design and construction in the early 20th-century Southern architectural context."
+    },
+    {
+      "label": "Building, Brick",
+      "source": "FAST",
+      "reasoning": "Several ads promote brick manufacturing companies and products, making this term appropriate for brick manufacturing in the Southern US during the period."
+    },
+    {
+      "label": "Building materials",
+      "source": "LCSH",
+      "reasoning": "The page broadly features companies offering various building materials including bricks, tiles, and roofing products, fitting this general but relevant term."
+    }
+  ]
+}
+
+================================================================================
+
+Row 63 - Barcode 1917-05-39_page62 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,500 (Prompt: 2,113, Completion: 387)
+ESTIMATED COST: $0.0015
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Millwork (Woodwork)",
+      "source": "LCSH",
+      "reasoning": "The Aurora Millwork Company advertisement directly relates to millwork as woodwork components used in building construction, appropriate for the early 20th-century Southern architectural context."
+    },
+    {
+      "label": "Plastics in interior decoration",
+      "source": "FAST",
+      "reasoning": "Jacobson & Company's advertisement for plastic decoration fits the term for plastics used in interior decoration, relevant to the period and geographic context."
+    },
+    {
+      "label": "Mortar",
+      "source": "FAST",
+      "reasoning": "The mention of mortar colors in the advertisements corresponds to mortar as a building material, appropriate for the time and region."
+    },
+    {
+      "label": "wirework",
+      "source": "Getty AAT",
+      "reasoning": "Fred J. Meyers Mfg. Co.'s advertisement for wire, iron, and bronze work includes wire work, making this term directly relevant and historically appropriate."
+    },
+    {
+      "label": "cast iron",
+      "source": "Getty AAT",
+      "reasoning": "The inclusion of iron and bronze work in the advertisement aligns with cast iron as a common architectural metalwork material in the period and region."
+    },
+    {
+      "label": "Silos--Design and construction",
+      "source": "FAST",
+      "reasoning": "The National Silo Company advertisement relates directly to silo construction, making this term appropriate and specific."
+    },
+    {
+      "label": "Building materials",
+      "source": "LCSH",
+      "reasoning": "The overall theme of the page is building materials and services, making this broad but relevant term appropriate for the content."
+    }
+  ]
+}
+
+================================================================================
+
+Row 64 - Barcode 1917-05-39_page63 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,582 (Prompt: 2,315, Completion: 267)
+ESTIMATED COST: $0.0014
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Finish hardware",
+      "source": "LCSH",
+      "reasoning": "The advertisement for Builders' Hardware from The Shelby Spring Hinge Co. includes specific hardware items such as sash lifts, knobs, and hinges, which are accurately described by the term 'Finish hardware' appropriate to early 20th-century Southern building practices."
+    },
+    {
+      "label": "Waterproofing",
+      "source": "LCSH",
+      "reasoning": "The page features an advertisement for a municipal reservoir made with Trus-Con Waterproofing Paste, directly relating to waterproofing in building materials and construction, relevant to the period and region."
+    },
+    {
+      "label": "hot water heating",
+      "source": "Getty AAT",
+      "reasoning": "The advertisement for the 'READING' Hot Water System with an expansion tank illustration corresponds to hot water heating systems used in early 20th-century Southern architecture."
+    },
+    {
+      "label": "Building materials",
+      "source": "LCSH",
+      "reasoning": "The page includes various building products such as waterproofing paste and hardware, fitting broadly under building materials relevant to the Southern United States during the period."
+    }
+  ]
+}
+
+================================================================================
+
+Row 65 - Barcode 1917-05-39_page64 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,833 (Prompt: 2,490, Completion: 343)
+ESTIMATED COST: $0.0015
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "finish builders' hardware",
+      "source": "Getty AAT",
+      "reasoning": "The advertisement for Reliance Ball Bearing Door Hangers relates specifically to architectural hardware used in building construction and finishing, appropriate for the 1892-1931 Southern US context."
+    },
+    {
+      "label": "lighting fixtures",
+      "source": "Getty AAT",
+      "reasoning": "The Horn & Brannen Manufacturing Co. ad features a decorative lighting fixture, making this general term for lighting fixtures appropriate and historically relevant."
+    },
+    {
+      "label": "Shingles",
+      "source": "FAST",
+      "reasoning": "The Bristol Metal Shingles advertisement relates directly to roofing materials known as shingles, a relevant building material term for the period and region."
+    },
+    {
+      "label": "venetian blinds",
+      "source": "Getty AAT",
+      "reasoning": "The Burlington Venetian Blinds ad specifically references venetian blinds, a distinct type of window covering relevant to interior architectural elements of the period."
+    },
+    {
+      "label": "Marble",
+      "source": "LCSH",
+      "reasoning": "The Appalachian Marble Co. ad emphasizes Tennessee marble, making the general term Marble appropriate for this building material in the Southern US context."
+    },
+    {
+      "label": "building materials",
+      "source": "Getty AAT",
+      "reasoning": "The page as a whole advertises various building materials including metal shingles, marble, and hardware, making this broad but precise term relevant."
+    }
+  ]
+}
+
+================================================================================
+
+Row 66 - Barcode 1917-05-39_page65 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,548 (Prompt: 2,273, Completion: 275)
+ESTIMATED COST: $0.0013
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Building, Iron and steel",
+      "source": "FAST",
+      "reasoning": "Accurately describes structural steel connections relevant to early 20th-century Southern construction practices."
+    },
+    {
+      "label": "Roofing",
+      "source": "LCSH",
+      "reasoning": "Appropriate general term for roofing materials advertised on the page, fitting the historical and regional context."
+    },
+    {
+      "label": "Screens",
+      "source": "FAST",
+      "reasoning": "Directly relevant to metal frame window screens featured in the advertisements."
+    },
+    {
+      "label": "Finish hardware",
+      "source": "LCSH",
+      "reasoning": "Pertains to architectural hardware products likely included in the advertisements, suitable for the period and region."
+    },
+    {
+      "label": "Building materials",
+      "source": "LCSH",
+      "reasoning": "General term encompassing the variety of construction products advertised, historically and geographically appropriate."
+    },
+    {
+      "label": "Fireproofing",
+      "source": "FAST",
+      "reasoning": "Relevant to fireproofing techniques mentioned among the products, consistent with early 20th-century Southern building practices."
+    }
+  ]
+}
+
+================================================================================
+
+Row 67 - Barcode 1917-05-39_page66 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,528 (Prompt: 2,278, Completion: 250)
+ESTIMATED COST: $0.0013
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Concrete roads",
+      "source": "LCSH",
+      "reasoning": "The page includes an advertisement promoting concrete roads as a modern solution, directly relating to the term Concrete roads, which is historically and geographically appropriate for early 20th century Southern US highway construction."
+    },
+    {
+      "label": "Slate roofing",
+      "source": "LCSH",
+      "reasoning": "The ad for Genuine Bangor Roofing Slate pertains specifically to roofing slate, making Slate roofing the precise and historically appropriate term for this Southern architectural building material."
+    },
+    {
+      "label": "Iron, Structural",
+      "source": "LCSH",
+      "reasoning": "The Standard Iron Works advertisement relates to structural iron products, making Iron, Structural the accurate term reflecting early 20th century Southern architectural and building practices."
+    },
+    {
+      "label": "Building materials",
+      "source": "LCSH",
+      "reasoning": "The page features multiple building-related products including iron, slate, concrete, and furnaces, making Building materials a relevant general term encompassing these architectural products in the Southern context."
+    }
+  ]
+}
+
+================================================================================
+
+Row 68 - Barcode 1917-05-39_page67 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,713 (Prompt: 2,277, Completion: 436)
+ESTIMATED COST: $0.0016
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Colonial",
+      "source": "Getty AAT",
+      "reasoning": "The advertisements include colonial columns, and the general term 'Colonial' accurately reflects the architectural style relevant to the American South during 1892-1931."
+    },
+    {
+      "label": "Capitals (Architecture)",
+      "source": "FAST",
+      "reasoning": "The page features composition capitals as architectural elements; this term precisely describes the architectural capitals shown in the advertisements."
+    },
+    {
+      "label": "Roofing tile",
+      "source": "Getty AAT",
+      "reasoning": "Roofing tiles are specifically advertised; this term is historically and geographically appropriate for building materials in the Southern United States during the period."
+    },
+    {
+      "label": "Marble",
+      "source": "LCSH",
+      "reasoning": "Marble is advertised by The Georgia Marble Company, a significant Southern marble producer, making this term directly relevant and regionally appropriate."
+    },
+    {
+      "label": "Filing cabinets",
+      "source": "LCSH",
+      "reasoning": "Filing cabinets are advertised on the page; this term accurately describes the office furniture product relevant to the period."
+    },
+    {
+      "label": "Woodworking tools",
+      "source": "LCSH",
+      "reasoning": "Woodworking tools are among the advertised products; this term is specific and appropriate for the building trades in the Southern US during the early 20th century."
+    },
+    {
+      "label": "Building, Iron and steel",
+      "source": "LCSH",
+      "reasoning": "Iron and steel products advertised relate to building construction; this term is precise and historically appropriate for the Southern architectural context."
+    },
+    {
+      "label": "Building materials",
+      "source": "LCSH",
+      "reasoning": "The page is a collection of advertisements for various building materials; this broad but relevant term accurately encompasses the overall content."
+    }
+  ]
+}
+
+================================================================================
+
+Row 69 - Barcode 1917-05-39_page68 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,637 (Prompt: 2,316, Completion: 321)
+ESTIMATED COST: $0.0014
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "forced air heating",
+      "source": "Getty AAT",
+      "reasoning": "The advertisement promotes a heating system emphasizing efficiency and air movement, consistent with forced air heating technology used in the early 20th century Southern public buildings."
+    },
+    {
+      "label": "Ventilation",
+      "source": "LCSH",
+      "reasoning": "The content directly addresses ventilating systems and their benefits, making the general term 'Ventilation' appropriate and historically relevant."
+    },
+    {
+      "label": "Indoor air quality",
+      "source": "LCSH",
+      "reasoning": "The advertisement highlights air quality and humidity control within public buildings, aligning with the concept of indoor air quality relevant to architectural environmental control."
+    },
+    {
+      "label": "Humidity--Control",
+      "source": "LCSH",
+      "reasoning": "Humidity control is explicitly mentioned as a key topic, making this term directly relevant and historically appropriate."
+    },
+    {
+      "label": "energy conservation",
+      "source": "Getty AAT",
+      "reasoning": "The advertisement emphasizes efficiency and benefits related to energy use, which corresponds to the concept of energy conservation in early 20th century building systems."
+    },
+    {
+      "label": "Public buildings",
+      "source": "LCSH",
+      "reasoning": "The system is targeted for use in public buildings, making this term directly relevant and geographically appropriate."
+    }
+  ]
+}
+
+================================================================================
+
+Row 71 - Barcode 1917-05-39_page70 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,101 (Prompt: 1,905, Completion: 196)
+ESTIMATED COST: $0.0011
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Tiles",
+      "source": "FAST",
+      "reasoning": "The page features an advertisement for Lorenzen Tiles and Mosaics, directly relating to tiles as building materials used in architectural finishes in the early 20th century American South."
+    },
+    {
+      "label": "dampproofing",
+      "source": "Getty AAT",
+      "reasoning": "The advertisement for Percoproof Compound relates to damp-proofing treatments for foundations, a relevant and historically appropriate building technique for moisture control in Southern architecture."
+    },
+    {
+      "label": "building materials",
+      "source": "Getty AAT",
+      "reasoning": "The page broadly advertises various innovative building products including reflectors, tiles, bond anchors, and damp-proofing compounds, all of which fall under the category of building materials relevant to the period and region."
+    }
+  ]
+}
+
+================================================================================
+
+Row 72 - Barcode 1917-05-39_page71 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,482 (Prompt: 2,121, Completion: 361)
+ESTIMATED COST: $0.0014
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Roofing",
+      "source": "LCSH",
+      "reasoning": "The page features an advertisement for roofing tiles from Mound City Roofing Tile Company, directly relating to roofing materials appropriate for the period and region."
+    },
+    {
+      "label": "exhaust ventilation (systems)",
+      "source": "Getty AAT",
+      "reasoning": "The advertisement for J-K Siphon Ventilators corresponds to ventilation systems designed to exhaust air, fitting the historical context of early 20th-century Southern building practices."
+    },
+    {
+      "label": "fire safety",
+      "source": "Getty AAT",
+      "reasoning": "The 'UNION' Safety Delivery Cabinets relate to safety equipment likely intended for fire or hazard protection in buildings, making fire safety the most relevant term."
+    },
+    {
+      "label": "brass (alloy)",
+      "source": "Getty AAT",
+      "reasoning": "The Beecher-Fowler Mfg. Co. advertisement for brass signs and bronze memorial tablets involves brass as a material, making this term appropriate and specific."
+    },
+    {
+      "label": "flooring",
+      "source": "LCSH",
+      "reasoning": "J. W. Wells Lumber Co.'s offering of cotton mill flooring directly relates to flooring materials used in Southern industrial architecture of the period."
+    },
+    {
+      "label": "Building materials",
+      "source": "LCSH",
+      "reasoning": "The overall page features various building products including roofing, ventilators, cabinets, signs, and flooring, all constituting building materials relevant to the era and region."
+    }
+  ]
+}
+
+================================================================================
+
+Row 73 - Barcode 1917-05-39_page72 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,800 (Prompt: 2,438, Completion: 362)
+ESTIMATED COST: $0.0016
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Waterproofing",
+      "source": "LCSH",
+      "reasoning": "The page features an advertisement for Impervia waterproof products, directly relating to waterproofing in building construction, appropriate for the early 20th-century Southern US context."
+    },
+    {
+      "label": "Concrete roads",
+      "source": "LCSH",
+      "reasoning": "The Dixie Portland Cement Co. ad includes a small illustration of a concrete highway, indicating relevance to concrete roads and their construction in the Southern United States during the period."
+    },
+    {
+      "label": "Plumbing",
+      "source": "LCSH",
+      "reasoning": "The McGuire Adjustable Roof Flange is a plumbing-related product, making the general term 'Plumbing' appropriate for this early 20th-century Southern architectural context."
+    },
+    {
+      "label": "Heating systems",
+      "source": "Getty AAT",
+      "reasoning": "The advertisement for the United States Register Co. discusses heating and ventilation, specifically the Jones System of Heating and Ventilation, making 'Heating systems' relevant and historically appropriate."
+    },
+    {
+      "label": "Ventilation",
+      "source": "LCSH",
+      "reasoning": "The Jones System includes ventilation components, and ventilation is a distinct topic in the advertisement, making this term relevant and appropriate for the period and region."
+    },
+    {
+      "label": "Building materials",
+      "source": "LCSH",
+      "reasoning": "The advertisements for waterproofing products and Portland cement relate to construction materials commonly used in Southern building practices of the early 20th century."
+    }
+  ]
+}
+
+================================================================================
+
+Row 74 - Barcode 1917-05-39_page73 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,356 (Prompt: 2,129, Completion: 227)
+ESTIMATED COST: $0.0012
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "coal chutes",
+      "source": "Getty AAT",
+      "reasoning": "The page prominently features Kewanee 'All-Steel' Coal Chutes with technical details and installation, making this term directly relevant and historically/geographically appropriate."
+    },
+    {
+      "label": "building materials",
+      "source": "Getty AAT",
+      "reasoning": "The advertisements include various building products such as bricks and pumps, fitting the broad category of building materials relevant to early 20th-century Southern architecture."
+    },
+    {
+      "label": "glazed brick",
+      "source": "FAST",
+      "reasoning": "The Federal Clay Product Co. ad specifically references salt glazed bricks, making 'glazed brick' the precise term for this content."
+    },
+    {
+      "label": "water pumps",
+      "source": "Getty AAT",
+      "reasoning": "The V&K Pumps advertisement relates directly to water pumps, a relevant architectural product in the period and region."
+    }
+  ]
+}
+
+================================================================================
+
+Row 76 - Barcode 1917-05-39_page75 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,033 (Prompt: 1,905, Completion: 128)
+ESTIMATED COST: $0.0010
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "agricultural buildings",
+      "source": "Getty AAT",
+      "reasoning": "The page features barn equipment and architectural elements related to agricultural buildings, which is directly relevant and historically/geographically appropriate for early 20th-century Southern agricultural architecture."
+    },
+    {
+      "label": "animal husbandry equipment",
+      "source": "Getty AAT",
+      "reasoning": "The advertisement highlights equipment such as stanchions, stalls, and carriers used in animal husbandry, making this term specifically relevant and appropriate."
+    }
+  ]
+}
+
+================================================================================
+
+Row 78 - Barcode 1917-05-39_page77 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,266 (Prompt: 2,039, Completion: 227)
+ESTIMATED COST: $0.0012
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Concrete blocks",
+      "source": "LCSH",
+      "reasoning": "The advertisement specifically features poured concrete blocks as a building material, making this term directly relevant and historically appropriate for early 20th-century Southern architecture."
+    },
+    {
+      "label": "Building materials",
+      "source": "LCSH",
+      "reasoning": "The page highlights innovations in building materials, including concrete blocks, fitting the broad but precise term for materials used in construction during the period."
+    },
+    {
+      "label": "Fire alarms",
+      "source": "LCSH",
+      "reasoning": "The advertisement for McFell Industrial Fire Alarm Systems directly relates to fire alarm technology, a safety system relevant to the era and region."
+    },
+    {
+      "label": "fire alarm systems",
+      "source": "Getty AAT",
+      "reasoning": "This term specifically denotes the type of safety technology advertised, aligning with the content's focus on fire alarm innovations in building safety."
+    }
+  ]
+}
+
+================================================================================
+
+Row 79 - Barcode 1917-05-39_page78 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,399 (Prompt: 2,118, Completion: 281)
+ESTIMATED COST: $0.0013
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Vitrolite (TM)",
+      "source": "Getty AAT",
+      "reasoning": "The page specifically features an advertisement for Vitrolite kitchen surfaces, highlighting this architectural material used in early 20th-century kitchen design."
+    },
+    {
+      "label": "Kitchens--Design and construction",
+      "source": "FAST",
+      "reasoning": "The content focuses on kitchen design, specifically the use of Vitrolite surfaces in a kitchen setting, making this term directly relevant and historically appropriate."
+    },
+    {
+      "label": "building materials",
+      "source": "Getty AAT",
+      "reasoning": "Vitrolite is a building material used for interior surfaces; this general term accurately covers the material aspect of the advertisement."
+    },
+    {
+      "label": "interior",
+      "source": "Getty AAT",
+      "reasoning": "The advertisement emphasizes interior surfaces of the kitchen, making this term relevant to the content describing interior finishes."
+    },
+    {
+      "label": "Architectural firms",
+      "source": "Getty AAT",
+      "reasoning": "The kitchen design is credited to H. F. Huber & Co., Architects, making this term appropriate to represent the involvement of an architectural firm."
+    }
+  ]
+}
+
+================================================================================
+
+Row 80 - Barcode 1917-05-39_page79 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 1,992 (Prompt: 1,827, Completion: 165)
+ESTIMATED COST: $0.0010
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Building, Iron and steel",
+      "source": "LCSH",
+      "reasoning": "The page features a steel furnace advertisement, which relates to iron and steel building materials used in construction during the early 20th century American South."
+    },
+    {
+      "label": "warm air furnaces",
+      "source": "Getty AAT",
+      "reasoning": "The main advertisement is for the Imperial Warm Air Furnace, making this term directly relevant and historically appropriate."
+    },
+    {
+      "label": "Tiles, Roofing",
+      "source": "LCSH",
+      "reasoning": "The page includes advertisements for roofing tiles, a common building material in Southern architecture of the period."
+    }
+  ]
+}
+
+================================================================================
+
+Row 82 - Barcode 1929-07-55_page1 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 1,866 (Prompt: 1,756, Completion: 110)
+ESTIMATED COST: $0.0009
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Architecture--Southern States",
+      "source": "LCSH",
+      "reasoning": "The page features Southern architectural styles from a 1929 Southern U.S. publication, making this term geographically and temporally appropriate."
+    },
+    {
+      "label": "Latticework",
+      "source": "LCSH",
+      "reasoning": "The illustration prominently features intricate wooden latticework, directly matching this specific architectural element term."
+    }
+  ]
+}
+
+================================================================================
+
+Row 83 - Barcode 1929-07-55_page2 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 1,877 (Prompt: 1,694, Completion: 183)
+ESTIMATED COST: $0.0010
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Mantels",
+      "source": "FAST",
+      "reasoning": "The Georgian Mantel Company advertisement highlights period mantel designs, making 'Mantels' directly relevant and historically appropriate for early 20th-century Southern architecture."
+    },
+    {
+      "label": "Heating",
+      "source": "FAST",
+      "reasoning": "Both Sepco Flameless Hot Water Service and King Tank Heaters relate to home heating innovations, making 'Heating' the most precise and relevant term for home heating solutions in the period and region."
+    },
+    {
+      "label": "craftsmanship",
+      "source": "Getty AAT",
+      "reasoning": "The emphasis on decorative mantels and quality heating equipment appeals to architectural craftsmanship, a valued concept in early 20th-century Southern architectural practice."
+    }
+  ]
+}
+
+================================================================================
+
+Row 84 - Barcode 1929-07-55_page3 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,216 (Prompt: 1,909, Completion: 307)
+ESTIMATED COST: $0.0013
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Architectural services marketing--Fees",
+      "source": "FAST",
+      "reasoning": "Directly relates to the discussion of architectural fees and economic challenges faced by southern architects, appropriate for early 20th-century Southern architectural practice."
+    },
+    {
+      "label": "Professional ethics",
+      "source": "LCSH",
+      "reasoning": "Pertains to the professional conduct and ethical considerations in architecture, relevant to the editorial's focus on professional challenges and competition."
+    },
+    {
+      "label": "Economic history",
+      "source": "FAST",
+      "reasoning": "Appropriate for the discussion of economic factors impacting southern architecture during the period, including the influence of outside capital."
+    },
+    {
+      "label": "Architectural design--Competitions",
+      "source": "FAST",
+      "reasoning": "Matches the topic of architectural competition among regional architects, relevant to the editorial's focus on competitive pressures."
+    },
+    {
+      "label": "Architecture--Southern States",
+      "source": "LCSH",
+      "reasoning": "Specifically addresses Southern architecture, directly relevant to the geographic and cultural context of the editorial."
+    },
+    {
+      "label": "capital (economic concept)",
+      "source": "Getty AAT",
+      "reasoning": "Accurately represents the discussion of outside capital impacting southern architectural practice and economic conditions."
+    }
+  ]
+}
+
+================================================================================
+
+Row 85 - Barcode 1929-07-55_page4 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,319 (Prompt: 1,992, Completion: 327)
+ESTIMATED COST: $0.0013
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "eighteenth century",
+      "source": "Getty AAT",
+      "reasoning": "The page features an entrance door from an eighteenth-century Virginia house, making this term temporally accurate and relevant to the architectural period depicted."
+    },
+    {
+      "label": "entrance gates",
+      "source": "Getty AAT",
+      "reasoning": "The focus is on the entrance door framed by architectural elements; 'entrance gates' is the closest specific term related to entrance design available and appropriate for the period."
+    },
+    {
+      "label": "brickwork",
+      "source": "LCSH",
+      "reasoning": "The door is framed by a brick archway with decorative stonework, making brickwork a directly relevant architectural element described."
+    },
+    {
+      "label": "historic houses",
+      "source": "Getty AAT",
+      "reasoning": "The subject is an eighteenth-century Virginia house, a historic residential building, making this term appropriate and geographically relevant."
+    },
+    {
+      "label": "architectural photography",
+      "source": "LCSH",
+      "reasoning": "The page features a photograph highlighting architectural design and craftsmanship, making this term directly relevant to the content."
+    },
+    {
+      "label": "Architecture, British colonial",
+      "source": "LCSH",
+      "reasoning": "The house is an eighteenth-century Virginia house, which falls under British colonial architecture in the American South during this period."
+    }
+  ]
+}
+
+================================================================================
+
+Row 86 - Barcode 1929-07-55_page5 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,670 (Prompt: 2,337, Completion: 333)
+ESTIMATED COST: $0.0015
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Historic preservation",
+      "source": "LCSH",
+      "reasoning": "The article discusses the restoration of a historic house in Savannah, directly relating to historic preservation practices relevant to the American South in the early 20th century."
+    },
+    {
+      "label": "Palladian",
+      "source": "Getty AAT",
+      "reasoning": "The house is described as a Palladian style building, making this term specific and appropriate for the architectural style discussed."
+    },
+    {
+      "label": "Stucco",
+      "source": "FAST",
+      "reasoning": "The article highlights the 'old pink stucco' construction of the house, making stucco construction a key material term relevant to the restoration."
+    },
+    {
+      "label": "eighteenth century (dates CE)",
+      "source": "Getty AAT",
+      "reasoning": "The house dates from the 18th century, so this term accurately situates the architectural period discussed."
+    },
+    {
+      "label": "Classicism in architecture",
+      "source": "LCSH",
+      "reasoning": "Palladian architecture is a form of classicism; the article's focus on architectural features and historical context aligns with classicism in architecture."
+    },
+    {
+      "label": "architectural history",
+      "source": "Getty AAT",
+      "reasoning": "The article provides a detailed narrative about the architectural history and restoration challenges of the historic house, making this term relevant."
+    }
+  ]
+}
+
+================================================================================
+
+Row 87 - Barcode 1929-07-55_page6 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,053 (Prompt: 1,940, Completion: 113)
+ESTIMATED COST: $0.0010
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Architecture, Classical",
+      "source": "LCSH",
+      "reasoning": "The page features a classical architectural facade with columns and pediment, appropriate for the period and region."
+    },
+    {
+      "label": "Architecture--Conservation and restoration--Business community participation",
+      "source": "LCSH",
+      "reasoning": "The text describes restoration efforts with mention of a bank president, indicating business community involvement in architectural conservation."
+    }
+  ]
+}
+
+================================================================================
+
+Row 88 - Barcode 1929-07-55_page7 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 1,889 (Prompt: 1,660, Completion: 229)
+ESTIMATED COST: $0.0010
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Architecture, Classical",
+      "source": "LCSH",
+      "reasoning": "The building is described as classical architectural style, which directly corresponds to this term; it is historically and geographically appropriate for a 1929 Southern U.S. residence."
+    },
+    {
+      "label": "Architectural photography",
+      "source": "LCSH",
+      "reasoning": "The page features a black and white photograph of the building, making this term relevant and appropriate for the content and period."
+    },
+    {
+      "label": "20th-century architecture",
+      "source": "FAST",
+      "reasoning": "The building dates from 1929, placing it squarely in the 20th century; this term accurately situates the architecture temporally."
+    },
+    {
+      "label": "Architectural firms",
+      "source": "LCSH",
+      "reasoning": "The architects Levy & Clarke are credited, making this term relevant to the content about the creators of the building."
+    }
+  ]
+}
+
+================================================================================
+
+Row 90 - Barcode 1929-07-55_page9 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,577 (Prompt: 2,239, Completion: 338)
+ESTIMATED COST: $0.0014
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Hunting lodges",
+      "source": "LCSH",
+      "reasoning": "The page describes the Bayard Dominick Shooting Lodge, a hunting lodge, making this term directly relevant and historically/geographically appropriate for early 20th century Southern architecture."
+    },
+    {
+      "label": "plantation houses",
+      "source": "Getty AAT",
+      "reasoning": "The lodge is part of the Gregory Neck Plantation and the architecture relates to plantation house style, making this term specific and appropriate for Southern plantation architecture of the period."
+    },
+    {
+      "label": "Architectural photography",
+      "source": "LCSH",
+      "reasoning": "The page includes a large architectural photograph credited to Tebbs & Knell, indicating the relevance of architectural photography in documenting the building."
+    },
+    {
+      "label": "Architecture--Southern States",
+      "source": "LCSH",
+      "reasoning": "The building is located in the American South and exemplifies Southern architectural characteristics, making this term geographically and historically appropriate."
+    },
+    {
+      "label": "Architectural design",
+      "source": "LCSH",
+      "reasoning": "The article discusses the architectural design by Willis Irvin, making this term relevant to the content and period."
+    },
+    {
+      "label": "Architecture, Domestic",
+      "source": "LCSH",
+      "reasoning": "As a rural residential hunting lodge on a plantation, the building fits within domestic architecture in a rural Southern context."
+    }
+  ]
+}
+
+================================================================================
+
+Row 91 - Barcode 1929-07-55_page10 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,271 (Prompt: 1,985, Completion: 286)
+ESTIMATED COST: $0.0013
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Architecture, Colonial",
+      "source": "FAST",
+      "reasoning": "The page describes the Bayard Dominick Shooting Lodge with emphasis on Colonial architectural style, which is appropriate for the 1892-1931 Southern U.S. context."
+    },
+    {
+      "label": "Architecture, Georgian--United States",
+      "source": "LCSH",
+      "reasoning": "The article specifically focuses on Georgian architectural style in the United States, fitting the historical and geographical context of the Southern U.S. in the early 20th century."
+    },
+    {
+      "label": "architectural history",
+      "source": "Getty AAT",
+      "reasoning": "The content includes historical context and design elements, making architectural history a relevant term for this periodical's article."
+    },
+    {
+      "label": "Building",
+      "source": "LCSH",
+      "reasoning": "The description centers on a specific building—the Bayard Dominick Shooting Lodge—making this a precise and relevant term."
+    },
+    {
+      "label": "Historic buildings",
+      "source": "LCSH",
+      "reasoning": "The lodge is described with historical architectural styles, indicating its status as a historic building relevant to the Southern U.S. architectural heritage."
+    }
+  ]
+}
+
+================================================================================
+
+Row 92 - Barcode 1929-07-55_page11 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 1,980 (Prompt: 1,765, Completion: 215)
+ESTIMATED COST: $0.0011
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Architecture--Southern States",
+      "source": "LCSH",
+      "reasoning": "The building is a Southern U.S. lodge near Georgetown, S.C., exemplifying early 20th-century Southern architecture, making this term geographically and historically appropriate."
+    },
+    {
+      "label": "20th-century architecture",
+      "source": "FAST",
+      "reasoning": "The lodge was designed in the early 20th century, so this term accurately reflects the temporal context of the architecture."
+    },
+    {
+      "label": "Architectural photography",
+      "source": "LCSH",
+      "reasoning": "The page features a black and white photograph of the building, making this term relevant to the content."
+    },
+    {
+      "label": "Building",
+      "source": "LCSH",
+      "reasoning": "The subject is a constructed two-story lodge building, so this general building term is appropriate."
+    }
+  ]
+}
+
+================================================================================
+
+Row 93 - Barcode 1929-07-55_page12 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,061 (Prompt: 1,793, Completion: 268)
+ESTIMATED COST: $0.0011
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Architectural drawings",
+      "source": "FAST",
+      "reasoning": "The page features detailed architectural floor plans, which are a form of architectural drawings, directly relevant to the content and appropriate for early 20th-century Southern residential architecture."
+    },
+    {
+      "label": "20th-century architecture",
+      "source": "FAST",
+      "reasoning": "The building dates from the early 20th century, making this term temporally accurate and relevant to the architectural period represented."
+    },
+    {
+      "label": "Architectural design",
+      "source": "FAST",
+      "reasoning": "The page presents the design of a residential building, highlighting architectural design elements, making this term directly relevant."
+    },
+    {
+      "label": "Building layout",
+      "source": "FAST",
+      "reasoning": "The floor plans illustrate the building layout, showing room arrangements and spatial organization, which fits this term precisely."
+    },
+    {
+      "label": "Architecture--Southern States",
+      "source": "LCSH",
+      "reasoning": "The building is located in Augusta, Georgia, placing it within the American South and making this term geographically and contextually appropriate."
+    }
+  ]
+}
+
+================================================================================
+
+Row 94 - Barcode 1929-07-55_page13 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 1,610 (Prompt: 1,484, Completion: 126)
+ESTIMATED COST: $0.0008
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Brick houses--Design and construction",
+      "source": "FAST",
+      "reasoning": "The page features a residential brick house from the late 1920s, making this term directly relevant and historically/geographically appropriate for Southern residential architecture of the period."
+    },
+    {
+      "label": "Landscape design",
+      "source": "LCSH",
+      "reasoning": "The photograph includes a landscaped garden setting, and this general term accurately reflects the designed outdoor environment appropriate to the Southern US context and period."
+    }
+  ]
+}
+
+================================================================================
+
+Row 95 - Barcode 1929-07-55_page14 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,052 (Prompt: 1,812, Completion: 240)
+ESTIMATED COST: $0.0011
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Floor plans",
+      "source": "LCSH",
+      "reasoning": "The page features detailed architectural floor plans for a residential house, making this term directly relevant and historically/geographically appropriate for early 20th century Southern residential architecture."
+    },
+    {
+      "label": "Architectural design",
+      "source": "LCSH",
+      "reasoning": "The content involves the design of a residential building, specifically the layout and arrangement of rooms, which fits the term 'Architectural design' in the context of early 20th century Southern architecture."
+    },
+    {
+      "label": "20th-century architecture",
+      "source": "FAST",
+      "reasoning": "The house plans date from the early 20th century, making this term temporally accurate and relevant to the architectural period represented."
+    },
+    {
+      "label": "Architectural drawings",
+      "source": "FAST",
+      "reasoning": "The page contains technical drawings of the house plans, which are a form of architectural drawings, appropriate for the period and region."
+    }
+  ]
+}
+
+================================================================================
+
+Row 96 - Barcode 1929-07-55_page15 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 1,908 (Prompt: 1,619, Completion: 289)
+ESTIMATED COST: $0.0011
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Architecture--Details",
+      "source": "LCSH",
+      "reasoning": "The page focuses on a detailed architectural element of a residential building entrance, making this term directly relevant and historically appropriate for early 20th-century Southern architecture."
+    },
+    {
+      "label": "Brick houses--Design and construction",
+      "source": "FAST",
+      "reasoning": "The building is a brick residential structure, and this term specifically addresses design and construction of brick houses, fitting the content and period."
+    },
+    {
+      "label": "Fanlights",
+      "source": "LCSH",
+      "reasoning": "The entrance features a semi-circular fanlight, making this term a precise and relevant architectural detail for the period and region."
+    },
+    {
+      "label": "wrought iron",
+      "source": "Getty AAT",
+      "reasoning": "The entrance includes wrought iron railings, and this term accurately describes the material and element consistent with early 20th-century Southern residential architecture."
+    },
+    {
+      "label": "Architecture--Southern States",
+      "source": "LCSH",
+      "reasoning": "The building is located in Charlotte, N.C., and represents early 20th-century Southern architecture, making this term geographically and historically appropriate."
+    }
+  ]
+}
+
+================================================================================
+
+Row 98 - Barcode 1929-07-55_page17 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 1,608 (Prompt: 1,481, Completion: 127)
+ESTIMATED COST: $0.0008
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "interior design",
+      "source": "Getty AAT",
+      "reasoning": "The page features an interior stairhall with furniture and decorative elements, directly relating to interior design practices appropriate to early 20th-century Southern residential architecture."
+    },
+    {
+      "label": "Staircases",
+      "source": "LCSH",
+      "reasoning": "The photograph prominently features a staircase with wooden handrail and balusters, making 'Staircases' a precise and relevant term for the architectural element depicted."
+    }
+  ]
+}
+
+================================================================================
+
+Row 100 - Barcode 1929-07-55_page19 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 1,538 (Prompt: 1,353, Completion: 185)
+ESTIMATED COST: $0.0008
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Stone houses--Design and construction",
+      "source": "FAST",
+      "reasoning": "The page features a stone house with traditional residential architecture, making this term specific and directly relevant to the stone construction of the house in the American South during the early 20th century."
+    },
+    {
+      "label": "traditional (style)",
+      "source": "Getty AAT",
+      "reasoning": "The house exemplifies traditional American residential architecture, and this term accurately reflects the architectural style appropriate to the period and region."
+    },
+    {
+      "label": "Architectural photography",
+      "source": "LCSH",
+      "reasoning": "The page includes a photograph of the house credited to a photographer, making this term relevant to the documentation and presentation of architecture in the periodical."
+    }
+  ]
+}
+
+================================================================================
+
+Row 101 - Barcode 1929-07-55_page20 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 1,915 (Prompt: 1,673, Completion: 242)
+ESTIMATED COST: $0.0011
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Floor plans",
+      "source": "LCSH",
+      "reasoning": "The page features detailed architectural floor plans for a residential house, making this term directly relevant and historically appropriate for early 20th century Southern residential architecture."
+    },
+    {
+      "label": "Architectural design",
+      "source": "LCSH",
+      "reasoning": "The content focuses on the design aspects of a residential building by architect W. Duncan Lee, fitting the term for architectural design in the context of early 20th century Southern architecture."
+    },
+    {
+      "label": "Room layout (Dwellings)",
+      "source": "LCSH",
+      "reasoning": "The floor plans clearly show the arrangement and layout of rooms within the house, making this term specifically relevant to the content."
+    },
+    {
+      "label": "20th-century architecture",
+      "source": "FAST",
+      "reasoning": "The house and its plans date from the early 20th century, making this term appropriate to situate the architectural work in its historical period."
+    }
+  ]
+}
+
+================================================================================
+
+Row 102 - Barcode 1929-07-55_page21 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 1,403 (Prompt: 1,277, Completion: 126)
+ESTIMATED COST: $0.0007
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Tudor",
+      "source": "Getty AAT",
+      "reasoning": "The house is described as Tudor Revival architecture, making 'Tudor' the most specific and historically appropriate term for this style in the early 20th-century Southern United States."
+    },
+    {
+      "label": "Architectural photography",
+      "source": "LCSH",
+      "reasoning": "The page features a large photograph of the house, making 'Architectural photography' directly relevant and appropriate for the content."
+    }
+  ]
+}
+
+================================================================================
+
+Row 103 - Barcode 1929-07-55_page22 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 1,918 (Prompt: 1,671, Completion: 247)
+ESTIMATED COST: $0.0011
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Floor plans",
+      "source": "LCSH",
+      "reasoning": "The page features detailed architectural floor plans for a residential house, making this term directly relevant and historically/geographically appropriate for early 20th century Southern residential architecture."
+    },
+    {
+      "label": "Architectural design",
+      "source": "LCSH",
+      "reasoning": "The content involves the design aspect of a residential building by a known architect, fitting the term 'Architectural design' which covers the planning and conceptualization of buildings in the period and region."
+    },
+    {
+      "label": "Room layout (Dwellings)",
+      "source": "LCSH",
+      "reasoning": "The floor plans clearly show the arrangement and function of rooms within a dwelling, making this term precise and relevant to the content."
+    },
+    {
+      "label": "Architectural drawings",
+      "source": "FAST",
+      "reasoning": "The page consists of visual architectural drawings (plans) of a house, which fits this term that broadly covers drawings used in architectural practice during the period."
+    }
+  ]
+}
+
+================================================================================
+
+Row 104 - Barcode 1929-07-55_page23 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 1,905 (Prompt: 1,668, Completion: 237)
+ESTIMATED COST: $0.0010
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "traditional (style)",
+      "source": "Getty AAT",
+      "reasoning": "The interior design of the living room is described as traditional, featuring period-appropriate furnishings and architectural details consistent with early 20th-century Southern American homes."
+    },
+    {
+      "label": "Fireplaces--Design and construction",
+      "source": "FAST",
+      "reasoning": "The focal point of the photograph is a detailed fireplace with a wooden mantel, making this term directly relevant to the design and construction aspects of the fireplace shown."
+    },
+    {
+      "label": "Architectural photography",
+      "source": "LCSH",
+      "reasoning": "The page features a photograph of an interior architectural detail, making this term appropriate for describing the photographic documentation of the architecture."
+    },
+    {
+      "label": "historic houses",
+      "source": "Getty AAT",
+      "reasoning": "The house is identified as W. Duncan Lee's historic home in Richmond, VA, fitting the term for historic residential architecture in the American South."
+    }
+  ]
+}
+
+================================================================================
+
+Row 106 - Barcode 1929-07-55_page25 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 1,874 (Prompt: 1,644, Completion: 230)
+ESTIMATED COST: $0.0010
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Architecture, Classical",
+      "source": "LCSH",
+      "reasoning": "The building is described as classical-style with classical architectural elements, making this term directly relevant and historically/geographically appropriate for the 1929 Southern U.S. context."
+    },
+    {
+      "label": "University buildings",
+      "source": "Getty AAT",
+      "reasoning": "The building is identified as a post office building on the University of Alabama campus, making this term specifically relevant to the type of institutional architecture depicted."
+    },
+    {
+      "label": "Architectural photography",
+      "source": "LCSH",
+      "reasoning": "The page features a photograph of the building, and the term accurately describes the medium and content of the image within the architectural field."
+    },
+    {
+      "label": "Architectural firms",
+      "source": "LCSH",
+      "reasoning": "The architects Miller & Martin are credited, making this term relevant to the professional practice aspect of the content."
+    }
+  ]
+}
+
+================================================================================
+
+Row 108 - Barcode 1929-07-55_page27 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 1,841 (Prompt: 1,629, Completion: 212)
+ESTIMATED COST: $0.0010
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Architecture, Classical",
+      "source": "LCSH",
+      "reasoning": "The building is described as having classical architectural design with traditional elements such as columns and pediment, appropriate for early 20th-century Southern US architecture."
+    },
+    {
+      "label": "Brick walls--Design and construction",
+      "source": "FAST",
+      "reasoning": "The building features a brick facade, making this term specifically relevant to the construction material and method."
+    },
+    {
+      "label": "arched",
+      "source": "Getty AAT",
+      "reasoning": "The building includes arched windows, making this term directly descriptive of a key architectural feature."
+    },
+    {
+      "label": "university buildings",
+      "source": "Getty AAT",
+      "reasoning": "The building is identified as a post office building on the University of Alabama campus, thus fitting the category of university buildings."
+    }
+  ]
+}
+
+================================================================================
+
+Row 110 - Barcode 1929-07-55_page29 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,220 (Prompt: 1,928, Completion: 292)
+ESTIMATED COST: $0.0012
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Colonial (general period)",
+      "source": "Getty AAT",
+      "reasoning": "The house is described as having a colonial-style entrance and architectural inspiration, making this term historically and geographically appropriate for early 20th-century Southern U.S. architecture."
+    },
+    {
+      "label": "summer houses (seasonal dwellings)",
+      "source": "Getty AAT",
+      "reasoning": "The article discusses the house as inspired by summer cottages, which aligns with the concept of seasonal dwellings or summer houses relevant to residential architecture in the American South."
+    },
+    {
+      "label": "architectural history",
+      "source": "Getty AAT",
+      "reasoning": "The article includes discussion of the architectural style and historical context of the house, making this term appropriate for the content."
+    },
+    {
+      "label": "historic houses",
+      "source": "Getty AAT",
+      "reasoning": "The house is presented as a historic home in Augusta, Georgia, fitting the term for historic houses relevant to the Southern U.S. context."
+    },
+    {
+      "label": "20th-century architecture",
+      "source": "FAST",
+      "reasoning": "The house and article date from the early 20th century, making this term temporally accurate and relevant."
+    }
+  ]
+}
+
+================================================================================
+
+Row 111 - Barcode 1929-07-55_page30 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,041 (Prompt: 1,786, Completion: 255)
+ESTIMATED COST: $0.0011
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Architectural drawings",
+      "source": "FAST",
+      "reasoning": "The page features detailed architectural floor plans, which are a form of architectural drawings, accurately representing the design and layout of the house."
+    },
+    {
+      "label": "20th-century architecture",
+      "source": "FAST",
+      "reasoning": "The house plans date from the early 20th century, making this term temporally appropriate for the architectural style and period."
+    },
+    {
+      "label": "Architecture--Southern States",
+      "source": "LCSH",
+      "reasoning": "The house is located in Augusta, Georgia, placing it within the American South and making this term geographically relevant."
+    },
+    {
+      "label": "Architectural design",
+      "source": "FAST",
+      "reasoning": "The page illustrates the architectural design of a residential building, showing the planned arrangement and organization of spaces."
+    },
+    {
+      "label": "Building layout",
+      "source": "FAST",
+      "reasoning": "The floor plans clearly depict the building layout, showing the spatial arrangement of rooms on both floors."
+    }
+  ]
+}
+
+================================================================================
+
+Row 112 - Barcode 1929-07-55_page31 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 1,851 (Prompt: 1,620, Completion: 231)
+ESTIMATED COST: $0.0010
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Architectural photography",
+      "source": "LCSH",
+      "reasoning": "The page features photographic images of architectural subjects, specifically residential architecture, making this term directly relevant and historically appropriate for the period."
+    },
+    {
+      "label": "Brickwork",
+      "source": "LCSH",
+      "reasoning": "The description highlights brick walls and brickwork surrounding the driveway and patio, making this term specifically relevant to the architectural materials and construction techniques of the period."
+    },
+    {
+      "label": "dormers",
+      "source": "Getty AAT",
+      "reasoning": "The house features dormer windows, a specific architectural element appropriate to residential architecture in the American South during the late 1920s."
+    },
+    {
+      "label": "Patios--Design and construction",
+      "source": "FAST",
+      "reasoning": "The bottom photograph depicts a patio area, making this term relevant to the design and construction of outdoor residential spaces in the period and region."
+    }
+  ]
+}
+
+================================================================================
+
+Row 113 - Barcode 1929-07-55_page32 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,449 (Prompt: 2,148, Completion: 301)
+ESTIMATED COST: $0.0013
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "interior design",
+      "source": "Getty AAT",
+      "reasoning": "The page features detailed interior design elements of a 1929 Southern living room, making this term directly relevant and historically/geographically appropriate."
+    },
+    {
+      "label": "Living rooms",
+      "source": "LCSH",
+      "reasoning": "The content specifically depicts living room interiors from a Southern residence, fitting the term precisely."
+    },
+    {
+      "label": "Architectural photography",
+      "source": "LCSH",
+      "reasoning": "The page includes photographic documentation of architectural interiors, making this term appropriate for the medium and content."
+    },
+    {
+      "label": "Wallpaper",
+      "source": "FAST",
+      "reasoning": "Floral wallpaper is a prominent interior detail shown, and 'Wallpaper' is the most precise term available for this decorative element."
+    },
+    {
+      "label": "Fireplaces",
+      "source": "LCSH",
+      "reasoning": "The fireplace with an ornate mantel is a key architectural feature depicted, making this term directly relevant."
+    },
+    {
+      "label": "Furniture design",
+      "source": "LCSH",
+      "reasoning": "The photographs highlight furniture as part of the interior composition, and this term accurately reflects the design aspect of the furnishings."
+    }
+  ]
+}
+
+================================================================================
+
+Row 114 - Barcode 1929-07-55_page33 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 1,809 (Prompt: 1,633, Completion: 176)
+ESTIMATED COST: $0.0009
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Dining rooms",
+      "source": "LCSH",
+      "reasoning": "The page features photographs of a dining room interior in a Southern residential context from the early 20th century, making this term directly relevant and historically/geographically appropriate."
+    },
+    {
+      "label": "Interior design",
+      "source": "Getty AAT",
+      "reasoning": "The images showcase interior design elements of a residential dining room, fitting the term for early 20th-century Southern interior architectural practice."
+    },
+    {
+      "label": "Architectural photography",
+      "source": "LCSH",
+      "reasoning": "The page consists of photographic documentation of architectural interiors, specifically a dining room, making this term appropriate for the content and period."
+    }
+  ]
+}
+
+================================================================================
+
+Row 115 - Barcode 1929-07-55_page34 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,344 (Prompt: 2,015, Completion: 329)
+ESTIMATED COST: $0.0013
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Dutch (culture or style)",
+      "source": "Getty AAT",
+      "reasoning": "The article describes Dutch influence on the architectural design of the house, making this term directly relevant and historically/geographically appropriate for early 20th-century Southern architecture."
+    },
+    {
+      "label": "Colonial (general period)",
+      "source": "Getty AAT",
+      "reasoning": "The interior design described is Colonial in style, consistent with early American architectural traditions in the South during the period."
+    },
+    {
+      "label": "Historic preservation",
+      "source": "LCSH",
+      "reasoning": "The article discusses restoration techniques and preservation of historic architectural details, making this term appropriate for the content and period."
+    },
+    {
+      "label": "gambrel roofs",
+      "source": "Getty AAT",
+      "reasoning": "The gambrel roof is a specific architectural feature relevant to the described house and period, fitting the Southern architectural context."
+    },
+    {
+      "label": "natural",
+      "source": "Getty AAT",
+      "reasoning": "The integration of trees and natural elements into the architectural design is a key focus, making this term relevant and appropriate."
+    },
+    {
+      "label": "Colonial North American",
+      "source": "Getty AAT",
+      "reasoning": "Early American architecture in the Southern United States during the colonial period is well represented by this term, matching the historical and geographical context."
+    }
+  ]
+}
+
+================================================================================
+
+Row 116 - Barcode 1929-07-55_page35 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,627 (Prompt: 2,405, Completion: 222)
+ESTIMATED COST: $0.0013
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Architecture",
+      "source": "LCSH",
+      "reasoning": "The page discusses the significance of architecture and notable architects involved in the Southern Architectural and Industrial Arts Exposition, making this term directly relevant and historically/geographically appropriate."
+    },
+    {
+      "label": "Industrial arts",
+      "source": "LCSH",
+      "reasoning": "The exposition includes industrial arts as a key focus, consistent with early 20th-century Southern industrial and architectural exhibitions."
+    },
+    {
+      "label": "Exhibitions",
+      "source": "LCSH",
+      "reasoning": "The content centers on the arrangement and significance of the Southern Architectural and Industrial Arts Exposition, making this term highly relevant."
+    },
+    {
+      "label": "Architectural design--Awards",
+      "source": "FAST",
+      "reasoning": "The article announces medals and awards to be given at the exposition, directly relating to architectural awards in the historical Southern context."
+    }
+  ]
+}
+
+================================================================================
+
+Row 117 - Barcode 1929-07-55_page36 - 2025-11-06 11:00:18
+--------------------------------------------------------------------------------
+MODEL: gpt-4.1-mini
+PROCESSING TIME: 0.00s
+TOKENS: 2,464 (Prompt: 2,235, Completion: 229)
+ESTIMATED COST: $0.0013
+
+LLM RESPONSE:
+{
+  "selected_terms": [
+    {
+      "label": "Industrial arts",
+      "source": "LCSH",
+      "reasoning": "The exposition focuses on industrial arts as a key topic, and this term accurately represents the field relevant to the event in the early 20th century American South."
+    },
+    {
+      "label": "Mural painting and decoration",
+      "source": "FAST",
+      "reasoning": "Mural paintings are explicitly mentioned as a key topic of the exposition, making this term directly relevant and historically appropriate."
+    },
+    {
+      "label": "Arts and Crafts (movement)",
+      "source": "Getty AAT",
+      "reasoning": "The exposition includes arts and crafts as a major theme, and this term specifically denotes the recognized movement relevant to the period and region."
+    },
+    {
+      "label": "Building materials",
+      "source": "LCSH",
+      "reasoning": "Building materials are a key topic of the exposition, and this term accurately describes the subject matter in a historically and geographically appropriate manner."
+    }
+  ]
+}
+
+================================================================================
+
