@@ -25,7 +25,7 @@ logging.getLogger("urllib3").setLevel(logging.WARNING)
 logging.getLogger("httpx").setLevel(logging.WARNING)
 
 client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
-DEFAULT_MODEL = "gpt-4o-2024-08-06"  # Default model name, change as needed
+DEFAULT_MODEL = "gpt-4o"  # Default model name, change as needed
 
 api_stats = APIStats()
 
@@ -55,7 +55,7 @@ def prepare_batch_requests(all_files, model_name):
                 "role": "user",
                 "content": f"{prompt}\n\nHere's the content to analyze:\n\n{content.strip()}\n\nNote: This content is {'short (less than 250 characters)' if prompt_type == 'short' else 'of normal length' if prompt_type == 'normal' else 'from a cover page'}."
             }],
-            "max_tokens": 3000
+            "max_tokens": 8000
         }
         
         batch_requests.append(request_data)
@@ -255,7 +255,7 @@ def process_folder_individual(all_files, wb, analysis_sheet, raw_sheet, issues_s
                 processing_time=0
             )
             
-            print(f"   ❌ Processing failed: {str(e)}")
+            print(f"  Processing failed: {str(e)}")
         
         analysis_row = [
             folder_name,
@@ -547,7 +547,7 @@ def main():
     script_start_time = time.time()
     
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    input_folder_name = "4_pages"  # Change this to whichever folder you want
+    input_folder_name = "1_page"  # Change this to whichever folder you want
     input_folder = os.path.join(script_dir, "image_folders", input_folder_name)
     
     # Create dynamic output folder name
@@ -637,7 +637,7 @@ def main():
     )
     
     # Final summary
-    print(f"\n ✅ STEP 1 COMPLETE: Generated text metadata in {os.path.basename(output_dir)}")
+    print(f"\n STEP 1 COMPLETE: Generated text metadata in {os.path.basename(output_dir)}")
     print(f"Excel file, JSON data, and processing logs created")
     print(f"Successfully processed: {total_items - items_with_issues}/{total_items} files")
     print(f"Items with issues: {items_with_issues}")
