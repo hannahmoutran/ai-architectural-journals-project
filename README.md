@@ -191,6 +191,12 @@ For questions about implementation or research collaboration, please reach out v
 - Willem Borkgren, Scholars Lab GRA
 - Josh Conrad, Digital Initiatives Archival Fellow for the Alexander Architectural Archives
 
+## Development
+
+This repository was built with the assistance of [Claude Code](https://code.claude.com/docs/en/overview), Anthropic's AI coding assistant in VS Code.
+
+For questions about this repository, please contact [Hannah Moutran](mailto:hlm2454@my.utexas.edu)
+
 #### Special thanks to Aaron Choate, Director of Research & Strategy at UT Libraries
 ---
 
