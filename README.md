@@ -1,5 +1,5 @@
 # University of Texas at Austin Libraries
-## Southern Architect AI Cataloging Project
+## Southern Architect AI Metadata Project
 
 ### Project Overview
 This code is part of an ongoing project focused on cataloging the University of Texas at Austin's collection of Southern Architect and Building News journals using Large Language Models (LLMs) to assist in the first-pass metadata creation process. Our research project evaluates the effectiveness of LLMs in enhancing cataloging workflows. In the larger project, we considered both API and web-based interaction with Large Language Models for metadata creation. We presented on this topic at TCDL 2025, and look forward to presenting our work again this year at the DCMI Annual Conference and the ASIS&T Annual Meeting.
@@ -181,7 +181,8 @@ python southern_architect_run.py --workflow image # best results
 - TCDL 2025
 
 ## Team
-This project represents ongoing research into AI applications for archival metadata. Contributions are welcome! 
+Developed by Hannah Moutran as part of a collaborative research project. Contributions are welcome! 
+
 For questions about implementation or research collaboration, please reach out via email. 
 
 - Hannah Moutran: Library Specialist, AI Implementation: [hlm2454@my.utexas.edu](mailto:hlm2454@my.utexas.edu)
