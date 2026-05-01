@@ -60,6 +60,38 @@ The processing pipeline consists of five integrated steps that transform raw OCR
 - Tracks frequency, temporal distribution, and variant forms
 - Creates both structured JSON and human-readable authority files
 
+## Configuration
+
+All runtime settings are centralized in `sa_workflow_config.py`. Edit this file to change behavior across the entire workflow without touching any processing scripts.
+
+### Model Selection
+```python
+DEFAULT_MODELS = {
+    "step1": "gpt-4o",           # Step 1 individual mode (text and image)
+    "step1_batch": "gpt-4.1",    # Step 1 batch mode
+    "step1_5": "gpt-4.1-mini",   # Step 1.5 batch cleanup
+    "step3": "gpt-4.1-mini",     # Step 3 individual mode
+    "step3_batch": "gpt-4.1-mini", # Step 3 batch mode
+    "step4": "gpt-4.1-mini",     # Step 4 issue synthesis
+}
+```
+
+### Folder Names
+```python
+FOLDER_CONFIG = {
+    "input_dir": "image_folders",       # Parent directory for input
+    "output_dir": "output_folders",     # Parent directory for output
+    "default_input_folder": "4_pages",  # Default collection folder within input_dir
+}
+```
+
+### Batch Threshold
+```python
+BATCH_CONFIG = {
+    "auto_threshold": 1,  # Use batch automatically when request count exceeds this number
+}
+```
+
 ## Installation & Setup
 
 ### Prerequisites
@@ -90,7 +122,7 @@ southern_architect/
 ├── southern_architect_run.py
 ├── southern_architect_step1_text.py
 ├── southern_architect_step1_image.py
-├── sa_workflow_config.py
+├── sa_workflow_config.py            # Central config: models, folders, batch settings
 ├── [other script files...]
 ├── image_folders/
 │   └── 2_issues/                    # Your collection folder, named as you choose
@@ -154,10 +186,11 @@ python southern_architect_run.py --workflow image # best results
 ## Features
 
 ### Batch Processing
-- Automatic batch API usage for large collections
+- Automatic batch API usage for large collections (steps 1 and 3)
+- Separate model configuration for batch vs. individual mode via `sa_workflow_config.py`
 - Progress monitoring and estimated completion times
 - Comprehensive error handling and retry logic
-- Batch processing could potentially take up to 24 hours for *each step* where it is used.  
+- Batch processing could potentially take up to 24 hours for *each step* where it is used.
 
 ### Geographic Entity Processing
 - Standardized geographic name formatting

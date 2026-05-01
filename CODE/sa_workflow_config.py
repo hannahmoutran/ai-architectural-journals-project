@@ -34,7 +34,7 @@ DEFAULT_MODELS = {
 # Requires PORTKEY_API_KEY and PORTKEY_VIRTUAL_KEY environment variables.
 # Batch processing always uses OpenAI directly (Portkey does not support the Batch API).
 PORTKEY_CONFIG = {
-    "enabled": True,
+    "enabled": False,
     "api_key_env": "PORTKEY_API_KEY",
     "virtual_key_env": "PORTKEY_VIRTUAL_KEY"
 }
