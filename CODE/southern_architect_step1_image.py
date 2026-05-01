@@ -4,8 +4,8 @@ import json
 import base64
 import logging
 from datetime import datetime
-from openai import OpenAI
 import tenacity
+from sa_workflow_config import get_openai_client, DEFAULT_MODELS, FOLDER_CONFIG
 import re
 from openpyxl import Workbook
 from openpyxl.styles import Alignment
@@ -29,8 +29,8 @@ logging.getLogger("openai").setLevel(logging.WARNING)
 logging.getLogger("urllib3").setLevel(logging.WARNING)
 logging.getLogger("httpx").setLevel(logging.WARNING)
 
-client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
-DEFAULT_MODEL = "gpt-4o"  # Default model, change as needed
+client = get_openai_client()
+DEFAULT_MODEL = DEFAULT_MODELS["step1"]
 
 api_stats = APIStats()
 def parse_json_response(raw_response):
@@ -196,7 +196,9 @@ def process_folder_with_batch(input_folder, output_dir, model_name=DEFAULT_MODEL
     # Initialize batch processor and check if we should use batch processing
     processor = BatchProcessor()
     use_batch = processor.should_use_batch(total_items)
-    
+    if use_batch:
+        model_name = DEFAULT_MODELS["step1_batch"]
+
     print(f"Processing mode: {'BATCH' if use_batch else 'INDIVIDUAL'}")
     
     # Show model pricing info
@@ -585,8 +587,8 @@ def main():
     if env_path:
         input_folder = env_path if os.path.isabs(env_path) else os.path.join(script_dir, env_path)
     else:
-        input_folder_name = os.getenv("INPUT_FOLDER_NAME", "two_issue_test_2")
-        input_folder = os.path.join(script_dir, "image_folders", input_folder_name)
+        input_folder_name = os.getenv("INPUT_FOLDER_NAME", FOLDER_CONFIG["default_input_folder"])
+        input_folder = os.path.join(script_dir, FOLDER_CONFIG["input_dir"], input_folder_name)
 
     # Optional visibility for troubleshooting
     if not os.path.exists(input_folder):
@@ -603,7 +605,7 @@ def main():
     folder_name = f"SABN_Metadata_Created_{current_date}_Time_{current_time}"
     
     # Create the full output directory path
-    base_output_dir = os.path.join(script_dir, "output_folders")
+    base_output_dir = os.path.join(script_dir, FOLDER_CONFIG["output_dir"])
     output_dir = os.path.join(base_output_dir, folder_name)
     
     # Create the directory

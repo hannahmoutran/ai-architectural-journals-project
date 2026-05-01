@@ -17,7 +17,7 @@ import logging
 import time
 from datetime import datetime
 from typing import List, Dict, Any, Optional, Tuple
-from openai import OpenAI
+from sa_workflow_config import get_openai_client, DEFAULT_MODELS, FOLDER_CONFIG
 import tenacity
 import re
 from openpyxl import load_workbook
@@ -42,8 +42,8 @@ logging.getLogger("openai").setLevel(logging.WARNING)
 logging.getLogger("urllib3").setLevel(logging.WARNING)
 logging.getLogger("httpx").setLevel(logging.WARNING)
 
-client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
-DEFAULT_MODEL = "gpt-4.1-mini"  # Default model name, change as needed
+client = get_openai_client()
+DEFAULT_MODEL = DEFAULT_MODELS["step1_5"]
 
 api_stats = APIStats()
 
@@ -895,7 +895,7 @@ def main():
 
     # Default base directory
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    base_output_dir = os.path.join(script_dir, "output_folders")
+    base_output_dir = os.path.join(script_dir, FOLDER_CONFIG["output_dir"])
 
     # Find the newest folder
     folder_path = find_newest_folder(base_output_dir)

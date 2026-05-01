@@ -6,7 +6,7 @@ import logging
 import time
 from datetime import datetime
 from typing import List, Dict, Any, Tuple
-from openai import OpenAI
+from sa_workflow_config import get_openai_client, DEFAULT_MODELS
 import tenacity
 # Import custom modules
 from prompts import SouthernArchitectPrompts
@@ -21,8 +21,8 @@ logging.getLogger("openai").setLevel(logging.WARNING)
 logging.getLogger("urllib3").setLevel(logging.WARNING)
 logging.getLogger("httpx").setLevel(logging.WARNING)
 
-client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
-DEFAULT_MODEL = "gpt-4.1-mini"
+client = get_openai_client()
+DEFAULT_MODEL = DEFAULT_MODELS["step4"]
 
 api_stats = APIStats()
 

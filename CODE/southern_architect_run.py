@@ -21,6 +21,7 @@ import logging
 import argparse
 from datetime import datetime
 from typing import Optional
+from sa_workflow_config import FOLDER_CONFIG
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -128,7 +129,7 @@ class SouthernArchitectWorkflowRunner:
     def find_newest_output_folder(self) -> Optional[str]:
         """Find the newest output folder for the current workflow type."""
         script_dir = os.path.dirname(os.path.abspath(__file__))
-        base_output_dir = os.path.join(script_dir, "output_folders")
+        base_output_dir = os.path.join(script_dir, FOLDER_CONFIG["output_dir"])
         
         if not os.path.exists(base_output_dir):
             return None

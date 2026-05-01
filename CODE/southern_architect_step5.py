@@ -9,6 +9,7 @@ from typing import List, Dict, Optional, Tuple
 from collections import defaultdict
 import re
 from shared_utilities import find_newest_folder
+from sa_workflow_config import FOLDER_CONFIG, DEFAULT_MODELS
 
 # Fuzzy matching imports - try rapidfuzz first (faster), fallback to fuzzywuzzy
 try:
@@ -305,7 +306,7 @@ class EntityAuthority:
                     "created": datetime.now().isoformat(),
                     "source": "Southern Architect and Building News (1892-1931)",
                     "total_entities": len(entity_records),
-                    "extraction_method": "Named Entity Recognition via GPT-4 with Type Classification",
+                    "extraction_method": f"Named Entity Recognition via {DEFAULT_MODELS['step1']} with Type Classification",
                     "fuzzy_matching": {
                         "enabled": FUZZY_LIB is not None,
                         "library": FUZZY_LIB,
@@ -503,7 +504,7 @@ def main():
     
     # Default base directory for Southern Architect output folders
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    base_output_dir = os.path.join(script_dir, "output_folders")
+    base_output_dir = os.path.join(script_dir, FOLDER_CONFIG["output_dir"])
 
     folder_path = find_newest_folder(base_output_dir)
     if not folder_path:

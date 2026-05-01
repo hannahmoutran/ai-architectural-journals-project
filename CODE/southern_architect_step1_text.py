@@ -2,8 +2,8 @@ import os
 import json
 import logging
 from datetime import datetime
-from openai import OpenAI
 import tenacity
+from sa_workflow_config import get_openai_client, DEFAULT_MODELS, FOLDER_CONFIG
 import re
 from openpyxl import Workbook
 from openpyxl.styles import Alignment
@@ -24,8 +24,8 @@ logging.getLogger("openai").setLevel(logging.WARNING)
 logging.getLogger("urllib3").setLevel(logging.WARNING)
 logging.getLogger("httpx").setLevel(logging.WARNING)
 
-client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
-DEFAULT_MODEL = "gpt-4o"  # Default model name, change as needed
+client = get_openai_client()
+DEFAULT_MODEL = DEFAULT_MODELS["step1"]
 
 api_stats = APIStats()
 
@@ -324,7 +324,9 @@ def process_folder_with_batch(input_folder, output_dir, model_name=DEFAULT_MODEL
     # Initialize batch processor and check if we should use batch processing
     processor = BatchProcessor()
     use_batch = processor.should_use_batch(total_items)
-    
+    if use_batch:
+        model_name = DEFAULT_MODELS["step1_batch"]
+
     print(f"Processing mode: {'BATCH' if use_batch else 'INDIVIDUAL'}")
     
     # Show model pricing info
@@ -547,8 +549,8 @@ def main():
     script_start_time = time.time()
     
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    input_folder_name = "1_page"  # Change this to whichever folder you want
-    input_folder = os.path.join(script_dir, "image_folders", input_folder_name)
+    input_folder_name = FOLDER_CONFIG["default_input_folder"]  # Change in sa_workflow_config.py
+    input_folder = os.path.join(script_dir, FOLDER_CONFIG["input_dir"], input_folder_name)
     
     # Create dynamic output folder name
     current_date = datetime.now().strftime("%Y-%m-%d")
@@ -558,12 +560,12 @@ def main():
     folder_name = f"SABN_Metadata_Created_{current_date}_Time_{current_time}"
 
     # Create the full output directory path
-    base_output_dir = os.path.join(script_dir, "output_folders")
+    base_output_dir = os.path.join(script_dir, FOLDER_CONFIG["output_dir"])
     output_dir = os.path.join(base_output_dir, folder_name)
-    
+
     # Create the directory
     os.makedirs(output_dir, exist_ok=True)
-    
+
     # Create metadata folder structure
     metadata_folder = os.path.join(output_dir, "metadata", "collection_metadata")
     os.makedirs(metadata_folder, exist_ok=True)

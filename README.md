@@ -19,6 +19,7 @@ The processing pipeline consists of five integrated steps that transform raw OCR
 - Generates comprehensive metadata including text transcriptions, content summaries, visual descriptions (image script only), topic search terms, and initial entity extraction
 - Supports both individual and batch processing with automatic cost optimization
 - Creates Excel workbooks with thumbnails and detailed analysis sheets
+- Optionally routes individual API calls through Portkey (configured in `sa_workflow_config.py`)
 
 #### Step 1.5: Batch Cleanup (Automatic)
 **Script**: `southern_architect_step1.5.py`
@@ -76,6 +77,11 @@ pip install -r requirements.txt
 
 # Set environment variables
 export OPENAI_API_KEY="your-api-key-here"
+
+# Optional: Portkey gateway (for routing individual API calls through Portkey)
+# Set enabled to True in sa_workflow_config.py, then set these variables:
+export PORTKEY_API_KEY="your-portkey-api-key"
+export PORTKEY_VIRTUAL_KEY="your-portkey-virtual-key"
 ```
 
 ### Directory Structure - this must be aligned
@@ -84,6 +90,7 @@ southern_architect/
 ├── southern_architect_run.py
 ├── southern_architect_step1_text.py
 ├── southern_architect_step1_image.py
+├── sa_workflow_config.py
 ├── [other script files...]
 ├── image_folders/
 │   └── 2_issues/                    # Your collection folder, named as you choose
@@ -174,6 +181,7 @@ python southern_architect_run.py --workflow image # best results
 
 ### API Usage
 - **OpenAI**: Assurances that OpenAI does not use API data for training: [OpenAI Enterprise Privacy](https://openai.com/enterprise-privacy/)
+- **Portkey** (optional): Individual API calls in Step 1 can be routed through the [Portkey AI gateway](https://portkey.ai/) for observability and logging. Enable this in `sa_workflow_config.py`. Batch processing always uses OpenAI directly, as Portkey does not support the Batch API.
 
 ## Research Publications/Presentations
 - DCMI Annual Conference 2025

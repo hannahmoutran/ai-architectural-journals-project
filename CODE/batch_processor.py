@@ -17,6 +17,7 @@ from typing import List, Dict, Any, Optional
 from openai import OpenAI
 import tempfile
 from model_pricing import estimate_cost
+from sa_workflow_config import DEFAULT_MODELS, BATCH_CONFIG
 
 
 class BatchProcessor:
@@ -58,8 +59,7 @@ class BatchProcessor:
         elif use_batch_env == 'false':
             return False
         else:  # 'auto' for automatic mode
-            # Uses batch for more than 5 requests
-            return num_requests > 5
+            return num_requests > BATCH_CONFIG["auto_threshold"]
     
     def create_batch_requests(self, requests_data: List[Dict[str, Any]], 
                             custom_id_prefix: str = "req") -> List[Dict[str, Any]]:
@@ -81,7 +81,7 @@ class BatchProcessor:
                 "method": "POST",
                 "url": "/v1/chat/completions",
                 "body": {
-                    "model": req_data.get("model", "gpt-4o-mini-2024-07-18"),
+                    "model": req_data.get("model", DEFAULT_MODELS["batch_default"]),
                     "messages": req_data["messages"],
                     "max_tokens": req_data.get("max_tokens", 2000),
                     "temperature": req_data.get("temperature", 0)

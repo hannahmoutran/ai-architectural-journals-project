@@ -6,8 +6,8 @@ import logging
 import time
 from datetime import datetime
 from typing import List, Dict, Any, Tuple
-from openai import OpenAI
 import tenacity
+from sa_workflow_config import get_openai_client, DEFAULT_MODELS
 from openpyxl import load_workbook
 from openpyxl.styles import Alignment
 from prompts import SouthernArchitectPrompts
@@ -26,8 +26,8 @@ logging.getLogger("openai").setLevel(logging.WARNING)
 logging.getLogger("urllib3").setLevel(logging.WARNING)
 logging.getLogger("httpx").setLevel(logging.WARNING)
 
-client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
-DEFAULT_MODEL = "gpt-4.1-mini"  # Default model name, change as needed
+client = get_openai_client()
+DEFAULT_MODEL = DEFAULT_MODELS["step3"]
 
 api_stats = APIStats()
 
@@ -312,23 +312,24 @@ class SouthernArchitectVocabularyProcessor:
         # Initialize batch processor and check if we should use batch processing
         processor = BatchProcessor()
         use_batch = processor.should_use_batch(total_entries)
-        
+        effective_model = DEFAULT_MODELS["step3_batch"] if use_batch else self.model_name
+
         print(f"Processing mode: {'BATCH' if use_batch else 'INDIVIDUAL'}")
-        
+
         if use_batch:
             print(f"Preparing {total_entries} requests for batch processing...")
-            
+
             # Prepare batch requests
             batch_requests, custom_id_mapping = prepare_batch_requests(
-                entries_with_vocab, self.vocabulary_selector, self.model_name
+                entries_with_vocab, self.vocabulary_selector, effective_model
             )
-            
+
             if not batch_requests:
                 print("No valid requests to process")
                 return selection_results
-            
+
             # Estimate costs
-            cost_estimate = processor.estimate_batch_cost(batch_requests, self.model_name)
+            cost_estimate = processor.estimate_batch_cost(batch_requests, effective_model)
             print(f"Cost estimate: ${cost_estimate['batch_cost']:.4f} (${cost_estimate['savings']:.4f} savings)")
             
             # Convert to batch format
@@ -388,7 +389,7 @@ class SouthernArchitectVocabularyProcessor:
                                             row_number=row_number,
                                             barcode=f"{entry_data.get('folder', 'unknown')}_page{entry_data.get('page_number', 'unknown')}",
                                             response_text=raw_response,
-                                            model_name=self.model_name,
+                                            model_name=effective_model,
                                             prompt_tokens=usage.get("prompt_tokens", 0),
                                             completion_tokens=usage.get("completion_tokens", 0),
                                             processing_time=0  # Batch processing doesn't track individual timing
