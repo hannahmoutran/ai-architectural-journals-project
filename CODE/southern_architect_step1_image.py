@@ -57,7 +57,7 @@ def prepare_batch_requests(all_images, model_name):
                     {"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{base64_image}"}}
                 ]
             }],
-            "max_tokens": 3000  
+            "max_tokens": 8192
         }
         
         batch_requests.append(request_data)
@@ -131,7 +131,7 @@ def process_image(image_path, model_name=DEFAULT_MODEL):
                 {"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{base64_image}"}}
             ]
         }],
-        max_tokens=3000, 
+        max_tokens=8192,
         temperature=0.3 # Lower temperature for more focused responses, but still creative
     )
     

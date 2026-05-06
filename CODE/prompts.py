@@ -70,7 +70,8 @@ If no sensitive content is present, simply return 'None'.
         "Full, exact transcription of all text visible in the image",
         [
             "Maintain original spelling, punctuation, and terminology",
-            "Preserve line breaks and paragraph structure", 
+            "Preserve line breaks and paragraph structure",
+            "For dot leaders and column alignment spacing (sequences of repeated dots or spaces used as visual filler, e.g., 'Title . . . . . 33' or 'Title          33'), write '...' instead -- do not transcribe each dot or space individually",
             "Include ALL text visible including headers, footers, and italicized text",
             "Do not correct, modernize, or sanitize language",
             "Use [illegible] for text that cannot be read",

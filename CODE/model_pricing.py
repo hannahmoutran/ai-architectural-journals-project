@@ -51,6 +51,33 @@ MODEL_PRICING = {
         "input_per_1k": 0.0004,
         "output_per_1k": 0.0016,
         "batch_discount": 0.5
+    },
+
+    # Gemini models (individual mode only; batch pricing not applicable)
+    "gemini-2.5-pro": {
+        "input_per_1k": 0.00125,
+        "output_per_1k": 0.01,
+        "batch_discount": 1.0
+    },
+    "gemini-2.5-flash": {
+        "input_per_1k": 0.0000375,
+        "output_per_1k": 0.00015,
+        "batch_discount": 1.0
+    },
+    "gemini-2.0-flash": {
+        "input_per_1k": 0.0001,
+        "output_per_1k": 0.0004,
+        "batch_discount": 1.0
+    },
+    "gemini-2.0-flash-lite": {
+        "input_per_1k": 0.0000375,
+        "output_per_1k": 0.00015,
+        "batch_discount": 1.0
+    },
+    "gemini-3.1-flash-lite-preview": {
+        "input_per_1k": 0.00025,
+        "output_per_1k": 0.0015,
+        "batch_discount": 1.0
     }
 }
 

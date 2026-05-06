@@ -86,11 +86,48 @@ def postprocess_api_response(response_data):
     
     return response_data
 
+def clean_repetition_loops(text: str) -> tuple[str, bool]:
+    """
+    Detect and clean LLM repetition loops in raw responses.
+    Returns (cleaned_text, was_modified).
+
+    Handles two cases:
+    1. Dot leader loops: '. . . . . . .' collapsed to '...'
+    2. Full content repetition: same block appearing twice -- truncate to first occurrence
+    """
+    was_modified = False
+
+    # Collapse any repeated short non-alphanumeric filler pattern (10+ repetitions).
+    # Catches dot leaders ('. . . .'), space runs, dash runs, and anything else
+    # a model might loop on as visual spacing characters.
+    filler_pattern = r'([^a-zA-Z0-9\n]{1,3})\1{9,}'
+    if re.search(filler_pattern, text):
+        text = re.sub(filler_pattern, '...', text)
+        was_modified = True
+
+    # Detect full content repetition: if a 200-char sample from near the
+    # start of the payload appears again after the first 500 chars, truncate there
+    if len(text) > 500:
+        sample = text[50:250]
+        second_occurrence = text.find(sample, 500)
+        if second_occurrence != -1:
+            text = text[:second_occurrence]
+            was_modified = True
+
+    return text, was_modified
+
+
 def parse_json_response_enhanced(raw_response: str) -> tuple[Dict[str, Any], Optional[str]]:
     """Enhanced JSON parsing with multiple recovery strategies."""
     if not raw_response or not raw_response.strip():
         return None, "Empty response"
-    
+
+    # Clean repetition loops before attempting to parse
+    raw_response, loop_detected = clean_repetition_loops(raw_response)
+    if loop_detected:
+        import logging
+        logging.warning("Repetition loop detected and cleaned in LLM response")
+
     try:
         # Strategy 1: Standard cleaning
         cleaned_response = re.sub(r'```json\s*|\s*```', '', raw_response)

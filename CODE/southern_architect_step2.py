@@ -1272,70 +1272,70 @@ class SouthernArchitectEnhancer:
             # Store results for this specific geographic entity
             geographic_to_terms_excel[entity] = formatted_terms_excel
             geographic_to_terms_json[entity] = formatted_terms_json
-        
-            # Process chronological terms - search LCSH for actual URIs with quoted searches
-            chronological_to_terms_excel = {}
-            chronological_to_terms_json = {}
 
-            for chronological_term in chronological_terms:
-                print(f"\nProcessing chronological term: '{chronological_term}'")
-                
-                # Search LCSH for this chronological term with quotes for exact match
-                quoted_term = f'"{chronological_term}"'  # Add quotes for exact matching
-                lcsh_results = self.lcsh_finder.find_terms([quoted_term])
-                
-                if quoted_term in lcsh_results and lcsh_results[quoted_term]:
-                    # Found LCSH term with URI using quoted search
-                    lcsh_terms = lcsh_results[quoted_term][:1]  # Only take 1 term
-                    
-                    # Update the label to remove quotes from display
-                    for term in lcsh_terms:
-                        term['label'] = chronological_term  # Use original unquoted term for display
-                    
+        # Process chronological terms - search LCSH for actual URIs with quoted searches
+        chronological_to_terms_excel = {}
+        chronological_to_terms_json = {}
+
+        for chronological_term in chronological_terms:
+            print(f"\nProcessing chronological term: '{chronological_term}'")
+
+            # Search LCSH for this chronological term with quotes for exact match
+            quoted_term = f'"{chronological_term}"'  # Add quotes for exact matching
+            lcsh_results = self.lcsh_finder.find_terms([quoted_term])
+
+            if quoted_term in lcsh_results and lcsh_results[quoted_term]:
+                # Found LCSH term with URI using quoted search
+                lcsh_terms = lcsh_results[quoted_term][:1]  # Only take 1 term
+
+                # Update the label to remove quotes from display
+                for term in lcsh_terms:
+                    term['label'] = chronological_term  # Use original unquoted term for display
+
+                # Format results for this chronological term
+                formatted_terms_excel = self.format_results_for_excel(lcsh_terms)
+                formatted_terms_json = self.format_results_for_json(lcsh_terms)
+
+                chronological_to_terms_excel[chronological_term] = formatted_terms_excel
+                chronological_to_terms_json[chronological_term] = formatted_terms_json
+
+                print(f"   Found LCSH chronological term with URI (quoted search): {chronological_term}")
+            else:
+                # If quoted search fails, try without quotes as fallback
+                lcsh_results_unquoted = self.lcsh_finder.find_terms([chronological_term])
+
+                if chronological_term in lcsh_results_unquoted and lcsh_results_unquoted[chronological_term]:
+                    # Found with unquoted search
+                    lcsh_terms = lcsh_results_unquoted[chronological_term][:1]  # Only take 1 term
+
                     # Format results for this chronological term
                     formatted_terms_excel = self.format_results_for_excel(lcsh_terms)
                     formatted_terms_json = self.format_results_for_json(lcsh_terms)
-                    
+
                     chronological_to_terms_excel[chronological_term] = formatted_terms_excel
                     chronological_to_terms_json[chronological_term] = formatted_terms_json
-                    
-                    print(f"   Found LCSH chronological term with URI (quoted search): {chronological_term}")
+
+                    print(f"   Found LCSH chronological term with URI (unquoted fallback): {chronological_term}")
                 else:
-                    # If quoted search fails, try without quotes as fallback
-                    lcsh_results_unquoted = self.lcsh_finder.find_terms([chronological_term])
-                    
-                    if chronological_term in lcsh_results_unquoted and lcsh_results_unquoted[chronological_term]:
-                        # Found with unquoted search
-                        lcsh_terms = lcsh_results_unquoted[chronological_term][:1]  # Only take 1 term
-                        
-                        # Format results for this chronological term
-                        formatted_terms_excel = self.format_results_for_excel(lcsh_terms)
-                        formatted_terms_json = self.format_results_for_json(lcsh_terms)
-                        
-                        chronological_to_terms_excel[chronological_term] = formatted_terms_excel
-                        chronological_to_terms_json[chronological_term] = formatted_terms_json
-                        
-                        print(f"   Found LCSH chronological term with URI (unquoted fallback): {chronological_term}")
-                    else:
-                        # Fallback: create term without URI if not found in LCSH at all
-                        term_object = {
-                            'label': chronological_term,
-                            'uri': '',  # No URI available
-                            'source': 'LCSH Chronological (generated)',
-                            'description': f'Generated chronological term for Southern Architect collection',
-                            'type': 'chronological'
-                        }
-                        
-                        # Format for Excel and JSON
-                        formatted_excel = f"{chronological_term} [{term_object['source']}]"
-                        formatted_json = [term_object]
-                        
-                        chronological_to_terms_excel[chronological_term] = formatted_terms_excel
-                        chronological_to_terms_json[chronological_term] = formatted_json
-                        
-                        print(f"   Created chronological term without URI: {chronological_term}")
-        
-        return (subject_to_terms_excel, subject_to_terms_json, 
+                    # Fallback: create term without URI if not found in LCSH at all
+                    term_object = {
+                        'label': chronological_term,
+                        'uri': '',  # No URI available
+                        'source': 'LCSH Chronological (generated)',
+                        'description': f'Generated chronological term for Southern Architect collection',
+                        'type': 'chronological'
+                    }
+
+                    # Format for Excel and JSON
+                    formatted_excel = f"{chronological_term} [{term_object['source']}]"
+                    formatted_json = [term_object]
+
+                    chronological_to_terms_excel[chronological_term] = formatted_excel
+                    chronological_to_terms_json[chronological_term] = formatted_json
+
+                    print(f"   Created chronological term without URI: {chronological_term}")
+
+        return (subject_to_terms_excel, subject_to_terms_json,
             geographic_to_terms_excel, geographic_to_terms_json,
             chronological_to_terms_excel, chronological_to_terms_json)
     
