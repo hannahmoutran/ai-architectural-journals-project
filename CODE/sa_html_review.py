@@ -1300,9 +1300,9 @@ class SAHTMLReviewBuilder:
         # Alternative subject headings from vocabulary search results (opt-in)
         vocab_results = analysis.get('vocabulary_search_results', {})
         if vocab_results:
-            selected_labels = set()
+            selected_pairs = set()
             for t in final_selected_terms:
-                selected_labels.add(t.get('label', '').lower())
+                selected_pairs.add((t.get('label', '').lower(), t.get('source', '')))
 
             # Collect alternatives grouped by source
             sources_order = ['LCSH', 'FAST', 'Getty AAT', 'Getty TGN']
@@ -1312,7 +1312,7 @@ class SAHTMLReviewBuilder:
                 for match in matches:
                     source = match.get('source', 'Unknown')
                     label = match.get('label', '')
-                    if label.lower() in selected_labels:
+                    if (label.lower(), source) in selected_pairs:
                         continue
                     if source in sources_map:
                         sources_map[source].append({

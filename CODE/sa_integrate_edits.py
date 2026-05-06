@@ -333,14 +333,16 @@ class SAEditsIntegrator:
         # alt-N: alternative subject headings (non-selected vocab results, grouped by source)
         vocab_results = analysis.get('vocabulary_search_results', {})
         final_terms = analysis.get('final_selected_terms', [])
-        selected_labels = set(t.get('label', '').lower() for t in final_terms)
+        selected_pairs = set(
+            (t.get('label', '').lower(), t.get('source', '')) for t in final_terms
+        )
         sources_order = ['LCSH', 'FAST', 'Getty AAT', 'Getty TGN']
         sources_map = {s: [] for s in sources_order}
         for orig_topic, matches in vocab_results.items():
             for match in matches:
                 source = match.get('source', 'Unknown')
                 label = match.get('label', '')
-                if label.lower() in selected_labels:
+                if (label.lower(), source) in selected_pairs:
                     continue
                 if source in sources_map:
                     sources_map[source].append({'label': label, 'source': source})
@@ -625,7 +627,9 @@ class SAEditsIntegrator:
             return []
 
         final_terms = analysis.get('final_selected_terms', [])
-        selected_labels = set(t.get('label', '').lower() for t in final_terms)
+        selected_pairs = set(
+            (t.get('label', '').lower(), t.get('source', '')) for t in final_terms
+        )
 
         sources_order = ['LCSH', 'FAST', 'Getty AAT', 'Getty TGN']
         sources_map = {s: [] for s in sources_order}
@@ -634,7 +638,7 @@ class SAEditsIntegrator:
             for match in matches:
                 source = match.get('source', 'Unknown')
                 label = match.get('label', '')
-                if label.lower() in selected_labels:
+                if (label.lower(), source) in selected_pairs:
                     continue
                 if source in sources_map:
                     sources_map[source].append({

@@ -9,7 +9,7 @@ import os
 FOLDER_CONFIG = {
     "input_dir": "image_folders",        # Parent directory containing input image folders
     "output_dir": "output_folders",      # Directory where output run folders are created
-    "default_input_folder": "4_pages",  # Default input folder within input_dir
+    "default_input_folder": "6_pages",  # Default input folder within input_dir
 }
 
 # Batch processing configuration.
@@ -20,21 +20,21 @@ BATCH_CONFIG = {
 # Provider configuration.
 # Set "provider" to "openai" or "gemini" to switch between providers.
 # Note: batch processing always uses the OpenAI Batch API directly regardless of this setting.
-# Gemini models (individual mode only): gemini-2.5-pro, gemini-2.5-flash, gemini-2.0-flash
+# Gemini models (individual mode only): gemini-3.1-flash-lite-preview, gemini-2.5-pro, gemini-2.5-flash, gemini-2.0-flash
 # OpenAI models: gpt-4.1, gpt-4.1-mini, gpt-4o, gpt-4o-mini
 PROVIDER_CONFIG = {
-    "provider": "gemini",  # "openai" or "gemini"
+    "provider": "openai",  # "openai" or "gemini"
 }
 
 # Default models for each step.
 # Change values here to update the model used across all scripts at once.
 DEFAULT_MODELS = {
-    "step1": "gemini-3.1-flash-lite-preview",               # Used by step1_text and step1_image (individual mode)
-    "step1_batch": "gpt-4.1",         # Used by step1_text and step1_image (batch mode)
-    "step1_5": "gemini-3.1-flash-lite-preview",       # Used by step1.5 (batch cleanup)
-    "step3": "gemini-3.1-flash-lite-preview",         # Used by step3 (vocabulary selection, individual mode)
+    "step1": "gpt-4.1",  # Used by step1_text and step1_image (individual mode)
+    "step1_batch": "gpt-4.1",                  # Used by step1_text and step1_image (batch mode)
+    "step1_5": "gpt-4.1",       # Used by step1.5 (batch cleanup)
+    "step3": "gpt-4.1-mini",         # Used by step3 (vocabulary selection, individual mode)
     "step3_batch": "gpt-4.1-mini",   # Used by step3 (vocabulary selection, batch mode)
-    "step4": "gemini-3.1-flash-lite-preview",         # Used by step4 (issue synthesis)
+    "step4": "gpt-4.1-mini",         # Used by step4 (issue synthesis)
     "batch_default": "gpt-4.1-mini",  # Fallback model in batch_processor
 }
 
@@ -121,9 +121,11 @@ class _GeminiCompletions:
             )
         )
 
-        config_kwargs = {
-            "thinking_config": types.ThinkingConfig(thinking_budget=0),
-        }
+        # Only disable thinking for models that support the thinking API (Pro/Flash, not Lite/preview variants)
+        thinking_models = {"gemini-2.5-pro", "gemini-2.5-flash"}
+        config_kwargs = {}
+        if model in thinking_models:
+            config_kwargs["thinking_config"] = types.ThinkingConfig(thinking_budget=0)
         if max_tokens:
             config_kwargs["max_output_tokens"] = max_tokens
         if temperature is not None:
